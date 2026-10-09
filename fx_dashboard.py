@@ -88,14 +88,22 @@ def main():
         rows.append(row)
     watches=[r for r in rows if r["entry_readiness"]=="TECHNICAL_WATCH_ONLY"]
     watches.sort(key=lambda x:({"EARLY":0,"CONFIRMING":1,"EXTENDED":2}.get(x["stage"],3),x["pair"]))
-    # Optional independent sources are reference-only unless their own timestamp is verified.\n    try:\n        secondary = load("fx_secondary_sources.json")\n    except (OSError, ValueError):\n        secondary = {"sources":{}, "error":"OPTIONAL_SECONDARY_FILE_UNAVAILABLE"}\n    dashboard={
+    # Optional independent sources are reference-only unless their own timestamp is verified.
+    try:
+        secondary = load("fx_secondary_sources.json")
+    except (OSError, ValueError):
+        secondary = {"sources":{}, "error":"OPTIONAL_SECONDARY_FILE_UNAVAILABLE"}
+    dashboard={
         "generated_at_utc":now.isoformat(),
         "purpose":"TECHNICAL_RESEARCH_ONLY_NOT_AN_EXECUTABLE_TRADE_SIGNAL",
         "data_sources_utc":times,
         "source_age_minutes_at_generation":ages,
         "source_versions_match":versions_match,
         "warnings":warnings,
-        "scope":"11 TradingView-covered pairs; EUR/NZD NOT INCLUDED",\n        "priority_timeframes":["5m","15m","30m"],\n        "optional_secondary_sources":secondary,\n        "secondary_source_rule":"FXStreet and FXEmpire are reference-only unless a publisher timestamp proves fresh 5m/15m/30m data. No second-opinion ratings can override fresh scanner rotations.",
+        "scope":"11 TradingView-covered pairs; EUR/NZD NOT INCLUDED",
+        "priority_timeframes":["5m","15m","30m"],
+        "optional_secondary_sources":secondary,
+        "secondary_source_rule":"FXStreet and FXEmpire are reference-only unless a publisher timestamp proves fresh 5m/15m/30m data. No second-opinion ratings can override fresh scanner rotations.",
         "available_technical_watch_count":len(watches),
         "technical_watchlist":[{"pair":r["pair"],"direction":r["direction"],"stage":r["stage"],
             "last_closed_5m_utc":r["timeframes"]["5m"]["last_closed_utc"]} for r in watches],
