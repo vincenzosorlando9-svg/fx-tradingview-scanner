@@ -1,14 +1,14 @@
 {
-  "generated_at_utc": "2026-10-09T17:34:02.333121+00:00",
+  "generated_at_utc": "2026-10-09T17:37:45.990427+00:00",
   "purpose": "TECHNICAL_RESEARCH_ONLY_NOT_AN_EXECUTABLE_TRADE_SIGNAL",
   "data_sources_utc": {
-    "tradingview": "2026-10-09T17:28:55.281423+00:00",
+    "tradingview": "2026-10-09T17:37:33.913768+00:00",
     "forextoolkits": "2026-10-09T17:32:12.772831+00:00",
-    "rotation": "2026-10-09T17:34:02.262933+00:00"
+    "rotation": "2026-10-09T17:37:44.147077+00:00"
   },
   "source_age_minutes_at_generation": {
-    "tradingview": 5.1,
-    "forextoolkits": 1.8,
+    "tradingview": 0.2,
+    "forextoolkits": 5.6,
     "rotation": 0.0
   },
   "source_versions_match": true,
@@ -16,6 +16,44 @@
     "FOREXTOOLKITS_UPSTREAM_FRESHNESS_NOT_INDEPENDENTLY_VERIFIED"
   ],
   "scope": "11 TradingView-covered pairs; EUR/NZD NOT INCLUDED",
+  "priority_timeframes": [
+    "5m",
+    "15m",
+    "30m"
+  ],
+  "optional_secondary_sources": {
+    "collected_at_utc": "2026-10-09T17:37:45.496580+00:00",
+    "scope": "optional_second_opinion_not_execution_feed",
+    "sources": {
+      "fxempire": {
+        "url": "https://www.fxempire.com/currencies/technical-analysis",
+        "status": "UNAVAILABLE_NO_VERIFIED_TABLE",
+        "retrieved_at_utc": "2026-10-09T17:37:45.709747+00:00",
+        "publisher_timestamp_utc": null,
+        "freshness_verified": false,
+        "pairs": {},
+        "timeframes": {
+          "5m": "UNAVAILABLE",
+          "15m": "UNAVAILABLE",
+          "30m": "UNAVAILABLE"
+        }
+      },
+      "fxstreet": {
+        "url": "https://www.fxstreet.com/rates-charts/indicators",
+        "status": "UNAVAILABLE_NO_VERIFIED_TIMESTAMPED_VALUES",
+        "retrieved_at_utc": "2026-10-09T17:37:45.937010+00:00",
+        "publisher_timestamp_utc": null,
+        "freshness_verified": false,
+        "pairs": {},
+        "timeframes": {
+          "5m": "UNAVAILABLE",
+          "15m": "UNAVAILABLE",
+          "30m": "UNAVAILABLE"
+        }
+      }
+    }
+  },
+  "secondary_source_rule": "FXStreet and FXEmpire are reference-only unless a publisher timestamp proves fresh 5m/15m/30m data. No second-opinion ratings can override fresh scanner rotations.",
   "available_technical_watch_count": 3,
   "technical_watchlist": [
     {
@@ -46,11 +84,11 @@
       "raw_detector_direction": "BUY",
       "raw_detector_stage": "EARLY",
       "source_valid": true,
-      "technical_price_divergence_pips": 0.9,
+      "technical_price_divergence_pips": 1.2,
       "timeframes": {
         "5m": {
           "last_closed_utc": "2026-10-09T17:30:00+00:00",
-          "candle_age_min": 4.0,
+          "candle_age_min": 7.8,
           "error": null,
           "atr5_pips": 1.4,
           "atr14_pips": 1.35,
@@ -59,7 +97,7 @@
         },
         "15m": {
           "last_closed_utc": "2026-10-09T17:30:00+00:00",
-          "candle_age_min": 4.0,
+          "candle_age_min": 7.8,
           "error": null,
           "atr5_pips": 2.12,
           "atr14_pips": 2.86,
@@ -68,7 +106,7 @@
         },
         "30m": {
           "last_closed_utc": "2026-10-09T17:30:00+00:00",
-          "candle_age_min": 4.0,
+          "candle_age_min": 7.8,
           "error": null,
           "atr5_pips": 3.3,
           "atr14_pips": 5.04,
@@ -77,7 +115,7 @@
         },
         "1H": {
           "last_closed_utc": "2026-10-09T17:00:00+00:00",
-          "candle_age_min": 34.0,
+          "candle_age_min": 37.8,
           "error": null,
           "atr5_pips": 7.94,
           "atr14_pips": 6.89,
@@ -105,11 +143,11 @@
       "raw_detector_direction": "NONE",
       "raw_detector_stage": "WAIT",
       "source_valid": true,
-      "technical_price_divergence_pips": 0.4,
+      "technical_price_divergence_pips": 1.0,
       "timeframes": {
         "5m": {
           "last_closed_utc": "2026-10-09T17:30:00+00:00",
-          "candle_age_min": 4.0,
+          "candle_age_min": 7.8,
           "error": null,
           "atr5_pips": 1.46,
           "atr14_pips": 1.35,
@@ -118,7 +156,7 @@
         },
         "15m": {
           "last_closed_utc": "2026-10-09T17:30:00+00:00",
-          "candle_age_min": 4.0,
+          "candle_age_min": 7.8,
           "error": null,
           "atr5_pips": 2.16,
           "atr14_pips": 2.92,
@@ -127,7 +165,7 @@
         },
         "30m": {
           "last_closed_utc": "2026-10-09T17:30:00+00:00",
-          "candle_age_min": 4.0,
+          "candle_age_min": 7.8,
           "error": null,
           "atr5_pips": 3.5,
           "atr14_pips": 4.74,
@@ -136,7 +174,7 @@
         },
         "1H": {
           "last_closed_utc": "2026-10-09T17:00:00+00:00",
-          "candle_age_min": 34.0,
+          "candle_age_min": 37.8,
           "error": null,
           "atr5_pips": 7.54,
           "atr14_pips": 6.44,
@@ -162,11 +200,11 @@
       "raw_detector_direction": "NONE",
       "raw_detector_stage": "WAIT",
       "source_valid": true,
-      "technical_price_divergence_pips": 0.5,
+      "technical_price_divergence_pips": 0.0,
       "timeframes": {
         "5m": {
           "last_closed_utc": "2026-10-09T17:30:00+00:00",
-          "candle_age_min": 4.0,
+          "candle_age_min": 7.8,
           "error": null,
           "atr5_pips": 2.64,
           "atr14_pips": 2.41,
@@ -175,7 +213,7 @@
         },
         "15m": {
           "last_closed_utc": "2026-10-09T17:30:00+00:00",
-          "candle_age_min": 4.0,
+          "candle_age_min": 7.8,
           "error": null,
           "atr5_pips": 4.44,
           "atr14_pips": 4.94,
@@ -184,7 +222,7 @@
         },
         "30m": {
           "last_closed_utc": "2026-10-09T17:30:00+00:00",
-          "candle_age_min": 4.0,
+          "candle_age_min": 7.8,
           "error": null,
           "atr5_pips": 6.04,
           "atr14_pips": 7.71,
@@ -193,7 +231,7 @@
         },
         "1H": {
           "last_closed_utc": "2026-10-09T17:00:00+00:00",
-          "candle_age_min": 34.0,
+          "candle_age_min": 37.8,
           "error": null,
           "atr5_pips": 11.12,
           "atr14_pips": 10.27,
@@ -223,7 +261,7 @@
       "timeframes": {
         "5m": {
           "last_closed_utc": "2026-10-09T17:30:00+00:00",
-          "candle_age_min": 4.0,
+          "candle_age_min": 7.8,
           "error": null,
           "atr5_pips": 2.26,
           "atr14_pips": 2.6,
@@ -232,7 +270,7 @@
         },
         "15m": {
           "last_closed_utc": "2026-10-09T17:30:00+00:00",
-          "candle_age_min": 4.0,
+          "candle_age_min": 7.8,
           "error": null,
           "atr5_pips": 4.24,
           "atr14_pips": 5.62,
@@ -241,7 +279,7 @@
         },
         "30m": {
           "last_closed_utc": "2026-10-09T17:30:00+00:00",
-          "candle_age_min": 4.0,
+          "candle_age_min": 7.8,
           "error": null,
           "atr5_pips": 7.18,
           "atr14_pips": 9.76,
@@ -250,7 +288,7 @@
         },
         "1H": {
           "last_closed_utc": "2026-10-09T17:00:00+00:00",
-          "candle_age_min": 34.0,
+          "candle_age_min": 37.8,
           "error": null,
           "atr5_pips": 14.04,
           "atr14_pips": 11.63,
@@ -276,11 +314,11 @@
       "raw_detector_direction": "NONE",
       "raw_detector_stage": "WAIT",
       "source_valid": true,
-      "technical_price_divergence_pips": 1.8,
+      "technical_price_divergence_pips": 1.7,
       "timeframes": {
         "5m": {
           "last_closed_utc": "2026-10-09T17:30:00+00:00",
-          "candle_age_min": 4.0,
+          "candle_age_min": 7.8,
           "error": null,
           "atr5_pips": 2.68,
           "atr14_pips": 2.44,
@@ -289,7 +327,7 @@
         },
         "15m": {
           "last_closed_utc": "2026-10-09T17:30:00+00:00",
-          "candle_age_min": 4.0,
+          "candle_age_min": 7.8,
           "error": null,
           "atr5_pips": 4.18,
           "atr14_pips": 5.86,
@@ -298,7 +336,7 @@
         },
         "30m": {
           "last_closed_utc": "2026-10-09T17:30:00+00:00",
-          "candle_age_min": 4.0,
+          "candle_age_min": 7.8,
           "error": null,
           "atr5_pips": 7.22,
           "atr14_pips": 7.88,
@@ -307,7 +345,7 @@
         },
         "1H": {
           "last_closed_utc": "2026-10-09T17:00:00+00:00",
-          "candle_age_min": 34.0,
+          "candle_age_min": 37.8,
           "error": null,
           "atr5_pips": 11.24,
           "atr14_pips": 14.48,
@@ -333,11 +371,11 @@
       "raw_detector_direction": "NONE",
       "raw_detector_stage": "WAIT",
       "source_valid": true,
-      "technical_price_divergence_pips": 3.0,
+      "technical_price_divergence_pips": 0.4,
       "timeframes": {
         "5m": {
           "last_closed_utc": "2026-10-09T17:30:00+00:00",
-          "candle_age_min": 4.0,
+          "candle_age_min": 7.8,
           "error": null,
           "atr5_pips": 1.94,
           "atr14_pips": 1.94,
@@ -346,7 +384,7 @@
         },
         "15m": {
           "last_closed_utc": "2026-10-09T17:30:00+00:00",
-          "candle_age_min": 4.0,
+          "candle_age_min": 7.8,
           "error": null,
           "atr5_pips": 3.42,
           "atr14_pips": 4.84,
@@ -355,7 +393,7 @@
         },
         "30m": {
           "last_closed_utc": "2026-10-09T17:30:00+00:00",
-          "candle_age_min": 4.0,
+          "candle_age_min": 7.8,
           "error": null,
           "atr5_pips": 4.8,
           "atr14_pips": 8.04,
@@ -364,7 +402,7 @@
         },
         "1H": {
           "last_closed_utc": "2026-10-09T17:00:00+00:00",
-          "candle_age_min": 34.0,
+          "candle_age_min": 37.8,
           "error": null,
           "atr5_pips": 12.9,
           "atr14_pips": 13.44,
@@ -390,11 +428,11 @@
       "raw_detector_direction": "NONE",
       "raw_detector_stage": "WAIT",
       "source_valid": true,
-      "technical_price_divergence_pips": 1.3,
+      "technical_price_divergence_pips": 0.6,
       "timeframes": {
         "5m": {
           "last_closed_utc": "2026-10-09T17:30:00+00:00",
-          "candle_age_min": 4.0,
+          "candle_age_min": 7.8,
           "error": null,
           "atr5_pips": 1.62,
           "atr14_pips": 1.59,
@@ -403,7 +441,7 @@
         },
         "15m": {
           "last_closed_utc": "2026-10-09T17:30:00+00:00",
-          "candle_age_min": 4.0,
+          "candle_age_min": 7.8,
           "error": null,
           "atr5_pips": 2.44,
           "atr14_pips": 4.14,
@@ -412,7 +450,7 @@
         },
         "30m": {
           "last_closed_utc": "2026-10-09T17:30:00+00:00",
-          "candle_age_min": 4.0,
+          "candle_age_min": 7.8,
           "error": null,
           "atr5_pips": 4.34,
           "atr14_pips": 6.76,
@@ -421,7 +459,7 @@
         },
         "1H": {
           "last_closed_utc": "2026-10-09T17:00:00+00:00",
-          "candle_age_min": 34.0,
+          "candle_age_min": 37.8,
           "error": null,
           "atr5_pips": 11.7,
           "atr14_pips": 11.45,
@@ -447,11 +485,11 @@
       "raw_detector_direction": "SELL",
       "raw_detector_stage": "EARLY",
       "source_valid": true,
-      "technical_price_divergence_pips": 0.7,
+      "technical_price_divergence_pips": 2.3,
       "timeframes": {
         "5m": {
           "last_closed_utc": "2026-10-09T17:30:00+00:00",
-          "candle_age_min": 4.0,
+          "candle_age_min": 7.8,
           "error": null,
           "atr5_pips": 3.14,
           "atr14_pips": 3.29,
@@ -460,7 +498,7 @@
         },
         "15m": {
           "last_closed_utc": "2026-10-09T17:30:00+00:00",
-          "candle_age_min": 4.0,
+          "candle_age_min": 7.8,
           "error": null,
           "atr5_pips": 5.54,
           "atr14_pips": 7.58,
@@ -469,7 +507,7 @@
         },
         "30m": {
           "last_closed_utc": "2026-10-09T17:30:00+00:00",
-          "candle_age_min": 4.0,
+          "candle_age_min": 7.8,
           "error": null,
           "atr5_pips": 8.38,
           "atr14_pips": 11.45,
@@ -478,7 +516,7 @@
         },
         "1H": {
           "last_closed_utc": "2026-10-09T17:00:00+00:00",
-          "candle_age_min": 34.0,
+          "candle_age_min": 37.8,
           "error": null,
           "atr5_pips": 18.5,
           "atr14_pips": 20.64,
@@ -506,11 +544,11 @@
       "raw_detector_direction": "NONE",
       "raw_detector_stage": "WAIT",
       "source_valid": true,
-      "technical_price_divergence_pips": 0.2,
+      "technical_price_divergence_pips": 2.9,
       "timeframes": {
         "5m": {
           "last_closed_utc": "2026-10-09T17:30:00+00:00",
-          "candle_age_min": 4.0,
+          "candle_age_min": 7.8,
           "error": null,
           "atr5_pips": 3.52,
           "atr14_pips": 3.0,
@@ -519,7 +557,7 @@
         },
         "15m": {
           "last_closed_utc": "2026-10-09T17:30:00+00:00",
-          "candle_age_min": 4.0,
+          "candle_age_min": 7.8,
           "error": null,
           "atr5_pips": 5.48,
           "atr14_pips": 6.4,
@@ -528,7 +566,7 @@
         },
         "30m": {
           "last_closed_utc": "2026-10-09T17:30:00+00:00",
-          "candle_age_min": 4.0,
+          "candle_age_min": 7.8,
           "error": null,
           "atr5_pips": 7.04,
           "atr14_pips": 15.51,
@@ -537,7 +575,7 @@
         },
         "1H": {
           "last_closed_utc": "2026-10-09T17:00:00+00:00",
-          "candle_age_min": 34.0,
+          "candle_age_min": 37.8,
           "error": null,
           "atr5_pips": 29.96,
           "atr14_pips": 17.94,
@@ -563,11 +601,11 @@
       "raw_detector_direction": "NONE",
       "raw_detector_stage": "WAIT",
       "source_valid": true,
-      "technical_price_divergence_pips": 0.7,
+      "technical_price_divergence_pips": 2.2,
       "timeframes": {
         "5m": {
           "last_closed_utc": "2026-10-09T17:30:00+00:00",
-          "candle_age_min": 4.0,
+          "candle_age_min": 7.8,
           "error": null,
           "atr5_pips": 2.62,
           "atr14_pips": 2.24,
@@ -576,7 +614,7 @@
         },
         "15m": {
           "last_closed_utc": "2026-10-09T17:30:00+00:00",
-          "candle_age_min": 4.0,
+          "candle_age_min": 7.8,
           "error": null,
           "atr5_pips": 3.88,
           "atr14_pips": 5.48,
@@ -585,7 +623,7 @@
         },
         "30m": {
           "last_closed_utc": "2026-10-09T17:30:00+00:00",
-          "candle_age_min": 4.0,
+          "candle_age_min": 7.8,
           "error": null,
           "atr5_pips": 6.24,
           "atr14_pips": 13.22,
@@ -594,7 +632,7 @@
         },
         "1H": {
           "last_closed_utc": "2026-10-09T17:00:00+00:00",
-          "candle_age_min": 34.0,
+          "candle_age_min": 37.8,
           "error": null,
           "atr5_pips": 25.54,
           "atr14_pips": 14.83,
@@ -620,11 +658,11 @@
       "raw_detector_direction": "SELL",
       "raw_detector_stage": "EARLY",
       "source_valid": true,
-      "technical_price_divergence_pips": 0.0,
+      "technical_price_divergence_pips": 1.1,
       "timeframes": {
         "5m": {
           "last_closed_utc": "2026-10-09T17:30:00+00:00",
-          "candle_age_min": 4.0,
+          "candle_age_min": 7.8,
           "error": null,
           "atr5_pips": 1.28,
           "atr14_pips": 1.14,
@@ -633,7 +671,7 @@
         },
         "15m": {
           "last_closed_utc": "2026-10-09T17:30:00+00:00",
-          "candle_age_min": 4.0,
+          "candle_age_min": 7.8,
           "error": null,
           "atr5_pips": 2.0,
           "atr14_pips": 2.3,
@@ -642,7 +680,7 @@
         },
         "30m": {
           "last_closed_utc": "2026-10-09T17:30:00+00:00",
-          "candle_age_min": 4.0,
+          "candle_age_min": 7.8,
           "error": null,
           "atr5_pips": 3.04,
           "atr14_pips": 4.19,
@@ -651,7 +689,7 @@
         },
         "1H": {
           "last_closed_utc": "2026-10-09T17:00:00+00:00",
-          "candle_age_min": 34.0,
+          "candle_age_min": 37.8,
           "error": null,
           "atr5_pips": 6.6,
           "atr14_pips": 5.01,
