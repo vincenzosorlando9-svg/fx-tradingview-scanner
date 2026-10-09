@@ -140,7 +140,7 @@ def analyze(pair, tech, vol, now):
         tm = tech_metrics(tech.get("pairs",{}).get(pair,{}).get(t,{}))
         vm, error = candle_metrics(pair,vpair.get("tf",{}).get(vt,{}),now,vt,clock_offset_seconds)
         output["timeframes"][t] = {"technical":tm,"candles":vm,"error":error}
-    m5 = output["timeframes"]["5m"]
+    if any(t not in output["timeframes"] for t in ("5m", "15m", "30m")):\n        output["reasons"].append("MISSING_TIMEFRAME_RESULTS")\n        return output\n    m5 = output["timeframes"]["5m"]
     m15 = output["timeframes"]["15m"]
     m30 = output["timeframes"]["30m"]
     if any(not x["technical"] or not x["candles"] for x in (m5,m15,m30)):
