@@ -3,7 +3,7 @@ name: FX Early Rotation Detector
 on:
   workflow_dispatch:
   schedule:
-    - cron: '7,22,37,52 * * * *'
+    - cron: '2,7,12,17,22,27,32,37,42,47,52,57 * * * *'
 
 permissions:
   contents: write
@@ -27,11 +27,17 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Install primary and optional collector dependencies
+        run: python -m pip install -r requirements.txt beautifulsoup4
+
+      - name: Collect current ForexToolkits OHLC
+        run: python forextoolkits_collector.py
+
+      - name: Collect current TradingView indicators
+        run: python scanner.py
+
       - name: Generate conditional rotation signals
         run: python rotation_detector.py
-
-      - name: Install optional HTML parsing dependency
-        run: python -m pip install beautifulsoup4
 
       - name: Collect optional FXStreet and FXEmpire references
         run: python fx_secondary_collector.py
@@ -43,9 +49,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add fx_rotation_signals.json fx_scan_dashboard.json fx_secondary_sources.json
+          git add fx_volatility.json fx_technicals.json fx_rotation_signals.json fx_scan_dashboard.json fx_secondary_sources.json
           if ! git diff --cached --quiet; then
-            git commit -m "Update FX early rotation candidates"
+            git commit -m "Update synchronized FX five-source dashboard"
             git pull --rebase origin main
             git push
           fi
