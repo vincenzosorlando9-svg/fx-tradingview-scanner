@@ -112,7 +112,12 @@ def main():
             else:
                 # FXStreet's chart is interactive and may block automated access.
                 # A page that opens is not evidence its confluence values are available.
-                item["status"]="UNAVAILABLE_NO_VERIFIED_TIMESTAMPED_VALUES"
+                item["pairs"]=collect_fxstreet(soup)
+                if item["pairs"]:
+                    item["status"]="REFERENCE_ONLY_PUBLISHER_TIMESTAMP_MISSING"
+                    item["timeframes"]={"5m":"NOT_OFFERED","15m":"REFERENCE_ONLY","30m":"NOT_OFFERED"}
+                else:
+                    item["status"]="UNAVAILABLE_NO_VERIFIED_NUMERIC_LEVELS"
         except Exception as exc:
             item["status"]="UNAVAILABLE_"+type(exc).__name__.upper()
             item["error"]=str(exc)[:160]
