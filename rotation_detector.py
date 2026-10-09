@@ -136,11 +136,28 @@ def analyze(pair, tech, vol, now):
     if not vpair:
         output["reasons"].append("NO_VOLATILITY_PAIR")
         return output
-    # ForexToolkits may timestamp candles in its server-local clock.\n    # Infer only a whole-hour offset from its own source timestamp and collection time.\n    # Reject ambiguous offsets rather than assuming UTC or silently accepting future bars.\n    clock_offset_seconds = 0\n    source_ts = number(vol.get("source_timestamp"))\n    if source_ts is not None and v_time is not None:\n        offset = source_ts - v_time.timestamp()\n        rounded = round(offset / 3600) * 3600\n        if abs(offset - rounded) <= 600 and abs(rounded) <= 12 * 3600:\n            clock_offset_seconds = rounded\n        elif abs(offset) > 600:\n            output["reasons"].append("AMBIGUOUS_SOURCE_CLOCK")\n            return output\n    output["source_clock_offset_hours"] = clock_offset_seconds / 3600\n    for t, vt in TF.items():
+    # ForexToolkits may timestamp candles in its server-local clock.
+    # Infer only a whole-hour offset from its own source timestamp and collection time.
+    # Reject ambiguous offsets rather than assuming UTC or silently accepting future bars.
+    clock_offset_seconds = 0
+    source_ts = number(vol.get("source_timestamp"))
+    if source_ts is not None and v_time is not None:
+        offset = source_ts - v_time.timestamp()
+        rounded = round(offset / 3600) * 3600
+        if abs(offset - rounded) <= 600 and abs(rounded) <= 12 * 3600:
+            clock_offset_seconds = rounded
+        elif abs(offset) > 600:
+            output["reasons"].append("AMBIGUOUS_SOURCE_CLOCK")
+            return output
+    output["source_clock_offset_hours"] = clock_offset_seconds / 3600
+    for t, vt in TF.items():
         tm = tech_metrics(tech.get("pairs",{}).get(pair,{}).get(t,{}))
         vm, error = candle_metrics(pair,vpair.get("tf",{}).get(vt,{}),now,vt,clock_offset_seconds)
         output["timeframes"][t] = {"technical":tm,"candles":vm,"error":error}
-    if any(t not in output["timeframes"] for t in ("5m", "15m", "30m")):\n        output["reasons"].append("MISSING_TIMEFRAME_RESULTS")\n        return output\n    m5 = output["timeframes"]["5m"]
+    if any(t not in output["timeframes"] for t in ("5m", "15m", "30m")):
+        output["reasons"].append("MISSING_TIMEFRAME_RESULTS")
+        return output
+    m5 = output["timeframes"]["5m"]
     m15 = output["timeframes"]["15m"]
     m30 = output["timeframes"]["30m"]
     if any(not x["technical"] or not x["candles"] for x in (m5,m15,m30)):
