@@ -109,6 +109,53 @@ def diagnose_fxempire(soup):
     script_text=" ".join(t.get_text()[:2000] for t in soup.find_all("script")[:6])
     print("fxempire DEBUG script_count",len(soup.find_all("script")),"contains USD/CAD", "USD/CAD" in script_text)
 
+
+def collect_empire_dynamic_rows(soup):
+    """Fallback for div-based ratings grids, requiring six ordered timeframe cells.
+
+    The public FXEmpire matrix orders columns as 15m,30m,1h,4h,1d,1w.
+    Only use the fallback if ratings repeat in paired label/abbreviation
+    cells and the row contains exactly one covered currency pair.
+    """
+    results={}
+    for a in soup.find_all("a"):
+        title=a.get_text(" ",strip=True)
+        symbols=[p for p in PAIRS if p[:3]+"/"+p[3:] in title]
+        if len(symbols)!=1:
+            continue
+        pair=symbols[0]
+        for ancestor in list(a.parents)[:9]:
+            if ancestor.name in ("body","html"):
+                break
+            visible=list(ancestor.stripped_strings)
+            text=" ".join(visible)
+            covered=[p for p in PAIRS if p[:3]+"/"+p[3:] in text]
+            if len(set(covered))!=1:
+                continue
+            # Match only standalone rating labels, never fragments of commentary.
+            found=[]
+            for item in visible:
+                t=" ".join(item.upper().split())
+                normalized={"S.BUY":"STRONG BUY","S.SELL":"STRONG SELL",
+                            "NTRL":"NEUTRAL"}.get(t,t)
+                if normalized in ("BUY","SELL","NEUTRAL","STRONG BUY","STRONG SELL"):
+                    found.append(normalized)
+            # Two renderings (long + abbreviated) per timeframe cell.
+            # Reject unpaired or wrong-length rows rather than shifting columns.
+            if len(found)==12 and all(found[i]==found[i+1] for i in range(0,12,2)):
+                values=found[::2]
+            elif len(found)==6:
+                values=found
+            else:
+                continue
+            # First two columns are the 15m and 30m ratings.
+            results[pair]={"5m":{"status":"NOT_OFFERED"},
+                           "15m":{"rating":values[0],"status":"PUBLISHER_TIME_UNVERIFIED"},
+                           "30m":{"rating":values[1],"status":"PUBLISHER_TIME_UNVERIFIED"},
+                           "row_verified_by":"six_ordered_15m_30m_1h_4h_daily_weekly_ratings"}
+            break
+    return results
+
 def main():
     result={"collected_at_utc":now(),"scope":"optional_second_opinion_not_execution_feed","sources":{}}
     for name,url in URLS.items():
@@ -122,6 +169,8 @@ def main():
             if name=="fxempire":
                 diagnose_fxempire(soup)
                 item["pairs"]=collect_fxempire(soup)
+                if not item["pairs"]:
+                    item["pairs"]=collect_empire_dynamic_rows(soup)
                 if item["pairs"]:
                     item["status"]="REFERENCE_ONLY_PUBLISHER_TIMESTAMP_MISSING"
                     item["timeframes"]={"5m":"NOT_OFFERED","15m":"REFERENCE_ONLY","30m":"REFERENCE_ONLY"}
