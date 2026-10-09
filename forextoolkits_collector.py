@@ -3,6 +3,7 @@ import asyncio
 import json
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.parse import urlparse
 
 from playwright.async_api import async_playwright
 
@@ -10,11 +11,13 @@ URL = "https://forextoolkits.com/forex-volatility-bars/"
 TIMEFRAMES = ["M5", "M15", "M30", "H1", "H4", "D1"]
 
 async def main():
-    result = {
+    report = {
         "source": URL,
         "collected_at_utc": datetime.now(timezone.utc).isoformat(),
-        "status": "diagnostic",
+        "frames": [],
+        "requests": [],
         "timeframes": {},
+        "errors": [],
     }
 
     async with async_playwright() as p:
@@ -23,54 +26,92 @@ async def main():
             viewport={"width": 1440, "height": 1000}
         )
 
+        def record_request(request):
+            if len(report["requests"]) >= 300:
+                return
+            parsed = urlparse(request.url)
+            report["requests"].append({
+                "method": request.method,
+                "host": parsed.netloc,
+                "path": parsed.path,
+                "resource_type": request.resource_type,
+            })
+
+        page.on("request", record_request)
+
         try:
             response = await page.goto(
-                URL, wait_until="domcontentloaded", timeout=60000
+                URL,
+                wait_until="domcontentloaded",
+                timeout=60000,
             )
-            await page.wait_for_timeout(10000)
-
-            result["http_status"] = (
+            report["http_status"] = (
                 response.status if response else None
             )
 
-            for timeframe in TIMEFRAMES:
-                # Capture visible text before trying tab interaction.
-                # This is diagnostic, not validated market data.
-                body_before = await page.locator("body").inner_text()
+            await page.wait_for_timeout(12000)
 
-                clicked = False
+            for frame in page.frames:
                 try:
-                    tab = page.get_by_text(
-                        timeframe, exact=True
-                    ).first
-                    if await tab.count():
-                        await tab.click(timeout=5000)
-                        await page.wait_for_timeout(2500)
-                        clicked = True
-                except Exception:
-                    pass
+                    text = await frame.locator("body").inner_text(
+                        timeout=5000
+                    )
+                    report["frames"].append({
+                        "url": frame.url,
+                        "text_excerpt": text[:18000],
+                    })
+                except Exception as exc:
+                    report["errors"].append(str(exc))
 
-                body_after = await page.locator("body").inner_text()
+            for timeframe in TIMEFRAMES:
+                found = False
+                clicked = False
 
-                result["timeframes"][timeframe] = {
-                    "tab_clicked": clicked,
-                    "page_text_changed": body_before != body_after,
-                    "visible_text_excerpt": body_after[:12000],
+                for frame in page.frames:
+                    try:
+                        locator = frame.get_by_text(
+                            timeframe, exact=True
+                        ).first
+
+                        if await locator.count():
+                            found = True
+                            await locator.click(timeout=4000)
+                            clicked = True
+                            await page.wait_for_timeout(2000)
+                            break
+                    except Exception:
+                        continue
+
+                frame_texts = []
+                for frame in page.frames:
+                    try:
+                        text = await frame.locator(
+                            "body"
+                        ).inner_text(timeout=5000)
+                        frame_texts.append(text[:18000])
+                    except Exception:
+                        pass
+
+                report["timeframes"][timeframe] = {
+                    "control_found": found,
+                    "clicked": clicked,
+                    "frame_texts": frame_texts,
                 }
 
         except Exception as exc:
-            result["status"] = "error"
-            result["error"] = str(exc)
+            report["errors"].append(str(exc))
         finally:
             await browser.close()
 
     Path("fx_volatility_diagnostic.json").write_text(
-        json.dumps(result, indent=2),
+        json.dumps(report, indent=2),
         encoding="utf-8",
     )
 
-    print("Diagnostic status:", result["status"])
-    print("Timeframes checked:", list(result["timeframes"]))
+    print("HTTP status:", report.get("http_status"))
+    print("Frames found:", len(report["frames"]))
+    print("Requests observed:", len(report["requests"]))
+    print("Errors:", len(report["errors"]))
 
 if __name__ == "__main__":
     asyncio.run(main())
