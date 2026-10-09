@@ -92,6 +92,23 @@ def collect_fxstreet(soup):
                             "30m":{"status":"NOT_OFFERED"}}
     return data
 
+
+def diagnose_fxempire(soup):
+    """Small safe diagnostics of HTML layout; no page dump."""
+    print("fxempire DEBUG tables",len(soup.find_all("table")))
+    for a in soup.find_all("a",href=True):
+        label=a.get_text(" ",strip=True)
+        if any(p[:3]+"/"+p[3:] in label for p in ("USDCAD","EURUSD","AUDUSD")):
+            cur=a
+            for depth in range(1,6):
+                cur=cur.parent
+                if cur is None:break
+                sample=cur.get_text(" | ",strip=True)[:350]
+                print("fxempire DEBUG",label[:55],"ancestor",depth,"tag",cur.name,"classes",str(cur.get("class",[]))[:90],"text",sample)
+            break
+    script_text=" ".join(t.get_text()[:2000] for t in soup.find_all("script")[:6])
+    print("fxempire DEBUG script_count",len(soup.find_all("script")),"contains USD/CAD", "USD/CAD" in script_text)
+
 def main():
     result={"collected_at_utc":now(),"scope":"optional_second_opinion_not_execution_feed","sources":{}}
     for name,url in URLS.items():
@@ -103,6 +120,7 @@ def main():
             item["retrieved_at_utc"]=now()
             print(name,"HTML tables",len(soup.select("table")))
             if name=="fxempire":
+                diagnose_fxempire(soup)
                 item["pairs"]=collect_fxempire(soup)
                 if item["pairs"]:
                     item["status"]="REFERENCE_ONLY_PUBLISHER_TIMESTAMP_MISSING"
