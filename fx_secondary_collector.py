@@ -34,9 +34,9 @@ def rating(cell):
     text=" ".join(cell.stripped_strings).upper()
     if "STRONG BUY" in text or "S.BUY" in text:return "STRONG BUY"
     if "STRONG SELL" in text or "S.SELL" in text:return "STRONG SELL"
-    if re.search(r"\\bNEUTRAL\\b|\\bNTRL\\b",text):return "NEUTRAL"
-    if re.search(r"\\bSELL\\b",text):return "SELL"
-    if re.search(r"\\bBUY\\b",text):return "BUY"
+    if re.search(r"\bNEUTRAL\b|\bNTRL\b",text):return "NEUTRAL"
+    if re.search(r"\bSELL\b",text):return "SELL"
+    if re.search(r"\bBUY\b",text):return "BUY"
     return None
 
 def collect_fxempire(soup):
