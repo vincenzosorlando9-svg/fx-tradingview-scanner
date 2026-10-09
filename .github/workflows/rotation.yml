@@ -30,11 +30,14 @@ jobs:
       - name: Generate conditional rotation signals
         run: python rotation_detector.py
 
-      - name: Commit signal file
+      - name: Build consolidated FX dashboard
+        run: python fx_dashboard.py
+
+      - name: Commit signal files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add fx_rotation_signals.json
+          git add fx_rotation_signals.json fx_scan_dashboard.json
           if ! git diff --cached --quiet; then
             git commit -m "Update FX early rotation candidates"
             git pull --rebase origin main
