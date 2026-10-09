@@ -64,6 +64,34 @@ def collect_fxempire(soup):
                               "30m":{"rating":thirty,"status":"PUBLISHER_TIME_UNVERIFIED"}}
     return output
 
+
+def collect_fxstreet(soup):
+    """Read explicit 15m high/low from visible static tables; never infer hidden charts."""
+    data={}
+    for table in soup.select("table"):
+        rows=table.select("tr")
+        if not rows:continue
+        hdr=["".join(filter(str.isalpha,c.get_text(" ",strip=True).upper())) for c in rows[0].find_all(["th","td"])]
+        cols={p:next((j for j,v in enumerate(hdr) if p in v),None) for p in PAIRS}
+        lookup={}
+        for row in rows[1:]:
+            cells=[c.get_text(" ",strip=True) for c in row.find_all(["td","th"])]
+            if cells:lookup[" ".join(cells[0].lower().split())]=cells
+        hi=lookup.get("15m high") or lookup.get("15min high")
+        lo=lookup.get("15m low") or lookup.get("15min low")
+        if not hi or not lo:continue
+        for pair,j in cols.items():
+            if j is None or j>=min(len(hi),len(lo)):continue
+            try:
+                h=float(hi[j].replace(",",""))
+                l=float(lo[j].replace(",",""))
+            except ValueError:continue
+            if 0<l<=h:
+                data[pair]={"5m":{"status":"NOT_OFFERED"},
+                            "15m":{"high":h,"low":l,"status":"PUBLISHER_TIME_UNVERIFIED"},
+                            "30m":{"status":"NOT_OFFERED"}}
+    return data
+
 def main():
     result={"collected_at_utc":now(),"scope":"optional_second_opinion_not_execution_feed","sources":{}}
     for name,url in URLS.items():
@@ -73,6 +101,7 @@ def main():
         try:
             soup=get_public_html(url)
             item["retrieved_at_utc"]=now()
+            print(name,"HTML tables",len(soup.select("table")))
             if name=="fxempire":
                 item["pairs"]=collect_fxempire(soup)
                 if item["pairs"]:
