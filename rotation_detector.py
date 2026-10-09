@@ -44,7 +44,7 @@ def number(x):
         return None
 
 
-def candle_metrics(pair, frame, now, tf):
+def candle_metrics(pair, frame, now, tf, clock_offset_seconds=0):
     try:
         ts = frame["t"]
         o, h, l, c = (frame[k] for k in ("o", "h", "l", "c"))
@@ -60,7 +60,7 @@ def candle_metrics(pair, frame, now, tf):
             return None, "invalid_ohlc"
         # Last closed candle timestamp is the OPEN time; its close is one TF later.
         seconds = {"M5": 300, "M15": 900, "M30": 1800, "H1": 3600}[tf]
-        close_dt = datetime.fromtimestamp(int(ts[-2]) + seconds, UTC)
+        close_dt = datetime.fromtimestamp(int(ts[-2]) + seconds - clock_offset_seconds, UTC)
         age = age_minutes(now, close_dt)
         if not valid_age(age, MAX_CANDLE_AGE_MIN[tf]):
             return None, "stale_candles"
@@ -136,9 +136,9 @@ def analyze(pair, tech, vol, now):
     if not vpair:
         output["reasons"].append("NO_VOLATILITY_PAIR")
         return output
-    for t, vt in TF.items():
+    # ForexToolkits may timestamp candles in its server-local clock.\n    # Infer only a whole-hour offset from its own source timestamp and collection time.\n    # Reject ambiguous offsets rather than assuming UTC or silently accepting future bars.\n    clock_offset_seconds = 0\n    source_ts = number(vol.get("source_timestamp"))\n    if source_ts is not None and v_time is not None:\n        offset = source_ts - v_time.timestamp()\n        rounded = round(offset / 3600) * 3600\n        if abs(offset - rounded) <= 600 and abs(rounded) <= 12 * 3600:\n            clock_offset_seconds = rounded\n        elif abs(offset) > 600:\n            output["reasons"].append("AMBIGUOUS_SOURCE_CLOCK")\n            return output\n    output["source_clock_offset_hours"] = clock_offset_seconds / 3600\n    for t, vt in TF.items():
         tm = tech_metrics(tech.get("pairs",{}).get(pair,{}).get(t,{}))
-        vm, error = candle_metrics(pair,vpair.get("tf",{}).get(vt,{}),now,vt)
+        vm, error = candle_metrics(pair,vpair.get("tf",{}).get(vt,{}),now,vt,clock_offset_seconds)
         output["timeframes"][t] = {"technical":tm,"candles":vm,"error":error}
     m5 = output["timeframes"]["5m"]
     m15 = output["timeframes"]["15m"]
