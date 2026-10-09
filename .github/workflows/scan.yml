@@ -1,7 +1,9 @@
-
 name: FX TradingView Scanner
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
   schedule:
     - cron: '*/15 * * * *'
