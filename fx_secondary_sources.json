@@ -1,11 +1,11 @@
 {
-  "collected_at_utc": "2026-10-09T19:22:34.254138+00:00",
+  "collected_at_utc": "2026-10-09T19:42:23.863569+00:00",
   "scope": "optional_second_opinion_not_execution_feed",
   "sources": {
     "fxempire": {
       "url": "https://www.fxempire.com/currencies/technical-analysis",
       "status": "REFERENCE_ONLY_PUBLISHER_TIMESTAMP_MISSING",
-      "retrieved_at_utc": "2026-10-09T19:22:35.438303+00:00",
+      "retrieved_at_utc": "2026-10-09T19:42:24.770802+00:00",
       "publisher_timestamp_utc": null,
       "freshness_verified": false,
       "pairs": {
@@ -18,7 +18,7 @@
             "status": "PUBLISHER_TIME_UNVERIFIED"
           },
           "30m": {
-            "rating": "NEUTRAL",
+            "rating": "BUY",
             "status": "PUBLISHER_TIME_UNVERIFIED"
           },
           "row_verified_by": "six_ordered_15m_30m_1h_4h_daily_weekly_ratings"
@@ -28,7 +28,7 @@
             "status": "NOT_OFFERED"
           },
           "15m": {
-            "rating": "SELL",
+            "rating": "NEUTRAL",
             "status": "PUBLISHER_TIME_UNVERIFIED"
           },
           "30m": {
@@ -42,7 +42,7 @@
             "status": "NOT_OFFERED"
           },
           "15m": {
-            "rating": "BUY",
+            "rating": "STRONG BUY",
             "status": "PUBLISHER_TIME_UNVERIFIED"
           },
           "30m": {
@@ -70,11 +70,11 @@
             "status": "NOT_OFFERED"
           },
           "15m": {
-            "rating": "BUY",
+            "rating": "STRONG BUY",
             "status": "PUBLISHER_TIME_UNVERIFIED"
           },
           "30m": {
-            "rating": "STRONG BUY",
+            "rating": "BUY",
             "status": "PUBLISHER_TIME_UNVERIFIED"
           },
           "row_verified_by": "six_ordered_15m_30m_1h_4h_daily_weekly_ratings"
@@ -103,17 +103,30 @@
     "fxstreet": {
       "url": "https://www.fxstreet.com/rates-charts/indicators",
       "status": "REFERENCE_ONLY_PUBLISHER_TIMESTAMP_MISSING",
-      "retrieved_at_utc": "2026-10-09T19:22:36.652357+00:00",
+      "retrieved_at_utc": "2026-10-09T19:42:25.987842+00:00",
       "publisher_timestamp_utc": null,
       "freshness_verified": false,
       "pairs": {
+        "AUDUSD": {
+          "5m": {
+            "status": "NOT_OFFERED"
+          },
+          "15m": {
+            "high": 0.69845,
+            "low": 0.6982,
+            "status": "PUBLISHER_TIME_UNVERIFIED"
+          },
+          "30m": {
+            "status": "NOT_OFFERED"
+          }
+        },
         "GBPUSD": {
           "5m": {
             "status": "NOT_OFFERED"
           },
           "15m": {
-            "high": 1.32426,
-            "low": 1.32396,
+            "high": 1.32414,
+            "low": 1.32376,
             "status": "PUBLISHER_TIME_UNVERIFIED"
           },
           "30m": {
@@ -125,60 +138,8 @@
             "status": "NOT_OFFERED"
           },
           "15m": {
-            "high": 158.24,
-            "low": 158.2,
-            "status": "PUBLISHER_TIME_UNVERIFIED"
-          },
-          "30m": {
-            "status": "NOT_OFFERED"
-          }
-        },
-        "USDCAD": {
-          "5m": {
-            "status": "NOT_OFFERED"
-          },
-          "15m": {
-            "high": 1.42662,
-            "low": 1.42617,
-            "status": "PUBLISHER_TIME_UNVERIFIED"
-          },
-          "30m": {
-            "status": "NOT_OFFERED"
-          }
-        },
-        "EURUSD": {
-          "5m": {
-            "status": "NOT_OFFERED"
-          },
-          "15m": {
-            "high": 1.12037,
-            "low": 1.12012,
-            "status": "PUBLISHER_TIME_UNVERIFIED"
-          },
-          "30m": {
-            "status": "NOT_OFFERED"
-          }
-        },
-        "AUDUSD": {
-          "5m": {
-            "status": "NOT_OFFERED"
-          },
-          "15m": {
-            "high": 0.69853,
-            "low": 0.69835,
-            "status": "PUBLISHER_TIME_UNVERIFIED"
-          },
-          "30m": {
-            "status": "NOT_OFFERED"
-          }
-        },
-        "EURJPY": {
-          "5m": {
-            "status": "NOT_OFFERED"
-          },
-          "15m": {
-            "high": 177.28,
-            "low": 177.23,
+            "high": 158.28,
+            "low": 158.24,
             "status": "PUBLISHER_TIME_UNVERIFIED"
           },
           "30m": {
@@ -191,7 +152,20 @@
           },
           "15m": {
             "high": 0.8461,
-            "low": 0.846,
+            "low": 0.8459,
+            "status": "PUBLISHER_TIME_UNVERIFIED"
+          },
+          "30m": {
+            "status": "NOT_OFFERED"
+          }
+        },
+        "USDCAD": {
+          "5m": {
+            "status": "NOT_OFFERED"
+          },
+          "15m": {
+            "high": 1.4266,
+            "low": 1.42628,
             "status": "PUBLISHER_TIME_UNVERIFIED"
           },
           "30m": {
@@ -203,8 +177,34 @@
             "status": "NOT_OFFERED"
           },
           "15m": {
-            "high": 0.5616,
-            "low": 0.5613,
+            "high": 0.5615,
+            "low": 0.5611,
+            "status": "PUBLISHER_TIME_UNVERIFIED"
+          },
+          "30m": {
+            "status": "NOT_OFFERED"
+          }
+        },
+        "EURUSD": {
+          "5m": {
+            "status": "NOT_OFFERED"
+          },
+          "15m": {
+            "high": 1.12033,
+            "low": 1.11997,
+            "status": "PUBLISHER_TIME_UNVERIFIED"
+          },
+          "30m": {
+            "status": "NOT_OFFERED"
+          }
+        },
+        "EURJPY": {
+          "5m": {
+            "status": "NOT_OFFERED"
+          },
+          "15m": {
+            "high": 177.29,
+            "low": 177.26,
             "status": "PUBLISHER_TIME_UNVERIFIED"
           },
           "30m": {
