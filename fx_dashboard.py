@@ -65,7 +65,7 @@ def main():
                 "momentum_3bars_pips":bar.get("momentum_3_bars_pips"),
                 "structure":bar.get("structure")
             }
-        candle_ok=all(fresh(checks[tf]["candle_age_min"],{"5m":10,"15m":25,"30m":45}[tf])
+        candle_ok=all(fresh(checks[tf]["candle_age_min"],{"5m":6,"15m":18,"30m":33}[tf])
                       and not checks[tf]["error"] for tf in ("5m","15m","30m"))
         source_ok=all(fresh(v) for v in ages.values()) and versions_match and candle_ok
         original_direction=r.get("direction","NONE")
@@ -102,6 +102,8 @@ def main():
         "warnings":warnings,
         "scope":"11 TradingView-covered pairs; EUR/NZD NOT INCLUDED",
         "priority_timeframes":["5m","15m","30m"],
+        "max_closed_candle_age_minutes":{"5m":6,"15m":18,"30m":33},
+        "freshness_rule":"Any stale primary candle blocks pair from technical watchlist; collection timestamp alone never proves candle freshness.",
         "optional_secondary_sources":secondary,
         "secondary_source_rule":"FXStreet and FXEmpire are reference-only unless a publisher timestamp proves fresh 5m/15m/30m data. No second-opinion ratings can override fresh scanner rotations.",
         "available_technical_watch_count":len(watches),
