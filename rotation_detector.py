@@ -12,7 +12,7 @@ UTC = timezone.utc
 TF = {"5m": "M5", "15m": "M15", "30m": "M30", "1H": "H1"}
 MAX_TECH_AGE_MIN = 35
 MAX_VOL_AGE_MIN = 35
-MAX_CANDLE_AGE_MIN = {"M5": 20, "M15": 40, "M30": 65, "H1": 125}
+MAX_CANDLE_AGE_MIN = {"M5": 10, "M15": 25, "M30": 45, "H1": 90}
 
 
 def parse_time(value):
