@@ -65,7 +65,7 @@ def main():
                 "momentum_3bars_pips":bar.get("momentum_3_bars_pips"),
                 "structure":bar.get("structure")
             }
-        candle_ok=all(fresh(checks[tf]["candle_age_min"],{"5m":15,"15m":35,"30m":65}[tf])
+        candle_ok=all(fresh(checks[tf]["candle_age_min"],{"5m":10,"15m":25,"30m":45}[tf])
                       and not checks[tf]["error"] for tf in ("5m","15m","30m"))
         source_ok=all(fresh(v) for v in ages.values()) and versions_match and candle_ok
         original_direction=r.get("direction","NONE")
