@@ -1,15 +1,15 @@
 {
-  "generated_at_utc": "2026-10-10T15:56:15.550454+00:00",
+  "generated_at_utc": "2026-10-10T16:16:29.212847+00:00",
   "purpose": "TECHNICAL_RESEARCH_ONLY_NOT_AN_EXECUTABLE_TRADE_SIGNAL",
   "data_sources_utc": {
-    "tradingview": "2026-10-10T15:56:11.572469+00:00",
-    "forextoolkits": "2026-10-10T15:56:11.458810+00:00",
-    "rotation": "2026-10-10T15:56:14.521888+00:00"
+    "tradingview": "2026-10-10T16:16:04.931779+00:00",
+    "forextoolkits": "2026-10-10T16:16:04.731077+00:00",
+    "rotation": "2026-10-10T16:16:09.924000+00:00"
   },
   "source_age_minutes_at_generation": {
-    "tradingview": 0.1,
-    "forextoolkits": 0.1,
-    "rotation": 0.0
+    "tradingview": 0.4,
+    "forextoolkits": 0.4,
+    "rotation": 0.3
   },
   "source_versions_match": true,
   "warnings": [
@@ -28,13 +28,13 @@
   },
   "freshness_rule": "Any stale primary candle blocks pair from technical watchlist; collection timestamp alone never proves candle freshness.",
   "optional_secondary_sources": {
-    "collected_at_utc": "2026-10-10T15:56:14.619126+00:00",
+    "collected_at_utc": "2026-10-10T16:16:10.324929+00:00",
     "scope": "optional_second_opinion_not_execution_feed",
     "sources": {
       "fxempire": {
         "url": "https://www.fxempire.com/currencies/technical-analysis",
         "status": "REFERENCE_ONLY_PUBLISHER_TIMESTAMP_MISSING",
-        "retrieved_at_utc": "2026-10-10T15:56:15.344657+00:00",
+        "retrieved_at_utc": "2026-10-10T16:16:11.066382+00:00",
         "publisher_timestamp_utc": null,
         "freshness_verified": false,
         "pairs": {
@@ -131,121 +131,17 @@
       },
       "fxstreet": {
         "url": "https://www.fxstreet.com/rates-charts/indicators",
-        "status": "REFERENCE_ONLY_PUBLISHER_TIMESTAMP_MISSING",
-        "retrieved_at_utc": "2026-10-10T15:56:15.495511+00:00",
+        "status": "UNAVAILABLE_TIMEOUTERROR",
+        "retrieved_at_utc": null,
         "publisher_timestamp_utc": null,
         "freshness_verified": false,
-        "pairs": {
-          "EURGBP": {
-            "5m": {
-              "status": "NOT_OFFERED"
-            },
-            "15m": {
-              "high": 0.84646,
-              "low": 0.84616,
-              "status": "PUBLISHER_TIME_UNVERIFIED"
-            },
-            "30m": {
-              "status": "NOT_OFFERED"
-            }
-          },
-          "EURUSD": {
-            "5m": {
-              "status": "NOT_OFFERED"
-            },
-            "15m": {
-              "high": 1.12046,
-              "low": 1.12004,
-              "status": "PUBLISHER_TIME_UNVERIFIED"
-            },
-            "30m": {
-              "status": "NOT_OFFERED"
-            }
-          },
-          "EURJPY": {
-            "5m": {
-              "status": "NOT_OFFERED"
-            },
-            "15m": {
-              "high": 177.34,
-              "low": 177.26,
-              "status": "PUBLISHER_TIME_UNVERIFIED"
-            },
-            "30m": {
-              "status": "NOT_OFFERED"
-            }
-          },
-          "USDCAD": {
-            "5m": {
-              "status": "NOT_OFFERED"
-            },
-            "15m": {
-              "high": 1.42602,
-              "low": 1.4254,
-              "status": "PUBLISHER_TIME_UNVERIFIED"
-            },
-            "30m": {
-              "status": "NOT_OFFERED"
-            }
-          },
-          "AUDUSD": {
-            "5m": {
-              "status": "NOT_OFFERED"
-            },
-            "15m": {
-              "high": 0.69888,
-              "low": 0.69822,
-              "status": "PUBLISHER_TIME_UNVERIFIED"
-            },
-            "30m": {
-              "status": "NOT_OFFERED"
-            }
-          },
-          "NZDUSD": {
-            "5m": {
-              "status": "NOT_OFFERED"
-            },
-            "15m": {
-              "high": 0.5617,
-              "low": 0.56115,
-              "status": "PUBLISHER_TIME_UNVERIFIED"
-            },
-            "30m": {
-              "status": "NOT_OFFERED"
-            }
-          },
-          "GBPUSD": {
-            "5m": {
-              "status": "NOT_OFFERED"
-            },
-            "15m": {
-              "high": 1.32404,
-              "low": 1.32283,
-              "status": "PUBLISHER_TIME_UNVERIFIED"
-            },
-            "30m": {
-              "status": "NOT_OFFERED"
-            }
-          },
-          "USDJPY": {
-            "5m": {
-              "status": "NOT_OFFERED"
-            },
-            "15m": {
-              "high": 158.34,
-              "low": 158.25,
-              "status": "PUBLISHER_TIME_UNVERIFIED"
-            },
-            "30m": {
-              "status": "NOT_OFFERED"
-            }
-          }
-        },
+        "pairs": {},
         "timeframes": {
-          "5m": "NOT_OFFERED",
-          "15m": "REFERENCE_ONLY",
-          "30m": "NOT_OFFERED"
-        }
+          "5m": "UNAVAILABLE",
+          "15m": "UNAVAILABLE",
+          "30m": "UNAVAILABLE"
+        },
+        "error": "The read operation timed out"
       }
     }
   },
