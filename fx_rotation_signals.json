@@ -1,7 +1,7 @@
 {
-  "generated_at_utc": "2026-10-10T08:47:48.432384+00:00",
-  "technical_source_utc": "2026-10-10T08:47:42.540059+00:00",
-  "volatility_source_utc": "2026-10-10T08:47:42.388617+00:00",
+  "generated_at_utc": "2026-10-10T09:01:15.999607+00:00",
+  "technical_source_utc": "2026-10-10T09:01:13.435778+00:00",
+  "volatility_source_utc": "2026-10-10T09:01:13.235910+00:00",
   "source_volatility_freshness": "unverified_upstream",
   "scope": "technical_rotation_candidates_only_not_live_trade_signals",
   "method": "closed_candles; EMA10/20 from TradingView; ATR5/14 from ForexToolkits",
@@ -17,11 +17,81 @@
       "tp1": null,
       "tp2": null,
       "reasons": [
-        "AMBIGUOUS_SOURCE_CLOCK"
+        "MISSING_OR_STALE_EXECUTION_TIMEFRAME"
       ],
-      "timeframes": {},
-      "technical_age_minutes": 0.1,
-      "volatility_age_minutes": 0.1
+      "timeframes": {
+        "5m": {
+          "technical": {
+            "close": 110.562,
+            "ema10": 110.55782080970764,
+            "ema20": 110.55212906910667,
+            "ema50": 110.52414518820143,
+            "ema100": 110.49021580022406,
+            "ema200": 110.4176439658797,
+            "rsi": 53.577126290172785,
+            "macd_hist": -0.003486661586200871,
+            "recommendation": "BUY",
+            "bullish": true,
+            "bearish": false
+          },
+          "candles": null,
+          "error": "stale_candles"
+        },
+        "15m": {
+          "technical": {
+            "close": 110.562,
+            "ema10": 110.53312717630669,
+            "ema20": 110.51174973260291,
+            "ema50": 110.45377652862368,
+            "ema100": 110.35120312566369,
+            "ema200": 110.24214159002199,
+            "rsi": 57.15069532174832,
+            "macd_hist": 0.002514334887795129,
+            "recommendation": "BUY",
+            "bullish": true,
+            "bearish": false
+          },
+          "candles": null,
+          "error": "stale_candles"
+        },
+        "30m": {
+          "technical": {
+            "close": 110.562,
+            "ema10": 110.50714548707514,
+            "ema20": 110.4741449606191,
+            "ema50": 110.35233801344941,
+            "ema100": 110.24369467583548,
+            "ema200": 110.1568136302761,
+            "rsi": 58.469743581764064,
+            "macd_hist": -0.004205454527533611,
+            "recommendation": "STRONG_BUY",
+            "bullish": true,
+            "bearish": false
+          },
+          "candles": null,
+          "error": "stale_candles"
+        },
+        "1H": {
+          "technical": {
+            "close": 110.562,
+            "ema10": 110.47940290997205,
+            "ema20": 110.39689483286251,
+            "ema50": 110.2483490760272,
+            "ema100": 110.15607538547097,
+            "ema200": 110.16427807153612,
+            "rsi": 59.32159979779998,
+            "macd_hist": -0.0027837812738910894,
+            "recommendation": "BUY",
+            "bullish": true,
+            "bearish": false
+          },
+          "candles": null,
+          "error": "stale_candles"
+        }
+      },
+      "technical_age_minutes": 0.0,
+      "volatility_age_minutes": 0.0,
+      "source_clock_offset_hours": 3.0
     },
     {
       "pair": "AUDUSD",
@@ -34,11 +104,81 @@
       "tp1": null,
       "tp2": null,
       "reasons": [
-        "AMBIGUOUS_SOURCE_CLOCK"
+        "MISSING_OR_STALE_EXECUTION_TIMEFRAME"
       ],
-      "timeframes": {},
-      "technical_age_minutes": 0.1,
-      "volatility_age_minutes": 0.1
+      "timeframes": {
+        "5m": {
+          "technical": {
+            "close": 0.6982,
+            "ema10": 0.6985160416192627,
+            "ema20": 0.6985175532692031,
+            "ema50": 0.698312485190168,
+            "ema100": 0.698087050060167,
+            "ema200": 0.697766699727545,
+            "rsi": 35.58192825185287,
+            "macd_hist": -7.46022186191523e-05,
+            "recommendation": "SELL",
+            "bullish": false,
+            "bearish": true
+          },
+          "candles": null,
+          "error": "stale_candles"
+        },
+        "15m": {
+          "technical": {
+            "close": 0.6982,
+            "ema10": 0.6983952822709404,
+            "ema20": 0.6982410125856675,
+            "ema50": 0.6979314505142273,
+            "ema100": 0.6974959741182897,
+            "ema200": 0.6970207205126356,
+            "rsi": 51.31299887611972,
+            "macd_hist": -2.7334590691790084e-06,
+            "recommendation": "BUY",
+            "bullish": false,
+            "bearish": false
+          },
+          "candles": null,
+          "error": "stale_candles"
+        },
+        "30m": {
+          "technical": {
+            "close": 0.6982,
+            "ema10": 0.6982299370950728,
+            "ema20": 0.6980399755579487,
+            "ema50": 0.6975204251653269,
+            "ema100": 0.697040875730278,
+            "ema200": 0.6967694773359345,
+            "rsi": 55.16731049658638,
+            "macd_hist": 2.3933781019917294e-05,
+            "recommendation": "BUY",
+            "bullish": false,
+            "bearish": false
+          },
+          "candles": null,
+          "error": "stale_candles"
+        },
+        "1H": {
+          "technical": {
+            "close": 0.6982,
+            "ema10": 0.6980586895548657,
+            "ema20": 0.6977008877034021,
+            "ema50": 0.6970434656169697,
+            "ema100": 0.6967649790250542,
+            "ema200": 0.6976807784387491,
+            "rsi": 57.323035924414924,
+            "macd_hist": 2.6931168879283825e-08,
+            "recommendation": "BUY",
+            "bullish": true,
+            "bearish": false
+          },
+          "candles": null,
+          "error": "stale_candles"
+        }
+      },
+      "technical_age_minutes": 0.0,
+      "volatility_age_minutes": 0.0,
+      "source_clock_offset_hours": 3.0
     },
     {
       "pair": "EURCAD",
@@ -51,11 +191,81 @@
       "tp1": null,
       "tp2": null,
       "reasons": [
-        "AMBIGUOUS_SOURCE_CLOCK"
+        "MISSING_OR_STALE_EXECUTION_TIMEFRAME"
       ],
-      "timeframes": {},
-      "technical_age_minutes": 0.1,
-      "volatility_age_minutes": 0.1
+      "timeframes": {
+        "5m": {
+          "technical": {
+            "close": 1.5966,
+            "ema10": 1.596647562464396,
+            "ema20": 1.5968910940841412,
+            "ema50": 1.5972474788276614,
+            "ema100": 1.5972870848930434,
+            "ema200": 1.5969480774281823,
+            "rsi": 34.7335915958526,
+            "macd_hist": -2.2845474009417833e-05,
+            "recommendation": "SELL",
+            "bullish": false,
+            "bearish": true
+          },
+          "candles": null,
+          "error": "stale_candles"
+        },
+        "15m": {
+          "technical": {
+            "close": 1.5966,
+            "ema10": 1.5969750308314006,
+            "ema20": 1.5972133398829,
+            "ema50": 1.5970738667608948,
+            "ema100": 1.5966132660967411,
+            "ema200": 1.5964698470934608,
+            "rsi": 41.35675221195065,
+            "macd_hist": -0.0001755955487460113,
+            "recommendation": "SELL",
+            "bullish": false,
+            "bearish": true
+          },
+          "candles": null,
+          "error": "stale_candles"
+        },
+        "30m": {
+          "technical": {
+            "close": 1.5966,
+            "ema10": 1.597066730517488,
+            "ema20": 1.5970795506843385,
+            "ema50": 1.5965794789657957,
+            "ema100": 1.5964418078557094,
+            "ema200": 1.597490788528814,
+            "rsi": 46.78469102043266,
+            "macd_hist": -0.0002064344299714981,
+            "recommendation": "NEUTRAL",
+            "bullish": false,
+            "bearish": true
+          },
+          "candles": null,
+          "error": "stale_candles"
+        },
+        "1H": {
+          "technical": {
+            "close": 1.5966,
+            "ema10": 1.5970478338564817,
+            "ema20": 1.5967222917050166,
+            "ema50": 1.5964304326544168,
+            "ema100": 1.5974821101260002,
+            "ema200": 1.6000081349454958,
+            "rsi": 50.3610051588403,
+            "macd_hist": -6.730133408728548e-05,
+            "recommendation": "SELL",
+            "bullish": false,
+            "bearish": false
+          },
+          "candles": null,
+          "error": "stale_candles"
+        }
+      },
+      "technical_age_minutes": 0.0,
+      "volatility_age_minutes": 0.0,
+      "source_clock_offset_hours": 3.0
     },
     {
       "pair": "EURGBP",
@@ -68,11 +278,81 @@
       "tp1": null,
       "tp2": null,
       "reasons": [
-        "AMBIGUOUS_SOURCE_CLOCK"
+        "MISSING_OR_STALE_EXECUTION_TIMEFRAME"
       ],
-      "timeframes": {},
-      "technical_age_minutes": 0.1,
-      "volatility_age_minutes": 0.1
+      "timeframes": {
+        "5m": {
+          "technical": {
+            "close": 0.84612,
+            "ema10": 0.8461879265520899,
+            "ema20": 0.8461514315704842,
+            "ema50": 0.8461222632640132,
+            "ema100": 0.8462996229888166,
+            "ema200": 0.8466677838464511,
+            "rsi": 49.11799899124435,
+            "macd_hist": -1.0143126543723038e-05,
+            "recommendation": "SELL",
+            "bullish": false,
+            "bearish": false
+          },
+          "candles": null,
+          "error": "stale_candles"
+        },
+        "15m": {
+          "technical": {
+            "close": 0.84612,
+            "ema10": 0.8461289753539708,
+            "ema20": 0.8461471375441172,
+            "ema50": 0.8464961250331419,
+            "ema100": 0.8468766760069268,
+            "ema200": 0.847217800270887,
+            "rsi": 45.480944674311864,
+            "macd_hist": 7.178871965645542e-05,
+            "recommendation": "SELL",
+            "bullish": false,
+            "bearish": true
+          },
+          "candles": null,
+          "error": "stale_candles"
+        },
+        "30m": {
+          "technical": {
+            "close": 0.84612,
+            "ema10": 0.8461495469422595,
+            "ema20": 0.8463631505911219,
+            "ema50": 0.8468542622682869,
+            "ema100": 0.8471983360172755,
+            "ema200": 0.8479765026684649,
+            "rsi": 38.59088260776605,
+            "macd_hist": 5.339806954818445e-05,
+            "recommendation": "SELL",
+            "bullish": false,
+            "bearish": true
+          },
+          "candles": null,
+          "error": "stale_candles"
+        },
+        "1H": {
+          "technical": {
+            "close": 0.84612,
+            "ema10": 0.8463432398425842,
+            "ema20": 0.8467138517455502,
+            "ema50": 0.8471746010933646,
+            "ema100": 0.8479440791564884,
+            "ema200": 0.8499257377777947,
+            "rsi": 37.200131774601296,
+            "macd_hist": -0.00010653900632064979,
+            "recommendation": "SELL",
+            "bullish": false,
+            "bearish": true
+          },
+          "candles": null,
+          "error": "stale_candles"
+        }
+      },
+      "technical_age_minutes": 0.0,
+      "volatility_age_minutes": 0.0,
+      "source_clock_offset_hours": 3.0
     },
     {
       "pair": "EURJPY",
@@ -85,11 +365,81 @@
       "tp1": null,
       "tp2": null,
       "reasons": [
-        "AMBIGUOUS_SOURCE_CLOCK"
+        "MISSING_OR_STALE_EXECUTION_TIMEFRAME"
       ],
-      "timeframes": {},
-      "technical_age_minutes": 0.1,
-      "volatility_age_minutes": 0.1
+      "timeframes": {
+        "5m": {
+          "technical": {
+            "close": 177.293,
+            "ema10": 177.2920568569971,
+            "ema20": 177.28338267995156,
+            "ema50": 177.26361063245136,
+            "ema100": 177.27687872985157,
+            "ema200": 177.29810513801505,
+            "rsi": 56.8539845964752,
+            "macd_hist": -0.0020915565834520363,
+            "recommendation": "BUY",
+            "bullish": true,
+            "bearish": false
+          },
+          "candles": null,
+          "error": "stale_candles"
+        },
+        "15m": {
+          "technical": {
+            "close": 177.293,
+            "ema10": 177.27639882871955,
+            "ema20": 177.26615924713514,
+            "ema50": 177.2954029338751,
+            "ema100": 177.29011589085857,
+            "ema200": 177.27426959604585,
+            "rsi": 53.63899125597283,
+            "macd_hist": 0.014299910166165872,
+            "recommendation": "BUY",
+            "bullish": true,
+            "bearish": false
+          },
+          "candles": null,
+          "error": "stale_candles"
+        },
+        "30m": {
+          "technical": {
+            "close": 177.293,
+            "ema10": 177.26818465794042,
+            "ema20": 177.28773537051617,
+            "ema50": 177.29000677630245,
+            "ema100": 177.27404771295215,
+            "ema200": 177.36522046143983,
+            "rsi": 49.6027414114776,
+            "macd_hist": 0.008597033271324023,
+            "recommendation": "NEUTRAL",
+            "bullish": false,
+            "bearish": false
+          },
+          "candles": null,
+          "error": "stale_candles"
+        },
+        "1H": {
+          "technical": {
+            "close": 177.293,
+            "ema10": 177.28796181797819,
+            "ema20": 177.29373957695387,
+            "ema50": 177.2702789775874,
+            "ema100": 177.35664771467455,
+            "ema200": 177.69602584449885,
+            "rsi": 50.378478247709566,
+            "macd_hist": -0.022203244830009163,
+            "recommendation": "NEUTRAL",
+            "bullish": false,
+            "bearish": false
+          },
+          "candles": null,
+          "error": "stale_candles"
+        }
+      },
+      "technical_age_minutes": 0.0,
+      "volatility_age_minutes": 0.0,
+      "source_clock_offset_hours": 3.0
     },
     {
       "pair": "EURUSD",
@@ -102,11 +452,81 @@
       "tp1": null,
       "tp2": null,
       "reasons": [
-        "AMBIGUOUS_SOURCE_CLOCK"
+        "MISSING_OR_STALE_EXECUTION_TIMEFRAME"
       ],
-      "timeframes": {},
-      "technical_age_minutes": 0.1,
-      "volatility_age_minutes": 0.1
+      "timeframes": {
+        "5m": {
+          "technical": {
+            "close": 1.1201,
+            "ema10": 1.1201036959068922,
+            "ema20": 1.1200799212848462,
+            "ema50": 1.1199426529043215,
+            "ema100": 1.1200401822067012,
+            "ema200": 1.1204172606596752,
+            "rsi": 51.92475521125274,
+            "macd_hist": -2.803438567781352e-05,
+            "recommendation": "BUY",
+            "bullish": false,
+            "bearish": false
+          },
+          "candles": null,
+          "error": "stale_candles"
+        },
+        "15m": {
+          "technical": {
+            "close": 1.1201,
+            "ema10": 1.1200069325583224,
+            "ema20": 1.1199296952007451,
+            "ema50": 1.120245083067154,
+            "ema100": 1.1205698898283718,
+            "ema200": 1.1208233831532441,
+            "rsi": 52.578938318904946,
+            "macd_hist": 7.266815906947037e-05,
+            "recommendation": "BUY",
+            "bullish": true,
+            "bearish": false
+          },
+          "candles": null,
+          "error": "stale_candles"
+        },
+        "30m": {
+          "technical": {
+            "close": 1.1201,
+            "ema10": 1.1199147298953067,
+            "ema20": 1.1200947963879053,
+            "ema50": 1.1205485112814608,
+            "ema100": 1.1208058290685898,
+            "ema200": 1.1218489378628036,
+            "rsi": 47.70566225313122,
+            "macd_hist": 0.00013116902743445606,
+            "recommendation": "NEUTRAL",
+            "bullish": false,
+            "bearish": false
+          },
+          "candles": null,
+          "error": "stale_candles"
+        },
+        "1H": {
+          "technical": {
+            "close": 1.1201,
+            "ema10": 1.120056596747247,
+            "ema20": 1.1203869856698034,
+            "ema50": 1.120733195396929,
+            "ema100": 1.1217971310459387,
+            "ema200": 1.125369707041006,
+            "rsi": 46.725320490425204,
+            "macd_hist": -0.0001162420459160938,
+            "recommendation": "SELL",
+            "bullish": false,
+            "bearish": false
+          },
+          "candles": null,
+          "error": "stale_candles"
+        }
+      },
+      "technical_age_minutes": 0.0,
+      "volatility_age_minutes": 0.0,
+      "source_clock_offset_hours": 3.0
     },
     {
       "pair": "GBPUSD",
@@ -119,11 +539,81 @@
       "tp1": null,
       "tp2": null,
       "reasons": [
-        "AMBIGUOUS_SOURCE_CLOCK"
+        "MISSING_OR_STALE_EXECUTION_TIMEFRAME"
       ],
-      "timeframes": {},
-      "technical_age_minutes": 0.1,
-      "volatility_age_minutes": 0.1
+      "timeframes": {
+        "5m": {
+          "technical": {
+            "close": 1.3236,
+            "ema10": 1.323567141487919,
+            "ema20": 1.32368985751981,
+            "ema50": 1.323585435765408,
+            "ema100": 1.323376924464323,
+            "ema200": 1.3232210611020128,
+            "rsi": 47.41752971000494,
+            "macd_hist": -8.823874307546309e-05,
+            "recommendation": "NEUTRAL",
+            "bullish": false,
+            "bearish": false
+          },
+          "candles": null,
+          "error": "stale_candles"
+        },
+        "15m": {
+          "technical": {
+            "close": 1.3236,
+            "ema10": 1.3235842766890742,
+            "ema20": 1.3234915007609034,
+            "ema50": 1.3232939618156778,
+            "ema100": 1.3230810526211065,
+            "ema200": 1.3228524973136322,
+            "rsi": 53.08570211249158,
+            "macd_hist": -6.986845483645797e-05,
+            "recommendation": "BUY",
+            "bullish": true,
+            "bearish": false
+          },
+          "candles": null,
+          "error": "stale_candles"
+        },
+        "30m": {
+          "technical": {
+            "close": 1.3236,
+            "ema10": 1.3234371666842617,
+            "ema20": 1.323321357498313,
+            "ema50": 1.3230905936341442,
+            "ema100": 1.3228627803492343,
+            "ema200": 1.3228671520946933,
+            "rsi": 53.36333945513122,
+            "macd_hist": 4.3916648097330784e-05,
+            "recommendation": "STRONG_BUY",
+            "bullish": true,
+            "bearish": false
+          },
+          "candles": null,
+          "error": "stale_candles"
+        },
+        "1H": {
+          "technical": {
+            "close": 1.3236,
+            "ema10": 1.3233095677067996,
+            "ema20": 1.3231359180290447,
+            "ema50": 1.3228262545417462,
+            "ema100": 1.322866691891016,
+            "ema200": 1.323949339615915,
+            "rsi": 53.80274843655819,
+            "macd_hist": 1.3157614626257356e-05,
+            "recommendation": "STRONG_BUY",
+            "bullish": true,
+            "bearish": false
+          },
+          "candles": null,
+          "error": "stale_candles"
+        }
+      },
+      "technical_age_minutes": 0.0,
+      "volatility_age_minutes": 0.0,
+      "source_clock_offset_hours": 3.0
     },
     {
       "pair": "NZDJPY",
@@ -136,11 +626,81 @@
       "tp1": null,
       "tp2": null,
       "reasons": [
-        "AMBIGUOUS_SOURCE_CLOCK"
+        "MISSING_OR_STALE_EXECUTION_TIMEFRAME"
       ],
-      "timeframes": {},
-      "technical_age_minutes": 0.1,
-      "volatility_age_minutes": 0.1
+      "timeframes": {
+        "5m": {
+          "technical": {
+            "close": 88.805,
+            "ema10": 88.81889471125463,
+            "ema20": 88.82708942099923,
+            "ema50": 88.8221356843814,
+            "ema100": 88.81119397770495,
+            "ema200": 88.78095541956007,
+            "rsi": 37.5664041001367,
+            "macd_hist": -0.006996599690921859,
+            "recommendation": "SELL",
+            "bullish": false,
+            "bearish": true
+          },
+          "candles": null,
+          "error": "stale_candles"
+        },
+        "15m": {
+          "technical": {
+            "close": 88.805,
+            "ema10": 88.82736724833595,
+            "ema20": 88.82065059063262,
+            "ema50": 88.79883972023721,
+            "ema100": 88.74688217036558,
+            "ema200": 88.68447659467155,
+            "rsi": 47.30699286089183,
+            "macd_hist": -0.0016599456850597862,
+            "recommendation": "SELL",
+            "bullish": false,
+            "bearish": false
+          },
+          "candles": null,
+          "error": "stale_candles"
+        },
+        "30m": {
+          "technical": {
+            "close": 88.805,
+            "ema10": 88.82250303073606,
+            "ema20": 88.80940387771857,
+            "ema50": 88.74753972633054,
+            "ema100": 88.68457451049986,
+            "ema200": 88.65650665825508,
+            "rsi": 51.09002321448753,
+            "macd_hist": -0.001901359619525752,
+            "recommendation": "NEUTRAL",
+            "bullish": false,
+            "bearish": false
+          },
+          "candles": null,
+          "error": "stale_candles"
+        },
+        "1H": {
+          "technical": {
+            "close": 88.805,
+            "ema10": 88.80993468131399,
+            "ema20": 88.76934072432101,
+            "ema50": 88.6844425583074,
+            "ema100": 88.65321246442771,
+            "ema200": 88.73751670847996,
+            "rsi": 54.04843726814001,
+            "macd_hist": -0.006266383300159176,
+            "recommendation": "BUY",
+            "bullish": false,
+            "bearish": false
+          },
+          "candles": null,
+          "error": "stale_candles"
+        }
+      },
+      "technical_age_minutes": 0.0,
+      "volatility_age_minutes": 0.0,
+      "source_clock_offset_hours": 3.0
     },
     {
       "pair": "NZDUSD",
@@ -153,11 +713,81 @@
       "tp1": null,
       "tp2": null,
       "reasons": [
-        "AMBIGUOUS_SOURCE_CLOCK"
+        "MISSING_OR_STALE_EXECUTION_TIMEFRAME"
       ],
-      "timeframes": {},
-      "technical_age_minutes": 0.1,
-      "volatility_age_minutes": 0.1
+      "timeframes": {
+        "5m": {
+          "technical": {
+            "close": 0.5609,
+            "ema10": 0.5611765540279665,
+            "ema20": 0.5612531643141001,
+            "ema50": 0.5611946413325357,
+            "ema100": 0.5611116566226835,
+            "ema200": 0.5610307855979958,
+            "rsi": 31.857271408721175,
+            "macd_hist": -7.884833342566971e-05,
+            "recommendation": "SELL",
+            "bullish": false,
+            "bearish": true
+          },
+          "candles": null,
+          "error": "stale_candles"
+        },
+        "15m": {
+          "technical": {
+            "close": 0.5609,
+            "ema10": 0.5611837071448904,
+            "ema20": 0.5611373055425968,
+            "ema50": 0.56106357648466,
+            "ema100": 0.5609207020773183,
+            "ema200": 0.5607110833281077,
+            "rsi": 43.48642851297244,
+            "macd_hist": -2.5296181370386195e-05,
+            "recommendation": "SELL",
+            "bullish": false,
+            "bearish": false
+          },
+          "candles": null,
+          "error": "stale_candles"
+        },
+        "30m": {
+          "technical": {
+            "close": 0.5609,
+            "ema10": 0.5610825536858981,
+            "ema20": 0.5610572715524128,
+            "ema50": 0.5609153747035135,
+            "ema100": 0.5607109680147299,
+            "ema200": 0.5607711190107112,
+            "rsi": 47.04764810440741,
+            "macd_hist": 9.271337109324704e-06,
+            "recommendation": "NEUTRAL",
+            "bullish": false,
+            "bearish": false
+          },
+          "candles": null,
+          "error": "stale_candles"
+        },
+        "1H": {
+          "technical": {
+            "close": 0.5609,
+            "ema10": 0.5610110206600049,
+            "ema20": 0.5609374894614589,
+            "ema50": 0.5606816642475742,
+            "ema100": 0.560748558909849,
+            "ema200": 0.5619825177079175,
+            "rsi": 50.54735057987881,
+            "macd_hist": -4.52536981891583e-05,
+            "recommendation": "SELL",
+            "bullish": false,
+            "bearish": false
+          },
+          "candles": null,
+          "error": "stale_candles"
+        }
+      },
+      "technical_age_minutes": 0.0,
+      "volatility_age_minutes": 0.0,
+      "source_clock_offset_hours": 3.0
     },
     {
       "pair": "USDCAD",
@@ -170,11 +800,81 @@
       "tp1": null,
       "tp2": null,
       "reasons": [
-        "AMBIGUOUS_SOURCE_CLOCK"
+        "MISSING_OR_STALE_EXECUTION_TIMEFRAME"
       ],
-      "timeframes": {},
-      "technical_age_minutes": 0.1,
-      "volatility_age_minutes": 0.1
+      "timeframes": {
+        "5m": {
+          "technical": {
+            "close": 1.4254,
+            "ema10": 1.425763251803186,
+            "ema20": 1.426008780581418,
+            "ema50": 1.4263709745986148,
+            "ema100": 1.4261801967803804,
+            "ema200": 1.4253426347948328,
+            "rsi": 33.43160116308351,
+            "macd_hist": -6.300193490527315e-05,
+            "recommendation": "SELL",
+            "bullish": false,
+            "bearish": true
+          },
+          "candles": null,
+          "error": "stale_candles"
+        },
+        "15m": {
+          "technical": {
+            "close": 1.4254,
+            "ema10": 1.4260516194420638,
+            "ema20": 1.4263078842296408,
+            "ema50": 1.4257004315589048,
+            "ema100": 1.424870519079396,
+            "ema200": 1.424453924527829,
+            "rsi": 36.96183819302265,
+            "macd_hist": -0.00025310581260044147,
+            "recommendation": "SELL",
+            "bullish": false,
+            "bearish": true
+          },
+          "candles": null,
+          "error": "stale_candles"
+        },
+        "30m": {
+          "technical": {
+            "close": 1.4254,
+            "ema10": 1.4261552852463768,
+            "ema20": 1.4258985066735301,
+            "ema50": 1.424866951501596,
+            "ema100": 1.4244519768013242,
+            "ema200": 1.4240980045352025,
+            "rsi": 48.42352120508243,
+            "macd_hist": -0.00034105806622418584,
+            "recommendation": "NEUTRAL",
+            "bullish": false,
+            "bearish": false
+          },
+          "candles": null,
+          "error": "stale_candles"
+        },
+        "1H": {
+          "technical": {
+            "close": 1.4254,
+            "ema10": 1.4258488643725233,
+            "ema20": 1.4251681201849413,
+            "ema50": 1.424521909231463,
+            "ema100": 1.4241382820789505,
+            "ema200": 1.4219379859635086,
+            "rsi": 52.799896192574245,
+            "macd_hist": 8.70167222454712e-05,
+            "recommendation": "BUY",
+            "bullish": false,
+            "bearish": false
+          },
+          "candles": null,
+          "error": "stale_candles"
+        }
+      },
+      "technical_age_minutes": 0.0,
+      "volatility_age_minutes": 0.0,
+      "source_clock_offset_hours": 3.0
     },
     {
       "pair": "USDJPY",
@@ -187,11 +887,81 @@
       "tp1": null,
       "tp2": null,
       "reasons": [
-        "AMBIGUOUS_SOURCE_CLOCK"
+        "MISSING_OR_STALE_EXECUTION_TIMEFRAME"
       ],
-      "timeframes": {},
-      "technical_age_minutes": 0.1,
-      "volatility_age_minutes": 0.1
+      "timeframes": {
+        "5m": {
+          "technical": {
+            "close": 158.246,
+            "ema10": 158.25634630684996,
+            "ema20": 158.25459068252331,
+            "ema50": 158.26200318723528,
+            "ema100": 158.2666099507916,
+            "ema200": 158.23537753232614,
+            "rsi": 47.4980298282679,
+            "macd_hist": 0.0007419850363858795,
+            "recommendation": "SELL",
+            "bullish": false,
+            "bearish": false
+          },
+          "candles": null,
+          "error": "stale_candles"
+        },
+        "15m": {
+          "technical": {
+            "close": 158.246,
+            "ema10": 158.25366981609483,
+            "ema20": 158.2646956950735,
+            "ema50": 158.25386834753957,
+            "ema100": 158.20511699055774,
+            "ema200": 158.15767369764586,
+            "rsi": 46.74316707457891,
+            "macd_hist": -0.0012030141142057409,
+            "recommendation": "SELL",
+            "bullish": false,
+            "bearish": true
+          },
+          "candles": null,
+          "error": "stale_candles"
+        },
+        "30m": {
+          "technical": {
+            "close": 158.246,
+            "ema10": 158.26616604128634,
+            "ema20": 158.2643947808057,
+            "ema50": 158.20613667173563,
+            "ema100": 158.15901194865808,
+            "ema200": 158.0965553611859,
+            "rsi": 49.528142782124746,
+            "macd_hist": -0.016683026757826368,
+            "recommendation": "NEUTRAL",
+            "bullish": false,
+            "bearish": false
+          },
+          "candles": null,
+          "error": "stale_candles"
+        },
+        "1H": {
+          "technical": {
+            "close": 158.246,
+            "ema10": 158.2649101227064,
+            "ema20": 158.22686814638055,
+            "ema50": 158.16302642084375,
+            "ema100": 158.09445864077233,
+            "ema200": 157.90178169070538,
+            "rsi": 52.067899849476426,
+            "macd_hist": -0.005339870418913033,
+            "recommendation": "BUY",
+            "bullish": false,
+            "bearish": false
+          },
+          "candles": null,
+          "error": "stale_candles"
+        }
+      },
+      "technical_age_minutes": 0.0,
+      "volatility_age_minutes": 0.0,
+      "source_clock_offset_hours": 3.0
     }
   ]
 }
