@@ -1,4 +1,4 @@
-"""Render 36 timestamped FX candlestick SVG charts from saved OHLC.
+"""Render 52 timestamped FX candlestick SVG charts from saved OHLC.
 
 Usage: python render_fx_chart.py
 Requires fx_volatility.json in the current working directory.
@@ -10,7 +10,7 @@ from pathlib import Path
 from xml.sax.saxutils import escape
 
 SOURCE = Path("fx_volatility.json")
-PAIRS = ("EURUSD", "GBPUSD", "AUDUSD", "NZDUSD", "EURGBP", "USDJPY", "USDCAD", "USDCHF", "GBPJPY")
+PAIRS = ("EURUSD", "GBPUSD", "AUDUSD", "NZDUSD", "EURGBP", "USDJPY", "USDCAD", "USDCHF", "GBPJPY", "AUDJPY", "NZDJPY", "EURJPY", "EURCAD")
 TIMEFRAMES = ("M5", "M15", "M30", "H1")
 
 
