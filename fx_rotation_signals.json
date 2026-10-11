@@ -1,7 +1,7 @@
 {
-  "generated_at_utc": "2026-10-11T21:23:59.956545+00:00",
-  "technical_source_utc": "2026-10-11T21:23:54.590566+00:00",
-  "volatility_source_utc": "2026-10-11T21:23:54.446138+00:00",
+  "generated_at_utc": "2026-10-11T21:44:28.154036+00:00",
+  "technical_source_utc": "2026-10-11T21:44:25.264553+00:00",
+  "volatility_source_utc": "2026-10-11T21:44:25.116077+00:00",
   "source_volatility_freshness": "unverified_upstream",
   "scope": "technical_rotation_candidates_only_not_live_trade_signals",
   "method": "closed_candles; EMA10/20 from TradingView; ATR5/14 from ForexToolkits",
@@ -9,15 +9,19 @@
     {
       "pair": "AUDJPY",
       "status": "WAIT",
-      "direction": "NONE",
-      "stage": "WAIT",
-      "confidence": "UNVERIFIED",
+      "direction": "BUY",
+      "stage": "EARLY",
+      "confidence": "TECHNICAL_ONLY",
       "entry": null,
       "stop": null,
       "tp1": null,
       "tp2": null,
       "reasons": [
-        "MISSING_OR_STALE_EXECUTION_TIMEFRAME"
+        "5m_15m_ema10_20_aligned",
+        "30m_rsi_not_opposing",
+        "closed_5m_momentum_aligned",
+        "PRICE_FEED_DIVERGENCE",
+        "REQUIRES_NEWS_YIELDS_CROSS_PAIR_AND_EXECUTABLE_PRICE_CHECK"
       ],
       "timeframes": {
         "5m": {
@@ -35,18 +39,18 @@
             "bearish": false
           },
           "candles": {
-            "last_closed_candle_utc": "2026-10-11T21:20:00+00:00",
-            "candle_age_minutes": 4.0,
-            "closed_price": 110.316,
-            "prior_6_high": 110.603,
+            "last_closed_candle_utc": "2026-10-11T21:40:00+00:00",
+            "candle_age_minutes": 4.5,
+            "closed_price": 110.435,
+            "prior_6_high": 110.436,
             "prior_6_low": 110.176,
-            "structure": "mixed",
+            "structure": "lower_highs_lower_lows",
             "breakout_up": false,
             "breakout_down": false,
-            "momentum_3_bars_pips": -25.6,
-            "atr5_pips": 12.72,
-            "atr14_pips": 5.67,
-            "atr_expansion_ratio": 2.243
+            "momentum_3_bars_pips": 12.4,
+            "atr5_pips": 7.5,
+            "atr14_pips": 6.91,
+            "atr_expansion_ratio": 1.085
           },
           "error": null
         },
@@ -65,18 +69,18 @@
             "bearish": false
           },
           "candles": {
-            "last_closed_candle_utc": "2026-10-11T21:15:00+00:00",
-            "candle_age_minutes": 9.0,
-            "closed_price": 110.179,
+            "last_closed_candle_utc": "2026-10-11T21:30:00+00:00",
+            "candle_age_minutes": 14.5,
+            "closed_price": 110.312,
             "prior_6_high": 110.603,
-            "prior_6_low": 110.516,
-            "structure": "higher_highs_higher_lows",
+            "prior_6_low": 110.176,
+            "structure": "mixed",
             "breakout_up": false,
-            "breakout_down": true,
-            "momentum_3_bars_pips": -38.8,
-            "atr5_pips": 10.74,
-            "atr14_pips": 6.07,
-            "atr_expansion_ratio": 1.769
+            "breakout_down": false,
+            "momentum_3_bars_pips": -27.4,
+            "atr5_pips": 12.9,
+            "atr14_pips": 6.96,
+            "atr_expansion_ratio": 1.854
           },
           "error": null
         },
@@ -94,8 +98,21 @@
             "bullish": true,
             "bearish": false
           },
-          "candles": null,
-          "error": "stale_candles"
+          "candles": {
+            "last_closed_candle_utc": "2026-10-11T21:30:00+00:00",
+            "candle_age_minutes": 14.5,
+            "closed_price": 110.312,
+            "prior_6_high": 110.603,
+            "prior_6_low": 110.456,
+            "structure": "higher_highs_higher_lows",
+            "breakout_up": false,
+            "breakout_down": true,
+            "momentum_3_bars_pips": -28.2,
+            "atr5_pips": 12.12,
+            "atr14_pips": 7.64,
+            "atr_expansion_ratio": 1.587
+          },
+          "error": null
         },
         "1H": {
           "technical": {
@@ -115,9 +132,10 @@
           "error": "stale_candles"
         }
       },
-      "technical_age_minutes": 0.1,
+      "technical_age_minutes": 0.0,
       "volatility_age_minutes": 0.1,
-      "source_clock_offset_hours": 3.0
+      "source_clock_offset_hours": 3.0,
+      "price_source_difference_pips": 12.7
     },
     {
       "pair": "AUDUSD",
@@ -130,7 +148,8 @@
       "tp1": null,
       "tp2": null,
       "reasons": [
-        "MISSING_OR_STALE_EXECUTION_TIMEFRAME"
+        "NO_ALIGNED_5m_15m_ROTATION",
+        "REQUIRES_NEWS_YIELDS_CROSS_PAIR_AND_EXECUTABLE_PRICE_CHECK"
       ],
       "timeframes": {
         "5m": {
@@ -148,18 +167,18 @@
             "bearish": true
           },
           "candles": {
-            "last_closed_candle_utc": "2026-10-11T21:20:00+00:00",
-            "candle_age_minutes": 4.0,
-            "closed_price": 0.69694,
-            "prior_6_high": 0.69886,
+            "last_closed_candle_utc": "2026-10-11T21:40:00+00:00",
+            "candle_age_minutes": 4.5,
+            "closed_price": 0.69774,
+            "prior_6_high": 0.69773,
             "prior_6_low": 0.69647,
-            "structure": "mixed",
-            "breakout_up": false,
+            "structure": "lower_highs_lower_lows",
+            "breakout_up": true,
             "breakout_down": false,
-            "momentum_3_bars_pips": -13.5,
-            "atr5_pips": 5.6,
-            "atr14_pips": 2.67,
-            "atr_expansion_ratio": 2.096
+            "momentum_3_bars_pips": 8.0,
+            "atr5_pips": 2.44,
+            "atr14_pips": 3.14,
+            "atr_expansion_ratio": 0.776
           },
           "error": null
         },
@@ -178,18 +197,18 @@
             "bearish": false
           },
           "candles": {
-            "last_closed_candle_utc": "2026-10-11T21:15:00+00:00",
-            "candle_age_minutes": 9.0,
-            "closed_price": 0.69693,
+            "last_closed_candle_utc": "2026-10-11T21:30:00+00:00",
+            "candle_age_minutes": 14.5,
+            "closed_price": 0.69704,
             "prior_6_high": 0.69886,
-            "prior_6_low": 0.69818,
-            "structure": "higher_highs_higher_lows",
+            "prior_6_low": 0.69647,
+            "structure": "mixed",
             "breakout_up": false,
-            "breakout_down": true,
-            "momentum_3_bars_pips": -17.5,
-            "atr5_pips": 6.0,
-            "atr14_pips": 3.69,
-            "atr_expansion_ratio": 1.628
+            "breakout_down": false,
+            "momentum_3_bars_pips": -17.1,
+            "atr5_pips": 5.9,
+            "atr14_pips": 3.62,
+            "atr_expansion_ratio": 1.629
           },
           "error": null
         },
@@ -207,8 +226,21 @@
             "bullish": false,
             "bearish": false
           },
-          "candles": null,
-          "error": "stale_candles"
+          "candles": {
+            "last_closed_candle_utc": "2026-10-11T21:30:00+00:00",
+            "candle_age_minutes": 14.5,
+            "closed_price": 0.69704,
+            "prior_6_high": 0.69886,
+            "prior_6_low": 0.69799,
+            "structure": "higher_highs_higher_lows",
+            "breakout_up": false,
+            "breakout_down": true,
+            "momentum_3_bars_pips": -17.2,
+            "atr5_pips": 6.8,
+            "atr14_pips": 4.72,
+            "atr_expansion_ratio": 1.44
+          },
+          "error": null
         },
         "1H": {
           "technical": {
@@ -228,9 +260,10 @@
           "error": "stale_candles"
         }
       },
-      "technical_age_minutes": 0.1,
+      "technical_age_minutes": 0.0,
       "volatility_age_minutes": 0.1,
-      "source_clock_offset_hours": 3.0
+      "source_clock_offset_hours": 3.0,
+      "price_source_difference_pips": 4.6
     },
     {
       "pair": "EURCAD",
@@ -243,7 +276,9 @@
       "tp1": null,
       "tp2": null,
       "reasons": [
-        "MISSING_OR_STALE_EXECUTION_TIMEFRAME"
+        "NO_ALIGNED_5m_15m_ROTATION",
+        "PRICE_FEED_DIVERGENCE",
+        "REQUIRES_NEWS_YIELDS_CROSS_PAIR_AND_EXECUTABLE_PRICE_CHECK"
       ],
       "timeframes": {
         "5m": {
@@ -261,18 +296,18 @@
             "bearish": true
           },
           "candles": {
-            "last_closed_candle_utc": "2026-10-11T21:20:00+00:00",
-            "candle_age_minutes": 4.0,
-            "closed_price": 1.59529,
-            "prior_6_high": 1.59763,
-            "prior_6_low": 1.59427,
-            "structure": "lower_highs_lower_lows",
+            "last_closed_candle_utc": "2026-10-11T21:40:00+00:00",
+            "candle_age_minutes": 4.5,
+            "closed_price": 1.59552,
+            "prior_6_high": 1.59701,
+            "prior_6_low": 1.59496,
+            "structure": "mixed",
             "breakout_up": false,
             "breakout_down": false,
-            "momentum_3_bars_pips": -15.4,
-            "atr5_pips": 16.7,
-            "atr14_pips": 7.46,
-            "atr_expansion_ratio": 2.237
+            "momentum_3_bars_pips": 2.3,
+            "atr5_pips": 4.48,
+            "atr14_pips": 7.17,
+            "atr_expansion_ratio": 0.625
           },
           "error": null
         },
@@ -291,18 +326,18 @@
             "bearish": true
           },
           "candles": {
-            "last_closed_candle_utc": "2026-10-11T21:15:00+00:00",
-            "candle_age_minutes": 9.0,
-            "closed_price": 1.59679,
+            "last_closed_candle_utc": "2026-10-11T21:30:00+00:00",
+            "candle_age_minutes": 14.5,
+            "closed_price": 1.59552,
             "prior_6_high": 1.59783,
             "prior_6_low": 1.59427,
             "structure": "lower_highs_lower_lows",
             "breakout_up": false,
             "breakout_down": false,
-            "momentum_3_bars_pips": -7.5,
-            "atr5_pips": 12.82,
-            "atr14_pips": 7.22,
-            "atr_expansion_ratio": 1.775
+            "momentum_3_bars_pips": -19.4,
+            "atr5_pips": 15.2,
+            "atr14_pips": 7.92,
+            "atr_expansion_ratio": 1.919
           },
           "error": null
         },
@@ -320,8 +355,21 @@
             "bullish": false,
             "bearish": true
           },
-          "candles": null,
-          "error": "stale_candles"
+          "candles": {
+            "last_closed_candle_utc": "2026-10-11T21:30:00+00:00",
+            "candle_age_minutes": 14.5,
+            "closed_price": 1.59552,
+            "prior_6_high": 1.59838,
+            "prior_6_low": 1.59427,
+            "structure": "mixed",
+            "breakout_up": false,
+            "breakout_down": false,
+            "momentum_3_bars_pips": -20.9,
+            "atr5_pips": 14.1,
+            "atr14_pips": 9.33,
+            "atr_expansion_ratio": 1.511
+          },
+          "error": null
         },
         "1H": {
           "technical": {
@@ -341,9 +389,10 @@
           "error": "stale_candles"
         }
       },
-      "technical_age_minutes": 0.1,
+      "technical_age_minutes": 0.0,
       "volatility_age_minutes": 0.1,
-      "source_clock_offset_hours": 3.0
+      "source_clock_offset_hours": 3.0,
+      "price_source_difference_pips": 10.8
     },
     {
       "pair": "EURGBP",
@@ -356,7 +405,8 @@
       "tp1": null,
       "tp2": null,
       "reasons": [
-        "MISSING_OR_STALE_EXECUTION_TIMEFRAME"
+        "NO_ALIGNED_5m_15m_ROTATION",
+        "REQUIRES_NEWS_YIELDS_CROSS_PAIR_AND_EXECUTABLE_PRICE_CHECK"
       ],
       "timeframes": {
         "5m": {
@@ -374,18 +424,18 @@
             "bearish": false
           },
           "candles": {
-            "last_closed_candle_utc": "2026-10-11T21:20:00+00:00",
-            "candle_age_minutes": 4.0,
-            "closed_price": 0.84564,
-            "prior_6_high": 0.84641,
-            "prior_6_low": 0.84573,
-            "structure": "mixed",
+            "last_closed_candle_utc": "2026-10-11T21:40:00+00:00",
+            "candle_age_minutes": 4.5,
+            "closed_price": 0.84573,
+            "prior_6_high": 0.84599,
+            "prior_6_low": 0.84557,
+            "structure": "lower_highs_lower_lows",
             "breakout_up": false,
-            "breakout_down": true,
-            "momentum_3_bars_pips": -6.7,
-            "atr5_pips": 2.62,
-            "atr14_pips": 1.53,
-            "atr_expansion_ratio": 1.714
+            "breakout_down": false,
+            "momentum_3_bars_pips": 0.7,
+            "atr5_pips": 2.48,
+            "atr14_pips": 1.91,
+            "atr_expansion_ratio": 1.3
           },
           "error": null
         },
@@ -404,18 +454,18 @@
             "bearish": true
           },
           "candles": {
-            "last_closed_candle_utc": "2026-10-11T21:15:00+00:00",
-            "candle_age_minutes": 9.0,
-            "closed_price": 0.84582,
+            "last_closed_candle_utc": "2026-10-11T21:30:00+00:00",
+            "candle_age_minutes": 14.5,
+            "closed_price": 0.84578,
             "prior_6_high": 0.84641,
-            "prior_6_low": 0.84583,
+            "prior_6_low": 0.84573,
             "structure": "mixed",
             "breakout_up": false,
-            "breakout_down": true,
-            "momentum_3_bars_pips": -3.3,
-            "atr5_pips": 2.68,
-            "atr14_pips": 1.79,
-            "atr_expansion_ratio": 1.495
+            "breakout_down": false,
+            "momentum_3_bars_pips": -4.0,
+            "atr5_pips": 3.22,
+            "atr14_pips": 2.01,
+            "atr_expansion_ratio": 1.604
           },
           "error": null
         },
@@ -433,8 +483,21 @@
             "bullish": false,
             "bearish": true
           },
-          "candles": null,
-          "error": "stale_candles"
+          "candles": {
+            "last_closed_candle_utc": "2026-10-11T21:30:00+00:00",
+            "candle_age_minutes": 14.5,
+            "closed_price": 0.84578,
+            "prior_6_high": 0.84641,
+            "prior_6_low": 0.84583,
+            "structure": "lower_highs_lower_lows",
+            "breakout_up": false,
+            "breakout_down": true,
+            "momentum_3_bars_pips": -1.1,
+            "atr5_pips": 3.3,
+            "atr14_pips": 2.93,
+            "atr_expansion_ratio": 1.127
+          },
+          "error": null
         },
         "1H": {
           "technical": {
@@ -454,9 +517,10 @@
           "error": "stale_candles"
         }
       },
-      "technical_age_minutes": 0.1,
+      "technical_age_minutes": 0.0,
       "volatility_age_minutes": 0.1,
-      "source_clock_offset_hours": 3.0
+      "source_clock_offset_hours": 3.0,
+      "price_source_difference_pips": 3.9
     },
     {
       "pair": "EURJPY",
@@ -469,7 +533,9 @@
       "tp1": null,
       "tp2": null,
       "reasons": [
-        "MISSING_OR_STALE_EXECUTION_TIMEFRAME"
+        "NO_ALIGNED_5m_15m_ROTATION",
+        "PRICE_FEED_DIVERGENCE",
+        "REQUIRES_NEWS_YIELDS_CROSS_PAIR_AND_EXECUTABLE_PRICE_CHECK"
       ],
       "timeframes": {
         "5m": {
@@ -487,18 +553,18 @@
             "bearish": false
           },
           "candles": {
-            "last_closed_candle_utc": "2026-10-11T21:20:00+00:00",
-            "candle_age_minutes": 4.0,
-            "closed_price": 177.052,
-            "prior_6_high": 177.332,
+            "last_closed_candle_utc": "2026-10-11T21:40:00+00:00",
+            "candle_age_minutes": 4.5,
+            "closed_price": 177.042,
+            "prior_6_high": 177.099,
             "prior_6_low": 176.93,
-            "structure": "mixed",
+            "structure": "lower_highs_lower_lows",
             "breakout_up": false,
             "breakout_down": false,
-            "momentum_3_bars_pips": -27.3,
-            "atr5_pips": 12.88,
-            "atr14_pips": 6.32,
-            "atr_expansion_ratio": 2.038
+            "momentum_3_bars_pips": -5.5,
+            "atr5_pips": 6.12,
+            "atr14_pips": 6.87,
+            "atr_expansion_ratio": 0.891
           },
           "error": null
         },
@@ -517,18 +583,18 @@
             "bearish": false
           },
           "candles": {
-            "last_closed_candle_utc": "2026-10-11T21:15:00+00:00",
-            "candle_age_minutes": 9.0,
-            "closed_price": 176.93,
+            "last_closed_candle_utc": "2026-10-11T21:30:00+00:00",
+            "candle_age_minutes": 14.5,
+            "closed_price": 177.094,
             "prior_6_high": 177.332,
-            "prior_6_low": 177.217,
-            "structure": "higher_highs_higher_lows",
+            "prior_6_low": 176.93,
+            "structure": "mixed",
             "breakout_up": false,
-            "breakout_down": true,
-            "momentum_3_bars_pips": -34.5,
-            "atr5_pips": 11.98,
-            "atr14_pips": 7.3,
-            "atr_expansion_ratio": 1.641
+            "breakout_down": false,
+            "momentum_3_bars_pips": -21.3,
+            "atr5_pips": 14.48,
+            "atr14_pips": 8.11,
+            "atr_expansion_ratio": 1.786
           },
           "error": null
         },
@@ -546,8 +612,21 @@
             "bullish": false,
             "bearish": false
           },
-          "candles": null,
-          "error": "stale_candles"
+          "candles": {
+            "last_closed_candle_utc": "2026-10-11T21:30:00+00:00",
+            "candle_age_minutes": 14.5,
+            "closed_price": 177.094,
+            "prior_6_high": 177.332,
+            "prior_6_low": 177.195,
+            "structure": "mixed",
+            "breakout_up": false,
+            "breakout_down": true,
+            "momentum_3_bars_pips": -18.4,
+            "atr5_pips": 13.08,
+            "atr14_pips": 10.14,
+            "atr_expansion_ratio": 1.29
+          },
+          "error": null
         },
         "1H": {
           "technical": {
@@ -567,9 +646,10 @@
           "error": "stale_candles"
         }
       },
-      "technical_age_minutes": 0.1,
+      "technical_age_minutes": 0.0,
       "volatility_age_minutes": 0.1,
-      "source_clock_offset_hours": 3.0
+      "source_clock_offset_hours": 3.0,
+      "price_source_difference_pips": 25.1
     },
     {
       "pair": "EURUSD",
@@ -582,7 +662,9 @@
       "tp1": null,
       "tp2": null,
       "reasons": [
-        "MISSING_OR_STALE_EXECUTION_TIMEFRAME"
+        "NO_ALIGNED_5m_15m_ROTATION",
+        "PRICE_FEED_DIVERGENCE",
+        "REQUIRES_NEWS_YIELDS_CROSS_PAIR_AND_EXECUTABLE_PRICE_CHECK"
       ],
       "timeframes": {
         "5m": {
@@ -600,18 +682,18 @@
             "bearish": false
           },
           "candles": {
-            "last_closed_candle_utc": "2026-10-11T21:20:00+00:00",
-            "candle_age_minutes": 4.0,
-            "closed_price": 1.11871,
-            "prior_6_high": 1.12042,
+            "last_closed_candle_utc": "2026-10-11T21:40:00+00:00",
+            "candle_age_minutes": 4.5,
+            "closed_price": 1.1187,
+            "prior_6_high": 1.11901,
             "prior_6_low": 1.11829,
-            "structure": "mixed",
+            "structure": "lower_highs_lower_lows",
             "breakout_up": false,
             "breakout_down": false,
-            "momentum_3_bars_pips": -14.1,
-            "atr5_pips": 5.08,
-            "atr14_pips": 2.86,
-            "atr_expansion_ratio": 1.774
+            "momentum_3_bars_pips": -0.7,
+            "atr5_pips": 1.5,
+            "atr14_pips": 2.73,
+            "atr_expansion_ratio": 0.55
           },
           "error": null
         },
@@ -630,18 +712,18 @@
             "bearish": false
           },
           "candles": {
-            "last_closed_candle_utc": "2026-10-11T21:15:00+00:00",
-            "candle_age_minutes": 9.0,
-            "closed_price": 1.11891,
+            "last_closed_candle_utc": "2026-10-11T21:30:00+00:00",
+            "candle_age_minutes": 14.5,
+            "closed_price": 1.11874,
             "prior_6_high": 1.12042,
-            "prior_6_low": 1.11958,
+            "prior_6_low": 1.11829,
             "structure": "mixed",
             "breakout_up": false,
-            "breakout_down": true,
-            "momentum_3_bars_pips": -12.4,
-            "atr5_pips": 5.96,
-            "atr14_pips": 4.47,
-            "atr_expansion_ratio": 1.333
+            "breakout_down": false,
+            "momentum_3_bars_pips": -15.0,
+            "atr5_pips": 6.22,
+            "atr14_pips": 4.44,
+            "atr_expansion_ratio": 1.402
           },
           "error": null
         },
@@ -659,8 +741,21 @@
             "bullish": false,
             "bearish": false
           },
-          "candles": null,
-          "error": "stale_candles"
+          "candles": {
+            "last_closed_candle_utc": "2026-10-11T21:30:00+00:00",
+            "candle_age_minutes": 14.5,
+            "closed_price": 1.11874,
+            "prior_6_high": 1.12042,
+            "prior_6_low": 1.11958,
+            "structure": "higher_highs_higher_lows",
+            "breakout_up": false,
+            "breakout_down": true,
+            "momentum_3_bars_pips": -12.7,
+            "atr5_pips": 7.3,
+            "atr14_pips": 6.39,
+            "atr_expansion_ratio": 1.142
+          },
+          "error": null
         },
         "1H": {
           "technical": {
@@ -680,9 +775,10 @@
           "error": "stale_candles"
         }
       },
-      "technical_age_minutes": 0.1,
+      "technical_age_minutes": 0.0,
       "volatility_age_minutes": 0.1,
-      "source_clock_offset_hours": 3.0
+      "source_clock_offset_hours": 3.0,
+      "price_source_difference_pips": 14.0
     },
     {
       "pair": "GBPUSD",
@@ -695,7 +791,9 @@
       "tp1": null,
       "tp2": null,
       "reasons": [
-        "MISSING_OR_STALE_EXECUTION_TIMEFRAME"
+        "NO_ALIGNED_5m_15m_ROTATION",
+        "PRICE_FEED_DIVERGENCE",
+        "REQUIRES_NEWS_YIELDS_CROSS_PAIR_AND_EXECUTABLE_PRICE_CHECK"
       ],
       "timeframes": {
         "5m": {
@@ -712,8 +810,21 @@
             "bullish": false,
             "bearish": false
           },
-          "candles": null,
-          "error": "stale_candles"
+          "candles": {
+            "last_closed_candle_utc": "2026-10-11T21:40:00+00:00",
+            "candle_age_minutes": 4.5,
+            "closed_price": 1.32224,
+            "prior_6_high": 1.32237,
+            "prior_6_low": 1.32197,
+            "structure": "lower_highs_lower_lows",
+            "breakout_up": false,
+            "breakout_down": false,
+            "momentum_3_bars_pips": 1.5,
+            "atr5_pips": 1.76,
+            "atr14_pips": 2.95,
+            "atr_expansion_ratio": 0.597
+          },
+          "error": null
         },
         "15m": {
           "technical": {
@@ -730,18 +841,18 @@
             "bearish": false
           },
           "candles": {
-            "last_closed_candle_utc": "2026-10-11T21:15:00+00:00",
-            "candle_age_minutes": 9.0,
-            "closed_price": 1.32231,
-            "prior_6_high": 1.32422,
-            "prior_6_low": 1.32294,
+            "last_closed_candle_utc": "2026-10-11T21:30:00+00:00",
+            "candle_age_minutes": 14.5,
+            "closed_price": 1.32197,
+            "prior_6_high": 1.3242,
+            "prior_6_low": 1.32207,
             "structure": "lower_highs_lower_lows",
             "breakout_up": false,
             "breakout_down": true,
-            "momentum_3_bars_pips": -14.4,
-            "atr5_pips": 6.02,
-            "atr14_pips": 4.68,
-            "atr_expansion_ratio": 1.287
+            "momentum_3_bars_pips": -18.7,
+            "atr5_pips": 6.34,
+            "atr14_pips": 4.64,
+            "atr_expansion_ratio": 1.366
           },
           "error": null
         },
@@ -759,8 +870,21 @@
             "bullish": true,
             "bearish": false
           },
-          "candles": null,
-          "error": "stale_candles"
+          "candles": {
+            "last_closed_candle_utc": "2026-10-11T21:30:00+00:00",
+            "candle_age_minutes": 14.5,
+            "closed_price": 1.32197,
+            "prior_6_high": 1.32444,
+            "prior_6_low": 1.32294,
+            "structure": "higher_highs_higher_lows",
+            "breakout_up": false,
+            "breakout_down": true,
+            "momentum_3_bars_pips": -20.9,
+            "atr5_pips": 7.34,
+            "atr14_pips": 7.24,
+            "atr_expansion_ratio": 1.014
+          },
+          "error": null
         },
         "1H": {
           "technical": {
@@ -780,9 +904,10 @@
           "error": "stale_candles"
         }
       },
-      "technical_age_minutes": 0.1,
+      "technical_age_minutes": 0.0,
       "volatility_age_minutes": 0.1,
-      "source_clock_offset_hours": 3.0
+      "source_clock_offset_hours": 3.0,
+      "price_source_difference_pips": 13.6
     },
     {
       "pair": "NZDJPY",
@@ -795,7 +920,9 @@
       "tp1": null,
       "tp2": null,
       "reasons": [
-        "MISSING_OR_STALE_EXECUTION_TIMEFRAME"
+        "NO_ALIGNED_5m_15m_ROTATION",
+        "PRICE_FEED_DIVERGENCE",
+        "REQUIRES_NEWS_YIELDS_CROSS_PAIR_AND_EXECUTABLE_PRICE_CHECK"
       ],
       "timeframes": {
         "5m": {
@@ -813,18 +940,18 @@
             "bearish": true
           },
           "candles": {
-            "last_closed_candle_utc": "2026-10-11T21:20:00+00:00",
-            "candle_age_minutes": 4.0,
-            "closed_price": 88.666,
-            "prior_6_high": 88.875,
-            "prior_6_low": 88.529,
+            "last_closed_candle_utc": "2026-10-11T21:40:00+00:00",
+            "candle_age_minutes": 4.5,
+            "closed_price": 88.714,
+            "prior_6_high": 88.728,
+            "prior_6_low": 88.511,
             "structure": "lower_highs_lower_lows",
             "breakout_up": false,
             "breakout_down": false,
-            "momentum_3_bars_pips": -19.5,
-            "atr5_pips": 13.3,
-            "atr14_pips": 5.89,
-            "atr_expansion_ratio": 2.26
+            "momentum_3_bars_pips": 4.5,
+            "atr5_pips": 6.54,
+            "atr14_pips": 6.62,
+            "atr_expansion_ratio": 0.988
           },
           "error": null
         },
@@ -843,18 +970,18 @@
             "bearish": false
           },
           "candles": {
-            "last_closed_candle_utc": "2026-10-11T21:15:00+00:00",
-            "candle_age_minutes": 9.0,
-            "closed_price": 88.529,
+            "last_closed_candle_utc": "2026-10-11T21:30:00+00:00",
+            "candle_age_minutes": 14.5,
+            "closed_price": 88.661,
             "prior_6_high": 88.88,
-            "prior_6_low": 88.825,
-            "structure": "higher_highs_higher_lows",
+            "prior_6_low": 88.529,
+            "structure": "mixed",
             "breakout_up": false,
-            "breakout_down": true,
-            "momentum_3_bars_pips": -32.0,
-            "atr5_pips": 9.4,
-            "atr14_pips": 5.16,
-            "atr_expansion_ratio": 1.823
+            "breakout_down": false,
+            "momentum_3_bars_pips": -20.2,
+            "atr5_pips": 12.26,
+            "atr14_pips": 6.22,
+            "atr_expansion_ratio": 1.971
           },
           "error": null
         },
@@ -872,8 +999,21 @@
             "bullish": false,
             "bearish": false
           },
-          "candles": null,
-          "error": "stale_candles"
+          "candles": {
+            "last_closed_candle_utc": "2026-10-11T21:30:00+00:00",
+            "candle_age_minutes": 14.5,
+            "closed_price": 88.661,
+            "prior_6_high": 88.88,
+            "prior_6_low": 88.784,
+            "structure": "higher_highs_higher_lows",
+            "breakout_up": false,
+            "breakout_down": true,
+            "momentum_3_bars_pips": -20.9,
+            "atr5_pips": 10.3,
+            "atr14_pips": 6.53,
+            "atr_expansion_ratio": 1.578
+          },
+          "error": null
         },
         "1H": {
           "technical": {
@@ -893,9 +1033,10 @@
           "error": "stale_candles"
         }
       },
-      "technical_age_minutes": 0.1,
+      "technical_age_minutes": 0.0,
       "volatility_age_minutes": 0.1,
-      "source_clock_offset_hours": 3.0
+      "source_clock_offset_hours": 3.0,
+      "price_source_difference_pips": 9.1
     },
     {
       "pair": "NZDUSD",
@@ -908,7 +1049,8 @@
       "tp1": null,
       "tp2": null,
       "reasons": [
-        "MISSING_OR_STALE_EXECUTION_TIMEFRAME"
+        "NO_ALIGNED_5m_15m_ROTATION",
+        "REQUIRES_NEWS_YIELDS_CROSS_PAIR_AND_EXECUTABLE_PRICE_CHECK"
       ],
       "timeframes": {
         "5m": {
@@ -926,18 +1068,18 @@
             "bearish": true
           },
           "candles": {
-            "last_closed_candle_utc": "2026-10-11T21:20:00+00:00",
-            "candle_age_minutes": 4.0,
-            "closed_price": 0.5601,
-            "prior_6_high": 0.56155,
-            "prior_6_low": 0.55958,
+            "last_closed_candle_utc": "2026-10-11T21:40:00+00:00",
+            "candle_age_minutes": 4.5,
+            "closed_price": 0.56051,
+            "prior_6_high": 0.56102,
+            "prior_6_low": 0.55952,
             "structure": "lower_highs_lower_lows",
             "breakout_up": false,
             "breakout_down": false,
-            "momentum_3_bars_pips": 5.2,
-            "atr5_pips": 9.02,
-            "atr14_pips": 3.93,
-            "atr_expansion_ratio": 2.296
+            "momentum_3_bars_pips": 5.1,
+            "atr5_pips": 3.84,
+            "atr14_pips": 4.79,
+            "atr_expansion_ratio": 0.801
           },
           "error": null
         },
@@ -956,18 +1098,18 @@
             "bearish": false
           },
           "candles": {
-            "last_closed_candle_utc": "2026-10-11T21:15:00+00:00",
-            "candle_age_minutes": 9.0,
-            "closed_price": 0.55994,
+            "last_closed_candle_utc": "2026-10-11T21:30:00+00:00",
+            "candle_age_minutes": 14.5,
+            "closed_price": 0.55995,
             "prior_6_high": 0.56164,
-            "prior_6_low": 0.56118,
-            "structure": "higher_highs_higher_lows",
+            "prior_6_low": 0.55958,
+            "structure": "mixed",
             "breakout_up": false,
-            "breakout_down": true,
-            "momentum_3_bars_pips": -14.9,
-            "atr5_pips": 5.0,
-            "atr14_pips": 3.2,
-            "atr_expansion_ratio": 1.562
+            "breakout_down": false,
+            "momentum_3_bars_pips": -15.1,
+            "atr5_pips": 5.88,
+            "atr14_pips": 3.48,
+            "atr_expansion_ratio": 1.69
           },
           "error": null
         },
@@ -985,8 +1127,21 @@
             "bullish": false,
             "bearish": false
           },
-          "candles": null,
-          "error": "stale_candles"
+          "candles": {
+            "last_closed_candle_utc": "2026-10-11T21:30:00+00:00",
+            "candle_age_minutes": 14.5,
+            "closed_price": 0.55995,
+            "prior_6_high": 0.56164,
+            "prior_6_low": 0.56105,
+            "structure": "higher_highs_higher_lows",
+            "breakout_up": false,
+            "breakout_down": true,
+            "momentum_3_bars_pips": -15.1,
+            "atr5_pips": 5.88,
+            "atr14_pips": 4.34,
+            "atr_expansion_ratio": 1.354
+          },
+          "error": null
         },
         "1H": {
           "technical": {
@@ -1006,22 +1161,27 @@
           "error": "stale_candles"
         }
       },
-      "technical_age_minutes": 0.1,
+      "technical_age_minutes": 0.0,
       "volatility_age_minutes": 0.1,
-      "source_clock_offset_hours": 3.0
+      "source_clock_offset_hours": 3.0,
+      "price_source_difference_pips": 3.9
     },
     {
       "pair": "USDCAD",
       "status": "WAIT",
-      "direction": "NONE",
-      "stage": "WAIT",
-      "confidence": "UNVERIFIED",
+      "direction": "SELL",
+      "stage": "EARLY",
+      "confidence": "TECHNICAL_ONLY",
       "entry": null,
       "stop": null,
       "tp1": null,
       "tp2": null,
       "reasons": [
-        "MISSING_OR_STALE_EXECUTION_TIMEFRAME"
+        "5m_15m_ema10_20_aligned",
+        "30m_rsi_not_opposing",
+        "closed_5m_momentum_aligned",
+        "PRICE_FEED_DIVERGENCE",
+        "REQUIRES_NEWS_YIELDS_CROSS_PAIR_AND_EXECUTABLE_PRICE_CHECK"
       ],
       "timeframes": {
         "5m": {
@@ -1039,18 +1199,18 @@
             "bearish": true
           },
           "candles": {
-            "last_closed_candle_utc": "2026-10-11T21:20:00+00:00",
-            "candle_age_minutes": 4.0,
-            "closed_price": 1.42737,
+            "last_closed_candle_utc": "2026-10-11T21:40:00+00:00",
+            "candle_age_minutes": 4.5,
+            "closed_price": 1.42713,
             "prior_6_high": 1.42739,
-            "prior_6_low": 1.42524,
-            "structure": "mixed",
+            "prior_6_low": 1.42706,
+            "structure": "higher_highs_higher_lows",
             "breakout_up": false,
             "breakout_down": false,
-            "momentum_3_bars_pips": 5.2,
-            "atr5_pips": 5.66,
-            "atr14_pips": 3.52,
-            "atr_expansion_ratio": 1.607
+            "momentum_3_bars_pips": -2.4,
+            "atr5_pips": 0.6,
+            "atr14_pips": 3.17,
+            "atr_expansion_ratio": 0.189
           },
           "error": null
         },
@@ -1069,18 +1229,18 @@
             "bearish": true
           },
           "candles": {
-            "last_closed_candle_utc": "2026-10-11T21:15:00+00:00",
-            "candle_age_minutes": 9.0,
-            "closed_price": 1.42737,
-            "prior_6_high": 1.42668,
+            "last_closed_candle_utc": "2026-10-11T21:30:00+00:00",
+            "candle_age_minutes": 14.5,
+            "closed_price": 1.42712,
+            "prior_6_high": 1.42739,
             "prior_6_low": 1.42524,
-            "structure": "lower_highs_lower_lows",
-            "breakout_up": true,
+            "structure": "mixed",
+            "breakout_up": false,
             "breakout_down": false,
-            "momentum_3_bars_pips": 12.0,
+            "momentum_3_bars_pips": 11.2,
             "atr5_pips": 7.46,
-            "atr14_pips": 4.91,
-            "atr_expansion_ratio": 1.518
+            "atr14_pips": 4.84,
+            "atr_expansion_ratio": 1.54
           },
           "error": null
         },
@@ -1098,8 +1258,21 @@
             "bullish": false,
             "bearish": false
           },
-          "candles": null,
-          "error": "stale_candles"
+          "candles": {
+            "last_closed_candle_utc": "2026-10-11T21:30:00+00:00",
+            "candle_age_minutes": 14.5,
+            "closed_price": 1.42712,
+            "prior_6_high": 1.42734,
+            "prior_6_low": 1.42524,
+            "structure": "lower_highs_lower_lows",
+            "breakout_up": false,
+            "breakout_down": false,
+            "momentum_3_bars_pips": 6.9,
+            "atr5_pips": 9.0,
+            "atr14_pips": 7.07,
+            "atr_expansion_ratio": 1.273
+          },
+          "error": null
         },
         "1H": {
           "technical": {
@@ -1119,9 +1292,10 @@
           "error": "stale_candles"
         }
       },
-      "technical_age_minutes": 0.1,
+      "technical_age_minutes": 0.0,
       "volatility_age_minutes": 0.1,
-      "source_clock_offset_hours": 3.0
+      "source_clock_offset_hours": 3.0,
+      "price_source_difference_pips": 17.3
     },
     {
       "pair": "USDJPY",
@@ -1134,7 +1308,8 @@
       "tp1": null,
       "tp2": null,
       "reasons": [
-        "MISSING_OR_STALE_EXECUTION_TIMEFRAME"
+        "NO_ALIGNED_5m_15m_ROTATION",
+        "REQUIRES_NEWS_YIELDS_CROSS_PAIR_AND_EXECUTABLE_PRICE_CHECK"
       ],
       "timeframes": {
         "5m": {
@@ -1152,18 +1327,18 @@
             "bearish": false
           },
           "candles": {
-            "last_closed_candle_utc": "2026-10-11T21:20:00+00:00",
-            "candle_age_minutes": 4.0,
-            "closed_price": 158.267,
-            "prior_6_high": 158.336,
+            "last_closed_candle_utc": "2026-10-11T21:40:00+00:00",
+            "candle_age_minutes": 4.5,
+            "closed_price": 158.247,
+            "prior_6_high": 158.3,
             "prior_6_low": 158.113,
-            "structure": "mixed",
+            "structure": "lower_highs_lower_lows",
             "breakout_up": false,
             "breakout_down": false,
-            "momentum_3_bars_pips": -2.8,
-            "atr5_pips": 10.3,
-            "atr14_pips": 4.92,
-            "atr_expansion_ratio": 2.093
+            "momentum_3_bars_pips": -4.6,
+            "atr5_pips": 5.3,
+            "atr14_pips": 5.24,
+            "atr_expansion_ratio": 1.012
           },
           "error": null
         },
@@ -1182,18 +1357,18 @@
             "bearish": true
           },
           "candles": {
-            "last_closed_candle_utc": "2026-10-11T21:15:00+00:00",
-            "candle_age_minutes": 9.0,
-            "closed_price": 158.115,
+            "last_closed_candle_utc": "2026-10-11T21:30:00+00:00",
+            "candle_age_minutes": 14.5,
+            "closed_price": 158.286,
             "prior_6_high": 158.336,
-            "prior_6_low": 158.234,
-            "structure": "higher_highs_higher_lows",
+            "prior_6_low": 158.113,
+            "structure": "mixed",
             "breakout_up": false,
-            "breakout_down": true,
-            "momentum_3_bars_pips": -14.0,
-            "atr5_pips": 7.52,
-            "atr14_pips": 5.83,
-            "atr_expansion_ratio": 1.29
+            "breakout_down": false,
+            "momentum_3_bars_pips": 1.5,
+            "atr5_pips": 10.24,
+            "atr14_pips": 6.95,
+            "atr_expansion_ratio": 1.473
           },
           "error": null
         },
@@ -1211,8 +1386,21 @@
             "bullish": false,
             "bearish": false
           },
-          "candles": null,
-          "error": "stale_candles"
+          "candles": {
+            "last_closed_candle_utc": "2026-10-11T21:30:00+00:00",
+            "candle_age_minutes": 14.5,
+            "closed_price": 158.286,
+            "prior_6_high": 158.336,
+            "prior_6_low": 158.158,
+            "structure": "lower_highs_lower_lows",
+            "breakout_up": false,
+            "breakout_down": false,
+            "momentum_3_bars_pips": 0.7,
+            "atr5_pips": 9.18,
+            "atr14_pips": 8.31,
+            "atr_expansion_ratio": 1.105
+          },
+          "error": null
         },
         "1H": {
           "technical": {
@@ -1232,9 +1420,10 @@
           "error": "stale_candles"
         }
       },
-      "technical_age_minutes": 0.1,
+      "technical_age_minutes": 0.0,
       "volatility_age_minutes": 0.1,
-      "source_clock_offset_hours": 3.0
+      "source_clock_offset_hours": 3.0,
+      "price_source_difference_pips": 0.1
     }
   ]
 }
