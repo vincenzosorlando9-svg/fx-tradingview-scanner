@@ -44,7 +44,7 @@ def render(data, pair, tf):
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}">',
         '<rect width="100%" height="100%" fill="#101827"/>',
         '<style>text{font-family:Arial,sans-serif;fill:#e2e8f0}</style>',
-        '<text x="80" y="39" font-size="25" font-weight="bold">{escape(pair[:3] + "/" + pair[3:])} · {escape(tf)} candlesticks</text>',
+        f'<text x="80" y="39" font-size="25" font-weight="bold">{escape(pair[:3] + "/" + pair[3:])} · {escape(tf)} candlesticks</text>',
         f'<text x="80" y="67" font-size="15" fill="#a6b1c5">Last bar: {escape(fmt_time(candles[-1]["t"]))} · source collected {escape(str(data.get("collected_at_utc", "unknown")))}</text>',
     ]
     for j in range(7):
@@ -61,7 +61,7 @@ def render(data, pair, tf):
         yy = min(y(c["o"]), y(c["c"]))
         hh = max(abs(y(c["o"])-y(c["c"])), 1.5)
         lines.append(f'<rect x="{x-step*.31:.1f}" y="{yy:.1f}" width="{step*.62:.1f}" height="{hh:.1f}" fill="{color}"/>')
-        if i % 8 == 0 or i == n-1:
+        if i % 8 == 0:
             lines.append(f'<text x="{x:.1f}" y="{height-bottom+27}" text-anchor="middle" font-size="12">{escape(datetime.fromtimestamp(c["t"], timezone.utc).strftime("%m/%d %H:%M"))}</text>')
     lines.append(f'<text x="80" y="{height-15}" font-size="13">Historical snapshot; NOT a live executable quote. Candle times shown in UTC.</text>')
     lines.append('</svg>')
