@@ -74,9 +74,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add charts/*.svg charts/*.png charts/manifest.json
+          git add -A
           if ! git diff --cached --quiet; then
-            git commit -m "Publish 36 FX candlestick charts"
+            git commit -m "Publish 36 FX candlestick charts and refreshed snapshot"
             git pull --rebase origin main
             git push origin HEAD:main
           fi
