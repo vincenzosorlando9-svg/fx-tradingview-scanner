@@ -1,48 +1,82 @@
-name: FX Visual Chart Test
+name: FX Visual Charts - 36
 on:
   workflow_dispatch:
   push:
     paths:
       - 'render_fx_chart.py'
       - '.github/workflows/fx-visual-chart.yml'
+  schedule:
+    - cron: '*/15 * * * 0-5'
 permissions:
   contents: write
+concurrency:
+  group: fx-visual-charts
+  cancel-in-progress: false
 jobs:
   render:
     runs-on: ubuntu-latest
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
-      - name: Refresh historical OHLC snapshot
+        with:
+          ref: main
+      - name: Check FX market hours (Sunday 6pm through Friday 2pm New York)
+        id: hours
+        shell: bash
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          now=datetime.now(ZoneInfo("America/New_York"))
+          active=(now.weekday()==6 and now.hour>=18) or (now.weekday() in range(0,4)) or (now.weekday()==4 and now.hour<14)
+          print("active="+str(active).lower())
+          print("ny_time="+now.isoformat())
+          PY
+      - name: Refresh OHLC snapshot
+        if: steps.hours.outputs.active == 'true' || github.event_name == 'workflow_dispatch'
         run: python forextoolkits_collector.py
-      - name: Render EURUSD 15m candlestick SVG
+      - name: Generate 36 SVG charts
+        if: steps.hours.outputs.active == 'true' || github.event_name == 'workflow_dispatch'
         run: python render_fx_chart.py
-      - name: Convert SVG to PNG
+      - name: Convert all charts to PNG
+        if: steps.hours.outputs.active == 'true' || github.event_name == 'workflow_dispatch'
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq librsvg2-bin
-          rsvg-convert -w 1600 -h 875 charts/EURUSD_M15.svg -o charts/EURUSD_M15.png
-      - name: Validate output
+          for svg in charts/*.svg; do
+            rsvg-convert -w 1600 -h 875 "$svg" -o "${svg%.svg}.png"
+          done
+      - name: Validate chart count and timestamps
+        if: steps.hours.outputs.active == 'true' || github.event_name == 'workflow_dispatch'
         run: |
-          test -s charts/EURUSD_M15.svg
-          test -s charts/EURUSD_M15.png
           python - <<'PY'
+          import json
           from pathlib import Path
-          s=Path('charts/EURUSD_M15.svg').read_text()
-          assert '<svg' in s and 'EUR/USD' in s and '<rect' in s
-          print('SVG validation passed; bytes:',len(s))
+          d=json.loads(Path('charts/manifest.json').read_text())
+          assert len(d['charts'])==36, len(d['charts'])
+          for c in d['charts']:
+              assert c['bars']>=20
+              assert Path(c['file']).stat().st_size>100
+              assert Path(c['file'].replace('.svg','.png')).stat().st_size>100
+          print('Validated 36 SVG and 36 PNG charts')
           PY
       - uses: actions/upload-artifact@v4
+        if: steps.hours.outputs.active == 'true' || github.event_name == 'workflow_dispatch'
         with:
-          name: eurusd-15m-visual-chart
+          name: fx-36-visual-charts
           path: |
-            charts/EURUSD_M15.svg
-            charts/EURUSD_M15.png
-      - name: Publish chart to repository
+            charts/*.svg
+            charts/*.png
+            charts/manifest.json
+          retention-days: 7
+      - name: Publish charts to repository
+        if: steps.hours.outputs.active == 'true' || github.event_name == 'workflow_dispatch'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add charts/EURUSD_M15.svg charts/EURUSD_M15.png
+          git add charts/*.svg charts/*.png charts/manifest.json
           if ! git diff --cached --quiet; then
-            git commit -m "Publish EURUSD 15m visual chart"
-            git push
+            git commit -m "Publish 36 FX candlestick charts"
+            git pull --rebase origin main
+            git push origin HEAD:main
           fi
