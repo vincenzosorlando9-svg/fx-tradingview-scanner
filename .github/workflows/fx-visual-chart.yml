@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
-      - name: Check FX market hours (Sunday 6pm through Friday 2pm New York)
+      - name: Check FX market hours (Sunday 5pm through Friday 2pm New York)
         id: hours
         shell: bash
         run: |
@@ -28,7 +28,7 @@ jobs:
           from datetime import datetime
           from zoneinfo import ZoneInfo
           now=datetime.now(ZoneInfo("America/New_York"))
-          active=(now.weekday()==6 and now.hour>=18) or (now.weekday() in range(0,4)) or (now.weekday()==4 and now.hour<14)
+          active=(now.weekday()==6 and now.hour>=17) or (now.weekday() in range(0,4)) or (now.weekday()==4 and now.hour<14)
           print("active="+str(active).lower())
           print("ny_time="+now.isoformat())
           PY
