@@ -1,4 +1,4 @@
-"""Render a timestamped EUR/USD 15m SVG candlestick chart from saved OHLC.
+"""Render 36 timestamped FX candlestick SVG charts from saved OHLC.
 
 Usage: python render_fx_chart.py
 Requires fx_volatility.json in the current working directory.
@@ -10,13 +10,12 @@ from pathlib import Path
 from xml.sax.saxutils import escape
 
 SOURCE = Path("fx_volatility.json")
-DEST = Path("charts/EURUSD_M15.svg")
-PAIR, TF = "EURUSD", "M15"
+PAIRS = ("EURUSD", "GBPUSD", "AUDUSD", "NZDUSD", "EURGBP", "USDJPY", "USDCAD", "USDCHF", "GBPJPY")
+TIMEFRAMES = ("M5", "M15", "M30", "H1")
 
 
-def main():
-    data = json.loads(SOURCE.read_text(encoding="utf-8"))
-    frame = data["pairs"][PAIR]["tf"][TF]
+def render(data, pair, tf):
+    frame = data["pairs"][pair]["tf"][tf]
     keys = ("o", "h", "l", "c", "t")
     n = len(frame["t"])
     if n < 20 or any(len(frame[k]) != n for k in keys):
@@ -45,7 +44,7 @@ def main():
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}">',
         '<rect width="100%" height="100%" fill="#101827"/>',
         '<style>text{font-family:Arial,sans-serif;fill:#e2e8f0}</style>',
-        '<text x="80" y="39" font-size="25" font-weight="bold">EUR/USD · 15-minute candlesticks</text>',
+        '<text x="80" y="39" font-size="25" font-weight="bold">{escape(pair[:3] + "/" + pair[3:])} · {escape(tf)} candlesticks</text>',
         f'<text x="80" y="67" font-size="15" fill="#a6b1c5">Last bar: {escape(fmt_time(candles[-1]["t"]))} · source collected {escape(str(data.get("collected_at_utc", "unknown")))}</text>',
     ]
     for j in range(7):
@@ -66,9 +65,17 @@ def main():
             lines.append(f'<text x="{x:.1f}" y="{height-bottom+27}" text-anchor="middle" font-size="12">{escape(datetime.fromtimestamp(c["t"], timezone.utc).strftime("%m/%d %H:%M"))}</text>')
     lines.append(f'<text x="80" y="{height-15}" font-size="13">Historical snapshot; NOT a live executable quote. Candle times shown in UTC.</text>')
     lines.append('</svg>')
-    DEST.parent.mkdir(parents=True, exist_ok=True)
-    DEST.write_text("\n".join(lines), encoding="utf-8")
-    print(f"Saved {DEST} | {n} bars | last close {candles[-1]['c']:.5f} | {fmt_time(candles[-1]['t'])}")
+    dest = Path(f"charts/{pair}_{tf}.svg")
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_text("\n".join(lines), encoding="utf-8")
+    return {"pair":pair,"timeframe":tf,"file":str(dest),"bars":n,"last_bar_utc":datetime.fromtimestamp(candles[-1]["t"], timezone.utc).isoformat(),"last_close":candles[-1]["c"]}
+
+
+def main():
+    data = json.loads(SOURCE.read_text(encoding="utf-8"))
+    results = [render(data, pair, tf) for pair in PAIRS for tf in TIMEFRAMES]
+    Path("charts/manifest.json").write_text(json.dumps({"source_collected_at_utc":data.get("collected_at_utc"),"source_status":data.get("status"),"charts":results},indent=2),encoding="utf-8")
+    print(f"Generated {len(results)} charts")
 
 
 if __name__ == "__main__":
