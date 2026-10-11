@@ -16,9 +16,15 @@ jobs:
         run: python forextoolkits_collector.py
       - name: Render EURUSD 15m candlestick SVG
         run: python render_fx_chart.py
+      - name: Convert SVG to PNG
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq librsvg2-bin
+          rsvg-convert -w 1600 -h 875 charts/EURUSD_M15.svg -o charts/EURUSD_M15.png
       - name: Validate output
         run: |
           test -s charts/EURUSD_M15.svg
+          test -s charts/EURUSD_M15.png
           python - <<'PY'
           from pathlib import Path
           s=Path('charts/EURUSD_M15.svg').read_text()
@@ -28,12 +34,14 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: eurusd-15m-visual-chart
-          path: charts/EURUSD_M15.svg
+          path: |
+            charts/EURUSD_M15.svg
+            charts/EURUSD_M15.png
       - name: Publish chart to repository
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add charts/EURUSD_M15.svg
+          git add charts/EURUSD_M15.svg charts/EURUSD_M15.png
           if ! git diff --cached --quiet; then
             git commit -m "Publish EURUSD 15m visual chart"
             git push
