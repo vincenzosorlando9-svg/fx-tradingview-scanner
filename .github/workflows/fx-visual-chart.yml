@@ -1,0 +1,40 @@
+name: FX Visual Chart Test
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'render_fx_chart.py'
+      - '.github/workflows/fx-visual-chart.yml'
+permissions:
+  contents: write
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Refresh historical OHLC snapshot
+        run: python forextoolkits_collector.py
+      - name: Render EURUSD 15m candlestick SVG
+        run: python render_fx_chart.py
+      - name: Validate output
+        run: |
+          test -s charts/EURUSD_M15.svg
+          python - <<'PY'
+          from pathlib import Path
+          s=Path('charts/EURUSD_M15.svg').read_text()
+          assert '<svg' in s and 'EUR/USD' in s and '<rect' in s
+          print('SVG validation passed; bytes:',len(s))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: eurusd-15m-visual-chart
+          path: charts/EURUSD_M15.svg
+      - name: Publish chart to repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add charts/EURUSD_M15.svg
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish EURUSD 15m visual chart"
+            git push
+          fi
