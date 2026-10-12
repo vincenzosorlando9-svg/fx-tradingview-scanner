@@ -132,7 +132,7 @@ def four_hour_transition(pair, frame):
     try:
         oo, hh, ll, cc = [[float(v) for v in frame[k][:-1]]
                           for k in ("o", "h", "l", "c")]
-        if len(cc) < 50 or any(len(a) != len(cc) for a in (oo, hh, ll)):
+        if len(cc) < 45 or any(len(a) != len(cc) for a in (oo, hh, ll)):
             result["reason"] = "INSUFFICIENT_4H_HISTORY_FOR_EMA_WARMUP"
             return result
         if not all(math.isfinite(v) for arr in (oo, hh, ll, cc) for v in arr):
@@ -146,7 +146,7 @@ def four_hour_transition(pair, frame):
                 out[i] = alpha * values[i] + (1 - alpha) * out[i - 1]
             return out
         e10, e20 = ema(cc, 10), ema(cc, 20)
-        # Require 40+ bars after EMA10 seed to reduce initialization error.
+        # Require at least 35 closed bars after EMA10 seed; source supplies 50 total bars,\n        # with the final forming candle excluded (49 closed).
         before, current = cc[-2] - e10[-2], cc[-1] - e10[-1]
         if before >= 0 and current < 0:
             result["ema10_cross"] = "CROSSED_BELOW_CLOSED"
@@ -186,7 +186,7 @@ def four_hour_transition(pair, frame):
                       ema20_position="ABOVE" if cc[-1] > e20[-1] else "BELOW",
                       consolidation_bars=count, consolidation_hours=4 * count,
                       range_atr14_pips=round(atr / pip, 1),
-                      methodology="closed_4h_candles_independent_ema_seeded_sma")
+                      methodology="closed_4h_candles_independent_ema_seeded_sma_approximation")
         return result
     except (KeyError, TypeError, ValueError, IndexError, ZeroDivisionError):
         result["reason"] = "MALFORMED_4H_HISTORY"
