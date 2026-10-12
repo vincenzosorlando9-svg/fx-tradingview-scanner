@@ -1,0 +1,33 @@
+name: Integrated FX source audit
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '9,24,39,54 * * * *'
+permissions:
+  contents: write
+concurrency:
+  group: integrated-fx-audit
+  cancel-in-progress: false
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build audited 11-pair macro and technical board
+        run: python3 build_integrated_fx_audit.py
+      - name: Publish audit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add fx_integrated_audit.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Refresh integrated FX audit"
+          for attempt in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep 3
+          done
+          exit 1
