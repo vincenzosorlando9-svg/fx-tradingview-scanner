@@ -85,6 +85,7 @@ def main():
             "full_context_valid":full_context_ok,
             "direction_score":r.get("direction_score"),
             "move_maturity":r.get("move_maturity"),
+            "last_closed_15m_price":((frames.get("15m") or {}).get("candles") or {}).get("closed_price"),
             "higher_timeframe":r.get("higher_timeframe",{}),
             "higher_timeframe_indicators":{tf:(frames.get(tf) or {}).get("technical") for tf in ("1H","4H","1D")},
             "direction":original_direction if source_ok else "UNVERIFIED",
