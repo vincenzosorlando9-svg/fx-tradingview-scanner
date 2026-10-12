@@ -306,6 +306,43 @@ def analyze(pair, tech, vol, now):
             return "SELL"
         return "MIXED"
     votes = {tf: vote(output["timeframes"][tf]) for tf in ("15m", "30m", "1H")}
+    # 1H: EMA20 is directional; EMA50 adds strength, not a veto.
+    hourly = output["timeframes"]["1H"]["technical"]
+    if hourly and hourly.get("close") is not None and hourly.get("ema20") is not None:
+        votes["1H"] = ("BUY" if hourly["close"] > hourly["ema20"] else
+                       "SELL" if hourly["close"] < hourly["ema20"] else "MIXED")
+    hourly_ema50 = hourly.get("ema50") if hourly else None
+    output["hourly_ema_confirmation"] = {
+        "direction": votes["1H"],
+        "ema20_rule": "PRICE_VS_EMA20",
+        "ema50_strength": (
+            "STRONGER_BUY" if hourly and hourly_ema50 is not None and
+            hourly["close"] > hourly["ema20"] and hourly["close"] > hourly_ema50 else
+            "STRONGER_SELL" if hourly and hourly_ema50 is not None and
+            hourly["close"] < hourly["ema20"] and hourly["close"] < hourly_ema50 else
+            "EMA20_ONLY_OR_MIXED")
+    }
+    # 4H: trend location versus EMA20; EMA10 crossing is acceleration evidence.
+    h4 = output["timeframes"]["4H"]
+    h4tech = h4.get("technical")
+    h4candles = h4.get("candles")
+    h4state = {"ema20_position": "UNAVAILABLE", "ema10_break": "UNVERIFIED"}
+    if h4tech and h4tech.get("close") is not None:
+        h4price = h4tech["close"]
+        h4ema20 = h4tech.get("ema20")
+        h4ema10 = h4tech.get("ema10")
+        if h4ema20 is not None:
+            h4state["ema20_position"] = ("ABOVE_BULLISH" if h4price > h4ema20 else
+                "BELOW_BEARISH" if h4price < h4ema20 else "AT_EMA20")
+        if h4ema10 is not None and h4candles:
+            # A cross requires two consecutive CLOSED 4H candle closes and
+            # a corresponding historical EMA10. Only current EMA10 is available
+            # in this snapshot, so never assert a historical EMA cross.
+            h4state["ema10_position"] = ("ABOVE" if h4price > h4ema10 else
+                "BELOW" if h4price < h4ema10 else "AT")
+            h4state["ema10_break"] = "NOT_VERIFIED_NO_HISTORICAL_EMA10"
+    output["four_hour_ema_context"] = h4state
+
     early_aligned = votes["15m"] in ("BUY", "SELL") and votes["15m"] == votes["30m"]
     confirmed = early_aligned and votes["1H"] == votes["15m"]
     output["timeframe_votes"] = votes
