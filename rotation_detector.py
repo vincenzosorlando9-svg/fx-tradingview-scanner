@@ -257,7 +257,42 @@ def analyze(pair, tech, vol, now):
             if breakout:
                 output["reasons"].append("15m_closed_breakout")
     else:
-        output["reasons"].append("NO_DIRECTION_WITH_MINIMUM_PRICE_ACTION_EVIDENCE")
+        # Detect emerging pressure inside a range before momentum confirmation.
+        # Research watch only: never turn this into an executable entry.
+        recent_high = max(x["prior_6_high"], x["previous_closed_high"])
+        recent_low = min(x["prior_6_low"], x["previous_closed_low"])
+        width_pips = (recent_high - recent_low) / pip_size(pair)
+        compression = width_pips <= max(10.0, 2.0 * x["atr14_pips"])
+        momentum = x["momentum_3_bars_pips"]
+        close = x["closed_price"]
+        location = (close - recent_low) / (recent_high - recent_low) if recent_high > recent_low else 0.5
+        ema_delta = (a["close"] - a["ema20"]) / pip_size(pair)
+        # Favor directional pressure near a boundary, not a blind RSI/EMA reversal.
+        early_buy = compression and location >= 0.65 and momentum > 0 and ema_delta >= -2
+        early_sell = compression and location <= 0.35 and momentum < 0 and ema_delta <= 2
+        output["range_watch"] = {
+            "range_high": round(recent_high, 5 if not pair.endswith("JPY") else 3),
+            "range_low": round(recent_low, 5 if not pair.endswith("JPY") else 3),
+            "range_width_pips": round(width_pips, 1),
+            "compressed": compression,
+            "location_in_range": round(location, 2),
+            "momentum_3_bars_pips": momentum,
+            "note": "6-bar 15m range proxy, not measured multi-hour consolidation duration"
+        }
+        if early_buy != early_sell:
+            direction = "BUY" if early_buy else "SELL"
+            output["direction"] = direction
+            output["stage"] = "EARLY_WATCH"
+            output["status"] = "WATCH_FOR_TRIGGER"
+            output["confidence"] = "PRECONFIRMATION_TECHNICAL_ONLY"
+            output["entry"] = {
+                "type": "CONDITIONAL_RANGE_BREAK",
+                "level": recent_high if early_buy else recent_low,
+                "condition": "Wait for 15m break and retest or a verified shallow pullback; check news, spread, yields and cross-pair strength before trading"
+            }
+            output["reasons"].append("COMPRESSED_RANGE_WITH_DIRECTIONAL_PRESSURE_PRECONFIRMATION")
+        else:
+            output["reasons"].append("NO_DIRECTION_WITH_MINIMUM_PRICE_ACTION_EVIDENCE")
     # Higher-timeframe classification is separate from the 5m/15m signal.
     # Do not promote a countertrend bounce into a confirmed reversal.
     h4 = output["timeframes"].get("4H", {})
