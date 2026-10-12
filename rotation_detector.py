@@ -81,7 +81,21 @@ def candle_metrics(pair, frame, now, tf, clock_offset_seconds=0):
         breakout_down = latest < prior_low
         # Simple closed-candle momentum, not a prediction.
         momentum_pips = (latest - cc[-4]) / pip
+        # Trace the most recent contiguous directional leg across up to 20 closed bars.
+        # This is a proxy for move origin, not a confirmed market turning point.
+        leg_sign = 1 if cc[-1] >= cc[-2] else -1
+        start = len(cc) - 2
+        for i in range(len(cc)-2, max(0,len(cc)-21), -1):
+            if (cc[i+1]-cc[i])*leg_sign <= 0:
+                break
+            start = i
+        leg_pips = (cc[-1]-cc[start])/pip
+        leg_start_dt = datetime.fromtimestamp(int(ts[start])+seconds-clock_offset_seconds, UTC)
         return {
+            "leg_origin_proxy_utc":leg_start_dt.isoformat(),
+            "leg_origin_proxy_price":cc[start],
+            "leg_move_pips":round(leg_pips,2),
+            "leg_bars":len(cc)-1-start,
             "last_closed_candle_utc": close_dt.isoformat(),
             "candle_age_minutes": round(age, 1),
             "closed_price": latest,
@@ -181,7 +195,7 @@ def analyze(pair, tech, vol, now):
         if aligned and higher and momentum:
             output["direction"] = direction
             expansion = x["atr_expansion_ratio"] is not None and x["atr_expansion_ratio"] >= 1.15
-            move_pips = abs(x["momentum_3_bars_pips"])
+            move_pips = max(abs(x["momentum_3_bars_pips"]),abs(x["leg_move_pips"]))
             atr = x["atr14_pips"]
             output["stage"] = ("EXTENDED" if atr > 0 and move_pips >= 2.0 * atr
                                else "CONFIRMING" if breakout or (atr > 0 and move_pips >= 0.75 * atr)
@@ -189,6 +203,7 @@ def analyze(pair, tech, vol, now):
             output["status"] = "WATCH_FOR_ENTRY"
             output["confidence"] = "TECHNICAL_ONLY"
             output["reasons"] += ["5m_15m_ema10_20_aligned", "30m_rsi_not_opposing", "closed_5m_momentum_aligned"]
+            output["move_origin_proxy"] = {"utc":x["leg_origin_proxy_utc"],"price":x["leg_origin_proxy_price"],"moved_pips":x["leg_move_pips"],"bars":x["leg_bars"],"method":"contiguous_closed_5m_directional_closes_proxy"}
             if breakout:
                 output["reasons"].append("5m_closed_candle_breakout")
             if expansion:
