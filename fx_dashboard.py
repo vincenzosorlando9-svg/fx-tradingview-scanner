@@ -52,7 +52,7 @@ def main():
         r=existing.get(pair,{})
         frames=r.get("timeframes") or {}
         checks={}
-        for tf in ("5m","15m","30m","1H"):
+        for tf in ("5m","15m","30m","1H","4H","1D"):
             data=frames.get(tf) or {}
             bar=data.get("candles") or {}
             ts=bar.get("last_closed_candle_utc")
@@ -67,12 +67,17 @@ def main():
             }
         candle_ok=all(fresh(checks[tf]["candle_age_min"],{"5m":6,"15m":18,"30m":33}[tf])
                       and not checks[tf]["error"] for tf in ("5m","15m","30m"))
-        source_ok=all(fresh(v) for v in ages.values()) and versions_match and candle_ok
+        htf_ok=all(checks[tf]["last_closed_utc"] is not None and not checks[tf]["error"]
+                   and fresh(checks[tf]["candle_age_min"], {"4H":300,"1D":1800}[tf])
+                   for tf in ("4H","1D"))
+        source_ok=all(fresh(v) for v in ages.values()) and versions_match and candle_ok and htf_ok
         original_direction=r.get("direction","NONE")
         original_stage=r.get("stage","WAIT")
         valid_watch=source_ok and r.get("status")=="WATCH_FOR_ENTRY" and original_direction in ("BUY","SELL")
         row={
             "pair":pair,
+            "trade_type":r.get("trade_type","HIGHER_TIMEFRAME_UNVERIFIED"),
+            "higher_timeframe":r.get("higher_timeframe",{}),
             "direction":original_direction if source_ok else "UNVERIFIED",
             "stage":original_stage if source_ok else "UNVERIFIED",
             "entry_readiness":"TECHNICAL_WATCH_ONLY" if valid_watch else "WAIT",
@@ -101,13 +106,14 @@ def main():
         "source_versions_match":versions_match,
         "warnings":warnings,
         "scope":"11 TradingView-covered pairs; EUR/NZD NOT INCLUDED",
-        "priority_timeframes":["5m","15m","30m"],
-        "max_closed_candle_age_minutes":{"5m":6,"15m":18,"30m":33},
+        "higher_timeframe_rule":"Daily and 4H required; countertrend is not reversal; levels are 20-bar closed-candle swings",
+        "priority_timeframes":["1D","4H","1H","30m","15m","5m"],
+        "max_closed_candle_age_minutes":{"5m":6,"15m":18,"30m":33,"4H":300,"1D":1800},
         "freshness_rule":"Any stale primary candle blocks pair from technical watchlist; collection timestamp alone never proves candle freshness.",
         "optional_secondary_sources":secondary,
         "secondary_source_rule":"FXStreet and FXEmpire are reference-only unless a publisher timestamp proves fresh 5m/15m/30m data. No second-opinion ratings can override fresh scanner rotations.",
         "available_technical_watch_count":len(watches),
-        "technical_watchlist":[{"pair":r["pair"],"direction":r["direction"],"stage":r["stage"],
+        "technical_watchlist":[{"pair":r["pair"],"direction":r["direction"],"stage":r["stage"],"trade_type":r["trade_type"],
             "last_closed_5m_utc":r["timeframes"]["5m"]["last_closed_utc"]} for r in watches],
         "pairs":rows,
         "independent_checks_not_performed":["Reuters/FXStreet news","economic calendar","rates/yields/OIS",
