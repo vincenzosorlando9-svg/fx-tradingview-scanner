@@ -93,11 +93,6 @@ def main():
         rows.append(row)
     watches=[r for r in rows if r["entry_readiness"]=="TECHNICAL_WATCH_ONLY"]
     watches.sort(key=lambda x:({"EARLY":0,"CONFIRMING":1,"EXTENDED":2}.get(x["stage"],3),x["pair"]))
-    # Optional independent sources are reference-only unless their own timestamp is verified.
-    try:
-        secondary = load("fx_secondary_sources.json")
-    except (OSError, ValueError):
-        secondary = {"sources":{}, "error":"OPTIONAL_SECONDARY_FILE_UNAVAILABLE"}
     dashboard={
         "generated_at_utc":now.isoformat(),
         "purpose":"TECHNICAL_RESEARCH_ONLY_NOT_AN_EXECUTABLE_TRADE_SIGNAL",
@@ -110,13 +105,11 @@ def main():
         "priority_timeframes":["1D","4H","1H","30m","15m","5m"],
         "max_closed_candle_age_minutes":{"5m":6,"15m":18,"30m":33,"4H":300,"1D":1800},
         "freshness_rule":"Any stale primary candle blocks pair from technical watchlist; collection timestamp alone never proves candle freshness.",
-        "optional_secondary_sources":secondary,
-        "secondary_source_rule":"FXStreet and FXEmpire are reference-only unless a publisher timestamp proves fresh 5m/15m/30m data. No second-opinion ratings can override fresh scanner rotations.",
         "available_technical_watch_count":len(watches),
         "technical_watchlist":[{"pair":r["pair"],"direction":r["direction"],"stage":r["stage"],"trade_type":r["trade_type"],
             "last_closed_5m_utc":r["timeframes"]["5m"]["last_closed_utc"]} for r in watches],
         "pairs":rows,
-        "independent_checks_not_performed":["Reuters/FXStreet news","economic calendar","rates/yields/OIS",
+        "independent_checks_not_performed":["approved Trading Economics macro/event verification","economic calendar","rates/yields/OIS",
             "cross-pair cluster confirmation","ADR20","fresh bid/ask and spread","CFTC","retail sentiment","options"],
         "reader_instructions":"Check timestamps and source_valid. Compare with independently verified quote, news, yields, currency cross-cluster and ADR before ANY trade recommendation. If missing/stale, say unverified. Never present this watchlist as live Top 3."
     }
