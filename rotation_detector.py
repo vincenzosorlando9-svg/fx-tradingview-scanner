@@ -121,6 +121,78 @@ def candle_metrics(pair, frame, now, tf, clock_offset_seconds=0):
         return None, "malformed_candles"
 
 
+
+def four_hour_transition(pair, frame):
+    """Closed 4H candles only; independently calculated EMA10/20.
+    Historical EMA10 crossover is unverified when warmup is insufficient.
+    """
+    result = {"status": "UNVERIFIED", "ema10_cross": "UNVERIFIED",
+              "rejection": "NONE", "failed_breakout": "NONE",
+              "consolidation_bars": 0, "consolidation_hours": 0}
+    try:
+        oo, hh, ll, cc = [[float(v) for v in frame[k][:-1]]
+                          for k in ("o", "h", "l", "c")]
+        if len(cc) < 50 or any(len(a) != len(cc) for a in (oo, hh, ll)):
+            result["reason"] = "INSUFFICIENT_4H_HISTORY_FOR_EMA_WARMUP"
+            return result
+        if not all(math.isfinite(v) for arr in (oo, hh, ll, cc) for v in arr):
+            result["reason"] = "INVALID_CANDLES"
+            return result
+        def ema(values, period):
+            out = [None] * len(values)
+            out[period - 1] = sum(values[:period]) / period
+            alpha = 2.0 / (period + 1)
+            for i in range(period, len(values)):
+                out[i] = alpha * values[i] + (1 - alpha) * out[i - 1]
+            return out
+        e10, e20 = ema(cc, 10), ema(cc, 20)
+        # Require 40+ bars after EMA10 seed to reduce initialization error.
+        before, current = cc[-2] - e10[-2], cc[-1] - e10[-1]
+        if before >= 0 and current < 0:
+            result["ema10_cross"] = "CROSSED_BELOW_CLOSED"
+        elif before <= 0 and current > 0:
+            result["ema10_cross"] = "CROSSED_ABOVE_CLOSED"
+        else:
+            result["ema10_cross"] = "NO_NEW_CROSS"
+        pip = pip_size(pair)
+        atr = sum(max(hh[i] - ll[i], abs(hh[i] - cc[i-1]),
+                      abs(ll[i] - cc[i-1])) for i in range(len(cc)-14,len(cc))) / 14
+        # Rejection is based on wick/body proportions and proximity to recent extremes.
+        upper = hh[-1] - max(oo[-1], cc[-1])
+        lower = min(oo[-1], cc[-1]) - ll[-1]
+        body = abs(cc[-1] - oo[-1])
+        resistance = max(hh[-7:-1])
+        support = min(ll[-7:-1])
+        tolerance = max(2 * pip, 0.15 * atr)
+        if hh[-1] >= resistance - tolerance and upper >= max(1.5 * body, 0.25 * atr):
+            result["rejection"] = "RESISTANCE_REJECTION"
+        elif ll[-1] <= support + tolerance and lower >= max(1.5 * body, 0.25 * atr):
+            result["rejection"] = "SUPPORT_REJECTION"
+        if hh[-1] > resistance + tolerance and cc[-1] < resistance:
+            result["failed_breakout"] = "FAILED_BULLISH_BREAKOUT"
+        elif ll[-1] < support - tolerance and cc[-1] > support:
+            result["failed_breakout"] = "FAILED_BEARISH_BREAKOUT"
+        # Count consecutive trailing 4H bars contained in an ATR-scaled range.
+        count = 0
+        for n in range(3, min(20, len(cc)) + 1):
+            width = max(hh[-n:]) - min(ll[-n:])
+            if width <= 2.0 * atr:
+                count = n
+            else:
+                break
+        result.update(status="MEASURED_CLOSED_4H", ema10=round(e10[-1], 6),
+                      ema20=round(e20[-1], 6), close=cc[-1],
+                      ema10_position="ABOVE" if cc[-1] > e10[-1] else "BELOW",
+                      ema20_position="ABOVE" if cc[-1] > e20[-1] else "BELOW",
+                      consolidation_bars=count, consolidation_hours=4 * count,
+                      range_atr14_pips=round(atr / pip, 1),
+                      methodology="closed_4h_candles_independent_ema_seeded_sma")
+        return result
+    except (KeyError, TypeError, ValueError, IndexError, ZeroDivisionError):
+        result["reason"] = "MALFORMED_4H_HISTORY"
+        return result
+
+
 def tech_metrics(frame):
     if frame.get("status") != "ok":
         return None
@@ -342,6 +414,21 @@ def analyze(pair, tech, vol, now):
                 "BELOW" if h4price < h4ema10 else "AT")
             h4state["ema10_break"] = "NOT_VERIFIED_NO_HISTORICAL_EMA10"
     output["four_hour_ema_context"] = h4state
+    transition = four_hour_transition(pair, vpair.get("tf", {}).get("H4", {}))
+    output["four_hour_transition"] = transition
+    if transition["status"] == "MEASURED_CLOSED_4H":
+        h4state["ema10_break"] = transition["ema10_cross"]
+        h4state["closed_candle_ema10_position"] = transition["ema10_position"]
+        h4state["closed_candle_ema20_position"] = transition["ema20_position"]
+        if transition["ema10_cross"].startswith("CROSSED_"):
+            output["reasons"].append("VERIFIED_4H_EMA10_CROSS")
+        if transition["rejection"] != "NONE":
+            output["reasons"].append(transition["rejection"])
+        if transition["failed_breakout"] != "NONE":
+            output["reasons"].append(transition["failed_breakout"])
+    else:
+        output["reasons"].append("4H_TRANSITION_UNVERIFIED")
+
 
     early_aligned = votes["15m"] in ("BUY", "SELL") and votes["15m"] == votes["30m"]
     confirmed = early_aligned and votes["1H"] == votes["15m"]
