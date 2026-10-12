@@ -39,9 +39,6 @@ jobs:
       - name: Generate conditional rotation signals
         run: python rotation_detector.py
 
-      - name: Collect optional FXStreet and FXEmpire references
-        run: python fx_secondary_collector.py
-
       - name: Build consolidated FX dashboard
         run: python fx_dashboard.py
 
@@ -49,9 +46,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add fx_volatility.json fx_technicals.json fx_rotation_signals.json fx_scan_dashboard.json fx_secondary_sources.json
+          git add fx_volatility.json fx_technicals.json fx_rotation_signals.json fx_scan_dashboard.json
           if ! git diff --cached --quiet; then
-            git commit -m "Update synchronized FX five-source dashboard"
+            git commit -m "Update synchronized FX technical dashboard with Daily and 4H"
             git pull --rebase origin main
             git push
           fi
