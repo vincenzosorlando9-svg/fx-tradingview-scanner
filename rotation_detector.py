@@ -132,10 +132,12 @@ def analyze(pair, tech, vol, now):
     output["technical_age_minutes"] = round(t_age,1) if t_age is not None else None
     output["volatility_age_minutes"] = round(v_age,1) if v_age is not None else None
     if not valid_age(t_age,MAX_TECH_AGE_MIN) or not valid_age(v_age,MAX_VOL_AGE_MIN):
+        output["status"] = "DATA_UNAVAILABLE"
         output["reasons"].append("STALE_INPUT_FEED")
         return output
     vpair = vol.get("pairs",{}).get(pair)
     if not vpair:
+        output["status"] = "DATA_UNAVAILABLE"
         output["reasons"].append("NO_VOLATILITY_PAIR")
         return output
     # ForexToolkits may timestamp candles in its server-local clock.
@@ -149,6 +151,7 @@ def analyze(pair, tech, vol, now):
         if abs(offset - rounded) <= 600 and abs(rounded) <= 12 * 3600:
             clock_offset_seconds = rounded
         elif abs(offset) > 600:
+            output["status"] = "DATA_UNAVAILABLE"
             output["reasons"].append("AMBIGUOUS_SOURCE_CLOCK")
             return output
     output["source_clock_offset_hours"] = clock_offset_seconds / 3600
@@ -157,12 +160,14 @@ def analyze(pair, tech, vol, now):
         vm, error = candle_metrics(pair,vpair.get("tf",{}).get(vt,{}),now,vt,clock_offset_seconds)
         output["timeframes"][t] = {"technical":tm,"candles":vm,"error":error}
     if any(t not in output["timeframes"] for t in ("5m", "15m", "30m")):
+        output["status"] = "DATA_UNAVAILABLE"
         output["reasons"].append("MISSING_TIMEFRAME_RESULTS")
         return output
     m5 = output["timeframes"]["5m"]
     m15 = output["timeframes"]["15m"]
     m30 = output["timeframes"]["30m"]
     if any(not x["technical"] or not x["candles"] for x in (m5,m15,m30)):
+        output["status"] = "DATA_UNAVAILABLE"
         output["reasons"].append("MISSING_OR_STALE_EXECUTION_TIMEFRAME")
         return output
     a,b,c = [x["technical"] for x in (m5,m15,m30)]
@@ -219,7 +224,7 @@ def analyze(pair, tech, vol, now):
     direction = output["direction"]
     if dominant == "UNAVAILABLE" or output["higher_timeframe"]["daily_bias"] == "UNAVAILABLE":
         output["trade_type"] = "HIGHER_TIMEFRAME_UNVERIFIED"
-        output["status"] = "WAIT"
+        output["status"] = "DATA_UNAVAILABLE"
         output["entry"] = None
         output["reasons"].append("MISSING_DAILY_OR_4H_CLOSED_CANDLES")
     elif direction not in ("BUY", "SELL"):
@@ -250,15 +255,16 @@ def analyze(pair, tech, vol, now):
         nearest = output["higher_timeframe"]["nearest_obstacle"]
         if nearest and nearest["distance_pips"] < 20:
             output["reasons"].append("COUNTERTREND_LESS_THAN_20_PIPS_TO_HTF_OBSTACLE")
-            output["status"] = "WAIT"
+            output["status"] = "WATCH_SETUP_FORMING"
             output["entry"] = None
     if output["direction"] == "NONE":
         output["reasons"].append("NO_ALIGNED_5m_15m_ROTATION")
+        output["status"] = "NO_TRADE"
     # Warn on discrepancies across providers (not assumed identical pricing).
     diff = abs(a["close"] - x["closed_price"]) / pip_size(pair)
     output["price_source_difference_pips"] = round(diff,1)
     if diff > max(5, x["atr14_pips"]):
-        output["status"] = "WAIT"
+        output["status"] = "DATA_UNAVAILABLE"
         output["entry"] = None
         output["reasons"].append("PRICE_FEED_DIVERGENCE")
     output["reasons"].append("REQUIRES_NEWS_YIELDS_CROSS_PAIR_AND_EXECUTABLE_PRICE_CHECK")
