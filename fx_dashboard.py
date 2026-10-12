@@ -88,6 +88,7 @@ def main():
             "directional_bias":original_direction if source_ok else "UNVERIFIED",
             "source_valid":source_ok,
             "technical_price_divergence_pips":r.get("price_source_difference_pips"),
+            "move_origin_proxy":r.get("move_origin_proxy"),
             "timeframes":checks,
             "conditional_level_reference_only":(r.get("entry") or {}).get("level"),
             "detector_reasons":r.get("reasons",[]),
@@ -114,6 +115,7 @@ def main():
         "pairs":rows,
         "independent_checks_not_performed":["approved Trading Economics macro/event verification","economic calendar","rates/yields/OIS",
             "cross-pair cluster confirmation","ADR20","fresh bid/ask and spread","CFTC","retail sentiment","options"],
+        "external_news_and_macro_status":"NOT_COLLECTED_BY_GITHUB_SCANNER_REQUIRES_FULL_REPORT_AUDIT",
         "reader_instructions":"Check timestamps and source_valid. Compare with independently verified quote, news, yields, currency cross-cluster and ADR before ANY trade recommendation. If missing/stale, say unverified. Never present this watchlist as live Top 3."
     }
     Path("fx_scan_dashboard.json").write_text(json.dumps(dashboard,indent=2),encoding="utf-8")
