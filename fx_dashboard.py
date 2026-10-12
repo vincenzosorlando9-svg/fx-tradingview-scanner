@@ -78,6 +78,7 @@ def main():
             "pair":pair,
             "trade_type":r.get("trade_type","HIGHER_TIMEFRAME_UNVERIFIED"),
             "higher_timeframe":r.get("higher_timeframe",{}),
+            "higher_timeframe_indicators":{tf:(frames.get(tf) or {}).get("technical") for tf in ("1H","4H","1D")},
             "direction":original_direction if source_ok else "UNVERIFIED",
             "stage":original_stage if source_ok else "UNVERIFIED",
             "entry_readiness":"TECHNICAL_WATCH_ONLY" if valid_watch else "WAIT",
