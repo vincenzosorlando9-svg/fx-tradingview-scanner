@@ -9,10 +9,10 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 UTC = timezone.utc
-TF = {"5m": "M5", "15m": "M15", "30m": "M30", "1H": "H1"}
+TF = {"5m": "M5", "15m": "M15", "30m": "M30", "1H": "H1", "4H": "H4", "1D": "D1"}
 MAX_TECH_AGE_MIN = 35
 MAX_VOL_AGE_MIN = 35
-MAX_CANDLE_AGE_MIN = {"M5": 6, "M15": 18, "M30": 33, "H1": 75}
+MAX_CANDLE_AGE_MIN = {"M5": 6, "M15": 18, "M30": 33, "H1": 75, "H4": 300, "D1": 1800}
 
 
 def parse_time(value):
@@ -59,7 +59,7 @@ def candle_metrics(pair, frame, now, tf, clock_offset_seconds=0):
         if any(hh[i] < max(oo[i], cc[i], ll[i]) or ll[i] > min(oo[i], cc[i]) for i in range(len(cc))):
             return None, "invalid_ohlc"
         # Last closed candle timestamp is the OPEN time; its close is one TF later.
-        seconds = {"M5": 300, "M15": 900, "M30": 1800, "H1": 3600}[tf]
+        seconds = {"M5": 300, "M15": 900, "M30": 1800, "H1": 3600, "H4": 14400, "D1": 86400}[tf]
         close_dt = datetime.fromtimestamp(int(ts[-2]) + seconds - clock_offset_seconds, UTC)
         age = age_minutes(now, close_dt)
         if not valid_age(age, MAX_CANDLE_AGE_MIN[tf]):
@@ -94,6 +94,8 @@ def candle_metrics(pair, frame, now, tf, clock_offset_seconds=0):
             "atr5_pips": round(atr5, 2),
             "atr14_pips": round(atr14, 2),
             "atr_expansion_ratio": round(atr5 / atr14, 3) if atr14 else None,
+            "swing_high_20": max(hh[-20:]), "swing_low_20": min(ll[-20:]),
+            "previous_closed_high": hh[-1], "previous_closed_low": ll[-1],
         }, None
     except (KeyError, TypeError, ValueError, OverflowError, OSError):
         return None, "malformed_candles"
@@ -192,6 +194,64 @@ def analyze(pair, tech, vol, now):
                                "level":x["prior_6_high"] if sign==1 else x["prior_6_low"],
                                "condition":"New closed 5m candle beyond level, then hold/retest; confirm current quote and spread"}
             break
+    # Higher-timeframe classification is separate from the 5m/15m signal.
+    # Do not promote a countertrend bounce into a confirmed reversal.
+    h4 = output["timeframes"].get("4H", {})
+    daily = output["timeframes"].get("1D", {})
+    hour = output["timeframes"].get("1H", {})
+    def bias(row):
+        t, c = row.get("technical"), row.get("candles")
+        if not t or not c:
+            return "UNAVAILABLE"
+        up = t["close"] > t["ema20"] and t["ema20"] > t["ema50"] if t["ema50"] is not None else False
+        down = t["close"] < t["ema20"] and t["ema20"] < t["ema50"] if t["ema50"] is not None else False
+        structure = c["structure"]
+        if up and structure == "higher_highs_higher_lows": return "BULLISH"
+        if down and structure == "lower_highs_lower_lows": return "BEARISH"
+        return "MIXED"
+    output["higher_timeframe"] = {
+        "daily_bias": bias(daily), "h4_bias": bias(h4), "h1_bias": bias(hour),
+        "source": "closed_candle_structure_and_EMA20_EMA50",
+        "daily_levels": (daily.get("candles") or {}),
+        "h4_levels": (h4.get("candles") or {}),
+    }
+    dominant = output["higher_timeframe"]["h4_bias"]
+    direction = output["direction"]
+    if dominant == "UNAVAILABLE" or output["higher_timeframe"]["daily_bias"] == "UNAVAILABLE":
+        output["trade_type"] = "HIGHER_TIMEFRAME_UNVERIFIED"
+        output["status"] = "WAIT"
+        output["entry"] = None
+        output["reasons"].append("MISSING_DAILY_OR_4H_CLOSED_CANDLES")
+    elif direction not in ("BUY", "SELL"):
+        output["trade_type"] = "NO_ROTATION"
+    elif dominant == "MIXED":
+        output["trade_type"] = "RANGE_OR_TRANSITION"
+    elif (dominant == "BULLISH" and direction == "BUY") or (dominant == "BEARISH" and direction == "SELL"):
+        output["trade_type"] = "TREND_CONTINUATION"
+    else:
+        output["trade_type"] = "COUNTERTREND_PULLBACK"
+        output["reasons"].append("COUNTERTREND_NOT_CONFIRMED_REVERSAL")
+    # Distance to the nearest 4H and Daily swing boundary in the signal direction.
+    pip = pip_size(pair)
+    price = (output["timeframes"].get("5m", {}).get("candles") or {}).get("closed_price")
+    obstacles = []
+    if price is not None and direction in ("BUY", "SELL"):
+        for name, row in (("4H", h4), ("1D", daily)):
+            candle = row.get("candles") or {}
+            key = "swing_high_20" if direction == "BUY" else "swing_low_20"
+            level = candle.get(key)
+            if level is not None:
+                distance = (level-price)/pip if direction == "BUY" else (price-level)/pip
+                if distance > 0:
+                    obstacles.append({"timeframe": name, "level": level, "distance_pips": round(distance,1)})
+    output["higher_timeframe"]["nearest_obstacle"] = min(obstacles, key=lambda x:x["distance_pips"]) if obstacles else None
+    output["higher_timeframe"]["available_room_verified"] = bool(obstacles)
+    if output.get("trade_type") == "COUNTERTREND_PULLBACK":
+        nearest = output["higher_timeframe"]["nearest_obstacle"]
+        if nearest and nearest["distance_pips"] < 20:
+            output["reasons"].append("COUNTERTREND_LESS_THAN_20_PIPS_TO_HTF_OBSTACLE")
+            output["status"] = "WAIT"
+            output["entry"] = None
     if output["direction"] == "NONE":
         output["reasons"].append("NO_ALIGNED_5m_15m_ROTATION")
     # Warn on discrepancies across providers (not assumed identical pricing).
