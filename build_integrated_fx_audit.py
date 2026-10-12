@@ -50,21 +50,25 @@ def main():
         if isinstance(cal,dict) and sources["calendar"]["status"]=="FRESH":
             for e in cal.get("pairs",{}).get(pair,[]):
                 dt=date(e.get("event_at_utc"))
-                if dt and now<=dt<=now+timedelta(hours=48):
-                    events.append({"title":e.get("title"),"currency":e.get("currency"),"impact":e.get("impact"),"event_at_et":e.get("event_at_et"),"forecast":e.get("forecast")})
+                if dt and now-timedelta(minutes=15)<=dt<=now+timedelta(hours=48):
+                    events.append({"title":e.get("title"),"currency":e.get("currency"),"impact":e.get("impact"),"event_at_et":e.get("event_at_et"),"forecast":e.get("forecast"),"previous":e.get("previous"),"actual":e.get("actual"),"minutes_until":round((dt-now).total_seconds()/60),"time_status":"IMMINENT" if -15<=((dt-now).total_seconds()/60)<=120 else "UPCOMING"})
         events.sort(key=lambda e:e.get("event_at_et") or "")
+        next_24h=[e for e in events if 0<=e["minutes_until"]<=1440]
+        imminent=[e for e in events if -15<=e["minutes_until"]<=120]
+        event_risk="IMMINENT_EVENT" if imminent else "EVENT_WITHIN_24H" if next_24h else "NO_SCHEDULED_EVENT_24H"
+        calendar_coverage="VERIFIED" if sources["calendar"]["status"]=="FRESH" and (cal or {}).get("status")=="VERIFIED" else "UNVERIFIED"
         ff=(market or {}).get("pairs",{}).get(pair,{}) if sources["ff_markets"]["status"]=="FRESH" else {}
         results.append({"pair":pair,"technical_direction":direction or "NO_RANKED_CANDIDATE",
                         "technical_stage":rank.get("stage","UNRANKED"),"reference_level_not_live":rank.get("conditional_level_reference_only"),
                         "h1_ema20_50":h1,"h4_ema20_50":h4,
                         "timeframes_present":all(tf.get("status")=="ok" for tf in (t15,t30,one,four)),
-                        "higher_timeframe_conflict":conflict,"upcoming_48h_events":events,
+                        "higher_timeframe_conflict":conflict,"upcoming_48h_events":events,"next_24h_events":next_24h,"imminent_events":imminent,"event_risk":event_risk,"calendar_coverage":calendar_coverage,
                         "forexfactory_positioning":ff.get("positioning"),"macro_confirmed":False,
-                        "execution_status":"NO_TRADE_UNVERIFIED" if sources["technicals"]["status"]!="FRESH" or conflict else "TECHNICAL_WATCH_MACRO_UNVERIFIED",
+                        "execution_status":"NO_TRADE_UNVERIFIED" if sources["technicals"]["status"]!="FRESH" or conflict or calendar_coverage!="VERIFIED" or imminent else "TECHNICAL_WATCH_MACRO_UNVERIFIED",
                         "entry":None,"stop":None,"tp1":None,"tp2":None})
     output={"generated_at_utc":now.isoformat(),"purpose":"FULL_SOURCE_AUDIT_NOT_EXECUTABLE_TRADE_ORDERS",
             "sources":sources,"macro_layers":macro,"pair_count":len(results),"pairs":results,
-            "fully_macro_verified":False,"unverified_layers":[k for k,v in macro.items() if v!="VERIFIED"],
+            "fully_macro_verified":False,"calendar_first_rule":"Every pair MUST display all upcoming events for both currencies in next 24 hours, regardless of impact. IMMINENT within 120 minutes prevents a normal entry signal; include forecasts and previous values. Do not infer releases from missing actuals.","unverified_layers":[k for k,v in macro.items() if v!="VERIFIED"],
             "rule":"Never present technical watches as macro-confirmed or executable trades"}
     Path("fx_integrated_audit.json").write_text(json.dumps(output,indent=2)+"\n",encoding="utf-8")
     print(json.dumps({"pairs":len(results),"source_statuses":{k:v["status"] for k,v in sources.items()},"macro_verified":False}))
