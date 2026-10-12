@@ -9,10 +9,10 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 UTC = timezone.utc
-TF = {"5m": "M5", "15m": "M15", "30m": "M30", "1H": "H1", "4H": "H4", "1D": "D1"}
+TF = {"15m": "M15", "30m": "M30", "1H": "H1", "4H": "H4", "1D": "D1"}
 MAX_TECH_AGE_MIN = 35
 MAX_VOL_AGE_MIN = 35
-MAX_CANDLE_AGE_MIN = {"M5": 6, "M15": 18, "M30": 33, "H1": 75, "H4": 300, "D1": 4500}
+MAX_CANDLE_AGE_MIN = {"M15": 18, "M30": 33, "H1": 75, "H4": 300, "D1": 4500}
 
 
 def parse_time(value):
@@ -59,7 +59,7 @@ def candle_metrics(pair, frame, now, tf, clock_offset_seconds=0):
         if any(hh[i] < max(oo[i], cc[i], ll[i]) or ll[i] > min(oo[i], cc[i]) for i in range(len(cc))):
             return None, "invalid_ohlc"
         # Last closed candle timestamp is the OPEN time; its close is one TF later.
-        seconds = {"M5": 300, "M15": 900, "M30": 1800, "H1": 3600, "H4": 14400, "D1": 86400}[tf]
+        seconds = {"M15": 900, "M30": 1800, "H1": 3600, "H4": 14400, "D1": 86400}[tf]
         close_dt = datetime.fromtimestamp(int(ts[-2]) + seconds - clock_offset_seconds, UTC)
         age = age_minutes(now, close_dt)
         if not valid_age(age, MAX_CANDLE_AGE_MIN[tf]):
@@ -183,7 +183,6 @@ def analyze(pair, tech, vol, now):
         output["status"] = "DATA_UNAVAILABLE"
         output["reasons"].append("MISSING_TIMEFRAME_RESULTS")
         return output
-    m5 = output["timeframes"]["5m"]
     m15 = output["timeframes"]["15m"]
     m30 = output["timeframes"]["30m"]
     if any(not x["technical"] or not x["candles"] for x in (m15,m30)):
@@ -192,8 +191,6 @@ def analyze(pair, tech, vol, now):
         return output
     a,b = [x["technical"] for x in (m15,m30)]
     x,y = [q["candles"] for q in (m15,m30)]
-    five_minute_assist_available = bool(m5["technical"] and m5["candles"])
-    output["five_minute_assist_available"] = five_minute_assist_available
     # Direction is detected before entry quality. A single lagging RSI/EMA cannot
     # suppress a developing move; score independent price and indicator evidence.
     candidates = []
@@ -353,9 +350,6 @@ def analyze(pair, tech, vol, now):
         output["reasons"].append("NO_ALIGNED_15m_30m_ROTATION")
         if output["status"] != "CONFLICTING_DIRECTION":
             output["status"] = "NO_TRADE"
-    # Optional 5m assistance is informational, never a blocking gate.
-    if five_minute_assist_available:
-        output["reasons"].append("5m_assist_available_nonblocking")
     # Divergence invalidates executable readiness but retains observed directional research.\n    # Warn on discrepancies across providers (not assumed identical pricing).
     diff = abs(a["close"] - x["closed_price"]) / pip_size(pair)
     output["price_source_difference_pips"] = round(diff,1)
