@@ -90,12 +90,18 @@ def candle_metrics(pair, frame, now, tf, clock_offset_seconds=0):
                 break
             start = i
         leg_pips = (cc[-1]-cc[start])/pip
+        displacement_20 = (cc[-1]-cc[-21])/pip
+        excursion_up_20 = (max(hh[-20:])-cc[-21])/pip
+        excursion_down_20 = (cc[-21]-min(ll[-20:]))/pip
         leg_start_dt = datetime.fromtimestamp(int(ts[start])+seconds-clock_offset_seconds, UTC)
         return {
             "leg_origin_proxy_utc":leg_start_dt.isoformat(),
             "leg_origin_proxy_price":cc[start],
             "leg_move_pips":round(leg_pips,2),
             "leg_bars":len(cc)-1-start,
+            "displacement_20_pips":round(displacement_20,2),
+            "excursion_up_20_pips":round(excursion_up_20,2),
+            "excursion_down_20_pips":round(excursion_down_20,2),
             "last_closed_candle_utc": close_dt.isoformat(),
             "candle_age_minutes": round(age, 1),
             "closed_price": latest,
@@ -220,8 +226,22 @@ def analyze(pair, tech, vol, now):
         else:
             move_pips = max(abs(x["momentum_3_bars_pips"]), abs(x["leg_move_pips"]))
             atr = x["atr14_pips"]
-            output["stage"] = ("EXTENDED" if atr > 0 and move_pips >= 2.0 * atr
+            excursion = x["excursion_up_20_pips"] if sign == 1 else x["excursion_down_20_pips"]
+            directional_displacement = x["displacement_20_pips"] * sign
+            thirty_displacement = y["displacement_20_pips"] * sign
+            output["move_maturity"] = {"15m_excursion_20_pips":round(excursion,1),
+                "15m_net_displacement_20_pips":round(directional_displacement,1),
+                "30m_net_displacement_20_pips":round(thirty_displacement,1),
+                "latest_15m_leg_pips":round(move_pips,1)}
+            # EARLY is reserved for genuinely new moves, not a fresh candle leg
+            # within an existing 20-30 pip trend. Thresholds are conservative
+            # heuristic filters, not a proof of profitable entry timing.
+            mature = directional_displacement >= 15 or thirty_displacement >= 20
+            stretched = (directional_displacement >= 30 or thirty_displacement >= 40
+                         or excursion >= 35 or (atr > 0 and move_pips >= 2.0 * atr))
+            output["stage"] = ("EXTENDED" if stretched else "CONTINUATION" if mature
                                else "CONFIRMING" if breakout else "EARLY")
+            if mature: output["reasons"].append("EXISTING_MULTI_HOUR_DIRECTIONAL_MOVE_NOT_EARLY")
             output["status"] = "DO_NOT_CHASE" if output["stage"] == "EXTENDED" else "WATCH_FOR_ENTRY"
             output["move_origin_proxy"] = {
                 "utc": x["leg_origin_proxy_utc"], "price": x["leg_origin_proxy_price"],
