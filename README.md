@@ -25,3 +25,12 @@ Automated technical FX rotation research. **Technical candidates are not executa
 - GitHub technical/volatility JSON feeds must be fresh and timestamp-checked; upstream freshness is not implied by a new local file.
 - **This repository currently automates technical data only.** The complete macro audit above is a mandatory research specification, **not a claim that Reuters, yields, OIS, commodities, positioning or calendars are already collected automatically**. Do not label any candidate MACRO_CONFIRMED until the required evidence is actually collected and checked.
 - Backtest signal detection without future leakage and compare calculated 4H closed-candle EMA/crossover values to TradingView before claiming trading accuracy.
+
+### No-API-key macro collection contract (2026-10-12)
+
+- **No paid or secret API keys required.** Do not require `TE_API_KEY` or fail the macro collection job because that variable is absent.
+- Trading Economics **public bond pages** are the primary *human-readable research source*, not a guaranteed programmatic API. If access is blocked or content is stale, attempt publicly accessible Investing.com, FT, or official treasury/central-bank releases; retain source URL, market date, collection time, maturity and value.
+- OIS / policy-implied rate expectations are a separate field from sovereign yields. Never substitute 2Y/5Y/10Y/30Y yields for OIS; label OIS `UNAVAILABLE` if no verifiable public observation exists.
+- Collect available data independently per country and maturity. A missing field must not abort the remaining 11-pair technical scan. Use `VERIFIED`, `PARTIAL` and `MISSING` honestly; no invented or stale-as-current values.
+- Verify actual GitHub publication time separately from upstream observation time. Preserve the existing technical feeds and scheduled runs.
+- **Implementation status:** This is a data-collection requirement, not proof that a no-key macro collector is installed or running. The macro workflow must be identified, patched and tested before declaring the error fixed.
