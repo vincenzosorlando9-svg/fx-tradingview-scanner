@@ -181,7 +181,11 @@ def analyze(pair, tech, vol, now):
         if aligned and higher and momentum:
             output["direction"] = direction
             expansion = x["atr_expansion_ratio"] is not None and x["atr_expansion_ratio"] >= 1.15
-            output["stage"] = "CONFIRMING" if breakout and expansion else "EARLY" if not breakout else "CONFIRMING"
+            move_pips = abs(x["momentum_3_bars_pips"])
+            atr = x["atr14_pips"]
+            output["stage"] = ("EXTENDED" if atr > 0 and move_pips >= 2.0 * atr
+                               else "CONFIRMING" if breakout or (atr > 0 and move_pips >= 0.75 * atr)
+                               else "EARLY")
             output["status"] = "WATCH_FOR_ENTRY"
             output["confidence"] = "TECHNICAL_ONLY"
             output["reasons"] += ["5m_15m_ema10_20_aligned", "30m_rsi_not_opposing", "closed_5m_momentum_aligned"]
@@ -189,10 +193,10 @@ def analyze(pair, tech, vol, now):
                 output["reasons"].append("5m_closed_candle_breakout")
             if expansion:
                 output["reasons"].append("5m_atr_expansion")
-            if x["atr14_pips"] > 0 and abs(x["momentum_3_bars_pips"]) > 2.5 * x["atr14_pips"]:
+            if output["stage"] == "EXTENDED":
                 output["stage"] = "EXTENDED"
                 output["status"] = "DO_NOT_CHASE"
-                output["reasons"].append("3_bar_move_exceeds_2_5x_atr")
+                output["reasons"].append("3_bar_move_exceeds_2x_atr")
             # Conditional breakout boundary only. No stops/TP without verified
             # executable prices, spread and market/catalyst confirmation.
             output["entry"] = {"type":"CONDITIONAL_BREAKOUT_RETEST",
@@ -255,8 +259,7 @@ def analyze(pair, tech, vol, now):
         nearest = output["higher_timeframe"]["nearest_obstacle"]
         if nearest and nearest["distance_pips"] < 20:
             output["reasons"].append("COUNTERTREND_LESS_THAN_20_PIPS_TO_HTF_OBSTACLE")
-            output["status"] = "WATCH_SETUP_FORMING"
-            output["entry"] = None
+            # Obstacle distance is advisory; 18 pips is not an automatic veto.
     if output["direction"] == "NONE":
         output["reasons"].append("NO_ALIGNED_5m_15m_ROTATION")
         output["status"] = "NO_TRADE"
