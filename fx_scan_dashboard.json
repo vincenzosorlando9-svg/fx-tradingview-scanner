@@ -9,18 +9,18 @@
     "JPY": -3
   },
   "currency_strength_note": "Unweighted breadth across fresh directional 11-pair candidates, not an independent live currency strength index",
-  "generated_at_utc": "2026-10-12T09:56:14.738459+00:00",
+  "generated_at_utc": "2026-10-12T09:56:39.302066+00:00",
   "purpose": "TECHNICAL_RESEARCH_ONLY_NOT_AN_EXECUTABLE_TRADE_SIGNAL",
-  "daily_weekly_levels_generated_at_utc": "2026-10-12T09:56:14.683120+00:00",
+  "daily_weekly_levels_generated_at_utc": "2026-10-12T09:56:39.255661+00:00",
   "daily_weekly_levels_status_counts": {
     "COMPLETE": 11,
     "PARTIAL": 0,
     "UNAVAILABLE": 0
   },
   "data_sources_utc": {
-    "tradingview": "2026-10-12T09:56:07.906676+00:00",
-    "forextoolkits": "2026-10-12T09:56:07.714721+00:00",
-    "rotation": "2026-10-12T09:56:14.600521+00:00"
+    "tradingview": "2026-10-12T09:56:32.161943+00:00",
+    "forextoolkits": "2026-10-12T09:56:31.996979+00:00",
+    "rotation": "2026-10-12T09:56:38.662960+00:00"
   },
   "source_age_minutes_at_generation": {
     "tradingview": 0.1,
@@ -89,7 +89,7 @@
       "rank": 3,
       "pair": "EURCAD",
       "direction": "SELL",
-      "stage": "CONFIRMING",
+      "stage": "CONTINUATION",
       "trade_type": "RANGE_OR_TRANSITION",
       "direction_score": 10,
       "entry_readiness": "TECHNICAL_WATCH_ONLY",
@@ -114,18 +114,18 @@
       "last_closed_15m_utc": "2026-10-12T09:45:00+00:00"
     },
     {
-      "pair": "EURCAD",
-      "direction": "SELL",
-      "stage": "CONFIRMING",
-      "trade_type": "RANGE_OR_TRANSITION",
-      "setup_status": "WATCH_FOR_ENTRY",
-      "last_closed_15m_utc": "2026-10-12T09:45:00+00:00"
-    },
-    {
       "pair": "EURGBP",
       "direction": "SELL",
       "stage": "CONFIRMING",
       "trade_type": "TREND_CONTINUATION",
+      "setup_status": "WATCH_FOR_ENTRY",
+      "last_closed_15m_utc": "2026-10-12T09:45:00+00:00"
+    },
+    {
+      "pair": "EURCAD",
+      "direction": "SELL",
+      "stage": "CONTINUATION",
+      "trade_type": "RANGE_OR_TRANSITION",
       "setup_status": "WATCH_FOR_ENTRY",
       "last_closed_15m_utc": "2026-10-12T09:45:00+00:00"
     }
@@ -141,7 +141,7 @@
           "open": 0.69647,
           "high": 0.69953,
           "low": 0.69647,
-          "close": 0.69707,
+          "close": 0.69709,
           "bars": 1,
           "start_utc": "2026-10-11T21:00:00+00:00",
           "last_candle_start_utc": "2026-10-11T21:00:00+00:00"
@@ -159,7 +159,7 @@
           "open": 0.69647,
           "high": 0.69953,
           "low": 0.69647,
-          "close": 0.69707,
+          "close": 0.69709,
           "bars": 1,
           "start_utc": "2026-10-11T21:00:00+00:00",
           "last_candle_start_utc": "2026-10-11T21:00:00+00:00"
@@ -191,7 +191,7 @@
           "R3": 0.7061933333333331,
           "S3": 0.6889433333333334
         },
-        "distance_from_daily_open_pips": 6.0,
+        "distance_from_daily_open_pips": 6.2,
         "daily_open_behavior": "ABOVE",
         "reason": null,
         "timezone": "America/New_York",
@@ -201,6 +201,7 @@
       "higher_timeframe_valid": true,
       "full_context_valid": true,
       "direction_score": null,
+      "move_maturity": null,
       "higher_timeframe": {
         "daily_bias": "BEARISH",
         "h4_bias": "MIXED",
@@ -211,8 +212,11 @@
           "leg_origin_proxy_price": 0.69578,
           "leg_move_pips": 25.1,
           "leg_bars": 1,
+          "displacement_20_pips": -187.6,
+          "excursion_up_20_pips": -4.0,
+          "excursion_down_20_pips": 266.6,
           "last_closed_candle_utc": "2026-10-09T21:00:00+00:00",
-          "candle_age_minutes": 3656.2,
+          "candle_age_minutes": 3656.6,
           "closed_price": 0.69829,
           "prior_6_high": 0.699,
           "prior_6_low": 0.69039,
@@ -233,8 +237,11 @@
           "leg_origin_proxy_price": 0.699,
           "leg_move_pips": -19.6,
           "leg_bars": 2,
+          "displacement_20_pips": -8.7,
+          "excursion_up_20_pips": 16.2,
+          "excursion_down_20_pips": 46.2,
           "last_closed_candle_utc": "2026-10-12T09:00:00+00:00",
-          "candle_age_minutes": 56.2,
+          "candle_age_minutes": 56.6,
           "closed_price": 0.69704,
           "prior_6_high": 0.69953,
           "prior_6_low": 0.69647,
@@ -281,14 +288,14 @@
           "bearish": false
         },
         "1D": {
-          "close": 0.69705,
-          "ema10": 0.6980168545919603,
-          "ema20": 0.7013505255764579,
-          "ema50": 0.7050169329845217,
-          "ema100": 0.7046783475073803,
-          "ema200": 0.6981511288367644,
-          "rsi": 38.71490781762018,
-          "macd_hist": -0.0002353870018405235,
+          "close": 0.69706,
+          "ema10": 0.6980186727737785,
+          "ema20": 0.7013514779574103,
+          "ema50": 0.7050173251413845,
+          "ema100": 0.7046785455271823,
+          "ema200": 0.698151228339252,
+          "rsi": 38.7286391602687,
+          "macd_hist": -0.00023474882520232217,
           "recommendation": "SELL",
           "bullish": false,
           "bearish": true
@@ -307,7 +314,7 @@
       "timeframes": {
         "5m": {
           "last_closed_utc": "2026-10-12T09:55:00+00:00",
-          "candle_age_min": 1.2,
+          "candle_age_min": 1.7,
           "error": null,
           "atr5_pips": 1.68,
           "atr14_pips": 1.59,
@@ -316,7 +323,7 @@
         },
         "15m": {
           "last_closed_utc": "2026-10-12T09:45:00+00:00",
-          "candle_age_min": 11.2,
+          "candle_age_min": 11.7,
           "error": null,
           "atr5_pips": 2.36,
           "atr14_pips": 3.26,
@@ -325,7 +332,7 @@
         },
         "30m": {
           "last_closed_utc": "2026-10-12T09:30:00+00:00",
-          "candle_age_min": 26.2,
+          "candle_age_min": 26.7,
           "error": null,
           "atr5_pips": 4.88,
           "atr14_pips": 4.51,
@@ -334,7 +341,7 @@
         },
         "1H": {
           "last_closed_utc": "2026-10-12T09:00:00+00:00",
-          "candle_age_min": 56.2,
+          "candle_age_min": 56.7,
           "error": null,
           "atr5_pips": 6.72,
           "atr14_pips": 7.41,
@@ -343,7 +350,7 @@
         },
         "4H": {
           "last_closed_utc": "2026-10-12T09:00:00+00:00",
-          "candle_age_min": 56.2,
+          "candle_age_min": 56.7,
           "error": null,
           "atr5_pips": 16.22,
           "atr14_pips": 16.95,
@@ -352,7 +359,7 @@
         },
         "1D": {
           "last_closed_utc": "2026-10-09T21:00:00+00:00",
-          "candle_age_min": 3656.2,
+          "candle_age_min": 3656.7,
           "error": null,
           "atr5_pips": 37.88,
           "atr14_pips": 46.91,
@@ -382,7 +389,7 @@
           "open": 0.55958,
           "high": 0.56195,
           "low": 0.55952,
-          "close": 0.55983,
+          "close": 0.55985,
           "bars": 1,
           "start_utc": "2026-10-11T21:00:00+00:00",
           "last_candle_start_utc": "2026-10-11T21:00:00+00:00"
@@ -400,7 +407,7 @@
           "open": 0.55958,
           "high": 0.56195,
           "low": 0.55952,
-          "close": 0.55983,
+          "close": 0.55985,
           "bars": 1,
           "start_utc": "2026-10-11T21:00:00+00:00",
           "last_candle_start_utc": "2026-10-11T21:00:00+00:00"
@@ -432,7 +439,7 @@
           "R3": 0.5681733333333334,
           "S3": 0.5537133333333333
         },
-        "distance_from_daily_open_pips": 2.5,
+        "distance_from_daily_open_pips": 2.7,
         "daily_open_behavior": "ABOVE",
         "reason": null,
         "timezone": "America/New_York",
@@ -442,6 +449,7 @@
       "higher_timeframe_valid": true,
       "full_context_valid": true,
       "direction_score": null,
+      "move_maturity": null,
       "higher_timeframe": {
         "daily_bias": "BEARISH",
         "h4_bias": "MIXED",
@@ -452,8 +460,11 @@
           "leg_origin_proxy_price": 0.55982,
           "leg_move_pips": 13.8,
           "leg_bars": 2,
+          "displacement_20_pips": -200.1,
+          "excursion_up_20_pips": 6.7,
+          "excursion_down_20_pips": 231.9,
           "last_closed_candle_utc": "2026-10-09T21:00:00+00:00",
-          "candle_age_minutes": 3656.2,
+          "candle_age_minutes": 3656.6,
           "closed_price": 0.5612,
           "prior_6_high": 0.56447,
           "prior_6_low": 0.55802,
@@ -474,8 +485,11 @@
           "leg_origin_proxy_price": 0.56153,
           "leg_move_pips": -14.9,
           "leg_bars": 2,
+          "displacement_20_pips": -17.2,
+          "excursion_up_20_pips": 9.1,
+          "excursion_down_20_pips": 35.6,
           "last_closed_candle_utc": "2026-10-12T09:00:00+00:00",
-          "candle_age_minutes": 56.2,
+          "candle_age_minutes": 56.6,
           "closed_price": 0.56004,
           "prior_6_high": 0.56267,
           "prior_6_low": 0.55952,
@@ -522,14 +536,14 @@
           "bearish": true
         },
         "1D": {
-          "close": 0.55978,
-          "ema10": 0.5620164108704233,
-          "ema20": 0.5662349139875587,
-          "ema50": 0.5739153313898822,
-          "ema100": 0.5781163993055543,
-          "ema200": 0.5810182855357552,
-          "rsi": 30.424827632267906,
-          "macd_hist": 9.664110648965451e-05,
+          "close": 0.5598,
+          "ema10": 0.5620200472340596,
+          "ema20": 0.5662368187494634,
+          "ema50": 0.5739161157036076,
+          "ema100": 0.5781167953451581,
+          "ema200": 0.5810184845407304,
+          "rsi": 30.449328195335013,
+          "macd_hist": 9.791745976596867e-05,
           "recommendation": "SELL",
           "bullish": false,
           "bearish": true
@@ -548,7 +562,7 @@
       "timeframes": {
         "5m": {
           "last_closed_utc": "2026-10-12T09:55:00+00:00",
-          "candle_age_min": 1.2,
+          "candle_age_min": 1.7,
           "error": null,
           "atr5_pips": 1.78,
           "atr14_pips": 1.59,
@@ -557,7 +571,7 @@
         },
         "15m": {
           "last_closed_utc": "2026-10-12T09:45:00+00:00",
-          "candle_age_min": 11.2,
+          "candle_age_min": 11.7,
           "error": null,
           "atr5_pips": 2.32,
           "atr14_pips": 3.21,
@@ -566,7 +580,7 @@
         },
         "30m": {
           "last_closed_utc": "2026-10-12T09:30:00+00:00",
-          "candle_age_min": 26.2,
+          "candle_age_min": 26.7,
           "error": null,
           "atr5_pips": 4.2,
           "atr14_pips": 4.22,
@@ -575,7 +589,7 @@
         },
         "1H": {
           "last_closed_utc": "2026-10-12T09:00:00+00:00",
-          "candle_age_min": 56.2,
+          "candle_age_min": 56.7,
           "error": null,
           "atr5_pips": 5.96,
           "atr14_pips": 6.64,
@@ -584,7 +598,7 @@
         },
         "4H": {
           "last_closed_utc": "2026-10-12T09:00:00+00:00",
-          "candle_age_min": 56.2,
+          "candle_age_min": 56.7,
           "error": null,
           "atr5_pips": 13.56,
           "atr14_pips": 14.84,
@@ -593,7 +607,7 @@
         },
         "1D": {
           "last_closed_utc": "2026-10-09T21:00:00+00:00",
-          "candle_age_min": 3656.2,
+          "candle_age_min": 3656.7,
           "error": null,
           "atr5_pips": 36.84,
           "atr14_pips": 42.87,
@@ -623,7 +637,7 @@
           "open": 1.11845,
           "high": 1.12171,
           "low": 1.11818,
-          "close": 1.11821,
+          "close": 1.11832,
           "bars": 1,
           "start_utc": "2026-10-11T21:00:00+00:00",
           "last_candle_start_utc": "2026-10-11T21:00:00+00:00"
@@ -641,7 +655,7 @@
           "open": 1.11845,
           "high": 1.12171,
           "low": 1.11818,
-          "close": 1.11821,
+          "close": 1.11832,
           "bars": 1,
           "start_utc": "2026-10-11T21:00:00+00:00",
           "last_candle_start_utc": "2026-10-11T21:00:00+00:00"
@@ -673,7 +687,7 @@
           "R3": 1.1380233333333332,
           "S3": 1.1034033333333335
         },
-        "distance_from_daily_open_pips": -2.4,
+        "distance_from_daily_open_pips": -1.3,
         "daily_open_behavior": "BELOW",
         "reason": null,
         "timezone": "America/New_York",
@@ -683,6 +697,12 @@
       "higher_timeframe_valid": true,
       "full_context_valid": true,
       "direction_score": 9,
+      "move_maturity": {
+        "15m_excursion_20_pips": 24.8,
+        "15m_net_displacement_20_pips": 21.0,
+        "30m_net_displacement_20_pips": 14.9,
+        "latest_15m_leg_pips": 4.8
+      },
       "higher_timeframe": {
         "daily_bias": "BEARISH",
         "h4_bias": "MIXED",
@@ -693,8 +713,11 @@
           "leg_origin_proxy_price": 1.12107,
           "leg_move_pips": -9.5,
           "leg_bars": 1,
+          "displacement_20_pips": -398.0,
+          "excursion_up_20_pips": -2.1,
+          "excursion_down_20_pips": 437.9,
           "last_closed_candle_utc": "2026-10-09T21:00:00+00:00",
-          "candle_age_minutes": 3656.2,
+          "candle_age_minutes": 3656.6,
           "closed_price": 1.12012,
           "prior_6_high": 1.13368,
           "prior_6_low": 1.11613,
@@ -715,8 +738,11 @@
           "leg_origin_proxy_price": 1.1215,
           "leg_move_pips": -21.9,
           "leg_bars": 2,
+          "displacement_20_pips": -55.8,
+          "excursion_up_20_pips": -0.1,
+          "excursion_down_20_pips": 84.1,
           "last_closed_candle_utc": "2026-10-12T09:00:00+00:00",
-          "candle_age_minutes": 56.2,
+          "candle_age_minutes": 56.6,
           "closed_price": 1.11931,
           "prior_6_high": 1.12428,
           "prior_6_low": 1.11829,
@@ -742,13 +768,13 @@
       "higher_timeframe_indicators": {
         "1H": {
           "close": 1.11828,
-          "ema10": 1.1199137922956277,
-          "ema20": 1.1202027711722677,
-          "ema50": 1.120546444962992,
-          "ema100": 1.1214732338076905,
-          "ema200": 1.1247959890331958,
-          "rsi": 35.29089960662667,
-          "macd_hist": -0.00016368966123203905,
+          "ema10": 1.1199210650229003,
+          "ema20": 1.1202065806960773,
+          "ema50": 1.120548013590443,
+          "ema100": 1.1214740258868983,
+          "ema200": 1.124796387043146,
+          "rsi": 35.4784911160325,
+          "macd_hist": -0.0001611369546792338,
           "recommendation": "STRONG_SELL",
           "bullish": false,
           "bearish": true
@@ -767,25 +793,25 @@
           "bearish": true
         },
         "1D": {
-          "close": 1.11824,
-          "ema10": 1.1249263879636822,
-          "ema20": 1.1325483546685875,
-          "ema50": 1.1428986468699667,
-          "ema100": 1.1489267741185727,
-          "ema200": 1.1527031039804916,
-          "rsi": 24.513670622084106,
-          "macd_hist": -0.0012481350521403693,
+          "close": 1.11829,
+          "ema10": 1.1249354788727732,
+          "ema20": 1.1325531165733493,
+          "ema50": 1.1429006076542805,
+          "ema100": 1.1489277642175826,
+          "ema200": 1.1527036014929293,
+          "rsi": 24.545829156620343,
+          "macd_hist": -0.0012449441689494512,
           "recommendation": "STRONG_SELL",
           "bullish": false,
           "bearish": true
         }
       },
       "direction": "SELL",
-      "stage": "EARLY",
+      "stage": "CONTINUATION",
       "entry_readiness": "DATA_UNAVAILABLE",
       "setup_status": "DATA_UNAVAILABLE",
       "raw_detector_direction": "SELL",
-      "raw_detector_stage": "EARLY",
+      "raw_detector_stage": "CONTINUATION",
       "directional_bias": "SELL",
       "source_valid": true,
       "technical_price_divergence_pips": 5.5,
@@ -799,7 +825,7 @@
       "timeframes": {
         "5m": {
           "last_closed_utc": "2026-10-12T09:55:00+00:00",
-          "candle_age_min": 1.2,
+          "candle_age_min": 1.7,
           "error": null,
           "atr5_pips": 4.08,
           "atr14_pips": 3.04,
@@ -808,7 +834,7 @@
         },
         "15m": {
           "last_closed_utc": "2026-10-12T09:45:00+00:00",
-          "candle_age_min": 11.2,
+          "candle_age_min": 11.7,
           "error": null,
           "atr5_pips": 4.32,
           "atr14_pips": 5.31,
@@ -817,7 +843,7 @@
         },
         "30m": {
           "last_closed_utc": "2026-10-12T09:30:00+00:00",
-          "candle_age_min": 26.2,
+          "candle_age_min": 26.7,
           "error": null,
           "atr5_pips": 7.48,
           "atr14_pips": 5.99,
@@ -826,7 +852,7 @@
         },
         "1H": {
           "last_closed_utc": "2026-10-12T09:00:00+00:00",
-          "candle_age_min": 56.2,
+          "candle_age_min": 56.7,
           "error": null,
           "atr5_pips": 9.28,
           "atr14_pips": 9.34,
@@ -835,7 +861,7 @@
         },
         "4H": {
           "last_closed_utc": "2026-10-12T09:00:00+00:00",
-          "candle_age_min": 56.2,
+          "candle_age_min": 56.7,
           "error": null,
           "atr5_pips": 18.16,
           "atr14_pips": 22.35,
@@ -844,7 +870,7 @@
         },
         "1D": {
           "last_closed_utc": "2026-10-09T21:00:00+00:00",
-          "candle_age_min": 3656.2,
+          "candle_age_min": 3656.7,
           "error": null,
           "atr5_pips": 76.34,
           "atr14_pips": 66.89,
@@ -855,6 +881,7 @@
       "conditional_level_reference_only": null,
       "detector_reasons": [
         "15m_price_action_scored_without_mandatory_30m_confirmation",
+        "EXISTING_MULTI_HOUR_DIRECTIONAL_MOVE_NOT_EARLY",
         "15m_direction_detected",
         "5m_assist_available_nonblocking",
         "PRICE_FEED_DIVERGENCE",
@@ -875,7 +902,7 @@
           "open": 1.32229,
           "high": 1.32614,
           "low": 1.32197,
-          "close": 1.32354,
+          "close": 1.32359,
           "bars": 1,
           "start_utc": "2026-10-11T21:00:00+00:00",
           "last_candle_start_utc": "2026-10-11T21:00:00+00:00"
@@ -893,7 +920,7 @@
           "open": 1.32229,
           "high": 1.32614,
           "low": 1.32197,
-          "close": 1.32354,
+          "close": 1.32359,
           "bars": 1,
           "start_utc": "2026-10-11T21:00:00+00:00",
           "last_candle_start_utc": "2026-10-11T21:00:00+00:00"
@@ -925,7 +952,7 @@
           "R3": 1.3383133333333335,
           "S3": 1.3080733333333332
         },
-        "distance_from_daily_open_pips": 12.5,
+        "distance_from_daily_open_pips": 13.0,
         "daily_open_behavior": "ABOVE",
         "reason": null,
         "timezone": "America/New_York",
@@ -935,6 +962,7 @@
       "higher_timeframe_valid": true,
       "full_context_valid": true,
       "direction_score": null,
+      "move_maturity": null,
       "higher_timeframe": {
         "daily_bias": "BEARISH",
         "h4_bias": "MIXED",
@@ -945,8 +973,11 @@
           "leg_origin_proxy_price": 1.32125,
           "leg_move_pips": 17.9,
           "leg_bars": 2,
+          "displacement_20_pips": -295.8,
+          "excursion_up_20_pips": 2.2,
+          "excursion_down_20_pips": 345.3,
           "last_closed_candle_utc": "2026-10-09T21:00:00+00:00",
-          "candle_age_minutes": 3656.2,
+          "candle_age_minutes": 3656.6,
           "closed_price": 1.32304,
           "prior_6_high": 1.32854,
           "prior_6_low": 1.31809,
@@ -967,8 +998,11 @@
           "leg_origin_proxy_price": 1.32494,
           "leg_move_pips": -11.5,
           "leg_bars": 2,
+          "displacement_20_pips": -24.8,
+          "excursion_up_20_pips": 0.1,
+          "excursion_down_20_pips": 78.1,
           "last_closed_candle_utc": "2026-10-12T09:00:00+00:00",
-          "candle_age_minutes": 56.2,
+          "candle_age_minutes": 56.6,
           "closed_price": 1.32379,
           "prior_6_high": 1.32531,
           "prior_6_low": 1.3206,
@@ -1041,7 +1075,7 @@
       "timeframes": {
         "5m": {
           "last_closed_utc": "2026-10-12T09:55:00+00:00",
-          "candle_age_min": 1.2,
+          "candle_age_min": 1.7,
           "error": null,
           "atr5_pips": 4.98,
           "atr14_pips": 3.91,
@@ -1050,7 +1084,7 @@
         },
         "15m": {
           "last_closed_utc": "2026-10-12T09:45:00+00:00",
-          "candle_age_min": 11.2,
+          "candle_age_min": 11.7,
           "error": null,
           "atr5_pips": 5.54,
           "atr14_pips": 7.19,
@@ -1059,7 +1093,7 @@
         },
         "30m": {
           "last_closed_utc": "2026-10-12T09:30:00+00:00",
-          "candle_age_min": 26.2,
+          "candle_age_min": 26.7,
           "error": null,
           "atr5_pips": 9.56,
           "atr14_pips": 8.01,
@@ -1068,7 +1102,7 @@
         },
         "1H": {
           "last_closed_utc": "2026-10-12T09:00:00+00:00",
-          "candle_age_min": 56.2,
+          "candle_age_min": 56.7,
           "error": null,
           "atr5_pips": 11.88,
           "atr14_pips": 10.54,
@@ -1077,7 +1111,7 @@
         },
         "4H": {
           "last_closed_utc": "2026-10-12T09:00:00+00:00",
-          "candle_age_min": 56.2,
+          "candle_age_min": 56.7,
           "error": null,
           "atr5_pips": 22.18,
           "atr14_pips": 24.21,
@@ -1086,7 +1120,7 @@
         },
         "1D": {
           "last_closed_utc": "2026-10-09T21:00:00+00:00",
-          "candle_age_min": 3656.2,
+          "candle_age_min": 3656.7,
           "error": null,
           "atr5_pips": 66.84,
           "atr14_pips": 71.98,
@@ -1116,7 +1150,7 @@
           "open": 158.145,
           "high": 158.608,
           "low": 158.077,
-          "close": 158.575,
+          "close": 158.572,
           "bars": 1,
           "start_utc": "2026-10-11T21:00:00+00:00",
           "last_candle_start_utc": "2026-10-11T21:00:00+00:00"
@@ -1134,7 +1168,7 @@
           "open": 158.145,
           "high": 158.608,
           "low": 158.077,
-          "close": 158.575,
+          "close": 158.572,
           "bars": 1,
           "start_utc": "2026-10-11T21:00:00+00:00",
           "last_candle_start_utc": "2026-10-11T21:00:00+00:00"
@@ -1166,7 +1200,7 @@
           "R3": 159.79033333333334,
           "S3": 156.58633333333339
         },
-        "distance_from_daily_open_pips": 43.0,
+        "distance_from_daily_open_pips": 42.7,
         "daily_open_behavior": "ABOVE",
         "reason": null,
         "timezone": "America/New_York",
@@ -1176,6 +1210,12 @@
       "higher_timeframe_valid": true,
       "full_context_valid": true,
       "direction_score": 12,
+      "move_maturity": {
+        "15m_excursion_20_pips": 30.8,
+        "15m_net_displacement_20_pips": 27.1,
+        "30m_net_displacement_20_pips": 27.8,
+        "latest_15m_leg_pips": 12.4
+      },
       "higher_timeframe": {
         "daily_bias": "MIXED",
         "h4_bias": "BULLISH",
@@ -1186,8 +1226,11 @@
           "leg_origin_proxy_price": 157.889,
           "leg_move_pips": 40.6,
           "leg_bars": 1,
+          "displacement_20_pips": 473.4,
+          "excursion_up_20_pips": 547.7,
+          "excursion_down_20_pips": 23.2,
           "last_closed_candle_utc": "2026-10-09T21:00:00+00:00",
-          "candle_age_minutes": 3656.2,
+          "candle_age_minutes": 3656.6,
           "closed_price": 158.295,
           "prior_6_high": 158.509,
           "prior_6_low": 156.951,
@@ -1208,8 +1251,11 @@
           "leg_origin_proxy_price": 158.118,
           "leg_move_pips": 33.0,
           "leg_bars": 2,
+          "displacement_20_pips": 2.9,
+          "excursion_up_20_pips": 9.0,
+          "excursion_down_20_pips": 89.6,
           "last_closed_candle_utc": "2026-10-12T09:00:00+00:00",
-          "candle_age_minutes": 56.2,
+          "candle_age_minutes": 56.6,
           "closed_price": 158.448,
           "prior_6_high": 158.432,
           "prior_6_low": 158.029,
@@ -1260,14 +1306,14 @@
           "bearish": false
         },
         "1D": {
-          "close": 158.57,
-          "ema10": 157.94439842525676,
-          "ema20": 157.63921590041866,
-          "ema50": 157.9877455628545,
-          "ema100": 158.43699313780394,
-          "ema200": 157.6897031972955,
-          "rsi": 57.86568529558847,
-          "macd_hist": 0.18741602030398347,
+          "close": 158.568,
+          "ema10": 157.94403478889313,
+          "ema20": 157.63902542422818,
+          "ema50": 157.98766713148197,
+          "ema100": 158.43695353384354,
+          "ema200": 157.689683296798,
+          "rsi": 57.852654701406536,
+          "macd_hist": 0.18728838497637093,
           "recommendation": "BUY",
           "bullish": true,
           "bearish": false
@@ -1292,7 +1338,7 @@
       "timeframes": {
         "5m": {
           "last_closed_utc": "2026-10-12T09:55:00+00:00",
-          "candle_age_min": 1.2,
+          "candle_age_min": 1.7,
           "error": null,
           "atr5_pips": 4.52,
           "atr14_pips": 2.85,
@@ -1301,7 +1347,7 @@
         },
         "15m": {
           "last_closed_utc": "2026-10-12T09:45:00+00:00",
-          "candle_age_min": 11.2,
+          "candle_age_min": 11.7,
           "error": null,
           "atr5_pips": 5.54,
           "atr14_pips": 5.79,
@@ -1310,7 +1356,7 @@
         },
         "30m": {
           "last_closed_utc": "2026-10-12T09:30:00+00:00",
-          "candle_age_min": 26.2,
+          "candle_age_min": 26.7,
           "error": null,
           "atr5_pips": 7.38,
           "atr14_pips": 7.21,
@@ -1319,7 +1365,7 @@
         },
         "1H": {
           "last_closed_utc": "2026-10-12T09:00:00+00:00",
-          "candle_age_min": 56.2,
+          "candle_age_min": 56.7,
           "error": null,
           "atr5_pips": 9.48,
           "atr14_pips": 11.44,
@@ -1328,7 +1374,7 @@
         },
         "4H": {
           "last_closed_utc": "2026-10-12T09:00:00+00:00",
-          "candle_age_min": 56.2,
+          "candle_age_min": 56.7,
           "error": null,
           "atr5_pips": 22.42,
           "atr14_pips": 30.36,
@@ -1337,7 +1383,7 @@
         },
         "1D": {
           "last_closed_utc": "2026-10-09T21:00:00+00:00",
-          "candle_age_min": 3656.2,
+          "candle_age_min": 3656.7,
           "error": null,
           "atr5_pips": 70.68,
           "atr14_pips": 103.91,
@@ -1348,6 +1394,7 @@
       "conditional_level_reference_only": 158.501,
       "detector_reasons": [
         "15m_price_action_scored_without_mandatory_30m_confirmation",
+        "EXISTING_MULTI_HOUR_DIRECTIONAL_MOVE_NOT_EARLY",
         "15m_direction_detected",
         "15m_closed_breakout",
         "5m_assist_available_nonblocking",
@@ -1368,7 +1415,7 @@
           "open": 110.203,
           "high": 110.628,
           "low": 110.176,
-          "close": 110.534,
+          "close": 110.535,
           "bars": 1,
           "start_utc": "2026-10-11T21:00:00+00:00",
           "last_candle_start_utc": "2026-10-11T21:00:00+00:00"
@@ -1386,7 +1433,7 @@
           "open": 110.203,
           "high": 110.628,
           "low": 110.176,
-          "close": 110.534,
+          "close": 110.535,
           "bars": 1,
           "start_utc": "2026-10-11T21:00:00+00:00",
           "last_candle_start_utc": "2026-10-11T21:00:00+00:00"
@@ -1418,7 +1465,7 @@
           "R3": 112.21366666666664,
           "S3": 108.57166666666664
         },
-        "distance_from_daily_open_pips": 33.1,
+        "distance_from_daily_open_pips": 33.2,
         "daily_open_behavior": "ABOVE",
         "reason": null,
         "timezone": "America/New_York",
@@ -1428,6 +1475,12 @@
       "higher_timeframe_valid": true,
       "full_context_valid": true,
       "direction_score": 6,
+      "move_maturity": {
+        "15m_excursion_20_pips": 8.1,
+        "15m_net_displacement_20_pips": 2.0,
+        "30m_net_displacement_20_pips": -5.2,
+        "latest_15m_leg_pips": 10.5
+      },
       "higher_timeframe": {
         "daily_bias": "BEARISH",
         "h4_bias": "BULLISH",
@@ -1438,8 +1491,11 @@
           "leg_origin_proxy_price": 109.862,
           "leg_move_pips": 71.0,
           "leg_bars": 1,
+          "displacement_20_pips": 50.5,
+          "excursion_up_20_pips": 255.0,
+          "excursion_down_20_pips": 135.7,
           "last_closed_candle_utc": "2026-10-09T21:00:00+00:00",
-          "candle_age_minutes": 3656.2,
+          "candle_age_minutes": 3656.6,
           "closed_price": 110.572,
           "prior_6_high": 110.641,
           "prior_6_low": 108.71,
@@ -1460,8 +1516,11 @@
           "leg_origin_proxy_price": 110.572,
           "leg_move_pips": -12.7,
           "leg_bars": 3,
+          "displacement_20_pips": -11.4,
+          "excursion_up_20_pips": 7.1,
+          "excursion_down_20_pips": 93.2,
           "last_closed_candle_utc": "2026-10-12T09:00:00+00:00",
-          "candle_age_minutes": 56.2,
+          "candle_age_minutes": 56.6,
           "closed_price": 110.445,
           "prior_6_high": 110.628,
           "prior_6_low": 110.176,
@@ -1499,27 +1558,27 @@
           "bearish": false
         },
         "4H": {
-          "close": 110.539,
-          "ema10": 110.39389118556737,
-          "ema20": 110.27119837489133,
-          "ema50": 110.20822745904884,
-          "ema100": 110.47390348874278,
-          "ema200": 111.04686958557846,
-          "rsi": 60.86903563972567,
-          "macd_hist": 0.04196555979674241,
+          "close": 110.535,
+          "ema10": 110.3931639128401,
+          "ema20": 110.27081742251038,
+          "ema50": 110.20807059630374,
+          "ema100": 110.47382428082199,
+          "ema200": 111.04682978458344,
+          "rsi": 60.76906003793958,
+          "macd_hist": 0.04171028914147182,
           "recommendation": "BUY",
           "bullish": true,
           "bearish": false
         },
         "1D": {
-          "close": 110.537,
-          "ema10": 110.2582304267043,
-          "ema20": 110.56062142348773,
-          "ema50": 111.37853740246086,
-          "ema100": 111.64605916713434,
-          "ema200": 110.13600814007008,
-          "rsi": 47.31916938756401,
-          "macd_hist": 0.09849198949724625,
+          "close": 110.534,
+          "ema10": 110.25768497215884,
+          "ema20": 110.56033570920201,
+          "ema50": 111.37841975540204,
+          "ema100": 111.64599976119374,
+          "ema200": 110.1359782893238,
+          "rsi": 47.29250680685539,
+          "macd_hist": 0.09830053650579329,
           "recommendation": "NEUTRAL",
           "bullish": false,
           "bearish": false
@@ -1544,7 +1603,7 @@
       "timeframes": {
         "5m": {
           "last_closed_utc": "2026-10-12T09:55:00+00:00",
-          "candle_age_min": 1.2,
+          "candle_age_min": 1.7,
           "error": null,
           "atr5_pips": 3.42,
           "atr14_pips": 2.59,
@@ -1553,7 +1612,7 @@
         },
         "15m": {
           "last_closed_utc": "2026-10-12T09:45:00+00:00",
-          "candle_age_min": 11.2,
+          "candle_age_min": 11.7,
           "error": null,
           "atr5_pips": 4.84,
           "atr14_pips": 5.44,
@@ -1562,7 +1621,7 @@
         },
         "30m": {
           "last_closed_utc": "2026-10-12T09:30:00+00:00",
-          "candle_age_min": 26.2,
+          "candle_age_min": 26.7,
           "error": null,
           "atr5_pips": 7.62,
           "atr14_pips": 6.55,
@@ -1571,7 +1630,7 @@
         },
         "1H": {
           "last_closed_utc": "2026-10-12T09:00:00+00:00",
-          "candle_age_min": 56.2,
+          "candle_age_min": 56.7,
           "error": null,
           "atr5_pips": 10.22,
           "atr14_pips": 12.03,
@@ -1580,7 +1639,7 @@
         },
         "4H": {
           "last_closed_utc": "2026-10-12T09:00:00+00:00",
-          "candle_age_min": 56.2,
+          "candle_age_min": 56.7,
           "error": null,
           "atr5_pips": 23.42,
           "atr14_pips": 29.74,
@@ -1589,7 +1648,7 @@
         },
         "1D": {
           "last_closed_utc": "2026-10-09T21:00:00+00:00",
-          "candle_age_min": 3656.2,
+          "candle_age_min": 3656.7,
           "error": null,
           "atr5_pips": 71.76,
           "atr14_pips": 88.12,
@@ -1619,7 +1678,7 @@
           "open": 88.603,
           "high": 88.881,
           "low": 88.511,
-          "close": 88.774,
+          "close": 88.775,
           "bars": 1,
           "start_utc": "2026-10-11T21:00:00+00:00",
           "last_candle_start_utc": "2026-10-11T21:00:00+00:00"
@@ -1637,7 +1696,7 @@
           "open": 88.603,
           "high": 88.881,
           "low": 88.511,
-          "close": 88.774,
+          "close": 88.775,
           "bars": 1,
           "start_utc": "2026-10-11T21:00:00+00:00",
           "last_candle_start_utc": "2026-10-11T21:00:00+00:00"
@@ -1669,7 +1728,7 @@
           "R3": 90.16033333333333,
           "S3": 87.39733333333331
         },
-        "distance_from_daily_open_pips": 17.1,
+        "distance_from_daily_open_pips": 17.2,
         "daily_open_behavior": "ABOVE",
         "reason": null,
         "timezone": "America/New_York",
@@ -1679,6 +1738,12 @@
       "higher_timeframe_valid": true,
       "full_context_valid": true,
       "direction_score": 9,
+      "move_maturity": {
+        "15m_excursion_20_pips": 9.4,
+        "15m_net_displacement_20_pips": 4.3,
+        "30m_net_displacement_20_pips": -8.6,
+        "latest_15m_leg_pips": 9.8
+      },
       "higher_timeframe": {
         "daily_bias": "BEARISH",
         "h4_bias": "MIXED",
@@ -1689,8 +1754,11 @@
           "leg_origin_proxy_price": 88.459,
           "leg_move_pips": 40.2,
           "leg_bars": 1,
+          "displacement_20_pips": -36.0,
+          "excursion_up_20_pips": 132.2,
+          "excursion_down_20_pips": 110.5,
           "last_closed_candle_utc": "2026-10-09T21:00:00+00:00",
-          "candle_age_minutes": 3656.2,
+          "candle_age_minutes": 3656.6,
           "closed_price": 88.861,
           "prior_6_high": 89.075,
           "prior_6_low": 88.116,
@@ -1711,8 +1779,11 @@
           "leg_origin_proxy_price": 88.861,
           "leg_move_pips": -12.6,
           "leg_bars": 3,
+          "displacement_20_pips": -25.4,
+          "excursion_up_20_pips": 6.2,
+          "excursion_down_20_pips": 74.5,
           "last_closed_candle_utc": "2026-10-12T09:00:00+00:00",
-          "candle_age_minutes": 56.2,
+          "candle_age_minutes": 56.6,
           "closed_price": 88.735,
           "prior_6_high": 88.934,
           "prior_6_low": 88.511,
@@ -1738,13 +1809,13 @@
       "higher_timeframe_indicators": {
         "1H": {
           "close": 88.773,
-          "ema10": 88.76958059729671,
-          "ema20": 88.76678443297298,
-          "ema50": 88.71561861875063,
-          "ema100": 88.67738463458788,
-          "ema200": 88.74081193412998,
-          "rsi": 51.707993023009934,
-          "macd_hist": -0.009931140412249663,
+          "ema10": 88.76903514275125,
+          "ema20": 88.76649871868727,
+          "ema50": 88.7155009716918,
+          "ema100": 88.67732522864729,
+          "ema200": 88.7407820833837,
+          "rsi": 51.48029353342834,
+          "macd_hist": -0.010122593403702595,
           "recommendation": "BUY",
           "bullish": true,
           "bearish": false
@@ -1795,7 +1866,7 @@
       "timeframes": {
         "5m": {
           "last_closed_utc": "2026-10-12T09:55:00+00:00",
-          "candle_age_min": 1.2,
+          "candle_age_min": 1.7,
           "error": null,
           "atr5_pips": 3.66,
           "atr14_pips": 2.59,
@@ -1804,7 +1875,7 @@
         },
         "15m": {
           "last_closed_utc": "2026-10-12T09:45:00+00:00",
-          "candle_age_min": 11.2,
+          "candle_age_min": 11.7,
           "error": null,
           "atr5_pips": 4.52,
           "atr14_pips": 4.89,
@@ -1813,7 +1884,7 @@
         },
         "30m": {
           "last_closed_utc": "2026-10-12T09:30:00+00:00",
-          "candle_age_min": 26.2,
+          "candle_age_min": 26.7,
           "error": null,
           "atr5_pips": 5.66,
           "atr14_pips": 5.42,
@@ -1822,7 +1893,7 @@
         },
         "1H": {
           "last_closed_utc": "2026-10-12T09:00:00+00:00",
-          "candle_age_min": 56.2,
+          "candle_age_min": 56.7,
           "error": null,
           "atr5_pips": 8.5,
           "atr14_pips": 9.74,
@@ -1831,7 +1902,7 @@
         },
         "4H": {
           "last_closed_utc": "2026-10-12T09:00:00+00:00",
-          "candle_age_min": 56.2,
+          "candle_age_min": 56.7,
           "error": null,
           "atr5_pips": 18.94,
           "atr14_pips": 23.98,
@@ -1840,7 +1911,7 @@
         },
         "1D": {
           "last_closed_utc": "2026-10-09T21:00:00+00:00",
-          "candle_age_min": 3656.2,
+          "candle_age_min": 3656.7,
           "error": null,
           "atr5_pips": 62.98,
           "atr14_pips": 70.04,
@@ -1871,7 +1942,7 @@
           "open": 177.075,
           "high": 177.566,
           "low": 176.93,
-          "close": 177.319,
+          "close": 177.333,
           "bars": 1,
           "start_utc": "2026-10-11T21:00:00+00:00",
           "last_candle_start_utc": "2026-10-11T21:00:00+00:00"
@@ -1889,7 +1960,7 @@
           "open": 177.075,
           "high": 177.566,
           "low": 176.93,
-          "close": 177.319,
+          "close": 177.333,
           "bars": 1,
           "start_utc": "2026-10-11T21:00:00+00:00",
           "last_candle_start_utc": "2026-10-11T21:00:00+00:00"
@@ -1921,7 +1992,7 @@
           "R3": 180.47433333333336,
           "S3": 174.1443333333334
         },
-        "distance_from_daily_open_pips": 24.4,
+        "distance_from_daily_open_pips": 25.8,
         "daily_open_behavior": "ABOVE",
         "reason": null,
         "timezone": "America/New_York",
@@ -1931,6 +2002,7 @@
       "higher_timeframe_valid": true,
       "full_context_valid": true,
       "direction_score": null,
+      "move_maturity": null,
       "higher_timeframe": {
         "daily_bias": "BEARISH",
         "h4_bias": "MIXED",
@@ -1941,8 +2013,11 @@
           "leg_origin_proxy_price": 176.983,
           "leg_move_pips": 34.2,
           "leg_bars": 2,
+          "displacement_20_pips": -70.6,
+          "excursion_up_20_pips": 351.7,
+          "excursion_down_20_pips": 180.8,
           "last_closed_candle_utc": "2026-10-09T21:00:00+00:00",
-          "candle_age_minutes": 3656.2,
+          "candle_age_minutes": 3656.6,
           "closed_price": 177.325,
           "prior_6_high": 179.311,
           "prior_6_low": 176.223,
@@ -1963,8 +2038,11 @@
           "leg_origin_proxy_price": 177.445,
           "leg_move_pips": -9.1,
           "leg_bars": 1,
+          "displacement_20_pips": -85.0,
+          "excursion_up_20_pips": 6.8,
+          "excursion_down_20_pips": 167.2,
           "last_closed_candle_utc": "2026-10-12T09:00:00+00:00",
-          "candle_age_minutes": 56.2,
+          "candle_age_minutes": 56.6,
           "closed_price": 177.354,
           "prior_6_high": 177.868,
           "prior_6_low": 176.93,
@@ -2037,7 +2115,7 @@
       "timeframes": {
         "5m": {
           "last_closed_utc": "2026-10-12T09:55:00+00:00",
-          "candle_age_min": 1.2,
+          "candle_age_min": 1.7,
           "error": null,
           "atr5_pips": 6.82,
           "atr14_pips": 4.83,
@@ -2046,7 +2124,7 @@
         },
         "15m": {
           "last_closed_utc": "2026-10-12T09:45:00+00:00",
-          "candle_age_min": 11.2,
+          "candle_age_min": 11.7,
           "error": null,
           "atr5_pips": 7.26,
           "atr14_pips": 7.96,
@@ -2055,7 +2133,7 @@
         },
         "30m": {
           "last_closed_utc": "2026-10-12T09:30:00+00:00",
-          "candle_age_min": 26.2,
+          "candle_age_min": 26.7,
           "error": null,
           "atr5_pips": 10.8,
           "atr14_pips": 8.47,
@@ -2064,7 +2142,7 @@
         },
         "1H": {
           "last_closed_utc": "2026-10-12T09:00:00+00:00",
-          "candle_age_min": 56.2,
+          "candle_age_min": 56.7,
           "error": null,
           "atr5_pips": 14.74,
           "atr14_pips": 15.04,
@@ -2073,7 +2151,7 @@
         },
         "4H": {
           "last_closed_utc": "2026-10-12T09:00:00+00:00",
-          "candle_age_min": 56.2,
+          "candle_age_min": 56.7,
           "error": null,
           "atr5_pips": 27.04,
           "atr14_pips": 41.07,
@@ -2082,7 +2160,7 @@
         },
         "1D": {
           "last_closed_utc": "2026-10-09T21:00:00+00:00",
-          "candle_age_min": 3656.2,
+          "candle_age_min": 3656.7,
           "error": null,
           "atr5_pips": 131.1,
           "atr14_pips": 133.99,
@@ -2113,7 +2191,7 @@
           "open": 1.59501,
           "high": 1.59876,
           "low": 1.59456,
-          "close": 1.59497,
+          "close": 1.59513,
           "bars": 1,
           "start_utc": "2026-10-11T21:00:00+00:00",
           "last_candle_start_utc": "2026-10-11T21:00:00+00:00"
@@ -2131,7 +2209,7 @@
           "open": 1.59501,
           "high": 1.59876,
           "low": 1.59456,
-          "close": 1.59497,
+          "close": 1.59513,
           "bars": 1,
           "start_utc": "2026-10-11T21:00:00+00:00",
           "last_candle_start_utc": "2026-10-11T21:00:00+00:00"
@@ -2163,8 +2241,8 @@
           "R3": 1.6215766666666669,
           "S3": 1.5733066666666664
         },
-        "distance_from_daily_open_pips": -0.4,
-        "daily_open_behavior": "BELOW",
+        "distance_from_daily_open_pips": 1.2,
+        "daily_open_behavior": "ABOVE",
         "reason": null,
         "timezone": "America/New_York",
         "rollover": "17:00 New York"
@@ -2173,6 +2251,12 @@
       "higher_timeframe_valid": true,
       "full_context_valid": true,
       "direction_score": 10,
+      "move_maturity": {
+        "15m_excursion_20_pips": 28.4,
+        "15m_net_displacement_20_pips": 25.7,
+        "30m_net_displacement_20_pips": 15.5,
+        "latest_15m_leg_pips": 9.2
+      },
       "higher_timeframe": {
         "daily_bias": "MIXED",
         "h4_bias": "MIXED",
@@ -2183,8 +2267,11 @@
           "leg_origin_proxy_price": 1.59443,
           "leg_move_pips": 24.0,
           "leg_bars": 1,
+          "displacement_20_pips": -118.0,
+          "excursion_up_20_pips": 51.9,
+          "excursion_down_20_pips": 180.1,
           "last_closed_candle_utc": "2026-10-09T21:00:00+00:00",
-          "candle_age_minutes": 3656.2,
+          "candle_age_minutes": 3656.6,
           "closed_price": 1.59683,
           "prior_6_high": 1.61382,
           "prior_6_low": 1.59062,
@@ -2205,8 +2292,11 @@
           "leg_origin_proxy_price": 1.59847,
           "leg_move_pips": -21.5,
           "leg_bars": 2,
+          "displacement_20_pips": -25.4,
+          "excursion_up_20_pips": 30.5,
+          "excursion_down_20_pips": 82.4,
           "last_closed_candle_utc": "2026-10-12T09:00:00+00:00",
-          "candle_age_minutes": 56.2,
+          "candle_age_minutes": 56.6,
           "closed_price": 1.59632,
           "prior_6_high": 1.60191,
           "prior_6_low": 1.59351,
@@ -2258,24 +2348,24 @@
         },
         "1D": {
           "close": 1.59501,
-          "ema10": 1.599142706112535,
-          "ema20": 1.6020832106335652,
-          "ema50": 1.6055768093233056,
-          "ema100": 1.607192063442146,
-          "ema200": 1.605791018978736,
-          "rsi": 38.85762807259951,
-          "macd_hist": -0.0011786728545315505,
+          "ema10": 1.5991481606579896,
+          "ema20": 1.6020860677764224,
+          "ema50": 1.6055779857938939,
+          "ema100": 1.6071926575015518,
+          "ema200": 1.6057913174861986,
+          "rsi": 38.8866624308671,
+          "macd_hist": -0.0011767583246170355,
           "recommendation": "SELL",
           "bullish": false,
           "bearish": true
         }
       },
       "direction": "SELL",
-      "stage": "CONFIRMING",
+      "stage": "CONTINUATION",
       "entry_readiness": "TECHNICAL_WATCH_ONLY",
       "setup_status": "WATCH_FOR_ENTRY",
       "raw_detector_direction": "SELL",
-      "raw_detector_stage": "CONFIRMING",
+      "raw_detector_stage": "CONTINUATION",
       "directional_bias": "SELL",
       "source_valid": true,
       "technical_price_divergence_pips": 4.7,
@@ -2289,7 +2379,7 @@
       "timeframes": {
         "5m": {
           "last_closed_utc": "2026-10-12T09:55:00+00:00",
-          "candle_age_min": 1.2,
+          "candle_age_min": 1.7,
           "error": null,
           "atr5_pips": 4.02,
           "atr14_pips": 3.31,
@@ -2298,7 +2388,7 @@
         },
         "15m": {
           "last_closed_utc": "2026-10-12T09:45:00+00:00",
-          "candle_age_min": 11.2,
+          "candle_age_min": 11.7,
           "error": null,
           "atr5_pips": 4.42,
           "atr14_pips": 5.56,
@@ -2307,7 +2397,7 @@
         },
         "30m": {
           "last_closed_utc": "2026-10-12T09:30:00+00:00",
-          "candle_age_min": 26.2,
+          "candle_age_min": 26.7,
           "error": null,
           "atr5_pips": 7.46,
           "atr14_pips": 6.44,
@@ -2316,7 +2406,7 @@
         },
         "1H": {
           "last_closed_utc": "2026-10-12T09:00:00+00:00",
-          "candle_age_min": 56.2,
+          "candle_age_min": 56.7,
           "error": null,
           "atr5_pips": 10.5,
           "atr14_pips": 12.93,
@@ -2325,7 +2415,7 @@
         },
         "4H": {
           "last_closed_utc": "2026-10-12T09:00:00+00:00",
-          "candle_age_min": 56.2,
+          "candle_age_min": 56.7,
           "error": null,
           "atr5_pips": 29.52,
           "atr14_pips": 28.99,
@@ -2334,7 +2424,7 @@
         },
         "1D": {
           "last_closed_utc": "2026-10-09T21:00:00+00:00",
-          "candle_age_min": 3656.2,
+          "candle_age_min": 3656.7,
           "error": null,
           "atr5_pips": 85.6,
           "atr14_pips": 79.66,
@@ -2345,6 +2435,7 @@
       "conditional_level_reference_only": 1.59576,
       "detector_reasons": [
         "15m_price_action_scored_without_mandatory_30m_confirmation",
+        "EXISTING_MULTI_HOUR_DIRECTIONAL_MOVE_NOT_EARLY",
         "15m_direction_detected",
         "15m_closed_breakout",
         "5m_assist_available_nonblocking",
@@ -2365,7 +2456,7 @@
           "open": 1.42727,
           "high": 1.42739,
           "low": 1.42405,
-          "close": 1.42642,
+          "close": 1.42644,
           "bars": 1,
           "start_utc": "2026-10-11T21:00:00+00:00",
           "last_candle_start_utc": "2026-10-11T21:00:00+00:00"
@@ -2383,7 +2474,7 @@
           "open": 1.42727,
           "high": 1.42739,
           "low": 1.42405,
-          "close": 1.42642,
+          "close": 1.42644,
           "bars": 1,
           "start_utc": "2026-10-11T21:00:00+00:00",
           "last_candle_start_utc": "2026-10-11T21:00:00+00:00"
@@ -2415,7 +2506,7 @@
           "R3": 1.4397033333333331,
           "S3": 1.4107833333333335
         },
-        "distance_from_daily_open_pips": -8.5,
+        "distance_from_daily_open_pips": -8.3,
         "daily_open_behavior": "BELOW",
         "reason": null,
         "timezone": "America/New_York",
@@ -2425,6 +2516,7 @@
       "higher_timeframe_valid": true,
       "full_context_valid": true,
       "direction_score": null,
+      "move_maturity": null,
       "higher_timeframe": {
         "daily_bias": "BULLISH",
         "h4_bias": "MIXED",
@@ -2435,8 +2527,11 @@
           "leg_origin_proxy_price": 1.42239,
           "leg_move_pips": 29.7,
           "leg_bars": 1,
+          "displacement_20_pips": 383.9,
+          "excursion_up_20_pips": 428.6,
+          "excursion_down_20_pips": 6.3,
           "last_closed_candle_utc": "2026-10-09T21:00:00+00:00",
-          "candle_age_minutes": 3656.2,
+          "candle_age_minutes": 3656.6,
           "closed_price": 1.42536,
           "prior_6_high": 1.42936,
           "prior_6_low": 1.42019,
@@ -2457,8 +2552,11 @@
           "leg_origin_proxy_price": 1.42536,
           "leg_move_pips": 8.9,
           "leg_bars": 3,
+          "displacement_20_pips": 48.0,
+          "excursion_up_20_pips": 83.8,
+          "excursion_down_20_pips": 8.0,
           "last_closed_candle_utc": "2026-10-12T09:00:00+00:00",
-          "candle_age_minutes": 56.2,
+          "candle_age_minutes": 56.6,
           "closed_price": 1.42625,
           "prior_6_high": 1.42983,
           "prior_6_low": 1.42065,
@@ -2479,14 +2577,14 @@
       },
       "higher_timeframe_indicators": {
         "1H": {
-          "close": 1.42636,
-          "ema10": 1.4258274182481467,
-          "ema20": 1.4255926911827435,
-          "ema50": 1.4249925207331564,
-          "ema100": 1.4244826421057886,
-          "ema200": 1.4223691064441581,
-          "rsi": 55.90714002803379,
-          "macd_hist": -5.9528838058685914e-05,
+          "close": 1.42632,
+          "ema10": 1.425820145520874,
+          "ema20": 1.425588881658934,
+          "ema50": 1.4249909521057054,
+          "ema100": 1.4244818500265806,
+          "ema200": 1.4223687084342078,
+          "rsi": 55.703915174166134,
+          "macd_hist": -6.208154461149118e-05,
           "recommendation": "STRONG_BUY",
           "bullish": true,
           "bearish": false
@@ -2531,7 +2629,7 @@
       "timeframes": {
         "5m": {
           "last_closed_utc": "2026-10-12T09:55:00+00:00",
-          "candle_age_min": 1.2,
+          "candle_age_min": 1.7,
           "error": null,
           "atr5_pips": 3.04,
           "atr14_pips": 2.46,
@@ -2540,7 +2638,7 @@
         },
         "15m": {
           "last_closed_utc": "2026-10-12T09:45:00+00:00",
-          "candle_age_min": 11.2,
+          "candle_age_min": 11.7,
           "error": null,
           "atr5_pips": 3.42,
           "atr14_pips": 5.17,
@@ -2549,7 +2647,7 @@
         },
         "30m": {
           "last_closed_utc": "2026-10-12T09:30:00+00:00",
-          "candle_age_min": 26.2,
+          "candle_age_min": 26.7,
           "error": null,
           "atr5_pips": 6.96,
           "atr14_pips": 5.89,
@@ -2558,7 +2656,7 @@
         },
         "1H": {
           "last_closed_utc": "2026-10-12T09:00:00+00:00",
-          "candle_age_min": 56.2,
+          "candle_age_min": 56.7,
           "error": null,
           "atr5_pips": 9.48,
           "atr14_pips": 9.41,
@@ -2567,7 +2665,7 @@
         },
         "4H": {
           "last_closed_utc": "2026-10-12T09:00:00+00:00",
-          "candle_age_min": 56.2,
+          "candle_age_min": 56.7,
           "error": null,
           "atr5_pips": 20.56,
           "atr14_pips": 25.97,
@@ -2576,7 +2674,7 @@
         },
         "1D": {
           "last_closed_utc": "2026-10-09T21:00:00+00:00",
-          "candle_age_min": 3656.2,
+          "candle_age_min": 3656.7,
           "error": null,
           "atr5_pips": 73.08,
           "atr14_pips": 60.15,
@@ -2606,7 +2704,7 @@
           "open": 0.84599,
           "high": 0.84655,
           "low": 0.84485,
-          "close": 0.84485,
+          "close": 0.8449,
           "bars": 1,
           "start_utc": "2026-10-11T21:00:00+00:00",
           "last_candle_start_utc": "2026-10-11T21:00:00+00:00"
@@ -2624,7 +2722,7 @@
           "open": 0.84599,
           "high": 0.84655,
           "low": 0.84485,
-          "close": 0.84485,
+          "close": 0.8449,
           "bars": 1,
           "start_utc": "2026-10-11T21:00:00+00:00",
           "last_candle_start_utc": "2026-10-11T21:00:00+00:00"
@@ -2656,7 +2754,7 @@
           "R3": 0.8548166666666668,
           "S3": 0.8385866666666667
         },
-        "distance_from_daily_open_pips": -11.4,
+        "distance_from_daily_open_pips": -10.9,
         "daily_open_behavior": "BELOW",
         "reason": null,
         "timezone": "America/New_York",
@@ -2666,6 +2764,12 @@
       "higher_timeframe_valid": true,
       "full_context_valid": true,
       "direction_score": 12,
+      "move_maturity": {
+        "15m_excursion_20_pips": 11.8,
+        "15m_net_displacement_20_pips": 11.4,
+        "30m_net_displacement_20_pips": 8.7,
+        "latest_15m_leg_pips": 4.2
+      },
       "higher_timeframe": {
         "daily_bias": "BEARISH",
         "h4_bias": "BEARISH",
@@ -2676,8 +2780,11 @@
           "leg_origin_proxy_price": 0.8474,
           "leg_move_pips": -10.9,
           "leg_bars": 1,
+          "displacement_20_pips": -110.7,
+          "excursion_up_20_pips": 38.3,
+          "excursion_down_20_pips": 126.0,
           "last_closed_candle_utc": "2026-10-09T21:00:00+00:00",
-          "candle_age_minutes": 3656.2,
+          "candle_age_minutes": 3656.6,
           "closed_price": 0.84631,
           "prior_6_high": 0.85473,
           "prior_6_low": 0.84478,
@@ -2698,8 +2805,11 @@
           "leg_origin_proxy_price": 0.84643,
           "leg_move_pips": -9.2,
           "leg_bars": 2,
+          "displacement_20_pips": -26.6,
+          "excursion_up_20_pips": 5.0,
+          "excursion_down_20_pips": 33.9,
           "last_closed_candle_utc": "2026-10-12T09:00:00+00:00",
-          "candle_age_minutes": 56.2,
+          "candle_age_minutes": 56.6,
           "closed_price": 0.84551,
           "prior_6_high": 0.8485,
           "prior_6_low": 0.84557,
@@ -2750,14 +2860,14 @@
           "bearish": true
         },
         "1D": {
-          "close": 0.84487,
-          "ema10": 0.8491480041963465,
-          "ema20": 0.8519872736067944,
-          "ema50": 0.8547771197511289,
-          "ema100": 0.8573266267211395,
-          "ema200": 0.8601044491580194,
-          "rsi": 23.696628575714044,
-          "macd_hist": -0.0011856931350023342,
+          "close": 0.84489,
+          "ema10": 0.8491516405599829,
+          "ema20": 0.8519891783686991,
+          "ema50": 0.8547779040648544,
+          "ema100": 0.8573270227607434,
+          "ema200": 0.8601046481629946,
+          "rsi": 23.725062512859424,
+          "macd_hist": -0.0011844167817260203,
           "recommendation": "SELL",
           "bullish": false,
           "bearish": true
@@ -2782,7 +2892,7 @@
       "timeframes": {
         "5m": {
           "last_closed_utc": "2026-10-12T09:55:00+00:00",
-          "candle_age_min": 1.2,
+          "candle_age_min": 1.7,
           "error": null,
           "atr5_pips": 1.64,
           "atr14_pips": 1.59,
@@ -2791,7 +2901,7 @@
         },
         "15m": {
           "last_closed_utc": "2026-10-12T09:45:00+00:00",
-          "candle_age_min": 11.2,
+          "candle_age_min": 11.7,
           "error": null,
           "atr5_pips": 2.5,
           "atr14_pips": 2.9,
@@ -2800,7 +2910,7 @@
         },
         "30m": {
           "last_closed_utc": "2026-10-12T09:30:00+00:00",
-          "candle_age_min": 26.2,
+          "candle_age_min": 26.7,
           "error": null,
           "atr5_pips": 4.64,
           "atr14_pips": 3.28,
@@ -2809,7 +2919,7 @@
         },
         "1H": {
           "last_closed_utc": "2026-10-12T09:00:00+00:00",
-          "candle_age_min": 56.2,
+          "candle_age_min": 56.7,
           "error": null,
           "atr5_pips": 5.24,
           "atr14_pips": 4.09,
@@ -2818,7 +2928,7 @@
         },
         "4H": {
           "last_closed_utc": "2026-10-12T09:00:00+00:00",
-          "candle_age_min": 56.2,
+          "candle_age_min": 56.7,
           "error": null,
           "atr5_pips": 9.58,
           "atr14_pips": 8.99,
@@ -2827,7 +2937,7 @@
         },
         "1D": {
           "last_closed_utc": "2026-10-09T21:00:00+00:00",
-          "candle_age_min": 3656.2,
+          "candle_age_min": 3656.7,
           "error": null,
           "atr5_pips": 30.22,
           "atr14_pips": 28.94,
