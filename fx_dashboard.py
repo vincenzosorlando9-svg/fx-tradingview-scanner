@@ -47,6 +47,8 @@ def main():
     warnings.append("FOREXTOOLKITS_UPSTREAM_FRESHNESS_NOT_INDEPENDENTLY_VERIFIED")
 
     existing = {r.get("pair"):r for r in rotation.get("pairs",[])}
+    levels_path=Path("fx_daily_weekly_levels.json")
+    levels=load(levels_path) if levels_path.exists() else {"pairs":{},"status_counts":{},"generated_at_utc":None}
     rows=[]
     for pair in PAIRS:
         r=existing.get(pair,{})
@@ -76,6 +78,7 @@ def main():
         valid_watch=source_ok and r.get("status")=="WATCH_FOR_ENTRY" and original_direction in ("BUY","SELL")
         row={
             "pair":pair,
+            "daily_weekly_levels":levels.get("pairs",{}).get(pair,{"status":"UNAVAILABLE","reason":"levels_not_generated"}),
             "trade_type":r.get("trade_type","HIGHER_TIMEFRAME_UNVERIFIED"),
             "higher_timeframe":r.get("higher_timeframe",{}),
             "higher_timeframe_indicators":{tf:(frames.get(tf) or {}).get("technical") for tf in ("1H","4H","1D")},
@@ -109,6 +112,8 @@ def main():
     dashboard={
         "generated_at_utc":now.isoformat(),
         "purpose":"TECHNICAL_RESEARCH_ONLY_NOT_AN_EXECUTABLE_TRADE_SIGNAL",
+        "daily_weekly_levels_generated_at_utc":levels.get("generated_at_utc"),
+        "daily_weekly_levels_status_counts":levels.get("status_counts",{}),
         "data_sources_utc":times,
         "source_age_minutes_at_generation":ages,
         "source_versions_match":versions_match,
