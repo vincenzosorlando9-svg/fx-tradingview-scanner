@@ -12,7 +12,7 @@ UTC = timezone.utc
 TF = {"5m": "M5", "15m": "M15", "30m": "M30", "1H": "H1", "4H": "H4", "1D": "D1"}
 MAX_TECH_AGE_MIN = 35
 MAX_VOL_AGE_MIN = 35
-MAX_CANDLE_AGE_MIN = {"M5": 6, "M15": 18, "M30": 33, "H1": 75, "H4": 300, "D1": 1800}
+MAX_CANDLE_AGE_MIN = {"M5": 6, "M15": 18, "M30": 33, "H1": 75, "H4": 300, "D1": 4500}
 
 
 def parse_time(value):
@@ -173,23 +173,25 @@ def analyze(pair, tech, vol, now):
         tm = tech_metrics(tech.get("pairs",{}).get(pair,{}).get(t,{}))
         vm, error = candle_metrics(pair,vpair.get("tf",{}).get(vt,{}),now,vt,clock_offset_seconds)
         output["timeframes"][t] = {"technical":tm,"candles":vm,"error":error}
-    if any(t not in output["timeframes"] for t in ("5m", "15m", "30m")):
+    if any(t not in output["timeframes"] for t in ("15m", "30m")):
         output["status"] = "DATA_UNAVAILABLE"
         output["reasons"].append("MISSING_TIMEFRAME_RESULTS")
         return output
     m5 = output["timeframes"]["5m"]
     m15 = output["timeframes"]["15m"]
     m30 = output["timeframes"]["30m"]
-    if any(not x["technical"] or not x["candles"] for x in (m5,m15,m30)):
+    if any(not x["technical"] or not x["candles"] for x in (m15,m30)):
         output["status"] = "DATA_UNAVAILABLE"
         output["reasons"].append("MISSING_OR_STALE_EXECUTION_TIMEFRAME")
         return output
-    a,b,c = [x["technical"] for x in (m5,m15,m30)]
-    x,y,z = [q["candles"] for q in (m5,m15,m30)]
+    a,b = [x["technical"] for x in (m15,m30)]
+    x,y = [q["candles"] for q in (m15,m30)]
+    five_minute_assist_available = bool(m5["technical"] and m5["candles"])
+    output["five_minute_assist_available"] = five_minute_assist_available
     # A directional candidate requires multi-timeframe agreement and price/candle alignment.
     for direction, sign in (("BUY",1),("SELL",-1)):
-        aligned = (a["bullish"] and b["bullish"]) if sign == 1 else (a["bearish"] and b["bearish"])
-        higher = (c["rsi"] is not None and c["rsi"] >= 48) if sign == 1 else (c["rsi"] is not None and c["rsi"] <= 52)
+        aligned = a["bullish"] if sign == 1 else a["bearish"]
+        higher = (b["rsi"] is not None and b["rsi"] >= 48) if sign == 1 else (b["rsi"] is not None and b["rsi"] <= 52)
         momentum = x["momentum_3_bars_pips"] * sign > 0
         breakout = x["breakout_up"] if sign == 1 else x["breakout_down"]
         if aligned and higher and momentum:
@@ -202,12 +204,12 @@ def analyze(pair, tech, vol, now):
                                else "EARLY")
             output["status"] = "WATCH_FOR_ENTRY"
             output["confidence"] = "TECHNICAL_ONLY"
-            output["reasons"] += ["5m_15m_ema10_20_aligned", "30m_rsi_not_opposing", "closed_5m_momentum_aligned"]
-            output["move_origin_proxy"] = {"utc":x["leg_origin_proxy_utc"],"price":x["leg_origin_proxy_price"],"moved_pips":x["leg_move_pips"],"bars":x["leg_bars"],"method":"contiguous_closed_5m_directional_closes_proxy"}
+            output["reasons"] += ["15m_ema10_20_aligned", "30m_rsi_not_opposing", "closed_15m_momentum_aligned"]
+            output["move_origin_proxy"] = {"utc":x["leg_origin_proxy_utc"],"price":x["leg_origin_proxy_price"],"moved_pips":x["leg_move_pips"],"bars":x["leg_bars"],"method":"contiguous_closed_15m_directional_closes_proxy"}
             if breakout:
-                output["reasons"].append("5m_closed_candle_breakout")
+                output["reasons"].append("15m_closed_candle_breakout")
             if expansion:
-                output["reasons"].append("5m_atr_expansion")
+                output["reasons"].append("15m_atr_expansion")
             if output["stage"] == "EXTENDED":
                 output["stage"] = "EXTENDED"
                 output["status"] = "DO_NOT_CHASE"
@@ -216,7 +218,7 @@ def analyze(pair, tech, vol, now):
             # executable prices, spread and market/catalyst confirmation.
             output["entry"] = {"type":"CONDITIONAL_BREAKOUT_RETEST",
                                "level":x["prior_6_high"] if sign==1 else x["prior_6_low"],
-                               "condition":"New closed 5m candle beyond level, then hold/retest; confirm current quote and spread"}
+                               "condition":"New closed 15m candle beyond level, then hold/retest; 5m indicators optional; confirm current quote and spread"}
             break
     # Higher-timeframe classification is separate from the 5m/15m signal.
     # Do not promote a countertrend bounce into a confirmed reversal.
@@ -257,7 +259,7 @@ def analyze(pair, tech, vol, now):
         output["reasons"].append("COUNTERTREND_NOT_CONFIRMED_REVERSAL")
     # Distance to the nearest 4H and Daily swing boundary in the signal direction.
     pip = pip_size(pair)
-    price = (output["timeframes"].get("5m", {}).get("candles") or {}).get("closed_price")
+    price = (output["timeframes"].get("15m", {}).get("candles") or {}).get("closed_price")
     obstacles = []
     if price is not None and direction in ("BUY", "SELL"):
         for name, row in (("4H", h4), ("1D", daily)):
@@ -276,8 +278,11 @@ def analyze(pair, tech, vol, now):
             output["reasons"].append("COUNTERTREND_LESS_THAN_20_PIPS_TO_HTF_OBSTACLE")
             # Obstacle distance is advisory; 18 pips is not an automatic veto.
     if output["direction"] == "NONE":
-        output["reasons"].append("NO_ALIGNED_5m_15m_ROTATION")
+        output["reasons"].append("NO_ALIGNED_15m_30m_ROTATION")
         output["status"] = "NO_TRADE"
+    # Optional 5m assistance is informational, never a blocking gate.
+    if five_minute_assist_available:
+        output["reasons"].append("5m_assist_available_nonblocking")
     # Warn on discrepancies across providers (not assumed identical pricing).
     diff = abs(a["close"] - x["closed_price"]) / pip_size(pair)
     output["price_source_difference_pips"] = round(diff,1)
