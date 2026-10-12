@@ -14,6 +14,8 @@ TIMEFRAMES = {
     "15m": Interval.INTERVAL_15_MINUTES,
     "30m": Interval.INTERVAL_30_MINUTES,
     "1H": Interval.INTERVAL_1_HOUR,
+    "4H": Interval.INTERVAL_4_HOURS,
+    "1D": Interval.INTERVAL_1_DAY,
 }
 
 INDICATORS = [
