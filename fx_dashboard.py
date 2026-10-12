@@ -72,14 +72,14 @@ def main():
         htf_ok=all(checks[tf]["last_closed_utc"] is not None and not checks[tf]["error"]
                    and fresh(checks[tf]["candle_age_min"], {"4H":300,"1D":4500}[tf])
                    for tf in ("4H","1D"))
-        source_ok=all(fresh(v) for v in ages.values()) and versions_match and candle_ok and htf_ok
+        source_ok=all(fresh(v) for v in ages.values()) and versions_match and candle_ok\n        full_context_ok=source_ok and htf_ok
         original_direction=r.get("direction","NONE")
         original_stage=r.get("stage","WAIT")
         valid_watch=source_ok and r.get("status")=="WATCH_FOR_ENTRY" and original_direction in ("BUY","SELL")
         row={
             "pair":pair,
             "daily_weekly_levels":levels.get("pairs",{}).get(pair,{"status":"UNAVAILABLE","reason":"levels_not_generated"}),
-            "trade_type":r.get("trade_type","HIGHER_TIMEFRAME_UNVERIFIED"),
+            "trade_type":r.get("trade_type","HIGHER_TIMEFRAME_UNVERIFIED"),\n            "higher_timeframe_valid":htf_ok,\n            "full_context_valid":full_context_ok,\n            "direction_score":r.get("direction_score"),
             "higher_timeframe":r.get("higher_timeframe",{}),
             "higher_timeframe_indicators":{tf:(frames.get(tf) or {}).get("technical") for tf in ("1H","4H","1D")},
             "direction":original_direction if source_ok else "UNVERIFIED",
@@ -107,9 +107,9 @@ def main():
         momentum = abs(m15.get("momentum_3bars_pips") or 0)
         stage = {"EARLY": 3, "CONFIRMING": 2, "EXTENDED": 0}.get(row["stage"], 0)
         trend = 1 if row["trade_type"] == "TREND_CONTINUATION" else 0
-        return (stage, trend, min(momentum / max(atr, 0.01), 2))
+        return (0.5 * (stage / 3) + 0.5 * (min((row.get("direction_score") or 0) / 11, 1) * 0.65 + trend * 0.35), min(momentum / max(atr, 0.01), 2))
     top_five = sorted(watches, key=candidate_rank, reverse=True)[:5]
-    dashboard={
+    # Directional breadth: a currency receives +1 when base rises or quote falls.\n    strength = {}\n    for row in rows:\n        if not row["source_valid"] or row["direction"] not in ("BUY","SELL"): continue\n        base, quote = row["pair"][:3], row["pair"][3:]\n        sign = 1 if row["direction"] == "BUY" else -1\n        strength[base] = strength.get(base,0) + sign\n        strength[quote] = strength.get(quote,0) - sign\n    dashboard={\n        "currency_strength_breadth":dict(sorted(strength.items(),key=lambda x:-x[1])),\n        "currency_strength_note":"Unweighted breadth across fresh directional 11-pair candidates, not an independent live currency strength index",
         "generated_at_utc":now.isoformat(),
         "purpose":"TECHNICAL_RESEARCH_ONLY_NOT_AN_EXECUTABLE_TRADE_SIGNAL",
         "daily_weekly_levels_generated_at_utc":levels.get("generated_at_utc"),
@@ -119,14 +119,14 @@ def main():
         "source_versions_match":versions_match,
         "warnings":warnings,
         "scope":"11 TradingView-covered pairs; EUR/NZD NOT INCLUDED",
-        "higher_timeframe_rule":"Daily and 4H required; countertrend is not reversal; levels are 20-bar closed-candle swings",
+        "higher_timeframe_rule":"Daily and 4H are context, not a veto on early 15m directional watches; countertrend is not reversal",
         "priority_timeframes":["1D","4H","1H","30m","15m","5m_optional"],
-        "max_closed_candle_age_minutes":{"5m":6,"15m":18,"30m":33,"4H":300,"1D":1800},
+        "max_closed_candle_age_minutes":{"5m_optional":6,"15m":18,"30m":33,"4H":300,"1D":4500},
         "freshness_rule":"Any stale primary candle blocks pair from technical watchlist; collection timestamp alone never proves candle freshness.",
         "available_technical_watch_count":len(watches),
         "top_five_technical_candidates":[{"rank":i+1,"pair":r["pair"],
             "direction":r["direction"],"stage":r["stage"],
-            "trade_type":r["trade_type"],"entry_readiness":r["entry_readiness"],
+            "trade_type":r["trade_type"],"direction_score":r.get("direction_score"),"entry_readiness":r["entry_readiness"],
             "move_origin_proxy":r.get("move_origin_proxy"),
             "conditional_level_reference_only":r["conditional_level_reference_only"]}
             for i,r in enumerate(top_five)],
