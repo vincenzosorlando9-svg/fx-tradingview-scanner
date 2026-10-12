@@ -84,6 +84,7 @@ def main():
             "higher_timeframe_valid":htf_ok,
             "full_context_valid":full_context_ok,
             "direction_score":r.get("direction_score"),
+            "move_maturity":r.get("move_maturity"),
             "higher_timeframe":r.get("higher_timeframe",{}),
             "higher_timeframe_indicators":{tf:(frames.get(tf) or {}).get("technical") for tf in ("1H","4H","1D")},
             "direction":original_direction if source_ok else "UNVERIFIED",
@@ -103,13 +104,13 @@ def main():
         }
         rows.append(row)
     watches=[r for r in rows if r["entry_readiness"]=="TECHNICAL_WATCH_ONLY"]
-    watches.sort(key=lambda x:({"EARLY":0,"CONFIRMING":1,"EXTENDED":2}.get(x["stage"],3),x["pair"]))
+    watches.sort(key=lambda x:({"EARLY":0,"CONFIRMING":1,"CONTINUATION":2,"EXTENDED":3}.get(x["stage"],3),x["pair"]))
     # Ranked technical research candidates only; macro confirmation remains external.
     def candidate_rank(row):
         m15 = row["timeframes"]["15m"]
         atr = m15.get("atr14_pips") or 0
         momentum = abs(m15.get("momentum_3bars_pips") or 0)
-        stage = {"EARLY": 3, "CONFIRMING": 2, "EXTENDED": 0}.get(row["stage"], 0)
+        stage = {"EARLY": 3, "CONFIRMING": 2, "CONTINUATION": 1, "EXTENDED": 0}.get(row["stage"], 0)
         trend = 1 if row["trade_type"] == "TREND_CONTINUATION" else 0
         return (0.5 * (stage / 3) + 0.5 * (min((row.get("direction_score") or 0) / 11, 1) * 0.65 + trend * 0.35), min(momentum / max(atr, 0.01), 2))
     top_five = sorted(watches, key=candidate_rank, reverse=True)[:5]
