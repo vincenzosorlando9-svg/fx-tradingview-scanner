@@ -29,14 +29,20 @@ def pivots(h,l,c):
     return {"P":p,"R1":2*p-l,"S1":2*p-h,"R2":p+(h-l),"S2":p-(h-l),
             "R3":h+2*(p-l),"S3":l-2*(h-p)}
 
+def market_open(t):
+    local=t.astimezone(NY)
+    wd=local.weekday()
+    return not (wd==4 and local.hour>=17 or wd==5 or wd==6 and local.hour<17)
+
 def bucket(bars,start,end,require_complete=True):
     selected=[b for b in bars if start<=b[0]<end]
     if not selected: return None
     if require_complete:
         # Market closure intervals are allowed only during the weekend.
-        expected=int((end-start).total_seconds()/300)
+        expected=sum(1 for i in range(int((end-start).total_seconds()/300)) if market_open(start+timedelta(minutes=5*i)))
         if len(selected)!=expected: return None
-        if selected[0][0]!=start or selected[-1][0]!=end-timedelta(minutes=5): return None
+        if selected[0][0]!=next((start+timedelta(minutes=5*i) for i in range(int((end-start).total_seconds()/300)) if market_open(start+timedelta(minutes=5*i))),None): return None
+        if selected[-1][0]!=end-timedelta(minutes=5): return None
     return {"open":selected[0][1],"high":max(b[2] for b in selected),
             "low":min(b[3] for b in selected),"close":selected[-1][4],
             "bars":len(selected),"start_utc":start.isoformat(),"end_utc":end.isoformat()}
@@ -66,7 +72,7 @@ def compute(pair,raw,now,offset=0):
         # Session dates determined by NY 17:00, not UTC midnight.
         ds=session_start(now)
         ws=week_start(now)
-        prev_ds=ds-timedelta(days=1)
+        prev_ds=ds-timedelta(days=2 if ds.astimezone(NY).weekday()==6 else 1)
         prev_ws=ws-timedelta(days=7)
         # Current partial buckets need exact first candle and continuity.
         def partial(start):
