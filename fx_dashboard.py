@@ -67,10 +67,10 @@ def main():
                 "momentum_3bars_pips":bar.get("momentum_3_bars_pips"),
                 "structure":bar.get("structure")
             }
-        candle_ok=all(fresh(checks[tf]["candle_age_min"],{"5m":6,"15m":18,"30m":33}[tf])
-                      and not checks[tf]["error"] for tf in ("5m","15m","30m"))
+        candle_ok=all(fresh(checks[tf]["candle_age_min"],{"15m":18,"30m":33}[tf])
+                      and not checks[tf]["error"] for tf in ("15m","30m"))
         htf_ok=all(checks[tf]["last_closed_utc"] is not None and not checks[tf]["error"]
-                   and fresh(checks[tf]["candle_age_min"], {"4H":300,"1D":1800}[tf])
+                   and fresh(checks[tf]["candle_age_min"], {"4H":300,"1D":4500}[tf])
                    for tf in ("4H","1D"))
         source_ok=all(fresh(v) for v in ages.values()) and versions_match and candle_ok and htf_ok
         original_direction=r.get("direction","NONE")
@@ -102,9 +102,9 @@ def main():
     watches.sort(key=lambda x:({"EARLY":0,"CONFIRMING":1,"EXTENDED":2}.get(x["stage"],3),x["pair"]))
     # Ranked technical research candidates only; macro confirmation remains external.
     def candidate_rank(row):
-        m5 = row["timeframes"]["5m"]
-        atr = m5.get("atr14_pips") or 0
-        momentum = abs(m5.get("momentum_3bars_pips") or 0)
+        m15 = row["timeframes"]["15m"]
+        atr = m15.get("atr14_pips") or 0
+        momentum = abs(m15.get("momentum_3bars_pips") or 0)
         stage = {"EARLY": 3, "CONFIRMING": 2, "EXTENDED": 0}.get(row["stage"], 0)
         trend = 1 if row["trade_type"] == "TREND_CONTINUATION" else 0
         return (stage, trend, min(momentum / max(atr, 0.01), 2))
@@ -120,7 +120,7 @@ def main():
         "warnings":warnings,
         "scope":"11 TradingView-covered pairs; EUR/NZD NOT INCLUDED",
         "higher_timeframe_rule":"Daily and 4H required; countertrend is not reversal; levels are 20-bar closed-candle swings",
-        "priority_timeframes":["1D","4H","1H","30m","15m","5m"],
+        "priority_timeframes":["1D","4H","1H","30m","15m","5m_optional"],
         "max_closed_candle_age_minutes":{"5m":6,"15m":18,"30m":33,"4H":300,"1D":1800},
         "freshness_rule":"Any stale primary candle blocks pair from technical watchlist; collection timestamp alone never proves candle freshness.",
         "available_technical_watch_count":len(watches),
@@ -132,7 +132,7 @@ def main():
             for i,r in enumerate(top_five)],
         "top_five_note":"Up to five verified technical watches; macro and executable-price validation still required.",
         "technical_watchlist":[{"pair":r["pair"],"direction":r["direction"],"stage":r["stage"],"trade_type":r["trade_type"],"setup_status":r["setup_status"],
-            "last_closed_5m_utc":r["timeframes"]["5m"]["last_closed_utc"]} for r in watches],
+            "last_closed_15m_utc":r["timeframes"]["15m"]["last_closed_utc"]} for r in watches],
         "pairs":rows,
         "independent_checks_not_performed":["approved Trading Economics macro/event verification","economic calendar","rates/yields/OIS",
             "cross-pair cluster confirmation","ADR20","fresh bid/ask and spread","CFTC","retail sentiment","options"],
