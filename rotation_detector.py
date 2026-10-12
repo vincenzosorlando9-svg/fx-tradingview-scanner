@@ -188,38 +188,56 @@ def analyze(pair, tech, vol, now):
     x,y = [q["candles"] for q in (m15,m30)]
     five_minute_assist_available = bool(m5["technical"] and m5["candles"])
     output["five_minute_assist_available"] = five_minute_assist_available
-    # A directional candidate requires multi-timeframe agreement and price/candle alignment.
-    for direction, sign in (("BUY",1),("SELL",-1)):
-        aligned = a["bullish"] if sign == 1 else a["bearish"]
-        higher = (b["rsi"] is not None and b["rsi"] >= 48) if sign == 1 else (b["rsi"] is not None and b["rsi"] <= 52)
-        momentum = x["momentum_3_bars_pips"] * sign > 0
+    # Direction is detected before entry quality. A single lagging RSI/EMA cannot
+    # suppress a developing move; score independent price and indicator evidence.
+    candidates = []
+    for direction, sign in (("BUY", 1), ("SELL", -1)):
+        momentum = x["momentum_3_bars_pips"] * sign
         breakout = x["breakout_up"] if sign == 1 else x["breakout_down"]
-        if aligned and higher and momentum:
-            output["direction"] = direction
-            expansion = x["atr_expansion_ratio"] is not None and x["atr_expansion_ratio"] >= 1.15
-            move_pips = max(abs(x["momentum_3_bars_pips"]),abs(x["leg_move_pips"]))
+        structure = x["structure"] == ("higher_highs_higher_lows" if sign == 1 else "lower_highs_lower_lows")
+        ema = a["bullish"] if sign == 1 else a["bearish"]
+        close_vs_ema = (a["close"] - a["ema20"]) * sign > 0
+        rsi = a["rsi"] is not None and (a["rsi"] >= 50 if sign == 1 else a["rsi"] <= 50)
+        thirty_momentum = y["momentum_3_bars_pips"] * sign > 0
+        thirty_rsi = b["rsi"] is not None and (b["rsi"] >= 50 if sign == 1 else b["rsi"] <= 50)
+        # Momentum/price structure are primary; slower indicators are bonuses.
+        score = (3 if breakout else 0) + (2 if momentum > 0 else 0) + (2 if structure else 0)
+        score += int(ema) + int(close_vs_ema) + int(rsi) + int(thirty_momentum) + int(thirty_rsi)
+        if score >= 4 and (momentum > 0 or breakout):
+            candidates.append((score, direction, sign, breakout, momentum))
+    output["rotation_scores"] = {direction: score for score, direction, *_ in candidates}
+    if candidates:
+        candidates.sort(reverse=True)
+        score, direction, sign, breakout, momentum = candidates[0]
+        output["direction"] = direction
+        output["confidence"] = "TECHNICAL_ONLY"
+        output["direction_score"] = score
+        output["reasons"].append("15m_price_action_scored_without_mandatory_30m_confirmation")
+        if len(candidates) > 1 and candidates[0][0] == candidates[1][0]:
+            output["status"] = "CONFLICTING_DIRECTION"
+            output["direction"] = "NONE"
+            output["reasons"].append("bull_bear_scores_tied")
+        else:
+            move_pips = max(abs(x["momentum_3_bars_pips"]), abs(x["leg_move_pips"]))
             atr = x["atr14_pips"]
             output["stage"] = ("EXTENDED" if atr > 0 and move_pips >= 2.0 * atr
-                               else "CONFIRMING" if breakout or (atr > 0 and move_pips >= 0.75 * atr)
-                               else "EARLY")
-            output["status"] = "WATCH_FOR_ENTRY"
-            output["confidence"] = "TECHNICAL_ONLY"
-            output["reasons"] += ["15m_ema10_20_aligned", "30m_rsi_not_opposing", "closed_15m_momentum_aligned"]
-            output["move_origin_proxy"] = {"utc":x["leg_origin_proxy_utc"],"price":x["leg_origin_proxy_price"],"moved_pips":x["leg_move_pips"],"bars":x["leg_bars"],"method":"contiguous_closed_15m_directional_closes_proxy"}
+                               else "CONFIRMING" if breakout else "EARLY")
+            output["status"] = "DO_NOT_CHASE" if output["stage"] == "EXTENDED" else "WATCH_FOR_ENTRY"
+            output["move_origin_proxy"] = {
+                "utc": x["leg_origin_proxy_utc"], "price": x["leg_origin_proxy_price"],
+                "moved_pips": x["leg_move_pips"], "bars": x["leg_bars"],
+                "method": "contiguous_closed_15m_directional_closes_proxy"
+            }
+            output["entry"] = {
+                "type": "CONDITIONAL_BREAKOUT_OR_PULLBACK",
+                "level": x["prior_6_high"] if sign == 1 else x["prior_6_low"],
+                "condition": "Monitor break/retest or shallow pullback; independently verify quote, spread, nearby levels and news before execution"
+            }
+            output["reasons"].append("15m_direction_detected")
             if breakout:
-                output["reasons"].append("15m_closed_candle_breakout")
-            if expansion:
-                output["reasons"].append("15m_atr_expansion")
-            if output["stage"] == "EXTENDED":
-                output["stage"] = "EXTENDED"
-                output["status"] = "DO_NOT_CHASE"
-                output["reasons"].append("3_bar_move_exceeds_2x_atr")
-            # Conditional breakout boundary only. No stops/TP without verified
-            # executable prices, spread and market/catalyst confirmation.
-            output["entry"] = {"type":"CONDITIONAL_BREAKOUT_RETEST",
-                               "level":x["prior_6_high"] if sign==1 else x["prior_6_low"],
-                               "condition":"New closed 15m candle beyond level, then hold/retest; 5m indicators optional; confirm current quote and spread"}
-            break
+                output["reasons"].append("15m_closed_breakout")
+    else:
+        output["reasons"].append("NO_DIRECTION_WITH_MINIMUM_PRICE_ACTION_EVIDENCE")
     # Higher-timeframe classification is separate from the 5m/15m signal.
     # Do not promote a countertrend bounce into a confirmed reversal.
     h4 = output["timeframes"].get("4H", {})
@@ -245,9 +263,8 @@ def analyze(pair, tech, vol, now):
     direction = output["direction"]
     if dominant == "UNAVAILABLE" or output["higher_timeframe"]["daily_bias"] == "UNAVAILABLE":
         output["trade_type"] = "HIGHER_TIMEFRAME_UNVERIFIED"
-        output["status"] = "DATA_UNAVAILABLE"
         output["entry"] = None
-        output["reasons"].append("MISSING_DAILY_OR_4H_CLOSED_CANDLES")
+        output["reasons"].append("HIGHER_TIMEFRAME_UNVERIFIED_DIRECTION_ONLY")
     elif direction not in ("BUY", "SELL"):
         output["trade_type"] = "NO_ROTATION"
     elif dominant == "MIXED":
@@ -279,11 +296,12 @@ def analyze(pair, tech, vol, now):
             # Obstacle distance is advisory; 18 pips is not an automatic veto.
     if output["direction"] == "NONE":
         output["reasons"].append("NO_ALIGNED_15m_30m_ROTATION")
-        output["status"] = "NO_TRADE"
+        if output["status"] != "CONFLICTING_DIRECTION":
+            output["status"] = "NO_TRADE"
     # Optional 5m assistance is informational, never a blocking gate.
     if five_minute_assist_available:
         output["reasons"].append("5m_assist_available_nonblocking")
-    # Warn on discrepancies across providers (not assumed identical pricing).
+    # Divergence invalidates executable readiness but retains observed directional research.\n    # Warn on discrepancies across providers (not assumed identical pricing).
     diff = abs(a["close"] - x["closed_price"]) / pip_size(pair)
     output["price_source_difference_pips"] = round(diff,1)
     if diff > max(5, x["atr14_pips"]):
