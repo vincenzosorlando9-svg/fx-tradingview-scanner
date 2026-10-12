@@ -290,7 +290,44 @@ def analyze(pair, tech, vol, now):
             output["reasons"].append("COMPRESSED_RANGE_WITH_DIRECTIONAL_PRESSURE_PRECONFIRMATION")
         else:
             output["reasons"].append("NO_DIRECTION_WITH_MINIMUM_PRICE_ACTION_EVIDENCE")
-    # Higher-timeframe classification is separate from the 5m/15m signal.
+    # 15m + 30m agreement is the earliest directional trade candidate.
+    # 1H adds confirmation, while 4H is context. Neither is a veto.
+    # Trade candidate is NOT an order: live quote, spread, news and risk checks
+    # must pass before an actual execution decision.
+    def vote(row):
+        t, c = row.get("technical"), row.get("candles")
+        if not t or not c:
+            return "UNAVAILABLE"
+        buy = int(t["bullish"]) + int(t["rsi"] is not None and t["rsi"] >= 50) + int(c["momentum_3_bars_pips"] > 0)
+        sell = int(t["bearish"]) + int(t["rsi"] is not None and t["rsi"] <= 50) + int(c["momentum_3_bars_pips"] < 0)
+        if buy >= 2 and buy > sell:
+            return "BUY"
+        if sell >= 2 and sell > buy:
+            return "SELL"
+        return "MIXED"
+    votes = {tf: vote(output["timeframes"][tf]) for tf in ("15m", "30m", "1H")}
+    early_aligned = votes["15m"] in ("BUY", "SELL") and votes["15m"] == votes["30m"]
+    confirmed = early_aligned and votes["1H"] == votes["15m"]
+    output["timeframe_votes"] = votes
+    output["early_15m_30m_aligned"] = early_aligned
+    output["confirmed_15m_30m_1h"] = confirmed
+    output["trade_qualification"] = ("CONFIRMED_3TF_TECHNICAL" if confirmed
+        else "EARLY_2TF_TECHNICAL" if early_aligned else "NOT_ALIGNED")
+    if early_aligned:
+        output["direction"] = votes["15m"]
+        output["confidence"] = "TECHNICAL_ALIGNMENT_ONLY"
+        output["reasons"].append("15M_30M_ALIGNED_EARLY_TRADE_CANDIDATE")
+        if not confirmed:
+            output["reasons"].append("1H_NOT_YET_CONFIRMED")
+        if output["stage"] in ("WAIT", "EARLY_WATCH"):
+            output["stage"] = "CONFIRMING" if confirmed else "EARLY"
+            output["status"] = "WATCH_FOR_ENTRY"
+            level = x["prior_6_high"] if votes["15m"] == "BUY" else x["prior_6_low"]
+            output["entry"] = {"type": "CONDITIONAL_BREAK_OR_RETEST", "level": level,
+                "condition": "Confirm fresh price, spread, news, risk/reward and entry trigger before execution"}
+    elif output["direction"] in ("BUY", "SELL"):
+        output["reasons"].append("15M_30M_NOT_ALIGNED_DIRECTIONAL_WATCH_ONLY")
+    # Higher-timeframe classification is separate from intraday qualification.
     # Do not promote a countertrend bounce into a confirmed reversal.
     h4 = output["timeframes"].get("4H", {})
     daily = output["timeframes"].get("1D", {})
