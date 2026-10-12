@@ -97,6 +97,15 @@ def main():
         rows.append(row)
     watches=[r for r in rows if r["entry_readiness"]=="TECHNICAL_WATCH_ONLY"]
     watches.sort(key=lambda x:({"EARLY":0,"CONFIRMING":1,"EXTENDED":2}.get(x["stage"],3),x["pair"]))
+    # Ranked technical research candidates only; macro confirmation remains external.
+    def candidate_rank(row):
+        m5 = row["timeframes"]["5m"]
+        atr = m5.get("atr14_pips") or 0
+        momentum = abs(m5.get("momentum_3bars_pips") or 0)
+        stage = {"EARLY": 3, "CONFIRMING": 2, "EXTENDED": 0}.get(row["stage"], 0)
+        trend = 1 if row["trade_type"] == "TREND_CONTINUATION" else 0
+        return (stage, trend, min(momentum / max(atr, 0.01), 2))
+    top_five = sorted(watches, key=candidate_rank, reverse=True)[:5]
     dashboard={
         "generated_at_utc":now.isoformat(),
         "purpose":"TECHNICAL_RESEARCH_ONLY_NOT_AN_EXECUTABLE_TRADE_SIGNAL",
@@ -110,6 +119,13 @@ def main():
         "max_closed_candle_age_minutes":{"5m":6,"15m":18,"30m":33,"4H":300,"1D":1800},
         "freshness_rule":"Any stale primary candle blocks pair from technical watchlist; collection timestamp alone never proves candle freshness.",
         "available_technical_watch_count":len(watches),
+        "top_five_technical_candidates":[{"rank":i+1,"pair":r["pair"],
+            "direction":r["direction"],"stage":r["stage"],
+            "trade_type":r["trade_type"],"entry_readiness":r["entry_readiness"],
+            "move_origin_proxy":r.get("move_origin_proxy"),
+            "conditional_level_reference_only":r["conditional_level_reference_only"]}
+            for i,r in enumerate(top_five)],
+        "top_five_note":"Up to five verified technical watches; macro and executable-price validation still required.",
         "technical_watchlist":[{"pair":r["pair"],"direction":r["direction"],"stage":r["stage"],"trade_type":r["trade_type"],"setup_status":r["setup_status"],
             "last_closed_5m_utc":r["timeframes"]["5m"]["last_closed_utc"]} for r in watches],
         "pairs":rows,
