@@ -217,7 +217,12 @@ def tech_metrics(frame):
 def analyze(pair, tech, vol, now):
     output = {"pair": pair, "status": "WAIT", "direction": "NONE", "stage": "WAIT",
               "confidence": "UNVERIFIED", "entry": None, "stop": None, "tp1": None, "tp2": None,
-              "reasons": [], "timeframes": {}}
+              "reasons": [], "timeframes": {},
+              "macro_audit": {"status": "UNAVAILABLE", "macro_confirmed": False,
+                              "reason": "MACRO_SOURCES_NOT_AUTOMATED_IN_THIS_DETECTOR",
+                              "required": ["NEWS", "ECONOMIC_RELEASES", "CENTRAL_BANKS",
+                                           "YIELDS_OIS", "COMMODITIES", "CURRENCY_STRENGTH",
+                                           "POSITIONING", "CROSS_ASSETS"]}}
     t_time = parse_time(tech.get("collected_at_utc"))
     v_time = parse_time(vol.get("collected_at_utc"))
     t_age, v_age = age_minutes(now,t_time), age_minutes(now,v_time)
