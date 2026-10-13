@@ -214,6 +214,12 @@ def main():
         for skipped in gaps:
             print("UNRECORDED_SLOT",skipped["scheduled_for_utc"])
         entry["finished_at_utc"]=utcnow().isoformat()
+        if not entry["publication_requested"]:
+            # Failed/late data must NEVER overwrite the last validated board.
+            subprocess.run(["git","restore","--"]+
+                           [p for p in OUTPUT_FILES if p not in
+                            ("fx_scan_health.json","fx_scan_slot_history.json")],
+                           cwd=working,check=True)
         new_history=[s for s in previous
                      if s.get("scheduled_for_utc")!=entry["scheduled_for_utc"]]
         new_history.extend(gaps+[entry])
