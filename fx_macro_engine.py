@@ -112,6 +112,20 @@ def normalize(raw):
                      item.get("status"), market_date=item.get("market_date"),
                      retrieved_at_utc=item.get("retrieved_at_utc"))
         if pct: result["INDEX_DAILY_PCT:" + symbol] = pct
+    # Cboe official VIX is a daily historical close, not an intraday trade tick.
+    vix=raw.get("vix_cboe_official_daily") or {}
+    if valid_number(vix.get("value")):
+        m=metric(vix.get("value"),"index_points",vix.get("url"),
+                 vix.get("status"),market_date=vix.get("market_date"),
+                 retrieved_at_utc=vix.get("retrieved_at_utc"))
+        if m:
+            m["observation_type"]="CBOE_OFFICIAL_HISTORICAL_DAILY_CLOSE"
+            result["INDEX:VIX_CBOE"]=m
+        pct=metric(vix.get("daily_change_pct"),"daily_percent_change",
+                   vix.get("url"),vix.get("status"),
+                   market_date=vix.get("market_date"),
+                   retrieved_at_utc=vix.get("retrieved_at_utc"))
+        if pct: result["INDEX_DAILY_PCT:VIX_CBOE"]=pct
     fx = raw.get("forexcracked") or {}
     for pair, item in (fx.get("pairs") or {}).items():
         if pair not in PAIRS:
@@ -352,7 +366,7 @@ def evidence_for_pair(pair, spreads, deltas, metrics, now):
             add("DXY_BREADTH", preferred, x["change"], x["unit"],
                 "DXY includes EUR-heavy weighting; not independent USD FX proof",
                 "LOW_CONFIDENCE_REFERENCE")
-    for symbol in ("KOSPI", "NIKKEI", "CHINA_EQUITIES"):
+    for symbol in ("KOSPI", "NIKKEI", "CHINA_EQUITIES", "VIX_CBOE"):
         ix = metrics.get("INDEX:" + symbol)
         if ix and observation_recent(ix, now):
             risk.append({"driver": symbol + "_DATED_CONTEXT", "value": ix["v"],
