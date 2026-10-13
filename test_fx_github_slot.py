@@ -38,7 +38,6 @@ class FreeGitHubSlotTests(unittest.TestCase):
 
     def test_policy_has_no_orders_or_external_paid_service(self):
         workflow=Path(".github/workflows/rotation.yml").read_text()
-        self.assertIn("No", "No orders")
         self.assertNotIn("fx_external_scan.py",workflow)
         self.assertNotIn("Render",workflow)
 
