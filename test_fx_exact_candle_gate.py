@@ -1,7 +1,7 @@
 """Exact M15/M30/H1 cadence tests with synthetic server +3h stamps."""
 import unittest
 from datetime import datetime, timedelta, timezone
-from fx_exact_candle_gate import expected_slot,validate,market_open,PAIRS,TF_SECONDS
+from fx_exact_candle_gate import expected_slot,validate,market_open,continuous_during_market_hours,PAIRS,TF_SECONDS
 UTC=timezone.utc
 def d(hour,minute):
     return datetime(2026,10,13,hour,minute,tzinfo=UTC)
@@ -69,5 +69,18 @@ class ExactCandleGateTests(unittest.TestCase):
     def test_weekend_market_close(self):
         self.assertFalse(market_open(datetime(2026,10,17,16,tzinfo=UTC)))
         self.assertTrue(market_open(datetime(2026,10,13,16,tzinfo=UTC)))
+
+    def test_trading_weekend_is_not_missing_candles(self):
+        fri=datetime(2026,10,16,21,0,tzinfo=UTC)
+        sun=datetime(2026,10,18,21,15,tzinfo=UTC)
+        self.assertTrue(continuous_during_market_hours(fri,sun,900))
+        self.assertFalse(continuous_during_market_hours(
+            datetime(2026,10,13,20,0,tzinfo=UTC),
+            datetime(2026,10,13,20,30,tzinfo=UTC),900))
+
+    def test_one_hour_weekend_gap_is_not_missing_an_open_market_hour(self):
+        fri=datetime(2026,10,16,21,0,tzinfo=UTC)
+        sun=datetime(2026,10,18,22,0,tzinfo=UTC)
+        self.assertTrue(continuous_during_market_hours(fri,sun,3600))
 
 if __name__=="__main__":unittest.main()
