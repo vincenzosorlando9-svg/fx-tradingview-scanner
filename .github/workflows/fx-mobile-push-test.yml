@@ -1,0 +1,64 @@
+name: FX iPhone Notification Connection Test
+on:
+  push:
+    paths:
+      - '.github/workflows/fx-mobile-push-test.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: write
+jobs:
+  smoke-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Create assigned TEST alert with built-in GitHub token (no external API key)
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          OWNER: vincenzosorlando9-svg
+          RUN_URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          python - <<'PY'
+          import json, os, urllib.request, urllib.error
+          repo=os.environ["REPOSITORY"]
+          owner=os.environ["OWNER"]
+          token=os.environ["GITHUB_TOKEN"]
+          base=f"https://api.github.com/repos/{repo}/issues"
+          issue_title="[FX TEST] iPhone early-alert channel connected"
+          head={"Accept":"application/vnd.github+json",
+                "Authorization":"Bearer "+token,
+                "X-GitHub-Api-Version":"2022-11-28",
+                "User-Agent":"fx-early-alert-connection-test"}
+          def req(method,url,data=None):
+              payload=json.dumps(data).encode() if data else None
+              headers=dict(head)
+              if payload: headers["Content-Type"]="application/json"
+              with urllib.request.urlopen(urllib.request.Request(url,data=payload,headers=headers,method=method),timeout=25) as r:
+                  return json.load(r)
+          existing=req("GET",base+"?state=all&per_page=60")
+          found=next((x for x in existing if x.get("title")==issue_title),None)
+          if found:
+              print("Connection-test issue already exists:",found["html_url"])
+              raise SystemExit(0)
+          body=(
+              "## Connection test — NOT a forex trade signal\n\n"
+              "The no-key GitHub Actions alert channel has created this GitHub Issue "
+              "and assigned it to your account.\n\n"
+              "**Next:** Open GitHub Mobile on iPhone > Profile > Settings > Notifications "
+              "> enable push for 'Assignments to issues or pull requests'. Also allow "
+              "iOS Settings > Notifications > GitHub > Allow Notifications.\n\n"
+              "This checks issue creation/assignment, **not** actual device delivery. "
+              "Please confirm whether an iPhone notification appeared.\n\n"
+              "Future production issues will show [FX EARLY], [FX WATCH], "
+              "[FX MOMENTUM] or [FX CLUSTER]. They are research watches, never "
+              "verified trade entries.\n\n"
+              "Workflow: "+os.environ["RUN_URL"]+"\n"
+          )
+          issue=req("POST",base,{"title":issue_title,"body":body,"assignees":[owner]})
+          if owner not in [a.get("login") for a in issue.get("assignees",[])]:
+              issue=req("POST",base+"/"+str(issue["number"])+"/assignees",
+                        {"assignees":[owner]})
+          assert owner in [a.get("login") for a in issue.get("assignees",[])], "Test issue not assigned to owner"
+          print("Assigned connection test:",issue["html_url"])
+          PY
