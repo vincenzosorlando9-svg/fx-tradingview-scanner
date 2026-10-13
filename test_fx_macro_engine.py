@@ -8,6 +8,7 @@ from fx_macro_engine import (normalize, derived_deltas, rate_spreads,
                              build_pairs, news_context, observation_recent, metric)
 from fx_ff_actuals_collector import parse as parse_actuals
 from fx_cftc_tff_collector import parse as parse_cftc
+from fx_range_context import compute as compute_ranges, normalize_clock as range_clock, ny_rollover_start
 
 UTC = timezone.utc
 NOW = datetime(2026,10,13,12,0,tzinfo=UTC)
@@ -121,6 +122,36 @@ class PublicCollectorTests(unittest.TestCase):
         out = parse_cftc(row,NOW)
         self.assertEqual(out["currencies"]["CAD"]["leveraged_net"], -79625)
         self.assertEqual(out["currencies"]["CAD"]["open_interest_contracts"],371048)
+
+class SessionRangeTests(unittest.TestCase):
+    def test_provider_offset_has_strict_clock_tolerance(self):
+        offset = range_clock(NOW.timestamp()+3*3600, NOW)
+        self.assertEqual(offset, 10800)
+        with self.assertRaises(ValueError):
+            range_clock(NOW.timestamp()+19*60, NOW)
+
+    def test_ADR20_uses_completed_D1_and_running_day_context_only(self):
+        import calendar
+        offset=3*3600
+        start=ny_rollover_start(NOW)
+        # 20 completed prior D1 bars, then the open current running daily bar.
+        d1times=[start-timedelta(days=i) for i in range(20,0,-1)]+[start]
+        d1={
+          "t":[calendar.timegm(d.timetuple())+offset for d in d1times],
+          "o":[1.1000]*21, "h":[1.1040]*20+[1.1020],
+          "l":[1.1000]*21,"c":[1.1010]*21,
+        }
+        mt=[NOW-timedelta(minutes=15*i) for i in (4,3,2,1)]
+        m15={"t":[calendar.timegm(d.timetuple())+offset for d in mt],
+             "o":[1.1005]*4,"h":[1.1010]*4,
+             "l":[1.1005]*4,"c":[1.1006]*4}
+        result=compute_ranges("EURUSD",{"tf":{"D1":d1,"M15":m15}},offset,NOW)
+        self.assertEqual(result["ADR20_complete_days"],20)
+        self.assertAlmostEqual(result["ADR20_pips"],40)
+        self.assertAlmostEqual(result["NY17_day_used_pips"],20)
+        self.assertAlmostEqual(result["NY17_ADR_percent_used"],50)
+        self.assertFalse(result["used_for_signal_direction"])
+        self.assertFalse(result["D1_current_session_used_for_direction"])
 
 class FusionTests(unittest.TestCase):
     def test_date_only_yield_has_no_intraday_clock(self):
