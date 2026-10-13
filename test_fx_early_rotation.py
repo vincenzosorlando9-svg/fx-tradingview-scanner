@@ -25,7 +25,8 @@ class EarlyMoveTests(unittest.TestCase):
         aud=row(report,"AUDJPY")
         self.assertAlmostEqual(aud["latest_closed_m15"],110.349)
         self.assertNotEqual(aud["direction"],"SELL")
-        self.assertLess(report["jpy_cluster"]["jpy_strength_crosses"],3)\n        self.assertNotEqual(report["jpy_cluster"]["status"],"BROAD_JPY_STRENGTH")
+        self.assertLess(report["jpy_cluster"]["jpy_strength_crosses"],3)
+        self.assertNotEqual(report["jpy_cluster"]["status"],"BROAD_JPY_STRENGTH")
         self.assertEqual(aud["signal_timeframes"],["15m","30m"])
         self.assertEqual(aud["excluded_timeframes"],["5m"])
 
