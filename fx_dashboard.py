@@ -154,7 +154,7 @@ def main():
             "last_closed_15m_utc":r["timeframes"]["15m"]["last_closed_utc"]} for r in watches],
         "pairs":rows,
         "independent_checks_not_performed":["approved Trading Economics macro/event verification","economic calendar","rates/yields/OIS",
-            "cross-pair cluster confirmation","ADR20","fresh bid/ask and spread","CFTC","retail sentiment","options"],
+            "cross-pair cluster confirmation","ADR20","fresh bid/ask and spread","CFTC","retail sentiment"],
         "external_news_and_macro_status":"NOT_COLLECTED_BY_GITHUB_SCANNER_REQUIRES_FULL_REPORT_AUDIT",
         "reader_instructions":"Check timestamps and source_valid. Compare with independently verified quote, news, yields, currency cross-cluster and ADR before ANY trade recommendation. If missing/stale, say unverified. Never present this watchlist as live Top 3."
     }
