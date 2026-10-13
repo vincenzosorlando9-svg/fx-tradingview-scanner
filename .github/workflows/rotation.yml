@@ -27,7 +27,6 @@ on:
 
 permissions:
   contents: write
-  issues: write
 
 concurrency:
   group: fx-early-rotation
@@ -104,17 +103,11 @@ jobs:
           print('Dashboard structure validated; fresh individual candles remain separately gated by source_valid')
           PY
 
-      - name: Publish new assigned GitHub Issue early alerts (NO external API key)
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-          FX_ALERT_ASSIGNEE: vincenzosorlando9-svg
-        run: python fx_mobile_alerts.py
-
       - name: Commit signal files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add fx_volatility.json fx_technicals.json fx_rotation_signals.json fx_scan_dashboard.json fx_daily_weekly_levels.json fx_signal_history.json fx_early_rotation.json fx_mobile_alert_state.json
+          git add fx_volatility.json fx_technicals.json fx_rotation_signals.json fx_scan_dashboard.json fx_daily_weekly_levels.json fx_signal_history.json fx_early_rotation.json
           if ! git diff --cached --quiet; then
             git commit -m "Update synchronized FX technical dashboard with Daily and 4H"
             git pull --rebase origin main
