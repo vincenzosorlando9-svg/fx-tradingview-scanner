@@ -82,7 +82,7 @@ jobs:
       - name: Rebuild unified signal board against last verified macro snapshot
         run: python fx_signal_fusion_refresh.py
 
-      - name: Enforce the user-locked strength-first scan layout
+      - name: Enforce the locked FOREX MAIN SIGNAL 15-layer macro-first audit
         run: |
           python -m unittest -v test_fx_scan_report
           python fx_scan_report.py
@@ -112,18 +112,26 @@ jobs:
               assert all(t in frames for t in ('15m','30m','1H','4H','1D')), f"Missing timeframe for {p['pair']}"
               assert '5m' not in frames, f"5m signal timeframe unexpectedly present for {p['pair']}"
           report=json.loads(Path('fx_scan_report.json').read_text())
-          assert list(report)[:6]==['currency_strength','best_five_trading_pairs','five_detailed_trade_setups','complete_market_intelligence','all_11_pairs','final_scan_conclusion'], 'User-approved fixed presentation order changed'
+          expected=['report_header','current_currency_strength','top_five_published_ranking','critical_setups_omitted_from_top_five','fifteen_layer_macro_first_audit','full_15_layer_coverage_audit','final_forex_main_signal','layout_contract']
+          assert list(report)==expected, 'User-approved fixed 15-layer report order changed'
           assert report['layout_contract']['default_locked_until_user_explicitly_changes_it'] is True
-          assert len(report['all_11_pairs'])==11 and len(report['best_five_trading_pairs'])<=5
-          assert [p['pair'] for p in report['best_five_trading_pairs']]==[p['pair'] for p in json.loads(Path('fx_unified_signals.json').read_text())['top_five']]
-          print('Dashboard and locked currency-strength-first report layout verified')
+          assert report['layout_contract']['do_not_simplify_to_six_sections'] is True
+          assert len(report['fifteen_layer_macro_first_audit'])==15, '15 macro-first layers missing'
+          assert [v['layer'] for v in report['fifteen_layer_macro_first_audit']]==list(range(1,16))
+          assert len(report['full_15_layer_coverage_audit'])==15
+          assert len(report['fifteen_layer_macro_first_audit'][10]['pairs'])==11
+          published=json.loads(Path('fx_unified_signals.json').read_text())['top_five']
+          assert [p['pair'] for p in report['top_five_published_ranking']['rows']]==[p['pair'] for p in published]
+          assert all(p['published_score']==s['technical_research_rank_score'] for p,s in zip(report['top_five_published_ranking']['rows'],published))
+          assert Path('fx_scan_report.md').read_text().startswith('# FOREX MAIN SIGNAL — 15-LAYER MACRO-FIRST AUDIT')
+          print('Complete user-approved 15-layer macro-first report layout verified')
           PY
 
       - name: Commit signal files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add fx_volatility.json fx_technicals.json fx_rotation_signals.json fx_scan_dashboard.json fx_daily_weekly_levels.json fx_signal_history.json fx_early_rotation.json fx_unified_signals.json fx_scan_report.json
+          git add fx_volatility.json fx_technicals.json fx_rotation_signals.json fx_scan_dashboard.json fx_daily_weekly_levels.json fx_signal_history.json fx_early_rotation.json fx_unified_signals.json fx_scan_report.json fx_scan_report.md
           if ! git diff --cached --quiet; then
             git commit -m "Update synchronized FX technical dashboard with Daily and 4H"
             for attempt in 1 2 3 4 5; do
