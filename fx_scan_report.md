@@ -1,10 +1,10 @@
 # FOREX MAIN SIGNAL — 15-LAYER MACRO-FIRST AUDIT
 
-Tue Oct 13, 2026 10:25:38 AM ET | 11 pairs | Closed 15m/30m candles | No API keys
+Tue Oct 13, 2026 10:27:11 AM ET | 11 pairs | Closed 15m/30m candles | No API keys
 
 **OVERALL STATUS: PARTIAL — VERIFY PUBLISHER AND BROKER SOURCE LIMITATIONS**
 
-Latest separately fetched public technical feed: Tue Oct 13, 2026 10:25:38 AM ET. Authoritative unified rank: Tue Oct 13, 2026 10:25:45 AM ET. Macro fetch: Tue Oct 13, 2026 10:14:01 AM ET. Published scores and newer candle assessments are deliberately distinguished.
+Latest separately fetched public technical feed: Tue Oct 13, 2026 10:27:11 AM ET. Authoritative unified rank: Tue Oct 13, 2026 10:27:17 AM ET. Macro fetch: Tue Oct 13, 2026 10:14:01 AM ET. Published scores and newer candle assessments are deliberately distinguished.
 
 ## 1. BEST 5 TRADING PAIRS — BUY / SHORT
 
@@ -46,15 +46,16 @@ Counter-rotations are new candle evidence, NOT invented historical SELL/BUY epis
 **Coverage:** PARTIAL_DATED_OR_BLOCKED
 
 **Breaking central-bank policy watch (five-minute target)**
-Fast source collection: Tue Oct 13, 2026 10:25:45 AM ET
+Fast source collection: Tue Oct 13, 2026 10:27:17 AM ET
 Source gaps: Reuters_currency_page:UNAVAILABLE_HTTPERROR
 A missing approved news story never establishes that no policy headline occurred.
-| published_at_utc | provider | title | affected_pairs | market_reaction |
-| --- | --- | --- | --- | --- |
-| Tue Oct 13, 2026 9:36:54 AM ET | FXStreet_RSS | [Australian Dollar edges higher amid softer US Dollar, hawkish RBA](https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336) | AUDUSD, NZDUSD, EURUSD, GBPUSD, USDJPY, AUDJPY, USDCAD | NOT_VERIFIED |
-| Tue Oct 13, 2026 8:51:41 AM ET | FXStreet_RSS | [Australian Dollar: RBA inflation focus shapes outlook – Commerzbank](https://www.fxstreet.com/news/australian-dollar-rba-inflation-focus-shapes-outlook-commerzbank-202610131251) | AUDUSD, AUDJPY | NOT_VERIFIED |
+| published_at_utc | provider | title | affected_pairs | first_seen_at_utc | reaction_review |
+| --- | --- | --- | --- | --- | --- |
+| Tue Oct 13, 2026 9:36:54 AM ET | FXStreet_RSS | [Australian Dollar edges higher as softer US Dollar, hawkish RBA offer support](https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336) | AUDUSD, NZDUSD, EURUSD, GBPUSD, USDJPY, AUDJPY, USDCAD | Tue Oct 13, 2026 10:25:45 AM ET | USDJPY: TWO_COMPLETED_M15_BARS_OBSERVED (7.0/3.6p), RETROSPECTIVE; AUDJPY: FIRST_MOVE_REVERSED_ON_SECOND_M15 (8.1/-7.3p), RETROSPECTIVE |
+| Tue Oct 13, 2026 8:51:41 AM ET | FXStreet_RSS | [Australian Dollar: RBA inflation focus shapes outlook – Commerzbank](https://www.fxstreet.com/news/australian-dollar-rba-inflation-focus-shapes-outlook-commerzbank-202610131251) | AUDUSD, AUDJPY | Tue Oct 13, 2026 10:20:06 AM ET | AUDJPY: TWO_COMPLETED_M15_BARS_OBSERVED (1.9/5.4p), RETROSPECTIVE |
 
-Urgent price-reaction checks are NOT BUY/SELL conclusions from a headline.
+The publisher clock and first-seen time are DIFFERENT; RETROSPECTIVE means this was NOT detected ahead of the initial move.
+The first two event-aligned 15m changes describe price observations, NOT causal proof or executable trading signals.
 
 Sources: FXStreet_RSS: DATED_HEADLINES, Reuters_currency_page: UNAVAILABLE_HTTPERROR
 
@@ -274,7 +275,7 @@ Strongest: AUD, CAD, NZD | Weakest: JPY
 
 **Coverage:** SEPARATELY_OBSERVED_SITE_REPORTED_CLOSED_CANDLES
 
-Public technical feed collected: Tue Oct 13, 2026 10:25:38 AM ET
+Public technical feed collected: Tue Oct 13, 2026 10:27:11 AM ET
 | pair | latest_15m_closed_price | latest_15m_closed_at_utc | 15m_change_pips | 30m_change_pips | original_published_direction | updated_directional_assessment |
 | --- | --- | --- | --- | --- | --- | --- |
 | USDJPY | 158.050 | 2026-10-13T14:15:00+00:00 | -6.4 | -4.4 | BUY | BUY EPISODE / OPPOSING PRESSURE — WATCH |
@@ -312,16 +313,16 @@ Evidence is public completed-candle structure only. Trigger: Require supporting 
 
 | pair | 1H | 4H | Daily | 1H_EMA20 | 1H_EMA50 | 4H_EMA10 | 4H_EMA20 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| USDJPY | MIXED | MIXED | MIXED | 158.289 | 158.316 | 158.334 | 158.282 |
-| EURCAD | MIXED | BEARISH | BEARISH | 1.59384 | 1.59468 | 1.59373 | 1.59484 |
-| AUDJPY | MIXED | MIXED | MIXED | 110.312 | 110.319 | 110.366 | 110.314 |
+| USDJPY | MIXED | MIXED | MIXED | 158.288 | 158.315 | 158.332 | 158.281 |
+| EURCAD | MIXED | BEARISH | BEARISH | 1.59384 | 1.59468 | 1.59372 | 1.59483 |
+| AUDJPY | MIXED | MIXED | MIXED | 110.313 | 110.319 | 110.367 | 110.314 |
 | NZDJPY | BULLISH | MIXED | MIXED | 88.666 | 88.662 | 88.705 | 88.677 |
-| EURJPY | MIXED | MIXED | BEARISH | 176.981 | 177.074 | 177.081 | 177.144 |
-| USDCAD | BEARISH | MIXED | BULLISH | 1.42555 | 1.42581 | 1.42505 | 1.42507 |
-| NZDUSD | BULLISH | MIXED | BEARISH | 0.56016 | 0.56003 | 0.56024 | 0.56026 |
+| EURJPY | MIXED | MIXED | BEARISH | 176.980 | 177.074 | 177.079 | 177.143 |
+| USDCAD | BEARISH | MIXED | BULLISH | 1.42555 | 1.42581 | 1.42504 | 1.42507 |
+| NZDUSD | BULLISH | MIXED | BEARISH | 0.56016 | 0.56003 | 0.56025 | 0.56026 |
 | EURGBP | MIXED | BEARISH | BEARISH | 0.84495 | 0.84544 | 0.84511 | 0.84579 |
-| AUDUSD | BULLISH | MIXED | MIXED | 0.69691 | 0.69683 | 0.69705 | 0.69694 |
-| EURUSD | MIXED | BEARISH | BEARISH | 1.11809 | 1.11847 | 1.11840 | 1.11916 |
+| AUDUSD | BULLISH | MIXED | MIXED | 0.69691 | 0.69683 | 0.69706 | 0.69695 |
+| EURUSD | MIXED | BEARISH | BEARISH | 1.11808 | 1.11847 | 1.11839 | 1.11916 |
 | GBPUSD | BULLISH | MIXED | MIXED | 1.32318 | 1.32285 | 1.32323 | 1.32306 |
 
 These longer timeframes are contextual; they do not veto early completed 15m/30m rotations.
@@ -416,7 +417,7 @@ Recorded observations do not imply realized P&L. Wrong-way episodes remain visib
 
 ---
 
-## FINAL FOREX MAIN SIGNAL — Tue Oct 13, 2026 10:25:38 AM ET
+## FINAL FOREX MAIN SIGNAL — Tue Oct 13, 2026 10:27:11 AM ET
 
 Strongest technical breadth: AUD, CAD, NZD. Weakest: JPY.
 Highest published 50/50 research rank: USDJPY (published score; separate from later candles).
