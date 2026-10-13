@@ -1,7 +1,7 @@
 {
   "report_header": {
     "title": "FOREX MAIN SIGNAL — 15-LAYER MACRO-FIRST AUDIT",
-    "as_of_ET": "Tue Oct 13, 2026 10:27:11 AM ET",
+    "as_of_ET": "Tue Oct 13, 2026 10:30:29 AM ET",
     "status": "PARTIAL — VERIFY PUBLISHER AND BROKER SOURCE LIMITATIONS",
     "pair_count": 11,
     "signal_candles": [
@@ -9,12 +9,12 @@
       "30m"
     ],
     "api_keys_required": false,
-    "technical_feed_collected_at_utc": "2026-10-13T14:27:11.034024+00:00",
-    "unified_published_at_utc": "2026-10-13T14:27:17.742157+00:00",
+    "technical_feed_collected_at_utc": "2026-10-13T14:30:29.862652+00:00",
+    "unified_published_at_utc": "2026-10-13T14:30:36.198864+00:00",
     "macro_collected_at_utc": "2026-10-13T14:14:01.382149+00:00",
     "newer_observation_than_unified": false,
     "two_sources_not_automatically_synchronized": true,
-    "breaking_policy_news_asof_utc": "2026-10-13T14:27:17.624997+00:00",
+    "breaking_policy_news_asof_utc": "2026-10-13T14:30:36.045870+00:00",
     "breaking_policy_news_current_status": "HIGH_POLICY_REACTION_CHECK",
     "breaking_policy_news_gaps": [
       "Reuters_currency_page:UNAVAILABLE_HTTPERROR"
@@ -23,41 +23,786 @@
   },
   "top_five_published_ranking": {
     "heading": "BEST 5 TRADING PAIRS — PUBLISHED 50/50 TECHNICAL RANKING",
-    "as_published_at_utc": "2026-10-13T14:27:17.742157+00:00",
+    "as_published_at_utc": "2026-10-13T14:30:36.198864+00:00",
     "scores_not_probabilities": true,
     "updated_assessments_independent_from_published_scores": true,
     "rows": [
       {
         "rank": 1,
-        "pair": "USDJPY",
+        "pair": "AUDJPY",
         "direction": "BUY",
+        "stage": "EARLY_DIRECTIONAL_ROTATION",
+        "research_score": 0.925,
+        "early_opportunity_score_50pct": 1.0,
+        "trend_strength_score_50pct": 0.85,
+        "macro_alignment": "UNKNOWN",
+        "price_reference": 110.548,
+        "price_reference_closed_at_utc": "2026-10-13T14:15:00+00:00",
+        "price_type": "LAST_CLOSED_15M_REFERENCE_NOT_EXECUTABLE",
+        "entry_readiness": "EARLY_PROVISIONAL_WATCH",
+        "published_rank": 1,
+        "published_score": 0.925,
+        "updated_assessment": "BUY CONTINUATION — MONITOR",
+        "ranking_generated_at_utc": "2026-10-13T14:30:36.198864+00:00",
+        "newer_candle_observation_collected_at_utc": "2026-10-13T14:30:29.862652+00:00",
+        "published_ranking_preserved": true,
+        "score_is_not_trade_probability": true,
+        "breaking_policy_news": {
+          "status": "POLICY_REACTION_CHECK",
+          "as_of_utc": "2026-10-13T14:30:36.045870+00:00",
+          "recent_policy_headlines": [
+            {
+              "provider": "FXStreet_RSS",
+              "title": "Australian Dollar edges higher amid softer US Dollar, hawkish RBA",
+              "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
+              "published_at_utc": "2026-10-13T13:36:54+00:00",
+              "first_seen_at_utc": "2026-10-13T14:25:45.497161+00:00",
+              "publisher_age_minutes": 53.7,
+              "source_latency_to_first_seen_minutes": 48.9,
+              "type": "CENTRAL_BANK_POLICY",
+              "priority": "HIGH_POLICY_REACTION_CHECK",
+              "currencies": [
+                "AUD",
+                "USD"
+              ],
+              "affected_pairs": [
+                "AUDUSD",
+                "NZDUSD",
+                "EURUSD",
+                "GBPUSD",
+                "USDJPY",
+                "AUDJPY",
+                "USDCAD"
+              ],
+              "headline_direction": "UNDETERMINED",
+              "market_reaction": "NOT_VERIFIED",
+              "broker_execution_allowed": false,
+              "price_reaction_observation": {
+                "status": "FIRST_MOVE_REVERSED_ON_SECOND_M15",
+                "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+                "no_intrabar_assumptions": true,
+                "causal_link_verified": false,
+                "first_seen_before_market_reaction": false,
+                "pre_event_close_utc": "2026-10-13T13:30:00+00:00",
+                "pre_event_price": 110.476,
+                "first_post_event_close_utc": "2026-10-13T13:45:00+00:00",
+                "first_post_event_price": 110.557,
+                "first_post_event_change_pips": 8.1,
+                "second_post_event_close_utc": "2026-10-13T14:00:00+00:00",
+                "second_post_event_price": 110.484,
+                "second_post_event_change_pips": -7.3,
+                "net_two_bar_event_window_pips": 0.8,
+                "early_initial_direction": "UP",
+                "second_bar_direction": "DOWN",
+                "retrospective_if_first_seen_after_first_candle": true
+              }
+            },
+            {
+              "provider": "FXStreet_RSS",
+              "title": "Australian Dollar: RBA inflation focus shapes outlook – Commerzbank",
+              "url": "https://www.fxstreet.com/news/australian-dollar-rba-inflation-focus-shapes-outlook-commerzbank-202610131251",
+              "published_at_utc": "2026-10-13T12:51:41+00:00",
+              "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
+              "publisher_age_minutes": 98.9,
+              "source_latency_to_first_seen_minutes": 88.4,
+              "type": "CENTRAL_BANK_POLICY",
+              "priority": "HIGH_POLICY_REACTION_CHECK",
+              "currencies": [
+                "AUD"
+              ],
+              "affected_pairs": [
+                "AUDUSD",
+                "AUDJPY"
+              ],
+              "headline_direction": "UNDETERMINED",
+              "market_reaction": "NOT_VERIFIED",
+              "broker_execution_allowed": false,
+              "price_reaction_observation": {
+                "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+                "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+                "no_intrabar_assumptions": true,
+                "causal_link_verified": false,
+                "first_seen_before_market_reaction": false,
+                "pre_event_close_utc": "2026-10-13T12:45:00+00:00",
+                "pre_event_price": 110.364,
+                "first_post_event_close_utc": "2026-10-13T13:00:00+00:00",
+                "first_post_event_price": 110.383,
+                "first_post_event_change_pips": 1.9,
+                "second_post_event_close_utc": "2026-10-13T13:15:00+00:00",
+                "second_post_event_price": 110.437,
+                "second_post_event_change_pips": 5.4,
+                "net_two_bar_event_window_pips": 7.3,
+                "early_initial_direction": "UP",
+                "second_bar_direction": "UP",
+                "retrospective_if_first_seen_after_first_candle": true
+              }
+            }
+          ],
+          "recent_related_headlines": [
+            {
+              "provider": "FXStreet_RSS",
+              "title": "Australian Dollar edges higher amid softer US Dollar, hawkish RBA",
+              "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
+              "published_at_utc": "2026-10-13T13:36:54+00:00",
+              "first_seen_at_utc": "2026-10-13T14:25:45.497161+00:00",
+              "publisher_age_minutes": 53.7,
+              "source_latency_to_first_seen_minutes": 48.9,
+              "type": "CENTRAL_BANK_POLICY",
+              "priority": "HIGH_POLICY_REACTION_CHECK",
+              "currencies": [
+                "AUD",
+                "USD"
+              ],
+              "affected_pairs": [
+                "AUDUSD",
+                "NZDUSD",
+                "EURUSD",
+                "GBPUSD",
+                "USDJPY",
+                "AUDJPY",
+                "USDCAD"
+              ],
+              "headline_direction": "UNDETERMINED",
+              "market_reaction": "NOT_VERIFIED",
+              "broker_execution_allowed": false,
+              "price_reaction_observation": {
+                "status": "FIRST_MOVE_REVERSED_ON_SECOND_M15",
+                "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+                "no_intrabar_assumptions": true,
+                "causal_link_verified": false,
+                "first_seen_before_market_reaction": false,
+                "pre_event_close_utc": "2026-10-13T13:30:00+00:00",
+                "pre_event_price": 110.476,
+                "first_post_event_close_utc": "2026-10-13T13:45:00+00:00",
+                "first_post_event_price": 110.557,
+                "first_post_event_change_pips": 8.1,
+                "second_post_event_close_utc": "2026-10-13T14:00:00+00:00",
+                "second_post_event_price": 110.484,
+                "second_post_event_change_pips": -7.3,
+                "net_two_bar_event_window_pips": 0.8,
+                "early_initial_direction": "UP",
+                "second_bar_direction": "DOWN",
+                "retrospective_if_first_seen_after_first_candle": true
+              }
+            },
+            {
+              "provider": "FXStreet_RSS",
+              "title": "Australian Dollar: RBA inflation focus shapes outlook – Commerzbank",
+              "url": "https://www.fxstreet.com/news/australian-dollar-rba-inflation-focus-shapes-outlook-commerzbank-202610131251",
+              "published_at_utc": "2026-10-13T12:51:41+00:00",
+              "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
+              "publisher_age_minutes": 98.9,
+              "source_latency_to_first_seen_minutes": 88.4,
+              "type": "CENTRAL_BANK_POLICY",
+              "priority": "HIGH_POLICY_REACTION_CHECK",
+              "currencies": [
+                "AUD"
+              ],
+              "affected_pairs": [
+                "AUDUSD",
+                "AUDJPY"
+              ],
+              "headline_direction": "UNDETERMINED",
+              "market_reaction": "NOT_VERIFIED",
+              "broker_execution_allowed": false,
+              "price_reaction_observation": {
+                "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+                "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+                "no_intrabar_assumptions": true,
+                "causal_link_verified": false,
+                "first_seen_before_market_reaction": false,
+                "pre_event_close_utc": "2026-10-13T12:45:00+00:00",
+                "pre_event_price": 110.364,
+                "first_post_event_close_utc": "2026-10-13T13:00:00+00:00",
+                "first_post_event_price": 110.383,
+                "first_post_event_change_pips": 1.9,
+                "second_post_event_close_utc": "2026-10-13T13:15:00+00:00",
+                "second_post_event_price": 110.437,
+                "second_post_event_change_pips": 5.4,
+                "net_two_bar_event_window_pips": 7.3,
+                "early_initial_direction": "UP",
+                "second_bar_direction": "UP",
+                "retrospective_if_first_seen_after_first_candle": true
+              }
+            },
+            {
+              "provider": "FXStreet_RSS",
+              "title": "Australian Dollar : Key support at 0.6935 in focus against US Dollar   – UOB",
+              "url": "https://www.fxstreet.com/news/australian-dollar-key-support-at-06935-in-focus-against-us-dollar-uob-202610131404",
+              "published_at_utc": "2026-10-13T14:04:33+00:00",
+              "first_seen_at_utc": "2026-10-13T14:25:45.497161+00:00",
+              "publisher_age_minutes": 26.1,
+              "source_latency_to_first_seen_minutes": 21.2,
+              "type": "GENERAL",
+              "priority": "CONTEXT",
+              "currencies": [
+                "AUD",
+                "USD"
+              ],
+              "affected_pairs": [
+                "AUDUSD",
+                "NZDUSD",
+                "EURUSD",
+                "GBPUSD",
+                "USDJPY",
+                "AUDJPY",
+                "USDCAD"
+              ],
+              "headline_direction": "UNDETERMINED",
+              "market_reaction": "NOT_VERIFIED",
+              "broker_execution_allowed": false
+            },
+            {
+              "provider": "FXStreet_RSS",
+              "title": "Japanese Yen: Weakness may deepen toward 159.05 against US Dollar – UOB",
+              "url": "https://www.fxstreet.com/news/japanese-yen-weakness-may-deepen-toward-15905-against-us-dollar-uob-202610131241",
+              "published_at_utc": "2026-10-13T12:41:01+00:00",
+              "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
+              "publisher_age_minutes": 109.6,
+              "source_latency_to_first_seen_minutes": 99.1,
+              "type": "GENERAL",
+              "priority": "CONTEXT",
+              "currencies": [
+                "JPY",
+                "USD"
+              ],
+              "affected_pairs": [
+                "AUDUSD",
+                "NZDUSD",
+                "EURUSD",
+                "GBPUSD",
+                "USDJPY",
+                "AUDJPY",
+                "NZDJPY",
+                "EURJPY",
+                "USDCAD"
+              ],
+              "headline_direction": "UNDETERMINED",
+              "market_reaction": "NOT_VERIFIED",
+              "broker_execution_allowed": false
+            }
+          ],
+          "source_coverage_incomplete": true,
+          "source_statuses": {
+            "FXStreet_RSS": "DATED_HEADLINES",
+            "Reuters_currency_page": "UNAVAILABLE_HTTPERROR"
+          },
+          "requires_price_reaction_check": true,
+          "directional_vote": "NONE",
+          "source_is_not_confirmation": true,
+          "technical_rank_unchanged": true
+        },
+        "compact_side": {
+          "label": "BUY",
+          "color": "green",
+          "symbol": "🟢"
+        },
+        "compact_stage": "CONT",
+        "compact_one_line": "**1.**&nbsp;**AUD/JPY**&nbsp;🟢&nbsp;**BUY**&nbsp;CONT&nbsp;**0.925**"
+      },
+      {
+        "rank": 2,
+        "pair": "NZDJPY",
+        "direction": "BUY",
+        "stage": "EARLY_DIRECTIONAL_ROTATION",
+        "research_score": 0.925,
+        "early_opportunity_score_50pct": 1.0,
+        "trend_strength_score_50pct": 0.85,
+        "macro_alignment": "UNKNOWN",
+        "price_reference": 88.925,
+        "price_reference_closed_at_utc": "2026-10-13T14:15:00+00:00",
+        "price_type": "LAST_CLOSED_15M_REFERENCE_NOT_EXECUTABLE",
+        "entry_readiness": "EARLY_PROVISIONAL_WATCH",
+        "published_rank": 2,
+        "published_score": 0.925,
+        "updated_assessment": "BUY CONTINUATION — MONITOR",
+        "ranking_generated_at_utc": "2026-10-13T14:30:36.198864+00:00",
+        "newer_candle_observation_collected_at_utc": "2026-10-13T14:30:29.862652+00:00",
+        "published_ranking_preserved": true,
+        "score_is_not_trade_probability": true,
+        "breaking_policy_news": {
+          "status": "HEADLINES_PRESENT",
+          "as_of_utc": "2026-10-13T14:30:36.045870+00:00",
+          "recent_policy_headlines": [],
+          "recent_related_headlines": [
+            {
+              "provider": "FXStreet_RSS",
+              "title": "Japanese Yen: Weakness may deepen toward 159.05 against US Dollar – UOB",
+              "url": "https://www.fxstreet.com/news/japanese-yen-weakness-may-deepen-toward-15905-against-us-dollar-uob-202610131241",
+              "published_at_utc": "2026-10-13T12:41:01+00:00",
+              "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
+              "publisher_age_minutes": 109.6,
+              "source_latency_to_first_seen_minutes": 99.1,
+              "type": "GENERAL",
+              "priority": "CONTEXT",
+              "currencies": [
+                "JPY",
+                "USD"
+              ],
+              "affected_pairs": [
+                "AUDUSD",
+                "NZDUSD",
+                "EURUSD",
+                "GBPUSD",
+                "USDJPY",
+                "AUDJPY",
+                "NZDJPY",
+                "EURJPY",
+                "USDCAD"
+              ],
+              "headline_direction": "UNDETERMINED",
+              "market_reaction": "NOT_VERIFIED",
+              "broker_execution_allowed": false
+            }
+          ],
+          "source_coverage_incomplete": true,
+          "source_statuses": {
+            "FXStreet_RSS": "DATED_HEADLINES",
+            "Reuters_currency_page": "UNAVAILABLE_HTTPERROR"
+          },
+          "requires_price_reaction_check": false,
+          "directional_vote": "NONE",
+          "source_is_not_confirmation": true,
+          "technical_rank_unchanged": true
+        },
+        "compact_side": {
+          "label": "BUY",
+          "color": "green",
+          "symbol": "🟢"
+        },
+        "compact_stage": "CONT",
+        "compact_one_line": "**2.**&nbsp;**NZD/JPY**&nbsp;🟢&nbsp;**BUY**&nbsp;CONT&nbsp;**0.925**"
+      },
+      {
+        "rank": 3,
+        "pair": "USDCAD",
+        "direction": "SELL",
+        "stage": "EARLY_DIRECTIONAL_ROTATION",
+        "research_score": 0.925,
+        "early_opportunity_score_50pct": 1.0,
+        "trend_strength_score_50pct": 0.85,
+        "macro_alignment": "SUPPORTIVE",
+        "price_reference": 1.42251,
+        "price_reference_closed_at_utc": "2026-10-13T14:15:00+00:00",
+        "price_type": "LAST_CLOSED_15M_REFERENCE_NOT_EXECUTABLE",
+        "entry_readiness": "EARLY_PROVISIONAL_WATCH",
+        "published_rank": 3,
+        "published_score": 0.925,
+        "updated_assessment": "SELL EPISODE / MIXED CLOSED CANDLES — WAIT",
+        "ranking_generated_at_utc": "2026-10-13T14:30:36.198864+00:00",
+        "newer_candle_observation_collected_at_utc": "2026-10-13T14:30:29.862652+00:00",
+        "published_ranking_preserved": true,
+        "score_is_not_trade_probability": true,
+        "breaking_policy_news": {
+          "status": "POLICY_REACTION_CHECK",
+          "as_of_utc": "2026-10-13T14:30:36.045870+00:00",
+          "recent_policy_headlines": [
+            {
+              "provider": "FXStreet_RSS",
+              "title": "Australian Dollar edges higher amid softer US Dollar, hawkish RBA",
+              "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
+              "published_at_utc": "2026-10-13T13:36:54+00:00",
+              "first_seen_at_utc": "2026-10-13T14:25:45.497161+00:00",
+              "publisher_age_minutes": 53.7,
+              "source_latency_to_first_seen_minutes": 48.9,
+              "type": "CENTRAL_BANK_POLICY",
+              "priority": "HIGH_POLICY_REACTION_CHECK",
+              "currencies": [
+                "AUD",
+                "USD"
+              ],
+              "affected_pairs": [
+                "AUDUSD",
+                "NZDUSD",
+                "EURUSD",
+                "GBPUSD",
+                "USDJPY",
+                "AUDJPY",
+                "USDCAD"
+              ],
+              "headline_direction": "UNDETERMINED",
+              "market_reaction": "NOT_VERIFIED",
+              "broker_execution_allowed": false,
+              "price_reaction_observation": {
+                "status": "FIRST_MOVE_REVERSED_ON_SECOND_M15",
+                "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+                "no_intrabar_assumptions": true,
+                "causal_link_verified": false,
+                "first_seen_before_market_reaction": false,
+                "pre_event_close_utc": "2026-10-13T13:30:00+00:00",
+                "pre_event_price": 1.42304,
+                "first_post_event_close_utc": "2026-10-13T13:45:00+00:00",
+                "first_post_event_price": 1.4227,
+                "first_post_event_change_pips": -3.4,
+                "second_post_event_close_utc": "2026-10-13T14:00:00+00:00",
+                "second_post_event_price": 1.42316,
+                "second_post_event_change_pips": 4.6,
+                "net_two_bar_event_window_pips": 1.2,
+                "early_initial_direction": "DOWN",
+                "second_bar_direction": "UP",
+                "retrospective_if_first_seen_after_first_candle": true
+              }
+            }
+          ],
+          "recent_related_headlines": [
+            {
+              "provider": "FXStreet_RSS",
+              "title": "Australian Dollar edges higher amid softer US Dollar, hawkish RBA",
+              "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
+              "published_at_utc": "2026-10-13T13:36:54+00:00",
+              "first_seen_at_utc": "2026-10-13T14:25:45.497161+00:00",
+              "publisher_age_minutes": 53.7,
+              "source_latency_to_first_seen_minutes": 48.9,
+              "type": "CENTRAL_BANK_POLICY",
+              "priority": "HIGH_POLICY_REACTION_CHECK",
+              "currencies": [
+                "AUD",
+                "USD"
+              ],
+              "affected_pairs": [
+                "AUDUSD",
+                "NZDUSD",
+                "EURUSD",
+                "GBPUSD",
+                "USDJPY",
+                "AUDJPY",
+                "USDCAD"
+              ],
+              "headline_direction": "UNDETERMINED",
+              "market_reaction": "NOT_VERIFIED",
+              "broker_execution_allowed": false,
+              "price_reaction_observation": {
+                "status": "FIRST_MOVE_REVERSED_ON_SECOND_M15",
+                "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+                "no_intrabar_assumptions": true,
+                "causal_link_verified": false,
+                "first_seen_before_market_reaction": false,
+                "pre_event_close_utc": "2026-10-13T13:30:00+00:00",
+                "pre_event_price": 1.42304,
+                "first_post_event_close_utc": "2026-10-13T13:45:00+00:00",
+                "first_post_event_price": 1.4227,
+                "first_post_event_change_pips": -3.4,
+                "second_post_event_close_utc": "2026-10-13T14:00:00+00:00",
+                "second_post_event_price": 1.42316,
+                "second_post_event_change_pips": 4.6,
+                "net_two_bar_event_window_pips": 1.2,
+                "early_initial_direction": "DOWN",
+                "second_bar_direction": "UP",
+                "retrospective_if_first_seen_after_first_candle": true
+              }
+            },
+            {
+              "provider": "FXStreet_RSS",
+              "title": "US Dollar: Supported but capped by CPI risks – OCBC",
+              "url": "https://www.fxstreet.com/news/us-dollar-supported-but-capped-by-cpi-risks-ocbc-202610131316",
+              "published_at_utc": "2026-10-13T13:16:33+00:00",
+              "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
+              "publisher_age_minutes": 74.1,
+              "source_latency_to_first_seen_minutes": 63.6,
+              "type": "MACRO_DATA_OR_YIELD",
+              "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+              "currencies": [
+                "USD"
+              ],
+              "affected_pairs": [
+                "AUDUSD",
+                "NZDUSD",
+                "EURUSD",
+                "GBPUSD",
+                "USDJPY",
+                "USDCAD"
+              ],
+              "headline_direction": "UNDETERMINED",
+              "market_reaction": "NOT_VERIFIED",
+              "broker_execution_allowed": false
+            },
+            {
+              "provider": "FXStreet_RSS",
+              "title": "Canadian Dollar: Modest gains against US Dollar - Scotiabank",
+              "url": "https://www.fxstreet.com/news/canadian-dollar-modest-gains-against-us-dollar-scotiabank-202610131423",
+              "published_at_utc": "2026-10-13T14:23:57+00:00",
+              "first_seen_at_utc": "2026-10-13T14:30:36.045870+00:00",
+              "publisher_age_minutes": 6.7,
+              "source_latency_to_first_seen_minutes": 6.7,
+              "type": "GENERAL",
+              "priority": "CONTEXT",
+              "currencies": [
+                "CAD",
+                "USD"
+              ],
+              "affected_pairs": [
+                "AUDUSD",
+                "NZDUSD",
+                "EURUSD",
+                "GBPUSD",
+                "USDJPY",
+                "EURCAD",
+                "USDCAD"
+              ],
+              "headline_direction": "UNDETERMINED",
+              "market_reaction": "NOT_VERIFIED",
+              "broker_execution_allowed": false
+            },
+            {
+              "provider": "FXStreet_RSS",
+              "title": "Australian Dollar : Key support at 0.6935 in focus against US Dollar   – UOB",
+              "url": "https://www.fxstreet.com/news/australian-dollar-key-support-at-06935-in-focus-against-us-dollar-uob-202610131404",
+              "published_at_utc": "2026-10-13T14:04:33+00:00",
+              "first_seen_at_utc": "2026-10-13T14:25:45.497161+00:00",
+              "publisher_age_minutes": 26.1,
+              "source_latency_to_first_seen_minutes": 21.2,
+              "type": "GENERAL",
+              "priority": "CONTEXT",
+              "currencies": [
+                "AUD",
+                "USD"
+              ],
+              "affected_pairs": [
+                "AUDUSD",
+                "NZDUSD",
+                "EURUSD",
+                "GBPUSD",
+                "USDJPY",
+                "AUDJPY",
+                "USDCAD"
+              ],
+              "headline_direction": "UNDETERMINED",
+              "market_reaction": "NOT_VERIFIED",
+              "broker_execution_allowed": false
+            },
+            {
+              "provider": "FXStreet_RSS",
+              "title": "Indian Rupee: RBI defense limits losses against US Dollar – Societe Generale",
+              "url": "https://www.fxstreet.com/news/indian-rupee-rbi-defense-limits-losses-against-us-dollar-societe-generale-202610131331",
+              "published_at_utc": "2026-10-13T13:31:02+00:00",
+              "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
+              "publisher_age_minutes": 59.6,
+              "source_latency_to_first_seen_minutes": 49.1,
+              "type": "GENERAL",
+              "priority": "CONTEXT",
+              "currencies": [
+                "USD"
+              ],
+              "affected_pairs": [
+                "AUDUSD",
+                "NZDUSD",
+                "EURUSD",
+                "GBPUSD",
+                "USDJPY",
+                "USDCAD"
+              ],
+              "headline_direction": "UNDETERMINED",
+              "market_reaction": "NOT_VERIFIED",
+              "broker_execution_allowed": false
+            },
+            {
+              "provider": "FXStreet_RSS",
+              "title": "Euro: Lower year-end target at 1.13 against US Dollar – ING",
+              "url": "https://www.fxstreet.com/news/euro-lower-year-end-target-at-113-against-us-dollar-ing-202610131304",
+              "published_at_utc": "2026-10-13T13:04:42+00:00",
+              "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
+              "publisher_age_minutes": 85.9,
+              "source_latency_to_first_seen_minutes": 75.4,
+              "type": "GENERAL",
+              "priority": "CONTEXT",
+              "currencies": [
+                "EUR",
+                "USD"
+              ],
+              "affected_pairs": [
+                "AUDUSD",
+                "NZDUSD",
+                "EURUSD",
+                "GBPUSD",
+                "USDJPY",
+                "EURJPY",
+                "EURCAD",
+                "USDCAD",
+                "EURGBP"
+              ],
+              "headline_direction": "UNDETERMINED",
+              "market_reaction": "NOT_VERIFIED",
+              "broker_execution_allowed": false
+            },
+            {
+              "provider": "FXStreet_RSS",
+              "title": "Japanese Yen: Weakness may deepen toward 159.05 against US Dollar – UOB",
+              "url": "https://www.fxstreet.com/news/japanese-yen-weakness-may-deepen-toward-15905-against-us-dollar-uob-202610131241",
+              "published_at_utc": "2026-10-13T12:41:01+00:00",
+              "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
+              "publisher_age_minutes": 109.6,
+              "source_latency_to_first_seen_minutes": 99.1,
+              "type": "GENERAL",
+              "priority": "CONTEXT",
+              "currencies": [
+                "JPY",
+                "USD"
+              ],
+              "affected_pairs": [
+                "AUDUSD",
+                "NZDUSD",
+                "EURUSD",
+                "GBPUSD",
+                "USDJPY",
+                "AUDJPY",
+                "NZDJPY",
+                "EURJPY",
+                "USDCAD"
+              ],
+              "headline_direction": "UNDETERMINED",
+              "market_reaction": "NOT_VERIFIED",
+              "broker_execution_allowed": false
+            }
+          ],
+          "source_coverage_incomplete": true,
+          "source_statuses": {
+            "FXStreet_RSS": "DATED_HEADLINES",
+            "Reuters_currency_page": "UNAVAILABLE_HTTPERROR"
+          },
+          "requires_price_reaction_check": true,
+          "directional_vote": "NONE",
+          "source_is_not_confirmation": true,
+          "technical_rank_unchanged": true
+        },
+        "compact_side": {
+          "label": "SHORT",
+          "color": "red",
+          "symbol": "🔴"
+        },
+        "compact_stage": "WAIT",
+        "compact_one_line": "**3.**&nbsp;**USD/CAD**&nbsp;🔴&nbsp;**SHORT**&nbsp;WAIT&nbsp;**0.925**"
+      },
+      {
+        "rank": 4,
+        "pair": "EURCAD",
+        "direction": "SELL",
         "stage": "EARLY_DIRECTIONAL_ROTATION",
         "research_score": 0.9,
         "early_opportunity_score_50pct": 1.0,
         "trend_strength_score_50pct": 0.8,
         "macro_alignment": "SUPPORTIVE",
+        "price_reference": 1.5923,
+        "price_reference_closed_at_utc": "2026-10-13T14:15:00+00:00",
+        "price_type": "LAST_CLOSED_15M_REFERENCE_NOT_EXECUTABLE",
+        "entry_readiness": "EARLY_PROVISIONAL_WATCH",
+        "published_rank": 4,
+        "published_score": 0.9,
+        "updated_assessment": "SELL EPISODE / MIXED CLOSED CANDLES — WAIT",
+        "ranking_generated_at_utc": "2026-10-13T14:30:36.198864+00:00",
+        "newer_candle_observation_collected_at_utc": "2026-10-13T14:30:29.862652+00:00",
+        "published_ranking_preserved": true,
+        "score_is_not_trade_probability": true,
+        "breaking_policy_news": {
+          "status": "HEADLINES_PRESENT",
+          "as_of_utc": "2026-10-13T14:30:36.045870+00:00",
+          "recent_policy_headlines": [],
+          "recent_related_headlines": [
+            {
+              "provider": "FXStreet_RSS",
+              "title": "Canadian Dollar: Modest gains against US Dollar - Scotiabank",
+              "url": "https://www.fxstreet.com/news/canadian-dollar-modest-gains-against-us-dollar-scotiabank-202610131423",
+              "published_at_utc": "2026-10-13T14:23:57+00:00",
+              "first_seen_at_utc": "2026-10-13T14:30:36.045870+00:00",
+              "publisher_age_minutes": 6.7,
+              "source_latency_to_first_seen_minutes": 6.7,
+              "type": "GENERAL",
+              "priority": "CONTEXT",
+              "currencies": [
+                "CAD",
+                "USD"
+              ],
+              "affected_pairs": [
+                "AUDUSD",
+                "NZDUSD",
+                "EURUSD",
+                "GBPUSD",
+                "USDJPY",
+                "EURCAD",
+                "USDCAD"
+              ],
+              "headline_direction": "UNDETERMINED",
+              "market_reaction": "NOT_VERIFIED",
+              "broker_execution_allowed": false
+            },
+            {
+              "provider": "FXStreet_RSS",
+              "title": "Euro: Lower year-end target at 1.13 against US Dollar – ING",
+              "url": "https://www.fxstreet.com/news/euro-lower-year-end-target-at-113-against-us-dollar-ing-202610131304",
+              "published_at_utc": "2026-10-13T13:04:42+00:00",
+              "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
+              "publisher_age_minutes": 85.9,
+              "source_latency_to_first_seen_minutes": 75.4,
+              "type": "GENERAL",
+              "priority": "CONTEXT",
+              "currencies": [
+                "EUR",
+                "USD"
+              ],
+              "affected_pairs": [
+                "AUDUSD",
+                "NZDUSD",
+                "EURUSD",
+                "GBPUSD",
+                "USDJPY",
+                "EURJPY",
+                "EURCAD",
+                "USDCAD",
+                "EURGBP"
+              ],
+              "headline_direction": "UNDETERMINED",
+              "market_reaction": "NOT_VERIFIED",
+              "broker_execution_allowed": false
+            }
+          ],
+          "source_coverage_incomplete": true,
+          "source_statuses": {
+            "FXStreet_RSS": "DATED_HEADLINES",
+            "Reuters_currency_page": "UNAVAILABLE_HTTPERROR"
+          },
+          "requires_price_reaction_check": false,
+          "directional_vote": "NONE",
+          "source_is_not_confirmation": true,
+          "technical_rank_unchanged": true
+        },
+        "compact_side": {
+          "label": "SHORT",
+          "color": "red",
+          "symbol": "🔴"
+        },
+        "compact_stage": "WAIT",
+        "compact_one_line": "**4.**&nbsp;**EUR/CAD**&nbsp;🔴&nbsp;**SHORT**&nbsp;WAIT&nbsp;**0.900**"
+      },
+      {
+        "rank": 5,
+        "pair": "USDJPY",
+        "direction": "BUY",
+        "stage": "EARLY_DIRECTIONAL_ROTATION",
+        "research_score": 0.775,
+        "early_opportunity_score_50pct": 1.0,
+        "trend_strength_score_50pct": 0.55,
+        "macro_alignment": "SUPPORTIVE",
         "price_reference": 158.376,
         "price_reference_closed_at_utc": "2026-10-13T14:15:00+00:00",
         "price_type": "LAST_CLOSED_15M_REFERENCE_NOT_EXECUTABLE",
         "entry_readiness": "EARLY_PROVISIONAL_WATCH",
-        "published_rank": 1,
-        "published_score": 0.9,
-        "updated_assessment": "BUY EPISODE / OPPOSING PRESSURE — WATCH",
-        "ranking_generated_at_utc": "2026-10-13T14:27:17.742157+00:00",
-        "newer_candle_observation_collected_at_utc": "2026-10-13T14:27:11.034024+00:00",
+        "published_rank": 5,
+        "published_score": 0.775,
+        "updated_assessment": "BUY EPISODE / MIXED CLOSED CANDLES — WAIT",
+        "ranking_generated_at_utc": "2026-10-13T14:30:36.198864+00:00",
+        "newer_candle_observation_collected_at_utc": "2026-10-13T14:30:29.862652+00:00",
         "published_ranking_preserved": true,
         "score_is_not_trade_probability": true,
         "breaking_policy_news": {
           "status": "POLICY_REACTION_CHECK",
-          "as_of_utc": "2026-10-13T14:27:17.624997+00:00",
+          "as_of_utc": "2026-10-13T14:30:36.045870+00:00",
           "recent_policy_headlines": [
             {
               "provider": "FXStreet_RSS",
-              "title": "Australian Dollar edges higher as softer US Dollar, hawkish RBA offer support",
+              "title": "Australian Dollar edges higher amid softer US Dollar, hawkish RBA",
               "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
               "published_at_utc": "2026-10-13T13:36:54+00:00",
               "first_seen_at_utc": "2026-10-13T14:25:45.497161+00:00",
-              "publisher_age_minutes": 50.4,
+              "publisher_age_minutes": 53.7,
               "source_latency_to_first_seen_minutes": 48.9,
               "type": "CENTRAL_BANK_POLICY",
               "priority": "HIGH_POLICY_REACTION_CHECK",
@@ -101,11 +846,11 @@
           "recent_related_headlines": [
             {
               "provider": "FXStreet_RSS",
-              "title": "Australian Dollar edges higher as softer US Dollar, hawkish RBA offer support",
+              "title": "Australian Dollar edges higher amid softer US Dollar, hawkish RBA",
               "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
               "published_at_utc": "2026-10-13T13:36:54+00:00",
               "first_seen_at_utc": "2026-10-13T14:25:45.497161+00:00",
-              "publisher_age_minutes": 50.4,
+              "publisher_age_minutes": 53.7,
               "source_latency_to_first_seen_minutes": 48.9,
               "type": "CENTRAL_BANK_POLICY",
               "priority": "HIGH_POLICY_REACTION_CHECK",
@@ -151,7 +896,7 @@
               "url": "https://www.fxstreet.com/news/us-dollar-supported-but-capped-by-cpi-risks-ocbc-202610131316",
               "published_at_utc": "2026-10-13T13:16:33+00:00",
               "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-              "publisher_age_minutes": 70.7,
+              "publisher_age_minutes": 74.1,
               "source_latency_to_first_seen_minutes": 63.6,
               "type": "MACRO_DATA_OR_YIELD",
               "priority": "MEDIUM_RELEASE_REACTION_CHECK",
@@ -172,11 +917,38 @@
             },
             {
               "provider": "FXStreet_RSS",
+              "title": "Canadian Dollar: Modest gains against US Dollar - Scotiabank",
+              "url": "https://www.fxstreet.com/news/canadian-dollar-modest-gains-against-us-dollar-scotiabank-202610131423",
+              "published_at_utc": "2026-10-13T14:23:57+00:00",
+              "first_seen_at_utc": "2026-10-13T14:30:36.045870+00:00",
+              "publisher_age_minutes": 6.7,
+              "source_latency_to_first_seen_minutes": 6.7,
+              "type": "GENERAL",
+              "priority": "CONTEXT",
+              "currencies": [
+                "CAD",
+                "USD"
+              ],
+              "affected_pairs": [
+                "AUDUSD",
+                "NZDUSD",
+                "EURUSD",
+                "GBPUSD",
+                "USDJPY",
+                "EURCAD",
+                "USDCAD"
+              ],
+              "headline_direction": "UNDETERMINED",
+              "market_reaction": "NOT_VERIFIED",
+              "broker_execution_allowed": false
+            },
+            {
+              "provider": "FXStreet_RSS",
               "title": "Australian Dollar : Key support at 0.6935 in focus against US Dollar   – UOB",
               "url": "https://www.fxstreet.com/news/australian-dollar-key-support-at-06935-in-focus-against-us-dollar-uob-202610131404",
               "published_at_utc": "2026-10-13T14:04:33+00:00",
               "first_seen_at_utc": "2026-10-13T14:25:45.497161+00:00",
-              "publisher_age_minutes": 22.7,
+              "publisher_age_minutes": 26.1,
               "source_latency_to_first_seen_minutes": 21.2,
               "type": "GENERAL",
               "priority": "CONTEXT",
@@ -203,7 +975,7 @@
               "url": "https://www.fxstreet.com/news/indian-rupee-rbi-defense-limits-losses-against-us-dollar-societe-generale-202610131331",
               "published_at_utc": "2026-10-13T13:31:02+00:00",
               "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-              "publisher_age_minutes": 56.3,
+              "publisher_age_minutes": 59.6,
               "source_latency_to_first_seen_minutes": 49.1,
               "type": "GENERAL",
               "priority": "CONTEXT",
@@ -228,7 +1000,7 @@
               "url": "https://www.fxstreet.com/news/euro-lower-year-end-target-at-113-against-us-dollar-ing-202610131304",
               "published_at_utc": "2026-10-13T13:04:42+00:00",
               "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-              "publisher_age_minutes": 82.6,
+              "publisher_age_minutes": 85.9,
               "source_latency_to_first_seen_minutes": 75.4,
               "type": "GENERAL",
               "priority": "CONTEXT",
@@ -257,7 +1029,7 @@
               "url": "https://www.fxstreet.com/news/japanese-yen-weakness-may-deepen-toward-15905-against-us-dollar-uob-202610131241",
               "published_at_utc": "2026-10-13T12:41:01+00:00",
               "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-              "publisher_age_minutes": 106.3,
+              "publisher_age_minutes": 109.6,
               "source_latency_to_first_seen_minutes": 99.1,
               "type": "GENERAL",
               "priority": "CONTEXT",
@@ -296,535 +1068,14 @@
           "color": "green",
           "symbol": "🟢"
         },
-        "compact_stage": "WATCH",
-        "compact_one_line": "**1.**&nbsp;**USD/JPY**&nbsp;🟢&nbsp;**BUY**&nbsp;WATCH&nbsp;**0.900**"
-      },
-      {
-        "rank": 2,
-        "pair": "EURCAD",
-        "direction": "SELL",
-        "stage": "EARLY_DIRECTIONAL_ROTATION",
-        "research_score": 0.9,
-        "early_opportunity_score_50pct": 1.0,
-        "trend_strength_score_50pct": 0.8,
-        "macro_alignment": "SUPPORTIVE",
-        "price_reference": 1.5923,
-        "price_reference_closed_at_utc": "2026-10-13T14:15:00+00:00",
-        "price_type": "LAST_CLOSED_15M_REFERENCE_NOT_EXECUTABLE",
-        "entry_readiness": "EARLY_PROVISIONAL_WATCH",
-        "published_rank": 2,
-        "published_score": 0.9,
-        "updated_assessment": "SELL EPISODE / OPPOSING PRESSURE — WATCH",
-        "ranking_generated_at_utc": "2026-10-13T14:27:17.742157+00:00",
-        "newer_candle_observation_collected_at_utc": "2026-10-13T14:27:11.034024+00:00",
-        "published_ranking_preserved": true,
-        "score_is_not_trade_probability": true,
-        "breaking_policy_news": {
-          "status": "HEADLINES_PRESENT",
-          "as_of_utc": "2026-10-13T14:27:17.624997+00:00",
-          "recent_policy_headlines": [],
-          "recent_related_headlines": [
-            {
-              "provider": "FXStreet_RSS",
-              "title": "Euro: Lower year-end target at 1.13 against US Dollar – ING",
-              "url": "https://www.fxstreet.com/news/euro-lower-year-end-target-at-113-against-us-dollar-ing-202610131304",
-              "published_at_utc": "2026-10-13T13:04:42+00:00",
-              "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-              "publisher_age_minutes": 82.6,
-              "source_latency_to_first_seen_minutes": 75.4,
-              "type": "GENERAL",
-              "priority": "CONTEXT",
-              "currencies": [
-                "EUR",
-                "USD"
-              ],
-              "affected_pairs": [
-                "AUDUSD",
-                "NZDUSD",
-                "EURUSD",
-                "GBPUSD",
-                "USDJPY",
-                "EURJPY",
-                "EURCAD",
-                "USDCAD",
-                "EURGBP"
-              ],
-              "headline_direction": "UNDETERMINED",
-              "market_reaction": "NOT_VERIFIED",
-              "broker_execution_allowed": false
-            }
-          ],
-          "source_coverage_incomplete": true,
-          "source_statuses": {
-            "FXStreet_RSS": "DATED_HEADLINES",
-            "Reuters_currency_page": "UNAVAILABLE_HTTPERROR"
-          },
-          "requires_price_reaction_check": false,
-          "directional_vote": "NONE",
-          "source_is_not_confirmation": true,
-          "technical_rank_unchanged": true
-        },
-        "compact_side": {
-          "label": "SHORT",
-          "color": "red",
-          "symbol": "🔴"
-        },
-        "compact_stage": "WATCH",
-        "compact_one_line": "**2.**&nbsp;**EUR/CAD**&nbsp;🔴&nbsp;**SHORT**&nbsp;WATCH&nbsp;**0.900**"
-      },
-      {
-        "rank": 3,
-        "pair": "AUDJPY",
-        "direction": "BUY",
-        "stage": "EARLY_DIRECTIONAL_ROTATION",
-        "research_score": 0.775,
-        "early_opportunity_score_50pct": 1.0,
-        "trend_strength_score_50pct": 0.55,
-        "macro_alignment": "UNKNOWN",
-        "price_reference": 110.548,
-        "price_reference_closed_at_utc": "2026-10-13T14:15:00+00:00",
-        "price_type": "LAST_CLOSED_15M_REFERENCE_NOT_EXECUTABLE",
-        "entry_readiness": "EARLY_PROVISIONAL_WATCH",
-        "published_rank": 3,
-        "published_score": 0.775,
-        "updated_assessment": "BUY EPISODE / OPPOSING PRESSURE — WATCH",
-        "ranking_generated_at_utc": "2026-10-13T14:27:17.742157+00:00",
-        "newer_candle_observation_collected_at_utc": "2026-10-13T14:27:11.034024+00:00",
-        "published_ranking_preserved": true,
-        "score_is_not_trade_probability": true,
-        "breaking_policy_news": {
-          "status": "POLICY_REACTION_CHECK",
-          "as_of_utc": "2026-10-13T14:27:17.624997+00:00",
-          "recent_policy_headlines": [
-            {
-              "provider": "FXStreet_RSS",
-              "title": "Australian Dollar edges higher as softer US Dollar, hawkish RBA offer support",
-              "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
-              "published_at_utc": "2026-10-13T13:36:54+00:00",
-              "first_seen_at_utc": "2026-10-13T14:25:45.497161+00:00",
-              "publisher_age_minutes": 50.4,
-              "source_latency_to_first_seen_minutes": 48.9,
-              "type": "CENTRAL_BANK_POLICY",
-              "priority": "HIGH_POLICY_REACTION_CHECK",
-              "currencies": [
-                "AUD",
-                "USD"
-              ],
-              "affected_pairs": [
-                "AUDUSD",
-                "NZDUSD",
-                "EURUSD",
-                "GBPUSD",
-                "USDJPY",
-                "AUDJPY",
-                "USDCAD"
-              ],
-              "headline_direction": "UNDETERMINED",
-              "market_reaction": "NOT_VERIFIED",
-              "broker_execution_allowed": false,
-              "price_reaction_observation": {
-                "status": "FIRST_MOVE_REVERSED_ON_SECOND_M15",
-                "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-                "no_intrabar_assumptions": true,
-                "causal_link_verified": false,
-                "first_seen_before_market_reaction": false,
-                "pre_event_close_utc": "2026-10-13T13:30:00+00:00",
-                "pre_event_price": 110.476,
-                "first_post_event_close_utc": "2026-10-13T13:45:00+00:00",
-                "first_post_event_price": 110.557,
-                "first_post_event_change_pips": 8.1,
-                "second_post_event_close_utc": "2026-10-13T14:00:00+00:00",
-                "second_post_event_price": 110.484,
-                "second_post_event_change_pips": -7.3,
-                "net_two_bar_event_window_pips": 0.8,
-                "early_initial_direction": "UP",
-                "second_bar_direction": "DOWN",
-                "retrospective_if_first_seen_after_first_candle": true
-              }
-            },
-            {
-              "provider": "FXStreet_RSS",
-              "title": "Australian Dollar: RBA inflation focus shapes outlook – Commerzbank",
-              "url": "https://www.fxstreet.com/news/australian-dollar-rba-inflation-focus-shapes-outlook-commerzbank-202610131251",
-              "published_at_utc": "2026-10-13T12:51:41+00:00",
-              "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-              "publisher_age_minutes": 95.6,
-              "source_latency_to_first_seen_minutes": 88.4,
-              "type": "CENTRAL_BANK_POLICY",
-              "priority": "HIGH_POLICY_REACTION_CHECK",
-              "currencies": [
-                "AUD"
-              ],
-              "affected_pairs": [
-                "AUDUSD",
-                "AUDJPY"
-              ],
-              "headline_direction": "UNDETERMINED",
-              "market_reaction": "NOT_VERIFIED",
-              "broker_execution_allowed": false,
-              "price_reaction_observation": {
-                "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-                "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-                "no_intrabar_assumptions": true,
-                "causal_link_verified": false,
-                "first_seen_before_market_reaction": false,
-                "pre_event_close_utc": "2026-10-13T12:45:00+00:00",
-                "pre_event_price": 110.364,
-                "first_post_event_close_utc": "2026-10-13T13:00:00+00:00",
-                "first_post_event_price": 110.383,
-                "first_post_event_change_pips": 1.9,
-                "second_post_event_close_utc": "2026-10-13T13:15:00+00:00",
-                "second_post_event_price": 110.437,
-                "second_post_event_change_pips": 5.4,
-                "net_two_bar_event_window_pips": 7.3,
-                "early_initial_direction": "UP",
-                "second_bar_direction": "UP",
-                "retrospective_if_first_seen_after_first_candle": true
-              }
-            }
-          ],
-          "recent_related_headlines": [
-            {
-              "provider": "FXStreet_RSS",
-              "title": "Australian Dollar edges higher as softer US Dollar, hawkish RBA offer support",
-              "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
-              "published_at_utc": "2026-10-13T13:36:54+00:00",
-              "first_seen_at_utc": "2026-10-13T14:25:45.497161+00:00",
-              "publisher_age_minutes": 50.4,
-              "source_latency_to_first_seen_minutes": 48.9,
-              "type": "CENTRAL_BANK_POLICY",
-              "priority": "HIGH_POLICY_REACTION_CHECK",
-              "currencies": [
-                "AUD",
-                "USD"
-              ],
-              "affected_pairs": [
-                "AUDUSD",
-                "NZDUSD",
-                "EURUSD",
-                "GBPUSD",
-                "USDJPY",
-                "AUDJPY",
-                "USDCAD"
-              ],
-              "headline_direction": "UNDETERMINED",
-              "market_reaction": "NOT_VERIFIED",
-              "broker_execution_allowed": false,
-              "price_reaction_observation": {
-                "status": "FIRST_MOVE_REVERSED_ON_SECOND_M15",
-                "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-                "no_intrabar_assumptions": true,
-                "causal_link_verified": false,
-                "first_seen_before_market_reaction": false,
-                "pre_event_close_utc": "2026-10-13T13:30:00+00:00",
-                "pre_event_price": 110.476,
-                "first_post_event_close_utc": "2026-10-13T13:45:00+00:00",
-                "first_post_event_price": 110.557,
-                "first_post_event_change_pips": 8.1,
-                "second_post_event_close_utc": "2026-10-13T14:00:00+00:00",
-                "second_post_event_price": 110.484,
-                "second_post_event_change_pips": -7.3,
-                "net_two_bar_event_window_pips": 0.8,
-                "early_initial_direction": "UP",
-                "second_bar_direction": "DOWN",
-                "retrospective_if_first_seen_after_first_candle": true
-              }
-            },
-            {
-              "provider": "FXStreet_RSS",
-              "title": "Australian Dollar: RBA inflation focus shapes outlook – Commerzbank",
-              "url": "https://www.fxstreet.com/news/australian-dollar-rba-inflation-focus-shapes-outlook-commerzbank-202610131251",
-              "published_at_utc": "2026-10-13T12:51:41+00:00",
-              "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-              "publisher_age_minutes": 95.6,
-              "source_latency_to_first_seen_minutes": 88.4,
-              "type": "CENTRAL_BANK_POLICY",
-              "priority": "HIGH_POLICY_REACTION_CHECK",
-              "currencies": [
-                "AUD"
-              ],
-              "affected_pairs": [
-                "AUDUSD",
-                "AUDJPY"
-              ],
-              "headline_direction": "UNDETERMINED",
-              "market_reaction": "NOT_VERIFIED",
-              "broker_execution_allowed": false,
-              "price_reaction_observation": {
-                "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-                "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-                "no_intrabar_assumptions": true,
-                "causal_link_verified": false,
-                "first_seen_before_market_reaction": false,
-                "pre_event_close_utc": "2026-10-13T12:45:00+00:00",
-                "pre_event_price": 110.364,
-                "first_post_event_close_utc": "2026-10-13T13:00:00+00:00",
-                "first_post_event_price": 110.383,
-                "first_post_event_change_pips": 1.9,
-                "second_post_event_close_utc": "2026-10-13T13:15:00+00:00",
-                "second_post_event_price": 110.437,
-                "second_post_event_change_pips": 5.4,
-                "net_two_bar_event_window_pips": 7.3,
-                "early_initial_direction": "UP",
-                "second_bar_direction": "UP",
-                "retrospective_if_first_seen_after_first_candle": true
-              }
-            },
-            {
-              "provider": "FXStreet_RSS",
-              "title": "Australian Dollar : Key support at 0.6935 in focus against US Dollar   – UOB",
-              "url": "https://www.fxstreet.com/news/australian-dollar-key-support-at-06935-in-focus-against-us-dollar-uob-202610131404",
-              "published_at_utc": "2026-10-13T14:04:33+00:00",
-              "first_seen_at_utc": "2026-10-13T14:25:45.497161+00:00",
-              "publisher_age_minutes": 22.7,
-              "source_latency_to_first_seen_minutes": 21.2,
-              "type": "GENERAL",
-              "priority": "CONTEXT",
-              "currencies": [
-                "AUD",
-                "USD"
-              ],
-              "affected_pairs": [
-                "AUDUSD",
-                "NZDUSD",
-                "EURUSD",
-                "GBPUSD",
-                "USDJPY",
-                "AUDJPY",
-                "USDCAD"
-              ],
-              "headline_direction": "UNDETERMINED",
-              "market_reaction": "NOT_VERIFIED",
-              "broker_execution_allowed": false
-            },
-            {
-              "provider": "FXStreet_RSS",
-              "title": "Japanese Yen: Weakness may deepen toward 159.05 against US Dollar – UOB",
-              "url": "https://www.fxstreet.com/news/japanese-yen-weakness-may-deepen-toward-15905-against-us-dollar-uob-202610131241",
-              "published_at_utc": "2026-10-13T12:41:01+00:00",
-              "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-              "publisher_age_minutes": 106.3,
-              "source_latency_to_first_seen_minutes": 99.1,
-              "type": "GENERAL",
-              "priority": "CONTEXT",
-              "currencies": [
-                "JPY",
-                "USD"
-              ],
-              "affected_pairs": [
-                "AUDUSD",
-                "NZDUSD",
-                "EURUSD",
-                "GBPUSD",
-                "USDJPY",
-                "AUDJPY",
-                "NZDJPY",
-                "EURJPY",
-                "USDCAD"
-              ],
-              "headline_direction": "UNDETERMINED",
-              "market_reaction": "NOT_VERIFIED",
-              "broker_execution_allowed": false
-            }
-          ],
-          "source_coverage_incomplete": true,
-          "source_statuses": {
-            "FXStreet_RSS": "DATED_HEADLINES",
-            "Reuters_currency_page": "UNAVAILABLE_HTTPERROR"
-          },
-          "requires_price_reaction_check": true,
-          "directional_vote": "NONE",
-          "source_is_not_confirmation": true,
-          "technical_rank_unchanged": true
-        },
-        "compact_side": {
-          "label": "BUY",
-          "color": "green",
-          "symbol": "🟢"
-        },
-        "compact_stage": "WATCH",
-        "compact_one_line": "**3.**&nbsp;**AUD/JPY**&nbsp;🟢&nbsp;**BUY**&nbsp;WATCH&nbsp;**0.775**"
-      },
-      {
-        "rank": 4,
-        "pair": "NZDJPY",
-        "direction": "BUY",
-        "stage": "EARLY_DIRECTIONAL_ROTATION",
-        "research_score": 0.775,
-        "early_opportunity_score_50pct": 1.0,
-        "trend_strength_score_50pct": 0.55,
-        "macro_alignment": "UNKNOWN",
-        "price_reference": 88.925,
-        "price_reference_closed_at_utc": "2026-10-13T14:15:00+00:00",
-        "price_type": "LAST_CLOSED_15M_REFERENCE_NOT_EXECUTABLE",
-        "entry_readiness": "EARLY_PROVISIONAL_WATCH",
-        "published_rank": 4,
-        "published_score": 0.775,
-        "updated_assessment": "BUY CONTINUATION — MONITOR",
-        "ranking_generated_at_utc": "2026-10-13T14:27:17.742157+00:00",
-        "newer_candle_observation_collected_at_utc": "2026-10-13T14:27:11.034024+00:00",
-        "published_ranking_preserved": true,
-        "score_is_not_trade_probability": true,
-        "breaking_policy_news": {
-          "status": "HEADLINES_PRESENT",
-          "as_of_utc": "2026-10-13T14:27:17.624997+00:00",
-          "recent_policy_headlines": [],
-          "recent_related_headlines": [
-            {
-              "provider": "FXStreet_RSS",
-              "title": "Japanese Yen: Weakness may deepen toward 159.05 against US Dollar – UOB",
-              "url": "https://www.fxstreet.com/news/japanese-yen-weakness-may-deepen-toward-15905-against-us-dollar-uob-202610131241",
-              "published_at_utc": "2026-10-13T12:41:01+00:00",
-              "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-              "publisher_age_minutes": 106.3,
-              "source_latency_to_first_seen_minutes": 99.1,
-              "type": "GENERAL",
-              "priority": "CONTEXT",
-              "currencies": [
-                "JPY",
-                "USD"
-              ],
-              "affected_pairs": [
-                "AUDUSD",
-                "NZDUSD",
-                "EURUSD",
-                "GBPUSD",
-                "USDJPY",
-                "AUDJPY",
-                "NZDJPY",
-                "EURJPY",
-                "USDCAD"
-              ],
-              "headline_direction": "UNDETERMINED",
-              "market_reaction": "NOT_VERIFIED",
-              "broker_execution_allowed": false
-            }
-          ],
-          "source_coverage_incomplete": true,
-          "source_statuses": {
-            "FXStreet_RSS": "DATED_HEADLINES",
-            "Reuters_currency_page": "UNAVAILABLE_HTTPERROR"
-          },
-          "requires_price_reaction_check": false,
-          "directional_vote": "NONE",
-          "source_is_not_confirmation": true,
-          "technical_rank_unchanged": true
-        },
-        "compact_side": {
-          "label": "BUY",
-          "color": "green",
-          "symbol": "🟢"
-        },
-        "compact_stage": "CONT",
-        "compact_one_line": "**4.**&nbsp;**NZD/JPY**&nbsp;🟢&nbsp;**BUY**&nbsp;CONT&nbsp;**0.775**"
-      },
-      {
-        "rank": 5,
-        "pair": "EURJPY",
-        "direction": "BUY",
-        "stage": "EARLY_DIRECTIONAL_ROTATION",
-        "research_score": 0.775,
-        "early_opportunity_score_50pct": 1.0,
-        "trend_strength_score_50pct": 0.55,
-        "macro_alignment": "SUPPORTIVE",
-        "price_reference": 177.292,
-        "price_reference_closed_at_utc": "2026-10-13T14:15:00+00:00",
-        "price_type": "LAST_CLOSED_15M_REFERENCE_NOT_EXECUTABLE",
-        "entry_readiness": "EARLY_PROVISIONAL_WATCH",
-        "published_rank": 5,
-        "published_score": 0.775,
-        "updated_assessment": "BUY EPISODE / OPPOSING PRESSURE — WATCH",
-        "ranking_generated_at_utc": "2026-10-13T14:27:17.742157+00:00",
-        "newer_candle_observation_collected_at_utc": "2026-10-13T14:27:11.034024+00:00",
-        "published_ranking_preserved": true,
-        "score_is_not_trade_probability": true,
-        "breaking_policy_news": {
-          "status": "HEADLINES_PRESENT",
-          "as_of_utc": "2026-10-13T14:27:17.624997+00:00",
-          "recent_policy_headlines": [],
-          "recent_related_headlines": [
-            {
-              "provider": "FXStreet_RSS",
-              "title": "Euro: Lower year-end target at 1.13 against US Dollar – ING",
-              "url": "https://www.fxstreet.com/news/euro-lower-year-end-target-at-113-against-us-dollar-ing-202610131304",
-              "published_at_utc": "2026-10-13T13:04:42+00:00",
-              "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-              "publisher_age_minutes": 82.6,
-              "source_latency_to_first_seen_minutes": 75.4,
-              "type": "GENERAL",
-              "priority": "CONTEXT",
-              "currencies": [
-                "EUR",
-                "USD"
-              ],
-              "affected_pairs": [
-                "AUDUSD",
-                "NZDUSD",
-                "EURUSD",
-                "GBPUSD",
-                "USDJPY",
-                "EURJPY",
-                "EURCAD",
-                "USDCAD",
-                "EURGBP"
-              ],
-              "headline_direction": "UNDETERMINED",
-              "market_reaction": "NOT_VERIFIED",
-              "broker_execution_allowed": false
-            },
-            {
-              "provider": "FXStreet_RSS",
-              "title": "Japanese Yen: Weakness may deepen toward 159.05 against US Dollar – UOB",
-              "url": "https://www.fxstreet.com/news/japanese-yen-weakness-may-deepen-toward-15905-against-us-dollar-uob-202610131241",
-              "published_at_utc": "2026-10-13T12:41:01+00:00",
-              "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-              "publisher_age_minutes": 106.3,
-              "source_latency_to_first_seen_minutes": 99.1,
-              "type": "GENERAL",
-              "priority": "CONTEXT",
-              "currencies": [
-                "JPY",
-                "USD"
-              ],
-              "affected_pairs": [
-                "AUDUSD",
-                "NZDUSD",
-                "EURUSD",
-                "GBPUSD",
-                "USDJPY",
-                "AUDJPY",
-                "NZDJPY",
-                "EURJPY",
-                "USDCAD"
-              ],
-              "headline_direction": "UNDETERMINED",
-              "market_reaction": "NOT_VERIFIED",
-              "broker_execution_allowed": false
-            }
-          ],
-          "source_coverage_incomplete": true,
-          "source_statuses": {
-            "FXStreet_RSS": "DATED_HEADLINES",
-            "Reuters_currency_page": "UNAVAILABLE_HTTPERROR"
-          },
-          "requires_price_reaction_check": false,
-          "directional_vote": "NONE",
-          "source_is_not_confirmation": true,
-          "technical_rank_unchanged": true
-        },
-        "compact_side": {
-          "label": "BUY",
-          "color": "green",
-          "symbol": "🟢"
-        },
-        "compact_stage": "WATCH",
-        "compact_one_line": "**5.**&nbsp;**EUR/JPY**&nbsp;🟢&nbsp;**BUY**&nbsp;WATCH&nbsp;**0.775**"
+        "compact_stage": "WAIT",
+        "compact_one_line": "**5.**&nbsp;**USD/JPY**&nbsp;🟢&nbsp;**BUY**&nbsp;WAIT&nbsp;**0.775**"
       }
     ]
   },
   "current_currency_strength": {
     "status": "AVAILABLE_INDICATIVE_TECHNICAL_BREADTH",
-    "as_of_utc": "2026-10-13T14:27:16.702592+00:00",
+    "as_of_utc": "2026-10-13T14:30:35.018747+00:00",
     "method": "Unweighted breadth across fresh directional 11-pair candidates, not an independent live currency strength index",
     "strongest": [
       "AUD",
@@ -995,11 +1246,11 @@
       "breaking_news_priority_headlines": [
         {
           "provider": "FXStreet_RSS",
-          "title": "Australian Dollar edges higher as softer US Dollar, hawkish RBA offer support",
+          "title": "Australian Dollar edges higher amid softer US Dollar, hawkish RBA",
           "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
           "published_at_utc": "2026-10-13T13:36:54+00:00",
           "first_seen_at_utc": "2026-10-13T14:25:45.497161+00:00",
-          "publisher_age_minutes": 50.4,
+          "publisher_age_minutes": 53.7,
           "source_latency_to_first_seen_minutes": 48.9,
           "type": "CENTRAL_BANK_POLICY",
           "priority": "HIGH_POLICY_REACTION_CHECK",
@@ -1162,7 +1413,7 @@
           "url": "https://www.fxstreet.com/news/australian-dollar-rba-inflation-focus-shapes-outlook-commerzbank-202610131251",
           "published_at_utc": "2026-10-13T12:51:41+00:00",
           "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 95.6,
+          "publisher_age_minutes": 98.9,
           "source_latency_to_first_seen_minutes": 88.4,
           "type": "CENTRAL_BANK_POLICY",
           "priority": "HIGH_POLICY_REACTION_CHECK",
@@ -1226,7 +1477,7 @@
       "breaking_news_source_coverage_gaps": [
         "Reuters_currency_page:UNAVAILABLE_HTTPERROR"
       ],
-      "breaking_news_generated_at_utc": "2026-10-13T14:27:17.624997+00:00",
+      "breaking_news_generated_at_utc": "2026-10-13T14:30:36.045870+00:00",
       "breaking_news_cannot_assign_trade_direction": true,
       "headlines": [
         {
@@ -1625,18 +1876,6 @@
         }
       ],
       "upcoming_events_next_24h": [
-        {
-          "title": "CB Leading Index m/m",
-          "currency": "AUD",
-          "event_at_utc": "2026-10-13T14:30:00+00:00",
-          "event_at_et": "2026-10-13T10:30:00-04:00",
-          "impact": "Low",
-          "forecast": "",
-          "previous": "0.5%",
-          "actual": null,
-          "actual_status": "UNAVAILABLE",
-          "time_relation": "UPCOMING"
-        },
         {
           "title": "FOMC Member Barkin Speaks",
           "currency": "USD",
@@ -7182,27 +7421,27 @@
       },
       "JPY_cross_closed_candles": [
         {
-          "pair": "USDJPY",
-          "15m_change_pips": -6.4,
-          "30m_change_pips": -4.4,
-          "site_reported": true
-        },
-        {
           "pair": "AUDJPY",
-          "15m_change_pips": -2.8,
-          "30m_change_pips": -3.0,
+          "15m_change_pips": 3.5,
+          "30m_change_pips": 0.7,
           "site_reported": true
         },
         {
           "pair": "NZDJPY",
-          "15m_change_pips": 0.9,
-          "30m_change_pips": 0.3,
+          "15m_change_pips": 3.4,
+          "30m_change_pips": 4.3,
+          "site_reported": true
+        },
+        {
+          "pair": "USDJPY",
+          "15m_change_pips": 6.3,
+          "30m_change_pips": -0.1,
           "site_reported": true
         },
         {
           "pair": "EURJPY",
-          "15m_change_pips": -1.2,
-          "30m_change_pips": -1.5,
+          "15m_change_pips": 4.3,
+          "30m_change_pips": 3.1,
           "site_reported": true
         }
       ],
@@ -7587,7 +7826,7 @@
       "status": "AVAILABLE_INDICATIVE_TECHNICAL_BREADTH",
       "technical_breadth": {
         "status": "AVAILABLE_INDICATIVE_TECHNICAL_BREADTH",
-        "as_of_utc": "2026-10-13T14:27:16.702592+00:00",
+        "as_of_utc": "2026-10-13T14:30:35.018747+00:00",
         "method": "Unweighted breadth across fresh directional 11-pair candidates, not an independent live currency strength index",
         "strongest": [
           "AUD",
@@ -7651,41 +7890,41 @@
         "caveat": "CLOSED_15M_30M_DIRECTIONAL_BREADTH_NOT_AN_INDEPENDENT_REALTIME_STRENGTH_FEED"
       },
       "jpy_cluster": {
-        "jpy_strength_crosses": 0,
+        "jpy_strength_crosses": 2,
         "covered_crosses": 4,
-        "status": "NO_BROAD_JPY_STRENGTH",
+        "status": "PARTIAL_JPY_STRENGTH",
         "pairs": {
           "AUDJPY": {
-            "direction": "JPY_WEAKNESS",
-            "move_15m_pips": 6.4,
-            "move_30m_pips": 0.8,
+            "direction": "NEUTRAL",
+            "move_15m_pips": -1.5,
+            "move_30m_pips": 4.9,
             "reference_kind": "CLOSED_M15_AND_M30_ONLY",
-            "last_15m_close_utc": "2026-10-13T14:15:00+00:00",
-            "last_30m_close_utc": "2026-10-13T14:00:00+00:00"
+            "last_15m_close_utc": "2026-10-13T14:30:00+00:00",
+            "last_30m_close_utc": "2026-10-13T14:30:00+00:00"
           },
           "NZDJPY": {
-            "direction": "JPY_WEAKNESS",
-            "move_15m_pips": 9.0,
-            "move_30m_pips": -2.6,
+            "direction": "JPY_STRENGTH",
+            "move_15m_pips": -3.9,
+            "move_30m_pips": 5.1,
             "reference_kind": "CLOSED_M15_AND_M30_ONLY",
-            "last_15m_close_utc": "2026-10-13T14:15:00+00:00",
-            "last_30m_close_utc": "2026-10-13T14:00:00+00:00"
+            "last_15m_close_utc": "2026-10-13T14:30:00+00:00",
+            "last_30m_close_utc": "2026-10-13T14:30:00+00:00"
           },
           "EURJPY": {
-            "direction": "JPY_WEAKNESS",
-            "move_15m_pips": 9.9,
-            "move_30m_pips": -6.4,
+            "direction": "JPY_STRENGTH",
+            "move_15m_pips": -5.9,
+            "move_30m_pips": 4.0,
             "reference_kind": "CLOSED_M15_AND_M30_ONLY",
-            "last_15m_close_utc": "2026-10-13T14:15:00+00:00",
-            "last_30m_close_utc": "2026-10-13T14:00:00+00:00"
+            "last_15m_close_utc": "2026-10-13T14:30:00+00:00",
+            "last_30m_close_utc": "2026-10-13T14:30:00+00:00"
           },
           "USDJPY": {
             "direction": "NEUTRAL",
-            "move_15m_pips": -1.4,
-            "move_30m_pips": 10.6,
+            "move_15m_pips": 0.8,
+            "move_30m_pips": -0.6,
             "reference_kind": "CLOSED_M15_AND_M30_ONLY",
-            "last_15m_close_utc": "2026-10-13T14:15:00+00:00",
-            "last_30m_close_utc": "2026-10-13T14:00:00+00:00"
+            "last_15m_close_utc": "2026-10-13T14:30:00+00:00",
+            "last_30m_close_utc": "2026-10-13T14:30:00+00:00"
           }
         },
         "signal_timeframes": [
@@ -7699,102 +7938,66 @@
       "layer": 11,
       "title": "ALL 11 — LATEST CLOSED 15m/30m SIGNALS",
       "status": "SEPARATELY_OBSERVED_SITE_REPORTED_CLOSED_CANDLES",
-      "public_feed_collected_at_utc": "2026-10-13T14:27:11.034024+00:00",
+      "public_feed_collected_at_utc": "2026-10-13T14:30:29.862652+00:00",
       "closed_candle_timeframes": [
         "15m",
         "30m"
       ],
       "pairs": [
         {
-          "pair": "USDJPY",
-          "latest_15m_closed_price": 158.05,
-          "latest_15m_closed_at_utc": "2026-10-13T14:15:00+00:00",
-          "15m_change_pips": -6.4,
-          "latest_30m_closed_at_utc": "2026-10-13T14:00:00+00:00",
-          "30m_change_pips": -4.4,
-          "original_published_direction": "BUY",
-          "updated_directional_assessment": "BUY EPISODE / OPPOSING PRESSURE — WATCH",
-          "counter_rotation_unrecorded": false,
-          "site_reported_data_not_broker": true
-        },
-        {
-          "pair": "EURCAD",
-          "latest_15m_closed_price": 1.59551,
-          "latest_15m_closed_at_utc": "2026-10-13T14:15:00+00:00",
-          "15m_change_pips": 9.2,
-          "latest_30m_closed_at_utc": "2026-10-13T14:00:00+00:00",
-          "30m_change_pips": 1.8,
-          "original_published_direction": "SELL",
-          "updated_directional_assessment": "SELL EPISODE / OPPOSING PRESSURE — WATCH",
-          "counter_rotation_unrecorded": false,
-          "site_reported_data_not_broker": true
-        },
-        {
           "pair": "AUDJPY",
-          "latest_15m_closed_price": 110.228,
-          "latest_15m_closed_at_utc": "2026-10-13T14:15:00+00:00",
-          "15m_change_pips": -2.8,
-          "latest_30m_closed_at_utc": "2026-10-13T14:00:00+00:00",
-          "30m_change_pips": -3.0,
-          "original_published_direction": "BUY",
-          "updated_directional_assessment": "BUY EPISODE / OPPOSING PRESSURE — WATCH",
-          "counter_rotation_unrecorded": false,
-          "site_reported_data_not_broker": true
-        },
-        {
-          "pair": "NZDJPY",
-          "latest_15m_closed_price": 88.697,
-          "latest_15m_closed_at_utc": "2026-10-13T14:15:00+00:00",
-          "15m_change_pips": 0.9,
-          "latest_30m_closed_at_utc": "2026-10-13T14:00:00+00:00",
-          "30m_change_pips": 0.3,
+          "latest_15m_closed_price": 110.263,
+          "latest_15m_closed_at_utc": "2026-10-13T14:30:00+00:00",
+          "15m_change_pips": 3.5,
+          "latest_30m_closed_at_utc": "2026-10-13T14:30:00+00:00",
+          "30m_change_pips": 0.7,
           "original_published_direction": "BUY",
           "updated_directional_assessment": "BUY CONTINUATION — MONITOR",
           "counter_rotation_unrecorded": false,
           "site_reported_data_not_broker": true
         },
         {
-          "pair": "EURJPY",
-          "latest_15m_closed_price": 176.842,
-          "latest_15m_closed_at_utc": "2026-10-13T14:15:00+00:00",
-          "15m_change_pips": -1.2,
-          "latest_30m_closed_at_utc": "2026-10-13T14:00:00+00:00",
-          "30m_change_pips": -1.5,
+          "pair": "NZDJPY",
+          "latest_15m_closed_price": 88.731,
+          "latest_15m_closed_at_utc": "2026-10-13T14:30:00+00:00",
+          "15m_change_pips": 3.4,
+          "latest_30m_closed_at_utc": "2026-10-13T14:30:00+00:00",
+          "30m_change_pips": 4.3,
           "original_published_direction": "BUY",
-          "updated_directional_assessment": "BUY EPISODE / OPPOSING PRESSURE — WATCH",
+          "updated_directional_assessment": "BUY CONTINUATION — MONITOR",
           "counter_rotation_unrecorded": false,
           "site_reported_data_not_broker": true
         },
         {
           "pair": "USDCAD",
-          "latest_15m_closed_price": 1.42607,
-          "latest_15m_closed_at_utc": "2026-10-13T14:15:00+00:00",
-          "15m_change_pips": 3.4,
-          "latest_30m_closed_at_utc": "2026-10-13T14:00:00+00:00",
-          "30m_change_pips": -0.9,
+          "latest_15m_closed_price": 1.42575,
+          "latest_15m_closed_at_utc": "2026-10-13T14:30:00+00:00",
+          "15m_change_pips": -3.2,
+          "latest_30m_closed_at_utc": "2026-10-13T14:30:00+00:00",
+          "30m_change_pips": 0.2,
           "original_published_direction": "SELL",
           "updated_directional_assessment": "SELL EPISODE / MIXED CLOSED CANDLES — WAIT",
           "counter_rotation_unrecorded": false,
           "site_reported_data_not_broker": true
         },
         {
-          "pair": "NZDUSD",
-          "latest_15m_closed_price": 0.56122,
-          "latest_15m_closed_at_utc": "2026-10-13T14:15:00+00:00",
-          "15m_change_pips": 2.8,
-          "latest_30m_closed_at_utc": "2026-10-13T14:00:00+00:00",
-          "30m_change_pips": 1.8,
-          "original_published_direction": "BUY",
-          "updated_directional_assessment": "BUY CONTINUATION — MONITOR",
+          "pair": "EURCAD",
+          "latest_15m_closed_price": 1.59495,
+          "latest_15m_closed_at_utc": "2026-10-13T14:30:00+00:00",
+          "15m_change_pips": -5.6,
+          "latest_30m_closed_at_utc": "2026-10-13T14:30:00+00:00",
+          "30m_change_pips": 3.6,
+          "original_published_direction": "SELL",
+          "updated_directional_assessment": "SELL EPISODE / MIXED CLOSED CANDLES — WAIT",
           "counter_rotation_unrecorded": false,
           "site_reported_data_not_broker": true
         },
         {
-          "pair": "EURGBP",
-          "latest_15m_closed_price": 0.84485,
-          "latest_15m_closed_at_utc": "2026-10-13T14:15:00+00:00",
-          "15m_change_pips": 1.7,
-          "latest_30m_closed_at_utc": "2026-10-13T14:00:00+00:00",
+          "pair": "USDJPY",
+          "latest_15m_closed_price": 158.113,
+          "latest_15m_closed_at_utc": "2026-10-13T14:30:00+00:00",
+          "15m_change_pips": 6.3,
+          "latest_30m_closed_at_utc": "2026-10-13T14:30:00+00:00",
           "30m_change_pips": -0.1,
           "original_published_direction": "BUY",
           "updated_directional_assessment": "BUY EPISODE / MIXED CLOSED CANDLES — WAIT",
@@ -7802,38 +8005,74 @@
           "site_reported_data_not_broker": true
         },
         {
-          "pair": "AUDUSD",
-          "latest_15m_closed_price": 0.69744,
-          "latest_15m_closed_at_utc": "2026-10-13T14:15:00+00:00",
-          "15m_change_pips": 1.0,
-          "latest_30m_closed_at_utc": "2026-10-13T14:00:00+00:00",
-          "30m_change_pips": 0.1,
+          "pair": "NZDUSD",
+          "latest_15m_closed_price": 0.5612,
+          "latest_15m_closed_at_utc": "2026-10-13T14:30:00+00:00",
+          "15m_change_pips": -0.2,
+          "latest_30m_closed_at_utc": "2026-10-13T14:30:00+00:00",
+          "30m_change_pips": 2.6,
           "original_published_direction": "SELL",
-          "updated_directional_assessment": "SELL EPISODE / OPPOSING PRESSURE — WATCH",
+          "updated_directional_assessment": "SELL EPISODE / MIXED CLOSED CANDLES — WAIT",
+          "counter_rotation_unrecorded": false,
+          "site_reported_data_not_broker": true
+        },
+        {
+          "pair": "EURGBP",
+          "latest_15m_closed_price": 0.84487,
+          "latest_15m_closed_at_utc": "2026-10-13T14:30:00+00:00",
+          "15m_change_pips": 0.2,
+          "latest_30m_closed_at_utc": "2026-10-13T14:30:00+00:00",
+          "30m_change_pips": 1.9,
+          "original_published_direction": "BUY",
+          "updated_directional_assessment": "BUY EARLY WATCH — NEWLY RECORDED",
+          "counter_rotation_unrecorded": false,
+          "site_reported_data_not_broker": true
+        },
+        {
+          "pair": "AUDUSD",
+          "latest_15m_closed_price": 0.6974,
+          "latest_15m_closed_at_utc": "2026-10-13T14:30:00+00:00",
+          "15m_change_pips": -0.4,
+          "latest_30m_closed_at_utc": "2026-10-13T14:30:00+00:00",
+          "30m_change_pips": 0.6,
+          "original_published_direction": "SELL",
+          "updated_directional_assessment": "SELL EPISODE / MIXED CLOSED CANDLES — WAIT",
           "counter_rotation_unrecorded": false,
           "site_reported_data_not_broker": true
         },
         {
           "pair": "EURUSD",
-          "latest_15m_closed_price": 1.11889,
-          "latest_15m_closed_at_utc": "2026-10-13T14:15:00+00:00",
-          "15m_change_pips": 3.5,
-          "latest_30m_closed_at_utc": "2026-10-13T14:00:00+00:00",
-          "30m_change_pips": 2.2,
+          "latest_15m_closed_price": 1.11875,
+          "latest_15m_closed_at_utc": "2026-10-13T14:30:00+00:00",
+          "15m_change_pips": -1.4,
+          "latest_30m_closed_at_utc": "2026-10-13T14:30:00+00:00",
+          "30m_change_pips": 2.1,
           "original_published_direction": "SELL",
-          "updated_directional_assessment": "SELL EPISODE / OPPOSING PRESSURE — WATCH",
+          "updated_directional_assessment": "SELL EPISODE / MIXED CLOSED CANDLES — WAIT",
           "counter_rotation_unrecorded": false,
           "site_reported_data_not_broker": true
         },
         {
           "pair": "GBPUSD",
-          "latest_15m_closed_price": 1.32433,
-          "latest_15m_closed_at_utc": "2026-10-13T14:15:00+00:00",
-          "15m_change_pips": 1.0,
-          "latest_30m_closed_at_utc": "2026-10-13T14:00:00+00:00",
-          "30m_change_pips": 3.0,
+          "latest_15m_closed_price": 1.32419,
+          "latest_15m_closed_at_utc": "2026-10-13T14:30:00+00:00",
+          "15m_change_pips": -1.4,
+          "latest_30m_closed_at_utc": "2026-10-13T14:30:00+00:00",
+          "30m_change_pips": -0.4,
           "original_published_direction": "SELL",
-          "updated_directional_assessment": "SELL EPISODE / OPPOSING PRESSURE — WATCH",
+          "updated_directional_assessment": "SELL EARLY WATCH — NEWLY RECORDED",
+          "counter_rotation_unrecorded": false,
+          "site_reported_data_not_broker": true
+        },
+        {
+          "pair": "EURJPY",
+          "latest_15m_closed_price": 176.885,
+          "latest_15m_closed_at_utc": "2026-10-13T14:30:00+00:00",
+          "15m_change_pips": 4.3,
+          "latest_30m_closed_at_utc": "2026-10-13T14:30:00+00:00",
+          "30m_change_pips": 3.1,
+          "original_published_direction": "BUY",
+          "updated_directional_assessment": "BUY CONTINUATION — MONITOR",
           "counter_rotation_unrecorded": false,
           "site_reported_data_not_broker": true
         }
@@ -7851,36 +8090,14 @@
       ],
       "pairs": [
         {
-          "pair": "USDJPY",
-          "1H": "MIXED",
-          "4H": "MIXED",
-          "Daily": "MIXED",
-          "1H_EMA20": 158.28765831122453,
-          "1H_EMA50": 158.31522304673692,
-          "4H_EMA10": 158.33235521158147,
-          "4H_EMA20": 158.2814722356986,
-          "not_early_signal_veto": true
-        },
-        {
-          "pair": "EURCAD",
-          "1H": "MIXED",
-          "4H": "BEARISH",
-          "Daily": "BEARISH",
-          "1H_EMA20": 1.593837619514151,
-          "1H_EMA50": 1.5946758985539295,
-          "4H_EMA10": 1.593719584960288,
-          "4H_EMA20": 1.594833641517934,
-          "not_early_signal_veto": true
-        },
-        {
           "pair": "AUDJPY",
           "1H": "MIXED",
           "4H": "MIXED",
           "Daily": "MIXED",
-          "1H_EMA20": 110.31250031977336,
-          "1H_EMA50": 110.31918623949578,
-          "4H_EMA10": 110.36685472271328,
-          "4H_EMA20": 110.3142521062569,
+          "1H_EMA20": 110.3125955578686,
+          "1H_EMA50": 110.31922545518205,
+          "4H_EMA10": 110.3670365408951,
+          "4H_EMA20": 110.31434734435214,
           "not_early_signal_veto": true
         },
         {
@@ -7888,21 +8105,10 @@
           "1H": "BULLISH",
           "4H": "MIXED",
           "Daily": "MIXED",
-          "1H_EMA20": 88.66630503027528,
-          "1H_EMA50": 88.66150505942208,
-          "4H_EMA10": 88.70498916815707,
-          "4H_EMA20": 88.67678310593388,
-          "not_early_signal_veto": true
-        },
-        {
-          "pair": "EURJPY",
-          "1H": "MIXED",
-          "4H": "MIXED",
-          "Daily": "BEARISH",
-          "1H_EMA20": 176.980162644343,
-          "1H_EMA50": 177.0736158706128,
-          "4H_EMA10": 177.07884265002596,
-          "4H_EMA20": 177.14327236070025,
+          "1H_EMA20": 88.66573360170385,
+          "1H_EMA50": 88.66126976530444,
+          "4H_EMA10": 88.70389825906616,
+          "4H_EMA20": 88.67621167736245,
           "not_early_signal_veto": true
         },
         {
@@ -7910,10 +8116,32 @@
           "1H": "BEARISH",
           "4H": "MIXED",
           "Daily": "BULLISH",
-          "1H_EMA20": 1.4255458143175739,
-          "1H_EMA50": 1.4258089983259046,
-          "4H_EMA10": 1.4250395228329167,
-          "4H_EMA20": 1.4250688157495224,
+          "1H_EMA20": 1.4255353381270977,
+          "1H_EMA50": 1.4258046846004144,
+          "4H_EMA10": 1.4250195228329166,
+          "4H_EMA20": 1.4250583395590461,
+          "not_early_signal_veto": true
+        },
+        {
+          "pair": "EURCAD",
+          "1H": "MIXED",
+          "4H": "BEARISH",
+          "Daily": "BEARISH",
+          "1H_EMA20": 1.593807143323675,
+          "1H_EMA50": 1.5946633495343217,
+          "4H_EMA10": 1.5936614031421061,
+          "4H_EMA20": 1.594803165327458,
+          "not_early_signal_veto": true
+        },
+        {
+          "pair": "USDJPY",
+          "1H": "MIXED",
+          "4H": "MIXED",
+          "Daily": "MIXED",
+          "1H_EMA20": 158.28918212074834,
+          "1H_EMA50": 158.31585049771732,
+          "4H_EMA10": 158.33526430249057,
+          "4H_EMA20": 158.2829960452224,
           "not_early_signal_veto": true
         },
         {
@@ -7921,10 +8149,10 @@
           "1H": "BULLISH",
           "4H": "MIXED",
           "Daily": "BEARISH",
-          "1H_EMA20": 0.5601612629428148,
-          "1H_EMA50": 0.560030730162487,
-          "4H_EMA10": 0.5602508584874651,
-          "4H_EMA20": 0.5602606150335031,
+          "1H_EMA20": 0.5601536438951957,
+          "1H_EMA50": 0.560027592907585,
+          "4H_EMA10": 0.5602344948511015,
+          "4H_EMA20": 0.5602520436049316,
           "not_early_signal_veto": true
         },
         {
@@ -7932,10 +8160,10 @@
           "1H": "MIXED",
           "4H": "BEARISH",
           "Daily": "BEARISH",
-          "1H_EMA20": 0.8449470579377127,
-          "1H_EMA50": 0.8454402243443414,
-          "4H_EMA10": 0.8451096458442933,
-          "4H_EMA20": 0.8457936988261784,
+          "1H_EMA20": 0.8449394388900937,
+          "1H_EMA50": 0.8454370870894395,
+          "4H_EMA10": 0.8451041912988387,
+          "4H_EMA20": 0.8457908416833212,
           "not_early_signal_veto": true
         },
         {
@@ -7943,10 +8171,10 @@
           "1H": "BULLISH",
           "4H": "MIXED",
           "Daily": "MIXED",
-          "1H_EMA20": 0.6969133957668024,
-          "1H_EMA50": 0.6968304362417899,
-          "4H_EMA10": 0.6970586557897388,
-          "4H_EMA20": 0.6969476652495291,
+          "1H_EMA20": 0.6969076814810882,
+          "1H_EMA50": 0.6968280833006134,
+          "4H_EMA10": 0.6970477466988297,
+          "4H_EMA20": 0.6969419509638148,
           "not_early_signal_veto": true
         },
         {
@@ -7954,10 +8182,10 @@
           "1H": "MIXED",
           "4H": "BEARISH",
           "Daily": "BEARISH",
-          "1H_EMA20": 1.1180848191252102,
-          "1H_EMA50": 1.1184692353617087,
-          "4H_EMA10": 1.1183936053789376,
-          "4H_EMA20": 1.1191564125117184,
+          "1H_EMA20": 1.1180714857918768,
+          "1H_EMA50": 1.1184637451656303,
+          "4H_EMA10": 1.118368150833483,
+          "4H_EMA20": 1.119143079178385,
           "not_early_signal_veto": true
         },
         {
@@ -7965,10 +8193,21 @@
           "1H": "BULLISH",
           "4H": "MIXED",
           "Daily": "MIXED",
-          "1H_EMA20": 1.3231776322414308,
-          "1H_EMA50": 1.3228515068439386,
-          "4H_EMA10": 1.3232317703604337,
-          "4H_EMA20": 1.323058463588443,
+          "1H_EMA20": 1.323168108431907,
+          "1H_EMA50": 1.322847585275311,
+          "4H_EMA10": 1.3232135885422518,
+          "4H_EMA20": 1.3230489397789191,
+          "not_early_signal_veto": true
+        },
+        {
+          "pair": "EURJPY",
+          "1H": "MIXED",
+          "4H": "MIXED",
+          "Daily": "BEARISH",
+          "1H_EMA20": 176.97968645386683,
+          "1H_EMA50": 177.07341979218143,
+          "4H_EMA10": 177.07793355911687,
+          "4H_EMA20": 177.14279617022407,
           "not_early_signal_veto": true
         }
       ]
@@ -7979,12 +8218,32 @@
       "status": "PARTIAL_STATISTICAL_NOT_EXECUTION_TARGET",
       "observed_three_hour_comparison": [
         {
-          "pair": "USDJPY",
-          "observed_3h_width_pips": 56.0,
-          "previous_3h_width_pips": 24.6,
-          "ADR20_pips": 109.77,
-          "NY17_used_pips": 80.7,
-          "statistical_ADR_remaining_pips": 29.07,
+          "pair": "AUDJPY",
+          "observed_3h_width_pips": 34.5,
+          "previous_3h_width_pips": 13.0,
+          "ADR20_pips": 85.12,
+          "NY17_used_pips": 52.9,
+          "statistical_ADR_remaining_pips": 32.22,
+          "ADR_is_not_target": true,
+          "consolidation_origin_verified": false
+        },
+        {
+          "pair": "NZDJPY",
+          "observed_3h_width_pips": 28.4,
+          "previous_3h_width_pips": 16.2,
+          "ADR20_pips": 68.02,
+          "NY17_used_pips": 51.9,
+          "statistical_ADR_remaining_pips": 16.12,
+          "ADR_is_not_target": true,
+          "consolidation_origin_verified": false
+        },
+        {
+          "pair": "USDCAD",
+          "observed_3h_width_pips": 10.9,
+          "previous_3h_width_pips": 14.7,
+          "ADR20_pips": 56.6,
+          "NY17_used_pips": 60.7,
+          "statistical_ADR_remaining_pips": 0,
           "ADR_is_not_target": true,
           "consolidation_origin_verified": false
         },
@@ -7999,49 +8258,19 @@
           "consolidation_origin_verified": false
         },
         {
-          "pair": "AUDJPY",
-          "observed_3h_width_pips": 34.5,
-          "previous_3h_width_pips": 13.0,
-          "ADR20_pips": 85.12,
-          "NY17_used_pips": 52.9,
-          "statistical_ADR_remaining_pips": 32.22,
-          "ADR_is_not_target": true,
-          "consolidation_origin_verified": false
-        },
-        {
-          "pair": "NZDJPY",
-          "observed_3h_width_pips": 27.7,
-          "previous_3h_width_pips": 16.2,
-          "ADR20_pips": 68.02,
-          "NY17_used_pips": 51.9,
-          "statistical_ADR_remaining_pips": 16.12,
-          "ADR_is_not_target": true,
-          "consolidation_origin_verified": false
-        },
-        {
-          "pair": "EURJPY",
-          "observed_3h_width_pips": 59.9,
-          "previous_3h_width_pips": 33.8,
-          "ADR20_pips": 126.69,
-          "NY17_used_pips": 89.7,
-          "statistical_ADR_remaining_pips": 36.99,
-          "ADR_is_not_target": true,
-          "consolidation_origin_verified": false
-        },
-        {
-          "pair": "USDCAD",
-          "observed_3h_width_pips": 10.8,
-          "previous_3h_width_pips": 14.7,
-          "ADR20_pips": 56.6,
-          "NY17_used_pips": 60.7,
-          "statistical_ADR_remaining_pips": 0,
+          "pair": "USDJPY",
+          "observed_3h_width_pips": 56.0,
+          "previous_3h_width_pips": 24.6,
+          "ADR20_pips": 109.77,
+          "NY17_used_pips": 80.7,
+          "statistical_ADR_remaining_pips": 29.07,
           "ADR_is_not_target": true,
           "consolidation_origin_verified": false
         },
         {
           "pair": "NZDUSD",
-          "observed_3h_width_pips": 11.0,
-          "previous_3h_width_pips": 13.5,
+          "observed_3h_width_pips": 11.2,
+          "previous_3h_width_pips": 13.8,
           "ADR20_pips": 41.88,
           "NY17_used_pips": 37.4,
           "statistical_ADR_remaining_pips": 4.48,
@@ -8050,8 +8279,8 @@
         },
         {
           "pair": "EURGBP",
-          "observed_3h_width_pips": 10.4,
-          "previous_3h_width_pips": 7.0,
+          "observed_3h_width_pips": 9.1,
+          "previous_3h_width_pips": 7.1,
           "ADR20_pips": 27.34,
           "NY17_used_pips": 15.9,
           "statistical_ADR_remaining_pips": 11.44,
@@ -8060,7 +8289,7 @@
         },
         {
           "pair": "AUDUSD",
-          "observed_3h_width_pips": 8.6,
+          "observed_3h_width_pips": 9.5,
           "previous_3h_width_pips": 9.2,
           "ADR20_pips": 44.77,
           "NY17_used_pips": 33.8,
@@ -8081,10 +8310,20 @@
         {
           "pair": "GBPUSD",
           "observed_3h_width_pips": 14.2,
-          "previous_3h_width_pips": 21.7,
+          "previous_3h_width_pips": 21.1,
           "ADR20_pips": 70.0,
           "NY17_used_pips": 54.0,
           "statistical_ADR_remaining_pips": 16.0,
+          "ADR_is_not_target": true,
+          "consolidation_origin_verified": false
+        },
+        {
+          "pair": "EURJPY",
+          "observed_3h_width_pips": 59.9,
+          "previous_3h_width_pips": 33.8,
+          "ADR20_pips": 126.69,
+          "NY17_used_pips": 89.7,
+          "statistical_ADR_remaining_pips": 36.99,
           "ADR_is_not_target": true,
           "consolidation_origin_verified": false
         }
@@ -8097,33 +8336,9 @@
       "status": "MISSING_BROKER_EXECUTABLE_QUOTES",
       "per_pair_conditional_research_criteria": [
         {
-          "pair": "USDJPY",
-          "original_direction": "BUY",
-          "latest_provisional_assessment": "BUY EPISODE / OPPOSING PRESSURE — WATCH",
-          "conditional_research_trigger": "Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation",
-          "structural_invalidation": "Opposing confirmed closed 15m/30m structural rotation; specific level requires verified source",
-          "entry": null,
-          "stop": null,
-          "tp1": null,
-          "tp2": null,
-          "broker_executable": false
-        },
-        {
-          "pair": "EURCAD",
-          "original_direction": "SELL",
-          "latest_provisional_assessment": "SELL EPISODE / OPPOSING PRESSURE — WATCH",
-          "conditional_research_trigger": "Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation",
-          "structural_invalidation": "Opposing confirmed closed 15m/30m structural rotation; specific level requires verified source",
-          "entry": null,
-          "stop": null,
-          "tp1": null,
-          "tp2": null,
-          "broker_executable": false
-        },
-        {
           "pair": "AUDJPY",
           "original_direction": "BUY",
-          "latest_provisional_assessment": "BUY EPISODE / OPPOSING PRESSURE — WATCH",
+          "latest_provisional_assessment": "BUY CONTINUATION — MONITOR",
           "conditional_research_trigger": "Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation",
           "structural_invalidation": "Opposing confirmed closed 15m/30m structural rotation; specific level requires verified source",
           "entry": null,
@@ -8136,18 +8351,6 @@
           "pair": "NZDJPY",
           "original_direction": "BUY",
           "latest_provisional_assessment": "BUY CONTINUATION — MONITOR",
-          "conditional_research_trigger": "Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation",
-          "structural_invalidation": "Opposing confirmed closed 15m/30m structural rotation; specific level requires verified source",
-          "entry": null,
-          "stop": null,
-          "tp1": null,
-          "tp2": null,
-          "broker_executable": false
-        },
-        {
-          "pair": "EURJPY",
-          "original_direction": "BUY",
-          "latest_provisional_assessment": "BUY EPISODE / OPPOSING PRESSURE — WATCH",
           "conditional_research_trigger": "Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation",
           "structural_invalidation": "Opposing confirmed closed 15m/30m structural rotation; specific level requires verified source",
           "entry": null,
@@ -8169,9 +8372,9 @@
           "broker_executable": false
         },
         {
-          "pair": "NZDUSD",
-          "original_direction": "BUY",
-          "latest_provisional_assessment": "BUY CONTINUATION — MONITOR",
+          "pair": "EURCAD",
+          "original_direction": "SELL",
+          "latest_provisional_assessment": "SELL EPISODE / MIXED CLOSED CANDLES — WAIT",
           "conditional_research_trigger": "Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation",
           "structural_invalidation": "Opposing confirmed closed 15m/30m structural rotation; specific level requires verified source",
           "entry": null,
@@ -8181,7 +8384,7 @@
           "broker_executable": false
         },
         {
-          "pair": "EURGBP",
+          "pair": "USDJPY",
           "original_direction": "BUY",
           "latest_provisional_assessment": "BUY EPISODE / MIXED CLOSED CANDLES — WAIT",
           "conditional_research_trigger": "Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation",
@@ -8193,9 +8396,33 @@
           "broker_executable": false
         },
         {
+          "pair": "NZDUSD",
+          "original_direction": "SELL",
+          "latest_provisional_assessment": "SELL EPISODE / MIXED CLOSED CANDLES — WAIT",
+          "conditional_research_trigger": "Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation",
+          "structural_invalidation": "Opposing confirmed closed 15m/30m structural rotation; specific level requires verified source",
+          "entry": null,
+          "stop": null,
+          "tp1": null,
+          "tp2": null,
+          "broker_executable": false
+        },
+        {
+          "pair": "EURGBP",
+          "original_direction": "BUY",
+          "latest_provisional_assessment": "BUY EARLY WATCH — NEWLY RECORDED",
+          "conditional_research_trigger": "Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation",
+          "structural_invalidation": "Opposing confirmed closed 15m/30m structural rotation; specific level requires verified source",
+          "entry": null,
+          "stop": null,
+          "tp1": null,
+          "tp2": null,
+          "broker_executable": false
+        },
+        {
           "pair": "AUDUSD",
           "original_direction": "SELL",
-          "latest_provisional_assessment": "SELL EPISODE / OPPOSING PRESSURE — WATCH",
+          "latest_provisional_assessment": "SELL EPISODE / MIXED CLOSED CANDLES — WAIT",
           "conditional_research_trigger": "Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation",
           "structural_invalidation": "Opposing confirmed closed 15m/30m structural rotation; specific level requires verified source",
           "entry": null,
@@ -8207,7 +8434,7 @@
         {
           "pair": "EURUSD",
           "original_direction": "SELL",
-          "latest_provisional_assessment": "SELL EPISODE / OPPOSING PRESSURE — WATCH",
+          "latest_provisional_assessment": "SELL EPISODE / MIXED CLOSED CANDLES — WAIT",
           "conditional_research_trigger": "Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation",
           "structural_invalidation": "Opposing confirmed closed 15m/30m structural rotation; specific level requires verified source",
           "entry": null,
@@ -8219,7 +8446,19 @@
         {
           "pair": "GBPUSD",
           "original_direction": "SELL",
-          "latest_provisional_assessment": "SELL EPISODE / OPPOSING PRESSURE — WATCH",
+          "latest_provisional_assessment": "SELL EARLY WATCH — NEWLY RECORDED",
+          "conditional_research_trigger": "Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation",
+          "structural_invalidation": "Opposing confirmed closed 15m/30m structural rotation; specific level requires verified source",
+          "entry": null,
+          "stop": null,
+          "tp1": null,
+          "tp2": null,
+          "broker_executable": false
+        },
+        {
+          "pair": "EURJPY",
+          "original_direction": "BUY",
+          "latest_provisional_assessment": "BUY CONTINUATION — MONITOR",
           "conditional_research_trigger": "Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation",
           "structural_invalidation": "Opposing confirmed closed 15m/30m structural rotation; specific level requires verified source",
           "entry": null,
@@ -8236,39 +8475,15 @@
       "layer": 15,
       "title": "HISTORICAL ACCOUNTABILITY",
       "status": "VERIFIED_RECORDED_EPISODE_PLUS_SITE_REPORTED_CLOSED_CANDLE",
-      "as_of_latest_observation": "2026-10-13T14:27:11.034024+00:00",
+      "as_of_latest_observation": "2026-10-13T14:30:29.862652+00:00",
       "episode_accountability": [
-        {
-          "pair": "USDJPY",
-          "recorded_episode_direction": "BUY",
-          "first_recorded_at_utc": "2026-10-13T12:12:34.895578+00:00",
-          "first_recorded_price": 158.153,
-          "latest_completed_15m_price": 158.05,
-          "pips_favorable_since_first_record": -10.3,
-          "source": "RECORDED_HISTORY_VS_NEWEST_COMPLETED_PUBLIC_CANDLE",
-          "not_trade_profit": true,
-          "episode_is_active": true,
-          "no_retroactive_reversal": true
-        },
-        {
-          "pair": "EURCAD",
-          "recorded_episode_direction": "SELL",
-          "first_recorded_at_utc": "2026-10-13T13:29:37.682290+00:00",
-          "first_recorded_price": 1.59303,
-          "latest_completed_15m_price": 1.59551,
-          "pips_favorable_since_first_record": -24.8,
-          "source": "RECORDED_HISTORY_VS_NEWEST_COMPLETED_PUBLIC_CANDLE",
-          "not_trade_profit": true,
-          "episode_is_active": true,
-          "no_retroactive_reversal": true
-        },
         {
           "pair": "AUDJPY",
           "recorded_episode_direction": "BUY",
           "first_recorded_at_utc": "2026-10-13T09:41:29.416822+00:00",
           "first_recorded_price": 110.188,
-          "latest_completed_15m_price": 110.228,
-          "pips_favorable_since_first_record": 4.0,
+          "latest_completed_15m_price": 110.263,
+          "pips_favorable_since_first_record": 7.5,
           "source": "RECORDED_HISTORY_VS_NEWEST_COMPLETED_PUBLIC_CANDLE",
           "not_trade_profit": true,
           "episode_is_active": true,
@@ -8279,20 +8494,8 @@
           "recorded_episode_direction": "BUY",
           "first_recorded_at_utc": "2026-10-13T09:57:52.629380+00:00",
           "first_recorded_price": 88.579,
-          "latest_completed_15m_price": 88.697,
-          "pips_favorable_since_first_record": 11.8,
-          "source": "RECORDED_HISTORY_VS_NEWEST_COMPLETED_PUBLIC_CANDLE",
-          "not_trade_profit": true,
-          "episode_is_active": true,
-          "no_retroactive_reversal": true
-        },
-        {
-          "pair": "EURJPY",
-          "recorded_episode_direction": "BUY",
-          "first_recorded_at_utc": "2026-10-13T10:31:07.817412+00:00",
-          "first_recorded_price": 176.869,
-          "latest_completed_15m_price": 176.842,
-          "pips_favorable_since_first_record": -2.7,
+          "latest_completed_15m_price": 88.731,
+          "pips_favorable_since_first_record": 15.2,
           "source": "RECORDED_HISTORY_VS_NEWEST_COMPLETED_PUBLIC_CANDLE",
           "not_trade_profit": true,
           "episode_is_active": true,
@@ -8303,8 +8506,32 @@
           "recorded_episode_direction": "SELL",
           "first_recorded_at_utc": "2026-10-13T09:57:52.629380+00:00",
           "first_recorded_price": 1.42622,
-          "latest_completed_15m_price": 1.42607,
-          "pips_favorable_since_first_record": 1.5,
+          "latest_completed_15m_price": 1.42575,
+          "pips_favorable_since_first_record": 4.7,
+          "source": "RECORDED_HISTORY_VS_NEWEST_COMPLETED_PUBLIC_CANDLE",
+          "not_trade_profit": true,
+          "episode_is_active": true,
+          "no_retroactive_reversal": true
+        },
+        {
+          "pair": "EURCAD",
+          "recorded_episode_direction": "SELL",
+          "first_recorded_at_utc": "2026-10-13T13:29:37.682290+00:00",
+          "first_recorded_price": 1.59303,
+          "latest_completed_15m_price": 1.59495,
+          "pips_favorable_since_first_record": -19.2,
+          "source": "RECORDED_HISTORY_VS_NEWEST_COMPLETED_PUBLIC_CANDLE",
+          "not_trade_profit": true,
+          "episode_is_active": true,
+          "no_retroactive_reversal": true
+        },
+        {
+          "pair": "USDJPY",
+          "recorded_episode_direction": "BUY",
+          "first_recorded_at_utc": "2026-10-13T12:12:34.895578+00:00",
+          "first_recorded_price": 158.153,
+          "latest_completed_15m_price": 158.113,
+          "pips_favorable_since_first_record": -4.0,
           "source": "RECORDED_HISTORY_VS_NEWEST_COMPLETED_PUBLIC_CANDLE",
           "not_trade_profit": true,
           "episode_is_active": true,
@@ -8312,11 +8539,11 @@
         },
         {
           "pair": "NZDUSD",
-          "recorded_episode_direction": "BUY",
-          "first_recorded_at_utc": "2026-10-13T14:19:20.276171+00:00",
+          "recorded_episode_direction": "SELL",
+          "first_recorded_at_utc": "2026-10-13T14:30:35.018747+00:00",
           "first_recorded_price": 0.5615,
-          "latest_completed_15m_price": 0.56122,
-          "pips_favorable_since_first_record": -2.8,
+          "latest_completed_15m_price": 0.5612,
+          "pips_favorable_since_first_record": 3.0,
           "source": "RECORDED_HISTORY_VS_NEWEST_COMPLETED_PUBLIC_CANDLE",
           "not_trade_profit": true,
           "episode_is_active": true,
@@ -8327,8 +8554,8 @@
           "recorded_episode_direction": "BUY",
           "first_recorded_at_utc": "2026-10-13T14:19:20.276171+00:00",
           "first_recorded_price": 0.84522,
-          "latest_completed_15m_price": 0.84485,
-          "pips_favorable_since_first_record": -3.7,
+          "latest_completed_15m_price": 0.84487,
+          "pips_favorable_since_first_record": -3.5,
           "source": "RECORDED_HISTORY_VS_NEWEST_COMPLETED_PUBLIC_CANDLE",
           "not_trade_profit": true,
           "episode_is_active": true,
@@ -8339,8 +8566,8 @@
           "recorded_episode_direction": "SELL",
           "first_recorded_at_utc": "2026-10-13T14:09:07.555091+00:00",
           "first_recorded_price": 0.69757,
-          "latest_completed_15m_price": 0.69744,
-          "pips_favorable_since_first_record": 1.3,
+          "latest_completed_15m_price": 0.6974,
+          "pips_favorable_since_first_record": 1.7,
           "source": "RECORDED_HISTORY_VS_NEWEST_COMPLETED_PUBLIC_CANDLE",
           "not_trade_profit": true,
           "episode_is_active": true,
@@ -8351,8 +8578,8 @@
           "recorded_episode_direction": "SELL",
           "first_recorded_at_utc": "2026-10-13T14:09:07.555091+00:00",
           "first_recorded_price": 1.1187,
-          "latest_completed_15m_price": 1.11889,
-          "pips_favorable_since_first_record": -1.9,
+          "latest_completed_15m_price": 1.11875,
+          "pips_favorable_since_first_record": -0.5,
           "source": "RECORDED_HISTORY_VS_NEWEST_COMPLETED_PUBLIC_CANDLE",
           "not_trade_profit": true,
           "episode_is_active": true,
@@ -8363,8 +8590,20 @@
           "recorded_episode_direction": "SELL",
           "first_recorded_at_utc": "2026-10-13T14:09:07.555091+00:00",
           "first_recorded_price": 1.32415,
-          "latest_completed_15m_price": 1.32433,
-          "pips_favorable_since_first_record": -1.8,
+          "latest_completed_15m_price": 1.32419,
+          "pips_favorable_since_first_record": -0.4,
+          "source": "RECORDED_HISTORY_VS_NEWEST_COMPLETED_PUBLIC_CANDLE",
+          "not_trade_profit": true,
+          "episode_is_active": true,
+          "no_retroactive_reversal": true
+        },
+        {
+          "pair": "EURJPY",
+          "recorded_episode_direction": "BUY",
+          "first_recorded_at_utc": "2026-10-13T10:31:07.817412+00:00",
+          "first_recorded_price": 176.869,
+          "latest_completed_15m_price": 176.885,
+          "pips_favorable_since_first_record": 1.6,
           "source": "RECORDED_HISTORY_VS_NEWEST_COMPLETED_PUBLIC_CANDLE",
           "not_trade_profit": true,
           "episode_is_active": true,
@@ -8452,7 +8691,7 @@
     }
   ],
   "final_forex_main_signal": {
-    "highest_ranked_published_pair": "USDJPY",
+    "highest_ranked_published_pair": "AUDJPY",
     "strongest_technical_breadth_currencies": [
       "AUD",
       "CAD",
@@ -8466,42 +8705,78 @@
     "do_not_chase_or_wait": [
       {
         "pair": "USDCAD",
-        "latest_15m_closed_price": 1.42607,
-        "latest_15m_closed_at_utc": "2026-10-13T14:15:00+00:00",
-        "15m_change_pips": 3.4,
-        "latest_30m_closed_at_utc": "2026-10-13T14:00:00+00:00",
-        "30m_change_pips": -0.9,
+        "latest_15m_closed_price": 1.42575,
+        "latest_15m_closed_at_utc": "2026-10-13T14:30:00+00:00",
+        "15m_change_pips": -3.2,
+        "latest_30m_closed_at_utc": "2026-10-13T14:30:00+00:00",
+        "30m_change_pips": 0.2,
         "original_published_direction": "SELL",
         "updated_directional_assessment": "SELL EPISODE / MIXED CLOSED CANDLES — WAIT",
         "counter_rotation_unrecorded": false,
         "site_reported_data_not_broker": true
       },
       {
-        "pair": "EURGBP",
-        "latest_15m_closed_price": 0.84485,
-        "latest_15m_closed_at_utc": "2026-10-13T14:15:00+00:00",
-        "15m_change_pips": 1.7,
-        "latest_30m_closed_at_utc": "2026-10-13T14:00:00+00:00",
+        "pair": "EURCAD",
+        "latest_15m_closed_price": 1.59495,
+        "latest_15m_closed_at_utc": "2026-10-13T14:30:00+00:00",
+        "15m_change_pips": -5.6,
+        "latest_30m_closed_at_utc": "2026-10-13T14:30:00+00:00",
+        "30m_change_pips": 3.6,
+        "original_published_direction": "SELL",
+        "updated_directional_assessment": "SELL EPISODE / MIXED CLOSED CANDLES — WAIT",
+        "counter_rotation_unrecorded": false,
+        "site_reported_data_not_broker": true
+      },
+      {
+        "pair": "USDJPY",
+        "latest_15m_closed_price": 158.113,
+        "latest_15m_closed_at_utc": "2026-10-13T14:30:00+00:00",
+        "15m_change_pips": 6.3,
+        "latest_30m_closed_at_utc": "2026-10-13T14:30:00+00:00",
         "30m_change_pips": -0.1,
         "original_published_direction": "BUY",
         "updated_directional_assessment": "BUY EPISODE / MIXED CLOSED CANDLES — WAIT",
         "counter_rotation_unrecorded": false,
         "site_reported_data_not_broker": true
+      },
+      {
+        "pair": "NZDUSD",
+        "latest_15m_closed_price": 0.5612,
+        "latest_15m_closed_at_utc": "2026-10-13T14:30:00+00:00",
+        "15m_change_pips": -0.2,
+        "latest_30m_closed_at_utc": "2026-10-13T14:30:00+00:00",
+        "30m_change_pips": 2.6,
+        "original_published_direction": "SELL",
+        "updated_directional_assessment": "SELL EPISODE / MIXED CLOSED CANDLES — WAIT",
+        "counter_rotation_unrecorded": false,
+        "site_reported_data_not_broker": true
+      },
+      {
+        "pair": "AUDUSD",
+        "latest_15m_closed_price": 0.6974,
+        "latest_15m_closed_at_utc": "2026-10-13T14:30:00+00:00",
+        "15m_change_pips": -0.4,
+        "latest_30m_closed_at_utc": "2026-10-13T14:30:00+00:00",
+        "30m_change_pips": 0.6,
+        "original_published_direction": "SELL",
+        "updated_directional_assessment": "SELL EPISODE / MIXED CLOSED CANDLES — WAIT",
+        "counter_rotation_unrecorded": false,
+        "site_reported_data_not_broker": true
+      },
+      {
+        "pair": "EURUSD",
+        "latest_15m_closed_price": 1.11875,
+        "latest_15m_closed_at_utc": "2026-10-13T14:30:00+00:00",
+        "15m_change_pips": -1.4,
+        "latest_30m_closed_at_utc": "2026-10-13T14:30:00+00:00",
+        "30m_change_pips": 2.1,
+        "original_published_direction": "SELL",
+        "updated_directional_assessment": "SELL EPISODE / MIXED CLOSED CANDLES — WAIT",
+        "counter_rotation_unrecorded": false,
+        "site_reported_data_not_broker": true
       }
     ],
     "news_event_risk": [
-      {
-        "title": "CB Leading Index m/m",
-        "currency": "AUD",
-        "event_at_utc": "2026-10-13T14:30:00+00:00",
-        "event_at_et": "2026-10-13T10:30:00-04:00",
-        "impact": "Low",
-        "forecast": "",
-        "previous": "0.5%",
-        "actual": null,
-        "actual_status": "UNAVAILABLE",
-        "time_relation": "UPCOMING"
-      },
       {
         "title": "FOMC Member Barkin Speaks",
         "currency": "USD",
@@ -8609,6 +8884,18 @@
         "actual": null,
         "actual_status": "UNAVAILABLE",
         "time_relation": "UPCOMING"
+      },
+      {
+        "title": "ECB President Lagarde Speaks",
+        "currency": "EUR",
+        "event_at_utc": "2026-10-14T02:10:00+00:00",
+        "event_at_et": "2026-10-13T22:10:00-04:00",
+        "impact": "Medium",
+        "forecast": "",
+        "previous": "",
+        "actual": null,
+        "actual_status": "UNAVAILABLE",
+        "time_relation": "UPCOMING"
       }
     ],
     "macro_evidence_status": "PARTIAL_NOT_FULLY_VERIFIED",
@@ -8655,9 +8942,9 @@
     "preserve_50pct_early_50pct_trend_ranking": true,
     "preserve_all_11_pairs": true,
     "no_M5_signal_inputs": true,
-    "source_technical_generated_at_utc": "2026-10-13T14:27:16.702592+00:00",
-    "source_unified_generated_at_utc": "2026-10-13T14:27:17.742157+00:00",
-    "source_latest_volatility_collected_at_utc": "2026-10-13T14:27:11.034024+00:00",
+    "source_technical_generated_at_utc": "2026-10-13T14:30:35.018747+00:00",
+    "source_unified_generated_at_utc": "2026-10-13T14:30:36.198864+00:00",
+    "source_latest_volatility_collected_at_utc": "2026-10-13T14:30:29.862652+00:00",
     "trades_executed": false,
     "notifications_sent": false
   }
