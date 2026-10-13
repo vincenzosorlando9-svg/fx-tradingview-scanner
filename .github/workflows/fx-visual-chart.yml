@@ -76,6 +76,9 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # Do NOT stage fx_volatility.json: collection by the chart job is not signal validation.
           git add -A -- charts/
+          # The chart-only collector changes this file locally; discard it before rebase.
+          # Only the exact-candle-gated rotation workflow may publish it.
+          git restore -- fx_volatility.json
           if ! git diff --cached --quiet; then
             git commit -m "Publish 33 scoped FX charts without overwriting verified signal inputs"
             git pull --rebase origin main
