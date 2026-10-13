@@ -57,7 +57,9 @@ class NewsPriorityTests(unittest.TestCase):
     def test_no_new_publisher_or_invented_trade(self):
         doc=make_watch(self.feeds(),now=NOW)
         self.assertEqual(set(NEWS_URLS),{"FXStreet_RSS","Reuters_currency_page"})
-        self.assertTrue(doc["no_new_sources"])
+        self.assertFalse(doc["no_new_sources"])
+        self.assertTrue(doc["no_unapproved_sources"])
+        self.assertIn("Newsquawk_public_delayed",doc["approved_source_names"])
         self.assertTrue(doc["no_headline_buy_sell_votes"])
         self.assertTrue(doc["no_trades_or_alerts"])
 
