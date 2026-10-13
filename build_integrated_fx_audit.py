@@ -21,14 +21,41 @@ def main():
     cal=read("fx_economic_calendar.json")
     market=read("fx_forexfactory_markets.json")
     vol=read("fx_volatility.json")
+    asian=read("fx_asian_risk.json")
     sources={}
     for name,obj,field,limit in [("technicals",tech,"collected_at_utc",30),("dashboard",dash,"generated_at_utc",30),("calendar",cal,"collected_at_utc",180),("ff_markets",market,"collected_at_utc",30),("volatility",vol,"collected_at_utc",30)]:
         minutes=age(obj.get(field),now) if isinstance(obj,dict) else None
         sources[name]={"status":"FRESH" if minutes is not None and 0<=minutes<=limit else "STALE" if minutes is not None else "MISSING","age_minutes":minutes}
+    # Public page provides dated OTC/CFD daily KOSPI reference, NOT live KRX data.
+    asian_age=age((asian or {}).get("collected_at_utc"),now)
+    asian_fresh=asian_age is not None and -2<=asian_age<=40
+    asian_daily=(asian_fresh and (asian or {}).get("daily_reference_status")==
+                 "DATED_PUBLIC_DAILY_CFD_REFERENCE")
+    asian_news=(asian_fresh and bool((asian or {}).get("intraday_news_summary")))
+    sources["kospi_te_public_page"]={
+        "status":"DATED_DAILY_CONTEXT" if asian_daily else
+                 "DATED_NEWS_CONTEXT_ONLY" if asian_news else
+                 "STALE" if asian_age is not None else "MISSING",
+        "age_minutes":asian_age,
+        "source_url":"https://tradingeconomics.com/south-korea/stock-market",
+        "verified_intraday_quote":False}
+    asian_summary={
+        "source":"Trading Economics public KOSPI page (no key)",
+        "status":sources["kospi_te_public_page"]["status"],
+        "daily_reference_change_pct":(asian or {}).get("daily_reference_change_pct") if asian_daily else None,
+        "daily_reference_level":(asian or {}).get("daily_reference_level") if asian_daily else None,
+        "reference_date_kst":(asian or {}).get("reference_date_kst") if asian_daily else None,
+        "risk_tier":(asian or {}).get("risk_tier_from_daily_reference") if asian_daily else "UNAVAILABLE",
+        "dated_news_headline":(asian or {}).get("intraday_news_summary") if asian_news else None,
+        "dated_news_day":(asian or {}).get("intraday_news_date") if asian_news else None,
+        "interpretation":"Risk-off corroboration only; no verified intraday quote or automatic FX direction changes",
+        "verified_intraday_quote":False,"execution_allowed":False}
     # Source presence is not evidence of verified macro fundamentals.
     macro={"reuters_fxstreet_catalysts":"UNAVAILABLE_AUTOMATED","sovereign_yield_differentials":"UNAVAILABLE_AUTOMATED",
            "ois":"UNAVAILABLE_AUTOMATED","commodities":"UNAVAILABLE_AUTOMATED",
-           "cftc_cme_options":"UNAVAILABLE_AUTOMATED","independent_live_spreads":"UNAVAILABLE_AUTOMATED"}
+           "cftc_cme_options":"UNAVAILABLE_AUTOMATED","independent_live_spreads":"UNAVAILABLE_AUTOMATED",
+           "kospi_asian_equities":("DATED_DAILY_REFERENCE_PARTIAL" if asian_daily else
+                                   "DATED_NEWS_PARTIAL" if asian_news else "UNAVAILABLE_AUTOMATED")}
     ranks={x.get("pair"):x for x in (dash or {}).get("top_five_technical_candidates",[])}
     results=[]
     for pair in PAIRS:
@@ -63,11 +90,23 @@ def main():
                         "h1_ema20_50":h1,"h4_ema20_50":h4,
                         "timeframes_present":all(tf.get("status")=="ok" for tf in (t15,t30,one,four)),
                         "higher_timeframe_conflict":conflict,"upcoming_48h_events":events,"next_24h_events":next_24h,"imminent_events":imminent,"event_risk":event_risk,"calendar_coverage":calendar_coverage,
-                        "forexfactory_positioning":ff.get("positioning"),"macro_confirmed":False,
+                        "forexfactory_positioning":ff.get("positioning"),
+                        "asian_risk_context":asian_summary if (
+                            "JPY" in pair or "AUD" in pair or "NZD" in pair) else
+                            {"status":asian_summary["status"],
+                             "note":"General risk backdrop; not an FX trade signal"},
+                        "asian_risk_directional_note":(
+                            "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree"
+                            if pair.endswith("JPY") else
+                            "Asian equity risk may affect AUD/NZD, but FX must confirm"
+                            if ("AUD" in pair or "NZD" in pair) else
+                            "Not a direct directional driver"),
+                        "macro_confirmed":False,
                         "execution_status":"NO_TRADE_UNVERIFIED" if sources["technicals"]["status"]!="FRESH" or conflict or calendar_coverage!="VERIFIED" or imminent else "TECHNICAL_WATCH_MACRO_UNVERIFIED",
                         "entry":None,"stop":None,"tp1":None,"tp2":None})
     output={"generated_at_utc":now.isoformat(),"purpose":"FULL_SOURCE_AUDIT_NOT_EXECUTABLE_TRADE_ORDERS",
-            "sources":sources,"macro_layers":macro,"pair_count":len(results),"pairs":results,
+            "sources":sources,"macro_layers":macro,"asian_risk_context":asian_summary,
+            "pair_count":len(results),"pairs":results,
             "fully_macro_verified":False,"calendar_first_rule":"Every pair MUST display all upcoming events for both currencies in next 24 hours, regardless of impact. IMMINENT within 120 minutes prevents a normal entry signal; include forecasts and previous values. Do not infer releases from missing actuals.","unverified_layers":[k for k,v in macro.items() if v!="VERIFIED"],
             "rule":"Never present technical watches as macro-confirmed or executable trades"}
     Path("fx_integrated_audit.json").write_text(json.dumps(output,indent=2)+"\n",encoding="utf-8")
