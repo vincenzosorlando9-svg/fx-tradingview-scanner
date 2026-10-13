@@ -548,6 +548,7 @@ def main():
         "fx_pairs_indicative_count": len(raw.get("forexcracked", {}).get("pairs", {})),
         "USDCNH_china_indicative_context": "PRESENT" if "CHINA:USD_CNH" in metrics else "UNAVAILABLE",
         "CFTC_report": cftc.get("status", "UNAVAILABLE"),
+        "retail_public_delayed_status": (read("fx_retail_sentiment.json").get("status","UNAVAILABLE")),
         "retail_sample_status": retail.get("status", "UNAVAILABLE"),
         "retail_pairs_delayed": sum(x.get("status") == "PUBLISHED_RETAIL_SAMPLE_DELAYED_60_MIN"
                                      for x in (retail.get("pairs") or {}).values()),
@@ -572,6 +573,13 @@ def main():
     write("fx_macro_news.json", news)
     rows = build_pairs(dash, early, cal, news, spreads, deltas, metrics, cftc, raw, now,
                        retail=retail)
+    retail=read("fx_retail_sentiment.json")
+    retail_age=age_min(retail.get("collected_at_utc"), now)
+    retail_fresh=(retail_age is not None and -2 <= retail_age <= 70)
+    for row in rows:
+        ref=(retail.get("pairs") or {}).get(row["pair"]) if retail_fresh else None
+        row["retail_positioning"]=ref or {"status":"UNAVAILABLE_OR_UNVERIFIED_DELAYED_RETAIL"}
+        row["retail_data_alters_direction"]=False
     range_data=read("fx_range_context.json")
     range_age=age_min(range_data.get("generated_at_utc"), now)
     range_fresh=(range_age is not None and 0<=range_age<=45 and
