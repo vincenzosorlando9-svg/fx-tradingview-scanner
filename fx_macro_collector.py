@@ -103,7 +103,7 @@ def date_from_stats(txt):
     return None
 
 def source_date(text):
-    stats = re.search(r"\b(?:Stock Market|Bond Yield|Note Yield|Interest Rate)\s+-\s+Stats\b",
+    stats = re.search(r"\b(?:Stock Market(?: Index(?: \([^)]*\))?)?|Bond Yield|Note Yield|Interest Rate)\s+-\s+Stats\b",
                       text, re.I)
     if stats:
         d = date_from_stats(text[stats.end():stats.end() + 1100])
@@ -201,15 +201,19 @@ def parse_policy(page, currency):
             obj["policy_rate_pct"] = val
     # Extract month/year only from an explicit Related rates table, not prose.
     soup = BeautifulSoup(page["body"], "html.parser")
+    policy_label = {"USD": "Fed Interest Rate", "EUR": "ECB Interest Rate",
+                    "GBP": "BoE Interest Rate", "JPY": "Japan Interest Rate",
+                    "CAD": "Canada Interest Rate", "AUD": "Australia Interest Rate",
+                    "NZD": "New Zealand Interest Rate"}[currency]
     for tr in soup.select("tr"):
         cells = [x.get_text(" ", strip=True) for x in tr.find_all(["td", "th"], recursive=False)]
-        if len(cells) < 5 or not re.search(r"Interest Rate$", cells[0], re.I):
+        if len(cells) < 5 or cells[0].strip().lower() != policy_label.lower():
             continue
         rate = numeric(cells[1])
         mdate = re.fullmatch(r"[A-Za-z]{3}\s+20\d{2}", cells[-1])
         if rate is None or not mdate or not -5 <= rate <= 30:
             continue
-        if obj["policy_rate_pct"] is not None and abs(rate - obj["policy_rate_pct"]) > .2:
+        if obj["policy_rate_pct"] is not None and abs(rate - obj["policy_rate_pct"]) > .015:
             continue
         obj["policy_rate_pct"] = rate
         obj["reference_period"] = cells[-1]
@@ -247,7 +251,7 @@ def parse_index(page, symbol):
             changes = [numeric(x) for x in cells[2:]
                        if re.fullmatch(r"[+\-]?\d+(?:\.\d+)?%", x.replace(",",""))]
             if changes:
-                obj["daily_change_pct"] = changes[-1] if symbol == "KOSPI" else changes[0]
+                obj["daily_change_pct"] = changes[0]  # first % column is the DAY, not YEAR
             break
         if obj["value"] is not None:
             break
