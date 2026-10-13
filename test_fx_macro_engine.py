@@ -8,6 +8,7 @@ from fx_macro_engine import (normalize, derived_deltas, rate_spreads,
                              build_pairs, news_context, observation_recent, metric)
 from fx_ff_actuals_collector import parse as parse_actuals
 from fx_cftc_tff_collector import parse as parse_cftc
+from fx_retail_sentiment_collector import parse as parse_retail
 from fx_range_context import compute as compute_ranges, normalize_clock as range_clock, ny_rollover_start
 
 UTC = timezone.utc
@@ -117,6 +118,22 @@ class PublicCollectorTests(unittest.TestCase):
         # Date comparison against *real test execution time* may differ, but undated
         # articles are never treated as fresh.
         self.assertTrue(all(x.get("published_at_utc") for x in result["articles"]))
+
+    def test_public_retail_delayed_valid_percentages(self):
+        body = """<html><body>Community Outlook
+          <section><h1>AUDUSD</h1><div>Short 62 %</div>
+          <div>Long 38 %</div></section></body></html>"""
+        result = parse_retail(body,NOW)
+        self.assertEqual(result["pairs"]["AUDUSD"]["short_pct"],62)
+        self.assertEqual(result["pairs"]["AUDUSD"]["long_pct"],38)
+        self.assertGreaterEqual(result["reference_delay_minutes_minimum"],60)
+        self.assertFalse(result["broker_executable"])
+
+    def test_public_retail_rejects_ambiguous_sentiment(self):
+        body = """<html><body>Community
+          <div>AUDUSD Short 60% Long 70%</div></body></html>"""
+        result = parse_retail(body,NOW)
+        self.assertEqual(result["pairs"],{})
 
     def test_forexfactory_actuals_unique_event_only(self):
         html = """<table><tr class="calendar__row"><td class="calendar__currency">USD</td>
