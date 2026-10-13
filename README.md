@@ -88,15 +88,33 @@ Trading Economics public bond values are date-stamped references, not proven int
 OilPrice.com quotes may be delayed. ForexCracked site bid/ask is indicative, not broker-executable. Reuters can block the automated fetch. Myfxbook retail can return 403; OIS and contract-specific CME volume are marked unavailable where unverified. Missing data cannot vote direction.
 The options layer and CNN Fear & Greed source are removed. FearGreedMeter is the approved fear/greed source. Alerts remain disabled.
 
-## Locked full FX scan reading order — user-approved October 13, 2026
+## Locked FOREX MAIN SIGNAL — 15-LAYER MACRO-FIRST AUDIT (user correction Oct 13, 2026)
 
-**DO NOT CHANGE THIS PRESENTATION ORDER without an explicit new instruction from the user.** This supersedes the old `Top 3/news first` display order for the *report*, but not the underlying priority of news gathering or technical signal calculations. Every scan, including a single-pair discussion, must still perform the full-spectrum audit; the displayed full report starts with currency strength.
+**This section supersedes the former simplified six-section reading order. NEVER replace it with an abbreviated six-part overview unless the user explicitly requests a change.** For EVERY full FX scan, including any single-pair drilldown, the complete 15-layer source audit is required.
 
-1. **Current currency strength FIRST:** show *all seven* currencies strongest → weakest, current strength scores, strongest / weakest names, ties, timestamp, acceleration only if independently validated. Existing `currency_strength_breadth` is **unweighted 11-pair closed M15/M30 directional breadth**, NOT an independently verified real-time currency-strength feed. Say so, and show UNAVAILABLE if incomplete.
-2. **Best FIVE trading pairs SECOND:** rank 1–5 without altering the established 50% early opportunity / 50% trend strength technical score. Each row: pair, BUY/SELL, EARLY/CONFIRMING/EXTENDED/WAIT, rank score, source-identified price and clock, macro alignment and signal readiness. Never quietly substitute best three.
-3. **Detailed setup for EACH of the five THIRD:** WHY NOW?, news catalyst, trigger or conditional entry, invalidation/stop, TP1/TP2, market timestamp, first signal time, 15m/30m timing, H1 EMA20/EMA50 and 4H EMA10/EMA20, ADR/ATR remaining, nearby levels, chase risk, macro agreement/disagreement, and unavailable inputs. Missing or unverified entries, stops, targets must remain null, not fabricated.
-4. **Complete market intelligence FOURTH:** Reuters/FXStreet and news timeline; Forex Factory actual/forecast/calendar; central banks and policy rates; 2Y/5Y/10Y/30Y sovereign yields and valid observed changes; OIS when genuinely verified; oil solely OilPrice.com, other commodities and China/CNH; DXY, VIX, Asian/global indices and FearGreedMeter; CFTC/CME/retail positioning; currency clusters, technical indicators, timeframe structures, ADR/session ranges and source freshness. News is still collected and interpreted first internally.
-5. **ALL 11 approved pairs FIFTH:** full BUY/SELL/WAIT board including non-top-five pairs, rankings and integrity flags.
-6. **Final scan conclusion SIXTH:** strongest actionable *research* setup, earliest emerging rotation, extended/do-not-chase pairs, upcoming catalysts and the specific price/market evidence that could invalidate the thesis.
+**Exactly match the user's October 13, 2026 full-length audit sample:**
+- Timestamped title `FOREX MAIN SIGNAL — 15-LAYER MACRO-FIRST AUDIT`, ET observation time, 11 pairs, closed 15m/30m candles and no API keys; upfront `OVERALL STATUS: PARTIAL/...` with the actual key directional change and explicit collection versus publication times.
+- **CURRENT STRENGTH FIRST** (strongest to weakest across seven currencies, quote clock, tied scores; known limitation: 11-pair technical breadth NOT an independent currency-strength feed).
+- **TOP FIVE — PUBLISHED 50/50 TECHNICAL RANKING** (rank, pair, original BUY/SELL, **updated assessment from newer completed candles when available**, *unchanged published score*). Scores never probabilities. If newer candle feed postdates unified publication, do not retrospectively re-rank or call the published board current.
+- **CRITICAL SETUPS OMITTED FROM TOP FIVE** (any meaningful new directional acceleration/counter-rotation among the other six pairs, with 15m and 30m pips, recorded episode movement, and no invented first/SELL signal).
+- Then **each of the fifteen numbered, fully expanded sections, exactly in order**:
+  1. Reuters / FXStreet — macro news first (verified headline times, cause, contradictions, do not invent real-time Reuters access).
+  2. Economic calendar — released actual/forecast/previous, surprises, verified reaction times versus hypothesis, upcoming events in ET.
+  3. Central banks & OIS — all 7 policy references, OIS UNAVAILABLE if missing.
+  4. Sovereign nominal bonds — 2Y/5Y/10Y/30Y values by country; matched yield spreads, daily reference versus strict sampled fetch-time changes; NO TIPS contamination.
+  5. Commodities — WTI/Brent OilPrice.com ONLY, date/delay; ForexCracked non-crude, iron ore/copper, actual CAD/AUD/NZD implications.
+  6. DXY, KOSPI, Nikkei, China, USD/CNH, VIX, FearGreedMeter; mandatory JPY cluster contradiction audit.
+  7. CFTC TFF net dealers/asset managers/leveraged positions, **official historical weekly**, change missing unless genuinely sourced.
+  8. CME — current live contract OI/volume unavailable unless independently validated; do not substitute CFTC historical OI.
+  9. Retail — Myfxbook/Forex Factory/IG/OANDA when available; NEVER invent percentages.
+  10. Currency-strength clusters — full seven currency breadth strengths, strongest vs weakest, accelerating/weakening only with supporting proof.
+  11. ALL 11 — latest independently inspected **COMPLETED** 15m/30m pair observations, 15m and 30m pips and latest close, with both original published direction and separate updated assessment.
+  12. 1H/4H/Daily trend/EMA context (context only, never veto early 15m/30m); include H1 20/50 EMA and H4 10/20.
+  13. ATR/ADR and consolidation — latest vs prior observed three-hour windows; ADR20, NY17 used and statistical room; explicit limits on exact origin/squeeze.
+  14. Conditional triggers, structural invalidation and execution quality — every pair, **broker spreads/precise entries/stops/TP1/TP2 MISSING unless genuinely independently verified**.
+  15. Historical accountability — saved direction, first recorded observation/price, newest completed price, signed pips since first record, false positives/counter-rotations without hindsight rewriting.
+- **FULL 15-LAYER COVERAGE AUDIT** status table (each layer VERIFIED/PARTIAL/MISSING with source status).
+- **FINAL FOREX MAIN SIGNAL** with strongest emerging pressure, best counter-rotation, strongest published BUY/SELL opportunity, what's extended, key conflicting news, imminent events, EXECUTION: RESEARCH WATCH ONLY.
+- Fully preserve 11 pairs, the fixed 50/50 engine rank, no M5 signal votes, no paid keys, options removed, no automatic trading or notifications.
 
-Permanent output: `fx_scan_report.json` built by `fx_scan_report.py` from the current synchronized `fx_unified_signals.json` + `fx_scan_dashboard.json` and existing macro documents, after each scheduled technical refresh. It has six fixed top-level ordered report sections plus `layout_contract`, carries original all-11 records without changing direction or rank, and is checked by `test_fx_scan_report.py` in both offline CI and technical workflow. No executable broker prices, trading orders, app/email notifications, options layer, API keys, or M5 signals. Format stays locked by default until **the user explicitly changes it**.
+**Published programmatic report:** `fx_scan_report.json` is the full structured audit; **`fx_scan_report.md`** is the complete readable 15-layer user-facing report, created after each `rotation.yml` technical refresh from existing unified, macro, published calendar, CFTC, retail and completed 15m/30m public candle feeds. Separate clocks explicitly: quote publisher times, collector retrieval clocks and unified board publication. No fake synchronized market ticks. Run `python -m unittest -v test_fx_scan_report`; the technical workflow additionally requires exactly fifteen layers, correct heading, 11 technical rows and unchanged published ranking. Never return to the previous six-section layout without explicit user instruction.
