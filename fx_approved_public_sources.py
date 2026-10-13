@@ -58,15 +58,17 @@ def parse_fx_blue(page):
         result["status"]="UNAVAILABLE_FETCH_"+str(page.get("http_status"))
         return result
     soup=BeautifulSoup(page.get("body") or "","html.parser")
-    target=next((h for h in soup.find_all(["h1","h2","h3","h4","h5"])
-                 if "key events" in h.get_text(" ",strip=True).lower()
-                 and "7 days" in h.get_text(" ",strip=True).lower()),None)
-    if not target:
-        result["status"]="UNAVAILABLE_NO_DATED_KEY_EVENTS_SECTION"
-        return result
-    table=target.find_next("table")
-    if not table:
-        result["status"]="UNAVAILABLE_NO_PUBLIC_CALENDAR_TABLE"
+    # The public site can contain other tables, but accept ONLY the header
+    # explicitly declaring Time (UTC). No device, IP, or browser-zone guesses.
+    table=None
+    for candidate in soup.find_all("table"):
+        headings=" ".join(x.get_text(" ",strip=True).lower()
+                          for x in candidate.find_all("th"))
+        if "time (utc)" in headings and "currency" in headings and "event" in headings:
+            table=candidate
+            break
+    if table is None:
+        result["status"]="UNAVAILABLE_NO_EXPLICIT_UTC_EVENT_TABLE"
         return result
     seen=set()
     for row in table.select("tr"):
@@ -122,8 +124,15 @@ def parse_newsquawk_article(page):
     url=page.get("url") or ""
     if not url.startswith("https://www.newsquawk.com/headlines/"):
         return None
+    tags=news_currency_tags(title)
+    # Multi-currency session wraps may name no currency in their title.
+    # Use only a small visible article opening as supplementary *context*
+    # and never translate it into a directional currency vote.
+    if not tags and any(phrase in title.lower()
+                        for phrase in ("market wrap","market update","european open","us market open")):
+        tags=news_currency_tags(" ".join(text.split()[:350]))
     return {"title":title[:220],"url":url,"published_at_utc":public_at,
-            "currencies":news_currency_tags(title),
+            "currencies":tags,
             "direction":"UNDETERMINED_FROM_HEADLINE_ONLY",
             "timestamp_basis":"PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
             "public_delay_at_least_minutes":NEWSQUAWK_DELAY_MIN,
