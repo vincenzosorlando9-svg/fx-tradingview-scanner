@@ -105,7 +105,9 @@ def collect():
              "scan_trigger_type":"backup" if os.getenv("FX_SCAN_CRON","").startswith("5,20,35,50 ") else "primary_or_manual",
              "actual_start_delay_seconds":slot["seconds_after_target"]}
     job_output("ready","false")
-    if current["scan_trigger_type"]=="backup" and verified_existing_slot(slot):
+    if verified_existing_slot(slot):
+        # Applies to backups AND delayed primary jobs: never overwrite a
+        # previously completed exact-candle slot or emit duplicate signals.
         current["status"]="SKIP_ALREADY_VERIFIED"
         current["prior_success_reused"]=True
         save(GATE,current)
