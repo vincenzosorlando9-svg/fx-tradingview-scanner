@@ -15,6 +15,7 @@ on:
       - 'test_fx_early_rotation.py'
       - 'test_fx_reversal_early.py'
       - 'test_fx_mobile_alerts.py'
+      - 'test_fx_counter_rotation.py'
       - 'fx_mobile_alerts.py'
       - 'fx_reversal_replay_oct12.json'
       - 'fx_daily_weekly_levels.py'
@@ -68,7 +69,7 @@ jobs:
         run: python fx_dashboard.py
 
       - name: Replay directional reversals and keyless mobile notification safeguards
-        run: python -m unittest -v test_fx_early_rotation test_fx_reversal_early test_fx_mobile_alerts test_fx_asian_risk
+        run: python -m unittest -v test_fx_early_rotation test_fx_reversal_early test_fx_mobile_alerts test_fx_asian_risk test_fx_counter_rotation
 
       - name: Publish early directional rotation and JPY cluster warnings
         run: python fx_early_rotation.py
