@@ -103,8 +103,8 @@ def make_watch(news_sources, previous=None, now=None):
             "status": "POLICY_REACTION_CHECK" if policy else
                       "HEADLINES_PRESENT" if items else
                       "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
-            "policy_headlines": policy[:5],
-            "news_headlines": items[:8],
+            "policy_headlines": [dict(x) for x in policy[:5]],
+            "news_headlines": [dict(x) for x in items[:8]],
             "source_coverage_incomplete": bool(gaps),
             "no_news_is_not_proof_of_no_catalyst": True,
             "directional_vote": "NONE",
