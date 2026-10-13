@@ -29,6 +29,7 @@ def main():
     actuals=read("fx_economic_actuals.json")
     cftc=read("fx_cftc_tff.json")
     range_data=read("fx_range_context.json")
+    retail=read("fx_retail_positioning.json")
     sources={}
     for name,obj,field,limit in [("technicals",tech,"collected_at_utc",30),("dashboard",dash,"generated_at_utc",30),("calendar",cal,"collected_at_utc",180),("ff_markets",market,"collected_at_utc",30),("volatility",vol,"collected_at_utc",30)]:
         minutes=age(obj.get(field),now) if isinstance(obj,dict) else None
@@ -65,7 +66,8 @@ def main():
         ("macro_news",macro_news,"generated_at_utc",45),
         ("unified_signals",fusions,"generated_at_utc",45),
         ("economic_actuals",actuals,"collected_at_utc",60),
-        ("range_context",range_data,"generated_at_utc",45)]:
+        ("range_context",range_data,"generated_at_utc",45),
+        ("retail",retail,"collected_at_utc",90)]:
         minutes=age((obj or {}).get(field),now)
         sources[name]={"status":"FRESH" if minutes is not None and -2<=minutes<=limit
                        else "STALE" if minutes is not None else "MISSING",
@@ -77,6 +79,8 @@ def main():
     news_sources=(macro_news or {}).get("news_source_statuses",{}) if sources["macro_news"]["status"]=="FRESH" else {}
     market_data=(market or {}).get("pairs",{}) if sources["ff_markets"]["status"]=="FRESH" else {}
     retail_available=sum(bool(x.get("positioning")) for x in market_data.values())
+    myfxbook_available=sum(x.get("status")=="PUBLISHED_RETAIL_SAMPLE_DELAYED_60_MIN"
+                           for x in (retail or {}).get("pairs",{}).values()) if sources["retail"]["status"]=="FRESH" else 0
     fxstreet=news_sources.get("FXStreet_RSS")
     reuters=news_sources.get("Reuters_currency_page")
     macro={
@@ -109,6 +113,7 @@ def main():
             if (cftc or {}).get("status")=="VERIFIED_HISTORICAL" else "UNAVAILABLE"),
         "cme_volume_open_interest":"PARTIAL_CFTC_WEEKLY_OI_CME_DAILY_DATA_UNVERIFIED",
         "retail_positioning":(
+            "PARTIAL_MYFXBOOK_DELAYED_RETAIL_SAMPLE" if myfxbook_available>0 else
             "PARTIAL_PUBLIC_MARKET_POSITIONING" if retail_available>0 else "UNAVAILABLE_CURRENT"),
         "currency_strength_clusters":"DERIVED_FROM_11_FX_PAIRS",
         "closed_15m30m_direction":(
@@ -169,6 +174,7 @@ def main():
                         "timeframes_present":all(tf.get("status")=="ok" for tf in (t15,t30,one,four)),
                         "higher_timeframe_conflict":conflict,"upcoming_48h_events":events,"next_24h_events":next_24h,"imminent_events":imminent,"event_risk":event_risk,"calendar_coverage":calendar_coverage,
                         "forexfactory_positioning":ff.get("positioning"),
+                        "myfxbook_positioning":unified.get("retail_positioning_context",{"status":"UNAVAILABLE"}),
                         "asian_risk_context":asian_summary if (
                             "JPY" in pair or "AUD" in pair or "NZD" in pair) else
                             {"status":asian_summary["status"],
