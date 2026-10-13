@@ -127,6 +127,97 @@ def make_watch(news_sources, previous=None, now=None):
     }
 
 
+
+def completed_event_reaction(volatility, pair, published_at, first_seen_at):
+    """Check the first two CLOSED 15m bars following a publisher timestamp.
+
+    This is an event-aligned observation, not proof of causality, a quote
+    on an executable broker feed, or an alert delivered before the move.
+    """
+    event=parse_utc(published_at)
+    fetched=parse_utc(volatility.get("collected_at_utc"))
+    seen=parse_utc(first_seen_at)
+    source_time=volatility.get("source_timestamp")
+    out={"status":"UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
+         "price_source":"FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+         "no_intrabar_assumptions":True,"causal_link_verified":False,
+         "first_seen_before_market_reaction":False}
+    if not event or not fetched or not seen or not isinstance(source_time,(float,int)):
+        return out
+    drift=source_time-fetched.timestamp()
+    hours=round(drift/3600)
+    offset=hours*3600
+    if abs(drift-offset)>600 or abs(hours)>12:
+        out["status"]="UNAVAILABLE_AMBIGUOUS_PUBLISHER_CANDLE_CLOCK"
+        return out
+    bars=((((volatility.get("pairs") or {}).get(pair) or {}).get("tf") or {}).get("M15") or {})
+    ts,prices=bars.get("t") or [],bars.get("c") or []
+    if len(ts)!=len(prices):
+        return out
+    candle=[]
+    for t,p in zip(ts,prices):
+        if not isinstance(t,(int,float)) or not isinstance(p,(int,float)):
+            continue
+        close=datetime.fromtimestamp(t+900-offset,UTC)
+        if close<=fetched+timedelta(seconds=5):
+            candle.append((close,p))
+    baseline=[x for x in candle if
+              event-timedelta(minutes=30)<=x[0]<=event]
+    forward=[x for x in candle if
+             event<x[0]<=event+timedelta(minutes=35)]
+    if not baseline or not forward:
+        return out
+    prior=baseline[-1]
+    first=forward[0]
+    pip=.01 if pair.endswith("JPY") else .0001
+    initial=round((first[1]-prior[1])/pip,1)
+    out.update({"status":"FIRST_POST_EVENT_M15_CLOSED_ONLY",
+                "pre_event_close_utc":prior[0].isoformat(),
+                "pre_event_price":prior[1],
+                "first_post_event_close_utc":first[0].isoformat(),
+                "first_post_event_price":first[1],
+                "first_post_event_change_pips":initial,
+                "first_seen_before_market_reaction":seen<=first[0]})
+    if len(forward)>=2:
+        second=forward[1]
+        later=round((second[1]-first[1])/pip,1)
+        net=round((second[1]-prior[1])/pip,1)
+        reversed_move=initial*later<0 and abs(initial)>=3 and abs(later)>=3
+        out.update({"status":"FIRST_MOVE_REVERSED_ON_SECOND_M15" if reversed_move
+                              else "TWO_COMPLETED_M15_BARS_OBSERVED",
+                    "second_post_event_close_utc":second[0].isoformat(),
+                    "second_post_event_price":second[1],
+                    "second_post_event_change_pips":later,
+                    "net_two_bar_event_window_pips":net,
+                    "early_initial_direction":("UP" if initial>0 else
+                                               "DOWN" if initial<0 else "FLAT"),
+                    "second_bar_direction":("UP" if later>0 else
+                                            "DOWN" if later<0 else "FLAT"),
+                    "retrospective_if_first_seen_after_first_candle":seen>first[0]})
+    return out
+
+
+def enrich_with_closed_reactions(watch, volatility):
+    """Attach source-clock-aware event observations; no effect on signal rank."""
+    for headline in watch.get("recent_headlines",[]):
+        if headline.get("priority")!="HIGH_POLICY_REACTION_CHECK":
+            continue
+        headline["price_reactions"]={
+            pair:completed_event_reaction(
+                volatility,pair,headline.get("published_at_utc"),
+                headline.get("first_seen_at_utc"))
+            for pair in headline.get("affected_pairs",[])}
+        headline["all_price_reactions_are_noncausal_observations"]=True
+    for pair,data in watch.get("pairs",{}).items():
+        for name in ("policy_headlines","news_headlines"):
+            for item in data.get(name,[]):
+                full=next((h for h in watch["recent_headlines"]
+                           if h["url"]==item.get("url")),None)
+                if full and "price_reactions" in full:
+                    item["price_reaction_observation"]=full["price_reactions"].get(pair)
+    return watch
+
+
 def main():
     with concurrent.futures.ThreadPoolExecutor(max_workers=2) as pool:
         jobs = {name: pool.submit(get, url, 9) for name, url in NEWS_URLS.items()}
@@ -136,6 +227,11 @@ def main():
     except (ValueError, OSError):
         previous = {}
     watch = make_watch(feeds, previous=previous)
+    try:
+        volatility=json.loads(Path("fx_volatility.json").read_text(encoding="utf-8"))
+    except (ValueError,OSError):
+        volatility={}
+    enrich_with_closed_reactions(watch,volatility)
     FILE.write_text(json.dumps(watch, ensure_ascii=False, indent=2) + "\n",
                     encoding="utf-8")
     print(json.dumps({"result": "PUBLISHED", "provider_statuses": watch["source_statuses"],
