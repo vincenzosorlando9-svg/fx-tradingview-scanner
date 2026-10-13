@@ -8,6 +8,7 @@ from fx_macro_engine import (normalize, derived_deltas, rate_spreads,
                              build_pairs, news_context, observation_recent, metric)
 from fx_ff_actuals_collector import parse as parse_actuals
 from fx_cftc_tff_collector import parse as parse_cftc
+from fx_retail_collector import parse as parse_retail
 from fx_retail_sentiment_collector import parse as parse_retail
 from fx_range_context import compute as compute_ranges, normalize_clock as range_clock, ny_rollover_start
 
@@ -163,6 +164,27 @@ class PublicCollectorTests(unittest.TestCase):
         self.assertEqual(out["currencies"]["CAD"]["leveraged_net"], -79625)
         self.assertEqual(out["currencies"]["CAD"]["open_interest_contracts"],371048)
 
+    def test_myfxbook_public_delay_and_11_pair_identity(self):
+        html = """<html><head><title>EURUSD Forex Sentiment</title></head>
+        <body><h1>EURUSD Forex Sentiment</h1>
+        <p>63% of the forex traders are currently going short with EUR/USD,
+        with an average price of 1.1372, meanwhile 37% of the forex traders
+        are going long with EUR/USD, with an average price of 1.1647.</p>
+        <p>Data is delayed by 60 minutes</p></body></html>"""
+        result=parse_retail(html,"EURUSD")
+        self.assertEqual(result["status"],"PUBLISHED_RETAIL_SAMPLE_DELAYED_60_MIN")
+        self.assertEqual(result["short_pct"],63)
+        self.assertEqual(result["long_pct"],37)
+        self.assertEqual(result["publisher_delay_min"],60)
+        self.assertFalse(result["execution_allowed"])
+        self.assertEqual(parse_retail(html,"USDJPY")["status"],"PAGE_PAIR_NOT_VERIFIED")
+
+    def test_cftc_nz_dollar_label_and_dealer_net(self):
+        row = '"NZ DOLLAR - CHICAGO MERCANTILE EXCHANGE",261006,2026-10-06,112741,CME,00,090,200000,30000,60000,972,97612,133418,4647,31682,111307,4025,15212,6399,484,143814,130475,27234,40573'
+        result=parse_cftc(row,NOW)
+        self.assertEqual(result["currencies"]["NZD"]["dealer_net"],-30000)
+        self.assertEqual(result["currencies"]["NZD"]["leveraged_net"],-79625)
+
 class SessionRangeTests(unittest.TestCase):
     def test_provider_offset_has_strict_clock_tolerance(self):
         offset = range_clock(NOW.timestamp()+3*3600, NOW)
@@ -245,6 +267,26 @@ class FusionTests(unittest.TestCase):
                    "metrics": {"BOND:USD:10Y": old}}]
         self.assertIsNone(derived_deltas({"BOND:USD:10Y": new},
                           sample, NOW)["BOND:USD:10Y"]["15"])
+
+    def test_nominal_yield_never_compared_to_tips_historical(self):
+        old = metric(2.86,"percent_yield","TE","DATED_REFERENCE",market_date="2026-10-13")
+        old["source_instrument"]="US 10Y TIPS"
+        newer = metric(5.20,"percent_yield","TE","DATED_REFERENCE",market_date="2026-10-13")
+        newer["source_instrument"]="US 10Y"
+        hist=[{"at_utc":(NOW-timedelta(minutes=30)).isoformat(),
+               "metrics":{"BOND:USD:10Y":old}}]
+        self.assertIsNone(derived_deltas({"BOND:USD:10Y":newer},hist,NOW)["BOND:USD:10Y"]["30"])
+        old["source_instrument"]="US 10Y"
+        # Unusually large shift must not become a directional vote.
+        self.assertIsNone(derived_deltas({"BOND:USD:10Y":newer},hist,NOW)["BOND:USD:10Y"]["30"])
+
+    def test_burst_snapshots_not_mislabelled_30m_move(self):
+        old=metric(4.80,"percent_yield","TE","DATED_REFERENCE",market_date="2026-10-13")
+        new=metric(4.76,"percent_yield","TE","DATED_REFERENCE",market_date="2026-10-13")
+        hist=[{"at_utc":(NOW-timedelta(minutes=18)).isoformat(),
+               "metrics":{"BOND:USD:2Y":old}}]
+        d=derived_deltas({"BOND:USD:2Y":new},hist,NOW)["BOND:USD:2Y"]
+        self.assertIsNone(d["30"])
 
     def test_no_spread_of_non_matching_maturities(self):
         items = {"BOND:USD:2Y": metric(4.8,"percent_yield","TE","DATED_REFERENCE",market_date="2026-10-13"),
