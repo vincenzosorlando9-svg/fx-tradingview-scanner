@@ -3,7 +3,7 @@ import unittest
 from datetime import datetime, timedelta, timezone
 
 from fx_macro_collector import (parse_bonds, parse_policy, parse_index, parse_feargreed, parse_forexcracked, news_currency_tags,
-                                parse_oilprice, parse_news, extract_bond_table)
+                                parse_oilprice, parse_news, parse_te_noncrude, extract_bond_table)
 from fx_macro_engine import (normalize, derived_deltas, rate_spreads,
                              build_pairs, news_context, observation_recent, metric)
 from fx_ff_actuals_collector import parse as parse_actuals
@@ -92,6 +92,30 @@ class PublicCollectorTests(unittest.TestCase):
 
     def test_canadian_dollar_news_does_not_automatically_tag_USD(self):
         self.assertEqual(news_currency_tags("Canadian dollar rises after Bank of Canada remarks"),["CAD"])
+
+    def test_secondary_commodities_never_substitute_crude_provider(self):
+        today=datetime.now(UTC).strftime("%b/%d")
+        html=f"""<html><table>
+        <tr><th>Metals</th><th>Price</th><th>Chg</th><th>%Chg</th><th>Monthly</th><th>Date</th></tr>
+        <tr><td>Copper USD/Lbs</td><td>6.7273</td><td>0.0106</td><td>0.43%</td><td>6.28%</td><td>{today}</td></tr>
+        <tr><td>Iron Ore USD/T</td><td>90.83</td><td>0.15</td><td>0.17%</td><td>-6.89%</td><td>{today}</td></tr>
+        <tr><td>Crude Oil USD/Bbl</td><td>500.00</td><td>20.00</td><td>4%</td><td>0%</td><td>{today}</td></tr>
+        </table></html>"""
+        p=webpage(html,"https://tradingeconomics.com/commodities")
+        obj=parse_te_noncrude(p)
+        self.assertEqual(obj["status"],"DATED_PUBLIC_COMMODITY_REFERENCES")
+        self.assertEqual(obj["commodities"]["COPPER"]["value"],6.7273)
+        self.assertEqual(obj["commodities"]["IRON_ORE"]["value"],90.83)
+        self.assertNotIn("WTI",obj["commodities"])
+        self.assertNotIn("BRENT",obj["commodities"])
+        raw={"noncrude_te_secondary":obj,
+             "forexcracked":{"non_crude":{"GOLD":{"value":4200,"unit":"source_units",
+                            "status":"INDICATIVE_SOURCE",
+                            "quote_timestamp_utc":NOW.isoformat()}}}}
+        normalized=normalize(raw)
+        self.assertEqual(normalized["COMMODITY:COPPER"]["v"],6.7273)
+        self.assertIn("COMMODITY:GOLD",normalized)
+        self.assertNotIn("COMMODITY:WTI",normalized)
 
     def test_oil_only_oilprice_with_delayed_status(self):
         html = """<table><tr><th>Name</th><th>Last</th><th>Change</th></tr>
