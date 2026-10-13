@@ -2,7 +2,7 @@
 import unittest
 from datetime import datetime, timedelta, timezone
 
-from fx_macro_collector import (parse_bonds, parse_feargreed, parse_forexcracked,
+from fx_macro_collector import (parse_bonds, parse_policy, parse_index, parse_feargreed, parse_forexcracked,
                                 parse_oilprice, parse_news, extract_bond_table)
 from fx_macro_engine import (normalize, derived_deltas, rate_spreads,
                              build_pairs, news_context, observation_recent, metric)
@@ -23,15 +23,40 @@ class PublicCollectorTests(unittest.TestCase):
         <tr><td>US 2Y</td><td>4.78</td><td>-0.023%</td><td>0.10%</td></tr>
         <tr><td>US 5Y</td><td>4.98</td><td>-0.035%</td><td>0.14%</td></tr>
         <tr><td>US 10Y</td><td>5.20</td><td>-0.040%</td><td>0.20%</td></tr>
-        <tr><td>US 30Y</td><td>5.56</td><td>-0.036%</td><td>0.25%</td></tr></table>"""
+        <tr><td>US 30Y</td><td>5.56</td><td>-0.036%</td><td>0.25%</td></tr>
+        <tr><td>US 5Y TIPS</td><td>2.61</td><td>0.043%</td><td>0.28%</td></tr>
+        <tr><td>US 10Y TIPS</td><td>2.86</td><td>0.009%</td><td>0.28%</td></tr>
+        <tr><td>US 30Y TIPS</td><td>3.31</td><td>0.006%</td><td>0.28%</td></tr></table>"""
         result = parse_bonds(webpage(html), "USD")
         self.assertEqual(result["status"], "DATED_REFERENCE")
         self.assertEqual(set(result["maturities"]), {"2Y","5Y","10Y","30Y"})
         self.assertEqual(result["maturities"]["2Y"]["value_pct"], 4.78)
+        self.assertEqual(result["maturities"]["5Y"]["value_pct"], 4.98)
+        self.assertEqual(result["maturities"]["10Y"]["value_pct"], 5.20)
+        self.assertEqual(result["maturities"]["30Y"]["value_pct"], 5.56)
 
     def test_missing_yield_table_never_assumed_from_prose(self):
         page = webpage("<p>US 10 year bond yield is 5.20%; US 2Y may move.</p>")
         self.assertEqual(parse_bonds(page, "USD")["status"], "UNAVAILABLE_NO_VERIFIED_BOND_TABLE")
+
+    def test_policy_does_not_confuse_boe_rate_with_deposit_rate(self):
+        html = """<p>The benchmark interest rate in the United Kingdom was last recorded at 3.75 percent.</p>
+        <table><tr><th>Related</th><th>Last</th><th>Previous</th><th>Unit</th><th>Reference</th></tr>
+        <tr><td>Deposit Interest Rate</td><td>3.60</td><td>3.60</td><td>percent</td><td>Sep 2026</td></tr>
+        <tr><td>BoE Interest Rate</td><td>3.75</td><td>3.75</td><td>percent</td><td>Sep 2026</td></tr></table>"""
+        result = parse_policy(webpage(html), "GBP")
+        self.assertEqual(result["policy_rate_pct"], 3.75)
+        self.assertEqual(result["reference_period"], "Sep 2026")
+        self.assertIsNone(result["ois_rate_pct"])
+
+    def test_kospi_daily_change_is_not_yearly_change(self):
+        html = """<p>South Korea Stock Market - Stats The KOSPI fell to 6035 points on October 13, 2026, losing 5.46% from the previous session.</p>
+        <table><tr><th>Indexes</th><th>Price</th><th>Day</th><th>Year</th></tr>
+        <tr><td>KOSPI</td><td>6,035.35</td><td>-5.46%</td><td>69.45%</td></tr></table>"""
+        result = parse_index(webpage(html), "KOSPI")
+        self.assertEqual(result["daily_change_pct"], -5.46)
+        self.assertEqual(result["value"], 6035.35)
+        self.assertEqual(result["market_date"], "2026-10-13")
 
     def test_forexcracked_indicative_not_broker(self):
         page = webpage("<h1>Live Market Rates</h1>Last update: 18 seconds ago "
