@@ -3,6 +3,7 @@ import json
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
+from fx_early_rotation import PAIRS
 
 URL = "https://forextoolkits.com/forex-api/forex_data.json"
 TIMEFRAMES = {"M5", "M15", "M30", "H1", "H4", "D1"}
@@ -18,9 +19,15 @@ with urllib.request.urlopen(request, timeout=30) as response:
 pairs = data.get("pairs", {})
 
 if len(pairs) != 28:
-    raise ValueError(f"Expected 28 pairs, got {len(pairs)}")
+    raise ValueError(f"Expected 28 source pairs, got {len(pairs)}")
 
-for pair, values in pairs.items():
+# The public provider delivers 28; only the user-approved 11 may be saved.
+missing = set(PAIRS) - set(pairs)
+if missing:
+    raise ValueError(f"Missing approved source pairs: {sorted(missing)}")
+selected_pairs = {pair: pairs[pair] for pair in PAIRS}
+
+for pair, values in selected_pairs.items():
     frames = values.get("tf", {})
     if not TIMEFRAMES.issubset(frames):
         raise ValueError(f"Missing timeframes for {pair}")
@@ -43,10 +50,12 @@ result = {
     ).isoformat(),
     "source_timestamp": data.get("timestamp"),
     "source_server_time": data.get("server_time"),
-    "pair_count": len(pairs),
+    "pair_count": len(selected_pairs),
+    "provider_pair_count": len(pairs),
+    "approved_pairs_only": True,
     "timeframes": sorted(TIMEFRAMES),
     "status": "captured_unverified_freshness",
-    "pairs": pairs,
+    "pairs": selected_pairs,
 }
 
 Path("fx_volatility.json").write_text(
@@ -55,5 +64,5 @@ Path("fx_volatility.json").write_text(
 )
 
 print("Volatility feed saved successfully")
-print("Pairs:", len(pairs))
+print("Approved pairs:", len(selected_pairs), "from source pairs:", len(pairs))
 print("Timeframes:", len(TIMEFRAMES))
