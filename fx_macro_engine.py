@@ -86,6 +86,8 @@ def normalize(raw):
                 quote.get("value_pct"), "percent_yield", item.get("url"),
                 item.get("status"), market_date=item.get("market_date"),
                 retrieved_at_utc=item.get("retrieved_at_utc"))
+            if result[key]:
+                result[key]["source_instrument"] = quote.get("source_row")
             # Public Trading Economics 'Day' is a percentage POINT change in
             # the published daily bond yield, not an intraday quote movement.
             published_day_change=quote.get("publisher_day_change_pp")
@@ -184,7 +186,8 @@ def derived_deltas(metrics, history, now):
                     continue
                 elapsed = (now - observed).total_seconds() / 60
                 miss = abs(elapsed - window)
-                if miss <= (8 if window == 15 else 12 if window == 30 else 16) and miss < error:
+                tolerance = {15: 4, 30: 6, 60: 10}[window]
+                if miss <= tolerance and miss < error:
                     old = sample.get("metrics", {}).get(k)
                     if old and valid_number(old.get("v")) and old.get("source") == latest.get("source"):
                         best, error = (old, observed, elapsed), miss
@@ -195,6 +198,8 @@ def derived_deltas(metrics, history, now):
             if (not observation_recent(latest, now) or
                 not observation_recent(old, observed) or
                 (latest.get("source_status") != old.get("source_status")) or
+                (latest.get("unit") != old.get("unit")) or
+                (latest.get("source_instrument") != old.get("source_instrument")) or
                 (latest.get("market_date") != old.get("market_date") and
                  latest.get("source_observed_at_utc") is None)):
                 windows[str(window)] = None
@@ -204,6 +209,10 @@ def derived_deltas(metrics, history, now):
             if unit == "percent_yield":
                 delta = delta * 100
                 unit = "basis_points"
+                # Extreme sampled shifts need independently timestamped checks.
+                if abs(delta) > {15: 20, 30: 30, 60: 45}[window]:
+                    windows[str(window)] = None
+                    continue
             elif unit in ("index_points", "USD_per_barrel", "source_units", "SOURCE_QUOTE_UNITS"):
                 if not old["v"]:
                     windows[str(window)] = None
@@ -492,7 +501,10 @@ def main():
     spreads = rate_spreads(metrics, deltas, now)
     news = news_context(raw, actuals, now)
     observed = {"at_utc": now.isoformat(), "metrics": metrics}
-    history.append(observed)
+    last = parse_dt(history[-1].get("at_utc")) if history else None
+    # Skip push-trigger bursts; regular collection is roughly 15 minutes.
+    if not last or (now - last).total_seconds() >= 9 * 60:
+        history.append(observed)
     history = history[-RETENTION:]
     write("fx_macro_history.json", {"schema_version": 1,
           "updated_at_utc": now.isoformat(), "snapshots": history})
