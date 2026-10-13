@@ -393,7 +393,7 @@ def parse_feargreed(page):
 
 def news_currency_tags(title):
     # Explicit article terms only; don't infer positive/negative currency moves from prose.
-    terms = {"USD": ("dollar", "fed", "fomc", "treasury", "u.s. yields", "us yields"),
+    terms = {"USD": ("us dollar", "u.s. dollar", "greenback", "dxy", "fed", "fomc", "treasury", "u.s. yields", "us yields"),
              "EUR": ("euro", "ecb", "eurozone", "bund"),
              "GBP": ("sterling", "pound", "boe", "bank of england"),
              "JPY": ("yen", "boj", "bank of japan", "japan"),
