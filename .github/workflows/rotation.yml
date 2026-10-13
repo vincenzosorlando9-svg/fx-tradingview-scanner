@@ -19,6 +19,7 @@ on:
       - 'fx_mobile_alerts.py'
       - 'fx_reversal_replay_oct12.json'
       - 'fx_daily_weekly_levels.py'
+      - 'fx_signal_fusion_refresh.py'
       - 'forextoolkits_collector.py'
       - 'requirements.txt'
       - '.github/workflows/rotation.yml'
@@ -76,6 +77,9 @@ jobs:
       - name: Persist first-observed CANONICAL direction after early overlay
         run: python fx_signal_history.py
 
+      - name: Rebuild unified signal board against last verified macro snapshot
+        run: python fx_signal_fusion_refresh.py
+
       - name: Verify synchronized fresh output
         run: |
           python - <<'PY'
@@ -107,7 +111,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add fx_volatility.json fx_technicals.json fx_rotation_signals.json fx_scan_dashboard.json fx_daily_weekly_levels.json fx_signal_history.json fx_early_rotation.json
+          git add fx_volatility.json fx_technicals.json fx_rotation_signals.json fx_scan_dashboard.json fx_daily_weekly_levels.json fx_signal_history.json fx_early_rotation.json fx_unified_signals.json
           if ! git diff --cached --quiet; then
             git commit -m "Update synchronized FX technical dashboard with Daily and 4H"
             git pull --rebase origin main
