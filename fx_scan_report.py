@@ -835,13 +835,22 @@ def render_markdown(report):
                   "Fast source collection: "+et(layer.get("breaking_news_generated_at_utc")),
                   "Source gaps: "+", ".join(layer["breaking_news_source_coverage_gaps"]),
                   "A missing approved news story never establishes that no policy headline occurred.",
-                  mdtable(["published_at_utc","provider","title","affected_pairs","market_reaction"],
+                  mdtable(["published_at_utc","provider","title","affected_pairs","first_seen_at_utc","reaction_review"],
                           [{**h,"published_at_utc":et(h.get("published_at_utc")),
+                            "first_seen_at_utc":et(h.get("first_seen_at_utc")),
                             "title":("[{}]({})".format(h.get("title",""),h.get("url"))
                                      if str(h.get("url","")).startswith("https://") else h.get("title")),
-                            "affected_pairs":", ".join(h.get("affected_pairs") or [])}
+                            "affected_pairs":", ".join(h.get("affected_pairs") or []),
+                            "reaction_review":("; ".join(
+                                p+": "+str(v.get("status"))+
+                                " ("+str(v.get("first_post_event_change_pips","?"))+"/"+
+                                str(v.get("second_post_event_change_pips","?"))+"p), "+
+                                ("RETROSPECTIVE" if v.get("retrospective_if_first_seen_after_first_candle") else "EARLY_CLOCK_CHECK")
+                                for p,v in (h.get("price_reactions") or {}).items()
+                                if p in ("AUDJPY","USDJPY","EURJPY","NZDJPY")) or "MISSING_VERIFIED_REACTION")}
                            for h in layer["breaking_news_priority_headlines"][:10]]),
-                  "Urgent price-reaction checks are NOT BUY/SELL conclusions from a headline.", ""]
+                  "The publisher clock and first-seen time are DIFFERENT; RETROSPECTIVE means this was NOT detected ahead of the initial move.",
+                  "The first two event-aligned 15m changes describe price observations, NOT causal proof or executable trading signals.", ""]
             sources=layer["news_source_statuses"]
             out+=["Sources: "+", ".join(k+": "+str(v) for k,v in sources.items())]
             rows=[{"published_at_utc":et(x.get("published_at_utc")),"provider":x.get("provider"),
