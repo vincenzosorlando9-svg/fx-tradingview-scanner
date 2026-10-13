@@ -14,7 +14,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from fx_exact_candle_gate import expected_slot, market_open, validate
-from fx_early_rotation import parse
+from fx_early_rotation import parse, PAIRS
 
 UTC=timezone.utc
 GATE=Path("fx_scan_gate.json")
@@ -70,7 +70,7 @@ def verified_existing_slot(slot, history=None, unified=None):
     unified=unified if unified is not None else load("fx_unified_signals.json")
     expected=slot["candle_slot_close_utc"]
     published_rows=unified.get("all_11") or []
-    if len(published_rows)!=EXPECTED_PAIRS or any(
+    if len(published_rows)!=EXPECTED_PAIRS or {r.get("pair") for r in published_rows}!=set(PAIRS) or any(
         (r.get("reference_prices") or {}).get("closed_at_utc")!=expected
         for r in published_rows
     ):
@@ -174,6 +174,7 @@ def finalize():
     rows=unified.get("all_11") or []
     expected15=gate["expected_closes"]["M15"]
     assert len(rows)==EXPECTED_PAIRS and unified.get("pair_count")==EXPECTED_PAIRS
+    assert {r.get("pair") for r in rows}==set(PAIRS), "UNAUTHORIZED_OR_MISSING_FX_PAIR"
     assert dash.get("source_versions_match") is True
     assert unified.get("source_technical_generated_at_utc")==dash.get("generated_at_utc")
     assert all((r.get("reference_prices") or {}).get("closed_at_utc")==expected15

@@ -1,4 +1,4 @@
-"""Render 52 timestamped FX candlestick SVG charts from saved OHLC.
+"""Render 33 timestamped FX candlestick SVG charts from saved OHLC.
 
 Usage: python render_fx_chart.py
 Requires fx_volatility.json in the current working directory.
@@ -10,8 +10,9 @@ from pathlib import Path
 from xml.sax.saxutils import escape
 
 SOURCE = Path("fx_volatility.json")
-PAIRS = ("EURUSD", "GBPUSD", "AUDUSD", "NZDUSD", "EURGBP", "USDJPY", "USDCAD", "USDCHF", "GBPJPY", "AUDJPY", "NZDJPY", "EURJPY", "EURCAD")
-TIMEFRAMES = ("M5", "M15", "M30", "H1")
+from fx_early_rotation import PAIRS
+
+TIMEFRAMES = ("M15", "M30", "H1")
 
 
 def render(data, pair, tf):
@@ -73,6 +74,13 @@ def render(data, pair, tf):
 
 def main():
     data = json.loads(SOURCE.read_text(encoding="utf-8"))
+    # The chart job must not retain charts for pairs or timeframes outside the scanner.
+    chart_dir = Path("charts")
+    chart_dir.mkdir(exist_ok=True)
+    keep = {f"{pair}_{tf}" for pair in PAIRS for tf in TIMEFRAMES}
+    for old in chart_dir.iterdir():
+        if old.suffix in (".svg", ".png") and old.stem not in keep:
+            old.unlink()
     results = [render(data, pair, tf) for pair in PAIRS for tf in TIMEFRAMES]
     Path("charts/manifest.json").write_text(json.dumps({"source_collected_at_utc":data.get("collected_at_utc"),"source_status":data.get("status"),"charts":results},indent=2),encoding="utf-8")
     print(f"Generated {len(results)} charts")

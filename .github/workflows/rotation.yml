@@ -97,6 +97,9 @@ jobs:
           python - <<'PY'
           import json, datetime, sys
           from pathlib import Path
+          from fx_early_rotation import PAIRS
+          approved_pairs=set(PAIRS)
+          assert approved_pairs=={"AUDUSD","NZDUSD","USDCAD","NZDJPY","AUDJPY","USDJPY","EURGBP","EURJPY","EURCAD","GBPUSD","EURUSD"}
           now=datetime.datetime.now(datetime.timezone.utc)
           d=json.loads(Path('fx_scan_dashboard.json').read_text())
           ts=datetime.datetime.fromisoformat(d['generated_at_utc'].replace('Z','+00:00'))
@@ -104,8 +107,10 @@ jobs:
           assert -2 <= age <= 5, f'Dashboard generated timestamp is stale: {age:.1f} minutes'
           assert d.get('source_versions_match') is True, 'Input versions differ'
           assert len(d.get('pairs',[]))==11, 'Not all 11 pairs published'
+          assert {p.get('pair') for p in d['pairs']}==approved_pairs, 'Dashboard contains wrong or missing pairs'
           e=json.loads(Path('fx_early_rotation.json').read_text())
           assert len(e.get('pairs',[]))==11, 'Early engine did not evaluate all 11 pairs'
+          assert {p.get('pair') for p in e['pairs']}==approved_pairs, 'Early engine pair set differs'
           assert e.get('generated_at_utc')==d.get('early_rotation_generated_at_utc'), 'Early and dashboard versions mismatch'
           assert all(x.get('execution_allowed') is False for x in e.get('pairs',[])), 'Non-executable early watch became an order'
           for p in d.get('pairs',[]):
@@ -148,7 +153,9 @@ jobs:
           assert [v['layer'] for v in report['fifteen_layer_macro_first_audit']]==list(range(1,16))
           assert len(report['full_15_layer_coverage_audit'])==15
           assert len(report['fifteen_layer_macro_first_audit'][10]['pairs'])==11
-          published=json.loads(Path('fx_unified_signals.json').read_text())['top_five']
+          unified=json.loads(Path('fx_unified_signals.json').read_text())
+          assert {p.get('pair') for p in unified['all_11']}==approved_pairs, 'Unified pair set differs'
+          published=unified['top_five']
           assert [p['pair'] for p in report['top_five_published_ranking']['rows']]==[p['pair'] for p in published]
           assert all(p['published_score']==s['technical_research_rank_score'] for p,s in zip(report['top_five_published_ranking']['rows'],published))
           assert Path('fx_scan_report.md').read_text().startswith('# FOREX MAIN SIGNAL — 15-LAYER MACRO-FIRST AUDIT')

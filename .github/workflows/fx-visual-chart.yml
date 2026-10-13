@@ -1,4 +1,4 @@
-name: FX Visual Charts - 52
+name: FX Visual Charts - 33
 on:
   workflow_dispatch:
   push:
@@ -35,7 +35,7 @@ jobs:
       - name: Refresh OHLC snapshot
         if: steps.hours.outputs.active == 'true' || github.event_name == 'workflow_dispatch'
         run: python forextoolkits_collector.py
-      - name: Generate 52 SVG charts
+      - name: Generate 33 SVG charts
         if: steps.hours.outputs.active == 'true' || github.event_name == 'workflow_dispatch'
         run: python render_fx_chart.py
       - name: Convert all charts to PNG
@@ -53,17 +53,17 @@ jobs:
           import json
           from pathlib import Path
           d=json.loads(Path('charts/manifest.json').read_text())
-          assert len(d['charts'])==52, len(d['charts'])
+          assert len(d['charts'])==33, len(d['charts'])
           for c in d['charts']:
               assert c['bars']>=20
               assert Path(c['file']).stat().st_size>100
               assert Path(c['file'].replace('.svg','.png')).stat().st_size>100
-          print('Validated 52 SVG and 52 PNG charts')
+          print('Validated 33 SVG and 33 PNG charts')
           PY
       - uses: actions/upload-artifact@v4
         if: steps.hours.outputs.active == 'true' || github.event_name == 'workflow_dispatch'
         with:
-          name: fx-52-visual-charts
+          name: fx-33-visual-charts
           path: |
             charts/*.svg
             charts/*.png
@@ -74,9 +74,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
+          # Do NOT stage fx_volatility.json: collection by the chart job is not signal validation.
+          git add -A -- charts/
           if ! git diff --cached --quiet; then
-            git commit -m "Publish 52 FX candlestick charts and refreshed snapshot"
+            git commit -m "Publish 33 scoped FX charts without overwriting verified signal inputs"
             git pull --rebase origin main
             git push origin HEAD:main
           fi
