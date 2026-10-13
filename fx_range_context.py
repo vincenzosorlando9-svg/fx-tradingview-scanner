@@ -146,7 +146,9 @@ def compute(pair,raw,offset,now):
                 segment["range_pips"]=round((segment["high"]-segment["low"])/pip,2)
                 segment["session_start_utc"]=start.isoformat()
                 segment["scheduled_session_end_utc"]=end.isoformat()
+                segment["session_in_progress"]=now<end
                 segment["observed_partial"]=(
+                    now<end or
                     subset[0]["opened_utc"]>start+timedelta(minutes=15) or
                     (now>=end and subset[-1]["opened_utc"]<end-timedelta(minutes=15)))
                 out["session_ranges"][name]=segment
