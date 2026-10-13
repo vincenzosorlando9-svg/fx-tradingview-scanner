@@ -193,6 +193,28 @@ def four_hour_transition(pair, frame):
         return result
 
 
+def classify_move_stage(displacement_15m_pips, displacement_30m_pips,
+                        excursion_15m_pips, latest_leg_pips, atr14_15m_pips,
+                        breakout):
+    """Classify opportunity maturity without mistaking an ATR burst for a spent move.
+
+    This is a closed-candle research stage, not a probability or trade permission.
+    The 40-50 pip objective is conditional on verified price room and risk.
+    """
+    progress = max(0.0, displacement_15m_pips, displacement_30m_pips)
+    mature = progress >= 18
+    # Reaching 2x ATR can be the START of momentum, not the END.
+    # Require substantial directional progress PLUS stretch evidence.
+    stretched = (progress >= 50 and (
+        (atr14_15m_pips > 0 and latest_leg_pips >= 3.5 * atr14_15m_pips)
+        or excursion_15m_pips >= 65
+        or progress >= 65
+    ))
+    stage = ("EXTENDED" if stretched else "CONTINUATION" if mature
+             else "CONFIRMING" if breakout else "EARLY")
+    return stage, mature, stretched
+
+
 def tech_metrics(frame):
     if frame.get("status") != "ok":
         return None
@@ -307,16 +329,26 @@ def analyze(pair, tech, vol, now):
                 "15m_net_displacement_20_pips":round(directional_displacement,1),
                 "30m_net_displacement_20_pips":round(thirty_displacement,1),
                 "latest_15m_leg_pips":round(move_pips,1)}
-            # EARLY is reserved for genuinely new moves, not a fresh candle leg
-            # within an existing 20-30 pip trend. Thresholds are conservative
-            # heuristic filters, not a proof of profitable entry timing.
-            mature = directional_displacement >= 15 or thirty_displacement >= 20
-            stretched = (directional_displacement >= 30 or thirty_displacement >= 40
-                         or excursion >= 35 or (atr > 0 and move_pips >= 2.0 * atr))
-            output["stage"] = ("EXTENDED" if stretched else "CONTINUATION" if mature
-                               else "CONFIRMING" if breakout else "EARLY")
-            if mature: output["reasons"].append("EXISTING_MULTI_HOUR_DIRECTIONAL_MOVE_NOT_EARLY")
-            output["status"] = "DO_NOT_CHASE" if output["stage"] == "EXTENDED" else "WATCH_FOR_ENTRY"
+            # ATR bursts can be the start of a 40-50 pip opportunity, not proof
+            # that the move is exhausted. Displacement and stretch must be measured
+            # separately; trend strength is not synonymous with chase risk.
+            stage, mature, stretched = classify_move_stage(
+                directional_displacement, thirty_displacement, excursion,
+                move_pips, atr, breakout)
+            output["stage"] = stage
+            output["opportunity_goal_pips"] = [40, 50]
+            output["opportunity_goal_status"] = "ASPIRATIONAL_REQUIRES_VERIFIED_ROOM_NOT_AUTOMATIC_TP"
+            output["maturity_classification"] = {
+                "closed_15m_displacement_pips": round(directional_displacement,1),
+                "closed_30m_displacement_pips": round(thirty_displacement,1),
+                "excursion_15m_pips": round(excursion,1),
+                "latest_leg_pips": round(move_pips,1),
+                "atr14_15m_pips": round(atr,1),
+                "stage_basis": "DISPLACEMENT_PLUS_MATERIAL_STRETCH_NOT_2X_ATR_ALONE",
+            }
+            if mature: output["reasons"].append("DIRECTIONAL_CONTINUATION_IN_PROGRESS")
+            if stretched: output["reasons"].append("MATURE_MOVE_WITH_STRETCH_EVIDENCE")
+            output["status"] = "DO_NOT_CHASE" if stretched else "WATCH_FOR_ENTRY"
             output["move_origin_proxy"] = {
                 "utc": x["leg_origin_proxy_utc"], "price": x["leg_origin_proxy_price"],
                 "moved_pips": x["leg_move_pips"], "bars": x["leg_bars"],
