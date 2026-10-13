@@ -472,12 +472,15 @@ def compact_markdown_currency(row):
 
 def build_report(unified, dashboard, raw=None, news=None, snapshot=None,
                  calendar=None, cftc=None, audit=None, volatility=None,
-                 history=None, retail=None, forexfactory=None):
+                 history=None, retail=None, forexfactory=None, breaking=None):
     """Return the EXACT user-approved fifteen-layer structure in reading order."""
     legacy=_base_report(unified,dashboard,raw=raw,news=news,snapshot=snapshot,
                         calendar=calendar,cftc=cftc,audit=audit)
     raw,news,snapshot,calendar,cftc,audit=[x or {} for x in (raw,news,snapshot,calendar,cftc,audit)]
     volatility,history,retail,forexfactory=[x or {} for x in (volatility,history,retail,forexfactory)]
+    breaking=breaking or {}
+    policy_news=breaking.get("recent_headlines") or []
+    prioritized_policy=[h for h in policy_news if h.get("priority")=="HIGH_POLICY_REACTION_CHECK"]
     all_pairs=unified["all_11"]
     current=latest_feed_view(volatility,unified)
     latest=current["pairs"]
@@ -496,7 +499,9 @@ def build_report(unified, dashboard, raw=None, news=None, snapshot=None,
                      "newer_candle_observation_collected_at_utc":current.get("collected_at_utc")
                          if current.get("status")=="SEPARATELY_OBSERVED_SITE_REPORTED_CLOSED_CANDLES" else None,
                      "published_ranking_preserved":True,
-                     "score_is_not_trade_probability":True})
+                     "score_is_not_trade_probability":True,
+                     "breaking_policy_news":r.get("breaking_policy_news") or
+                       {"status":"UNAVAILABLE_APPROVED_SOURCE","source_coverage_incomplete":True}})
     selected={r["pair"] for r in rank}
     omissions=[]
     for r in all_pairs:
@@ -604,6 +609,12 @@ def build_report(unified, dashboard, raw=None, news=None, snapshot=None,
                         "site_reported":True})
     layer_data=[
         {"status":"PARTIAL_DATED_OR_BLOCKED",
+         "breaking_news_priority_headlines":prioritized_policy,
+         "breaking_news_source_statuses":breaking.get("source_statuses") or {},
+         "breaking_news_source_coverage_gaps":breaking.get("source_coverage_gaps") or
+               ["FAST_APPROVED_NEWS_UNAVAILABLE"],
+         "breaking_news_generated_at_utc":breaking.get("generated_at_utc"),
+         "breaking_news_cannot_assign_trade_direction":True,
          "headlines":news_articles,"news_source_statuses":news.get("news_source_statuses") or {},
          "verified_immediate_causal_reaction":False},
         {"status":"PARTIAL_PUBLISHER_ACTUAL_TIMES_UNVERIFIED",
@@ -697,6 +708,12 @@ def build_report(unified, dashboard, raw=None, news=None, snapshot=None,
             "macro_collected_at_utc":raw.get("collected_at_utc"),
             "newer_observation_than_unified":current.get("ranking_predates_latest_observation"),
             "two_sources_not_automatically_synchronized":True,
+            "breaking_policy_news_asof_utc":breaking.get("generated_at_utc"),
+            "breaking_policy_news_current_status":
+                "HIGH_POLICY_REACTION_CHECK" if prioritized_policy else
+                "NO_CENTRAL_BANK_HEADLINE_VISIBLE_IN_APPROVED_FEEDS",
+            "breaking_policy_news_gaps":breaking.get("source_coverage_gaps") or
+                ["FAST_APPROVED_NEWS_UNAVAILABLE"],
             "scope":"FULL_15_LAYER_ANALYSIS_NOT_A_BROKER_EXECUTION_SIGNAL"},
         "top_five_published_ranking":{
             "heading":"BEST 5 TRADING PAIRS — PUBLISHED 50/50 TECHNICAL RANKING",
@@ -814,6 +831,17 @@ def render_markdown(report):
         out+=["---","","## "+str(n)+". "+layer["title"],"",
               "**Coverage:** "+layer["status"],""]
         if n==1:
+            out+=["**Breaking central-bank policy watch (five-minute target)**",
+                  "Fast source collection: "+et(layer.get("breaking_news_generated_at_utc")),
+                  "Source gaps: "+", ".join(layer["breaking_news_source_coverage_gaps"]),
+                  "A missing approved news story never establishes that no policy headline occurred.",
+                  mdtable(["published_at_utc","provider","title","affected_pairs","market_reaction"],
+                          [{**h,"published_at_utc":et(h.get("published_at_utc")),
+                            "title":("[{}]({})".format(h.get("title",""),h.get("url"))
+                                     if str(h.get("url","")).startswith("https://") else h.get("title")),
+                            "affected_pairs":", ".join(h.get("affected_pairs") or [])}
+                           for h in layer["breaking_news_priority_headlines"][:10]]),
+                  "Urgent price-reaction checks are NOT BUY/SELL conclusions from a headline.", ""]
             sources=layer["news_source_statuses"]
             out+=["Sources: "+", ".join(k+": "+str(v) for k,v in sources.items())]
             rows=[{"published_at_utc":et(x.get("published_at_utc")),"provider":x.get("provider"),
@@ -949,7 +977,8 @@ def main():
                         volatility=read("fx_volatility.json"),
                         history=read("fx_signal_history.json"),
                         retail=read("fx_retail_positioning.json"),
-                        forexfactory=read("fx_forexfactory_markets.json"))
+                        forexfactory=read("fx_forexfactory_markets.json"),
+                        breaking=read("fx_news_priority.json"))
     Path("fx_scan_report.json").write_text(json.dumps(report,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
     Path("fx_scan_report.md").write_text(render_markdown(report),encoding="utf-8")
     print(json.dumps({"layout":LAYOUT_VERSION,"layers":len(report["fifteen_layer_macro_first_audit"]),
