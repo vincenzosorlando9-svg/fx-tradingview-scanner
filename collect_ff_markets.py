@@ -32,8 +32,8 @@ def parse_page(html,pair):
     text=" ".join(parser.parts)
     title=pair[:3]+"/"+pair[3:]
     # Store only fields that are independently visible and parseable.
-    found=bool(re.search(r"\\b"+re.escape(title)+r"\\b",text))
-    pos=re.search(r"Positions for\\s+"+re.escape(title)+r".{0,1000}?(\\d{1,3})%\\s+(\\d+)\\s+Traders.{0,100}?(\\d+)\\s+Traders\\s+(\\d{1,3})%",text,re.I)
+    found=bool(re.search(r"\b"+re.escape(title)+r"\\b",text))
+    pos=re.search(r"Positions for\s+"+re.escape(title)+r".{0,1000}?(\d{1,3})%\s+(\d+)\s+Traders.{0,100}?(\d+)\s+Traders\s+(\d{1,3})%",text,re.I)
     positions=None
     if pos:
         long_pct,long_n,short_n,short_pct=map(int,pos.groups())
@@ -69,6 +69,11 @@ def main():
         file.write("\n")
     os.replace(path+".tmp",path)
     print(json.dumps({"status":output["status"],"recognized_pairs":success}))
-    return 0 if success else 1
+    # Supplementary web pages may be blocked or JS-only; record UNAVAILABLE
+    # in JSON but do not turn missing OPTIONAL context into a failed trading
+    # workflow email. The integrated audit must check status, not just age.
+    if not success:
+        print("FF supplementary positioning: UNAVAILABLE (not a verified signal)")
+    return 0
 if __name__=="__main__":
     sys.exit(main())
