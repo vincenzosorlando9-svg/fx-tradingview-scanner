@@ -48,7 +48,7 @@ jobs:
         env:
           EVENT_SCHEDULE: ${{ github.event.schedule }}
         run: |
-          if [ ! -f fx_cftc_tff.json ] || [ "$EVENT_SCHEDULE" = '47 21 * * 5' ]; then
+          if [ ! -f fx_cftc_history.json ] || [ ! -f fx_cftc_tff.json ] || [ "$EVENT_SCHEDULE" = '47 21 * * 5' ]; then
             python fx_cftc_tff_collector.py
           fi
       - name: Collect Forex Factory actuals independently of weekly calendar
@@ -98,6 +98,7 @@ jobs:
                   fx_macro_news.json fx_economic_actuals.json \
                   fx_range_context.json fx_integrated_audit.json fx_retail_sentiment.json fx_retail_positioning.json
           if [ -f fx_cftc_tff.json ]; then git add fx_cftc_tff.json; fi
+          if [ -f fx_cftc_history.json ]; then git add fx_cftc_history.json; fi
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "Refresh keyless macro intelligence and technical fusion"
           for attempt in 1 2 3; do
