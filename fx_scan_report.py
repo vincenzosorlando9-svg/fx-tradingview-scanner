@@ -623,6 +623,8 @@ def build_report(unified, dashboard, raw=None, news=None, snapshot=None,
          "central_bank_schedule_watch":calendar_radar.get("monitored_events") or [],
          "central_bank_schedule_gaps":{"fxstreet_calendar":calendar_radar.get("fxstreet_calendar_coverage", "NOT_INGESTED"),
                                        "source_status":calendar_radar.get("calendar_status","UNAVAILABLE"),
+                                       "fx_blue_status":calendar_radar.get("fx_blue_public_calendar_status","UNAVAILABLE"),
+                                       "fx_blue_verified_event_count":calendar_radar.get("fx_blue_verified_utc_events",0),
                                        "known_gap":calendar_radar.get("known_gap","NOT_FULLY_COVERED")},
          "central_bank_schedule_collected_at_utc":calendar_radar.get("generated_at_utc"),
          "released_events":matched,"upcoming_events_next_24h":upcoming,
@@ -856,6 +858,7 @@ def render_markdown(report):
                                 for p,v in (h.get("price_reactions") or {}).items()
                                 if p in ("AUDJPY","USDJPY","EURJPY","NZDJPY")) or "MISSING_VERIFIED_REACTION")}
                            for h in layer["breaking_news_priority_headlines"][:10]]),
+                  "Newsquawk public headlines are delayed at least 20 minutes from its professional feed; the public publication clock is NOT the live pro-feed release clock.",
                   "The publisher clock and first-seen time are DIFFERENT; RETROSPECTIVE means this was NOT detected ahead of the initial move.",
                   "The first two event-aligned 15m changes describe price observations, NOT causal proof or executable trading signals.", ""]
             sources=layer["news_source_statuses"]
@@ -871,8 +874,10 @@ def render_markdown(report):
             out+=["**Central-bank speech and scheduled macro radar (Eastern Time)**",
                   "Radar compiled: "+et(layer.get("central_bank_schedule_collected_at_utc")),
                   "Coverage: "+str(layer["central_bank_schedule_gaps"].get("source_status"))+
+                  " | FX Blue public UTC calendar: "+str(layer["central_bank_schedule_gaps"].get("fx_blue_status"))+
+                  " ("+str(layer["central_bank_schedule_gaps"].get("fx_blue_verified_event_count"))+" events)"+
                   " | FXStreet calendar: "+str(layer["central_bank_schedule_gaps"].get("fxstreet_calendar")),
-                  "Important: not every FXStreet speech is present in the Forex Factory public feed.",
+                  "Forex Factory and FX Blue are separate best-effort public sources; no calendar feed is assumed exhaustive.",
                   mdtable(["event_at_et","currency","title","urgency","event_window","forecast","previous"],
                           [{**e,"event_at_et":et(e.get("event_at_utc"))}
                            for e in layer["central_bank_schedule_watch"][:24]]),
