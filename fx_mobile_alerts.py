@@ -99,6 +99,7 @@ def eligible_pair(early_row, dash_row, now):
         "stage": early_row.get("stage"),
         "score": score,
         "pressure": early_row.get("pressure_evidence") or {},
+        "counter_watch": early_row.get("possible_opposite_rotation") or {},
         "invalidation": early_row.get("direction_invalidation_reference"),
         "event_risk": bool(early_row.get("event_within_120_min")),
         "fresh_trigger": bool(early_row.get("fresh_trigger")),
@@ -182,6 +183,7 @@ def evaluate(early, dashboard, previous, now):
                 "first_seen_utc": iso(now), "last_seen_utc": iso(now),
                 "pending": None, "acceleration_sent": True,
                 "last_alerted_bar": None, "baseline_only": True,
+                "counter_pending": None,
             }
         state["clusters"] = {k: {"pairs": v, "first_seen_utc": iso(now)}
                               for k, v in cluster_now.items()}
@@ -196,13 +198,37 @@ def evaluate(early, dashboard, previous, now):
             "first_seen_utc": None, "last_seen_utc": None, "pending": None,
             "acceleration_sent": False, "last_alerted_bar": None,
             "baseline_only": False,
+            "counter_pending": None,
         })
+        active.setdefault("counter_pending", None)
         prior = active.get("bias", "NONE")
         candidate = snap["direction"]
         price = snap["price"]
         bar = snap["closed15"]
         original_invalid = invalidated(prior, active.get("invalidation"), price)
         active["last_seen_utc"] = iso(now)
+
+        # Preview a two-candle M15 + confirming M30 counter-rotation without
+        # flipping the held trade direction. Do this BEFORE weak ranking/WAIT
+        # vetoes: at 11 PM NZDJPY was still SELL (rank ~0.52) but rising.
+        counter = snap.get("counter_watch") or {}
+        counter_dir = counter.get("direction")
+        early_warning_sent = False
+        if (prior in ("BUY","SELL") and counter_dir in ("BUY","SELL")
+                and counter_dir != prior and not original_invalid
+                and (active.get("counter_pending") or {}).get("direction") != counter_dir):
+            watch_snap = dict(snap, direction=counter_dir,
+                              pressure={"evidence": counter.get("evidence",[])})
+            reason=("PRE_FLIP_CLOSED_M15_M30_OPPOSITE_ROTATION; original "+prior+
+                    " HELD. Two M15 closes, higher lows/lower highs and"
+                    " supporting closed M30 change; no breakout required.")
+            evt = evidence_event("OPPOSITE_WATCH", watch_snap, prior, reason)
+            evt["early_counter_rotation"] = counter
+            events.append(evt)
+            active["counter_pending"] = {"direction":counter_dir,
+                                         "first_closed_m15_utc":bar,
+                                         "first_observed_at_utc":iso(now)}
+            early_warning_sent = True
 
         if candidate == prior:
             active["pending"] = None
@@ -221,7 +247,7 @@ def evaluate(early, dashboard, previous, now):
                 if not active.get("baseline_only", False):
                     events.append(evidence_event("INVALIDATED", snap, prior,
                                                   "Closed 15m price invalidated original structure"))
-                active.update(bias="NONE", pending=None, first_price=None,
+                active.update(bias="NONE", pending=None, counter_pending=None, first_price=None,
                               invalidation=None, acceleration_sent=True,
                               baseline_only=False)
             else:
@@ -233,7 +259,7 @@ def evaluate(early, dashboard, previous, now):
             # a brand-new signal.
             if not snap["fresh_trigger"]:
                 continue
-            active.update(bias=candidate, first_seen_utc=iso(now),
+            active.update(bias=candidate, counter_pending=None, first_seen_utc=iso(now),
                           first_price=price, invalidation=snap["invalidation"],
                           pending=None, acceleration_sent=False, baseline_only=False)
             events.append(evidence_event("NEW_DIRECTION", snap, prior,
@@ -249,7 +275,7 @@ def evaluate(early, dashboard, previous, now):
             active["pending"] = None
             continue
         if original_invalid:
-            active.update(bias=candidate, first_seen_utc=iso(now),
+            active.update(bias=candidate, counter_pending=None, first_seen_utc=iso(now),
                           first_price=price, invalidation=snap["invalidation"],
                           pending=None, acceleration_sent=False, baseline_only=False)
             events.append(evidence_event("DIRECTION_CHANGED", snap, prior,
@@ -261,15 +287,17 @@ def evaluate(early, dashboard, previous, now):
             active["pending"] = {"direction": candidate,
                                  "first_bar_utc": bar, "last_bar_utc": bar,
                                  "distinct_closed_15m_bars": 1}
-            events.append(evidence_event("OPPOSITE_WATCH", snap, prior,
-                                          "Original bias HELD; emerging contrary price pressure"))
+            if (not early_warning_sent and
+                    (active.get("counter_pending") or {}).get("direction") != candidate):
+                events.append(evidence_event("OPPOSITE_WATCH", snap, prior,
+                                              "Original bias HELD; emerging contrary price pressure"))
         else:
             if bar != pending.get("last_bar_utc"):
                 pending["distinct_closed_15m_bars"] = pending.get("distinct_closed_15m_bars", 1) + 1
                 pending["last_bar_utc"] = bar
             active["pending"] = pending
             if pending["distinct_closed_15m_bars"] >= 2:
-                active.update(bias=candidate, first_seen_utc=iso(now),
+                active.update(bias=candidate, counter_pending=None, first_seen_utc=iso(now),
                               first_price=price, invalidation=snap["invalidation"],
                               pending=None, acceleration_sent=False, baseline_only=False)
                 events.append(evidence_event("DIRECTION_CHANGED", snap, prior,
@@ -302,7 +330,7 @@ def render_issue(events, early, now):
         x = trends[0]
         d = x.get("direction", "")
         if x["type"] == "OPPOSITE_WATCH":
-            title = "[FX WATCH] " + x["pair"] + " " + d + " developing / " + x["previous"] + " held"
+            title = "[FX EARLY WATCH] " + x["pair"] + " " + x["previous"] + " weakening / possible " + d
         elif x["type"] == "ACCELERATING":
             title = "[FX MOMENTUM] " + x["pair"] + " " + d
         elif x["type"] == "INVALIDATED":
@@ -339,6 +367,7 @@ def render_issue(events, early, now):
                 " (closed " + format_et(e.get("last_closed_15m_utc")) + ")",
             "**30m last close:** " + format_et(e.get("last_closed_30m_utc")),
             "**Research score:** " + str(e.get("research_score")) + " (not probability)",
+            "**Status:** PRE-FLIP WATCH; original direction held" if e["type"]=="OPPOSITE_WATCH" else "**Status:** Technical watch only",
             "**Technical evidence:** " + (", ".join(e.get("pressure_evidence") or []) or "Directional momentum only"),
             "**Observed invalidation reference:** " + str(e.get("invalidation_reference")),
             "**Scheduled-event risk within 2h:** " + ("YES" if e.get("event_within_120_min") else "Not flagged in feed"),
