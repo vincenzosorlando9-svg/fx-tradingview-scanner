@@ -66,7 +66,9 @@ def collect():
              "status":"INIT","attempts":0,"observations":[],
              "expected_closes":{},"observed_closes":{},
              "validated_pairs":0,"signal_publication_allowed":False,
-             "no_trades":True,"timing_basis":"EXACT_UTC_15M_SLOT"}
+             "no_trades":True,"timing_basis":"EXACT_UTC_15M_SLOT",
+             "trigger_event":os.getenv("GITHUB_EVENT_NAME","UNKNOWN"),
+             "is_scheduled_trigger":os.getenv("GITHUB_EVENT_NAME")=="schedule"}
     job_output("ready","false")
     if not slot_open(slot):
         current["status"]="MARKET_CLOSED"
@@ -177,6 +179,8 @@ def record():
                                             "FULL_REPORT_EXACT_CANDLES_VERIFIED"):
         gate["status"]="FULL_PIPELINE_FAILED_NO_SIGNAL_PUBLICATION"
     gate["signal_publication_allowed"]=ready
+    gate["trigger_event"]=os.getenv("GITHUB_EVENT_NAME","UNKNOWN")
+    gate["is_scheduled_trigger"]=gate["trigger_event"]=="schedule"
     gate["recorded_at_utc"]=now_utc().isoformat()
     gate["commit_at_utc"]="NOT_YET_VERIFIED_AT_RECORD_TIME"
     prior=load(HISTORY).get("slots") or []
@@ -196,6 +200,10 @@ def record():
                  "last_successful_slot_utc":next(
                      (x["scheduled_for_utc"] for x in reversed(recent)
                       if x.get("signal_publication_allowed")),None),
+                 "last_successful_scheduled_slot_utc":next(
+                     (x["scheduled_for_utc"] for x in reversed(recent)
+                      if x.get("signal_publication_allowed") and
+                      x.get("is_scheduled_trigger")),None),
                  "publishes_only_with_exact_m15_m30_h1":True,
                  "signal_publication_allowed":ready,
                  "not_a_guaranteed_clock_or_broker_feed":True,
