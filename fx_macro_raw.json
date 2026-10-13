@@ -1,0 +1,861 @@
+{
+  "schema_version": 1,
+  "collected_at_utc": "2026-10-13T10:47:50.946968+00:00",
+  "scope": "PUBLIC_KEYLESS_MARKET_REFERENCES_NOT_BROKER_LIVE",
+  "configured_countries": [
+    "USD",
+    "EUR",
+    "GBP",
+    "JPY",
+    "CAD",
+    "AUD",
+    "NZD",
+    "FR",
+    "IT"
+  ],
+  "covered_fx_pairs": [
+    "AUDUSD",
+    "NZDUSD",
+    "EURUSD",
+    "GBPUSD",
+    "USDJPY",
+    "AUDJPY",
+    "NZDJPY",
+    "EURJPY",
+    "EURCAD",
+    "USDCAD",
+    "EURGBP"
+  ],
+  "bonds": {
+    "USD": {
+      "source": "Trading Economics",
+      "url": "https://tradingeconomics.com/united-states/government-bond-yield",
+      "retrieved_at_utc": "2026-10-13T10:47:48.389754+00:00",
+      "status": "DATED_REFERENCE",
+      "market_date": "2026-10-13",
+      "maturities": {
+        "10Y": {
+          "value_pct": 2.86,
+          "publisher_day_change_pp": 0.009,
+          "source_row": "US 10Y TIPS"
+        },
+        "2Y": {
+          "value_pct": 4.78,
+          "publisher_day_change_pp": -0.028,
+          "source_row": "US 2Y"
+        },
+        "5Y": {
+          "value_pct": 2.61,
+          "publisher_day_change_pp": 0.043,
+          "source_row": "US 5Y TIPS"
+        },
+        "30Y": {
+          "value_pct": 3.31,
+          "publisher_day_change_pp": 0.006,
+          "source_row": "US 30Y TIPS"
+        }
+      },
+      "quote_timestamp_utc": null,
+      "live_quote_verified": false
+    },
+    "EUR": {
+      "source": "Trading Economics",
+      "url": "https://tradingeconomics.com/germany/government-bond-yield",
+      "retrieved_at_utc": "2026-10-13T10:47:48.390531+00:00",
+      "status": "DATED_REFERENCE",
+      "market_date": "2026-10-13",
+      "maturities": {
+        "10Y": {
+          "value_pct": 3.44,
+          "publisher_day_change_pp": -0.034,
+          "source_row": "Germany 10Y"
+        },
+        "2Y": {
+          "value_pct": 3.1,
+          "publisher_day_change_pp": -0.024,
+          "source_row": "Germany 2Y"
+        },
+        "5Y": {
+          "value_pct": 3.21,
+          "publisher_day_change_pp": -0.032,
+          "source_row": "Germany 5Y"
+        },
+        "30Y": {
+          "value_pct": 3.81,
+          "publisher_day_change_pp": -0.029,
+          "source_row": "Germany 30Y"
+        }
+      },
+      "quote_timestamp_utc": null,
+      "live_quote_verified": false
+    },
+    "GBP": {
+      "source": "Trading Economics",
+      "url": "https://tradingeconomics.com/united-kingdom/government-bond-yield",
+      "retrieved_at_utc": "2026-10-13T10:47:48.391377+00:00",
+      "status": "DATED_REFERENCE",
+      "market_date": "2026-10-13",
+      "maturities": {
+        "10Y": {
+          "value_pct": 5.4,
+          "publisher_day_change_pp": -0.041,
+          "source_row": "UK 10Y"
+        },
+        "5Y": {
+          "value_pct": 4.98,
+          "publisher_day_change_pp": -0.04,
+          "source_row": "UK 5Y"
+        },
+        "30Y": {
+          "value_pct": 5.88,
+          "publisher_day_change_pp": -0.043,
+          "source_row": "UK 30Y"
+        },
+        "2Y": {
+          "value_pct": 4.74,
+          "publisher_day_change_pp": -0.03,
+          "source_row": "UK 2Y"
+        }
+      },
+      "quote_timestamp_utc": null,
+      "live_quote_verified": false
+    },
+    "JPY": {
+      "source": "Trading Economics",
+      "url": "https://tradingeconomics.com/japan/government-bond-yield",
+      "retrieved_at_utc": "2026-10-13T10:47:48.394852+00:00",
+      "status": "DATED_REFERENCE",
+      "market_date": "2026-10-13",
+      "maturities": {
+        "10Y": {
+          "value_pct": 3.0,
+          "publisher_day_change_pp": -0.013,
+          "source_row": "Japan 10Y"
+        },
+        "2Y": {
+          "value_pct": 1.92,
+          "publisher_day_change_pp": 0.009,
+          "source_row": "Japan 2Y"
+        },
+        "5Y": {
+          "value_pct": 2.35,
+          "publisher_day_change_pp": -0.002,
+          "source_row": "Japan 5Y"
+        },
+        "30Y": {
+          "value_pct": 4.03,
+          "publisher_day_change_pp": -0.03,
+          "source_row": "Japan 30Y"
+        }
+      },
+      "quote_timestamp_utc": null,
+      "live_quote_verified": false
+    },
+    "CAD": {
+      "source": "Trading Economics",
+      "url": "https://tradingeconomics.com/canada/government-bond-yield",
+      "retrieved_at_utc": "2026-10-13T10:47:48.714028+00:00",
+      "status": "DATED_REFERENCE",
+      "market_date": "2026-10-13",
+      "maturities": {
+        "10Y": {
+          "value_pct": 3.84,
+          "publisher_day_change_pp": -0.039,
+          "source_row": "Canada 10Y"
+        },
+        "2Y": {
+          "value_pct": 3.18,
+          "publisher_day_change_pp": -0.011,
+          "source_row": "Canada 2Y"
+        },
+        "30Y": {
+          "value_pct": 4.2,
+          "publisher_day_change_pp": -0.04,
+          "source_row": "Canada 30Y"
+        },
+        "5Y": {
+          "value_pct": 3.52,
+          "publisher_day_change_pp": -0.029,
+          "source_row": "Canada 5Y"
+        }
+      },
+      "quote_timestamp_utc": null,
+      "live_quote_verified": false
+    },
+    "AUD": {
+      "source": "Trading Economics",
+      "url": "https://tradingeconomics.com/australia/government-bond-yield",
+      "retrieved_at_utc": "2026-10-13T10:47:48.771869+00:00",
+      "status": "DATED_REFERENCE",
+      "market_date": "2026-10-13",
+      "maturities": {
+        "10Y": {
+          "value_pct": 5.29,
+          "publisher_day_change_pp": -0.045,
+          "source_row": "Australia 10Y"
+        },
+        "2Y": {
+          "value_pct": 4.9,
+          "publisher_day_change_pp": -0.024,
+          "source_row": "Australia 2Y"
+        },
+        "30Y": {
+          "value_pct": 5.76,
+          "publisher_day_change_pp": -0.031,
+          "source_row": "Australia 30Y"
+        },
+        "5Y": {
+          "value_pct": 4.93,
+          "publisher_day_change_pp": -0.039,
+          "source_row": "Australia 5Y"
+        }
+      },
+      "quote_timestamp_utc": null,
+      "live_quote_verified": false
+    },
+    "NZD": {
+      "source": "Trading Economics",
+      "url": "https://tradingeconomics.com/new-zealand/government-bond-yield",
+      "retrieved_at_utc": "2026-10-13T10:47:48.843107+00:00",
+      "status": "DATED_REFERENCE",
+      "market_date": "2026-10-13",
+      "maturities": {
+        "10Y": {
+          "value_pct": 4.99,
+          "publisher_day_change_pp": -0.043,
+          "source_row": "NZ 10Y"
+        },
+        "2Y": {
+          "value_pct": 3.83,
+          "publisher_day_change_pp": -0.015,
+          "source_row": "NZ 2Y"
+        }
+      },
+      "quote_timestamp_utc": null,
+      "live_quote_verified": false
+    },
+    "FR": {
+      "source": "Trading Economics",
+      "url": "https://tradingeconomics.com/france/government-bond-yield",
+      "retrieved_at_utc": "2026-10-13T10:47:48.852254+00:00",
+      "status": "DATED_REFERENCE",
+      "market_date": "2026-10-13",
+      "maturities": {
+        "10Y": {
+          "value_pct": 4.83,
+          "publisher_day_change_pp": -0.076,
+          "source_row": "France 10Y"
+        },
+        "2Y": {
+          "value_pct": 3.6,
+          "publisher_day_change_pp": -0.048,
+          "source_row": "France 2Y"
+        },
+        "30Y": {
+          "value_pct": 5.39,
+          "publisher_day_change_pp": -0.045,
+          "source_row": "France 30Y"
+        },
+        "5Y": {
+          "value_pct": 4.18,
+          "publisher_day_change_pp": -0.072,
+          "source_row": "France 5Y"
+        }
+      },
+      "quote_timestamp_utc": null,
+      "live_quote_verified": false
+    },
+    "IT": {
+      "source": "Trading Economics",
+      "url": "https://tradingeconomics.com/italy/government-bond-yield",
+      "retrieved_at_utc": "2026-10-13T10:47:48.857675+00:00",
+      "status": "DATED_REFERENCE",
+      "market_date": "2026-10-13",
+      "maturities": {
+        "10Y": {
+          "value_pct": 4.53,
+          "publisher_day_change_pp": -0.061,
+          "source_row": "Italy 10Y"
+        },
+        "2Y": {
+          "value_pct": 3.5,
+          "publisher_day_change_pp": -0.017,
+          "source_row": "Italy 2Y"
+        },
+        "30Y": {
+          "value_pct": 5.12,
+          "publisher_day_change_pp": -0.047,
+          "source_row": "Italy 30Y"
+        },
+        "5Y": {
+          "value_pct": 3.97,
+          "publisher_day_change_pp": -0.045,
+          "source_row": "Italy 5Y"
+        }
+      },
+      "quote_timestamp_utc": null,
+      "live_quote_verified": false
+    }
+  },
+  "policy_rates": {
+    "USD": {
+      "source": "Trading Economics policy-rate public page",
+      "url": "https://tradingeconomics.com/united-states/interest-rate",
+      "retrieved_at_utc": "2026-10-13T10:47:48.390232+00:00",
+      "status": "UNAVAILABLE_RATE_NOT_FOUND",
+      "policy_rate_pct": null,
+      "reference_date": null,
+      "ois_rate_pct": null,
+      "ois_status": "UNAVAILABLE_NO_VALIDATED_PUBLIC_OIS"
+    },
+    "EUR": {
+      "source": "Trading Economics policy-rate public page",
+      "url": "https://tradingeconomics.com/germany/interest-rate",
+      "retrieved_at_utc": "2026-10-13T10:47:48.390926+00:00",
+      "status": "UNAVAILABLE_RATE_NOT_FOUND",
+      "policy_rate_pct": null,
+      "reference_date": null,
+      "ois_rate_pct": null,
+      "ois_status": "UNAVAILABLE_NO_VALIDATED_PUBLIC_OIS"
+    },
+    "GBP": {
+      "source": "Trading Economics policy-rate public page",
+      "url": "https://tradingeconomics.com/united-kingdom/interest-rate",
+      "retrieved_at_utc": "2026-10-13T10:47:48.392861+00:00",
+      "status": "UNAVAILABLE_RATE_NOT_FOUND",
+      "policy_rate_pct": null,
+      "reference_date": null,
+      "ois_rate_pct": null,
+      "ois_status": "UNAVAILABLE_NO_VALIDATED_PUBLIC_OIS"
+    },
+    "JPY": {
+      "source": "Trading Economics policy-rate public page",
+      "url": "https://tradingeconomics.com/japan/interest-rate",
+      "retrieved_at_utc": "2026-10-13T10:47:48.703598+00:00",
+      "status": "UNAVAILABLE_RATE_NOT_FOUND",
+      "policy_rate_pct": null,
+      "reference_date": null,
+      "ois_rate_pct": null,
+      "ois_status": "UNAVAILABLE_NO_VALIDATED_PUBLIC_OIS"
+    },
+    "CAD": {
+      "source": "Trading Economics policy-rate public page",
+      "url": "https://tradingeconomics.com/canada/interest-rate",
+      "retrieved_at_utc": "2026-10-13T10:47:48.764061+00:00",
+      "status": "UNAVAILABLE_RATE_NOT_FOUND",
+      "policy_rate_pct": null,
+      "reference_date": null,
+      "ois_rate_pct": null,
+      "ois_status": "UNAVAILABLE_NO_VALIDATED_PUBLIC_OIS"
+    },
+    "AUD": {
+      "source": "Trading Economics policy-rate public page",
+      "url": "https://tradingeconomics.com/australia/interest-rate",
+      "retrieved_at_utc": "2026-10-13T10:47:48.817296+00:00",
+      "status": "UNAVAILABLE_RATE_NOT_FOUND",
+      "policy_rate_pct": null,
+      "reference_date": null,
+      "ois_rate_pct": null,
+      "ois_status": "UNAVAILABLE_NO_VALIDATED_PUBLIC_OIS"
+    },
+    "NZD": {
+      "source": "Trading Economics policy-rate public page",
+      "url": "https://tradingeconomics.com/new-zealand/interest-rate",
+      "retrieved_at_utc": "2026-10-13T10:47:48.844252+00:00",
+      "status": "UNAVAILABLE_RATE_NOT_FOUND",
+      "policy_rate_pct": null,
+      "reference_date": null,
+      "ois_rate_pct": null,
+      "ois_status": "UNAVAILABLE_NO_VALIDATED_PUBLIC_OIS"
+    }
+  },
+  "indices": {
+    "KOSPI": {
+      "source": "Trading Economics public daily market page",
+      "url": "https://tradingeconomics.com/south-korea/stock-market",
+      "retrieved_at_utc": "2026-10-13T10:47:48.937767+00:00",
+      "status": "UNAVAILABLE_NO_DATED_INDEX_VALUE",
+      "value": null,
+      "daily_change_pct": null,
+      "market_date": "2026-10-13",
+      "quote_timestamp_utc": null,
+      "verified_intraday": false
+    },
+    "NIKKEI": {
+      "source": "Trading Economics public daily market page",
+      "url": "https://tradingeconomics.com/japan/stock-market",
+      "retrieved_at_utc": "2026-10-13T10:47:48.941824+00:00",
+      "status": "UNAVAILABLE_NO_DATED_INDEX_VALUE",
+      "value": null,
+      "daily_change_pct": null,
+      "market_date": null,
+      "quote_timestamp_utc": null,
+      "verified_intraday": false
+    },
+    "CHINA_EQUITIES": {
+      "source": "Trading Economics public daily market page",
+      "url": "https://tradingeconomics.com/china/stock-market",
+      "retrieved_at_utc": "2026-10-13T10:47:48.943386+00:00",
+      "status": "UNAVAILABLE_NO_DATED_INDEX_VALUE",
+      "value": null,
+      "daily_change_pct": null,
+      "market_date": null,
+      "quote_timestamp_utc": null,
+      "verified_intraday": false
+    },
+    "DXY": {
+      "source": "Trading Economics public daily market page",
+      "url": "https://tradingeconomics.com/dxy:cur",
+      "retrieved_at_utc": "2026-10-13T10:47:48.951450+00:00",
+      "status": "UNAVAILABLE_NO_DATED_INDEX_VALUE",
+      "value": null,
+      "daily_change_pct": null,
+      "market_date": null,
+      "quote_timestamp_utc": null,
+      "verified_intraday": false
+    }
+  },
+  "forexcracked": {
+    "source": "ForexCracked live-market-rates public page",
+    "url": "https://www.forexcracked.com/web-forex-tools/live-market-rates/",
+    "retrieved_at_utc": "2026-10-13T10:47:48.985191+00:00",
+    "status": "INDICATIVE_PUBLIC_QUOTES",
+    "pairs": {
+      "AUDUSD": {
+        "bid": 0.69732,
+        "ask": 0.69732,
+        "spread_pips": 0.0,
+        "publisher_spread_pips": 0.0,
+        "quote_timestamp_utc": "2026-10-13T10:47:06.985191+00:00",
+        "status": "INDICATIVE_SITE_QUOTE_NOT_BROKER",
+        "execution_allowed": false
+      },
+      "NZDUSD": {
+        "bid": 0.56084,
+        "ask": 0.56084,
+        "spread_pips": 0.0,
+        "publisher_spread_pips": 0.0,
+        "quote_timestamp_utc": "2026-10-13T10:47:06.985191+00:00",
+        "status": "INDICATIVE_SITE_QUOTE_NOT_BROKER",
+        "execution_allowed": false
+      },
+      "EURUSD": {
+        "bid": 1.11865,
+        "ask": 1.11865,
+        "spread_pips": 0.0,
+        "publisher_spread_pips": 0.0,
+        "quote_timestamp_utc": "2026-10-13T10:47:06.985191+00:00",
+        "status": "INDICATIVE_SITE_QUOTE_NOT_BROKER",
+        "execution_allowed": false
+      },
+      "GBPUSD": {
+        "bid": 1.3241,
+        "ask": 1.3241,
+        "spread_pips": 0.0,
+        "publisher_spread_pips": 0.0,
+        "quote_timestamp_utc": "2026-10-13T10:47:06.985191+00:00",
+        "status": "INDICATIVE_SITE_QUOTE_NOT_BROKER",
+        "execution_allowed": false
+      },
+      "USDJPY": {
+        "bid": 158.14,
+        "ask": 158.14,
+        "spread_pips": 0.0,
+        "publisher_spread_pips": 0.1,
+        "quote_timestamp_utc": "2026-10-13T10:47:06.985191+00:00",
+        "status": "INDICATIVE_SITE_QUOTE_NOT_BROKER",
+        "execution_allowed": false
+      },
+      "AUDJPY": {
+        "bid": 110.27,
+        "ask": 110.27,
+        "spread_pips": 0.0,
+        "publisher_spread_pips": 0.4,
+        "quote_timestamp_utc": "2026-10-13T10:47:06.985191+00:00",
+        "status": "INDICATIVE_SITE_QUOTE_NOT_BROKER",
+        "execution_allowed": false
+      },
+      "NZDJPY": {
+        "bid": 88.686,
+        "ask": 88.692,
+        "spread_pips": 0.6,
+        "publisher_spread_pips": 0.6,
+        "quote_timestamp_utc": "2026-10-13T10:47:06.985191+00:00",
+        "status": "INDICATIVE_SITE_QUOTE_NOT_BROKER",
+        "execution_allowed": false
+      },
+      "EURJPY": {
+        "bid": 176.9,
+        "ask": 176.9,
+        "spread_pips": 0.0,
+        "publisher_spread_pips": 0.0,
+        "quote_timestamp_utc": "2026-10-13T10:47:06.985191+00:00",
+        "status": "INDICATIVE_SITE_QUOTE_NOT_BROKER",
+        "execution_allowed": false
+      },
+      "EURCAD": {
+        "bid": 1.59488,
+        "ask": 1.59492,
+        "spread_pips": 0.4,
+        "publisher_spread_pips": 0.4,
+        "quote_timestamp_utc": "2026-10-13T10:47:06.985191+00:00",
+        "status": "INDICATIVE_SITE_QUOTE_NOT_BROKER",
+        "execution_allowed": false
+      },
+      "USDCAD": {
+        "bid": 1.42584,
+        "ask": 1.42584,
+        "spread_pips": 0.0,
+        "publisher_spread_pips": 0.0,
+        "quote_timestamp_utc": "2026-10-13T10:47:06.985191+00:00",
+        "status": "INDICATIVE_SITE_QUOTE_NOT_BROKER",
+        "execution_allowed": false
+      },
+      "EURGBP": {
+        "bid": 0.84481,
+        "ask": 0.84482,
+        "spread_pips": 0.1,
+        "publisher_spread_pips": 0.1,
+        "quote_timestamp_utc": "2026-10-13T10:47:06.985191+00:00",
+        "status": "INDICATIVE_SITE_QUOTE_NOT_BROKER",
+        "execution_allowed": false
+      }
+    },
+    "non_crude": {
+      "GOLD": {
+        "value": 0.14,
+        "status": "INDICATIVE_UNVERIFIED_SOURCE_CLOCK",
+        "unit": "SOURCE_QUOTE_UNITS",
+        "quote_timestamp_utc": "2026-10-13T10:47:06.985191+00:00"
+      },
+      "SILVER": {
+        "value": 60.304,
+        "status": "INDICATIVE_UNVERIFIED_SOURCE_CLOCK",
+        "unit": "SOURCE_QUOTE_UNITS",
+        "quote_timestamp_utc": "2026-10-13T10:47:06.985191+00:00"
+      }
+    },
+    "quote_timestamp_utc": "2026-10-13T10:47:06.985191+00:00",
+    "indicative_not_broker_executable": true,
+    "publisher_time_method": "APPROXIMATE_EXPLICIT_RELATIVE_SITE_CLOCK"
+  },
+  "oilprice": {
+    "source": "OilPrice.com ONLY",
+    "url": "https://oilprice.com/oil-price-charts/",
+    "retrieved_at_utc": "2026-10-13T10:47:48.995940+00:00",
+    "status": "DELAYED_OR_UNTIMED_PUBLIC_REFERENCE",
+    "commodities": {
+      "WTI": {
+        "value_usd_per_barrel": 91.88,
+        "delay_minutes": 11,
+        "status": "DELAYED_SOURCE_REFERENCE",
+        "quote_timestamp_utc": null,
+        "source": "OilPrice.com"
+      },
+      "BRENT": {
+        "value_usd_per_barrel": 104.59,
+        "delay_minutes": 11,
+        "status": "DELAYED_SOURCE_REFERENCE",
+        "quote_timestamp_utc": null,
+        "source": "OilPrice.com"
+      }
+    },
+    "verified_live_quote": false
+  },
+  "feargreedmeter": {
+    "source": "FearGreedMeter (CNN EXCLUDED)",
+    "url": "https://feargreedmeter.com/",
+    "retrieved_at_utc": "2026-10-13T10:47:49.050185+00:00",
+    "status": "PUBLIC_INDEX_RELATIVE_TIME",
+    "index": 46,
+    "label": "NEUTRAL",
+    "publisher_lag_minutes": 25,
+    "quote_timestamp_utc": "2026-10-13T10:22:49.050185+00:00",
+    "vix": null
+  },
+  "news_sources": {
+    "FXStreet_RSS": {
+      "source": "FXStreet_RSS",
+      "url": "https://www.fxstreet.com/rss/news",
+      "retrieved_at_utc": "2026-10-13T10:47:49.060504+00:00",
+      "status": "DATED_HEADLINES",
+      "articles": [
+        {
+          "title": "Swiss Franc's recovery stalls despite broad-based US Dollar weakness",
+          "url": "https://www.fxstreet.com/news/swiss-francs-recovery-stalls-despite-broad-based-us-dollar-weakness-202610131009",
+          "published_at_utc": "2026-10-13T10:09:22+00:00",
+          "currencies": [
+            "USD"
+          ],
+          "direction": "UNDETERMINED_FROM_HEADLINE_ONLY"
+        },
+        {
+          "title": "Equities: Earnings beats seen versus consensus – Deutsche Bank",
+          "url": "https://www.fxstreet.com/news/equities-earnings-beats-seen-versus-consensus-deutsche-bank-202610131000",
+          "published_at_utc": "2026-10-13T10:00:55+00:00",
+          "currencies": [],
+          "direction": "UNDETERMINED_FROM_HEADLINE_ONLY"
+        },
+        {
+          "title": "US Dollar: Overbought signals but no clear catalyst – ING",
+          "url": "https://www.fxstreet.com/news/us-dollar-overbought-signals-but-no-clear-catalyst-ing-202610130943",
+          "published_at_utc": "2026-10-13T09:43:43+00:00",
+          "currencies": [
+            "USD"
+          ],
+          "direction": "UNDETERMINED_FROM_HEADLINE_ONLY"
+        },
+        {
+          "title": "Euro declines as BoJ tightening bets, Eurozone stagflation risks bolster Japanese Yen",
+          "url": "https://www.fxstreet.com/news/euro-declines-as-boj-tightening-bets-eurozone-stagflation-risks-bolster-japanese-yen-202610130932",
+          "published_at_utc": "2026-10-13T09:32:25+00:00",
+          "currencies": [
+            "EUR",
+            "JPY"
+          ],
+          "direction": "UNDETERMINED_FROM_HEADLINE_ONLY"
+        },
+        {
+          "title": "Silver price today: Silver rises, according to FXStreet data",
+          "url": "https://www.fxstreet.com/news/silver-price-today-silver-rises-according-to-fxstreet-data-202610130930",
+          "published_at_utc": "2026-10-13T09:30:38+00:00",
+          "currencies": [],
+          "direction": "UNDETERMINED_FROM_HEADLINE_ONLY"
+        },
+        {
+          "title": "Gold Price Forecast: XAU/USD retraces losses as US yields and Oil prices ease",
+          "url": "https://www.fxstreet.com/news/gold-price-forecast-xau-usd-retraces-losses-as-us-yields-and-oil-prices-ease-202610130928",
+          "published_at_utc": "2026-10-13T09:28:55+00:00",
+          "currencies": [
+            "USD",
+            "CAD"
+          ],
+          "direction": "UNDETERMINED_FROM_HEADLINE_ONLY"
+        },
+        {
+          "title": "Polish Zloty: Pressured by policy and fiscal risks – Commerzbank",
+          "url": "https://www.fxstreet.com/news/polish-zloty-pressured-by-policy-and-fiscal-risks-commerzbank-202610130928",
+          "published_at_utc": "2026-10-13T09:28:13+00:00",
+          "currencies": [],
+          "direction": "UNDETERMINED_FROM_HEADLINE_ONLY"
+        },
+        {
+          "title": "Euro strengthens against Canadian Dollar as German HICP inflation accelerates, oil eases",
+          "url": "https://www.fxstreet.com/news/euro-strengthens-against-canadian-dollar-as-german-hicp-inflation-accelerates-oil-eases-202610130902",
+          "published_at_utc": "2026-10-13T09:02:01+00:00",
+          "currencies": [
+            "USD",
+            "EUR",
+            "CAD"
+          ],
+          "direction": "UNDETERMINED_FROM_HEADLINE_ONLY"
+        },
+        {
+          "title": "NZD/USD Price Forecast: Recovery from YTD low seems capped; 0.5580 holds the key",
+          "url": "https://www.fxstreet.com/news/nzd-usd-price-forecast-recovery-from-ytd-low-seems-capped-05580-holds-the-key-202610130901",
+          "published_at_utc": "2026-10-13T09:01:13+00:00",
+          "currencies": [],
+          "direction": "UNDETERMINED_FROM_HEADLINE_ONLY"
+        },
+        {
+          "title": "Australian Dollar: High rates support Aussie against US Dollar - MUFG",
+          "url": "https://www.fxstreet.com/news/australian-dollar-high-rates-support-aussie-against-us-dollar-mufg-202610130859",
+          "published_at_utc": "2026-10-13T08:59:21+00:00",
+          "currencies": [
+            "USD",
+            "AUD"
+          ],
+          "direction": "UNDETERMINED_FROM_HEADLINE_ONLY"
+        },
+        {
+          "title": "Dow Jones futures gain as defensive and blue-chip stocks show relative strength",
+          "url": "https://www.fxstreet.com/news/dow-jones-futures-gain-as-defensive-and-blue-chip-stocks-show-relative-strength-202610130844",
+          "published_at_utc": "2026-10-13T08:44:51+00:00",
+          "currencies": [],
+          "direction": "UNDETERMINED_FROM_HEADLINE_ONLY"
+        },
+        {
+          "title": "British Pound gains as BoE’s Greene favors proactive approach on hot UK inflation",
+          "url": "https://www.fxstreet.com/news/british-pound-gains-as-boes-greene-favors-proactive-approach-on-hot-uk-inflation-202610130843",
+          "published_at_utc": "2026-10-13T08:43:43+00:00",
+          "currencies": [
+            "GBP"
+          ],
+          "direction": "UNDETERMINED_FROM_HEADLINE_ONLY"
+        },
+        {
+          "title": "British Pound: Cable confined to broad trading band – UOB",
+          "url": "https://www.fxstreet.com/news/british-pound-cable-confined-to-broad-trading-band-uob-202610130832",
+          "published_at_utc": "2026-10-13T08:32:10+00:00",
+          "currencies": [
+            "GBP"
+          ],
+          "direction": "UNDETERMINED_FROM_HEADLINE_ONLY"
+        },
+        {
+          "title": "Fed’s Waller: Trump is a threat to Fed independence",
+          "url": "https://www.fxstreet.com/news/feds-waller-trump-is-a-threat-to-fed-independence-202610130828",
+          "published_at_utc": "2026-10-13T08:28:58+00:00",
+          "currencies": [
+            "USD"
+          ],
+          "direction": "UNDETERMINED_FROM_HEADLINE_ONLY"
+        },
+        {
+          "title": "WTI slides to near $91.50 as Russian diesel inflow offsets geopolitical escalations",
+          "url": "https://www.fxstreet.com/news/wti-slides-to-near-9150-as-russian-diesel-inflow-offsets-geopolitical-escalations-202610130827",
+          "published_at_utc": "2026-10-13T08:27:05+00:00",
+          "currencies": [],
+          "direction": "UNDETERMINED_FROM_HEADLINE_ONLY"
+        },
+        {
+          "title": "Euro trims losses amid a softer USD, with upside attempts likely to remain shallow",
+          "url": "https://www.fxstreet.com/news/euro-trims-losses-amid-a-softer-usd-with-upside-attempts-likely-to-remain-shallow-202610130819",
+          "published_at_utc": "2026-10-13T08:19:15+00:00",
+          "currencies": [
+            "EUR"
+          ],
+          "direction": "UNDETERMINED_FROM_HEADLINE_ONLY"
+        },
+        {
+          "title": "Japanese Yen: Intervention risks limit further depreciation - OCBC",
+          "url": "https://www.fxstreet.com/news/japanese-yen-intervention-risks-limit-further-depreciation-ocbc-202610130804",
+          "published_at_utc": "2026-10-13T08:04:35+00:00",
+          "currencies": [
+            "JPY"
+          ],
+          "direction": "UNDETERMINED_FROM_HEADLINE_ONLY"
+        },
+        {
+          "title": "USD/CAD Price Forecast: Falls to near 1.4250 near nine-day EMA support",
+          "url": "https://www.fxstreet.com/news/usd-cad-price-forecast-falls-to-near-14250-near-nine-day-ema-support-202610130802",
+          "published_at_utc": "2026-10-13T08:02:44+00:00",
+          "currencies": [],
+          "direction": "UNDETERMINED_FROM_HEADLINE_ONLY"
+        },
+        {
+          "title": "AUD/JPY Price Forecast: Awaits 110.00 break as Yen strength validates bearish setup on H4",
+          "url": "https://www.fxstreet.com/news/aud-jpy-price-forecast-awaits-11000-break-as-yen-strength-validates-bearish-setup-on-h4-202610130759",
+          "published_at_utc": "2026-10-13T07:59:12+00:00",
+          "currencies": [
+            "JPY"
+          ],
+          "direction": "UNDETERMINED_FROM_HEADLINE_ONLY"
+        },
+        {
+          "title": "Equities: Rotation out of AI as breadth stays positive – Danske Bank",
+          "url": "https://www.fxstreet.com/news/equities-rotation-out-of-ai-as-breadth-stays-positive-danske-bank-202610130744",
+          "published_at_utc": "2026-10-13T07:44:48+00:00",
+          "currencies": [],
+          "direction": "UNDETERMINED_FROM_HEADLINE_ONLY"
+        },
+        {
+          "title": "Indian Rupee: RBI support points to softer pair – Commerzbank",
+          "url": "https://www.fxstreet.com/news/indian-rupee-rbi-support-points-to-softer-pair-commerzbank-202610130724",
+          "published_at_utc": "2026-10-13T07:24:56+00:00",
+          "currencies": [],
+          "direction": "UNDETERMINED_FROM_HEADLINE_ONLY"
+        },
+        {
+          "title": "Silver Price Forecast: XAG/USD remains capped below $61.00 as bulls seem hesitant",
+          "url": "https://www.fxstreet.com/news/silver-price-forecast-xag-usd-remains-capped-below-6100-as-bulls-seem-hesitant-202610130720",
+          "published_at_utc": "2026-10-13T07:20:25+00:00",
+          "currencies": [],
+          "direction": "UNDETERMINED_FROM_HEADLINE_ONLY"
+        },
+        {
+          "title": "Euro remains depressed against British Pound as France and Oil weighs",
+          "url": "https://www.fxstreet.com/news/euro-remains-depressed-against-british-pound-as-france-and-oil-weighs-202610130718",
+          "published_at_utc": "2026-10-13T07:18:15+00:00",
+          "currencies": [
+            "EUR",
+            "GBP"
+          ],
+          "direction": "UNDETERMINED_FROM_HEADLINE_ONLY"
+        },
+        {
+          "title": "Oil: Market focuses on Persian Gulf risks – ING",
+          "url": "https://www.fxstreet.com/news/oil-market-focuses-on-persian-gulf-risks-ing-202610130659",
+          "published_at_utc": "2026-10-13T06:59:30+00:00",
+          "currencies": [],
+          "direction": "UNDETERMINED_FROM_HEADLINE_ONLY"
+        },
+        {
+          "title": "Forex Today: US Dollar retreats from 18-month high as bond yields, oil prices ease",
+          "url": "https://www.fxstreet.com/news/forex-today-us-dollar-retreats-from-17-month-high-as-bond-yields-oil-prices-ease-202610130659",
+          "published_at_utc": "2026-10-13T06:59:09+00:00",
+          "currencies": [
+            "USD",
+            "CAD"
+          ],
+          "direction": "UNDETERMINED_FROM_HEADLINE_ONLY"
+        },
+        {
+          "title": "AUD/USD Price Forecast: Declining 20-day EMA builds case for more downside",
+          "url": "https://www.fxstreet.com/news/aud-usd-price-forecast-declining-20-day-ema-builds-case-for-more-downside-202610130652",
+          "published_at_utc": "2026-10-13T06:52:19+00:00",
+          "currencies": [],
+          "direction": "UNDETERMINED_FROM_HEADLINE_ONLY"
+        },
+        {
+          "title": "Euro: Gradual downside toward key support against US Dollar – UOB",
+          "url": "https://www.fxstreet.com/news/euro-gradual-downside-toward-key-support-against-us-dollar-uob-202610130636",
+          "published_at_utc": "2026-10-13T06:36:06+00:00",
+          "currencies": [
+            "USD",
+            "EUR"
+          ],
+          "direction": "UNDETERMINED_FROM_HEADLINE_ONLY"
+        },
+        {
+          "title": "USD/JPY Price Forecast: Bulls fail to break the 200-day SMA around 158.50",
+          "url": "https://www.fxstreet.com/news/usd-jpy-price-forecast-bulls-fail-to-break-the-200-day-sma-around-15850-202610130629",
+          "published_at_utc": "2026-10-13T06:29:35+00:00",
+          "currencies": [],
+          "direction": "UNDETERMINED_FROM_HEADLINE_ONLY"
+        },
+        {
+          "title": "Indian Rupee rallies further as RBI step up measures to curb US Dollar’s demand",
+          "url": "https://www.fxstreet.com/news/indian-rupee-gains-further-on-rbis-fresh-measures-to-lower-us-dollars-demand-202610130508",
+          "published_at_utc": "2026-10-13T05:08:30+00:00",
+          "currencies": [
+            "USD"
+          ],
+          "direction": "UNDETERMINED_FROM_HEADLINE_ONLY"
+        },
+        {
+          "title": "Gold bulls seem hesitant below $4,200 as hawkish Fed offset USD weakness",
+          "url": "https://www.fxstreet.com/news/gold-bounces-off-4-150-amid-modest-usd-pullback-but-stays-in-two-week-old-range-202610130353",
+          "published_at_utc": "2026-10-13T03:53:32+00:00",
+          "currencies": [
+            "USD"
+          ],
+          "direction": "UNDETERMINED_FROM_HEADLINE_ONLY"
+        }
+      ]
+    },
+    "Reuters_currency_page": {
+      "source": "Reuters_currency_page",
+      "url": "https://www.reuters.com/markets/currencies/",
+      "retrieved_at_utc": "2026-10-13T10:47:49.070069+00:00",
+      "status": "UNAVAILABLE_HTTPERROR",
+      "articles": []
+    }
+  },
+  "ois": {
+    "status": "UNAVAILABLE_NO_VERIFIED_PUBLIC_OIS",
+    "actual_rate": null
+  },
+  "cme_futures": {
+    "status": "UNAVAILABLE_NO_VERIFIED_PUBLIC_CONTRACT_DATA"
+  },
+  "cftc_tff": {
+    "status": "UNAVAILABLE_NO_VALIDATED_WEEKLY_TFF"
+  },
+  "notes": [
+    "Yields are Trading Economics public dated references; source refresh does not prove intraday quote refresh.",
+    "ForexCracked bid/ask is indicative site information, NOT a broker executable quote.",
+    "OilPrice.com may show delay and must never be described as real time.",
+    "No CNN, no options layer, no API keys, no automatic orders or alerts."
+  ]
+}
