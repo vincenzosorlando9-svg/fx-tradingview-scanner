@@ -65,7 +65,7 @@ def parse(body, now=None):
         # "63% ... going short with EUR/USD ... 37% ... going long with EUR/USD".
         slash_pair=pair[:3]+"/"+pair[3:]
         for para in soup.find_all("p"):
-            value=" ".join(para.stripped_strings).lower()
+            value=" ".join(" ".join(para.stripped_strings).lower().split())
             if slash_pair.lower() not in value:
                 continue
             a=re.search(r"(\d{1,3})\s*%\s+of\s+(?:the\s+)?(?:forex\s+)?traders.{0,90}?\bgoing\s+short\b",value)
