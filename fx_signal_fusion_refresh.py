@@ -19,6 +19,78 @@ def fresh(obj, field, max_m, now):
     age=age_min(obj.get(field),now)
     return age is not None and -2<=age<=max_m
 
+def enrich_source_context(rows, now, dashboard, early, ff_market, levels, history, raw):
+    """Add provenance-aware contextual data, never change candle BUY/SELL or rank.
+
+    Forex Factory market pages frequently omit JS-rendered prices and spreads;
+    those missing fields must stay null, not become broker quotes. Source
+    download clocks are never substituted for quote publication timestamps.
+    """
+    def available(doc, field, age_limit):
+        age = age_min(doc.get(field), now)
+        return age is not None and -2 <= age <= age_limit
+
+    ff_ok = available(ff_market, "collected_at_utc", 90)
+    levels_ok = (available(levels, "generated_at_utc", 20)
+                 and levels.get("generated_at_utc") ==
+                 dashboard.get("daily_weekly_levels_generated_at_utc"))
+    raw_ok = available(raw, "collected_at_utc", 45)
+    breadth = dashboard.get("currency_strength_breadth") or {}
+    cluster = early.get("jpy_cluster") or dashboard.get("early_rotation_jpy_cluster") or {}
+    historic = history.get("pairs") or {}
+    for row in rows:
+        pair = row["pair"]
+        ff = (ff_market.get("pairs") or {}).get(pair, {}) if ff_ok else {}
+        published = (levels.get("pairs") or {}).get(pair, {}) if levels_ok else {}
+        h = historic.get(pair, {}) if isinstance(historic, dict) else {}
+        active = h.get("active") if isinstance(h, dict) else None
+        active_ok = isinstance(active, dict) and available(active, "last_observed_at_utc", 20)
+        p1, p2 = pair[:3], pair[3:]
+        policies = (raw.get("policy_rates") or {}) if raw_ok else {}
+        row["policy_rate_context"] = {
+            c: {"reference_rate_pct": policies.get(c, {}).get("policy_rate_pct"),
+                "reference_date": policies.get(c, {}).get("reference_date"),
+                "source": policies.get(c, {}).get("url"),
+                "status": policies.get(c, {}).get("status", "UNAVAILABLE"),
+                "ois_verified": False}
+            for c in (p1, p2)}
+        row["ois_reference"] = raw.get("ois", {"status": "UNAVAILABLE_STALE"}) if raw_ok else {
+            "status": "UNAVAILABLE_STALE"}
+        row["cme_reference"] = raw.get("cme_futures", {"status": "UNAVAILABLE"}) if raw_ok else {
+            "status": "UNAVAILABLE_STALE"}
+        row["forexfactory_market_context"] = {
+            "status": ff.get("status", "UNAVAILABLE_STALE_OR_BLOCKED"),
+            "source_url": ff.get("source_url") if ff_ok else None,
+            "fetched_at_utc": ff.get("fetched_at_utc") if ff_ok else None,
+            "price": ff.get("price"),
+            "price_status": ff.get("price_status", "UNAVAILABLE_UNVERIFIED"),
+            "spread": ff.get("spread"),
+            "spread_status": ff.get("spread_status", "UNAVAILABLE_UNVERIFIED"),
+            "positioning": ff.get("positioning"),
+            "broker_executable": False, "directional_vote": False}
+        row["daily_weekly_price_levels"] = published if published else {
+            "status": "UNAVAILABLE_STALE_OR_UNSYNCHRONIZED"}
+        row["currency_strength_cluster_context"] = {
+            "base_breadth": breadth.get(p1),
+            "quote_breadth": breadth.get(p2),
+            "from": "CLOSED_15M_30M_TECHNICALS",
+            "jpy_cluster": cluster.get("status", "UNAVAILABLE") if "JPY" in pair else None,
+            "cross_specific": (cluster.get("pairs") or {}).get(pair) if "JPY" in pair else None,
+            "directional_signal_input": False}
+        row["signal_episode_history"] = {
+            "status": "CURRENT_RECORDED_EPISODE" if active_ok else "UNAVAILABLE_STALE_OR_INACTIVE",
+            "active": active if active_ok else None,
+            "previous_episode_count": len(h.get("history") or []) if isinstance(h, dict) else 0,
+            "no_future_candle_lookahead": True,
+            "directional_vote": False}
+        row["context_freshness_flags"] = {
+            "forexfactory_markets": "FRESH_FETCH_NOT_QUOTE" if ff_ok else "STALE_OR_MISSING",
+            "daily_weekly_levels": "SYNCHRONIZED" if levels_ok else "STALE_OR_UNSYNCHRONIZED",
+            "policy_reference": "FRESH_FETCH_NOT_POLICY_UPDATE" if raw_ok else "STALE_OR_MISSING",
+            "signal_history": "RECORDED" if active_ok else "STALE_OR_INACTIVE"}
+    return rows
+
+
 def refresh(now=None):
     now=now or datetime.now(UTC)
     dash=read("fx_scan_dashboard.json")
@@ -38,6 +110,9 @@ def refresh(now=None):
     cal=read("fx_economic_calendar.json")
     cftc=read("fx_cftc_tff.json")
     retail=read("fx_retail_positioning.json")
+    ff_market=read("fx_forexfactory_markets.json")
+    levels=read("fx_daily_weekly_levels.json")
+    history=read("fx_signal_history.json")
     if not fresh(retail,"collected_at_utc",90,now):
         retail={}
     macro_ok=fresh(snap,"generated_at_utc",45,now)
@@ -53,6 +128,8 @@ def refresh(now=None):
     rows=build_pairs(dash,early,cal,(news if news_ok else {"articles":[],"matched_actuals":[]}),
                      spreads,deltas,metrics,cftc,(raw if raw_ok else {}),now,
                      retail=retail)
+    enrich_source_context(rows, now, dash, early, ff_market, levels, history,
+                          raw if raw_ok else {})
     for row in rows:
         ctx=(range_data.get("pairs") or {}).get(row["pair"]) if range_ok else None
         row["range_context"]=ctx or {"status":"UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"}
@@ -73,7 +150,9 @@ def refresh(now=None):
          "macro_missing_does_not_veto_early_technical_direction":True,
          "ranking_policy":"50pct_early_opportunity_plus_50pct_trend_strength; macro independent",
          "no_mobile_alerts":True,"real_broker_spread_verified":False,
-         "macro_snapshot_used":macro_ok,"source_freshness_minutes":{
+         "macro_snapshot_used":macro_ok,
+         "context_contract": "MARKET_REFERENCES_AND_MISSING_DATA_NON_EXECUTABLE",
+         "source_freshness_minutes":{
              "macro_snapshot":round(age_min(snap.get("generated_at_utc"),now),1)
                               if snap.get("generated_at_utc") else None,
              "news":round(age_min(news.get("generated_at_utc"),now),1)
