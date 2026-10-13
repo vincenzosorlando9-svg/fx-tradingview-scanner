@@ -61,6 +61,19 @@ def parse(body, now=None):
             short,long=int(mshort.group(1)),int(mlong.group(1))
             if 0<=short<=100 and 0<=long<=100 and 98<=long+short<=102:
                 findings.append((short,long))
+        # Public per-symbol summary is often a single paragraph:
+        # "63% ... going short with EUR/USD ... 37% ... going long with EUR/USD".
+        slash_pair=pair[:3]+"/"+pair[3:]
+        for para in soup.find_all("p"):
+            value=" ".join(para.stripped_strings).lower()
+            if slash_pair.lower() not in value:
+                continue
+            a=re.search(r"(\\d{1,3})\\s*%\\s+of\\s+(?:the\\s+)?(?:forex\\s+)?traders.{0,90}?\\bgoing\\s+short\\b",value)
+            b=re.search(r"(\\d{1,3})\\s*%\\s+of\\s+(?:the\\s+)?(?:forex\\s+)?traders.{0,90}?\\bgoing\\s+long\\b",value)
+            if a and b:
+                short,long=int(a.group(1)),int(b.group(1))
+                if 0<=short<=100 and 0<=long<=100 and 98<=short+long<=102:
+                    findings.append((short,long))
         if len(set(findings)) == 1 and findings:
             short,long=findings[0]
             out["pairs"][pair]={"short_pct":short,"long_pct":long,
