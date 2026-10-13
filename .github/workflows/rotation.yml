@@ -112,10 +112,20 @@ jobs:
               assert all(t in frames for t in ('15m','30m','1H','4H','1D')), f"Missing timeframe for {p['pair']}"
               assert '5m' not in frames, f"5m signal timeframe unexpectedly present for {p['pair']}"
           report=json.loads(Path('fx_scan_report.json').read_text())
-          expected=['report_header','current_currency_strength','top_five_published_ranking','critical_setups_omitted_from_top_five','fifteen_layer_macro_first_audit','full_15_layer_coverage_audit','final_forex_main_signal','layout_contract']
+          expected=['report_header','top_five_published_ranking','current_currency_strength','critical_setups_omitted_from_top_five','fifteen_layer_macro_first_audit','full_15_layer_coverage_audit','final_forex_main_signal','layout_contract']
           assert list(report)==expected, 'User-approved fixed 15-layer report order changed'
           assert report['layout_contract']['default_locked_until_user_explicitly_changes_it'] is True
           assert report['layout_contract']['do_not_simplify_to_six_sections'] is True
+          assert report['layout_contract']['no_wrap_compact_rows'] is True
+          assert report['layout_contract']['top_five_before_strength'] is True
+          assert report['layout_contract']['display_direction_buy_green_short_red'] is True
+          assert len(report['current_currency_strength']['top_five_compact'])==5
+          assert all('&nbsp;' in r['compact_one_line'] for r in report['top_five_published_ranking']['rows'])
+          assert all('&nbsp;' in r['compact_one_line'] for r in report['current_currency_strength']['top_five_compact'])
+          assert all(r['compact_side']['color'] in ('green','red','neutral') for r in report['top_five_published_ranking']['rows'])
+          md=Path('fx_scan_report.md').read_text()
+          assert md.index('## 1. BEST 5 TRADING PAIRS') < md.index('## 2. CURRENCY STRENGTH')
+          assert md.index('## 2. CURRENCY STRENGTH') < md.index('## 1. REUTERS AND FXSTREET')
           assert len(report['fifteen_layer_macro_first_audit'])==15, '15 macro-first layers missing'
           assert [v['layer'] for v in report['fifteen_layer_macro_first_audit']]==list(range(1,16))
           assert len(report['full_15_layer_coverage_audit'])==15
