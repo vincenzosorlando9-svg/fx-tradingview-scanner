@@ -149,10 +149,10 @@ def detect_pair(pair,vol,at,offset,cluster,calendar=None):
     m15_down=just_closed and last15["c"]<low and last15["c"]<m15[-2]["c"]
     m15_up=just_closed and last15["c"]>high and last15["c"]>m15[-2]["c"]
     pressure_down=(m5current["c"]<m5prev["c"] and
-                   m5current["c"]<m15[-1]["c"] and
+                   m5current["c"]<(m15[-2]["c"] if just_closed else m15[-1]["c"]) and
                    m5current["c"] <=low+.25*(high-low))
     pressure_up=(m5current["c"]>m5prev["c"] and
-                 m5current["c"]>m15[-1]["c"] and
+                 m5current["c"]>(m15[-2]["c"] if just_closed else m15[-1]["c"]) and
                  m5current["c"]>=high-.25*(high-low))
     if m15_down or m5_down: direction="SELL"
     elif m15_up or m5_up: direction="BUY"
@@ -246,7 +246,7 @@ def run(vol,calendar=None,at=None,previous=None,strict_freshness=True):
                 first=at.isoformat();initial=row.get("latest_closed_m5")
         elif prev and not quiet and parse(prev.get("last_observed_at_utc")):
             age=(at-parse(prev["last_observed_at_utc"])).total_seconds()/60
-            if 0<=age<=30:
+            if 0<=age<=360:
                 episodes.append(dict(prev,current_condition="NO_NEW_TRIGGER_TRACKING_ONLY",
                                      execution_allowed=False))
             continue
@@ -289,6 +289,51 @@ def main():
         dash["early_rotation_status"]=result.get("status")
         dash["early_rotation_jpy_cluster"]=result.get("jpy_cluster")
         dash["early_rotation_top_five"]=result["top_five_early_priority"]
+
+        # Main Top Five must not bury a timely M5/15m turn behind the old
+        # higher-timeframe score. Retain the old Top Five for audit.
+        legacy_top=dash.get("top_five_technical_candidates",[])
+        dash["top_five_legacy_technical_only"]=legacy_top
+        merged={}
+        for old in dash.get("pairs",[]):
+            if old.get("source_valid") is not True or old.get("direction") not in ("BUY","SELL"):
+                continue
+            if old.get("entry_readiness")!="TECHNICAL_WATCH_ONLY":
+                continue
+            stage=old.get("stage")
+            stage_early={"EARLY":.85,"CONFIRMING":.7,"CONTINUATION":.55,"EXTENDED":.2}.get(stage,.3)
+            strength=min(1,max(0,float(old.get("direction_score") or 0)/11))
+            if old.get("trade_type")=="TREND_CONTINUATION": strength=min(1,strength+.12)
+            score=round(.5*stage_early+.5*strength,3)
+            merged[old["pair"]]={
+                "pair":old["pair"],"direction":old["direction"],"stage":stage,
+                "trade_type":old.get("trade_type"),"direction_score":old.get("direction_score"),
+                "entry_readiness":"TECHNICAL_WATCH_ONLY",
+                "rank_score":score,"source":"CLOSED_M15_30M_TREND_WATCH",
+                "execution_allowed":False,"conditional_level_reference_only":old.get("conditional_level_reference_only")}
+        for early in result.get("pairs",[]):
+            if not early.get("watch_only") or early.get("direction") not in ("BUY","SELL"):
+                continue
+            old=merged.get(early["pair"])
+            merged[early["pair"]]={
+                "pair":early["pair"],"direction":early["direction"],"stage":early["stage"],
+                "trade_type":"EARLY_ROTATION_OR_BREAKOUT_WATCH",
+                "direction_score":round(11*early["trend_strength_score_50pct"],1),
+                "entry_readiness":"EARLY_TECHNICAL_WATCH_ONLY",
+                "rank_score":early["research_rank_score"],
+                "source":"CLOSED_M5_15M_CLUSTER_WATCH",
+                "overrides_prior_technical_direction":old is not None and old["direction"]!=early["direction"],
+                "jpy_cluster_status":early.get("jpy_cluster_status"),
+                "event_within_120_min":early.get("event_within_120_min"),
+                "execution_allowed":False,
+                "conditional_level_reference_only":early["range_low"] if early["direction"]=="SELL" else early["range_high"]}
+        ranked_merged=sorted(merged.values(),key=lambda x:(-x["rank_score"],x["pair"]))
+        dash["top_five_technical_candidates"]=[
+            dict(x,rank=i+1) for i,x in enumerate(ranked_merged[:5])]
+        dash["top_five_note"]="50pct early opportunity + 50pct trend strength. New closed M5/15m cluster warnings supersede lagging trend labels when present. Macro, spreads and order risk UNVERIFIED; watches NEVER executable orders."
+        dash["all_11_ranked_directional_watches"]=ranked_merged
+        dash["main_board_rebuilt_from_early_utc"]=result["generated_at_utc"]
+
         dash["early_rotation_all_11"]=[
             {"pair":x["pair"],"direction":x.get("direction"),"stage":x.get("stage"),
              "research_rank_score":x.get("research_rank_score"),
