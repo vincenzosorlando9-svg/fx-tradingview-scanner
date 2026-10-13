@@ -93,7 +93,8 @@ jobs:
               assert p.get('entry') is None and p.get('stop') is None, 'Watch gained fictitious entry/stop'
           for p in d['pairs']:
               frames=p.get('timeframes',{})
-              assert all(t in frames for t in ('5m','15m','30m','1H','4H','1D')), f"Missing timeframe for {p['pair']}"
+              assert all(t in frames for t in ('15m','30m','1H','4H','1D')), f"Missing timeframe for {p['pair']}"
+              assert '5m' not in frames, f"5m signal timeframe unexpectedly present for {p['pair']}"
           print('Dashboard structure validated; fresh individual candles remain separately gated by source_valid')
           PY
 
