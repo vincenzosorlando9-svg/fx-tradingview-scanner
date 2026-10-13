@@ -7,6 +7,8 @@ Reuters + FXStreet headlines, and public Trading Economics global-risk reference
 Every observation has its own publisher freshness / effective date.
 """
 import concurrent.futures
+import csv
+import io
 import json
 import math
 import re
@@ -287,6 +289,48 @@ def parse_index(page, symbol):
         obj["value"] = None
     return obj
 
+
+def parse_cboe_vix(page):
+    """Cboe official historical VIX daily close, NOT live VIX nor option flows."""
+    obj={"source":"Cboe official VIX historical daily CSV","url":page["url"],
+         "retrieved_at_utc":page["retrieved_at_utc"],"status":page["http_status"],
+         "value":None,"previous_close":None,"daily_change_pct":None,
+         "market_date":None,"verified_intraday":False,"observation_type":"DAILY_CLOSE"}
+    if page["http_status"]!="OK":
+        return obj
+    observations=[]
+    try:
+        for row in csv.DictReader(io.StringIO(page["body"])):
+            fields={str(k).upper().strip():str(v or "").strip() for k,v in row.items()}
+            raw_date=fields.get("DATE")
+            close=numeric(fields.get("CLOSE"))
+            if not raw_date or close is None or not 1<=close<=150:
+                continue
+            day=None
+            for fmt in ("%m/%d/%Y","%Y-%m-%d"):
+                try:
+                    day=datetime.strptime(raw_date,fmt).date()
+                    break
+                except ValueError:
+                    continue
+            if day is None or day>utcnow().date():
+                continue
+            observations.append((day,close))
+    except (csv.Error,TypeError):
+        observations=[]
+    if not observations:
+        obj["status"]="UNAVAILABLE_NO_VALID_DAILY_CSV"
+        return obj
+    observations=sorted(set(observations))
+    last=observations[-1]
+    obj["market_date"]=last[0].isoformat()
+    obj["value"]=last[1]
+    if len(observations)>=2:
+        prior=observations[-2][1]
+        obj["previous_close"]=prior
+        obj["daily_change_pct"]=round(100*(last[1]-prior)/prior,3)
+    obj["status"]=reference_status(obj["market_date"])
+    return obj
 
 def parse_te_noncrude(page):
     """Dated Trading Economics commodity TABLE fallback, never OilPrice crude."""
@@ -583,7 +627,8 @@ def collect():
         if c in ("USD", "EUR", "GBP", "JPY", "CAD", "AUD", "NZD"):
             tasks["policy:" + c] = BASE_TE + ("euro-area" if c == "EUR" else slug) + "/interest-rate"
     tasks.update({"risk:" + k: BASE_TE + v for k, v in RISK_PAGES.items()})
-    tasks.update({"te_noncrude": BASE_TE+"commodities",
+    tasks.update({"vix_cboe":"https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv",
+                  "te_noncrude": BASE_TE+"commodities",
                   "forexcracked": FOREXCRACKED, "oilprice": OILPRICE,
                   "feargreed": FEAR_GREED})
     tasks.update({"news:" + k: v for k, v in NEWS_URLS.items()})
@@ -601,6 +646,7 @@ def collect():
            "scope": "PUBLIC_KEYLESS_MARKET_REFERENCES_NOT_BROKER_LIVE",
            "configured_countries": list(COUNTRIES), "covered_fx_pairs": list(PAIRS),
            "bonds": bonds, "policy_rates": policies, "indices": risk,
+           "vix_cboe_official_daily": parse_cboe_vix(pages["vix_cboe"]),
            "noncrude_te_secondary": parse_te_noncrude(pages["te_noncrude"]),
            "forexcracked": parse_forexcracked(pages["forexcracked"]),
            "oilprice": parse_oilprice(pages["oilprice"]),
