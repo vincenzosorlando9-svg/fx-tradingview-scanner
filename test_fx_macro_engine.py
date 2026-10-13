@@ -3,7 +3,7 @@ import unittest
 from datetime import datetime, timedelta, timezone
 
 from fx_macro_collector import (parse_bonds, parse_policy, parse_index, parse_feargreed, parse_forexcracked, news_currency_tags,
-                                parse_oilprice, parse_news, parse_te_noncrude, extract_bond_table)
+                                parse_oilprice, parse_news, parse_te_noncrude, parse_cboe_vix, extract_bond_table)
 from fx_macro_engine import (normalize, derived_deltas, rate_spreads,
                              build_pairs, news_context, observation_recent, metric)
 from fx_ff_actuals_collector import parse as parse_actuals
@@ -92,6 +92,24 @@ class PublicCollectorTests(unittest.TestCase):
 
     def test_canadian_dollar_news_does_not_automatically_tag_USD(self):
         self.assertEqual(news_currency_tags("Canadian dollar rises after Bank of Canada remarks"),["CAD"])
+
+    def test_official_cboe_vix_is_dated_close_not_live(self):
+        now=datetime.now(UTC)
+        older=(now-timedelta(days=1)).strftime("%m/%d/%Y")
+        today=now.strftime("%m/%d/%Y")
+        body=f"""DATE,OPEN,HIGH,LOW,CLOSE
+{older},18.0,19.0,17.5,18.0
+{today},20.0,21.0,19.1,20.0
+"""
+        page=webpage(body,"https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv")
+        obj=parse_cboe_vix(page)
+        self.assertEqual(obj["status"],"DATED_REFERENCE")
+        self.assertEqual(obj["value"],20.0)
+        self.assertAlmostEqual(obj["daily_change_pct"],11.111,places=3)
+        self.assertFalse(obj["verified_intraday"])
+        norm=normalize({"vix_cboe_official_daily":obj})
+        self.assertEqual(norm["INDEX:VIX_CBOE"]["v"],20.0)
+        self.assertEqual(norm["INDEX:VIX_CBOE"]["observation_type"],"CBOE_OFFICIAL_HISTORICAL_DAILY_CLOSE")
 
     def test_secondary_commodities_never_substitute_crude_provider(self):
         today=datetime.now(UTC).strftime("%b/%d")
