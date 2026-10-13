@@ -2,38 +2,6 @@ name: FX Early Rotation Detector
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - 'scanner.py'
-      - 'rotation_detector.py'
-      - 'fx_dashboard.py'
-      - 'fx_signal_history.py'
-      - 'fx_early_rotation.py'
-      - 'fx_asian_risk_collector.py'
-      - 'test_fx_asian_risk.py'
-      - 'test_fx_early_rotation.py'
-      - 'test_fx_reversal_early.py'
-      - 'test_fx_mobile_alerts.py'
-      - 'test_fx_counter_rotation.py'
-      - 'fx_mobile_alerts.py'
-      - 'fx_reversal_replay_oct12.json'
-      - 'fx_daily_weekly_levels.py'
-      - 'fx_signal_fusion_refresh.py'
-      - 'fx_news_priority.py'
-      - 'test_fx_news_priority.py'
-      - 'fx_calendar_priority.py'
-      - 'test_fx_calendar_priority.py'
-      - 'fx_approved_public_sources.py'
-      - 'test_fx_approved_public_sources.py'
-      - 'fx_exact_candle_gate.py'
-      - 'fx_github_slot.py'
-      - 'test_fx_exact_candle_gate.py'
-      - 'fx_scan_report.py'
-      - 'test_fx_scan_report.py'
-      - 'forextoolkits_collector.py'
-      - 'requirements.txt'
-      - '.github/workflows/rotation.yml'
   schedule:
     - cron: '2,17,32,47 * * * *'
 
