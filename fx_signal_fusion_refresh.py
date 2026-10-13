@@ -120,6 +120,7 @@ def refresh(now=None):
         raise RuntimeError("NOT_ALL_11_TECHNICAL_PAIRS_PRESENT")
     snap=read("fx_macro_snapshot.json")
     news=read("fx_macro_news.json")
+    breaking=read("fx_news_priority.json")
     raw=read("fx_macro_raw.json")
     range_data=read("fx_range_context.json")
     cal=read("fx_economic_calendar.json")
@@ -145,6 +146,24 @@ def refresh(now=None):
                      retail=retail)
     enrich_source_context(rows, now, dash, early, ff_market, levels, history,
                           raw if raw_ok else {})
+    # Breaking news is a timestamped policy-event REVIEW QUEUE, never a
+    # trade signal, 50/50 technical rank input or assumed market reaction.
+    fast_news_ok=fresh(breaking,"generated_at_utc",20,now)
+    for row in rows:
+        p=((breaking.get("pairs") or {}).get(row["pair"]) or {}) if fast_news_ok else {}
+        row["breaking_policy_news"]={
+            "status":p.get("status","UNAVAILABLE_FRESH_APPROVED_NEWS"),
+            "as_of_utc":breaking.get("generated_at_utc") if fast_news_ok else None,
+            "recent_policy_headlines":p.get("policy_headlines") or [],
+            "recent_related_headlines":p.get("news_headlines") or [],
+            "source_coverage_incomplete":(
+                p.get("source_coverage_incomplete",True) if fast_news_ok else True),
+            "source_statuses":breaking.get("source_statuses") if fast_news_ok else {},
+            "requires_price_reaction_check":bool(p.get("policy_headlines")),
+            "directional_vote":"NONE",
+            "source_is_not_confirmation":True,
+            "technical_rank_unchanged":True,
+        }
     for row in rows:
         ctx=(range_data.get("pairs") or {}).get(row["pair"]) if range_ok else None
         row["range_context"]=ctx or {"status":"UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"}
@@ -167,6 +186,8 @@ def refresh(now=None):
          "no_mobile_alerts":True,"real_broker_spread_verified":False,
          "macro_snapshot_used":macro_ok,
          "context_contract": "MARKET_REFERENCES_AND_MISSING_DATA_NON_EXECUTABLE",
+         "breaking_news_source_generated_at_utc":breaking.get("generated_at_utc") if fast_news_ok else None,
+         "breaking_news_source_status":"FRESH" if fast_news_ok else "STALE_OR_UNAVAILABLE",
          "source_freshness_minutes":{
              "macro_snapshot":round(age_min(snap.get("generated_at_utc"),now),1)
                               if snap.get("generated_at_utc") else None,
