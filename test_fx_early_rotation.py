@@ -31,6 +31,17 @@ class EarlyMoveTests(unittest.TestCase):
         self.assertFalse(a["execution_allowed"])
         self.assertGreaterEqual(out["jpy_cluster"]["jpy_strength_crosses"],3)
 
+    def test_four_jpy_crosses_rotate_before_hourly_confirmation(self):
+        early=run(FIXTURE,at=at("2026-10-12T23:06:00Z"),strict_freshness=False)
+        self.assertEqual(early["jpy_cluster"]["status"],"BROAD_JPY_STRENGTH")
+        self.assertEqual(early["jpy_cluster"]["jpy_strength_crosses"],4)
+        confirming=run(FIXTURE,at=at("2026-10-12T23:16:00Z"),strict_freshness=False)
+        self.assertEqual(confirming["jpy_cluster"]["jpy_strength_crosses"],4)
+        for pair in ("AUDJPY","EURJPY","NZDJPY","USDJPY"):
+            self.assertEqual(row(confirming,pair)["direction"],"SELL")
+        top={x["pair"] for x in confirming["top_five_early_priority"]}
+        self.assertTrue({"AUDJPY","NZDJPY"}.issubset(top))
+
     def test_future_candles_cannot_change_early_decision(self):
         cutoff=at("2026-10-12T23:06:00Z")
         before=run(FIXTURE,at=cutoff,strict_freshness=False)
