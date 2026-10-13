@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '2,17,32,47 * * * *'
+    - cron: '5,20,35,50 * * * *'
 
 permissions:
   contents: write
@@ -16,6 +17,8 @@ jobs:
   detect:
     runs-on: ubuntu-latest
     timeout-minutes: 12
+    env:
+      FX_SCAN_CRON: ${{ github.event.schedule }}
     steps:
       - name: Checkout latest repository
         uses: actions/checkout@v4
@@ -201,5 +204,8 @@ jobs:
           status=h['last_slot']['status']
           print('SCHEDULED_FX_SLOT_FINAL_STATUS:',status)
           if status not in ('FULL_REPORT_EXACT_CANDLES_VERIFIED','MARKET_CLOSED'):
+              if h['last_slot'].get('status') == 'SKIP_ALREADY_VERIFIED':
+                  print('Verified primary publication retained; no duplicate signals')
+                  sys.exit(0)
               sys.exit('MISSED_OR_INCOMPLETE_SCHEDULED_FX_SLOT')
           PY
