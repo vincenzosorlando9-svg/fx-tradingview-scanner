@@ -270,7 +270,14 @@ class SourceContextIntegrationTests(unittest.TestCase):
         levels={"generated_at_utc":NOW.isoformat(),"pairs":{"AUDUSD":{"status":"COMPLETE",
                "daily_open":0.7}}}
         dash={"daily_weekly_levels_generated_at_utc":NOW.isoformat(),
-              "currency_strength_breadth":{"AUD":2,"USD":-6}}
+              "currency_strength_breadth":{"AUD":2,"USD":-6},
+              "pairs":[{"pair":"AUDUSD","timeframes":{
+                   "15m":{"last_closed_utc":NOW.isoformat()},
+                   "30m":{"last_closed_utc":NOW.isoformat()},
+                   "1H":{"last_closed_utc":NOW.isoformat()},
+                   "4H":{"last_closed_utc":NOW.isoformat()},
+                   "1D":{"last_closed_utc":NOW.isoformat()},
+                   "5m":{"must_never_publish":True}}}]}
         early={"jpy_cluster":{"status":"BROAD_JPY_STRENGTH","pairs":{}}}
         raw={"collected_at_utc":NOW.isoformat(),
              "ois":{"status":"UNAVAILABLE_NO_VERIFIED_PUBLIC_OIS"},
@@ -285,6 +292,9 @@ class SourceContextIntegrationTests(unittest.TestCase):
         self.assertFalse(output[0]["forexfactory_market_context"]["broker_executable"])
         self.assertEqual(output[0]["daily_weekly_price_levels"]["status"],"COMPLETE")
         self.assertEqual(output[0]["currency_strength_cluster_context"]["base_breadth"],2)
+        self.assertEqual(set(output[0]["closed_candle_timeframe_context"]),
+                         {"15m","30m","1H","4H","1D"})
+        self.assertNotIn("5m",output[0]["closed_candle_timeframe_context"])
         self.assertEqual(output[0]["policy_rate_context"]["AUD"]["reference_rate_pct"],4.0)
         self.assertEqual(output[0]["ois_reference"]["status"],"UNAVAILABLE_NO_VERIFIED_PUBLIC_OIS")
         self.assertTrue(all(x["direction"]=="BUY" and not x["trade_execution_allowed"]
