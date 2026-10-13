@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-13T15:27:52.021824+00:00",
+  "generated_at_utc": "2026-10-13T15:47:08.184840+00:00",
   "target_refresh_minutes": 5,
   "actual_actions_schedule_not_guaranteed": true,
   "approved_source_names": [
@@ -22,19 +22,69 @@
   "recent_headlines": [
     {
       "provider": "FXStreet_RSS",
-      "title": "Australian Dollar edges higher amid softer US Dollar, hawkish RBA",
-      "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
-      "published_at_utc": "2026-10-13T13:36:54+00:00",
-      "first_seen_at_utc": "2026-10-13T14:25:45.497161+00:00",
-      "publisher_age_minutes": 111.0,
-      "source_latency_to_first_seen_minutes": 48.9,
+      "title": "British Pound finds fresh momentum as BoE hawks set stage for US CPI",
+      "url": "https://www.fxstreet.com/news/british-pound-finds-fresh-momentum-as-boe-hawks-set-stage-for-us-cpi-202610131539",
+      "published_at_utc": "2026-10-13T15:39:42+00:00",
+      "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
+      "publisher_age_minutes": 7.4,
+      "source_latency_to_first_seen_minutes": 7.4,
       "source_public_delay_minutes_at_least": null,
       "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
       "not_pro_feed_or_first_seen_in_real_time": false,
       "type": "CENTRAL_BANK_POLICY",
       "priority": "HIGH_POLICY_REACTION_CHECK",
       "currencies": [
-        "AUD",
+        "GBP"
+      ],
+      "affected_pairs": [
+        "GBPUSD",
+        "EURGBP"
+      ],
+      "headline_direction": "UNDETERMINED",
+      "market_reaction": "NOT_VERIFIED",
+      "broker_execution_allowed": false,
+      "price_reactions": {
+        "GBPUSD": {
+          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false,
+          "pre_event_close_utc": "2026-10-13T15:30:00+00:00",
+          "pre_event_price": 1.32468,
+          "first_post_event_close_utc": "2026-10-13T15:45:00+00:00",
+          "first_post_event_price": 1.32451,
+          "first_post_event_change_pips": -1.7
+        },
+        "EURGBP": {
+          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false,
+          "pre_event_close_utc": "2026-10-13T15:30:00+00:00",
+          "pre_event_price": 0.84493,
+          "first_post_event_close_utc": "2026-10-13T15:45:00+00:00",
+          "first_post_event_price": 0.84482,
+          "first_post_event_change_pips": -1.1
+        }
+      },
+      "all_price_reactions_are_noncausal_observations": true
+    },
+    {
+      "provider": "FXStreet_RSS",
+      "title": "Neither a breakout nor a reversal: What OCBC, Commerzbank and ING expect from the US Dollar",
+      "url": "https://www.fxstreet.com/news/neither-a-breakout-nor-a-reversal-what-ocbc-commerzbank-and-ing-expect-from-the-us-dollar-202610131532",
+      "published_at_utc": "2026-10-13T15:32:21+00:00",
+      "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
+      "publisher_age_minutes": 14.8,
+      "source_latency_to_first_seen_minutes": 14.8,
+      "source_public_delay_minutes_at_least": null,
+      "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+      "not_pro_feed_or_first_seen_in_real_time": false,
+      "type": "GENERAL",
+      "priority": "CONTEXT",
+      "currencies": [
         "USD"
       ],
       "affected_pairs": [
@@ -43,148 +93,11 @@
         "EURUSD",
         "GBPUSD",
         "USDJPY",
-        "AUDJPY",
         "USDCAD"
       ],
       "headline_direction": "UNDETERMINED",
       "market_reaction": "NOT_VERIFIED",
-      "broker_execution_allowed": false,
-      "price_reactions": {
-        "AUDUSD": {
-          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-          "no_intrabar_assumptions": true,
-          "causal_link_verified": false,
-          "first_seen_before_market_reaction": false,
-          "pre_event_close_utc": "2026-10-13T13:30:00+00:00",
-          "pre_event_price": 0.69798,
-          "first_post_event_close_utc": "2026-10-13T13:45:00+00:00",
-          "first_post_event_price": 0.69815,
-          "first_post_event_change_pips": 1.7,
-          "second_post_event_close_utc": "2026-10-13T14:00:00+00:00",
-          "second_post_event_price": 0.69757,
-          "second_post_event_change_pips": -5.8,
-          "net_two_bar_event_window_pips": -4.1,
-          "early_initial_direction": "UP",
-          "second_bar_direction": "DOWN",
-          "retrospective_if_first_seen_after_first_candle": true
-        },
-        "NZDUSD": {
-          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-          "no_intrabar_assumptions": true,
-          "causal_link_verified": false,
-          "first_seen_before_market_reaction": false,
-          "pre_event_close_utc": "2026-10-13T13:30:00+00:00",
-          "pre_event_price": 0.56142,
-          "first_post_event_close_utc": "2026-10-13T13:45:00+00:00",
-          "first_post_event_price": 0.56143,
-          "first_post_event_change_pips": 0.1,
-          "second_post_event_close_utc": "2026-10-13T14:00:00+00:00",
-          "second_post_event_price": 0.5609,
-          "second_post_event_change_pips": -5.3,
-          "net_two_bar_event_window_pips": -5.2,
-          "early_initial_direction": "UP",
-          "second_bar_direction": "DOWN",
-          "retrospective_if_first_seen_after_first_candle": true
-        },
-        "EURUSD": {
-          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-          "no_intrabar_assumptions": true,
-          "causal_link_verified": false,
-          "first_seen_before_market_reaction": false,
-          "pre_event_close_utc": "2026-10-13T13:30:00+00:00",
-          "pre_event_price": 1.11987,
-          "first_post_event_close_utc": "2026-10-13T13:45:00+00:00",
-          "first_post_event_price": 1.1197,
-          "first_post_event_change_pips": -1.7,
-          "second_post_event_close_utc": "2026-10-13T14:00:00+00:00",
-          "second_post_event_price": 1.1187,
-          "second_post_event_change_pips": -10.0,
-          "net_two_bar_event_window_pips": -11.7,
-          "early_initial_direction": "DOWN",
-          "second_bar_direction": "DOWN",
-          "retrospective_if_first_seen_after_first_candle": true
-        },
-        "GBPUSD": {
-          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-          "no_intrabar_assumptions": true,
-          "causal_link_verified": false,
-          "first_seen_before_market_reaction": false,
-          "pre_event_close_utc": "2026-10-13T13:30:00+00:00",
-          "pre_event_price": 1.32503,
-          "first_post_event_close_utc": "2026-10-13T13:45:00+00:00",
-          "first_post_event_price": 1.32481,
-          "first_post_event_change_pips": -2.2,
-          "second_post_event_close_utc": "2026-10-13T14:00:00+00:00",
-          "second_post_event_price": 1.32415,
-          "second_post_event_change_pips": -6.6,
-          "net_two_bar_event_window_pips": -8.8,
-          "early_initial_direction": "DOWN",
-          "second_bar_direction": "DOWN",
-          "retrospective_if_first_seen_after_first_candle": true
-        },
-        "USDJPY": {
-          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-          "no_intrabar_assumptions": true,
-          "causal_link_verified": false,
-          "first_seen_before_market_reaction": false,
-          "pre_event_close_utc": "2026-10-13T13:30:00+00:00",
-          "pre_event_price": 158.284,
-          "first_post_event_close_utc": "2026-10-13T13:45:00+00:00",
-          "first_post_event_price": 158.354,
-          "first_post_event_change_pips": 7.0,
-          "second_post_event_close_utc": "2026-10-13T14:00:00+00:00",
-          "second_post_event_price": 158.39,
-          "second_post_event_change_pips": 3.6,
-          "net_two_bar_event_window_pips": 10.6,
-          "early_initial_direction": "UP",
-          "second_bar_direction": "UP",
-          "retrospective_if_first_seen_after_first_candle": true
-        },
-        "AUDJPY": {
-          "status": "FIRST_MOVE_REVERSED_ON_SECOND_M15",
-          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-          "no_intrabar_assumptions": true,
-          "causal_link_verified": false,
-          "first_seen_before_market_reaction": false,
-          "pre_event_close_utc": "2026-10-13T13:30:00+00:00",
-          "pre_event_price": 110.476,
-          "first_post_event_close_utc": "2026-10-13T13:45:00+00:00",
-          "first_post_event_price": 110.557,
-          "first_post_event_change_pips": 8.1,
-          "second_post_event_close_utc": "2026-10-13T14:00:00+00:00",
-          "second_post_event_price": 110.484,
-          "second_post_event_change_pips": -7.3,
-          "net_two_bar_event_window_pips": 0.8,
-          "early_initial_direction": "UP",
-          "second_bar_direction": "DOWN",
-          "retrospective_if_first_seen_after_first_candle": true
-        },
-        "USDCAD": {
-          "status": "FIRST_MOVE_REVERSED_ON_SECOND_M15",
-          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-          "no_intrabar_assumptions": true,
-          "causal_link_verified": false,
-          "first_seen_before_market_reaction": false,
-          "pre_event_close_utc": "2026-10-13T13:30:00+00:00",
-          "pre_event_price": 1.42304,
-          "first_post_event_close_utc": "2026-10-13T13:45:00+00:00",
-          "first_post_event_price": 1.4227,
-          "first_post_event_change_pips": -3.4,
-          "second_post_event_close_utc": "2026-10-13T14:00:00+00:00",
-          "second_post_event_price": 1.42316,
-          "second_post_event_change_pips": 4.6,
-          "net_two_bar_event_window_pips": 1.2,
-          "early_initial_direction": "DOWN",
-          "second_bar_direction": "UP",
-          "retrospective_if_first_seen_after_first_candle": true
-        }
-      },
-      "all_price_reactions_are_noncausal_observations": true
+      "broker_execution_allowed": false
     },
     {
       "provider": "Newsquawk_public_delayed",
@@ -192,7 +105,7 @@
       "url": "https://www.newsquawk.com/headlines/us-treasury-to-sell-usd-110bln-of-4-week-bills-and-usd-105bln-of-8-week-bills-on-october-15th-to-sell-usd-75bln-of-17-week-bills-on-october-14th-all-to-settle-ocotber-20th",
       "published_at_utc": "2026-10-13T15:21:00+00:00",
       "first_seen_at_utc": "2026-10-13T15:27:52.021824+00:00",
-      "publisher_age_minutes": 6.9,
+      "publisher_age_minutes": 26.1,
       "source_latency_to_first_seen_minutes": 6.9,
       "source_public_delay_minutes_at_least": 20,
       "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -216,11 +129,71 @@
     },
     {
       "provider": "FXStreet_RSS",
+      "title": "Euro finds support from softer US Dollar, French fiscal risks linger",
+      "url": "https://www.fxstreet.com/news/euro-finds-support-from-softer-us-dollar-french-fiscal-risks-linger-202610131509",
+      "published_at_utc": "2026-10-13T15:09:19+00:00",
+      "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
+      "publisher_age_minutes": 37.8,
+      "source_latency_to_first_seen_minutes": 37.8,
+      "source_public_delay_minutes_at_least": null,
+      "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+      "not_pro_feed_or_first_seen_in_real_time": false,
+      "type": "GENERAL",
+      "priority": "CONTEXT",
+      "currencies": [
+        "EUR",
+        "USD"
+      ],
+      "affected_pairs": [
+        "AUDUSD",
+        "NZDUSD",
+        "EURUSD",
+        "GBPUSD",
+        "USDJPY",
+        "EURJPY",
+        "EURCAD",
+        "USDCAD",
+        "EURGBP"
+      ],
+      "headline_direction": "UNDETERMINED",
+      "market_reaction": "NOT_VERIFIED",
+      "broker_execution_allowed": false
+    },
+    {
+      "provider": "FXStreet_RSS",
+      "title": "British Pound: Upside momentum builds against Euro – Societe Generale",
+      "url": "https://www.fxstreet.com/news/british-pound-upside-momentum-builds-against-euro-societe-generale-202610131459",
+      "published_at_utc": "2026-10-13T14:59:20+00:00",
+      "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
+      "publisher_age_minutes": 47.8,
+      "source_latency_to_first_seen_minutes": 47.8,
+      "source_public_delay_minutes_at_least": null,
+      "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+      "not_pro_feed_or_first_seen_in_real_time": false,
+      "type": "GENERAL",
+      "priority": "CONTEXT",
+      "currencies": [
+        "EUR",
+        "GBP"
+      ],
+      "affected_pairs": [
+        "EURUSD",
+        "GBPUSD",
+        "EURJPY",
+        "EURCAD",
+        "EURGBP"
+      ],
+      "headline_direction": "UNDETERMINED",
+      "market_reaction": "NOT_VERIFIED",
+      "broker_execution_allowed": false
+    },
+    {
+      "provider": "FXStreet_RSS",
       "title": "Canadian Dollar: Modest gains against US Dollar - Scotiabank",
       "url": "https://www.fxstreet.com/news/canadian-dollar-modest-gains-against-us-dollar-scotiabank-202610131423",
       "published_at_utc": "2026-10-13T14:23:57+00:00",
       "first_seen_at_utc": "2026-10-13T15:07:42.499248+00:00",
-      "publisher_age_minutes": 63.9,
+      "publisher_age_minutes": 83.2,
       "source_latency_to_first_seen_minutes": 43.8,
       "source_public_delay_minutes_at_least": null,
       "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -250,7 +223,7 @@
       "url": "https://www.fxstreet.com/news/australian-dollar-key-support-at-06935-in-focus-against-us-dollar-uob-202610131404",
       "published_at_utc": "2026-10-13T14:04:33+00:00",
       "first_seen_at_utc": "2026-10-13T15:07:42.499248+00:00",
-      "publisher_age_minutes": 83.3,
+      "publisher_age_minutes": 102.6,
       "source_latency_to_first_seen_minutes": 63.2,
       "source_public_delay_minutes_at_least": null,
       "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -273,106 +246,27 @@
       "headline_direction": "UNDETERMINED",
       "market_reaction": "NOT_VERIFIED",
       "broker_execution_allowed": false
-    },
-    {
-      "provider": "FXStreet_RSS",
-      "title": "Indian Rupee: RBI defense limits losses against US Dollar – Societe Generale",
-      "url": "https://www.fxstreet.com/news/indian-rupee-rbi-defense-limits-losses-against-us-dollar-societe-generale-202610131331",
-      "published_at_utc": "2026-10-13T13:31:02+00:00",
-      "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-      "publisher_age_minutes": 116.8,
-      "source_latency_to_first_seen_minutes": 49.1,
-      "source_public_delay_minutes_at_least": null,
-      "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-      "not_pro_feed_or_first_seen_in_real_time": false,
-      "type": "GENERAL",
-      "priority": "CONTEXT",
-      "currencies": [
-        "USD"
-      ],
-      "affected_pairs": [
-        "AUDUSD",
-        "NZDUSD",
-        "EURUSD",
-        "GBPUSD",
-        "USDJPY",
-        "USDCAD"
-      ],
-      "headline_direction": "UNDETERMINED",
-      "market_reaction": "NOT_VERIFIED",
-      "broker_execution_allowed": false
     }
   ],
   "pairs": {
     "AUDUSD": {
-      "status": "POLICY_REACTION_CHECK",
-      "policy_headlines": [
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Australian Dollar edges higher amid softer US Dollar, hawkish RBA",
-          "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
-          "published_at_utc": "2026-10-13T13:36:54+00:00",
-          "first_seen_at_utc": "2026-10-13T14:25:45.497161+00:00",
-          "publisher_age_minutes": 111.0,
-          "source_latency_to_first_seen_minutes": 48.9,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "AUD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T13:30:00+00:00",
-            "pre_event_price": 0.69798,
-            "first_post_event_close_utc": "2026-10-13T13:45:00+00:00",
-            "first_post_event_price": 0.69815,
-            "first_post_event_change_pips": 1.7,
-            "second_post_event_close_utc": "2026-10-13T14:00:00+00:00",
-            "second_post_event_price": 0.69757,
-            "second_post_event_change_pips": -5.8,
-            "net_two_bar_event_window_pips": -4.1,
-            "early_initial_direction": "UP",
-            "second_bar_direction": "DOWN",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
-        }
-      ],
+      "status": "HEADLINES_PRESENT",
+      "policy_headlines": [],
       "news_headlines": [
         {
           "provider": "FXStreet_RSS",
-          "title": "Australian Dollar edges higher amid softer US Dollar, hawkish RBA",
-          "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
-          "published_at_utc": "2026-10-13T13:36:54+00:00",
-          "first_seen_at_utc": "2026-10-13T14:25:45.497161+00:00",
-          "publisher_age_minutes": 111.0,
-          "source_latency_to_first_seen_minutes": 48.9,
+          "title": "Neither a breakout nor a reversal: What OCBC, Commerzbank and ING expect from the US Dollar",
+          "url": "https://www.fxstreet.com/news/neither-a-breakout-nor-a-reversal-what-ocbc-commerzbank-and-ing-expect-from-the-us-dollar-202610131532",
+          "published_at_utc": "2026-10-13T15:32:21+00:00",
+          "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
+          "publisher_age_minutes": 14.8,
+          "source_latency_to_first_seen_minutes": 14.8,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
           "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "type": "GENERAL",
+          "priority": "CONTEXT",
           "currencies": [
-            "AUD",
             "USD"
           ],
           "affected_pairs": [
@@ -381,31 +275,11 @@
             "EURUSD",
             "GBPUSD",
             "USDJPY",
-            "AUDJPY",
             "USDCAD"
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T13:30:00+00:00",
-            "pre_event_price": 0.69798,
-            "first_post_event_close_utc": "2026-10-13T13:45:00+00:00",
-            "first_post_event_price": 0.69815,
-            "first_post_event_change_pips": 1.7,
-            "second_post_event_close_utc": "2026-10-13T14:00:00+00:00",
-            "second_post_event_price": 0.69757,
-            "second_post_event_change_pips": -5.8,
-            "net_two_bar_event_window_pips": -4.1,
-            "early_initial_direction": "UP",
-            "second_bar_direction": "DOWN",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
+          "broker_execution_allowed": false
         },
         {
           "provider": "Newsquawk_public_delayed",
@@ -413,7 +287,7 @@
           "url": "https://www.newsquawk.com/headlines/us-treasury-to-sell-usd-110bln-of-4-week-bills-and-usd-105bln-of-8-week-bills-on-october-15th-to-sell-usd-75bln-of-17-week-bills-on-october-14th-all-to-settle-ocotber-20th",
           "published_at_utc": "2026-10-13T15:21:00+00:00",
           "first_seen_at_utc": "2026-10-13T15:27:52.021824+00:00",
-          "publisher_age_minutes": 6.9,
+          "publisher_age_minutes": 26.1,
           "source_latency_to_first_seen_minutes": 6.9,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -437,11 +311,43 @@
         },
         {
           "provider": "FXStreet_RSS",
+          "title": "Euro finds support from softer US Dollar, French fiscal risks linger",
+          "url": "https://www.fxstreet.com/news/euro-finds-support-from-softer-us-dollar-french-fiscal-risks-linger-202610131509",
+          "published_at_utc": "2026-10-13T15:09:19+00:00",
+          "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
+          "publisher_age_minutes": 37.8,
+          "source_latency_to_first_seen_minutes": 37.8,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "EUR",
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "EURJPY",
+            "EURCAD",
+            "USDCAD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "FXStreet_RSS",
           "title": "Canadian Dollar: Modest gains against US Dollar - Scotiabank",
           "url": "https://www.fxstreet.com/news/canadian-dollar-modest-gains-against-us-dollar-scotiabank-202610131423",
           "published_at_utc": "2026-10-13T14:23:57+00:00",
           "first_seen_at_utc": "2026-10-13T15:07:42.499248+00:00",
-          "publisher_age_minutes": 63.9,
+          "publisher_age_minutes": 83.2,
           "source_latency_to_first_seen_minutes": 43.8,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -471,7 +377,7 @@
           "url": "https://www.fxstreet.com/news/australian-dollar-key-support-at-06935-in-focus-against-us-dollar-uob-202610131404",
           "published_at_utc": "2026-10-13T14:04:33+00:00",
           "first_seen_at_utc": "2026-10-13T15:07:42.499248+00:00",
-          "publisher_age_minutes": 83.3,
+          "publisher_age_minutes": 102.6,
           "source_latency_to_first_seen_minutes": 63.2,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -489,34 +395,6 @@
             "GBPUSD",
             "USDJPY",
             "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Indian Rupee: RBI defense limits losses against US Dollar – Societe Generale",
-          "url": "https://www.fxstreet.com/news/indian-rupee-rbi-defense-limits-losses-against-us-dollar-societe-generale-202610131331",
-          "published_at_utc": "2026-10-13T13:31:02+00:00",
-          "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 116.8,
-          "source_latency_to_first_seen_minutes": 49.1,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
             "USDCAD"
           ],
           "headline_direction": "UNDETERMINED",
@@ -530,74 +408,23 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "NZDUSD": {
-      "status": "POLICY_REACTION_CHECK",
-      "policy_headlines": [
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Australian Dollar edges higher amid softer US Dollar, hawkish RBA",
-          "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
-          "published_at_utc": "2026-10-13T13:36:54+00:00",
-          "first_seen_at_utc": "2026-10-13T14:25:45.497161+00:00",
-          "publisher_age_minutes": 111.0,
-          "source_latency_to_first_seen_minutes": 48.9,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "AUD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T13:30:00+00:00",
-            "pre_event_price": 0.56142,
-            "first_post_event_close_utc": "2026-10-13T13:45:00+00:00",
-            "first_post_event_price": 0.56143,
-            "first_post_event_change_pips": 0.1,
-            "second_post_event_close_utc": "2026-10-13T14:00:00+00:00",
-            "second_post_event_price": 0.5609,
-            "second_post_event_change_pips": -5.3,
-            "net_two_bar_event_window_pips": -5.2,
-            "early_initial_direction": "UP",
-            "second_bar_direction": "DOWN",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
-        }
-      ],
+      "status": "HEADLINES_PRESENT",
+      "policy_headlines": [],
       "news_headlines": [
         {
           "provider": "FXStreet_RSS",
-          "title": "Australian Dollar edges higher amid softer US Dollar, hawkish RBA",
-          "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
-          "published_at_utc": "2026-10-13T13:36:54+00:00",
-          "first_seen_at_utc": "2026-10-13T14:25:45.497161+00:00",
-          "publisher_age_minutes": 111.0,
-          "source_latency_to_first_seen_minutes": 48.9,
+          "title": "Neither a breakout nor a reversal: What OCBC, Commerzbank and ING expect from the US Dollar",
+          "url": "https://www.fxstreet.com/news/neither-a-breakout-nor-a-reversal-what-ocbc-commerzbank-and-ing-expect-from-the-us-dollar-202610131532",
+          "published_at_utc": "2026-10-13T15:32:21+00:00",
+          "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
+          "publisher_age_minutes": 14.8,
+          "source_latency_to_first_seen_minutes": 14.8,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
           "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "type": "GENERAL",
+          "priority": "CONTEXT",
           "currencies": [
-            "AUD",
             "USD"
           ],
           "affected_pairs": [
@@ -606,31 +433,11 @@
             "EURUSD",
             "GBPUSD",
             "USDJPY",
-            "AUDJPY",
             "USDCAD"
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T13:30:00+00:00",
-            "pre_event_price": 0.56142,
-            "first_post_event_close_utc": "2026-10-13T13:45:00+00:00",
-            "first_post_event_price": 0.56143,
-            "first_post_event_change_pips": 0.1,
-            "second_post_event_close_utc": "2026-10-13T14:00:00+00:00",
-            "second_post_event_price": 0.5609,
-            "second_post_event_change_pips": -5.3,
-            "net_two_bar_event_window_pips": -5.2,
-            "early_initial_direction": "UP",
-            "second_bar_direction": "DOWN",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
+          "broker_execution_allowed": false
         },
         {
           "provider": "Newsquawk_public_delayed",
@@ -638,7 +445,7 @@
           "url": "https://www.newsquawk.com/headlines/us-treasury-to-sell-usd-110bln-of-4-week-bills-and-usd-105bln-of-8-week-bills-on-october-15th-to-sell-usd-75bln-of-17-week-bills-on-october-14th-all-to-settle-ocotber-20th",
           "published_at_utc": "2026-10-13T15:21:00+00:00",
           "first_seen_at_utc": "2026-10-13T15:27:52.021824+00:00",
-          "publisher_age_minutes": 6.9,
+          "publisher_age_minutes": 26.1,
           "source_latency_to_first_seen_minutes": 6.9,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -662,11 +469,43 @@
         },
         {
           "provider": "FXStreet_RSS",
+          "title": "Euro finds support from softer US Dollar, French fiscal risks linger",
+          "url": "https://www.fxstreet.com/news/euro-finds-support-from-softer-us-dollar-french-fiscal-risks-linger-202610131509",
+          "published_at_utc": "2026-10-13T15:09:19+00:00",
+          "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
+          "publisher_age_minutes": 37.8,
+          "source_latency_to_first_seen_minutes": 37.8,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "EUR",
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "EURJPY",
+            "EURCAD",
+            "USDCAD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "FXStreet_RSS",
           "title": "Canadian Dollar: Modest gains against US Dollar - Scotiabank",
           "url": "https://www.fxstreet.com/news/canadian-dollar-modest-gains-against-us-dollar-scotiabank-202610131423",
           "published_at_utc": "2026-10-13T14:23:57+00:00",
           "first_seen_at_utc": "2026-10-13T15:07:42.499248+00:00",
-          "publisher_age_minutes": 63.9,
+          "publisher_age_minutes": 83.2,
           "source_latency_to_first_seen_minutes": 43.8,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -696,7 +535,7 @@
           "url": "https://www.fxstreet.com/news/australian-dollar-key-support-at-06935-in-focus-against-us-dollar-uob-202610131404",
           "published_at_utc": "2026-10-13T14:04:33+00:00",
           "first_seen_at_utc": "2026-10-13T15:07:42.499248+00:00",
-          "publisher_age_minutes": 83.3,
+          "publisher_age_minutes": 102.6,
           "source_latency_to_first_seen_minutes": 63.2,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -714,34 +553,6 @@
             "GBPUSD",
             "USDJPY",
             "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Indian Rupee: RBI defense limits losses against US Dollar – Societe Generale",
-          "url": "https://www.fxstreet.com/news/indian-rupee-rbi-defense-limits-losses-against-us-dollar-societe-generale-202610131331",
-          "published_at_utc": "2026-10-13T13:31:02+00:00",
-          "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 116.8,
-          "source_latency_to_first_seen_minutes": 49.1,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
             "USDCAD"
           ],
           "headline_direction": "UNDETERMINED",
@@ -755,74 +566,23 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "EURUSD": {
-      "status": "POLICY_REACTION_CHECK",
-      "policy_headlines": [
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Australian Dollar edges higher amid softer US Dollar, hawkish RBA",
-          "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
-          "published_at_utc": "2026-10-13T13:36:54+00:00",
-          "first_seen_at_utc": "2026-10-13T14:25:45.497161+00:00",
-          "publisher_age_minutes": 111.0,
-          "source_latency_to_first_seen_minutes": 48.9,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "AUD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T13:30:00+00:00",
-            "pre_event_price": 1.11987,
-            "first_post_event_close_utc": "2026-10-13T13:45:00+00:00",
-            "first_post_event_price": 1.1197,
-            "first_post_event_change_pips": -1.7,
-            "second_post_event_close_utc": "2026-10-13T14:00:00+00:00",
-            "second_post_event_price": 1.1187,
-            "second_post_event_change_pips": -10.0,
-            "net_two_bar_event_window_pips": -11.7,
-            "early_initial_direction": "DOWN",
-            "second_bar_direction": "DOWN",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
-        }
-      ],
+      "status": "HEADLINES_PRESENT",
+      "policy_headlines": [],
       "news_headlines": [
         {
           "provider": "FXStreet_RSS",
-          "title": "Australian Dollar edges higher amid softer US Dollar, hawkish RBA",
-          "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
-          "published_at_utc": "2026-10-13T13:36:54+00:00",
-          "first_seen_at_utc": "2026-10-13T14:25:45.497161+00:00",
-          "publisher_age_minutes": 111.0,
-          "source_latency_to_first_seen_minutes": 48.9,
+          "title": "Neither a breakout nor a reversal: What OCBC, Commerzbank and ING expect from the US Dollar",
+          "url": "https://www.fxstreet.com/news/neither-a-breakout-nor-a-reversal-what-ocbc-commerzbank-and-ing-expect-from-the-us-dollar-202610131532",
+          "published_at_utc": "2026-10-13T15:32:21+00:00",
+          "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
+          "publisher_age_minutes": 14.8,
+          "source_latency_to_first_seen_minutes": 14.8,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
           "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "type": "GENERAL",
+          "priority": "CONTEXT",
           "currencies": [
-            "AUD",
             "USD"
           ],
           "affected_pairs": [
@@ -831,31 +591,11 @@
             "EURUSD",
             "GBPUSD",
             "USDJPY",
-            "AUDJPY",
             "USDCAD"
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T13:30:00+00:00",
-            "pre_event_price": 1.11987,
-            "first_post_event_close_utc": "2026-10-13T13:45:00+00:00",
-            "first_post_event_price": 1.1197,
-            "first_post_event_change_pips": -1.7,
-            "second_post_event_close_utc": "2026-10-13T14:00:00+00:00",
-            "second_post_event_price": 1.1187,
-            "second_post_event_change_pips": -10.0,
-            "net_two_bar_event_window_pips": -11.7,
-            "early_initial_direction": "DOWN",
-            "second_bar_direction": "DOWN",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
+          "broker_execution_allowed": false
         },
         {
           "provider": "Newsquawk_public_delayed",
@@ -863,7 +603,7 @@
           "url": "https://www.newsquawk.com/headlines/us-treasury-to-sell-usd-110bln-of-4-week-bills-and-usd-105bln-of-8-week-bills-on-october-15th-to-sell-usd-75bln-of-17-week-bills-on-october-14th-all-to-settle-ocotber-20th",
           "published_at_utc": "2026-10-13T15:21:00+00:00",
           "first_seen_at_utc": "2026-10-13T15:27:52.021824+00:00",
-          "publisher_age_minutes": 6.9,
+          "publisher_age_minutes": 26.1,
           "source_latency_to_first_seen_minutes": 6.9,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -887,11 +627,71 @@
         },
         {
           "provider": "FXStreet_RSS",
+          "title": "Euro finds support from softer US Dollar, French fiscal risks linger",
+          "url": "https://www.fxstreet.com/news/euro-finds-support-from-softer-us-dollar-french-fiscal-risks-linger-202610131509",
+          "published_at_utc": "2026-10-13T15:09:19+00:00",
+          "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
+          "publisher_age_minutes": 37.8,
+          "source_latency_to_first_seen_minutes": 37.8,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "EUR",
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "EURJPY",
+            "EURCAD",
+            "USDCAD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "FXStreet_RSS",
+          "title": "British Pound: Upside momentum builds against Euro – Societe Generale",
+          "url": "https://www.fxstreet.com/news/british-pound-upside-momentum-builds-against-euro-societe-generale-202610131459",
+          "published_at_utc": "2026-10-13T14:59:20+00:00",
+          "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
+          "publisher_age_minutes": 47.8,
+          "source_latency_to_first_seen_minutes": 47.8,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "EUR",
+            "GBP"
+          ],
+          "affected_pairs": [
+            "EURUSD",
+            "GBPUSD",
+            "EURJPY",
+            "EURCAD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "FXStreet_RSS",
           "title": "Canadian Dollar: Modest gains against US Dollar - Scotiabank",
           "url": "https://www.fxstreet.com/news/canadian-dollar-modest-gains-against-us-dollar-scotiabank-202610131423",
           "published_at_utc": "2026-10-13T14:23:57+00:00",
           "first_seen_at_utc": "2026-10-13T15:07:42.499248+00:00",
-          "publisher_age_minutes": 63.9,
+          "publisher_age_minutes": 83.2,
           "source_latency_to_first_seen_minutes": 43.8,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -921,7 +721,7 @@
           "url": "https://www.fxstreet.com/news/australian-dollar-key-support-at-06935-in-focus-against-us-dollar-uob-202610131404",
           "published_at_utc": "2026-10-13T14:04:33+00:00",
           "first_seen_at_utc": "2026-10-13T15:07:42.499248+00:00",
-          "publisher_age_minutes": 83.3,
+          "publisher_age_minutes": 102.6,
           "source_latency_to_first_seen_minutes": 63.2,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -939,34 +739,6 @@
             "GBPUSD",
             "USDJPY",
             "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Indian Rupee: RBI defense limits losses against US Dollar – Societe Generale",
-          "url": "https://www.fxstreet.com/news/indian-rupee-rbi-defense-limits-losses-against-us-dollar-societe-generale-202610131331",
-          "published_at_utc": "2026-10-13T13:31:02+00:00",
-          "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 116.8,
-          "source_latency_to_first_seen_minutes": 49.1,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
             "USDCAD"
           ],
           "headline_direction": "UNDETERMINED",
@@ -984,70 +756,92 @@
       "policy_headlines": [
         {
           "provider": "FXStreet_RSS",
-          "title": "Australian Dollar edges higher amid softer US Dollar, hawkish RBA",
-          "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
-          "published_at_utc": "2026-10-13T13:36:54+00:00",
-          "first_seen_at_utc": "2026-10-13T14:25:45.497161+00:00",
-          "publisher_age_minutes": 111.0,
-          "source_latency_to_first_seen_minutes": 48.9,
+          "title": "British Pound finds fresh momentum as BoE hawks set stage for US CPI",
+          "url": "https://www.fxstreet.com/news/british-pound-finds-fresh-momentum-as-boe-hawks-set-stage-for-us-cpi-202610131539",
+          "published_at_utc": "2026-10-13T15:39:42+00:00",
+          "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
+          "publisher_age_minutes": 7.4,
+          "source_latency_to_first_seen_minutes": 7.4,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
           "not_pro_feed_or_first_seen_in_real_time": false,
           "type": "CENTRAL_BANK_POLICY",
           "priority": "HIGH_POLICY_REACTION_CHECK",
           "currencies": [
-            "AUD",
-            "USD"
+            "GBP"
           ],
           "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
             "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "USDCAD"
+            "EURGBP"
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
           "broker_execution_allowed": false,
           "price_reaction_observation": {
-            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
             "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T13:30:00+00:00",
-            "pre_event_price": 1.32503,
-            "first_post_event_close_utc": "2026-10-13T13:45:00+00:00",
-            "first_post_event_price": 1.32481,
-            "first_post_event_change_pips": -2.2,
-            "second_post_event_close_utc": "2026-10-13T14:00:00+00:00",
-            "second_post_event_price": 1.32415,
-            "second_post_event_change_pips": -6.6,
-            "net_two_bar_event_window_pips": -8.8,
-            "early_initial_direction": "DOWN",
-            "second_bar_direction": "DOWN",
-            "retrospective_if_first_seen_after_first_candle": true
+            "pre_event_close_utc": "2026-10-13T15:30:00+00:00",
+            "pre_event_price": 1.32468,
+            "first_post_event_close_utc": "2026-10-13T15:45:00+00:00",
+            "first_post_event_price": 1.32451,
+            "first_post_event_change_pips": -1.7
           }
         }
       ],
       "news_headlines": [
         {
           "provider": "FXStreet_RSS",
-          "title": "Australian Dollar edges higher amid softer US Dollar, hawkish RBA",
-          "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
-          "published_at_utc": "2026-10-13T13:36:54+00:00",
-          "first_seen_at_utc": "2026-10-13T14:25:45.497161+00:00",
-          "publisher_age_minutes": 111.0,
-          "source_latency_to_first_seen_minutes": 48.9,
+          "title": "British Pound finds fresh momentum as BoE hawks set stage for US CPI",
+          "url": "https://www.fxstreet.com/news/british-pound-finds-fresh-momentum-as-boe-hawks-set-stage-for-us-cpi-202610131539",
+          "published_at_utc": "2026-10-13T15:39:42+00:00",
+          "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
+          "publisher_age_minutes": 7.4,
+          "source_latency_to_first_seen_minutes": 7.4,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
           "not_pro_feed_or_first_seen_in_real_time": false,
           "type": "CENTRAL_BANK_POLICY",
           "priority": "HIGH_POLICY_REACTION_CHECK",
           "currencies": [
-            "AUD",
+            "GBP"
+          ],
+          "affected_pairs": [
+            "GBPUSD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-13T15:30:00+00:00",
+            "pre_event_price": 1.32468,
+            "first_post_event_close_utc": "2026-10-13T15:45:00+00:00",
+            "first_post_event_price": 1.32451,
+            "first_post_event_change_pips": -1.7
+          }
+        },
+        {
+          "provider": "FXStreet_RSS",
+          "title": "Neither a breakout nor a reversal: What OCBC, Commerzbank and ING expect from the US Dollar",
+          "url": "https://www.fxstreet.com/news/neither-a-breakout-nor-a-reversal-what-ocbc-commerzbank-and-ing-expect-from-the-us-dollar-202610131532",
+          "published_at_utc": "2026-10-13T15:32:21+00:00",
+          "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
+          "publisher_age_minutes": 14.8,
+          "source_latency_to_first_seen_minutes": 14.8,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
             "USD"
           ],
           "affected_pairs": [
@@ -1056,31 +850,11 @@
             "EURUSD",
             "GBPUSD",
             "USDJPY",
-            "AUDJPY",
             "USDCAD"
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T13:30:00+00:00",
-            "pre_event_price": 1.32503,
-            "first_post_event_close_utc": "2026-10-13T13:45:00+00:00",
-            "first_post_event_price": 1.32481,
-            "first_post_event_change_pips": -2.2,
-            "second_post_event_close_utc": "2026-10-13T14:00:00+00:00",
-            "second_post_event_price": 1.32415,
-            "second_post_event_change_pips": -6.6,
-            "net_two_bar_event_window_pips": -8.8,
-            "early_initial_direction": "DOWN",
-            "second_bar_direction": "DOWN",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
+          "broker_execution_allowed": false
         },
         {
           "provider": "Newsquawk_public_delayed",
@@ -1088,7 +862,7 @@
           "url": "https://www.newsquawk.com/headlines/us-treasury-to-sell-usd-110bln-of-4-week-bills-and-usd-105bln-of-8-week-bills-on-october-15th-to-sell-usd-75bln-of-17-week-bills-on-october-14th-all-to-settle-ocotber-20th",
           "published_at_utc": "2026-10-13T15:21:00+00:00",
           "first_seen_at_utc": "2026-10-13T15:27:52.021824+00:00",
-          "publisher_age_minutes": 6.9,
+          "publisher_age_minutes": 26.1,
           "source_latency_to_first_seen_minutes": 6.9,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -1112,11 +886,71 @@
         },
         {
           "provider": "FXStreet_RSS",
+          "title": "Euro finds support from softer US Dollar, French fiscal risks linger",
+          "url": "https://www.fxstreet.com/news/euro-finds-support-from-softer-us-dollar-french-fiscal-risks-linger-202610131509",
+          "published_at_utc": "2026-10-13T15:09:19+00:00",
+          "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
+          "publisher_age_minutes": 37.8,
+          "source_latency_to_first_seen_minutes": 37.8,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "EUR",
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "EURJPY",
+            "EURCAD",
+            "USDCAD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "FXStreet_RSS",
+          "title": "British Pound: Upside momentum builds against Euro – Societe Generale",
+          "url": "https://www.fxstreet.com/news/british-pound-upside-momentum-builds-against-euro-societe-generale-202610131459",
+          "published_at_utc": "2026-10-13T14:59:20+00:00",
+          "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
+          "publisher_age_minutes": 47.8,
+          "source_latency_to_first_seen_minutes": 47.8,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "EUR",
+            "GBP"
+          ],
+          "affected_pairs": [
+            "EURUSD",
+            "GBPUSD",
+            "EURJPY",
+            "EURCAD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "FXStreet_RSS",
           "title": "Canadian Dollar: Modest gains against US Dollar - Scotiabank",
           "url": "https://www.fxstreet.com/news/canadian-dollar-modest-gains-against-us-dollar-scotiabank-202610131423",
           "published_at_utc": "2026-10-13T14:23:57+00:00",
           "first_seen_at_utc": "2026-10-13T15:07:42.499248+00:00",
-          "publisher_age_minutes": 63.9,
+          "publisher_age_minutes": 83.2,
           "source_latency_to_first_seen_minutes": 43.8,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -1146,7 +980,7 @@
           "url": "https://www.fxstreet.com/news/australian-dollar-key-support-at-06935-in-focus-against-us-dollar-uob-202610131404",
           "published_at_utc": "2026-10-13T14:04:33+00:00",
           "first_seen_at_utc": "2026-10-13T15:07:42.499248+00:00",
-          "publisher_age_minutes": 83.3,
+          "publisher_age_minutes": 102.6,
           "source_latency_to_first_seen_minutes": 63.2,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -1164,34 +998,6 @@
             "GBPUSD",
             "USDJPY",
             "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Indian Rupee: RBI defense limits losses against US Dollar – Societe Generale",
-          "url": "https://www.fxstreet.com/news/indian-rupee-rbi-defense-limits-losses-against-us-dollar-societe-generale-202610131331",
-          "published_at_utc": "2026-10-13T13:31:02+00:00",
-          "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 116.8,
-          "source_latency_to_first_seen_minutes": 49.1,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
             "USDCAD"
           ],
           "headline_direction": "UNDETERMINED",
@@ -1205,74 +1011,23 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "USDJPY": {
-      "status": "POLICY_REACTION_CHECK",
-      "policy_headlines": [
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Australian Dollar edges higher amid softer US Dollar, hawkish RBA",
-          "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
-          "published_at_utc": "2026-10-13T13:36:54+00:00",
-          "first_seen_at_utc": "2026-10-13T14:25:45.497161+00:00",
-          "publisher_age_minutes": 111.0,
-          "source_latency_to_first_seen_minutes": 48.9,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "AUD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T13:30:00+00:00",
-            "pre_event_price": 158.284,
-            "first_post_event_close_utc": "2026-10-13T13:45:00+00:00",
-            "first_post_event_price": 158.354,
-            "first_post_event_change_pips": 7.0,
-            "second_post_event_close_utc": "2026-10-13T14:00:00+00:00",
-            "second_post_event_price": 158.39,
-            "second_post_event_change_pips": 3.6,
-            "net_two_bar_event_window_pips": 10.6,
-            "early_initial_direction": "UP",
-            "second_bar_direction": "UP",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
-        }
-      ],
+      "status": "HEADLINES_PRESENT",
+      "policy_headlines": [],
       "news_headlines": [
         {
           "provider": "FXStreet_RSS",
-          "title": "Australian Dollar edges higher amid softer US Dollar, hawkish RBA",
-          "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
-          "published_at_utc": "2026-10-13T13:36:54+00:00",
-          "first_seen_at_utc": "2026-10-13T14:25:45.497161+00:00",
-          "publisher_age_minutes": 111.0,
-          "source_latency_to_first_seen_minutes": 48.9,
+          "title": "Neither a breakout nor a reversal: What OCBC, Commerzbank and ING expect from the US Dollar",
+          "url": "https://www.fxstreet.com/news/neither-a-breakout-nor-a-reversal-what-ocbc-commerzbank-and-ing-expect-from-the-us-dollar-202610131532",
+          "published_at_utc": "2026-10-13T15:32:21+00:00",
+          "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
+          "publisher_age_minutes": 14.8,
+          "source_latency_to_first_seen_minutes": 14.8,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
           "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "type": "GENERAL",
+          "priority": "CONTEXT",
           "currencies": [
-            "AUD",
             "USD"
           ],
           "affected_pairs": [
@@ -1281,31 +1036,11 @@
             "EURUSD",
             "GBPUSD",
             "USDJPY",
-            "AUDJPY",
             "USDCAD"
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T13:30:00+00:00",
-            "pre_event_price": 158.284,
-            "first_post_event_close_utc": "2026-10-13T13:45:00+00:00",
-            "first_post_event_price": 158.354,
-            "first_post_event_change_pips": 7.0,
-            "second_post_event_close_utc": "2026-10-13T14:00:00+00:00",
-            "second_post_event_price": 158.39,
-            "second_post_event_change_pips": 3.6,
-            "net_two_bar_event_window_pips": 10.6,
-            "early_initial_direction": "UP",
-            "second_bar_direction": "UP",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
+          "broker_execution_allowed": false
         },
         {
           "provider": "Newsquawk_public_delayed",
@@ -1313,7 +1048,7 @@
           "url": "https://www.newsquawk.com/headlines/us-treasury-to-sell-usd-110bln-of-4-week-bills-and-usd-105bln-of-8-week-bills-on-october-15th-to-sell-usd-75bln-of-17-week-bills-on-october-14th-all-to-settle-ocotber-20th",
           "published_at_utc": "2026-10-13T15:21:00+00:00",
           "first_seen_at_utc": "2026-10-13T15:27:52.021824+00:00",
-          "publisher_age_minutes": 6.9,
+          "publisher_age_minutes": 26.1,
           "source_latency_to_first_seen_minutes": 6.9,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -1337,11 +1072,43 @@
         },
         {
           "provider": "FXStreet_RSS",
+          "title": "Euro finds support from softer US Dollar, French fiscal risks linger",
+          "url": "https://www.fxstreet.com/news/euro-finds-support-from-softer-us-dollar-french-fiscal-risks-linger-202610131509",
+          "published_at_utc": "2026-10-13T15:09:19+00:00",
+          "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
+          "publisher_age_minutes": 37.8,
+          "source_latency_to_first_seen_minutes": 37.8,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "EUR",
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "EURJPY",
+            "EURCAD",
+            "USDCAD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "FXStreet_RSS",
           "title": "Canadian Dollar: Modest gains against US Dollar - Scotiabank",
           "url": "https://www.fxstreet.com/news/canadian-dollar-modest-gains-against-us-dollar-scotiabank-202610131423",
           "published_at_utc": "2026-10-13T14:23:57+00:00",
           "first_seen_at_utc": "2026-10-13T15:07:42.499248+00:00",
-          "publisher_age_minutes": 63.9,
+          "publisher_age_minutes": 83.2,
           "source_latency_to_first_seen_minutes": 43.8,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -1371,7 +1138,7 @@
           "url": "https://www.fxstreet.com/news/australian-dollar-key-support-at-06935-in-focus-against-us-dollar-uob-202610131404",
           "published_at_utc": "2026-10-13T14:04:33+00:00",
           "first_seen_at_utc": "2026-10-13T15:07:42.499248+00:00",
-          "publisher_age_minutes": 83.3,
+          "publisher_age_minutes": 102.6,
           "source_latency_to_first_seen_minutes": 63.2,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -1394,34 +1161,6 @@
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
           "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Indian Rupee: RBI defense limits losses against US Dollar – Societe Generale",
-          "url": "https://www.fxstreet.com/news/indian-rupee-rbi-defense-limits-losses-against-us-dollar-societe-generale-202610131331",
-          "published_at_utc": "2026-10-13T13:31:02+00:00",
-          "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 116.8,
-          "source_latency_to_first_seen_minutes": 49.1,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
         }
       ],
       "source_coverage_incomplete": true,
@@ -1430,115 +1169,16 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "AUDJPY": {
-      "status": "POLICY_REACTION_CHECK",
-      "policy_headlines": [
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Australian Dollar edges higher amid softer US Dollar, hawkish RBA",
-          "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
-          "published_at_utc": "2026-10-13T13:36:54+00:00",
-          "first_seen_at_utc": "2026-10-13T14:25:45.497161+00:00",
-          "publisher_age_minutes": 111.0,
-          "source_latency_to_first_seen_minutes": 48.9,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "AUD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "FIRST_MOVE_REVERSED_ON_SECOND_M15",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T13:30:00+00:00",
-            "pre_event_price": 110.476,
-            "first_post_event_close_utc": "2026-10-13T13:45:00+00:00",
-            "first_post_event_price": 110.557,
-            "first_post_event_change_pips": 8.1,
-            "second_post_event_close_utc": "2026-10-13T14:00:00+00:00",
-            "second_post_event_price": 110.484,
-            "second_post_event_change_pips": -7.3,
-            "net_two_bar_event_window_pips": 0.8,
-            "early_initial_direction": "UP",
-            "second_bar_direction": "DOWN",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
-        }
-      ],
+      "status": "HEADLINES_PRESENT",
+      "policy_headlines": [],
       "news_headlines": [
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Australian Dollar edges higher amid softer US Dollar, hawkish RBA",
-          "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
-          "published_at_utc": "2026-10-13T13:36:54+00:00",
-          "first_seen_at_utc": "2026-10-13T14:25:45.497161+00:00",
-          "publisher_age_minutes": 111.0,
-          "source_latency_to_first_seen_minutes": 48.9,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "AUD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "FIRST_MOVE_REVERSED_ON_SECOND_M15",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T13:30:00+00:00",
-            "pre_event_price": 110.476,
-            "first_post_event_close_utc": "2026-10-13T13:45:00+00:00",
-            "first_post_event_price": 110.557,
-            "first_post_event_change_pips": 8.1,
-            "second_post_event_close_utc": "2026-10-13T14:00:00+00:00",
-            "second_post_event_price": 110.484,
-            "second_post_event_change_pips": -7.3,
-            "net_two_bar_event_window_pips": 0.8,
-            "early_initial_direction": "UP",
-            "second_bar_direction": "DOWN",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
-        },
         {
           "provider": "FXStreet_RSS",
           "title": "Australian Dollar : Key support at 0.6935 in focus against US Dollar   – UOB",
           "url": "https://www.fxstreet.com/news/australian-dollar-key-support-at-06935-in-focus-against-us-dollar-uob-202610131404",
           "published_at_utc": "2026-10-13T14:04:33+00:00",
           "first_seen_at_utc": "2026-10-13T15:07:42.499248+00:00",
-          "publisher_age_minutes": 83.3,
+          "publisher_age_minutes": 102.6,
           "source_latency_to_first_seen_minutes": 63.2,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -1578,9 +1218,70 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "EURJPY": {
-      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
+      "status": "HEADLINES_PRESENT",
       "policy_headlines": [],
-      "news_headlines": [],
+      "news_headlines": [
+        {
+          "provider": "FXStreet_RSS",
+          "title": "Euro finds support from softer US Dollar, French fiscal risks linger",
+          "url": "https://www.fxstreet.com/news/euro-finds-support-from-softer-us-dollar-french-fiscal-risks-linger-202610131509",
+          "published_at_utc": "2026-10-13T15:09:19+00:00",
+          "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
+          "publisher_age_minutes": 37.8,
+          "source_latency_to_first_seen_minutes": 37.8,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "EUR",
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "EURJPY",
+            "EURCAD",
+            "USDCAD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "FXStreet_RSS",
+          "title": "British Pound: Upside momentum builds against Euro – Societe Generale",
+          "url": "https://www.fxstreet.com/news/british-pound-upside-momentum-builds-against-euro-societe-generale-202610131459",
+          "published_at_utc": "2026-10-13T14:59:20+00:00",
+          "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
+          "publisher_age_minutes": 47.8,
+          "source_latency_to_first_seen_minutes": 47.8,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "EUR",
+            "GBP"
+          ],
+          "affected_pairs": [
+            "EURUSD",
+            "GBPUSD",
+            "EURJPY",
+            "EURCAD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        }
+      ],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
@@ -1592,11 +1293,71 @@
       "news_headlines": [
         {
           "provider": "FXStreet_RSS",
+          "title": "Euro finds support from softer US Dollar, French fiscal risks linger",
+          "url": "https://www.fxstreet.com/news/euro-finds-support-from-softer-us-dollar-french-fiscal-risks-linger-202610131509",
+          "published_at_utc": "2026-10-13T15:09:19+00:00",
+          "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
+          "publisher_age_minutes": 37.8,
+          "source_latency_to_first_seen_minutes": 37.8,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "EUR",
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "EURJPY",
+            "EURCAD",
+            "USDCAD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "FXStreet_RSS",
+          "title": "British Pound: Upside momentum builds against Euro – Societe Generale",
+          "url": "https://www.fxstreet.com/news/british-pound-upside-momentum-builds-against-euro-societe-generale-202610131459",
+          "published_at_utc": "2026-10-13T14:59:20+00:00",
+          "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
+          "publisher_age_minutes": 47.8,
+          "source_latency_to_first_seen_minutes": 47.8,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "EUR",
+            "GBP"
+          ],
+          "affected_pairs": [
+            "EURUSD",
+            "GBPUSD",
+            "EURJPY",
+            "EURCAD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "FXStreet_RSS",
           "title": "Canadian Dollar: Modest gains against US Dollar - Scotiabank",
           "url": "https://www.fxstreet.com/news/canadian-dollar-modest-gains-against-us-dollar-scotiabank-202610131423",
           "published_at_utc": "2026-10-13T14:23:57+00:00",
           "first_seen_at_utc": "2026-10-13T15:07:42.499248+00:00",
-          "publisher_age_minutes": 63.9,
+          "publisher_age_minutes": 83.2,
           "source_latency_to_first_seen_minutes": 43.8,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -1627,74 +1388,23 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "USDCAD": {
-      "status": "POLICY_REACTION_CHECK",
-      "policy_headlines": [
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Australian Dollar edges higher amid softer US Dollar, hawkish RBA",
-          "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
-          "published_at_utc": "2026-10-13T13:36:54+00:00",
-          "first_seen_at_utc": "2026-10-13T14:25:45.497161+00:00",
-          "publisher_age_minutes": 111.0,
-          "source_latency_to_first_seen_minutes": 48.9,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "AUD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "FIRST_MOVE_REVERSED_ON_SECOND_M15",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T13:30:00+00:00",
-            "pre_event_price": 1.42304,
-            "first_post_event_close_utc": "2026-10-13T13:45:00+00:00",
-            "first_post_event_price": 1.4227,
-            "first_post_event_change_pips": -3.4,
-            "second_post_event_close_utc": "2026-10-13T14:00:00+00:00",
-            "second_post_event_price": 1.42316,
-            "second_post_event_change_pips": 4.6,
-            "net_two_bar_event_window_pips": 1.2,
-            "early_initial_direction": "DOWN",
-            "second_bar_direction": "UP",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
-        }
-      ],
+      "status": "HEADLINES_PRESENT",
+      "policy_headlines": [],
       "news_headlines": [
         {
           "provider": "FXStreet_RSS",
-          "title": "Australian Dollar edges higher amid softer US Dollar, hawkish RBA",
-          "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
-          "published_at_utc": "2026-10-13T13:36:54+00:00",
-          "first_seen_at_utc": "2026-10-13T14:25:45.497161+00:00",
-          "publisher_age_minutes": 111.0,
-          "source_latency_to_first_seen_minutes": 48.9,
+          "title": "Neither a breakout nor a reversal: What OCBC, Commerzbank and ING expect from the US Dollar",
+          "url": "https://www.fxstreet.com/news/neither-a-breakout-nor-a-reversal-what-ocbc-commerzbank-and-ing-expect-from-the-us-dollar-202610131532",
+          "published_at_utc": "2026-10-13T15:32:21+00:00",
+          "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
+          "publisher_age_minutes": 14.8,
+          "source_latency_to_first_seen_minutes": 14.8,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
           "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "type": "GENERAL",
+          "priority": "CONTEXT",
           "currencies": [
-            "AUD",
             "USD"
           ],
           "affected_pairs": [
@@ -1703,31 +1413,11 @@
             "EURUSD",
             "GBPUSD",
             "USDJPY",
-            "AUDJPY",
             "USDCAD"
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "FIRST_MOVE_REVERSED_ON_SECOND_M15",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T13:30:00+00:00",
-            "pre_event_price": 1.42304,
-            "first_post_event_close_utc": "2026-10-13T13:45:00+00:00",
-            "first_post_event_price": 1.4227,
-            "first_post_event_change_pips": -3.4,
-            "second_post_event_close_utc": "2026-10-13T14:00:00+00:00",
-            "second_post_event_price": 1.42316,
-            "second_post_event_change_pips": 4.6,
-            "net_two_bar_event_window_pips": 1.2,
-            "early_initial_direction": "DOWN",
-            "second_bar_direction": "UP",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
+          "broker_execution_allowed": false
         },
         {
           "provider": "Newsquawk_public_delayed",
@@ -1735,7 +1425,7 @@
           "url": "https://www.newsquawk.com/headlines/us-treasury-to-sell-usd-110bln-of-4-week-bills-and-usd-105bln-of-8-week-bills-on-october-15th-to-sell-usd-75bln-of-17-week-bills-on-october-14th-all-to-settle-ocotber-20th",
           "published_at_utc": "2026-10-13T15:21:00+00:00",
           "first_seen_at_utc": "2026-10-13T15:27:52.021824+00:00",
-          "publisher_age_minutes": 6.9,
+          "publisher_age_minutes": 26.1,
           "source_latency_to_first_seen_minutes": 6.9,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -1759,11 +1449,43 @@
         },
         {
           "provider": "FXStreet_RSS",
+          "title": "Euro finds support from softer US Dollar, French fiscal risks linger",
+          "url": "https://www.fxstreet.com/news/euro-finds-support-from-softer-us-dollar-french-fiscal-risks-linger-202610131509",
+          "published_at_utc": "2026-10-13T15:09:19+00:00",
+          "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
+          "publisher_age_minutes": 37.8,
+          "source_latency_to_first_seen_minutes": 37.8,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "EUR",
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "EURJPY",
+            "EURCAD",
+            "USDCAD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "FXStreet_RSS",
           "title": "Canadian Dollar: Modest gains against US Dollar - Scotiabank",
           "url": "https://www.fxstreet.com/news/canadian-dollar-modest-gains-against-us-dollar-scotiabank-202610131423",
           "published_at_utc": "2026-10-13T14:23:57+00:00",
           "first_seen_at_utc": "2026-10-13T15:07:42.499248+00:00",
-          "publisher_age_minutes": 63.9,
+          "publisher_age_minutes": 83.2,
           "source_latency_to_first_seen_minutes": 43.8,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -1793,7 +1515,7 @@
           "url": "https://www.fxstreet.com/news/australian-dollar-key-support-at-06935-in-focus-against-us-dollar-uob-202610131404",
           "published_at_utc": "2026-10-13T14:04:33+00:00",
           "first_seen_at_utc": "2026-10-13T15:07:42.499248+00:00",
-          "publisher_age_minutes": 83.3,
+          "publisher_age_minutes": 102.6,
           "source_latency_to_first_seen_minutes": 63.2,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -1816,34 +1538,6 @@
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
           "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Indian Rupee: RBI defense limits losses against US Dollar – Societe Generale",
-          "url": "https://www.fxstreet.com/news/indian-rupee-rbi-defense-limits-losses-against-us-dollar-societe-generale-202610131331",
-          "published_at_utc": "2026-10-13T13:31:02+00:00",
-          "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 116.8,
-          "source_latency_to_first_seen_minutes": 49.1,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
         }
       ],
       "source_coverage_incomplete": true,
@@ -1852,9 +1546,143 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "EURGBP": {
-      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
-      "policy_headlines": [],
-      "news_headlines": [],
+      "status": "POLICY_REACTION_CHECK",
+      "policy_headlines": [
+        {
+          "provider": "FXStreet_RSS",
+          "title": "British Pound finds fresh momentum as BoE hawks set stage for US CPI",
+          "url": "https://www.fxstreet.com/news/british-pound-finds-fresh-momentum-as-boe-hawks-set-stage-for-us-cpi-202610131539",
+          "published_at_utc": "2026-10-13T15:39:42+00:00",
+          "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
+          "publisher_age_minutes": 7.4,
+          "source_latency_to_first_seen_minutes": 7.4,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "GBP"
+          ],
+          "affected_pairs": [
+            "GBPUSD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-13T15:30:00+00:00",
+            "pre_event_price": 0.84493,
+            "first_post_event_close_utc": "2026-10-13T15:45:00+00:00",
+            "first_post_event_price": 0.84482,
+            "first_post_event_change_pips": -1.1
+          }
+        }
+      ],
+      "news_headlines": [
+        {
+          "provider": "FXStreet_RSS",
+          "title": "British Pound finds fresh momentum as BoE hawks set stage for US CPI",
+          "url": "https://www.fxstreet.com/news/british-pound-finds-fresh-momentum-as-boe-hawks-set-stage-for-us-cpi-202610131539",
+          "published_at_utc": "2026-10-13T15:39:42+00:00",
+          "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
+          "publisher_age_minutes": 7.4,
+          "source_latency_to_first_seen_minutes": 7.4,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "GBP"
+          ],
+          "affected_pairs": [
+            "GBPUSD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-13T15:30:00+00:00",
+            "pre_event_price": 0.84493,
+            "first_post_event_close_utc": "2026-10-13T15:45:00+00:00",
+            "first_post_event_price": 0.84482,
+            "first_post_event_change_pips": -1.1
+          }
+        },
+        {
+          "provider": "FXStreet_RSS",
+          "title": "Euro finds support from softer US Dollar, French fiscal risks linger",
+          "url": "https://www.fxstreet.com/news/euro-finds-support-from-softer-us-dollar-french-fiscal-risks-linger-202610131509",
+          "published_at_utc": "2026-10-13T15:09:19+00:00",
+          "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
+          "publisher_age_minutes": 37.8,
+          "source_latency_to_first_seen_minutes": 37.8,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "EUR",
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "EURJPY",
+            "EURCAD",
+            "USDCAD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "FXStreet_RSS",
+          "title": "British Pound: Upside momentum builds against Euro – Societe Generale",
+          "url": "https://www.fxstreet.com/news/british-pound-upside-momentum-builds-against-euro-societe-generale-202610131459",
+          "published_at_utc": "2026-10-13T14:59:20+00:00",
+          "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
+          "publisher_age_minutes": 47.8,
+          "source_latency_to_first_seen_minutes": 47.8,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "EUR",
+            "GBP"
+          ],
+          "affected_pairs": [
+            "EURUSD",
+            "GBPUSD",
+            "EURJPY",
+            "EURCAD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        }
+      ],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
