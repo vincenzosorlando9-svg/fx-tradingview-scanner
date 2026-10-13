@@ -472,13 +472,15 @@ def compact_markdown_currency(row):
 
 def build_report(unified, dashboard, raw=None, news=None, snapshot=None,
                  calendar=None, cftc=None, audit=None, volatility=None,
-                 history=None, retail=None, forexfactory=None, breaking=None):
+                 history=None, retail=None, forexfactory=None, breaking=None,
+                 calendar_radar=None):
     """Return the EXACT user-approved fifteen-layer structure in reading order."""
     legacy=_base_report(unified,dashboard,raw=raw,news=news,snapshot=snapshot,
                         calendar=calendar,cftc=cftc,audit=audit)
     raw,news,snapshot,calendar,cftc,audit=[x or {} for x in (raw,news,snapshot,calendar,cftc,audit)]
     volatility,history,retail,forexfactory=[x or {} for x in (volatility,history,retail,forexfactory)]
     breaking=breaking or {}
+    calendar_radar=calendar_radar or {}
     policy_news=breaking.get("recent_headlines") or []
     prioritized_policy=[h for h in policy_news if h.get("priority")=="HIGH_POLICY_REACTION_CHECK"]
     all_pairs=unified["all_11"]
@@ -618,6 +620,11 @@ def build_report(unified, dashboard, raw=None, news=None, snapshot=None,
          "headlines":news_articles,"news_source_statuses":news.get("news_source_statuses") or {},
          "verified_immediate_causal_reaction":False},
         {"status":"PARTIAL_PUBLISHER_ACTUAL_TIMES_UNVERIFIED",
+         "central_bank_schedule_watch":calendar_radar.get("monitored_events") or [],
+         "central_bank_schedule_gaps":{"fxstreet_calendar":calendar_radar.get("fxstreet_calendar_coverage", "NOT_INGESTED"),
+                                       "source_status":calendar_radar.get("calendar_status","UNAVAILABLE"),
+                                       "known_gap":calendar_radar.get("known_gap","NOT_FULLY_COVERED")},
+         "central_bank_schedule_collected_at_utc":calendar_radar.get("generated_at_utc"),
          "released_events":matched,"upcoming_events_next_24h":upcoming,
          "calendar_source":calendar.get("source"),"calendar_collected_at_utc":calendar.get("collected_at_utc"),
          "post_release_immediate_reaction_verified":False},
@@ -861,6 +868,15 @@ def render_markdown(report):
             out+=["",mdtable(["published_at_utc","provider","title","direction"],rows),
                   "Headlines alone do not demonstrate an independently verified immediate FX reaction."]
         elif n==2:
+            out+=["**Central-bank speech and scheduled macro radar (Eastern Time)**",
+                  "Radar compiled: "+et(layer.get("central_bank_schedule_collected_at_utc")),
+                  "Coverage: "+str(layer["central_bank_schedule_gaps"].get("source_status"))+
+                  " | FXStreet calendar: "+str(layer["central_bank_schedule_gaps"].get("fxstreet_calendar")),
+                  "Important: not every FXStreet speech is present in the Forex Factory public feed.",
+                  mdtable(["event_at_et","currency","title","urgency","event_window","forecast","previous"],
+                          [{**e,"event_at_et":et(e.get("event_at_utc"))}
+                           for e in layer["central_bank_schedule_watch"][:24]]),
+                  "The calendar is an advance research watch, not a BUY/SHORT trigger. No event time may be guessed from the device clock.", ""]
             rows=[{"currency":x.get("currency"),"title":x.get("title"),
                    "reported_actual":x.get("reported_actual"),"forecast":x.get("forecast"),
                    "previous":x.get("previous"),"status":x.get("status")}
@@ -987,7 +1003,8 @@ def main():
                         history=read("fx_signal_history.json"),
                         retail=read("fx_retail_positioning.json"),
                         forexfactory=read("fx_forexfactory_markets.json"),
-                        breaking=read("fx_news_priority.json"))
+                        breaking=read("fx_news_priority.json"),
+                        calendar_radar=read("fx_calendar_priority.json"))
     Path("fx_scan_report.json").write_text(json.dumps(report,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
     Path("fx_scan_report.md").write_text(render_markdown(report),encoding="utf-8")
     print(json.dumps({"layout":LAYOUT_VERSION,"layers":len(report["fifteen_layer_macro_first_audit"]),
