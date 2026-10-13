@@ -88,19 +88,37 @@ def compute(pair,raw,offset,now):
             out["ADR20_pips"]=round(sum((x["h"]-x["l"])/pip for x in completed)/20,2)
             out["ADR20_complete_days"]=len(completed)
         day_start=ny_rollover_start(now)
-        # Intraday FX feed carries only 50 recent 15m bars; if the first M15
-        # timestamp occurs after NY17 start, observed M15 day range is partial.
+        # Recent 50 M15 candles cover only 12.5h, less than a complete FX day.
+        # A D1 *running* candle is allowed for daily-range context when its
+        # source rollover starts at the NY17 clock. It MUST NEVER enter any
+        # 15m/30m direction or signal decision.
         today_bars=[x for x in m15 if day_start<=x["opened_utc"]<=now]
+        day_high=max((x["h"] for x in today_bars),default=None)
+        day_low=min((x["l"] for x in today_bars),default=None)
+        out["day_range_completeness"]="PARTIAL_OBSERVED_M15_HISTORY"
+        running=(raw.get("tf") or {}).get("D1") or {}
+        for raw_ts,o,h,l,c in zip(*(running.get(k,[]) for k in ("t","o","h","l","c"))):
+            try:
+                open_dt=datetime.fromtimestamp(float(raw_ts)-offset, UTC)
+                vals=[float(x) for x in (o,h,l,c)]
+                if (abs((open_dt-day_start).total_seconds()) <= 600 and
+                    all(math.isfinite(x) for x in vals) and
+                    vals[2]>=max(vals[0],vals[3],vals[1]) and
+                    vals[3]<=min(vals[0],vals[2],vals[1])):
+                    day_high=max([float(h)]+([day_high] if day_high is not None else []))
+                    day_low=min([float(l)]+([day_low] if day_low is not None else []))
+                    out["day_range_completeness"]="RUNNING_D1_REFERENCE_NY17_ALIGNED"
+                    out["D1_current_session_used_for_direction"]=False
+            except (TypeError,ValueError,OverflowError):
+                continue
         if today_bars:
-            used=(max(x["h"] for x in today_bars)-min(x["l"] for x in today_bars))/pip
+            out["NY17_day_first_observed_open_utc"]=today_bars[0]["opened_utc"].isoformat()
+        if day_high is not None and day_low is not None:
+            used=(day_high-day_low)/pip
             out["NY17_day_used_pips"]=round(used,2)
-            complete_day_start=today_bars[0]["opened_utc"]<=day_start+timedelta(minutes=16)
-            if out["ADR20_pips"] and complete_day_start:
+            if out["ADR20_pips"] and out["day_range_completeness"]=="RUNNING_D1_REFERENCE_NY17_ALIGNED":
                 out["NY17_ADR_percent_used"]=round(used/out["ADR20_pips"]*100,1)
                 out["ADR_remaining_reference_pips"]=round(max(0,out["ADR20_pips"]-used),2)
-            else:
-                out["day_range_completeness"]="PARTIAL_OBSERVED_M15_HISTORY"
-            out["NY17_day_first_observed_open_utc"]=today_bars[0]["opened_utc"].isoformat()
         # Session hours are clock *windows*, not claims about broker liquidity.
         # The Tokyo session 09:00-18:00 JST, London 08:00-17:00 local,
         # New York 08:00-17:00 ET. Recent 50 M15 bars may be insufficient;
