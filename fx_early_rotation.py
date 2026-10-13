@@ -310,7 +310,10 @@ def run(vol,calendar=None,at=None,previous=None,strict_freshness=True):
                   if isinstance(x,dict)}
     for row in rows:
         prev=old_episodes.get(row["pair"])
-        if row.get("direction")!="NONE" or not prev or quiet:
+        if not prev or quiet:
+            continue
+        pd=prev.get("direction")
+        if pd not in ("SELL","BUY") or row.get("direction")==pd:
             continue
         recent=parse(prev.get("last_observed_at_utc"))
         started=parse(prev.get("first_observed_at_utc"))
@@ -318,17 +321,22 @@ def run(vol,calendar=None,at=None,previous=None,strict_freshness=True):
             continue
         if not (0<=(at-started).total_seconds()<=5400):
             continue
-        pd=prev.get("direction")
         inv=prev.get("invalidation_reference")
         price=row.get("latest_closed_m15")
-        if pd not in ("SELL","BUY") or inv is None or price is None:
+        if inv is None or price is None:
             continue
         invalid=(pd=="SELL" and price>=inv) or (pd=="BUY" and price<=inv)
         pressure=row.get("pressure_evidence",{})
-        if invalid or (pressure.get("direction") not in ("NONE",pd)):
+        # A genuinely opposite 3-of-4 CLOSED M15/M30 structure overrides
+        # our stored watch, but a momentary opposite 15m/30m momentum bounce
+        # within the original invalidation does NOT reverse the main direction.
+        opposite_confirmed=(pressure.get("direction") in ("BUY","SELL") and
+                            pressure.get("direction")!=pd and
+                            (pressure.get("score") or 0)>=3)
+        if invalid or opposite_confirmed:
             continue
         row.update(direction=pd,stage="EARLY_ROTATION_TRACKING",
-                   reason="EARLY_ROTATION_STILL_VALID_WITHOUT_NEW_TRIGGER",
+                   reason="EARLY_DIRECTION_RETAINS_THROUGH_COUNTERBOUNCE_NO_STRONG_OPPOSITE_ROTATION",
                    watch_only=True,fresh_trigger=False,
                    direction_invalidation_reference=inv,
                    reversal_watch_no_break_required=True,
