@@ -2,7 +2,7 @@
 import unittest
 from datetime import datetime, timedelta, timezone
 
-from fx_macro_collector import (parse_bonds, parse_policy, parse_index, parse_feargreed, parse_forexcracked,
+from fx_macro_collector import (parse_bonds, parse_policy, parse_index, parse_feargreed, parse_forexcracked, news_currency_tags,
                                 parse_oilprice, parse_news, extract_bond_table)
 from fx_macro_engine import (normalize, derived_deltas, rate_spreads,
                              build_pairs, news_context, observation_recent, metric)
@@ -67,6 +67,29 @@ class PublicCollectorTests(unittest.TestCase):
         self.assertEqual(len(result["pairs"]), 2)
         self.assertFalse(result["pairs"]["USDJPY"]["execution_allowed"])
         self.assertEqual(result["pairs"]["AUDUSD"]["bid"], .69881)
+
+    def test_forexcracked_metal_and_china_context_without_crude(self):
+        html="""<h1>Live Market Rates</h1>Last update: 18 seconds ago
+        XAU/USD 0.08 4,205.95 ▲ Ask 4,206.03
+        XAG/USD 280p 61.273 ▲ Ask 61.301
+        XCU/USD 18p 6.77060 ▲ Ask 6.77240
+        XNG/USD 180p 3.37600 ▲ Ask 3.39400
+        ALUMINIUM 6.35 3,049.65 ▲ Ask 3,056.00
+        USD/CNH 10.7p 6.69183 ▲ Ask 6.69290
+        XBR/USD 100p 101.66 ▲ Ask 101.67"""
+        result=parse_forexcracked(webpage(html))
+        self.assertAlmostEqual(result["non_crude"]["GOLD"]["value"],4205.95)
+        self.assertAlmostEqual(result["non_crude"]["SILVER"]["value"],61.273)
+        self.assertAlmostEqual(result["non_crude"]["COPPER"]["value"],6.7706)
+        self.assertAlmostEqual(result["non_crude"]["NATURAL_GAS"]["value"],3.376)
+        self.assertAlmostEqual(result["non_crude"]["ALUMINIUM"]["value"],3049.65)
+        self.assertAlmostEqual(result["cross_risk"]["USD_CNH"]["bid"],6.69183)
+        self.assertNotIn("BRENT",result["non_crude"])
+        self.assertNotIn("WTI",result["non_crude"])
+        self.assertNotIn("USDCNH",result["pairs"])
+
+    def test_canadian_dollar_news_does_not_automatically_tag_USD(self):
+        self.assertEqual(news_currency_tags("Canadian dollar rises after Bank of Canada remarks"),["CAD"])
 
     def test_oil_only_oilprice_with_delayed_status(self):
         html = """<table><tr><th>Name</th><th>Last</th><th>Change</th></tr>
