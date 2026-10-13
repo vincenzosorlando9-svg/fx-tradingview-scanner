@@ -200,12 +200,13 @@ jobs:
           python - <<'PY'
           import json, sys
           from pathlib import Path
+          gate=json.loads(Path('fx_scan_gate.json').read_text())
+          if gate['status']=='SKIP_ALREADY_VERIFIED':
+              print('SCHEDULED_FX_SLOT_FINAL_STATUS: verified previous publication retained (no duplicate)')
+              sys.exit(0)
           h=json.loads(Path('fx_scan_health.json').read_text())
           status=h['last_slot']['status']
           print('SCHEDULED_FX_SLOT_FINAL_STATUS:',status)
           if status not in ('FULL_REPORT_EXACT_CANDLES_VERIFIED','MARKET_CLOSED'):
-              if h['last_slot'].get('status') == 'SKIP_ALREADY_VERIFIED':
-                  print('Verified primary publication retained; no duplicate signals')
-                  sys.exit(0)
               sys.exit('MISSED_OR_INCOMPLETE_SCHEDULED_FX_SLOT')
           PY
