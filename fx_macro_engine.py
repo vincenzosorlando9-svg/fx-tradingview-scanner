@@ -397,9 +397,12 @@ def calendar_events(calendar, pair, now):
             past.append(x)
     return sorted(future, key=lambda x:x["scheduled_at_utc"]), sorted(past, key=lambda x:x["scheduled_at_utc"], reverse=True)
 
-def build_pairs(dashboard, early, calendar, news, spreads, deltas, metrics, cftc, raw, now):
+def build_pairs(dashboard, early, calendar, news, spreads, deltas, metrics, cftc, raw, now, retail=None):
     dash_by_pair = {p.get("pair"): p for p in dashboard.get("pairs", []) if isinstance(p, dict)}
     early_by_pair = {p.get("pair"): p for p in early.get("pairs", []) if isinstance(p, dict)}
+    retail = retail or {}
+    retail_at = age_min(retail.get("collected_at_utc"), now)
+    retail_ok = retail_at is not None and -2 <= retail_at <= 90
     pairs = []
     for pair in PAIRS:
         t = dash_by_pair.get(pair, {})
@@ -436,6 +439,16 @@ def build_pairs(dashboard, early, calendar, news, spreads, deltas, metrics, cftc
                    x.get("currency") in (pair[:3], pair[3:]) or
                    x.get("currency") == "CNY" and ("AUD" in pair or "NZD" in pair)]
         cftc_context = {c: (cftc.get("currencies") or {}).get(c) for c in (pair[:3], pair[3:])}
+        retail_raw = (retail.get("pairs") or {}).get(pair,{}) if retail_ok else {}
+        retail_context = {
+            "source": "Myfxbook public community outlook",
+            "status": retail_raw.get("status", "UNAVAILABLE"),
+            "long_pct": retail_raw.get("long_pct"),
+            "short_pct": retail_raw.get("short_pct"),
+            "retrieved_at_utc": retail_raw.get("retrieved_at_utc"),
+            "publisher_delay_min": 60,
+            "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+            "directional_vote": False}
         score_early = e.get("early_opportunity_score_50pct")
         score_trend = e.get("trend_strength_score_50pct")
         candidate_score = e.get("research_rank_score")
@@ -482,6 +495,7 @@ def build_pairs(dashboard, early, calendar, news, spreads, deltas, metrics, cftc
             "economic_events_next_24h": future, "events_previous_2h": recent,
             "event_within_120_minutes": bool(current_soon),
             "CFTC_weekly_futures_only_context": cftc_context,
+            "retail_positioning_context": retail_context,
             "reference_prices": reference, "why_now_evidence": why,
             "fx_source_differences_not_executable": True,
             "trade_execution_allowed": False, "entry": None, "stop": None,
@@ -502,6 +516,7 @@ def main():
     actuals = read("fx_economic_actuals.json")
     cal = read("fx_economic_calendar.json")
     cftc = read("fx_cftc_tff.json")
+    retail = read("fx_retail_positioning.json")
     dash = read("fx_scan_dashboard.json")
     early = read("fx_early_rotation.json")
     history_data = read("fx_macro_history.json")
@@ -533,6 +548,9 @@ def main():
         "fx_pairs_indicative_count": len(raw.get("forexcracked", {}).get("pairs", {})),
         "USDCNH_china_indicative_context": "PRESENT" if "CHINA:USD_CNH" in metrics else "UNAVAILABLE",
         "CFTC_report": cftc.get("status", "UNAVAILABLE"),
+        "retail_sample_status": retail.get("status", "UNAVAILABLE"),
+        "retail_pairs_delayed": sum(x.get("status") == "PUBLISHED_RETAIL_SAMPLE_DELAYED_60_MIN"
+                                     for x in (retail.get("pairs") or {}).values()),
         "CME_daily_open_interest": "UNAVAILABLE_INDEPENDENT_CME_SOURCE",
         "forexfactory_actuals": actuals.get("status", "UNAVAILABLE"),
         "broker_executable_bid_ask": "UNAVAILABLE_NO_BROKER_ACCESS",
@@ -552,7 +570,8 @@ def main():
         "real_time_status": "PUBLIC_DATE_OR_DELAYED_REFERENCES_NOT_VERIFIED_LIVE"}
     write("fx_macro_snapshot.json", snapshot)
     write("fx_macro_news.json", news)
-    rows = build_pairs(dash, early, cal, news, spreads, deltas, metrics, cftc, raw, now)
+    rows = build_pairs(dash, early, cal, news, spreads, deltas, metrics, cftc, raw, now,
+                       retail=retail)
     range_data=read("fx_range_context.json")
     range_age=age_min(range_data.get("generated_at_utc"), now)
     range_fresh=(range_age is not None and 0<=range_age<=45 and
