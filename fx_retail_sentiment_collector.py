@@ -68,8 +68,8 @@ def parse(body, now=None):
             value=" ".join(para.stripped_strings).lower()
             if slash_pair.lower() not in value:
                 continue
-            a=re.search(r"(\\d{1,3})\\s*%\\s+of\\s+(?:the\\s+)?(?:forex\\s+)?traders.{0,90}?\\bgoing\\s+short\\b",value)
-            b=re.search(r"(\\d{1,3})\\s*%\\s+of\\s+(?:the\\s+)?(?:forex\\s+)?traders.{0,90}?\\bgoing\\s+long\\b",value)
+            a=re.search(r"(\d{1,3})\s*%\s+of\s+(?:the\s+)?(?:forex\s+)?traders.{0,90}?\bgoing\s+short\b",value)
+            b=re.search(r"(\d{1,3})\s*%\s+of\s+(?:the\s+)?(?:forex\s+)?traders.{0,90}?\bgoing\s+long\b",value)
             if a and b:
                 short,long=int(a.group(1)),int(b.group(1))
                 if 0<=short<=100 and 0<=long<=100 and 98<=short+long<=102:
