@@ -1,10 +1,10 @@
 # FOREX MAIN SIGNAL — 15-LAYER MACRO-FIRST AUDIT
 
-Tue Oct 13, 2026 10:52:05 AM ET | 11 pairs | Closed 15m/30m candles | No API keys
+Tue Oct 13, 2026 10:53:18 AM ET | 11 pairs | Closed 15m/30m candles | No API keys
 
 **OVERALL STATUS: PARTIAL — VERIFY PUBLISHER AND BROKER SOURCE LIMITATIONS**
 
-Latest separately fetched public technical feed: Tue Oct 13, 2026 10:52:05 AM ET. Authoritative unified rank: Tue Oct 13, 2026 10:52:19 AM ET. Macro fetch: Tue Oct 13, 2026 10:48:36 AM ET. Published scores and newer candle assessments are deliberately distinguished.
+Latest separately fetched public technical feed: Tue Oct 13, 2026 10:53:18 AM ET. Authoritative unified rank: Tue Oct 13, 2026 10:53:26 AM ET. Macro fetch: Tue Oct 13, 2026 10:48:36 AM ET. Published scores and newer candle assessments are deliberately distinguished.
 
 ## 1. BEST 5 TRADING PAIRS — BUY / SHORT
 
@@ -22,15 +22,15 @@ Green BUY / red SHORT; compact stage = early, confirming, continuation, wait or 
 **#   CCY   STRENGTH   SCORE**  
 **1.**&nbsp;**AUD**&nbsp;🟢&nbsp;**STRONG**&nbsp;**+2**  
 **2.**&nbsp;**CAD**&nbsp;🟢&nbsp;**STRONG**&nbsp;**+2**  
-**3.**&nbsp;**NZD**&nbsp;🟢&nbsp;**STRONG**&nbsp;**+2**  
-**4.**&nbsp;**EUR**&nbsp;🟢&nbsp;**STRONG**&nbsp;**+1**  
+**3.**&nbsp;**EUR**&nbsp;🟢&nbsp;**STRONG**&nbsp;**+2**  
+**4.**&nbsp;**NZD**&nbsp;🟢&nbsp;**STRONG**&nbsp;**+2**  
 **5.**&nbsp;**GBP**&nbsp;⚪&nbsp;**NEUTRAL**&nbsp;**0**  
 
 **WEAKEST CURRENCIES**  
-**6.**&nbsp;**USD**&nbsp;🔴&nbsp;**WEAK**&nbsp;**-3**  
-**7.**&nbsp;**JPY**&nbsp;🔴&nbsp;**WEAK**&nbsp;**-4**  
+**6.**&nbsp;**JPY**&nbsp;🔴&nbsp;**WEAK**&nbsp;**-4**  
+**7.**&nbsp;**USD**&nbsp;🔴&nbsp;**WEAK**&nbsp;**-4**  
 
-Strongest: AUD, CAD, NZD | Weakest: JPY
+Strongest: AUD, CAD, EUR, NZD | Weakest: JPY, USD
 Scores are 11-pair technical breadth, NOT an independently verified real-time currency-strength feed.
 
 ## CRITICAL SETUPS OMITTED FROM TOP FIVE
@@ -46,7 +46,7 @@ Counter-rotations are new candle evidence, NOT invented historical SELL/BUY epis
 **Coverage:** PARTIAL_DATED_OR_BLOCKED
 
 **Breaking central-bank policy watch (five-minute target)**
-Fast source collection: Tue Oct 13, 2026 10:52:17 AM ET
+Fast source collection: Tue Oct 13, 2026 10:53:25 AM ET
 Source gaps: Reuters_currency_page:UNAVAILABLE_HTTPERROR
 A missing approved news story never establishes that no policy headline occurred.
 | published_at_utc | provider | title | affected_pairs | first_seen_at_utc | reaction_review |
@@ -82,7 +82,7 @@ Headlines alone do not demonstrate an independently verified immediate FX reacti
 **Coverage:** PARTIAL_PUBLISHER_ACTUAL_TIMES_UNVERIFIED
 
 **Central-bank speech and scheduled macro radar (Eastern Time)**
-Radar compiled: Tue Oct 13, 2026 10:52:19 AM ET
+Radar compiled: Tue Oct 13, 2026 10:53:26 AM ET
 Coverage: FRESH_FF_PLUS_FXBLUE | FXStreet calendar: UNAVAILABLE_OAUTH_REQUIRED_NOT_INGESTED
 Important: not every FXStreet speech is present in the Forex Factory public feed.
 | event_at_et | currency | title | urgency | event_window | forecast | previous |
@@ -289,16 +289,16 @@ Retail status: UNAVAILABLE. Myfxbook and Forex Factory dynamic positioning must 
 
 **Coverage:** AVAILABLE_INDICATIVE_TECHNICAL_BREADTH
 
-Strongest: AUD, CAD, NZD | Weakest: JPY
+Strongest: AUD, CAD, EUR, NZD | Weakest: JPY, USD
 | rank | currency | breadth_score |
 | --- | --- | --- |
 | 1 | AUD | 2 |
 | 2 | CAD | 2 |
-| 3 | NZD | 2 |
-| 4 | EUR | 1 |
+| 3 | EUR | 2 |
+| 4 | NZD | 2 |
 | 5 | GBP | 0 |
-| 6 | USD | -3 |
-| 7 | JPY | -4 |
+| 6 | JPY | -4 |
+| 7 | USD | -4 |
 
 
 ---
@@ -307,7 +307,7 @@ Strongest: AUD, CAD, NZD | Weakest: JPY
 
 **Coverage:** SEPARATELY_OBSERVED_SITE_REPORTED_CLOSED_CANDLES
 
-Public technical feed collected: Tue Oct 13, 2026 10:52:05 AM ET
+Public technical feed collected: Tue Oct 13, 2026 10:53:18 AM ET
 | pair | latest_15m_closed_price | latest_15m_closed_at_utc | 15m_change_pips | 30m_change_pips | original_published_direction | updated_directional_assessment |
 | --- | --- | --- | --- | --- | --- | --- |
 | EURCAD | 1.59420 | 2026-10-13T14:45:00+00:00 | -7.5 | 3.6 | SELL | SELL EPISODE / MIXED CLOSED CANDLES — WAIT |
@@ -345,17 +345,17 @@ Evidence is public completed-candle structure only. Trigger: Require supporting 
 
 | pair | 1H | 4H | Daily | 1H_EMA20 | 1H_EMA50 | 4H_EMA10 | 4H_EMA20 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| EURCAD | MIXED | BEARISH | BEARISH | 1.59370 | 1.59462 | 1.59346 | 1.59470 |
-| USDCAD | BEARISH | MIXED | BULLISH | 1.42545 | 1.42577 | 1.42482 | 1.42495 |
+| EURCAD | MIXED | BEARISH | BEARISH | 1.59370 | 1.59462 | 1.59347 | 1.59470 |
+| USDCAD | BEARISH | MIXED | BULLISH | 1.42543 | 1.42576 | 1.42481 | 1.42495 |
 | AUDJPY | MIXED | MIXED | MIXED | 110.321 | 110.323 | 110.383 | 110.323 |
-| EURUSD | MIXED | BEARISH | BEARISH | 1.11806 | 1.11846 | 1.11837 | 1.11915 |
-| USDJPY | MIXED | MIXED | MIXED | 158.289 | 158.316 | 158.336 | 158.283 |
-| EURJPY | MIXED | MIXED | BEARISH | 176.979 | 177.073 | 177.076 | 177.142 |
-| NZDUSD | BULLISH | MIXED | BEARISH | 0.56017 | 0.56003 | 0.56026 | 0.56027 |
-| GBPUSD | BULLISH | MIXED | MIXED | 1.32319 | 1.32286 | 1.32325 | 1.32307 |
-| NZDJPY | BULLISH | MIXED | MIXED | 88.670 | 88.663 | 88.709 | 88.679 |
-| AUDUSD | BULLISH | MIXED | MIXED | 0.69696 | 0.69685 | 0.69715 | 0.69699 |
-| EURGBP | MIXED | BEARISH | BEARISH | 0.84494 | 0.84544 | 0.84508 | 0.84578 |
+| EURUSD | MIXED | BEARISH | BEARISH | 1.11808 | 1.11847 | 1.11838 | 1.11915 |
+| USDJPY | MIXED | MIXED | MIXED | 158.288 | 158.315 | 158.333 | 158.282 |
+| EURJPY | MIXED | MIXED | BEARISH | 176.980 | 177.074 | 177.079 | 177.143 |
+| NZDUSD | BULLISH | MIXED | BEARISH | 0.56018 | 0.56004 | 0.56028 | 0.56027 |
+| GBPUSD | BULLISH | MIXED | MIXED | 1.32320 | 1.32286 | 1.32327 | 1.32308 |
+| NZDJPY | BULLISH | MIXED | MIXED | 88.669 | 88.663 | 88.711 | 88.680 |
+| AUDUSD | BULLISH | MIXED | MIXED | 0.69696 | 0.69685 | 0.69716 | 0.69700 |
+| EURGBP | MIXED | BEARISH | BEARISH | 0.84493 | 0.84543 | 0.84508 | 0.84578 |
 
 These longer timeframes are contextual; they do not veto early completed 15m/30m rotations.
 
@@ -449,9 +449,9 @@ Recorded observations do not imply realized P&L. Wrong-way episodes remain visib
 
 ---
 
-## FINAL FOREX MAIN SIGNAL — Tue Oct 13, 2026 10:52:05 AM ET
+## FINAL FOREX MAIN SIGNAL — Tue Oct 13, 2026 10:53:18 AM ET
 
-Strongest technical breadth: AUD, CAD, NZD. Weakest: JPY.
+Strongest technical breadth: AUD, CAD, EUR, NZD. Weakest: JPY, USD.
 Highest published 50/50 research rank: EURCAD (published score; separate from later candles).
 No independently qualifying omitted counter-rotation measured.
 Keep conditional BUY/SELL assessments separate from recorded active episodes. Newer candles may weaken or contradict the published board.
