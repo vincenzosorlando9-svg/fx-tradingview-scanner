@@ -39,7 +39,7 @@ def parse(html, pair):
     if pair not in title and pair not in heading_text:
         result["status"]="PAGE_PAIR_NOT_VERIFIED"
         return result
-    text = " ".join(soup.stripped_strings)
+    text = " ".join(" ".join(soup.stripped_strings).split())
     # Scope to the explicit current-metrics table with LONG and SHORT rows.
     for table in soup.find_all("table"):
         rows = table.find_all("tr")
