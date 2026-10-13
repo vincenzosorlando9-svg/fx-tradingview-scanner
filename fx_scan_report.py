@@ -233,8 +233,8 @@ LAYER_TITLES = [
 ]
 PRESENTATION_ORDER = [
     "report_header",
-    "current_currency_strength",
     "top_five_published_ranking",
+    "current_currency_strength",
     "critical_setups_omitted_from_top_five",
     "fifteen_layer_macro_first_audit",
     "full_15_layer_coverage_audit",
@@ -402,6 +402,72 @@ def historic_accountability(row, latest, history):
             "not_trade_profit":True,
             "episode_is_active":bool(active),
             "no_retroactive_reversal":True}
+
+
+
+def compact_stage(assessment):
+    """Short *display* labels; preserve the full updated assessment elsewhere."""
+    label=str(assessment or "UNAVAILABLE").upper()
+    if "CHASE" in label or "EXTENDED" in label:
+        return "CHASE"
+    if "ADVERSE" in label or "RECHECK" in label:
+        return "RISK"
+    if "MIXED" in label or "WAIT" in label or "PAUSE" in label:
+        return "WAIT"
+    if "COUNTER" in label:
+        return "COUNTER"
+    if "CONFIRM" in label:
+        return "CONF"
+    if "CONTINUATION" in label or "MONITOR" in label:
+        return "CONT"
+    if "EARLY" in label:
+        return "EARLY"
+    return "WATCH"
+
+
+def compact_side(direction):
+    """Readable green/red symbols that work in Markdown without CSS support."""
+    if direction=="BUY":
+        return {"label":"BUY","color":"green","symbol":"🟢"}
+    if direction in ("SELL","SHORT"):
+        return {"label":"SHORT","color":"red","symbol":"🔴"}
+    return {"label":"WAIT","color":"neutral","symbol":"⚪"}
+
+
+def compact_strength(score):
+    if not isinstance(score,(int,float)) or not isfinite(score):
+        return {"label":"MISSING","color":"neutral","symbol":"⚪"}
+    if score>0:
+        return {"label":"STRONG","color":"green","symbol":"🟢"}
+    if score<0:
+        return {"label":"WEAK","color":"red","symbol":"🔴"}
+    return {"label":"NEUTRAL","color":"neutral","symbol":"⚪"}
+
+
+def keep_together(*items):
+    """Nonbreaking spaces: one entire compact row, even on narrow mobile screens."""
+    return "&nbsp;".join(str(item).replace(" ","&nbsp;") for item in items)
+
+
+def compact_markdown_pair(row):
+    side=compact_side(row.get("direction"))
+    pair=row.get("pair") or "UNAVAILABLE"
+    display_pair=pair[:3]+"/"+pair[3:] if len(pair)==6 else pair
+    return keep_together("**"+str(row["published_rank"])+".**",
+                         "**"+display_pair+"**",
+                         side["symbol"],"**"+side["label"]+"**",
+                         compact_stage(row.get("updated_assessment")),
+                         "**"+number(row.get("published_score"),3)+"**")
+
+
+def compact_markdown_currency(row):
+    score=row.get("breadth_score")
+    strength=compact_strength(score)
+    signed=("+" if score>0 else "")+str(score) if isinstance(score,(int,float)) else "—"
+    return keep_together("**"+str(row["rank"])+".**",
+                         "**"+str(row["currency"])+"**",
+                         strength["symbol"],"**"+strength["label"]+"**",
+                         "**"+signed+"**")
 
 
 def build_report(unified, dashboard, raw=None, news=None, snapshot=None,
@@ -632,13 +698,24 @@ def build_report(unified, dashboard, raw=None, news=None, snapshot=None,
             "newer_observation_than_unified":current.get("ranking_predates_latest_observation"),
             "two_sources_not_automatically_synchronized":True,
             "scope":"FULL_15_LAYER_ANALYSIS_NOT_A_BROKER_EXECUTION_SIGNAL"},
-        "current_currency_strength":legacy["currency_strength"],
         "top_five_published_ranking":{
-            "heading":"TOP FIVE — PUBLISHED 50/50 TECHNICAL RANKING",
+            "heading":"BEST 5 TRADING PAIRS — PUBLISHED 50/50 TECHNICAL RANKING",
             "as_published_at_utc":unified.get("generated_at_utc"),
             "scores_not_probabilities":True,
             "updated_assessments_independent_from_published_scores":True,
-            "rows":rank},
+            "rows":[{**r,"compact_side":compact_side(r.get("direction")),
+                     "compact_stage":compact_stage(r.get("updated_assessment")),
+                     "compact_one_line":compact_markdown_pair(r)}
+                    for r in rank]},
+        "current_currency_strength":{
+            **legacy["currency_strength"],
+            "top_five_compact":[{**r,"strength_style":compact_strength(r.get("breadth_score")),
+                                "compact_one_line":compact_markdown_currency(r)}
+                               for r in legacy["currency_strength"]["ranked_strongest_to_weakest"][:5]],
+            "weaker_currencies_compact":[{**r,"strength_style":compact_strength(r.get("breadth_score")),
+                                         "compact_one_line":compact_markdown_currency(r)}
+                                        for r in legacy["currency_strength"]["ranked_strongest_to_weakest"][5:]],
+        },
         "critical_setups_omitted_from_top_five":{
             "heading":"CRITICAL SETUPS OMITTED FROM TOP FIVE",
             "not_a_recalculated_ranking":True,
@@ -651,6 +728,11 @@ def build_report(unified, dashboard, raw=None, news=None, snapshot=None,
             "fixed_order":PRESENTATION_ORDER,
             "fixed_layer_titles":LAYER_TITLES,
             "default_locked_until_user_explicitly_changes_it":True,
+            "no_wrap_compact_rows":True,
+            "top_five_before_strength":True,
+            "display_direction_buy_green_short_red":True,
+            "top_strength_limit":5,
+            "do_not_split_words_strong_short_buy":True,
             "do_not_simplify_to_six_sections":True,
             "no_unrecorded_retroactive_entries":True,
             "preserve_50pct_early_50pct_trend_ranking":True,
@@ -706,17 +788,22 @@ def render_markdown(report):
          ". Macro fetch: "+et(h["macro_collected_at_utc"])+
          ". Published scores and newer candle assessments are deliberately distinguished.",
          "",
-         "## CURRENT CURRENCY STRENGTH — STRONGEST AND WEAKEST",""]
-    cs=report["current_currency_strength"]
-    out+=["**Strongest:** "+", ".join(cs["strongest"] or ["UNAVAILABLE"])+
-          " | **Weakest:** "+", ".join(cs["weakest"] or ["UNAVAILABLE"]),
-          cs["method"],"",
-          mdtable(["rank","currency","breadth_score"],cs["ranked_strongest_to_weakest"]),
-          "Technical 11-pair directional breadth, not an independent live strength index.","",
-          "## TOP FIVE — PUBLISHED 50/50 TECHNICAL RANKING",""]
+         "## 1. BEST 5 TRADING PAIRS — BUY / SHORT", ""]
     rank=report["top_five_published_ranking"]["rows"]
-    out+= [mdtable(["published_rank","pair","direction","updated_assessment","published_score"],rank),
-           "These are published technical scores, not success probabilities. Newer candle assessments do NOT revise the published rank.","",
+    out += ["**#   PAIR   SIGNAL   STAGE   SCORE**  ",
+            *[r["compact_one_line"]+"  " for r in rank], "",
+            "Green BUY / red SHORT; compact stage = early, confirming, continuation, wait or chase. Published scores are not probabilities. Detailed assessments appear in the full audit.",
+            "",
+            "## 2. CURRENCY STRENGTH — TOP 5", ""]
+    cs=report["current_currency_strength"]
+    out += ["**#   CCY   STRENGTH   SCORE**  ",
+            *[r["compact_one_line"]+"  " for r in cs["top_five_compact"]], "",
+            "**WEAKEST CURRENCIES**  ",
+            *[r["compact_one_line"]+"  " for r in cs["weaker_currencies_compact"]], "",
+            "Strongest: "+", ".join(cs["strongest"] or ["UNAVAILABLE"])+
+            " | Weakest: "+", ".join(cs["weakest"] or ["UNAVAILABLE"]),
+            "Scores are 11-pair technical breadth, NOT an independently verified real-time currency-strength feed.",
+            "",
            "## CRITICAL SETUPS OMITTED FROM TOP FIVE",""]
     omissions=report["critical_setups_omitted_from_top_five"]["pairs"]
     out+= [mdtable(["pair","published_direction","current_closed_candle_assessment","15m_change_pips","30m_change_pips","episode_movement_pips"],omissions),
