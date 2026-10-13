@@ -24,6 +24,8 @@ on:
       - 'test_fx_news_priority.py'
       - 'fx_calendar_priority.py'
       - 'test_fx_calendar_priority.py'
+      - 'fx_approved_public_sources.py'
+      - 'test_fx_approved_public_sources.py'
       - 'fx_scan_report.py'
       - 'test_fx_scan_report.py'
       - 'forextoolkits_collector.py'
@@ -85,7 +87,7 @@ jobs:
 
       - name: Check approved news feeds for breaking central-bank headlines
         run: |
-          python -m unittest -v test_fx_news_priority
+          python -m unittest -v test_fx_news_priority test_fx_approved_public_sources
           python fx_news_priority.py
 
       - name: Audit critical economic releases and central-bank speech schedules
@@ -136,6 +138,10 @@ jobs:
           assert all('scheduled_event_radar' in p for p in json.loads(Path('fx_unified_signals.json').read_text())['all_11'])
           assert len(news['pairs']) == 11
           assert news['no_headline_buy_sell_votes'] and news['no_trades_or_alerts']
+          assert 'Newsquawk_public_delayed' in news['approved_source_names']
+          assert news['Newsquawk_is_not_realtime_professional_feed'] is True
+          assert 'FX Blue public calendar' in radar['approved_calendar_sources']
+          assert radar['fx_blue_public_calendar_status']
           assert all('breaking_policy_news' in p for p in json.loads(Path('fx_unified_signals.json').read_text())['all_11'])
           assert report['layout_contract']['default_locked_until_user_explicitly_changes_it'] is True
           assert report['layout_contract']['do_not_simplify_to_six_sections'] is True
