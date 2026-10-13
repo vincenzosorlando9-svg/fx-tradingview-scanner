@@ -2,19 +2,6 @@ name: FX Unified Macro Intelligence (No Keys, No Alerts)
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - 'fx_macro_collector.py'
-      - 'fx_macro_engine.py'
-      - 'fx_ff_actuals_collector.py'
-      - 'fx_cftc_tff_collector.py'
-      - 'fx_retail_collector.py'
-      - 'fx_range_context.py'
-      - 'fx_signal_fusion_refresh.py'
-      - 'build_integrated_fx_audit.py'
-      - 'test_fx_macro_engine.py'
-      - '.github/workflows/fx-unified-macro.yml'
   schedule:
     - cron: '11,26,41,56 * * * *'
     - cron: '47 21 * * 5'
@@ -85,7 +72,25 @@ jobs:
           assert all(p["trade_execution_allowed"] is False for p in obj["all_11"])
           assert all(p["no_5m_signal_inputs"] is True for p in obj["all_11"])
           assert obj["real_broker_spread_verified"] is False
-          print("Unified 11-pair snapshots validated")
+          assert len(obj["top_five"]) == 5
+          assert obj["ranking_policy"].startswith("50pct_early_opportunity_plus_50pct_trend_strength")
+          history=json.loads(Path("fx_macro_history.json").read_text())
+          for sample in history.get("snapshots",[]):
+              assert sample.get("sample_kind") in (
+                  "SCHEDULED_MACRO","LEGACY_UNVERIFIED_NO_INTRADAY_COMPARISON")
+              for key, value in sample.get("metrics",{}).items():
+                  if not key.startswith("BOND:"):
+                      continue
+                  assert value.get("source_instrument"), (sample.get("at_utc"),key)
+                  assert "TIPS" not in value["source_instrument"].upper()
+                  assert "INFLATION" not in value["source_instrument"].upper()
+          snap=json.loads(Path("fx_macro_snapshot.json").read_text())
+          for key,windows in snap["observed_fetch_deltas"].items():
+              if not key.startswith("BOND:"):
+                  continue
+              assert all(v is None or abs(v["change"])<= {15:20,30:30,60:45}[int(w)]
+                         for w,v in windows.items())
+          print("Unified 11-pair, historical nominal instrument, and window guardrails validated")
           PY
       - name: Publish versioned macro and unified intelligence snapshots
         run: |
