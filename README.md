@@ -60,3 +60,30 @@ Approved source contract: Trading Economics no-key *public* bond, policy rate an
 **Removed by user:** options expiries, flows, volatility skew, and the entire former options layer. Do not include in the source audit or require options confirmation for a signal.
 
 **Execution safety:** 11 pairs only. Signals rely ONLY on closed M15 and M30. H1/H4/Daily are context. The code does not create issues, send mobile/email signals, or place orders. No paid/secret API keys. Broker-verified executable bid/ask, live CME contract volume, true OIS expectations and independent intraday exchange quotes must remain `UNAVAILABLE` if no verified public observation exists. A Yahoo/ForexCracked/public quote must NEVER be called an executable broker price. Signals are provisional research, not trading instructions.
+
+
+## Unified FX intelligence architecture (October 13, 2026)
+
+**Scope:** exactly 11 approved FX pairs. The closed 15m/30m candles are the ONLY directional signal/ranking timeframes; 1H/4H/Daily are context and 5m never produces, confirms or vetoes signals. Fifty-percent early opportunity + fifty-percent trend strength ranking. Provisional early BUY/SELL watches remain permitted with mixed or unknown macro evidence. No automatic orders, API keys, new alert issues, or push notifications.
+
+- Technical (~5 minute) workflow: `rotation.yml` publishes canonical watches and `fx_unified_signals.json` via `fx_signal_fusion_refresh.py`. It reads the freshest validated macro data and never re-samples news/yields itself.
+- Macro (~15 minute) workflow: `fx-unified-macro.yml` collects approved public macro/news sources, records provenance, source timestamps, historical changes, and audits coverage. It does not overwrite the faster published signal board.
+- Calendar workflow refreshes Forex Factory weekly events hourly. Market pages and integrated audit are supplemental and handle missing data independently.
+
+### Published data contracts
+
+- `fx_macro_raw.json`: dated Trading Economics nominal sovereign yields, policy rate references, indices including DXY, KOSPI, Nikkei and China; OilPrice.com WTI/Brent only; ForexCracked FX and other commodities; FearGreedMeter; FXStreet RSS, and Reuters when accessible.
+- `fx_macro_snapshot.json`: metric provenance, issuer and maturity, dated yields and same-tenor spreads, publisher daily changes and strictly sampled source-fetch differences.
+- `fx_macro_history.json`: rolling timestamped observations without near-duplicate push-triggered samples.
+- `fx_macro_news.json` and `fx_economic_actuals.json`: dated headlines and Forex Factory publisher-reported actuals matched uniquely to scheduled events (not independently confirmed precise release clock).
+- `fx_cftc_tff.json`: official CFTC weekly historical leveraged funds, asset managers and dealers; associated historical futures open interest, not intraday CME volume.
+- `fx_retail_sentiment.json`: public Myfxbook retail values, minimum 60-minute publisher delay when accessible, explicitly unavailable if site blocks public automation.
+- `fx_range_context.json`: ADR20, NY17 context and range reference data derived from completed daily bars, never directional votes.
+- `fx_unified_signals.json`: 11-pair provisional technical directions, macro agreement/contradictions, event and source context, range history and invalidation, not executable orders.
+- `fx_integrated_audit.json`: source-specific completeness and freshness without conflating collection time with market observation time.
+
+### Strict integrity conditions
+
+Trading Economics public bond values are date-stamped references, not proven intraday quotes. US TIPS is never used in place of nominal Treasury yields. Historical deltas must match identical instruments, source, date, and actual elapsed sample window; suspect extreme changes are rejected until independently corroborated.
+OilPrice.com quotes may be delayed. ForexCracked site bid/ask is indicative, not broker-executable. Reuters can block the automated fetch. Myfxbook retail can return 403; OIS and contract-specific CME volume are marked unavailable where unverified. Missing data cannot vote direction.
+The options layer and CNN Fear & Greed source are removed. FearGreedMeter is the approved fear/greed source. Alerts remain disabled.
