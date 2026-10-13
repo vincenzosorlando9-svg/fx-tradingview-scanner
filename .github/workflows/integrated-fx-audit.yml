@@ -1,5 +1,11 @@
 name: Integrated FX source audit
 on:
+  push:
+    paths:
+      - 'fx_asian_risk_collector.py'
+      - 'test_fx_asian_risk.py'
+      - 'build_integrated_fx_audit.py'
+      - '.github/workflows/integrated-fx-audit.yml'
   workflow_dispatch:
   schedule:
     - cron: '9,24,39,54 * * * *'
@@ -17,13 +23,17 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Validate public KOSPI parser and quote-freshness safeguards
+        run: python3 -m unittest -v test_fx_asian_risk
+      - name: Collect KOSPI public page from Trading Economics (no API key)
+        run: python3 fx_asian_risk_collector.py
       - name: Build audited 11-pair macro and technical board
         run: python3 build_integrated_fx_audit.py
       - name: Publish audit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add fx_integrated_audit.json
+          git add fx_integrated_audit.json fx_asian_risk.json
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "Refresh integrated FX audit"
           for attempt in 1 2 3; do
