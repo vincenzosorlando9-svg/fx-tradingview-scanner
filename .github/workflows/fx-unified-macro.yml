@@ -10,6 +10,7 @@ on:
       - 'fx_ff_actuals_collector.py'
       - 'fx_cftc_tff_collector.py'
       - 'fx_range_context.py'
+      - 'fx_signal_fusion_refresh.py'
       - 'build_integrated_fx_audit.py'
       - 'test_fx_macro_engine.py'
       - '.github/workflows/fx-unified-macro.yml'
@@ -85,7 +86,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add fx_macro_raw.json fx_macro_snapshot.json fx_macro_history.json \
-                  fx_macro_news.json fx_unified_signals.json fx_economic_actuals.json \
+                  fx_macro_news.json fx_economic_actuals.json \
                   fx_range_context.json fx_integrated_audit.json
           if [ -f fx_cftc_tff.json ]; then git add fx_cftc_tff.json; fi
           if git diff --cached --quiet; then exit 0; fi
