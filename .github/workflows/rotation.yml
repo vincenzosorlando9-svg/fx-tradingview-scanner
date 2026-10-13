@@ -22,6 +22,8 @@ on:
       - 'fx_signal_fusion_refresh.py'
       - 'fx_news_priority.py'
       - 'test_fx_news_priority.py'
+      - 'fx_calendar_priority.py'
+      - 'test_fx_calendar_priority.py'
       - 'fx_scan_report.py'
       - 'test_fx_scan_report.py'
       - 'forextoolkits_collector.py'
@@ -86,6 +88,11 @@ jobs:
           python -m unittest -v test_fx_news_priority
           python fx_news_priority.py
 
+      - name: Audit critical economic releases and central-bank speech schedules
+        run: |
+          python -m unittest -v test_fx_calendar_priority
+          python fx_calendar_priority.py
+
       - name: Rebuild unified signal board against last verified macro snapshot
         run: python fx_signal_fusion_refresh.py
 
@@ -122,6 +129,11 @@ jobs:
           expected=['report_header','top_five_published_ranking','current_currency_strength','critical_setups_omitted_from_top_five','fifteen_layer_macro_first_audit','full_15_layer_coverage_audit','final_forex_main_signal','layout_contract']
           assert list(report)==expected, 'User-approved fixed 15-layer report order changed'
           news=json.loads(Path('fx_news_priority.json').read_text())
+          radar=json.loads(Path('fx_calendar_priority.json').read_text())
+          assert len(radar['pairs']) == 11
+          assert radar['no_orders_or_alerts'] and radar['no_directional_calendar_votes']
+          assert radar['fxstreet_calendar_coverage'] == 'UNAVAILABLE_OAUTH_REQUIRED_NOT_INGESTED'
+          assert all('scheduled_event_radar' in p for p in json.loads(Path('fx_unified_signals.json').read_text())['all_11'])
           assert len(news['pairs']) == 11
           assert news['no_headline_buy_sell_votes'] and news['no_trades_or_alerts']
           assert all('breaking_policy_news' in p for p in json.loads(Path('fx_unified_signals.json').read_text())['all_11'])
@@ -152,7 +164,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add fx_news_priority.json fx_volatility.json fx_technicals.json fx_rotation_signals.json fx_scan_dashboard.json fx_daily_weekly_levels.json fx_signal_history.json fx_early_rotation.json fx_unified_signals.json fx_scan_report.json fx_scan_report.md
+          git add fx_calendar_priority.json fx_news_priority.json fx_volatility.json fx_technicals.json fx_rotation_signals.json fx_scan_dashboard.json fx_daily_weekly_levels.json fx_signal_history.json fx_early_rotation.json fx_unified_signals.json fx_scan_report.json fx_scan_report.md
           if ! git diff --cached --quiet; then
             git commit -m "Update synchronized FX technical dashboard with Daily and 4H"
             for attempt in 1 2 3 4 5; do
