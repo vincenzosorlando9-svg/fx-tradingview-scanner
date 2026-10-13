@@ -11,7 +11,7 @@ import os
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from fx_macro_collector import PAIRS
+from fx_macro_collector import PAIRS, BOND_PREFIX
 
 UTC = timezone.utc
 CCY = ("USD", "EUR", "GBP", "JPY", "CAD", "AUD", "NZD")
@@ -74,6 +74,50 @@ def observation_recent(m, now, max_date_days=SOURCE_DATE_TOLERANCE_DAYS):
     except ValueError:
         return False
 
+def verified_nominal_bond(key, value):
+    """Exact nominal-bond instrument identity is required for valid comparisons."""
+    try:
+        prefix, currency, tenor = key.split(":")
+        expected = f"{BOND_PREFIX[currency]} {tenor}"
+        return (prefix == "BOND" and tenor in ("2Y", "5Y", "10Y", "30Y")
+                and isinstance(value, dict)
+                and str(value.get("source_instrument") or "").strip().casefold() == expected.casefold()
+                and value.get("unit") == "percent_yield")
+    except (ValueError, KeyError, TypeError):
+        return False
+
+
+def scrub_unsafe_history(previous):
+    """Remove legacy unidentifiable nominal/TIPS observations and orphan day changes.
+
+    Legacy observations without scheduled provenance cannot support intraday deltas.
+    """
+    removed = 0
+    legacy = 0
+    for sample in previous.get("snapshots", []):
+        if not isinstance(sample, dict) or not isinstance(sample.get("metrics"), dict):
+            continue
+        data = sample["metrics"]
+        for key in list(data):
+            if key.startswith("BOND:") and not verified_nominal_bond(key, data[key]):
+                del data[key]
+                removed += 1
+                day_key = key.replace("BOND:", "BOND_DAY_CHANGE:", 1)
+                if day_key in data:
+                    del data[day_key]
+                    removed += 1
+        for key in list(data):
+            if (key.startswith("BOND_DAY_CHANGE:") and
+                key.replace("BOND_DAY_CHANGE:", "BOND:", 1) not in data):
+                del data[key]
+                removed += 1
+        if sample.get("sample_kind") != "SCHEDULED_MACRO":
+            sample["sample_kind"] = "LEGACY_UNVERIFIED_NO_INTRADAY_COMPARISON"
+            legacy += 1
+    return {"removed_unverified_bond_metrics": removed,
+            "legacy_noncomparable_snapshots": legacy}
+
+
 def normalize(raw):
     """Normalize observed source data while preserving missing dates and quote clocks."""
     result = {}
@@ -82,6 +126,10 @@ def normalize(raw):
             if tenor not in ("2Y", "5Y", "10Y", "30Y"):
                 continue
             key = "BOND:" + c + ":" + tenor
+            # Never accept an unlabeled or inflation-linked TIPS instrument.
+            if str(quote.get("source_row") or "").strip().casefold() != (
+                    f"{BOND_PREFIX.get(c, '')} {tenor}").casefold():
+                continue
             result[key] = metric(
                 quote.get("value_pct"), "percent_yield", item.get("url"),
                 item.get("status"), market_date=item.get("market_date"),
@@ -227,14 +275,28 @@ def derived_deltas(metrics, history, now):
                 elapsed = (now - observed).total_seconds() / 60
                 miss = abs(elapsed - window)
                 tolerance = {15: 4, 30: 6, 60: 10}[window]
-                if miss <= tolerance and miss < error:
-                    old = sample.get("metrics", {}).get(k)
-                    if old and valid_number(old.get("v")) and old.get("source") == latest.get("source"):
-                        best, error = (old, observed, elapsed), miss
+                if sample.get("sample_kind") != "SCHEDULED_MACRO":
+                    continue
+                old = sample.get("metrics", {}).get(k)
+                # Compare the source retrieval clocks, not the Python job clocks.
+                prior_fetch = parse_dt(old.get("retrieved_at_utc")) if isinstance(old, dict) else None
+                latest_fetch = parse_dt(latest.get("retrieved_at_utc"))
+                if prior_fetch is None or latest_fetch is None:
+                    continue
+                elapsed = (latest_fetch - prior_fetch).total_seconds() / 60
+                miss = abs(elapsed - window)
+                if (miss <= tolerance and miss < error and old and
+                    valid_number(old.get("v")) and old.get("source") == latest.get("source")):
+                    best, error = (old, prior_fetch, elapsed), miss
             if not best:
                 windows[str(window)] = None
                 continue
             old, observed, elapsed = best
+            if (k.startswith("BOND:") and
+                (not verified_nominal_bond(k, latest) or
+                 not verified_nominal_bond(k, old))):
+                windows[str(window)] = None
+                continue
             if (not observation_recent(latest, now) or
                 not observation_recent(old, observed) or
                 (latest.get("source_status") != old.get("source_status")) or
@@ -267,8 +329,10 @@ def derived_deltas(metrics, history, now):
                 "change": round(delta, 5), "unit": unit,
                 "minutes_between_fetches": round(elapsed, 1),
                 "first_retrieved_at_utc": observed.isoformat(),
-                "last_retrieved_at_utc": now.isoformat(),
-                "timing_evidence": "SAMPLED_FETCH_DIFFERENCE_NOT_VERIFIED_PUBLISHER_MOVE_TIME",
+                "last_retrieved_at_utc": latest.get("retrieved_at_utc"),
+                "sample_origin": "SCHEDULED_MACRO_ONLY",
+                "publisher_quote_time_verified": bool(latest.get("source_observed_at_utc")),
+                "timing_evidence": "SAMPLED_SOURCE_FETCH_DIFFERENCE_NOT_VERIFIED_PUBLISHER_MOVE_TIME",
             }
         output[k] = windows
     return output
@@ -554,24 +618,32 @@ def main():
     dash = read("fx_scan_dashboard.json")
     early = read("fx_early_rotation.json")
     history_data = read("fx_macro_history.json")
+    history_repair = scrub_unsafe_history(history_data)
     history = snapshots_for_history(history_data, now)
+    scheduled_capture = os.environ.get("GITHUB_EVENT_NAME") == "schedule"
     raw_age = age_min(raw.get("collected_at_utc"), now)
     if raw_age is None or not -2 <= raw_age <= MAX_SAMPLE_DELAY_MIN:
         # No stale-looking snapshot may be relabeled "fresh" because this engine runs.
         raw = {"collected_at_utc": raw.get("collected_at_utc"),
                "status": "UNAVAILABLE_FRESH_MACRO_COLLECTION"}
     metrics = {k: v for k, v in normalize(raw).items() if v is not None}
-    deltas = derived_deltas(metrics, history, now)
+    # Pushes and manual runs never invent scheduled 15/30/60m observations.
+    deltas = derived_deltas(metrics, history, now) if scheduled_capture else {}
     spreads = rate_spreads(metrics, deltas, now)
     news = news_context(raw, actuals, now)
-    observed = {"at_utc": now.isoformat(), "metrics": metrics}
-    last = parse_dt(history[-1].get("at_utc")) if history else None
-    # Skip push-trigger bursts; regular collection is roughly 15 minutes.
-    if not last or (now - last).total_seconds() >= 9 * 60:
+    observed = {"at_utc": now.isoformat(), "metrics": metrics,
+                "sample_kind": "SCHEDULED_MACRO", "collection_event": "schedule",
+                "raw_collected_at_utc": raw.get("collected_at_utc")}
+    scheduled_samples = [x for x in history if x.get("sample_kind") == "SCHEDULED_MACRO"]
+    last = parse_dt(scheduled_samples[-1].get("at_utc")) if scheduled_samples else None
+    if (scheduled_capture and raw.get("status") != "UNAVAILABLE_FRESH_MACRO_COLLECTION"
+            and metrics and (not last or (now - last).total_seconds() >= 12 * 60)):
         history.append(observed)
     history = history[-RETENTION:]
-    write("fx_macro_history.json", {"schema_version": 1,
-          "updated_at_utc": now.isoformat(), "snapshots": history})
+    write("fx_macro_history.json", {"schema_version": 2,
+          "updated_at_utc": now.isoformat(), "repair": history_repair,
+          "eligible_samples_only_from": "GITHUB_SCHEDULED_MACRO",
+          "snapshots": history})
     coverage = {
         "bond_tenors": {c: {t: bool(metrics.get("BOND:" + c + ":" + t)) for t in ("2Y","5Y","10Y","30Y")}
                         for c in ("USD","EUR","GBP","JPY","CAD","AUD","NZD","FR","IT")},
@@ -599,6 +671,9 @@ def main():
     snapshot = {"schema_version": 1, "generated_at_utc": now.isoformat(),
         "raw_collected_at_utc": raw.get("collected_at_utc"),
         "metrics": metrics, "observed_fetch_deltas": deltas,
+        "historical_integrity": history_repair,
+        "current_capture_kind": "SCHEDULED_MACRO" if scheduled_capture else "NON_SCHEDULED_NO_DELTAS",
+        "scheduled_samples": sum(x.get("sample_kind") == "SCHEDULED_MACRO" for x in history),
         "same_maturity_yield_spreads": spreads,
         "source_coverage": coverage,
         "timing_note": "Fetched changes are not necessarily actual 15m/30m market changes; source quote timestamps must be validated.",
