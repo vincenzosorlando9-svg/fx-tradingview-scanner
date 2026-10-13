@@ -66,10 +66,13 @@ class ApprovedPublicSourcesTests(unittest.TestCase):
         self.assertIn("Reuters_currency_page:UNAVAILABLE",doc["source_coverage_gaps"])
 
     def test_fxblue_adds_missing_ueda_event_even_when_ff_empty(self):
-        b=parse_fx_blue(page(FX_BLUE,CALENDAR))
-        empty={"status":"VERIFIED","collected_at_utc":UTC,
+        earlier="2026-10-13T04:19:00+00:00"
+        p=page(FX_BLUE,CALENDAR)
+        p["retrieved_at_utc"]=earlier
+        b=parse_fx_blue(p)
+        empty={"status":"VERIFIED","collected_at_utc":earlier,
                "events":[{"title":"Existing Home Sales","currency":"USD","event_at_utc":"2026-10-13T14:00:00+00:00","impact":"Low"}]}
-        doc=make_radar(empty,now=NOW,fx_blue=b)
+        doc=make_radar(empty,now=datetime(2026,10,13,4,20,tzinfo=timezone.utc),fx_blue=b)
         self.assertEqual(doc["calendar_status"],"FRESH_FF_PLUS_FXBLUE")
         self.assertEqual(doc["fx_blue_verified_utc_events"],2)
         self.assertIn("BoJ Governor Ueda speech",
