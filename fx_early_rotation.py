@@ -113,6 +113,46 @@ def currency_cluster(vol,at,offset):
             "pairs":detail,
             "signal_timeframes":["15m","30m"]}
 
+def counter_rotation_watch(pair, data):
+    """AGGRESSIVE early opposing pressure while preserving the original bias.
+
+    Use only CLOSED M15 higher lows / lower highs and M30 net change.
+    Requires 2 sequential M15 closes in new direction + a confirming M30
+    close and a minimum 2-pip two-bar displacement. No break or M5 needed.
+    This is a separate WATCH, NEVER a new executable BUY/SELL main direction.
+    """
+    m15,m30=data["M15"],data["M30"]
+    if len(m15)<4 or len(m30)<2:
+        return {"direction":"NONE","reason":"INSUFFICIENT_CLOSED_15M_30M"}
+    pp=pip(pair)
+    a=(m15[-1]["c"]-m15[-2]["c"])/pp
+    b=(m15[-2]["c"]-m15[-3]["c"])/pp
+    t=(m15[-1]["c"]-m15[-3]["c"])/pp
+    c=(m30[-1]["c"]-m30[-2]["c"])/pp
+    rising_lows=m15[-1]["l"]>m15[-2]["l"]>m15[-3]["l"]
+    falling_highs=m15[-1]["h"]<m15[-2]["h"]<m15[-3]["h"]
+    up=(a>=.5-1e-8 and b>=.5-1e-8 and c>=.5-1e-8 and
+        t>=2.0-1e-8 and rising_lows)
+    down=(a<=-.5+1e-8 and b<=-.5+1e-8 and c<=-.5+1e-8 and
+          t<=-2.0+1e-8 and falling_highs)
+    direction="BUY" if up else "SELL" if down else "NONE"
+    evidence=(["TWO_CONSECUTIVE_CLOSED_M15_HIGHER_CLOSES",
+               "THREE_CLOSED_M15_HIGHER_LOWS",
+               "LAST_CLOSED_M30_POSITIVE",
+               "M15_TWO_BAR_RISE_AT_LEAST_2_PIPS"] if up else
+              ["TWO_CONSECUTIVE_CLOSED_M15_LOWER_CLOSES",
+               "THREE_CLOSED_M15_LOWER_HIGHS",
+               "LAST_CLOSED_M30_NEGATIVE",
+               "M15_TWO_BAR_DROP_AT_LEAST_2_PIPS"] if down else [])
+    return {"direction":direction,"evidence":evidence,
+            "two_m15_net_pips":round(t,2),
+            "last_m15_pips":round(a,2),
+            "prior_m15_pips":round(b,2),
+            "last_m30_pips":round(c,2),
+            "first_detectable_closed_m15_utc":m15[-1]["close_utc"] if direction!="NONE" else None,
+            "no_breakout_required":True,"execution_allowed":False,
+            "stage":"POSSIBLE_OPPOSITE_ROTATION_WATCH_NOT_CONFIRMED"}
+
 def directional_pressure(pair, data):
     """Price-structure rotation on CLOSED 15m and 30m candles, no break required.
 
@@ -177,6 +217,7 @@ def detect_pair(pair,vol,at,offset,cluster,calendar=None):
     data=pair_bars(vol,pair,at,offset)
     m15,m30=data["M15"],data["M30"]
     pressure=directional_pressure(pair,data)
+    counter_watch=counter_rotation_watch(pair,data)
     base={"pair":pair,"observation_at_utc":at.isoformat(),
           "direction":"NONE","stage":"WAIT","execution_allowed":False,
           "entry":None,"stop":None,"tp1":None,"tp2":None,
@@ -269,6 +310,7 @@ def detect_pair(pair,vol,at,offset,cluster,calendar=None):
                 trend_strength_score_50pct=round(strength_score,2),
                 research_rank_score=score,
                 pressure_evidence=pressure,
+                possible_opposite_rotation=counter_watch,
                 fresh_trigger=direction!="NONE",
                 direction_invalidation_reference=inv,
                 reversal_watch_no_break_required=stage=="EARLY_DIRECTIONAL_ROTATION",
