@@ -134,6 +134,26 @@ def normalize(raw):
              cnh.get("status"),source_observed_at_utc=cnh.get("quote_timestamp_utc"),
              retrieved_at_utc=fx.get("retrieved_at_utc"))
     if m: result["CHINA:USD_CNH"]=m
+    # Secondary public dated Trading Economics non-crude benchmark references.
+    # ForexCracked is the preferred source when it has the instrument.
+    # Never import WTI or Brent from a source other than OilPrice.com.
+    te = raw.get("noncrude_te_secondary") or {}
+    for symbol, item in (te.get("commodities") or {}).items():
+        if symbol not in ("GOLD","SILVER","COPPER","IRON_ORE","COAL",
+                          "EU_GAS","NATURAL_GAS"):
+            continue
+        key="COMMODITY:"+symbol
+        if key in result:
+            continue
+        m=metric(item.get("value"),item.get("unit","unspecified"),
+                 item.get("source_url") or te.get("url"),
+                 "TE_SECONDARY_"+str(item.get("status") or "UNDATED"),
+                 market_date=item.get("market_date"),
+                 retrieved_at_utc=item.get("retrieved_at_utc") or te.get("retrieved_at_utc"))
+        if m:
+            m["source_priority"]="SECONDARY_FALLBACK_FOREXCRACKED_NOT_AVAILABLE"
+            m["verified_intraday_quote"]=False
+            result[key]=m
     oil = raw.get("oilprice") or {}
     for symbol, item in (oil.get("commodities") or {}).items():
         if symbol not in ("WTI", "BRENT"):
@@ -545,6 +565,7 @@ def main():
         "policy_observations_count": sum(k.startswith("POLICY:") for k in metrics),
         "index_observations_count": sum(k.startswith("INDEX:") for k in metrics),
         "commodity_observations_count": sum(k.startswith("COMMODITY:") for k in metrics),
+        "TE_secondary_noncrude_status": raw.get("noncrude_te_secondary",{}).get("status","UNAVAILABLE"),
         "fx_pairs_indicative_count": len(raw.get("forexcracked", {}).get("pairs", {})),
         "USDCNH_china_indicative_context": "PRESENT" if "CHINA:USD_CNH" in metrics else "UNAVAILABLE",
         "CFTC_report": cftc.get("status", "UNAVAILABLE"),
