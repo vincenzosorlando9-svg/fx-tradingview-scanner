@@ -40,6 +40,21 @@ def market_open(when):
                 (dow==6 and hm<17*60))
 
 
+def continuous_during_market_hours(previous_close,next_close,period):
+    """Missing trading-hours candle blocks; normal spot-FX weekend gap doesn't."""
+    if next_close<=previous_close:
+        return False
+    if (next_close-previous_close).total_seconds()==period:
+        return True
+    cursor=previous_close+timedelta(seconds=period)
+    while cursor<next_close:
+        # A candle belongs to the session of its OPEN, not its CLOSE.
+        if market_open(cursor-timedelta(seconds=period)):
+            return False
+        cursor+=timedelta(seconds=period)
+    return True
+
+
 def validate(vol,now,slot_close=None):
     """A snapshot PASS requires exact expected latest CLOSED bar on all 11 pairs.
 
@@ -89,7 +104,7 @@ def validate(vol,now,slot_close=None):
                 result["missing"].append(f"{pair}:{tf}:INSUFFICIENT_HISTORY")
                 complete=False
             for prior,nxt in zip(last,last[1:]):
-                if (nxt["close_dt"]-prior["close_dt"]).total_seconds()!=period:
+                if not continuous_during_market_hours(prior["close_dt"],nxt["close_dt"],period):
                     result["missing"].append(f"{pair}:{tf}:NON_CONTIGUOUS_HISTORY_{prior['close_utc']}")
                     complete=False
         result["observed_closes"][pair]=observations
