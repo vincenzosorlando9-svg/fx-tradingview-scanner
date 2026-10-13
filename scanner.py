@@ -9,8 +9,9 @@ PAIRS = [
     "EURCAD", "USDCAD", "EURGBP"
 ]
 
+# User rule: no M5 data collection or M5 signal confirmation. Closed M15/M30
+# drive direction; 1H/4H/Daily are context only.
 TIMEFRAMES = {
-    "5m": Interval.INTERVAL_5_MINUTES,
     "15m": Interval.INTERVAL_15_MINUTES,
     "30m": Interval.INTERVAL_30_MINUTES,
     "1H": Interval.INTERVAL_1_HOUR,
