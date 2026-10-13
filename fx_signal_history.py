@@ -105,7 +105,8 @@ def main():
         score=max(0,min(float(score or 0),11))
         # 50% opportunity freshness and 50% directional strength.
         stage_score={"EARLY":1,"CONFIRMING":.85,"CONTINUATION":.6,"EXTENDED":.15}.get(raw,.3)
-        maturity_penalty=.30 if isinstance(travelled,(int,float)) and travelled>=20 else 0
+        # Target opportunity is 40-50 pips; twenty pips alone is not exhausted.
+        maturity_penalty=.30 if isinstance(travelled,(int,float)) and travelled>=50 else 0
         opportunity=max(0,stage_score-maturity_penalty)
         rank_score=round(.5*opportunity+.5*score/11,3)
         episode_board.append({
