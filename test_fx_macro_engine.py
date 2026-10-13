@@ -264,71 +264,100 @@ class FusionTests(unittest.TestCase):
         self.assertTrue(observation_recent(m,NOW))
         self.assertIsNone(m["source_observed_at_utc"])
 
+    def nominal(self, value, tenor="10Y", at=None):
+        from fx_macro_engine import metric
+        m = metric(value, "percent_yield", "TE", "DATED_REFERENCE",
+                   market_date="2026-10-13",
+                   retrieved_at_utc=(at or NOW).isoformat())
+        m["source_instrument"] = "US " + tenor
+        return m
+
+    def sample(self, data, key="BOND:USD:10Y", minutes=30, kind="SCHEDULED_MACRO"):
+        return {"at_utc": (NOW-timedelta(minutes=minutes)).isoformat(),
+                "sample_kind": kind, "metrics": {key: data}}
+
     def test_deltas_require_sample_and_unchanged_source(self):
-        old = metric(4.8, "percent_yield", "TE", "DATED_REFERENCE",
-                     market_date="2026-10-13")
-        new = metric(4.76, "percent_yield", "TE", "DATED_REFERENCE",
-                     market_date="2026-10-13")
-        hist = [{"at_utc":(NOW-timedelta(minutes=30)).isoformat(),
-                 "metrics":{"BOND:USD:2Y": old}}]
-        delta = derived_deltas({"BOND:USD:2Y":new},hist,NOW)
-        self.assertAlmostEqual(delta["BOND:USD:2Y"]["30"]["change"], -4)
-        hist[0]["metrics"]["BOND:USD:2Y"]["source"] = "not TE"
+        old=self.nominal(4.8,"2Y",NOW-timedelta(minutes=30))
+        new=self.nominal(4.76,"2Y")
+        hist=[self.sample(old,key="BOND:USD:2Y")]
+        delta=derived_deltas({"BOND:USD:2Y":new},hist,NOW)
+        self.assertAlmostEqual(delta["BOND:USD:2Y"]["30"]["change"],-4)
+        self.assertEqual(delta["BOND:USD:2Y"]["30"]["sample_origin"],"SCHEDULED_MACRO_ONLY")
+        hist[0]["metrics"]["BOND:USD:2Y"]["source"]="not TE"
         self.assertIsNone(derived_deltas({"BOND:USD:2Y":new},hist,NOW)["BOND:USD:2Y"]["30"])
 
     def test_nominal_yield_never_compared_to_historical_TIPS(self):
-        # Earlier scraper accidentally recorded US 10Y TIPS as US 10Y.
-        # Its historical observation must not contaminate the new nominal feed.
-        old = metric(2.86, "percent_yield", "TE", "DATED_REFERENCE",
-                     market_date="2026-10-13")
-        old["source_instrument"] = "US 10Y TIPS"
-        new = metric(5.20, "percent_yield", "TE", "DATED_REFERENCE",
-                     market_date="2026-10-13")
-        new["source_instrument"] = "US 10Y"
-        sample = [{"at_utc": (NOW-timedelta(minutes=30)).isoformat(),
-                   "metrics": {"BOND:USD:10Y": old}}]
-        self.assertIsNone(derived_deltas({"BOND:USD:10Y": new},
-                          sample, NOW)["BOND:USD:10Y"]["30"])
+        old=self.nominal(2.86,at=NOW-timedelta(minutes=30))
+        old["source_instrument"]="US 10Y TIPS"
+        new=self.nominal(5.2)
+        self.assertIsNone(derived_deltas({"BOND:USD:10Y":new},
+                          [self.sample(old)],NOW)["BOND:USD:10Y"]["30"])
+
+    def test_unidentified_legacy_yield_must_not_be_trusted(self):
+        from fx_macro_engine import verified_nominal_bond, scrub_unsafe_history
+        old=self.nominal(2.86,at=NOW-timedelta(minutes=30))
+        old.pop("source_instrument")
+        hist={"snapshots":[self.sample(old,kind="LEGACY")]}
+        self.assertFalse(verified_nominal_bond("BOND:USD:10Y",old))
+        repaired=scrub_unsafe_history(hist)
+        self.assertEqual(repaired["removed_unverified_bond_metrics"],1)
+        self.assertNotIn("BOND:USD:10Y",hist["snapshots"][0]["metrics"])
+        self.assertEqual(hist["snapshots"][0]["sample_kind"],
+                         "LEGACY_UNVERIFIED_NO_INTRADAY_COMPARISON")
+
+    def test_scrub_removes_tips_but_retains_other_context(self):
+        from fx_macro_engine import scrub_unsafe_history
+        tips=self.nominal(2.86,at=NOW-timedelta(minutes=30))
+        tips["source_instrument"]="US 10Y TIPS"
+        other=metric(123.0,"index_points","TE","DATED_REFERENCE",market_date="2026-10-13")
+        history={"snapshots":[{"at_utc":(NOW-timedelta(minutes=30)).isoformat(),
+                  "metrics":{"BOND:USD:10Y":tips, "BOND_DAY_CHANGE:USD:10Y":metric(1,"publisher_daily_change_bps","TE","DATED_REFERENCE"),
+                             "INDEX:KOSPI":other}}]}
+        repair=scrub_unsafe_history(history)
+        self.assertEqual(repair["removed_unverified_bond_metrics"],2)
+        self.assertEqual(list(history["snapshots"][0]["metrics"]),["INDEX:KOSPI"])
+
+    def test_legacy_nominal_sample_without_scheduled_origin_cannot_vote(self):
+        old=self.nominal(5.18,at=NOW-timedelta(minutes=30))
+        new=self.nominal(5.19)
+        delta=derived_deltas({"BOND:USD:10Y":new},
+                             [self.sample(old,kind="LEGACY_UNVERIFIED_NO_INTRADAY_COMPARISON")],NOW)
+        self.assertIsNone(delta["BOND:USD:10Y"]["30"])
 
     def test_pushed_snapshots_are_not_treated_as_30min_observations(self):
-        old = metric(4.8, "percent_yield", "TE", "DATED_REFERENCE",
-                     market_date="2026-10-13")
-        new = metric(4.76, "percent_yield", "TE", "DATED_REFERENCE",
-                     market_date="2026-10-13")
-        sample = [{"at_utc": (NOW-timedelta(minutes=18)).isoformat(),
-                   "metrics": {"BOND:USD:2Y": old}}]
-        self.assertIsNone(derived_deltas({"BOND:USD:2Y": new},
-                          sample, NOW)["BOND:USD:2Y"]["30"])
+        old=self.nominal(4.8,"2Y",NOW-timedelta(minutes=18))
+        new=self.nominal(4.76,"2Y")
+        self.assertIsNone(derived_deltas({"BOND:USD:2Y":new},
+                          [self.sample(old,key="BOND:USD:2Y",minutes=18)],NOW)["BOND:USD:2Y"]["30"])
 
-    def test_suspect_rate_shock_does_not_vote_without_confirmation(self):
-        old = metric(2.5, "percent_yield", "TE", "DATED_REFERENCE",
-                     market_date="2026-10-13")
-        new = metric(5.2, "percent_yield", "TE", "DATED_REFERENCE",
-                     market_date="2026-10-13")
-        sample = [{"at_utc": (NOW-timedelta(minutes=15)).isoformat(),
-                   "metrics": {"BOND:USD:10Y": old}}]
-        self.assertIsNone(derived_deltas({"BOND:USD:10Y": new},
-                          sample, NOW)["BOND:USD:10Y"]["15"])
+    def test_fetch_time_not_job_time_determines_30m_window(self):
+        old=self.nominal(4.8,"2Y",NOW-timedelta(minutes=5))
+        new=self.nominal(4.76,"2Y")
+        # Job clock looks like a 30-minute interval, but source fetch is 5 minutes.
+        history=[self.sample(old,key="BOND:USD:2Y",minutes=30)]
+        self.assertIsNone(derived_deltas({"BOND:USD:2Y":new},history,NOW)["BOND:USD:2Y"]["30"])
 
-    def test_nominal_yield_never_compared_to_tips_historical(self):
-        old = metric(2.86,"percent_yield","TE","DATED_REFERENCE",market_date="2026-10-13")
-        old["source_instrument"]="US 10Y TIPS"
-        newer = metric(5.20,"percent_yield","TE","DATED_REFERENCE",market_date="2026-10-13")
-        newer["source_instrument"]="US 10Y"
-        hist=[{"at_utc":(NOW-timedelta(minutes=30)).isoformat(),
-               "metrics":{"BOND:USD:10Y":old}}]
-        self.assertIsNone(derived_deltas({"BOND:USD:10Y":newer},hist,NOW)["BOND:USD:10Y"]["30"])
-        old["source_instrument"]="US 10Y"
-        # Unusually large shift must not become a directional vote.
-        self.assertIsNone(derived_deltas({"BOND:USD:10Y":newer},hist,NOW)["BOND:USD:10Y"]["30"])
+    def test_unverified_yield_shock_270bps_never_votes(self):
+        old=self.nominal(2.5,at=NOW-timedelta(minutes=15))
+        new=self.nominal(5.2)
+        self.assertIsNone(derived_deltas({"BOND:USD:10Y":new},
+                          [self.sample(old,minutes=15)],NOW)["BOND:USD:10Y"]["15"])
 
-    def test_burst_snapshots_not_mislabelled_30m_move(self):
-        old=metric(4.80,"percent_yield","TE","DATED_REFERENCE",market_date="2026-10-13")
-        new=metric(4.76,"percent_yield","TE","DATED_REFERENCE",market_date="2026-10-13")
-        hist=[{"at_utc":(NOW-timedelta(minutes=18)).isoformat(),
-               "metrics":{"BOND:USD:2Y":old}}]
-        d=derived_deltas({"BOND:USD:2Y":new},hist,NOW)["BOND:USD:2Y"]
-        self.assertIsNone(d["30"])
+    def test_missing_retrieval_clock_refuses_intraday_delta(self):
+        old=self.nominal(5.18,at=NOW-timedelta(minutes=30))
+        old["retrieved_at_utc"]=None
+        new=self.nominal(5.19)
+        self.assertIsNone(derived_deltas({"BOND:USD:10Y":new},
+                          [self.sample(old)],NOW)["BOND:USD:10Y"]["30"])
+
+    def test_exact_source_instrument_is_required_in_normalization(self):
+        raw={"bonds":{"USD":{"url":"TE","status":"DATED_REFERENCE",
+                    "market_date":"2026-10-13","retrieved_at_utc":NOW.isoformat(),
+                    "maturities":{"10Y":{"value_pct":2.86,"source_row":"US 10Y TIPS"},
+                                  "5Y":{"value_pct":4.95,"source_row":"US 5Y"}}}}}
+        normalized=normalize(raw)
+        self.assertNotIn("BOND:USD:10Y",normalized)
+        self.assertIn("BOND:USD:5Y",normalized)
 
     def test_no_spread_of_non_matching_maturities(self):
         items = {"BOND:USD:2Y": metric(4.8,"percent_yield","TE","DATED_REFERENCE",market_date="2026-10-13"),
