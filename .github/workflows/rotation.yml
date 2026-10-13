@@ -12,6 +12,8 @@ on:
       - 'fx_early_rotation.py'
       - 'test_fx_early_rotation.py'
       - 'test_fx_reversal_early.py'
+      - 'test_fx_mobile_alerts.py'
+      - 'fx_mobile_alerts.py'
       - 'fx_reversal_replay_oct12.json'
       - 'fx_daily_weekly_levels.py'
       - 'forextoolkits_collector.py'
@@ -22,6 +24,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: fx-early-rotation
@@ -62,8 +65,8 @@ jobs:
       - name: Build consolidated FX dashboard
         run: python fx_dashboard.py
 
-      - name: Replay October 12 AUDJPY and USD/CAD early reversal scenarios
-        run: python -m unittest -v test_fx_early_rotation test_fx_reversal_early
+      - name: Replay directional reversals and keyless mobile notification safeguards
+        run: python -m unittest -v test_fx_early_rotation test_fx_reversal_early test_fx_mobile_alerts
 
       - name: Publish early directional rotation and JPY cluster warnings
         run: python fx_early_rotation.py
@@ -98,11 +101,17 @@ jobs:
           print('Dashboard structure validated; fresh individual candles remain separately gated by source_valid')
           PY
 
+      - name: Publish new assigned GitHub Issue early alerts (NO external API key)
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          FX_ALERT_ASSIGNEE: vincenzosorlando9-svg
+        run: python fx_mobile_alerts.py
+
       - name: Commit signal files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add fx_volatility.json fx_technicals.json fx_rotation_signals.json fx_scan_dashboard.json fx_daily_weekly_levels.json fx_signal_history.json fx_early_rotation.json
+          git add fx_volatility.json fx_technicals.json fx_rotation_signals.json fx_scan_dashboard.json fx_daily_weekly_levels.json fx_signal_history.json fx_early_rotation.json fx_mobile_alert_state.json
           if ! git diff --cached --quiet; then
             git commit -m "Update synchronized FX technical dashboard with Daily and 4H"
             git pull --rebase origin main
