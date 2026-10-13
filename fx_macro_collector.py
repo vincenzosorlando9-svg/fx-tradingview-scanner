@@ -287,6 +287,69 @@ def parse_index(page, symbol):
         obj["value"] = None
     return obj
 
+
+def parse_te_noncrude(page):
+    """Dated Trading Economics commodity TABLE fallback, never OilPrice crude."""
+    data={"source":"Trading Economics public commodities table (secondary to ForexCracked)",
+          "url":page["url"],"retrieved_at_utc":page["retrieved_at_utc"],
+          "status":page["http_status"],"commodities":{},
+          "verified_intraday_quote":False}
+    if page["http_status"]!="OK":
+        return data
+    soup=BeautifulSoup(page["body"],"html.parser")
+    supported={
+        "GOLD":(r"Gold\s+USD/t\.oz","USD_per_troy_oz"),
+        "SILVER":(r"Silver\s+USD/t\.oz","USD_per_troy_oz"),
+        "COPPER":(r"Copper\s+USD/Lbs","USD_per_lb"),
+        "IRON_ORE":(r"Iron Ore\s+USD/T","USD_per_tonne"),
+        "COAL":(r"Coal\s+USD/T","USD_per_tonne"),
+        "EU_GAS":(r"EU Gas\s+EUR/MWh","EUR_per_MWh"),
+        "NATURAL_GAS":(r"Natural gas\s+USD/MMBtu","USD_per_MMBtu"),
+    }
+    date_now=utcnow().date()
+    for table in soup.find_all("table"):
+        head=" ".join(x.get_text(" ",strip=True) for x in table.find_all("th")[:12]).lower()
+        if "price" not in head or ("date" not in head and "monthly" not in head):
+            continue
+        for tr in table.find_all("tr"):
+            cells=[x.get_text(" ",strip=True) for x in tr.find_all(["td","th"],recursive=False)]
+            if len(cells)<4:
+                continue
+            label=cells[0].strip()
+            candidate=next(((k,unit) for k,(pattern,unit) in supported.items()
+                            if re.fullmatch(pattern,label,re.I)),None)
+            if not candidate:
+                continue
+            key,unit=candidate
+            v=numeric(cells[1])
+            if v is None or v<=0 or v>1_000_000:
+                continue
+            daychg=next((numeric(c) for c in cells[2:5] if re.fullmatch(
+                r"[+\-]?\d+(?:\.\d+)?\s*%",c.replace(",",""))),None)
+            dated=next((c for c in reversed(cells) if re.fullmatch(
+                r"[A-Za-z]{3}/\d{1,2}",c.strip())),None)
+            date_iso=None
+            if dated:
+                try:
+                    d=datetime.strptime(dated+"/"+str(date_now.year),"%b/%d/%Y").date()
+                    if d > date_now+timedelta(days=1):
+                        d=d.replace(year=d.year-1)
+                    date_iso=d.isoformat()
+                except ValueError:
+                    pass
+            status=reference_status(date_iso)
+            if status in ("UNDATED_REFERENCE","FUTURE_DATED_REJECTED"):
+                continue
+            data["commodities"][key]={
+                "value":v, "unit":unit,"daily_change_pct":daychg,
+                "market_date":date_iso,"status":status,
+                "verified_intraday_quote":False,
+                "source":"Trading Economics public commodity table",
+                "source_url":page["url"],
+                "retrieved_at_utc":page["retrieved_at_utc"]}
+    data["status"]="DATED_PUBLIC_COMMODITY_REFERENCES" if data["commodities"] else "UNAVAILABLE_NO_RECOGNIZED_COMMODITY_ROWS"
+    return data
+
 def parse_forexcracked(page):
     result = {"source": "ForexCracked live-market-rates public page",
               "url": page["url"], "retrieved_at_utc": page["retrieved_at_utc"],
@@ -520,7 +583,8 @@ def collect():
         if c in ("USD", "EUR", "GBP", "JPY", "CAD", "AUD", "NZD"):
             tasks["policy:" + c] = BASE_TE + ("euro-area" if c == "EUR" else slug) + "/interest-rate"
     tasks.update({"risk:" + k: BASE_TE + v for k, v in RISK_PAGES.items()})
-    tasks.update({"forexcracked": FOREXCRACKED, "oilprice": OILPRICE,
+    tasks.update({"te_noncrude": BASE_TE+"commodities",
+                  "forexcracked": FOREXCRACKED, "oilprice": OILPRICE,
                   "feargreed": FEAR_GREED})
     tasks.update({"news:" + k: v for k, v in NEWS_URLS.items()})
     pages = {}
@@ -537,6 +601,7 @@ def collect():
            "scope": "PUBLIC_KEYLESS_MARKET_REFERENCES_NOT_BROKER_LIVE",
            "configured_countries": list(COUNTRIES), "covered_fx_pairs": list(PAIRS),
            "bonds": bonds, "policy_rates": policies, "indices": risk,
+           "noncrude_te_secondary": parse_te_noncrude(pages["te_noncrude"]),
            "forexcracked": parse_forexcracked(pages["forexcracked"]),
            "oilprice": parse_oilprice(pages["oilprice"]),
            "feargreedmeter": parse_feargreed(pages["feargreed"]),
