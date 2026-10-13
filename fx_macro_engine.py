@@ -86,6 +86,15 @@ def normalize(raw):
                 quote.get("value_pct"), "percent_yield", item.get("url"),
                 item.get("status"), market_date=item.get("market_date"),
                 retrieved_at_utc=item.get("retrieved_at_utc"))
+            # Public Trading Economics 'Day' is a percentage POINT change in
+            # the published daily bond yield, not an intraday quote movement.
+            published_day_change=quote.get("publisher_day_change_pp")
+            if valid_number(published_day_change):
+                result["BOND_DAY_CHANGE:" + c + ":" + tenor] = metric(
+                    round(published_day_change*100,5), "publisher_daily_change_bps",
+                    item.get("url"), item.get("status"),
+                    market_date=item.get("market_date"),
+                    retrieved_at_utc=item.get("retrieved_at_utc"))
     for c, item in (raw.get("policy_rates") or {}).items():
         m = metric(item.get("policy_rate_pct"), "percent_policy", item.get("url"),
                    item.get("status"), market_date=item.get("reference_date"),
@@ -234,6 +243,11 @@ def rate_spreads(metrics, deltas, now):
                           "market_date": a.get("market_date"),
                           "tenor": tenor, "source": "Trading Economics public government bonds",
                           "clock_accuracy": "DATE_ONLY_NOT_INTRADAY_QUOTE"}
+                daily_a=metrics.get("BOND_DAY_CHANGE:" + base + ":" + tenor)
+                daily_b=metrics.get("BOND_DAY_CHANGE:" + quote + ":" + tenor)
+                if daily_a and daily_b and observation_recent(daily_a, now) and observation_recent(daily_b,now):
+                    spread["publisher_daily_spread_change_bps"]=round(daily_a["v"]-daily_b["v"],3)
+                    spread["publisher_daily_change_clock"]="PUBLISHED_DAY_CLOSE_REFERENCE_NOT_15M_30M"
                 for window in WINDOWS_MIN:
                     x = (deltas.get(k1) or {}).get(str(window))
                     y = (deltas.get(k2) or {}).get(str(window))
@@ -262,7 +276,10 @@ def evidence_for_pair(pair, spreads, deltas, metrics, now):
                 "Relative " + base + "/" + quote + " yield changes over matching observed sample windows",
                 "INDICATIVE_SAMPLED_NOT_QUOTE_TIMESTAMPED")
         risk.append({"driver": "YIELD_SPREAD_" + tenor,
-                     "level_bps": r["level_bps"], "market_date": r["market_date"]})
+                     "level_bps": r["level_bps"], "market_date": r["market_date"],
+                     "published_daily_spread_change_bps": r.get("publisher_daily_spread_change_bps"),
+                     "published_daily_change_status":r.get("publisher_daily_change_clock",
+                                                           "UNAVAILABLE")})
     # Crude, gold and risk movements require two separate observed page values.
     def sampled(name, minimum=0.3):
         key = ("COMMODITY:" if name in ("WTI", "BRENT", "GOLD", "COPPER", "IRON_ORE") else
