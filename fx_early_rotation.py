@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Closed-candle early FX opportunity watches. Research only, never trade orders.
+"""FX directional watch: CLOSED 15m/30m detect; 1H/4H are longer context.
 
-The independent M5 pressure gate is deliberately a WATCH, not an executable
-signal. An M15 close upgrades it. Never use future bars in historical replay.
+M5 is NOT read, scored, or used for direction, alerts, episode prices, or rank.
+All outputs are research watches, never executable orders.
 """
 import json
 import math
@@ -12,7 +12,7 @@ from zoneinfo import ZoneInfo
 
 PAIRS=("AUDUSD","NZDUSD","EURUSD","GBPUSD","USDJPY","AUDJPY","NZDJPY","EURJPY","EURCAD","USDCAD","EURGBP")
 JPY=("AUDJPY","NZDJPY","EURJPY","USDJPY")
-TIMEFRAME={"M5":300,"M15":900,"M30":1800,"H1":3600,"H4":14400,"D1":86400}
+TIMEFRAME={"M15":900,"M30":1800,"H1":3600,"H4":14400,"D1":86400}
 UTC=timezone.utc
 ET=ZoneInfo("America/New_York")
 
@@ -82,34 +82,36 @@ def event_checks(pair,calendar,at):
 
 def pair_bars(vol,pair,at,offset):
     tf=((vol.get("pairs") or {}).get(pair) or {}).get("tf") or {}
-    return {k:closed_bars(tf.get(k),k,at,offset) for k in ("M5","M15","M30","H1","H4","D1")}
+    return {k:closed_bars(tf.get(k),k,at,offset) for k in ("M15","M30","H1","H4","D1")}
 
 def currency_cluster(vol,at,offset):
-    """JPY buying breadth: each JPY cross down since preceding M15 close."""
+    """JPY crosses evaluated ONLY with closed 15m and 30m candles."""
     detail={}
     for pair in JPY:
-        candles=pair_bars(vol,pair,at,offset)
-        m5,m15=candles["M5"],candles["M15"]
-        if len(m5)<2 or len(m15)<2:
+        bars=pair_bars(vol,pair,at,offset)
+        m15,m30=bars["M15"],bars["M30"]
+        if len(m15)<2 or len(m30)<2:
             detail[pair]={"direction":"UNAVAILABLE"};continue
-        # As soon as M15 closes, compare with preceding M15, otherwise use
-        # latest CLOSED M5 against last CLOSED M15. Neither uses future prices.
-        latest_m15_close=m15[-1]["close_dt"]
-        just_closed=timedelta(0)<=at-latest_m15_close<=timedelta(minutes=3)
-        first=m15[-2]["c"] if just_closed else m15[-1]["c"]
-        last=m15[-1]["c"] if just_closed else m5[-1]["c"]
-        movement=round((last-first)/pip(pair),2)
-        detail[pair]={"direction":"JPY_STRENGTH" if movement<=-0.5 else
-                      "JPY_WEAKNESS" if movement>=0.5 else "NEUTRAL",
-                      "move_pips":movement,
-                      "reference_kind":"M15_CLOSE" if just_closed else "M5_VS_LAST_M15",
-                      "last_close_utc":m15[-1]["close_utc"] if just_closed else m5[-1]["close_utc"]}
+        delta15=(m15[-1]["c"]-m15[-2]["c"])/pip(pair)
+        delta30=(m30[-1]["c"]-m30[-2]["c"])/pip(pair)
+        # The 30m direction is corroborating context and not a strict veto
+        # on the first 15m rotation when a 30m candle has not yet closed.
+        down=delta15<=-.5 and (delta30<=0 or delta15<=-2)
+        up=delta15>=.5 and (delta30>=0 or delta15>=2)
+        detail[pair]={"direction":"JPY_STRENGTH" if down else
+                      "JPY_WEAKNESS" if up else "NEUTRAL",
+                      "move_15m_pips":round(delta15,2),
+                      "move_30m_pips":round(delta30,2),
+                      "reference_kind":"CLOSED_M15_AND_M30_ONLY",
+                      "last_15m_close_utc":m15[-1]["close_utc"],
+                      "last_30m_close_utc":m30[-1]["close_utc"]}
     down=sum(v["direction"]=="JPY_STRENGTH" for v in detail.values())
     valid=sum(v["direction"]!="UNAVAILABLE" for v in detail.values())
     return {"jpy_strength_crosses":down,"covered_crosses":valid,
             "status":"BROAD_JPY_STRENGTH" if down>=3 and valid==4 else
                      "PARTIAL_JPY_STRENGTH" if down>=2 else "NO_BROAD_JPY_STRENGTH",
-            "pairs":detail}
+            "pairs":detail,
+            "signal_timeframes":["15m","30m"]}
 
 def directional_pressure(pair, data):
     """Price-structure rotation on CLOSED 15m and 30m candles, no break required.
@@ -117,8 +119,8 @@ def directional_pressure(pair, data):
     This is evidence of deteriorating trend, not verified sell/buy execution.
     The detector examines all 11 pairs symmetrically, not tuned to USD/CAD.
     """
-    m15,m30,m5=data["M15"],data["M30"],data["M5"]
-    if len(m15)<9 or len(m30)<3 or len(m5)<3:
+    m15,m30=data["M15"],data["M30"]
+    if len(m15)<9 or len(m30)<3:
         return {"status":"INSUFFICIENT_DATA","direction":"NONE","score":0}
     pp=pip(pair)
     recent=m15[-4:]; earlier=m15[-8:-4]
@@ -151,9 +153,7 @@ def directional_pressure(pair, data):
     n_down=sum(down.values()); n_up=sum(up.values())
     direction=("SELL" if n_down>=3 and n_down>=n_up+2 else
                "BUY" if n_up>=3 and n_up>=n_down+2 else "NONE")
-    # An opposing last M5 candle is normal near a turning point. Report it;
-    # don't veto the earlier directional WATCH or falsely call it confirmed.
-    last_m5_change=(m5[-1]["c"]-m5[-2]["c"])/pp
+    # Counter-candles on M15 are evidence, not a veto against the structure.
     return {
         "status":"OBSERVED_CLOSED_CANDLES","direction":direction,
         "score":max(n_down,n_up),"sell_evidence":n_down,"buy_evidence":n_up,
@@ -163,9 +163,9 @@ def directional_pressure(pair, data):
         "low_shift_pips":round(low_shift,2),
         "four_bar_m15_change_pips":round(change_15m,2),
         "two_bar_m30_change_pips":round(change_30m,2),
-        "last_closed_m5_change_pips":round(last_m5_change,2),
-        "last_m5_conflicts":(direction=="SELL" and last_m5_change>0) or
-                             (direction=="BUY" and last_m5_change<0),
+        "last_closed_m15_change_pips":round((m15[-1]["c"]-m15[-2]["c"])/pp,2),
+        "last_m15_conflicts":(direction=="SELL" and m15[-1]["c"]>m15[-2]["c"]) or
+                             (direction=="BUY" and m15[-1]["c"]<m15[-2]["c"]),
         "invalidation_reference":max(old_high,new_high) if direction=="SELL" else
                                   min(old_low,new_low) if direction=="BUY" else None,
         "no_breakout_required":True,
@@ -173,8 +173,9 @@ def directional_pressure(pair, data):
     }
 
 def detect_pair(pair,vol,at,offset,cluster,calendar=None):
+    """Direction is exclusively derived from 15m/30m; 1H/4H contextual only."""
     data=pair_bars(vol,pair,at,offset)
-    m5,m15=data["M5"],data["M15"]
+    m15,m30=data["M15"],data["M30"]
     pressure=directional_pressure(pair,data)
     base={"pair":pair,"observation_at_utc":at.isoformat(),
           "direction":"NONE","stage":"WAIT","execution_allowed":False,
@@ -182,89 +183,86 @@ def detect_pair(pair,vol,at,offset,cluster,calendar=None):
           "outcome_target_pips":[40,50],
           "target_status":"ASPIRATIONAL_NOT_VERIFIED_OPEN_ROOM",
           "source":"FOREXTOOLKITS_CLOSED_OHLC_UPSTREAM_FRESHNESS_UNVERIFIED",
-          "status":"PARTIAL_TECHNICAL_RESEARCH_ONLY"}
+          "status":"PARTIAL_TECHNICAL_RESEARCH_ONLY",
+          "signal_timeframes":["15m","30m"],
+          "context_timeframes":["1H","4H"],
+          "excluded_timeframes":["5m"]}
     cal_status,events=event_checks(pair,calendar,at)
     base["calendar_status"]=cal_status
     base["upcoming_events"]=events
     base["event_within_120_min"]=any(0<= (parse(e["at_utc"])-at).total_seconds()<=7200 for e in events)
-    if len(m5)<7 or len(m15)<9:
-        return dict(base,reason="INSUFFICIENT_CLOSED_HISTORY")
-    if (at-m5[-1]["close_dt"])>timedelta(minutes=10) or (at-m15[-1]["close_dt"])>timedelta(minutes=20):
-        return dict(base,reason="STALE_CLOSED_CANDLES")
-    # If latest M15 just closed, compare that M15 against the preceding four.
-    # Otherwise use the four M15 candles that have closed so far.
-    just_closed=timedelta(0)<=at-m15[-1]["close_dt"]<=timedelta(minutes=3)
-    reference=m15[-5:-1] if just_closed else m15[-4:]
-    if len(reference)!=4:return dict(base,reason="NO_FOUR_BAR_REFERENCE")
-    high=max(b["h"] for b in reference)
-    low=min(b["l"] for b in reference)
+    if len(m15)<9 or len(m30)<3:
+        return dict(base,reason="INSUFFICIENT_CLOSED_15M_30M_HISTORY")
+    if ((at-m15[-1]["close_dt"])>timedelta(minutes=20) or
+        (at-m30[-1]["close_dt"])>timedelta(minutes=40)):
+        return dict(base,reason="STALE_CLOSED_15M_30M_CANDLES")
+
+    # Four most recent closed M15 candles; 30m adds independent momentum.
+    recent=m15[-4:]
+    prior=m15[-8:-4]
+    high=max(b["h"] for b in prior)
+    low=min(b["l"] for b in prior)
     width=(high-low)/pip(pair)
-    previous=m15[-9:-5] if just_closed else m15[-8:-4]
-    baseline=((max(b["h"] for b in previous)-min(b["l"] for b in previous))/pip(pair)
-              if len(previous)==4 else None)
-    # Compression is an *observed four-bar window*, not an inferred range origin.
-    compression=baseline is not None and baseline>0 and width<=.75*baseline
-    m5current=m5[-1]; m5prev=m5[-2]
+    new_high=max(b["h"] for b in recent)
+    new_low=min(b["l"] for b in recent)
+    recent_width=(new_high-new_low)/pip(pair)
+    compression=width>0 and recent_width<=.75*width
     last15=m15[-1]
-    m5_down=m5current["c"]<low and m5current["c"]<m5prev["c"]
-    m5_up=m5current["c"]>high and m5current["c"]>m5prev["c"]
-    m15_down=just_closed and last15["c"]<low and last15["c"]<m15[-2]["c"]
-    m15_up=just_closed and last15["c"]>high and last15["c"]>m15[-2]["c"]
-    pressure_down=(m5current["c"]<m5prev["c"] and
-                   m5current["c"]<(m15[-2]["c"] if just_closed else m15[-1]["c"]) and
-                   m5current["c"] <=low+.25*(high-low))
-    pressure_up=(m5current["c"]>m5prev["c"] and
-                 m5current["c"]>(m15[-2]["c"] if just_closed else m15[-1]["c"]) and
-                 m5current["c"]>=high-.25*(high-low))
-    # A reversal/rotation need not break a boundary. Favor four independent
-    # price-structure observations over one late EMA or M5 counterbounce.
+    prev15=m15[-2]
+    m15_down=last15["c"]<low and last15["c"]<prev15["c"]
+    m15_up=last15["c"]>high and last15["c"]>prev15["c"]
+    momentum15=(last15["c"]-m15[-3]["c"])/pip(pair)
+    momentum30=(m30[-1]["c"]-m30[-2]["c"])/pip(pair)
     pressure_dir=pressure.get("direction","NONE")
-    if pressure_dir in ("BUY","SELL"): direction=pressure_dir
-    elif m15_down or m5_down: direction="SELL"
-    elif m15_up or m5_up: direction="BUY"
-    elif pair in JPY and cluster.get("status")=="BROAD_JPY_STRENGTH" and pressure_down:
-        direction="SELL"
-    elif pair in JPY and cluster.get("status")=="NO_BROAD_JPY_STRENGTH" and pressure_up:
-        direction="BUY"
-    else: direction="NONE"
-    if pressure_dir==direction and direction!="NONE" and not (
-        (direction=="SELL" and (m15_down or m5_down)) or
-        (direction=="BUY" and (m15_up or m5_up))):
+
+    # Reversal pressure wins over lagging legacy EMA; do not demand breakout.
+    if pressure_dir in ("BUY","SELL"):
+        direction=pressure_dir
         stage="EARLY_DIRECTIONAL_ROTATION"
+    elif momentum15<=-.5 and momentum30<=-.5 and last15["c"]<prev15["c"]:
+        direction="SELL";stage="EARLY_M15_M30_MOMENTUM"
+    elif momentum15>=.5 and momentum30>=.5 and last15["c"]>prev15["c"]:
+        direction="BUY";stage="EARLY_M15_M30_MOMENTUM"
+    elif m15_down or m15_up:
+        direction="SELL" if m15_down else "BUY"
+        stage="M15_DIRECTIONAL_CONTINUATION"
+    elif pair in JPY and cluster.get("status")=="BROAD_JPY_STRENGTH" and momentum15<0:
+        direction="SELL";stage="EARLY_JPY_CLUSTER_ROTATION"
     else:
-        stage=("BREAKOUT_CONFIRMING" if m15_down or m15_up else
-               "PRE_BREAKOUT_WATCH" if m5_down or m5_up else
-               "EARLY_CLUSTER_ROTATION" if direction!="NONE" else "WAIT")
-    breakout=round((low-m5current["c"])/pip(pair),2) if direction=="SELL" else (
-             round((m5current["c"]-high)/pip(pair),2) if direction=="BUY" else None)
+        direction="NONE";stage="WAIT"
+
     breadth=cluster.get("jpy_strength_crosses",0)
-    cluster_bonus=(breadth/4) if pair in JPY and direction=="SELL" else 0.0
-    trend_evidence=int(m15[-1]["c"]<m15[-2]["c"]) if direction=="SELL" else (
-                   int(m15[-1]["c"]>m15[-2]["c"]) if direction=="BUY" else 0)
+    cluster_bonus=(breadth/4) if pair in JPY and direction=="SELL" else 0.
+    trend_evidence=int(momentum15<0 and momentum30<0) if direction=="SELL" else (
+                   int(momentum15>0 and momentum30>0) if direction=="BUY" else 0)
     evidence_frac=(pressure.get("score",0)/4 if pressure_dir==direction and direction!="NONE" else 0)
-    early_score=(1.0 if (m5_down or m5_up) else
-                 1.0 if pressure_dir==direction and direction!="NONE" else
-                 .7 if direction!="NONE" else 0)
-    # 50% early detection and 50% independently observed directional
-    # structure/momentum; higher TF alignment is not an early-watch veto.
-    strength_score=min(1.0,.55*evidence_frac+.20*trend_evidence+
-                       .15*cluster_bonus+.10*int(compression))
+    early_score=(1. if direction==pressure_dir and direction!="NONE" else
+                 .85 if stage=="EARLY_M15_M30_MOMENTUM" else
+                 .65 if direction!="NONE" else 0)
+    strength_score=min(1.,.55*evidence_frac+.25*trend_evidence+
+                       .15*cluster_bonus+.05*int(compression))
     score=round(.5*early_score+.5*strength_score,3)
+    inv=(pressure.get("invalidation_reference")
+         if direction==pressure_dir and direction!="NONE" else
+         (max(high,new_high) if direction=="SELL" else min(low,new_low))
+         if direction!="NONE" else None)
     base.update(direction=direction,stage=stage,
                 range_status="RANGING" if compression else "TRENDING_OR_TRANSITION",
-                observed_reference_start_utc=reference[0]["open_utc"],
-                observed_reference_end_utc=reference[-1]["close_utc"],
+                observed_reference_start_utc=prior[0]["open_utc"],
+                observed_reference_end_utc=prior[-1]["close_utc"],
                 observed_reference_duration_minutes=60,
                 actual_range_start_utc=None,
                 range_start_verification="UNAVAILABLE_4_BAR_REFERENCE_ONLY",
                 range_high=high,range_low=low,range_width_pips=round(width,2),
-                prior_comparable_width_pips=round(baseline,2) if baseline is not None else None,
+                recent_four_bar_width_pips=round(recent_width,2),
+                prior_comparable_width_pips=round(width,2),
                 compression_observed=compression,
-                latest_closed_m5_utc=m5current["close_utc"],
-                latest_closed_m5=m5current["c"],
                 latest_closed_m15_utc=m15[-1]["close_utc"],
                 latest_closed_m15=m15[-1]["c"],
-                distance_outside_range_pips=breakout,
+                latest_closed_m30_utc=m30[-1]["close_utc"],
+                latest_closed_m30=m30[-1]["c"],
+                closed_m15_momentum_pips=round(momentum15,2),
+                closed_m30_momentum_pips=round(momentum30,2),
                 jpy_cluster_status=cluster.get("status") if pair in JPY else "NOT_JPY_CROSS",
                 jpy_strength_cross_count=breadth if pair in JPY else None,
                 early_opportunity_score_50pct=round(early_score,2),
@@ -272,15 +270,14 @@ def detect_pair(pair,vol,at,offset,cluster,calendar=None):
                 research_rank_score=score,
                 pressure_evidence=pressure,
                 fresh_trigger=direction!="NONE",
-                direction_invalidation_reference=pressure.get("invalidation_reference")
-                    if direction==pressure_dir else (high if direction=="SELL" else low),
+                direction_invalidation_reference=inv,
                 reversal_watch_no_break_required=stage=="EARLY_DIRECTIONAL_ROTATION",
                 watch_only=direction!="NONE",
-                reason=("CLOSED_M15_RANGE_BREAK" if stage=="BREAKOUT_CONFIRMING" else
-                        "CLOSED_M5_RANGE_BREAK_EARLY_WATCH_ONLY" if stage=="PRE_BREAKOUT_WATCH" else
-                        "STRUCTURE_ROTATION_WITHOUT_BREAKOUT" if stage=="EARLY_DIRECTIONAL_ROTATION" else
-                        "JPY_CLUSTER_AND_RANGE_BOUNDARY_PRESSURE" if stage=="EARLY_CLUSTER_ROTATION" else
-                        "NO_CURRENT_EARLY_TRIGGER"))
+                reason=("STRUCTURE_ROTATION_WITHOUT_BREAKOUT" if stage=="EARLY_DIRECTIONAL_ROTATION" else
+                        "CLOSED_M15_AND_M30_MOMENTUM" if stage=="EARLY_M15_M30_MOMENTUM" else
+                        "CLOSED_M15_DIRECTION_CONTINUATION" if stage=="M15_DIRECTIONAL_CONTINUATION" else
+                        "M15_AND_M30_JPY_CLUSTER_WATCH" if stage=="EARLY_JPY_CLUSTER_ROTATION" else
+                        "NO_CURRENT_M15_M30_DIRECTIONAL_TRIGGER"))
     return base
 
 def run(vol,calendar=None,at=None,previous=None,strict_freshness=True):
@@ -323,7 +320,7 @@ def run(vol,calendar=None,at=None,previous=None,strict_freshness=True):
             continue
         pd=prev.get("direction")
         inv=prev.get("invalidation_reference")
-        price=row.get("latest_closed_m5")
+        price=row.get("latest_closed_m15")
         if pd not in ("SELL","BUY") or inv is None or price is None:
             continue
         invalid=(pd=="SELL" and price>=inv) or (pd=="BUY" and price<=inv)
@@ -351,9 +348,9 @@ def run(vol,calendar=None,at=None,previous=None,strict_freshness=True):
                     first=prev["first_observed_at_utc"]
                     initial=prev.get("initial_closed_price")
                 else:
-                    first=at.isoformat();initial=row.get("latest_closed_m5")
+                    first=at.isoformat();initial=row.get("latest_closed_m15")
             else:
-                first=at.isoformat();initial=row.get("latest_closed_m5")
+                first=at.isoformat();initial=row.get("latest_closed_m15")
         elif prev and not quiet and parse(prev.get("last_observed_at_utc")):
             age=(at-parse(prev["last_observed_at_utc"])).total_seconds()/60
             if 0<=age<=360:
@@ -361,15 +358,15 @@ def run(vol,calendar=None,at=None,previous=None,strict_freshness=True):
                                      execution_allowed=False))
             continue
         else:continue
-        progress=(round((initial-row["latest_closed_m5"])/pip(pair),2)
+        progress=(round((initial-row["latest_closed_m15"])/pip(pair),2)
                   if initial is not None and row["direction"]=="SELL" else
-                  round((row["latest_closed_m5"]-initial)/pip(pair),2)
+                  round((row["latest_closed_m15"]-initial)/pip(pair),2)
                   if initial is not None else None)
         episodes.append({"pair":pair,"direction":row["direction"],
                          "first_observed_at_utc":first,
                          "last_observed_at_utc":at.isoformat(),
                          "initial_closed_price":initial,
-                         "latest_closed_price":row.get("latest_closed_m5"),
+                         "latest_closed_price":row.get("latest_closed_m15"),
                          "stage":row.get("stage"),
                          "first_observed_to_now_pips":progress,
                          "research_rank_score":row.get("research_rank_score",0),
@@ -434,7 +431,7 @@ def main():
                 pairrow["entry_readiness"]="EARLY_TECHNICAL_WATCH_ONLY"
                 if early.get("reversal_watch_no_break_required"):
                     pairrow["conditional_level_reference_only"]=None
-        # Main Top Five must not bury a timely M5/15m turn behind the old
+        # Main Top Five must not bury a timely 15m/30m rotation behind the old
         # higher-timeframe score. Retain the old Top Five for audit.
         legacy_top=dash.get("top_five_technical_candidates",[])
         dash["top_five_legacy_technical_only"]=legacy_top
@@ -461,11 +458,11 @@ def main():
             old=merged.get(early["pair"])
             merged[early["pair"]]={
                 "pair":early["pair"],"direction":early["direction"],"stage":early["stage"],
-                "trade_type":"EARLY_ROTATION_OR_BREAKOUT_WATCH",
+                "trade_type":"15M_30M_EARLY_ROTATION_WATCH",
                 "direction_score":round(11*early["trend_strength_score_50pct"],1),
                 "entry_readiness":"EARLY_TECHNICAL_WATCH_ONLY",
                 "rank_score":early["research_rank_score"],
-                "source":"CLOSED_M5_15M_CLUSTER_WATCH",
+                "source":"CLOSED_M15_M30_DIRECTIONAL_PRESSURE_WATCH",
                 "overrides_prior_technical_direction":(
                     next((p.get("early_direction_conflicts_with_legacy",False)
                           for p in dash.get("pairs",[]) if p["pair"]==early["pair"]),False)),
@@ -492,7 +489,10 @@ def main():
              "range_high":x.get("range_high"),"range_low":x.get("range_low")}
             for x in result["pairs"]]
         dash["early_rotation_episodes"]=result["active_episodes"]
-        dash["early_rotation_rule"]="AGGRESSIVE EARLY STRUCTURE ROTATION: 4-bar lower highs/lows, 15m/30m momentum, failed pushes, no breakout required. 5m watch only; 1H/4H context not vetoes; no execution approval."
+        dash["early_rotation_rule"]="EARLY SIGNALS ONLY: closed 15m and 30m price structure, lower highs/lows, momentum; no breakout required. Longer contexts: 1H and 4H. 5m excluded from early signals, ranking and tracking. Never executable orders."
+        dash["signal_timeframes"]=["15m","30m"]
+        dash["longer_context_timeframes"]=["1H","4H"]
+        dash["excluded_from_signals"]=["5m"]
         Path("fx_scan_dashboard.json").write_text(json.dumps(dash,indent=2)+"\n",encoding="utf-8")
     print("EARLY_ROTATION",result.get("status"),"JPY",result.get("jpy_cluster",{}).get("status") if result.get("jpy_cluster") else None,
           "TOP",[(x["pair"],x["direction"],x["stage"]) for x in result["top_five_early_priority"]])
