@@ -11,6 +11,8 @@ on:
       - 'fx_signal_history.py'
       - 'fx_early_rotation.py'
       - 'test_fx_early_rotation.py'
+      - 'test_fx_reversal_early.py'
+      - 'fx_reversal_replay_oct12.json'
       - 'fx_daily_weekly_levels.py'
       - 'forextoolkits_collector.py'
       - 'requirements.txt'
@@ -60,14 +62,14 @@ jobs:
       - name: Build consolidated FX dashboard
         run: python fx_dashboard.py
 
-      - name: Persist first-observed signal timestamps
-        run: python fx_signal_history.py
+      - name: Replay October 12 AUDJPY and USD/CAD early reversal scenarios
+        run: python -m unittest -v test_fx_early_rotation test_fx_reversal_early
 
-      - name: Regression-test early detection against October 12 AUDJPY replay
-        run: python -m unittest -v test_fx_early_rotation
-
-      - name: Publish independent early-watch and JPY rotation board
+      - name: Publish early directional rotation and JPY cluster warnings
         run: python fx_early_rotation.py
+
+      - name: Persist first-observed CANONICAL direction after early overlay
+        run: python fx_signal_history.py
 
       - name: Verify synchronized fresh output
         run: |
@@ -85,6 +87,10 @@ jobs:
           assert len(e.get('pairs',[]))==11, 'Early engine did not evaluate all 11 pairs'
           assert e.get('generated_at_utc')==d.get('early_rotation_generated_at_utc'), 'Early and dashboard versions mismatch'
           assert all(x.get('execution_allowed') is False for x in e.get('pairs',[])), 'Non-executable early watch became an order'
+          for p in d.get('pairs',[]):
+              if p.get('early_direction_conflicts_with_legacy'):
+                  assert p.get('canonical_direction')==p.get('direction'), 'Contradictory canonical directions'
+              assert p.get('entry') is None and p.get('stop') is None, 'Watch gained fictitious entry/stop'
           for p in d['pairs']:
               frames=p.get('timeframes',{})
               assert all(t in frames for t in ('5m','15m','30m','1H','4H','1D')), f"Missing timeframe for {p['pair']}"
