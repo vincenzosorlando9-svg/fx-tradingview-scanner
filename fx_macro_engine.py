@@ -121,10 +121,20 @@ def normalize(raw):
         if symbol not in ("WTI", "BRENT"):
             continue
         # OilPrice.com explicitly delayed. Delay is not a publication timestamp.
+        # OilPrice.com explicitly advertises delayed quotes. The latest
+        # possible observation is fetch-time minus site delay; never claim an
+        # exact publisher tick clock or a live broker reference.
+        fetched=parse_dt(oil.get("retrieved_at_utc"))
+        delay=item.get("delay_minutes")
+        estimated=(fetched-timedelta(minutes=delay)).isoformat() if (
+            fetched and isinstance(delay,int) and 0<=delay<=90) else None
         m = metric(item.get("value_usd_per_barrel"), "USD_per_barrel", oil.get("url"),
-                   item.get("status"), retrieved_at_utc=oil.get("retrieved_at_utc"))
+                   "DELAYED_APPROXIMATE_QUOTE_CLOCK" if estimated else item.get("status"),
+                   source_observed_at_utc=estimated,
+                   retrieved_at_utc=oil.get("retrieved_at_utc"))
         if m:
-            m["delay_minutes"] = item.get("delay_minutes")
+            m["delay_minutes"] = delay
+            m["time_estimate_method"] = "LATEST_POSSIBLE_FETCH_MINUS_DECLARED_DELAY_NOT_REAL_QUOTE_TIME" if estimated else None
             result["COMMODITY:" + symbol] = m
     fg = raw.get("feargreedmeter") or {}
     m = metric(fg.get("index"), "sentiment_0_to_100", fg.get("url"),
@@ -497,6 +507,20 @@ def main():
     write("fx_macro_snapshot.json", snapshot)
     write("fx_macro_news.json", news)
     rows = build_pairs(dash, early, cal, news, spreads, deltas, metrics, cftc, raw, now)
+    range_data=read("fx_range_context.json")
+    range_age=age_min(range_data.get("generated_at_utc"), now)
+    range_fresh=(range_age is not None and 0<=range_age<=45 and
+                 range_data.get("status")=="OBSERVED_REFERENCE_CONTEXT")
+    for row in rows:
+        row["range_context"]=(range_data.get("pairs") or {}).get(row["pair"]) if range_fresh else {
+            "status":"UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"}
+        row["range_data_is_directional_signal"]=False
+        row["session_liquidity_context"]={
+            "upcoming_2h_event":row["event_within_120_minutes"],
+            "holiday_on_calendar":any(str(x.get("impact","")).lower()=="holiday" for x in
+                row.get("economic_events_next_24h",[])),
+            "broker_spread_verified":False,
+            "liquidity_interpretation":"SCHEDULED_SESSION_AND_EVENT_CONTEXT_NOT_MEASURED_ORDERBOOK"}
     signal = {"schema_version": 1, "generated_at_utc": now.isoformat(),
         "source_technical_generated_at_utc": dash.get("generated_at_utc"),
         "source_early_rotation_generated_at_utc": early.get("generated_at_utc"),
