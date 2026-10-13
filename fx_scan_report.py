@@ -366,8 +366,19 @@ def assess(row, latest, movement_pips=None):
         label=original+" EPISODE / MIXED CLOSED CANDLES — WAIT"
     elif isinstance(movement_pips,(int,float)) and movement_pips>=20:
         label=original+" EXTENDED EPISODE — DO NOT CHASE"
+    elif isinstance(movement_pips,(int,float)) and movement_pips<=-8:
+        label=original+" EPISODE — ADVERSE SINCE FIRST RECORD; RECHECK"
+    elif abs(a)<1.5 and abs(b)>=5:
+        label=original+" 30m PRESSURE / 15m DECELERATION — MONITOR"
     else:
-        label=original+" CONTINUATION — "+("EARLY WATCH" if "EARLY" in stage else "MONITOR")
+        first=clock(row.get("signal_first_recorded_at_utc"))
+        latest_candle=clock(m15.get("closed_at_utc"))
+        genuinely_recent=bool(first and latest_candle and
+                              -2 <= (latest_candle-first).total_seconds()/60 <= 30)
+        early=(genuinely_recent and "EARLY" in stage and
+               (not isinstance(movement_pips,(int,float)) or abs(movement_pips)<12))
+        label=original+(" EARLY WATCH — NEWLY RECORDED" if early
+                        else " CONTINUATION — MONITOR")
     return {"assessment":label,"new_counter_rotation":bool(counter and meaningful),
             "observed_direction":observed, "published_direction":original,
             "status":"PROVISIONAL_PUBLIC_CLOSED_CANDLES_NOT_NEW_UNIFIED_SIGNAL"}
@@ -663,12 +674,25 @@ def cell(value):
     return str(value).replace("|","/").replace("\n"," ")
 
 
+def table_cell(col, row):
+    value=row.get(col)
+    if isinstance(value,float) and isfinite(value):
+        # FX price precision is non-negotiable for correct pip accountability.
+        if any(word in col.lower() for word in ("price","close","ema","level","bid","ask")):
+            pair=row.get("pair") or ""
+            return number(value, 3 if str(pair).endswith("JPY") else 5)
+        if "score" in col.lower():
+            return number(value, 3)
+        return number(value, 1 if "pips" in col.lower() else 2)
+    return cell(value)
+
+
 def mdtable(columns, rows):
     if not rows:
         return "No verified rows available.\n"
     return "\n".join(["| "+" | ".join(columns)+" |",
                       "| "+" | ".join(["---"]*len(columns))+" |"]+
-                     ["| "+" | ".join(cell(row.get(c)) for c in columns)+" |" for row in rows])+"\n"
+                     ["| "+" | ".join(table_cell(c,row) for c in columns)+" |" for row in rows])+"\n"
 
 
 def render_markdown(report):
@@ -677,7 +701,7 @@ def render_markdown(report):
     out=["# "+h["title"],"",
          h["as_of_ET"]+" | 11 pairs | Closed 15m/30m candles | No API keys",
          "","**OVERALL STATUS: "+h["status"]+"**","",
-         "Latest independently collected technical feed: "+et(h["technical_feed_collected_at_utc"])+
+         "Latest separately fetched public technical feed: "+et(h["technical_feed_collected_at_utc"])+
          ". Authoritative unified rank: "+et(h["unified_published_at_utc"])+
          ". Macro fetch: "+et(h["macro_collected_at_utc"])+
          ". Published scores and newer candle assessments are deliberately distinguished.",
@@ -705,8 +729,10 @@ def render_markdown(report):
         if n==1:
             sources=layer["news_source_statuses"]
             out+=["Sources: "+", ".join(k+": "+str(v) for k,v in sources.items())]
-            rows=[{"published_at_utc":x.get("published_at_utc"),"provider":x.get("provider"),
-                   "title":x.get("title"),"direction":x.get("direction")}
+            rows=[{"published_at_utc":et(x.get("published_at_utc")),"provider":x.get("provider"),
+                   "title":("[{}]({})".format(x.get("title",""),x.get("url")) if
+                            str(x.get("url","")).startswith("https://") else x.get("title")),
+                   "direction":x.get("direction")}
                   for x in layer["headlines"][:12]]
             out+=["",mdtable(["published_at_utc","provider","title","direction"],rows),
                   "Headlines alone do not demonstrate an independently verified immediate FX reaction."]
@@ -718,7 +744,7 @@ def render_markdown(report):
             out+=["**Released actuals**",mdtable(["currency","title","reported_actual","forecast","previous","status"],rows),
                   "**Upcoming events (next 24h)**",
                   mdtable(["event_at_et","currency","title","forecast","previous"],
-                          [{"event_at_et":et(x.get("event_at_utc")),**x} for x in layer["upcoming_events_next_24h"]]),
+                          [{**x,"event_at_et":et(x.get("event_at_utc"))} for x in layer["upcoming_events_next_24h"]]),
                   "Publisher-reported actuals are not equivalent to independently isolated event-price reactions."]
         elif n==3:
             out+=[mdtable(["currency","rate_pct","reference_date","status"],layer["published_policy_rate_references"]),
@@ -765,7 +791,29 @@ def render_markdown(report):
             out+=["Public technical feed collected: "+et(layer["public_feed_collected_at_utc"]),
                   mdtable(["pair","latest_15m_closed_price","latest_15m_closed_at_utc",
                            "15m_change_pips","30m_change_pips","original_published_direction",
-                           "updated_directional_assessment"],layer["pairs"])]
+                           "updated_directional_assessment"],layer["pairs"]),
+                  "### WHY NOW — MOST IMPORTANT CHANGES",""]
+            unique=[]
+            for p in [x["pair"] for x in omissions[:3]]+[x["pair"] for x in rank[:3]]:
+                if p not in unique: unique.append(p)
+            table={x["pair"]:x for x in layer["pairs"]}
+            archived={x["pair"]:x for x in report["fifteen_layer_macro_first_audit"][14]["episode_accountability"]}
+            for p in unique:
+                t=table.get(p,{})
+                a=t.get("15m_change_pips");b=t.get("30m_change_pips")
+                old=archived.get(p,{})
+                row=next((x for x in report["fifteen_layer_macro_first_audit"][13]["per_pair_conditional_research_criteria"]
+                          if x["pair"]==p),{})
+                out += ["**"+p+" — "+str(t.get("updated_directional_assessment","UNAVAILABLE"))+"**",
+                        "Latest completed 15m "+(number(a,1)+" pips" if a is not None else "MISSING")+
+                        "; 30m "+(number(b,1)+" pips" if b is not None else "MISSING")+
+                        ". Original published direction: "+cell(t.get("original_published_direction"))+
+                        ". Recorded episode movement: "+cell(old.get("pips_favorable_since_first_record"))+
+                        " pips (not realized P&L).",
+                        "Evidence is public completed-candle structure only. Trigger: "+
+                        cell(row.get("conditional_research_trigger"))+
+                        ". Macro headlines/yields are separate, potentially conflicting context, not confirmed candle causality.",
+                        ""]
         elif n==12:
             out+=[mdtable(["pair","1H","4H","Daily","1H_EMA20","1H_EMA50","4H_EMA10","4H_EMA20"],layer["pairs"]),
                   "These longer timeframes are contextual; they do not veto early completed 15m/30m rotations."]
@@ -790,9 +838,12 @@ def render_markdown(report):
           "## FINAL FOREX MAIN SIGNAL — "+h["as_of_ET"],"",
           "Strongest technical breadth: "+", ".join(report["final_forex_main_signal"]["strongest_technical_breadth_currencies"] or ["UNAVAILABLE"])+
           ". Weakest: "+", ".join(report["final_forex_main_signal"]["weakest_technical_breadth_currencies"] or ["UNAVAILABLE"])+".",
-          "Highest published 50/50 research rank: "+cell(report["final_forex_main_signal"]["highest_ranked_published_pair"])+".",
-          "Important omitted counter-rotations / accelerations: "+", ".join(x["pair"] for x in omissions[:5]) if omissions else
-          "No independently qualifying omitted counter-rotation measured.",
+          "Highest published 50/50 research rank: "+cell(report["final_forex_main_signal"]["highest_ranked_published_pair"])+
+          " (published score; separate from later candles).",
+          ("Important omitted counter-rotations / accelerations: "+", ".join(x["pair"] for x in omissions[:5]))
+          if omissions else "No independently qualifying omitted counter-rotation measured.",
+          "Keep conditional BUY/SELL assessments separate from recorded active episodes. Newer candles may weaken or contradict the published board.",
+          ("Upcoming calendar risk: "+", ".join(et(x.get("event_at_utc"))+" "+str(x.get("title")) for x in report["final_forex_main_signal"]["news_event_risk"][:5])) if report["final_forex_main_signal"]["news_event_risk"] else "Upcoming calendar events: UNAVAILABLE.",
           "",
           "**EXECUTION STATUS: RESEARCH WATCH ONLY.** Broker entries, stops, profit targets and spreads are not independently verified. No trades executed; no alerts generated.",
           "",
