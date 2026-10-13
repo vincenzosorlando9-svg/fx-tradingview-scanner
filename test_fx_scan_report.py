@@ -63,6 +63,36 @@ class ScanReportLayoutTests(unittest.TestCase):
         self.assertEqual(len(report["top_five_published_ranking"]["rows"]),5)
         self.assertEqual(len(report["fifteen_layer_macro_first_audit"][10]["pairs"]),11)
 
+    def test_no_wrap_buy_short_and_strength_rows_in_order(self):
+        u,d=self.fixtures()
+        u["top_five"][0]["direction"]="SELL"
+        u["top_five"][1]["direction"]="BUY"
+        report=build_report(u,d)
+        self.assertEqual(list(report)[1],"top_five_published_ranking")
+        self.assertEqual(list(report)[2],"current_currency_strength")
+        self.assertTrue(report["layout_contract"]["no_wrap_compact_rows"])
+        self.assertTrue(report["layout_contract"]["top_five_before_strength"])
+        first=report["top_five_published_ranking"]["rows"][0]
+        self.assertEqual(first["compact_side"]["label"],"SHORT")
+        self.assertEqual(first["compact_side"]["color"],"red")
+        self.assertIn("🔴",first["compact_one_line"])
+        self.assertIn("&nbsp;",first["compact_one_line"])
+        self.assertEqual(report["top_five_published_ranking"]["rows"][1]["compact_side"]["color"],"green")
+        self.assertEqual(len(report["current_currency_strength"]["top_five_compact"]),5)
+        strength=report["current_currency_strength"]["top_five_compact"][0]
+        self.assertEqual(strength["strength_style"]["label"],"STRONG")
+        self.assertIn("STRONG",strength["compact_one_line"])
+        self.assertNotIn("STRON&",strength["compact_one_line"])
+        markdown=render_markdown(report)
+        self.assertLess(markdown.index("## 1. BEST 5 TRADING PAIRS"),
+                        markdown.index("## 2. CURRENCY STRENGTH"))
+        self.assertIn("🟢",markdown)
+        self.assertIn("🔴",markdown)
+        self.assertNotIn("STRON\\nG",markdown)
+        # Full audit remains below the compact market boards.
+        self.assertLess(markdown.index("## 2. CURRENCY STRENGTH"),
+                        markdown.index("## 1. REUTERS AND FXSTREET"))
+
     def test_no_broker_quote_or_invented_stop_target(self):
         report=build_report(*self.fixtures())
         layer14=report["fifteen_layer_macro_first_audit"][13]
@@ -137,7 +167,8 @@ class ScanReportLayoutTests(unittest.TestCase):
             self.assertIn("## "+str(i)+". "+title,md)
         self.assertIn("## FULL 15-LAYER COVERAGE AUDIT",md)
         self.assertIn("## FINAL FOREX MAIN SIGNAL",md)
-        self.assertIn("CURRENT CURRENCY STRENGTH",md)
+        self.assertIn("CURRENCY STRENGTH — TOP 5",md)
+        self.assertLess(md.index("## 1. BEST 5 TRADING PAIRS"),md.index("## 2. CURRENCY STRENGTH"))
         self.assertIn("CRITICAL SETUPS OMITTED FROM TOP FIVE",md)
         self.assertNotIn("## five_detailed_trade_setups",md)
 
