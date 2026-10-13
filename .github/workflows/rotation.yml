@@ -26,13 +26,16 @@ on:
       - 'test_fx_calendar_priority.py'
       - 'fx_approved_public_sources.py'
       - 'test_fx_approved_public_sources.py'
+      - 'fx_exact_candle_gate.py'
+      - 'fx_github_slot.py'
+      - 'test_fx_exact_candle_gate.py'
       - 'fx_scan_report.py'
       - 'test_fx_scan_report.py'
       - 'forextoolkits_collector.py'
       - 'requirements.txt'
       - '.github/workflows/rotation.yml'
   schedule:
-    - cron: '2,7,12,17,22,27,32,37,42,47,52,57 * * * *'
+    - cron: '2,17,32,47 * * * *'
 
 permissions:
   contents: write
@@ -44,7 +47,7 @@ concurrency:
 jobs:
   detect:
     runs-on: ubuntu-latest
-    timeout-minutes: 7
+    timeout-minutes: 12
     steps:
       - name: Checkout latest repository
         uses: actions/checkout@v4
@@ -59,51 +62,66 @@ jobs:
       - name: Install primary and optional collector dependencies
         run: python -m pip install -r requirements.txt beautifulsoup4
 
-      - name: Collect current ForexToolkits OHLC
+      - name: Validate and collect the exact completed M15 M30 H1 candle slot with retries
+        id: candle_slot
+        continue-on-error: true
         run: |
-          python forextoolkits_collector.py || { echo 'ForexToolkits collector failed; retrying after 10 seconds'; sleep 10; python forextoolkits_collector.py; }
+          python -m unittest -v test_fx_exact_candle_gate
+          python fx_github_slot.py collect
 
       - name: Collect current TradingView indicators
+        if: steps.candle_slot.outputs.ready == 'true'
         run: |
           python scanner.py || { echo 'TradingView collector failed; retrying after 10 seconds'; sleep 10; python scanner.py; }
 
       - name: Generate conditional rotation signals
+        if: steps.candle_slot.outputs.ready == 'true'
         run: python rotation_detector.py
 
       - name: Calculate daily and weekly NY-session levels
+        if: steps.candle_slot.outputs.ready == 'true'
         run: python fx_daily_weekly_levels.py
 
       - name: Build consolidated FX dashboard
+        if: steps.candle_slot.outputs.ready == 'true'
         run: python fx_dashboard.py
 
       - name: Replay directional reversals and keyless mobile notification safeguards
+        if: steps.candle_slot.outputs.ready == 'true'
         run: python -m unittest -v test_fx_early_rotation test_fx_reversal_early test_fx_mobile_alerts test_fx_asian_risk test_fx_counter_rotation
 
       - name: Publish early directional rotation and JPY cluster warnings
+        if: steps.candle_slot.outputs.ready == 'true'
         run: python fx_early_rotation.py
 
       - name: Persist first-observed CANONICAL direction after early overlay
+        if: steps.candle_slot.outputs.ready == 'true'
         run: python fx_signal_history.py
 
       - name: Check approved news feeds for breaking central-bank headlines
+        if: steps.candle_slot.outputs.ready == 'true'
         run: |
           python -m unittest -v test_fx_news_priority test_fx_approved_public_sources
           python fx_news_priority.py
 
       - name: Audit critical economic releases and central-bank speech schedules
+        if: steps.candle_slot.outputs.ready == 'true'
         run: |
           python -m unittest -v test_fx_calendar_priority
           python fx_calendar_priority.py
 
       - name: Rebuild unified signal board against last verified macro snapshot
+        if: steps.candle_slot.outputs.ready == 'true'
         run: python fx_signal_fusion_refresh.py
 
       - name: Enforce the locked FOREX MAIN SIGNAL 15-layer macro-first audit
+        if: steps.candle_slot.outputs.ready == 'true'
         run: |
           python -m unittest -v test_fx_scan_report
           python fx_scan_report.py
 
       - name: Verify synchronized fresh output
+        if: steps.candle_slot.outputs.ready == 'true'
         run: |
           python - <<'PY'
           import json, datetime, sys
@@ -166,20 +184,41 @@ jobs:
           print('Complete user-approved 15-layer macro-first report layout verified')
           PY
 
-      - name: Commit signal files
+      - name: Final exact candle and synchronized 15-layer report integrity gate
+        id: final_gate
+        if: steps.candle_slot.outputs.ready == 'true'
+        run: python fx_github_slot.py finalize
+
+      - name: Always record slot success, missing candles or delayed GitHub start
+        id: slot_record
+        if: always()
+        env:
+          PIPELINE_OUTCOME: ${{ steps.final_gate.outcome }}
+        run: python fx_github_slot.py record
+
+      - name: Commit successful signals OR health-only missed slot record
+        if: always() && steps.slot_record.outcome == 'success'
+        env:
+          SIGNAL_PUBLICATION_ALLOWED: ${{ steps.slot_record.outputs.publish_signals }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add fx_calendar_priority.json fx_news_priority.json fx_volatility.json fx_technicals.json fx_rotation_signals.json fx_scan_dashboard.json fx_daily_weekly_levels.json fx_signal_history.json fx_early_rotation.json fx_unified_signals.json fx_scan_report.json fx_scan_report.md
+          if [ "$SIGNAL_PUBLICATION_ALLOWED" != "true" ]; then
+            git restore -- fx_calendar_priority.json fx_news_priority.json fx_volatility.json fx_technicals.json fx_rotation_signals.json fx_scan_dashboard.json fx_daily_weekly_levels.json fx_signal_history.json fx_early_rotation.json fx_unified_signals.json fx_scan_report.json fx_scan_report.md
+          else
+            git add fx_calendar_priority.json fx_news_priority.json fx_volatility.json fx_technicals.json fx_rotation_signals.json fx_scan_dashboard.json fx_daily_weekly_levels.json fx_signal_history.json fx_early_rotation.json fx_unified_signals.json fx_scan_report.json fx_scan_report.md
+          fi
+          git add fx_scan_health.json fx_scan_slot_history.json
           if ! git diff --cached --quiet; then
-            git commit -m "Update synchronized FX technical dashboard with Daily and 4H"
+            git commit -m "Record four-slot FX scan and publish exact M15/M30/H1 data only when verified"
             for attempt in 1 2 3 4 5; do
               if git pull --rebase origin main && git push origin HEAD:main; then
+                echo "Verified FX scan/health publication committed"
                 exit 0
               fi
               git rebase --abort || true
               sleep 4
             done
-            echo "Unable to publish technical signal files after retries"
+            echo "Unable to publish verified scan or health after retries"
             exit 1
           fi
