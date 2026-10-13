@@ -64,6 +64,19 @@ def parse(html, pair):
             break
     if result["status"] != "UNAVAILABLE":
         return result
+    # Pair-specific published summary paragraph. Strict title/heading match
+    # above prevents cross-symbol navigation values leaking into this sample.
+    slash=pair[:3]+"/"+pair[3:]
+    for paragraph in soup.find_all("p"):
+        ptxt=" ".join(" ".join(paragraph.stripped_strings).split())
+        if slash not in ptxt.upper() or "forex traders" not in ptxt.lower():
+            continue
+        hits=re.findall(r"(\d{1,3})\s*%[^%]{0,130}?\bgoing\s+(short|long)\b",ptxt,re.I)
+        sides={side.lower():int(pct) for pct,side in hits}
+        if len(hits)==2 and set(sides)=={"short","long"} and sides["short"]+sides["long"]==100:
+            result.update(short_pct=sides["short"],long_pct=sides["long"],
+                          status="PUBLISHED_RETAIL_SAMPLE_DELAYED_60_MIN")
+            return result
     # English public prose fallback: numeric percentages require both sides
     # and no claim that the observation clock equals the fetch clock.
     # Match explicitly paired publisher percentages for this page, even when
