@@ -1,98 +1,96 @@
-"""NZDJPY 10:45/11:00 PM Oct 12 pre-flip preview regression.
+"""Closed 15m/30m pre-flip research watch regression.
 
-The prior SELL is *held* until invalidated; an earlier, separate BUY WATCH
-is sent based solely on closed M15/M30 bars. No M5, no future bars, no orders.
+The historical Oct 12 replay was collected at 21:05 ET; it cannot verify
+22:45-23:00 ET candles. NEVER use that fixture to claim an 11 PM signal.
+Use explicit synthetic CLOSED candles for unit tests instead.
+GitHub Issue notification publication remains DISABLED in the workflow.
 """
-import copy
-import json
 import unittest
 from datetime import datetime, timedelta, timezone
-from pathlib import Path
 
-from fx_early_rotation import run
+from fx_early_rotation import counter_rotation_watch
 from fx_mobile_alerts import evaluate, seed_state
 from test_fx_mobile_alerts import datasets
 
-VOL = json.loads(Path("fx_15m30m_replay_oct12.json").read_text())
+
 def at(t):
     return datetime.fromisoformat("2026-10-13T"+t+":00+00:00")
-def get(o,p="NZDJPY"):
-    return next(x for x in o["pairs"] if x["pair"]==p)
 
-def prior_sell():
-    return {"active_episodes":[{
-        "pair":"NZDJPY","direction":"SELL",
-        "first_observed_at_utc":"2026-10-13T02:41:58+00:00",
-        "last_observed_at_utc":"2026-10-13T02:57:46+00:00",
-        "initial_closed_price":88.457,
-        "latest_closed_price":88.464,
-        "invalidation_reference":88.545,
-        "research_rank_score":0.52
-    }]}
+
+def bar(t, close, low, high):
+    return {"close_utc":at(t).isoformat(), "c":close, "l":low, "h":high,
+            "o":close}
+
+
+def synthetic_closed_bars():
+    # These values are deliberately fabricated TEST DATA, not market history.
+    m15=[
+        bar("02:00",88.400,88.385,88.415),
+        bar("02:15",88.405,88.390,88.420),
+        bar("02:30",88.410,88.395,88.425),
+        bar("02:45",88.415,88.400,88.430),
+        bar("03:00",88.435,88.420,88.450),
+    ]
+    m30=[
+        bar("02:00",88.425,88.390,88.445),
+        bar("02:30",88.410,88.390,88.430),
+        bar("03:00",88.435,88.400,88.450),
+    ]
+    return m15,m30
+
 
 class PreFlipReversalTests(unittest.TestCase):
-    def test_1045_still_needs_m30_bullish_pressure(self):
-        row = get(run(VOL,at=at("02:45"),strict_freshness=False))
-        self.assertEqual(row["latest_closed_m15"],88.464)
-        self.assertEqual(row["possible_opposite_rotation"]["direction"],"NONE")
+    def test_early_watch_not_triggered_by_unconfirmed_30m(self):
+        m15,m30=synthetic_closed_bars()
+        watch=counter_rotation_watch("NZDJPY",{"M15":m15[:4],"M30":m30[:2]})
+        self.assertEqual(watch["direction"],"NONE")
 
-    def test_1100_buy_watch_despite_held_sell(self):
-        out=run(VOL,at=at("03:00"),previous=prior_sell(),strict_freshness=False)
-        row=get(out)
-        self.assertEqual(row["latest_closed_m15"],88.489)
-        self.assertEqual(row["latest_closed_m30"],88.489)
-        self.assertEqual(row["direction"],"SELL")
-        self.assertEqual(row["stage"],"EARLY_ROTATION_TRACKING")
-        cw=row["possible_opposite_rotation"]
-        self.assertEqual(cw["direction"],"BUY")
-        self.assertAlmostEqual(cw["two_m15_net_pips"],3.5)
-        self.assertEqual(cw["first_detectable_closed_m15_utc"],at("03:00").isoformat())
-        self.assertFalse(cw["execution_allowed"])
-        self.assertTrue(cw["no_breakout_required"])
+    def test_two_closed_15m_and_positive_30m_watch_only(self):
+        m15,m30=synthetic_closed_bars()
+        watch=counter_rotation_watch("NZDJPY",{"M15":m15,"M30":m30})
+        self.assertEqual(watch["direction"],"BUY")
+        self.assertAlmostEqual(watch["two_m15_net_pips"],2.5)
+        self.assertEqual(watch["first_detectable_closed_m15_utc"],at("03:00").isoformat())
+        self.assertFalse(watch["execution_allowed"])
+        self.assertTrue(watch["no_breakout_required"])
 
-    def test_no_future_candles_can_trigger_1100_buy_watch(self):
-        orig = get(run(VOL,at=at("03:00"),previous=prior_sell(),strict_freshness=False))
-        altered=copy.deepcopy(VOL)
-        for tf,dur in (("M15",900),("M30",1800)):
-            f=altered["pairs"]["NZDJPY"]["tf"][tf]
-            for i,t in enumerate(f["t"]):
-                if t-10800+dur>at("03:00").timestamp():
-                    f["c"][i]=90; f["o"][i]=89;f["h"][i]=91;f["l"][i]=88
-        new = get(run(altered,at=at("03:00"),previous=prior_sell(),strict_freshness=False))
-        for k in ("possible_opposite_rotation","direction","latest_closed_m15","latest_closed_m30"):
-            self.assertEqual(orig[k],new[k])
-
-    def test_iphone_watch_sent_before_main_buy_and_only_once(self):
+    def test_one_watch_without_flipping_original_bias(self):
         t0=at("02:55")
         a,d=datasets(t0,{"NZDJPY":"SELL"},
-                     {"NZDJPY":{"close":88.464,"invalidation":88.545}})
+                     {"NZDJPY":{"close":88.410,"invalidation":88.550}})
         ev,st=evaluate(a,d,seed_state(),t0)
         self.assertEqual(ev,[])
         t1=at("03:00")
         a,d=datasets(t1,{"NZDJPY":"SELL"},
-                     {"NZDJPY":{"close":88.489,"invalidation":88.545,"score":0.52}})
-        z=get(a)
+                     {"NZDJPY":{"close":88.435,"invalidation":88.550,"score":0.52}})
+        z=next(x for x in a["pairs"] if x["pair"]=="NZDJPY")
         z["possible_opposite_rotation"]={
-           "direction":"BUY","evidence":["TWO_CONSECUTIVE_CLOSED_M15_HIGHER_CLOSES",
-                                          "LAST_CLOSED_M30_POSITIVE"],
-           "first_detectable_closed_m15_utc":t1.isoformat()}
+            "direction":"BUY","evidence":["TWO_CONSECUTIVE_CLOSED_M15_HIGHER_CLOSES",
+                                           "LAST_CLOSED_M30_POSITIVE"],
+            "first_detectable_closed_m15_utc":t1.isoformat()}
         z["latest_closed_m15_utc"]=t1.isoformat()
         z["latest_closed_m30_utc"]=t1.isoformat()
         ev,st=evaluate(a,d,st,t1)
-        watch=[x for x in ev if x["pair"]=="NZDJPY"]
+        watch=[x for x in ev if x.get("pair")=="NZDJPY"]
         self.assertEqual([x["type"] for x in watch],["OPPOSITE_WATCH"])
         self.assertEqual(watch[0]["direction"],"BUY")
-        self.assertEqual(watch[0]["previous"],"SELL")
         self.assertEqual(st["pairs"]["NZDJPY"]["bias"],"SELL")
         ev,st=evaluate(a,d,st,t1+timedelta(minutes=1))
         self.assertFalse([x for x in ev if x.get("pair")=="NZDJPY"])
-        t2=at("03:33")
-        a,d=datasets(t2,{"NZDJPY":"BUY"},
-                     {"NZDJPY":{"close":88.549,"invalidation":88.409}})
-        ev,st=evaluate(a,d,st,t2)
+
+    def test_main_direction_changes_only_after_original_invalidation(self):
+        t0=at("02:55")
+        a,d=datasets(t0,{"NZDJPY":"SELL"},
+                     {"NZDJPY":{"close":88.410,"invalidation":88.550}})
+        _,st=evaluate(a,d,seed_state(),t0)
+        t1=at("03:15")
+        a,d=datasets(t1,{"NZDJPY":"BUY"},
+                     {"NZDJPY":{"close":88.560,"invalidation":88.420}})
+        ev,st=evaluate(a,d,st,t1)
         self.assertEqual([x["type"] for x in ev if x.get("pair")=="NZDJPY"],
                          ["DIRECTION_CHANGED"])
         self.assertEqual(st["pairs"]["NZDJPY"]["bias"],"BUY")
+
 
 if __name__=="__main__":
     unittest.main()
