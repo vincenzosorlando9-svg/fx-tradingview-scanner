@@ -40,6 +40,8 @@ Automated technical FX rotation research. **Technical candidates are not executa
 
 GitHub Action: [FX Unified Macro Intelligence (No Keys, No Alerts)](.github/workflows/fx-unified-macro.yml). Runs on schedule ~:11/:26/:41/:56 UTC, with a Friday historical positioning refresh. GitHub Actions cron is best-effort.
 
+**Two safe writer responsibilities:** Macro workflow records raw data, observed changes, headlines, ADR20 and integrated source audit every ~15m. The existing [FX Early Rotation Detector](.github/workflows/rotation.yml) exclusively publishes `fx_unified_signals.json` after each ~5m technical scan, reading the most recent usable macro snapshot (or clearly marking unavailable). It does not re-sample or update historical macro values; this prevents fake macro changes and parallel Git history conflicts.
+
 Published files:
 - `fx_macro_raw.json`: public financial source observations with publisher market dates, approximate clocks and access statuses.
 - `fx_macro_snapshot.json`: normalized level/unit/source/status, same-tenor sovereign spread references and fetch-observed 15/30/60-minute changes.
