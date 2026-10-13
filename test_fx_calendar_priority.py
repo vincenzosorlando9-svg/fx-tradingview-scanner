@@ -33,7 +33,9 @@ class CalendarPriorityTests(unittest.TestCase):
 
     def test_explicit_utc_0430_converts_to_0030_eastern(self):
         # Screenshot's 04:30 cannot be called 04:30 ET without verified timezone.
-        report=make_radar(feed([event(at="2026-10-13T04:30:00+00:00")]),now=NOW)
+        f=feed([event(at="2026-10-13T04:30:00+00:00")])
+        f["collected_at_utc"]="2026-10-13T04:19:00+00:00"
+        report=make_radar(f,now=datetime(2026,10,13,4,20,tzinfo=timezone.utc))
         self.assertEqual(report["monitored_events"][0]["event_at_et"],"2026-10-13T00:30:00-04:00")
         self.assertTrue(report["do_not_infer_calendar_timezone_from_device_clock"])
 
