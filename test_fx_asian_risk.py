@@ -43,8 +43,18 @@ class KOSPINoKeyTests(unittest.TestCase):
         self.assertIsNone(row["daily_reference_level"])
         self.assertIsNone(row["daily_reference_change_pct"])
 
-    def test_headline_must_not_become_numeric_quote(self):
+    def test_dated_stats_sentence_fallback_when_price_card_missing(self):
         page=PAGE.replace("<div>Actual</div><div>6384</div><div>Daily Change</div><div>-3.65%</div>","")
+        row=parse_page(page,datetime(2026,10,13,3,15,tzinfo=UTC))
+        self.assertEqual(row["daily_reference_level"],6384)
+        self.assertEqual(row["daily_reference_change_pct"],-3.65)
+        self.assertEqual(row["reference_date_kst"],"2026-10-12")
+        self.assertEqual(row["risk_tier_from_daily_reference"],"SEVERE_DAILY_RISK_OFF")
+
+    def test_headline_alone_cannot_become_numeric_quote(self):
+        page=PAGE.replace("<div>Actual</div><div>6384</div><div>Daily Change</div><div>-3.65%</div>","")
+        page=page.replace("fell to 6384 points\non October 12, 2026, losing 3.65%",
+                          "moved on October 12, 2026")
         row=parse_page(page,datetime(2026,10,13,3,15,tzinfo=UTC))
         self.assertIsNone(row["daily_reference_level"])
         self.assertIsNone(row["daily_reference_change_pct"])
@@ -54,8 +64,8 @@ class KOSPINoKeyTests(unittest.TestCase):
         page=PAGE.replace("<div>Actual</div><div>6384</div><div>Daily Change</div><div>-3.65%</div>",
             "<script>Actual 9999 Daily Change 9.99%</script>")
         row=parse_page(page,datetime(2026,10,13,3,15,tzinfo=UTC))
-        self.assertIsNone(row["daily_reference_level"])
-        self.assertIsNone(row["daily_reference_change_pct"])
+        self.assertEqual(row["daily_reference_level"],6384)
+        self.assertEqual(row["daily_reference_change_pct"],-3.65)
 
 if __name__=="__main__":
     unittest.main()
