@@ -9,6 +9,8 @@ on:
       - 'rotation_detector.py'
       - 'fx_dashboard.py'
       - 'fx_signal_history.py'
+      - 'fx_early_rotation.py'
+      - 'test_fx_early_rotation.py'
       - 'fx_daily_weekly_levels.py'
       - 'forextoolkits_collector.py'
       - 'requirements.txt'
@@ -61,6 +63,12 @@ jobs:
       - name: Persist first-observed signal timestamps
         run: python fx_signal_history.py
 
+      - name: Regression-test early detection against October 12 AUDJPY replay
+        run: python -m unittest -v test_fx_early_rotation
+
+      - name: Publish independent early-watch and JPY rotation board
+        run: python fx_early_rotation.py
+
       - name: Verify synchronized fresh output
         run: |
           python - <<'PY'
@@ -73,6 +81,10 @@ jobs:
           assert -2 <= age <= 5, f'Dashboard generated timestamp is stale: {age:.1f} minutes'
           assert d.get('source_versions_match') is True, 'Input versions differ'
           assert len(d.get('pairs',[]))==11, 'Not all 11 pairs published'
+          e=json.loads(Path('fx_early_rotation.json').read_text())
+          assert len(e.get('pairs',[]))==11, 'Early engine did not evaluate all 11 pairs'
+          assert e.get('generated_at_utc')==d.get('early_rotation_generated_at_utc'), 'Early and dashboard versions mismatch'
+          assert all(x.get('execution_allowed') is False for x in e.get('pairs',[])), 'Non-executable early watch became an order'
           for p in d['pairs']:
               frames=p.get('timeframes',{})
               assert all(t in frames for t in ('5m','15m','30m','1H','4H','1D')), f"Missing timeframe for {p['pair']}"
@@ -83,7 +95,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add fx_volatility.json fx_technicals.json fx_rotation_signals.json fx_scan_dashboard.json fx_daily_weekly_levels.json fx_signal_history.json
+          git add fx_volatility.json fx_technicals.json fx_rotation_signals.json fx_scan_dashboard.json fx_daily_weekly_levels.json fx_signal_history.json fx_early_rotation.json
           if ! git diff --cached --quiet; then
             git commit -m "Update synchronized FX technical dashboard with Daily and 4H"
             git pull --rebase origin main
