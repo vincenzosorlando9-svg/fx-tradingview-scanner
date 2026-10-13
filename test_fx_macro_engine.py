@@ -171,13 +171,13 @@ class PublicCollectorTests(unittest.TestCase):
         with an average price of 1.1372, meanwhile 37% of the forex traders
         are going long with EUR/USD, with an average price of 1.1647.</p>
         <p>Data is delayed by 60 minutes</p></body></html>"""
-        result=parse_retail(html,"EURUSD")
-        self.assertEqual(result["status"],"PUBLISHED_RETAIL_SAMPLE_DELAYED_60_MIN")
-        self.assertEqual(result["short_pct"],63)
-        self.assertEqual(result["long_pct"],37)
-        self.assertEqual(result["publisher_delay_min"],60)
-        self.assertFalse(result["execution_allowed"])
-        self.assertEqual(parse_retail(html,"USDJPY")["status"],"PAGE_PAIR_NOT_VERIFIED")
+        result=parse_retail(html,NOW)
+        self.assertEqual(result["status"],"PARTIAL_DELAYED_RETAIL_REFERENCE")
+        self.assertEqual(result["pairs"]["EURUSD"]["short_pct"],63)
+        self.assertEqual(result["pairs"]["EURUSD"]["long_pct"],37)
+        self.assertEqual(result["reference_delay_minutes_minimum"],60)
+        self.assertFalse(result["broker_executable"])
+        self.assertNotIn("USDJPY",result["pairs"])
 
     def test_cftc_nz_dollar_label_and_dealer_net(self):
         row = '"NZ DOLLAR - CHICAGO MERCANTILE EXCHANGE",261006,2026-10-06,112741,CME,00,090,200000,30000,60000,972,97612,133418,4647,31682,111307,4025,15212,6399,484,143814,130475,27234,40573'
