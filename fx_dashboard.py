@@ -54,7 +54,7 @@ def main():
         r=existing.get(pair,{})
         frames=r.get("timeframes") or {}
         checks={}
-        for tf in ("5m","15m","30m","1H","4H","1D"):
+        for tf in ("15m","30m","1H","4H","1D"):
             data=frames.get(tf) or {}
             bar=data.get("candles") or {}
             ts=bar.get("last_closed_candle_utc")
@@ -136,8 +136,11 @@ def main():
         "warnings":warnings,
         "scope":"11 TradingView-covered pairs; EUR/NZD NOT INCLUDED",
         "higher_timeframe_rule":"Daily and 4H are context, not a veto on early 15m directional watches; countertrend is not reversal",
-        "priority_timeframes":["1D","4H","1H","30m","15m","5m_optional"],
-        "max_closed_candle_age_minutes":{"5m_optional":6,"15m":18,"30m":33,"4H":300,"1D":4500},
+        "priority_timeframes":["15m","30m","1H","4H","1D"],
+        "max_closed_candle_age_minutes":{"15m":18,"30m":33,"1H":75,"4H":300,"1D":4500},
+        "signal_timeframes":["15m","30m"],
+        "longer_context_timeframes":["1H","4H"],
+        "excluded_from_signal_and_ranking":["5m"],
         "freshness_rule":"Any stale primary candle blocks pair from technical watchlist; collection timestamp alone never proves candle freshness.",
         "available_technical_watch_count":len(watches),
         "top_five_technical_candidates":[{"rank":i+1,"pair":r["pair"],
