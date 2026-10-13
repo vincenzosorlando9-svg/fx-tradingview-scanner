@@ -55,7 +55,9 @@ jobs:
         run: python fx_macro_collector.py
       - name: Calculate completed ADR20 NY17 and session ranges
         run: python fx_range_context.py
-      - name: Fuse macro snapshots with existing closed 15m 30m technical scanner
+      - name: Compute macro history without overwriting fast technical-driven signal board
+        env:
+          FX_MACRO_NO_UNIFIED_WRITE: '1'
         run: python fx_macro_engine.py
       - name: Publish evidence-graded 11-pair integrated source audit
         run: python build_integrated_fx_audit.py
