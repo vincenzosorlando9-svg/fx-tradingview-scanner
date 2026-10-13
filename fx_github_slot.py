@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Zero-cost GitHub Actions four-slot FX scan controller.
+"""Zero-cost GitHub Actions 4-slot FX scanner with fallback attempts.
 
-GitHub cron target: :02/:17/:32/:47 UTC. The *expected closed-bar time* is
+Primary :02/:17/:32/:47, backup :05/:20/:35/:50 UTC. The *expected closed-bar time* is
 the authority, not the GitHub workflow creation time or provider fetch time.
 No broker order, paid source, API key or external scheduler.
 """
@@ -21,7 +21,9 @@ GATE=Path("fx_scan_gate.json")
 HEALTH=Path("fx_scan_health.json")
 HISTORY=Path("fx_scan_slot_history.json")
 RETRY_INTERVAL_SECONDS=10
-START_TOLERANCE_SECONDS=240
+START_TOLERANCE_SECONDS=480
+# Backups can start at :05/:20/:35/:50, or arrive late. No new
+# signal is publishable after the deadline. Hard cutoff remains < next close.
 # The exact slot should be available early; never chase a 15m-old candle.
 LATEST_ACCEPTABLE_COMPLETION_SECONDS=570
 HISTORY_CAP=384
@@ -57,6 +59,37 @@ def slot_open(slot):
     return bool(when and market_open(when-timedelta(seconds=1)))
 
 
+def verified_existing_slot(slot, history=None, unified=None):
+    """Do NOT duplicate a previously published EXACT-CANDLE success.
+
+    Only a scheduled successful signal for the very same :02/:17/:32/:47
+    logical slot counts. Do not trust GitHub file mtime or push preflights.
+    """
+    history=history if history is not None else load(HISTORY)
+    unified=unified if unified is not None else load("fx_unified_signals.json")
+    expected=slot["candle_slot_close_utc"]
+    published_rows=unified.get("all_11") or []
+    if len(published_rows)!=EXPECTED_PAIRS or any(
+        (r.get("reference_prices") or {}).get("closed_at_utc")!=expected
+        for r in published_rows
+    ):
+        return False
+    for prior in reversed(history.get("slots") or []):
+        if prior.get("scheduled_for_utc")!=slot["scheduled_for_utc"]:
+            continue
+        return (
+            prior.get("status")=="FULL_REPORT_EXACT_CANDLES_VERIFIED"
+            and prior.get("signal_publication_allowed") is True
+            and (prior.get("is_scheduled_trigger") is True or
+                 prior.get("trigger_event")=="schedule")
+            and prior.get("expected_candle_close_utc")==expected
+            and prior.get("validated_pairs")==EXPECTED_PAIRS
+            and (prior.get("expected_closes") or {}).get("M15")==expected
+            and prior.get("unified_generated_at_utc")==unified.get("generated_at_utc")
+        )
+    return False
+
+
 def collect():
     start=now_utc()
     slot=expected_slot(start)
@@ -68,8 +101,16 @@ def collect():
              "validated_pairs":0,"signal_publication_allowed":False,
              "no_trades":True,"timing_basis":"EXACT_UTC_15M_SLOT",
              "trigger_event":os.getenv("GITHUB_EVENT_NAME","UNKNOWN"),
-             "is_scheduled_trigger":os.getenv("GITHUB_EVENT_NAME")=="schedule"}
+             "is_scheduled_trigger":os.getenv("GITHUB_EVENT_NAME")=="schedule",
+             "scan_trigger_type":"backup" if os.getenv("FX_SCAN_CRON","").startswith("5,20,35,50 ") else "primary_or_manual",
+             "actual_start_delay_seconds":slot["seconds_after_target"]}
     job_output("ready","false")
+    if current["scan_trigger_type"]=="backup" and verified_existing_slot(slot):
+        current["status"]="SKIP_ALREADY_VERIFIED"
+        current["prior_success_reused"]=True
+        save(GATE,current)
+        print("BACKUP_SKIPPED_PRIOR_VALIDATED_SLOT",slot["scheduled_for_utc"])
+        return 0
     if not slot_open(slot):
         current["status"]="MARKET_CLOSED"
         save(GATE,current)
@@ -167,6 +208,13 @@ def missed_since(previous,requested_slot):
 
 def record():
     gate=load(GATE)
+    if gate.get("status")=="SKIP_ALREADY_VERIFIED":
+        # No fresh collection performed, so keep the original successful
+        # publication health and signal history untouched.
+        job_output("publish_signals","false")
+        print("BACKUP_IDEMPOTENT_SKIP_NO_NEW_HEALTH_OR_SIGNALS",
+              gate.get("scheduled_for_utc"))
+        return
     if not gate:
         slot=expected_slot(now_utc())
         gate={"scheduled_for_utc":slot["scheduled_for_utc"],
@@ -184,6 +232,16 @@ def record():
     gate["recorded_at_utc"]=now_utc().isoformat()
     gate["commit_at_utc"]="NOT_YET_VERIFIED_AT_RECORD_TIME"
     prior=load(HISTORY).get("slots") or []
+    previous=next((p for p in reversed(prior) if
+                   p.get("scheduled_for_utc")==gate["scheduled_for_utc"]),None)
+    if previous:
+        gate["previous_attempts_for_slot"]=(previous.get("previous_attempts_for_slot") or [])+[
+            {"started_at_utc":previous.get("started_at_utc"),
+             "status":previous.get("status"),
+             "trigger_event":previous.get("trigger_event"),
+             "scan_trigger_type":previous.get("scan_trigger_type"),
+             "missing":(previous.get("missing") or [])[:12]}
+        ]
     at=parse(gate["scheduled_for_utc"])
     gaps=missed_since(prior,at)
     recent=[x for x in prior if x.get("scheduled_for_utc")!=gate["scheduled_for_utc"]]
@@ -194,6 +252,7 @@ def record():
                   "historical_misses_are_not_backfilled_signals":True})
     save(HEALTH,{"generated_at_utc":now_utc().isoformat(),
                  "schedule_utc_minutes":[2,17,32,47],
+                 "backup_schedule_utc_minutes":[5,20,35,50],
                  "source":"GITHUB_ACTIONS_NO_COST_DEFAULT_RUNNER",
                  "last_slot":gate,
                  "unrecorded_slots_discovered":len(gaps),
