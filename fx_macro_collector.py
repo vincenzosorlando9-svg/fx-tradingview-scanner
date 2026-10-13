@@ -291,6 +291,7 @@ def parse_forexcracked(page):
     result = {"source": "ForexCracked live-market-rates public page",
               "url": page["url"], "retrieved_at_utc": page["retrieved_at_utc"],
               "status": page["http_status"], "pairs": {}, "non_crude": {},
+              "cross_risk": {},
               "quote_timestamp_utc": None, "indicative_not_broker_executable": True}
     if page["http_status"] != "OK":
         return result
@@ -321,17 +322,55 @@ def parse_forexcracked(page):
                                 "quote_timestamp_utc": result["quote_timestamp_utc"],
                                 "status": "INDICATIVE_SITE_QUOTE_NOT_BROKER",
                                 "execution_allowed": False}
-    # Non-crude prices only. Never infer copper/iron ore/dairy from unrecognized text.
-    for label, key in (("XAU/USD", "GOLD"), ("XAG/USD", "SILVER"),
-                       ("Gold", "GOLD"), ("Silver", "SILVER"),
-                       ("Copper", "COPPER"), ("Iron Ore", "IRON_ORE"), ("Dairy", "DAIRY")):
-        m = re.search(r"\b" + re.escape(label) + r"\s+(?:\d+(?:\.\d+)?p\s+)?(\d+(?:\.\d+)?)\b", txt, re.I)
-        if m:
-            v = numeric(m.group(1))
-            if v is not None and v > 0:
-                result["non_crude"].setdefault(key, {"value": v, "status": "INDICATIVE_UNVERIFIED_SOURCE_CLOCK",
-                                                     "unit": "SOURCE_QUOTE_UNITS",
-                                                     "quote_timestamp_utc": result["quote_timestamp_utc"]})
+    # Supplemental non-crude market context from the actual website symbol
+    # labels. Require a *bid followed by explicit Ask*, not arbitrary figures
+    # in articles/news/promotions. Never use XBR/USD or other ForexCracked
+    # crude references: the user mandates OilPrice.com ONLY for WTI/Brent.
+    def labelled_bid_ask(label):
+        pat=(r"(?<![A-Z0-9/])" + re.escape(label) +
+             r"\s+(?:(?:[\d,]+(?:\.\d+)?p?)\s+)?"
+             r"([\d,]+(?:\.\d+)?)\s*[▲▼]?\s*Ask\s+"
+             r"([\d,]+(?:\.\d+)?)")
+        m=re.search(pat,txt,re.I)
+        if not m:
+            return None
+        bid,ask=numeric(m.group(1)),numeric(m.group(2))
+        if bid is None or ask is None or bid<=0 or ask<bid:
+            return None
+        return bid,ask
+    others=(("XAU/USD","GOLD"),("XAG/USD","SILVER"),
+            ("XCU/USD","COPPER"),("XNG/USD","NATURAL_GAS"),
+            ("ALUMINIUM","ALUMINIUM"),("NICKEL","NICKEL"),
+            ("SOYBEANS","SOYBEANS"),("WHEAT","WHEAT"),
+            ("CORN","CORN"),("COCOA","COCOA"),
+            ("COFFEE","COFFEE"))
+    for label,key in others:
+        vals=labelled_bid_ask(label)
+        if not vals:
+            continue
+        bid,ask=vals
+        bounds={"GOLD":(200,10000),"SILVER":(3,500),
+                "COPPER":(.4,30),"NATURAL_GAS":(.1,50),
+                "ALUMINIUM":(300,15000),"NICKEL":(3000,100000)}
+        limits=bounds.get(key,(.01,1000000))
+        if not limits[0]<=bid<=limits[1]:
+            continue
+        result["non_crude"][key]={
+            "value":bid,"bid":bid,"ask":ask,
+            "status":"INDICATIVE_PUBLIC_SITE_REFERENCE_NOT_BROKER",
+            "unit":"SOURCE_QUOTE_UNITS",
+            "instrument_label":label,
+            "quote_timestamp_utc":result["quote_timestamp_utc"],
+            "execution_allowed":False}
+    vals=labelled_bid_ask("USD/CNH")
+    if vals and 3<=vals[0]<=12:
+        result["cross_risk"]["USD_CNH"]={
+            "bid":vals[0], "ask":vals[1],
+            "status":"INDICATIVE_CHINA_CONTEXT_NOT_ONE_OF_11_SIGNAL_PAIRS",
+            "quote_timestamp_utc":result["quote_timestamp_utc"],
+            "execution_allowed":False}
+    # IRON_ORE and DAIRY are only present if a validated source row exists;
+    # never infer their prices from adjacent or unrelated text.
     result["status"] = "INDICATIVE_PUBLIC_QUOTES" if result["pairs"] or result["non_crude"] else "UNAVAILABLE_NO_STATIC_QUOTES"
     return result
 
@@ -519,6 +558,7 @@ def main():
     print(json.dumps({"collected_at_utc": result["collected_at_utc"],
                       "yield_tenors": {c: len(v["maturities"]) for c, v in result["bonds"].items()},
                       "indicative_fx_pairs": len(result["forexcracked"]["pairs"]),
+                      "cross_risk": list(result["forexcracked"].get("cross_risk",{})),
                       "crude": list(result["oilprice"]["commodities"]),
                       "news": {k: len(v["articles"]) for k, v in result["news_sources"].items()},
                       "fg_status": result["feargreedmeter"]["status"]}))
