@@ -27,7 +27,7 @@ def read(path):
     return json.loads(p.read_text(encoding="utf-8"))
 
 
-def build_report(unified, dashboard, raw=None, news=None, snapshot=None,
+def _base_report(unified, dashboard, raw=None, news=None, snapshot=None,
                  calendar=None, cftc=None, audit=None):
     """Reformat existing verified reports without altering a direction or rank."""
     raw, news, snapshot = raw or {}, news or {}, snapshot or {}
@@ -205,21 +205,620 @@ def build_report(unified, dashboard, raw=None, news=None, snapshot=None,
     }
 
 
+
+# Definitive user-corrected contract: retain the detailed 15-layer MACRO-FIRST audit.
+# The headline shows strength and published Top Five first for scan readability.
+# Macro NEWS FIRST refers to the underlying investigation and numbered layers.
+from datetime import datetime, timezone, timedelta
+from zoneinfo import ZoneInfo
+from math import isfinite
+
+LAYOUT_VERSION = "FOREX_MAIN_SIGNAL_15_LAYER_MACRO_FIRST_2026_10_13_V2"
+LAYER_TITLES = [
+    "REUTERS AND FXSTREET — MACRO NEWS FIRST",
+    "ECONOMIC CALENDAR — ACTUALS, SURPRISES AND UPCOMING EVENTS",
+    "CENTRAL BANKS AND OIS",
+    "SOVEREIGN BONDS — 2Y/5Y/10Y/30Y",
+    "COMMODITIES",
+    "DXY, KOSPI, NIKKEI, CHINA AND SENTIMENT",
+    "CFTC TFF — OFFICIAL WEEKLY POSITIONING",
+    "CME FUTURES VOLUME AND OPEN INTEREST",
+    "RETAIL POSITIONING",
+    "CURRENCY-STRENGTH CLUSTERS",
+    "ALL 11 — LATEST CLOSED 15m/30m SIGNALS",
+    "1H/4H/DAILY CONTEXT",
+    "ATR, ADR AND CONSOLIDATION",
+    "CONDITIONAL TRIGGERS, INVALIDATION AND EXECUTION QUALITY",
+    "HISTORICAL ACCOUNTABILITY",
+]
+PRESENTATION_ORDER = [
+    "report_header",
+    "current_currency_strength",
+    "top_five_published_ranking",
+    "critical_setups_omitted_from_top_five",
+    "fifteen_layer_macro_first_audit",
+    "full_15_layer_coverage_audit",
+    "final_forex_main_signal",
+    "layout_contract",
+]
+NY = ZoneInfo("America/New_York")
+UTC = timezone.utc
+
+
+def clock(value):
+    if not value:
+        return None
+    try:
+        dt = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+        return dt.replace(tzinfo=UTC) if dt.tzinfo is None else dt.astimezone(UTC)
+    except (TypeError, ValueError, OverflowError):
+        return None
+
+
+def et(value):
+    dt = clock(value)
+    return dt.astimezone(NY).strftime("%a %b %d, %Y %-I:%M:%S %p ET") if dt else "UNAVAILABLE"
+
+
+def number(value, digits=1):
+    return f"{value:.{digits}f}" if isinstance(value, (int, float)) and isfinite(value) else "MISSING"
+
+
+def pip_multiplier(pair):
+    return 100 if pair.endswith("JPY") else 10000
+
+
+def candles_only_closed(data, pair, tf, collected):
+    """Read only bars whose scheduled end precedes the upstream collection clock.
+
+    The publisher's bars and clock are site-reported, NOT broker/exchange audited.
+    Avoid using a forming bar, and never backdate these into published ranks.
+    """
+    fetched=clock(collected)
+    frame=(((data.get("pairs") or {}).get(pair) or {}).get("tf") or {}).get(tf) or {}
+    seconds={"M15":900,"M30":1800}.get(tf)
+    times=frame.get("t") or []
+    closes=frame.get("c") or []
+    highs=frame.get("h") or []
+    lows=frame.get("l") or []
+    if fetched is None or seconds is None or len(times)!=len(closes):
+        return {"status":"UNAVAILABLE_UNVERIFIED_CANDLE_TIMING"}
+    index=None
+    for i,t in enumerate(times):
+        if isinstance(t, (int,float)) and t+seconds <= fetched.timestamp()+1:
+            index=i
+    if index is None or index<1:
+        return {"status":"UNAVAILABLE_NO_TWO_COMPLETED_BARS"}
+    end=datetime.fromtimestamp(times[index]+seconds, UTC)
+    age=(fetched-end).total_seconds()/60
+    if age< -1 or age > (22 if tf=="M15" else 37):
+        return {"status":"UNAVAILABLE_STALE_LAST_CLOSED_CANDLE", "age_at_fetch_minutes":round(age,1)}
+    try:
+        current=float(closes[index])
+        change=round((current-float(closes[index-1]))*pip_multiplier(pair),1)
+    except (ValueError,TypeError):
+        return {"status":"UNAVAILABLE_INVALID_CLOSE"}
+    out={"status":"SITE_REPORTED_COMPLETED_CANDLE", "close":current,
+         "change_pips":change, "closed_at_utc":end.isoformat(),
+         "age_at_fetch_minutes":round(age,1),
+         "source_collected_at_utc":collected,
+         "upstream_independent_integrity_verified":False}
+    if tf=="M15" and index>=23 and len(highs)>index and len(lows)>index:
+        try:
+            def width(start,stop):
+                return round((max(float(x) for x in highs[start:stop]) -
+                              min(float(x) for x in lows[start:stop])) *
+                             pip_multiplier(pair),1)
+            out["last_3h_range_pips"]=width(index-11,index+1)
+            out["previous_3h_range_pips"]=width(index-23,index-11)
+        except (TypeError,ValueError):
+            pass
+    return out
+
+
+def latest_feed_view(volatility, unified):
+    collected=volatility.get("collected_at_utc")
+    fetch=clock(collected)
+    published=clock(unified.get("generated_at_utc"))
+    # Permit separately fetched newer candles with EXPLICIT time/source boundaries.
+    if not fetch or not published or abs((fetch-published).total_seconds())>1800:
+        return {
+            "status":"UNAVAILABLE_STALE_OR_UNRELATED_VOLATILITY_FEED",
+            "collected_at_utc":collected,
+            "published_unified_generated_at_utc":unified.get("generated_at_utc"),
+            "pairs":{}}
+    rows={}
+    for pair in PAIRS:
+        m15=candles_only_closed(volatility,pair,"M15",collected)
+        m30=candles_only_closed(volatility,pair,"M30",collected)
+        usable=m15.get("status")=="SITE_REPORTED_COMPLETED_CANDLE" and m30.get("status")=="SITE_REPORTED_COMPLETED_CANDLE"
+        rows[pair]={"15m":m15,"30m":m30,
+                    "status":"TWO_CLOSED_CANDLES_OBSERVED" if usable else "PARTIAL_OR_UNAVAILABLE",
+                    "site_reported_not_broker":True}
+    return {
+        "status":"SEPARATELY_OBSERVED_SITE_REPORTED_CLOSED_CANDLES",
+        "collected_at_utc":collected,
+        "published_unified_generated_at_utc":unified.get("generated_at_utc"),
+        "ranking_predates_latest_observation":fetch>published,
+        "observations_do_not_recalculate_published_scores":True,
+        "pairs":rows}
+
+
+def assess(row, latest, movement_pips=None):
+    """Evidence-based updated assessment; NEVER rewrite original BUY/SELL history."""
+    original=row.get("direction")
+    stage=str(row.get("technical_stage") or "UNAVAILABLE")
+    m15=latest.get("15m") or {}
+    m30=latest.get("30m") or {}
+    if latest.get("status")!="TWO_CLOSED_CANDLES_OBSERVED":
+        return {"assessment":stage+" — LATEST CLOSED DATA UNAVAILABLE",
+                "new_counter_rotation":False, "observed_direction":None,
+                "published_direction":original}
+    a,b=m15["change_pips"],m30["change_pips"]
+    observed="BUY" if a>0 and b>0 else "SELL" if a<0 and b<0 else "MIXED"
+    counter=observed in ("BUY","SELL") and observed!=original
+    meaningful=abs(a)>=2.0 and abs(b)>=5.0
+    if counter and meaningful:
+        label=observed+" COUNTER-ROTATION WATCH — NOT A RECORDED "+observed+" EPISODE"
+    elif counter:
+        label=original+" EPISODE / OPPOSING PRESSURE — WATCH"
+    elif observed=="MIXED":
+        label=original+" EPISODE / MIXED CLOSED CANDLES — WAIT"
+    elif isinstance(movement_pips,(int,float)) and movement_pips>=20:
+        label=original+" EXTENDED EPISODE — DO NOT CHASE"
+    else:
+        label=original+" CONTINUATION — "+("EARLY WATCH" if "EARLY" in stage else "MONITOR")
+    return {"assessment":label,"new_counter_rotation":bool(counter and meaningful),
+            "observed_direction":observed, "published_direction":original,
+            "status":"PROVISIONAL_PUBLIC_CLOSED_CANDLES_NOT_NEW_UNIFIED_SIGNAL"}
+
+
+def historic_accountability(row, latest, history):
+    pair=row["pair"]
+    active=(((history.get("pairs") or {}).get(pair) or {}).get("active") or {})
+    direction=active.get("direction")
+    first=active.get("first_observed_closed_15m_price")
+    latest_price=(latest.get("15m") or {}).get("close")
+    delta=None
+    if direction in ("BUY","SELL") and isinstance(first,(int,float)) and isinstance(latest_price,(int,float)):
+        side=1 if direction=="BUY" else -1
+        delta=round((latest_price-first)*pip_multiplier(pair)*side,1)
+    return {"pair":pair,"recorded_episode_direction":direction,
+            "first_recorded_at_utc":active.get("first_observed_at_utc"),
+            "first_recorded_price":first,"latest_completed_15m_price":latest_price,
+            "pips_favorable_since_first_record":delta,
+            "source":"RECORDED_HISTORY_VS_NEWEST_COMPLETED_PUBLIC_CANDLE",
+            "not_trade_profit":True,
+            "episode_is_active":bool(active),
+            "no_retroactive_reversal":True}
+
+
+def build_report(unified, dashboard, raw=None, news=None, snapshot=None,
+                 calendar=None, cftc=None, audit=None, volatility=None,
+                 history=None, retail=None, forexfactory=None):
+    """Return the EXACT user-approved fifteen-layer structure in reading order."""
+    legacy=_base_report(unified,dashboard,raw=raw,news=news,snapshot=snapshot,
+                        calendar=calendar,cftc=cftc,audit=audit)
+    raw,news,snapshot,calendar,cftc,audit=[x or {} for x in (raw,news,snapshot,calendar,cftc,audit)]
+    volatility,history,retail,forexfactory=[x or {} for x in (volatility,history,retail,forexfactory)]
+    all_pairs=unified["all_11"]
+    current=latest_feed_view(volatility,unified)
+    latest=current["pairs"]
+    historical=[historic_accountability(r, latest.get(r["pair"],{}),history) for r in all_pairs]
+    hist_by_pair={x["pair"]:x for x in historical}
+    assessments={r["pair"]:assess(r,latest.get(r["pair"],{}),
+                                hist_by_pair[r["pair"]]["pips_favorable_since_first_record"])
+                 for r in all_pairs}
+    rank=[]
+    for i,r in enumerate(unified.get("top_five") or [],1):
+        p=r["pair"]
+        rank.append({**legacy["best_five_trading_pairs"][i-1],
+                     "published_rank":i, "published_score":r.get("technical_research_rank_score"),
+                     "updated_assessment":assessments[p]["assessment"],
+                     "ranking_generated_at_utc":unified.get("generated_at_utc"),
+                     "newer_candle_observation_collected_at_utc":current.get("collected_at_utc")
+                         if current.get("status")=="SEPARATELY_OBSERVED_SITE_REPORTED_CLOSED_CANDLES" else None,
+                     "published_ranking_preserved":True,
+                     "score_is_not_trade_probability":True})
+    selected={r["pair"] for r in rank}
+    omissions=[]
+    for r in all_pairs:
+        if r["pair"] in selected:
+            continue
+        view=latest.get(r["pair"],{})
+        a=(view.get("15m") or {}).get("change_pips")
+        b=(view.get("30m") or {}).get("change_pips")
+        updated=assessments[r["pair"]]
+        if not isinstance(a,(int,float)) or not isinstance(b,(int,float)):
+            continue
+        strength=round(abs(a)+abs(b),1)
+        if updated["new_counter_rotation"] or (a*b>0 and abs(b)>=5):
+            omissions.append({
+                "pair":r["pair"],"published_direction":r.get("direction"),
+                "current_closed_candle_assessment":updated["assessment"],
+                "new_counter_rotation_not_in_recorded_history":updated["new_counter_rotation"],
+                "15m_change_pips":a,"30m_change_pips":b,
+                "latest_closed_15m_price":view["15m"].get("close"),
+                "latest_closed_15m_at_utc":view["15m"].get("closed_at_utc"),
+                "episode_movement_pips":hist_by_pair[r["pair"]]["pips_favorable_since_first_record"],
+                "priority_score_for_display_only":strength,
+                "not_added_to_published_top_five":True})
+    omissions.sort(key=lambda x:(not x["new_counter_rotation_not_in_recorded_history"],
+                                 -x["priority_score_for_display_only"]))
+    # Above sorting is a separate displayed review priority, NOT the engine rank.
+    news_articles=news.get("articles") or []
+    matched=news.get("matched_actuals") or []
+    observation=clock(current.get("collected_at_utc")) or clock(unified.get("generated_at_utc"))
+    upcoming=[]
+    for event in calendar.get("events") or []:
+        when=clock(event.get("event_at_utc"))
+        if observation and when and observation<=when<=observation+timedelta(days=1):
+            upcoming.append(event)
+    upcoming.sort(key=lambda e:e.get("event_at_utc") or "")
+    bondrows=[]
+    for currency,data in (raw.get("bonds") or {}).items():
+        maturities=data.get("maturities") or {}
+        bondrows.append({
+            "country_or_currency":currency,"market_date":data.get("market_date"),
+            "status":data.get("status"),
+            "quote_timestamp_utc":data.get("quote_timestamp_utc"),
+            "source":data.get("url"),
+            **{tf: (maturities.get(tf) or {}).get("value_pct") for tf in ("2Y","5Y","10Y","30Y")}})
+    policy=[{"currency":c,"rate_pct":d.get("policy_rate_pct"),
+             "reference_date":d.get("reference_date") or d.get("reference_period"),
+             "status":d.get("status"),"source":d.get("url")}
+            for c,d in (raw.get("policy_rates") or {}).items()]
+    cftc_rows=[{"currency":c, "dealers_net":v.get("dealer_net"),
+                "asset_managers_net":v.get("asset_mgr_net"),
+                "leveraged_funds_net":v.get("leveraged_net"),
+                "historical_open_interest":v.get("open_interest_contracts")}
+               for c,v in (cftc.get("currencies") or {}).items()]
+    technical=[]
+    htf=[]
+    adr=[]
+    triggers=[]
+    jpy=[]
+    for r in all_pairs:
+        pair=r["pair"];v=latest.get(pair,{})
+        m15=v.get("15m") or {}
+        m30=v.get("30m") or {}
+        updated=assessments[pair]
+        technical.append({
+            "pair":pair,"latest_15m_closed_price":m15.get("close"),
+            "latest_15m_closed_at_utc":m15.get("closed_at_utc"),
+            "15m_change_pips":m15.get("change_pips"),
+            "latest_30m_closed_at_utc":m30.get("closed_at_utc"),
+            "30m_change_pips":m30.get("change_pips"),
+            "original_published_direction":r.get("direction"),
+            "updated_directional_assessment":updated["assessment"],
+            "counter_rotation_unrecorded":updated["new_counter_rotation"],
+            "site_reported_data_not_broker":True})
+        trend=r.get("higher_timeframe_trend_context") or {}
+        structure=trend.get("closed_candle_structure") or {}
+        ind=trend.get("EMA_context") or {}
+        htf.append({"pair":pair,
+                    "1H":structure.get("h1_bias"),
+                    "4H":structure.get("h4_bias"),
+                    "Daily":structure.get("daily_bias"),
+                    "1H_EMA20":(ind.get("1H") or {}).get("ema20"),
+                    "1H_EMA50":(ind.get("1H") or {}).get("ema50"),
+                    "4H_EMA10":(ind.get("4H") or {}).get("ema10"),
+                    "4H_EMA20":(ind.get("4H") or {}).get("ema20"),
+                    "not_early_signal_veto":True})
+        ranges=r.get("range_context") or {}
+        adr.append({"pair":pair,
+                    "observed_3h_width_pips":m15.get("last_3h_range_pips"),
+                    "previous_3h_width_pips":m15.get("previous_3h_range_pips"),
+                    "ADR20_pips":ranges.get("ADR20_pips"),
+                    "NY17_used_pips":ranges.get("NY17_day_used_pips"),
+                    "statistical_ADR_remaining_pips":ranges.get("ADR_remaining_reference_pips"),
+                    "ADR_is_not_target":True,
+                    "consolidation_origin_verified":False})
+        triggers.append({"pair":pair,"original_direction":r.get("direction"),
+                         "latest_provisional_assessment":updated["assessment"],
+                         "conditional_research_trigger":"Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation" if not updated["new_counter_rotation"] else "Require further closed-candle counter-rotation evidence; no historical SELL/BUY episode assumed",
+                         "structural_invalidation":"Opposing confirmed closed 15m/30m structural rotation; specific level requires verified source",
+                         "entry":r.get("entry"),"stop":r.get("stop"),
+                         "tp1":r.get("tp1"),"tp2":r.get("tp2"),
+                         "broker_executable":False})
+        if pair.endswith("JPY"):
+            jpy.append({"pair":pair,"15m_change_pips":m15.get("change_pips"),
+                        "30m_change_pips":m30.get("change_pips"),
+                        "site_reported":True})
+    layer_data=[
+        {"status":"PARTIAL_DATED_OR_BLOCKED",
+         "headlines":news_articles,"news_source_statuses":news.get("news_source_statuses") or {},
+         "verified_immediate_causal_reaction":False},
+        {"status":"PARTIAL_PUBLISHER_ACTUAL_TIMES_UNVERIFIED",
+         "released_events":matched,"upcoming_events_next_24h":upcoming,
+         "calendar_source":calendar.get("source"),"calendar_collected_at_utc":calendar.get("collected_at_utc"),
+         "post_release_immediate_reaction_verified":False},
+        {"status":"PARTIAL_OIS_UNAVAILABLE",
+         "published_policy_rate_references":policy,
+         "ois":raw.get("ois") or {"status":"UNAVAILABLE"},
+         "no_sovereign_yield_substitution_for_ois":True},
+        {"status":"PARTIAL_DATE_ONLY_YIELDS",
+         "nominal_yields":bondrows,"same_tenor_spreads":snapshot.get("same_maturity_yield_spreads") or {},
+         "fetch_observed_deltas_not_exchange_timestamped":
+             snapshot.get("observed_fetch_deltas") or {},
+         "historical_integrity":snapshot.get("historical_integrity")},
+        {"status":"PARTIAL_INDICATIVE_OR_DELAYED",
+         "oil_oilprice_only":raw.get("oilprice") or {},
+         "noncrude_forexcracked":(raw.get("forexcracked") or {}).get("non_crude") or {},
+         "dated_te_noncrude":raw.get("noncrude_te_secondary") or {}},
+        {"status":"PARTIAL_DATED_OR_INDICATIVE",
+         "global_indices":raw.get("indices") or {},
+         "vix_previous_close":raw.get("vix_cboe_official_daily") or {},
+         "feargreedmeter":raw.get("feargreedmeter") or {},
+         "usd_cnh":(raw.get("forexcracked") or {}).get("cross_risk") or {},
+         "JPY_cross_closed_candles":jpy,
+         "risk_off_alone_is_not_directional_FX_confirmation":True},
+        {"status":cftc.get("status","UNAVAILABLE"),
+         "report_date":cftc.get("report_date"),
+         "currency_net_futures_only_contracts":cftc_rows,
+         "prior_week_comparison":"UNAVAILABLE_UNLESS_EXPLICIT_PRIOR_REPORT_VALIDATED"},
+        {"status":"MISSING_INDEPENDENT_CURRENT_CME_FUTURES_VOLUME_OI",
+         "current_CME":raw.get("cme_futures") or {"status":"UNAVAILABLE"},
+         "CFTC_historical_OI_must_not_be_labeled_live_CME":True},
+        {"status":retail.get("status","UNAVAILABLE"),
+         "myfxbook":retail,
+         "forexfactory_market_pages":forexfactory,
+         "never_guess_retail_long_short_percentages":True},
+        {"status":legacy["currency_strength"]["status"],
+         "technical_breadth":legacy["currency_strength"],
+         "jpy_cluster":dashboard.get("early_rotation_jpy_cluster") or {},
+         "not_independent_currency_strength_index":True},
+        {"status":current["status"], "public_feed_collected_at_utc":current.get("collected_at_utc"),
+         "closed_candle_timeframes":["15m","30m"],
+         "pairs":technical,
+         "old_rank_vs_new_observation_explicit":True},
+        {"status":"CONTEXT_ONLY_NOT_EARLY_SIGNAL_VETO",
+         "timeframes":["1H","4H","Daily"],
+         "pairs":htf},
+        {"status":"PARTIAL_STATISTICAL_NOT_EXECUTION_TARGET",
+         "observed_three_hour_comparison":adr,
+         "exact_consolidation_origin_counts_or_squeeze_signals":"UNAVAILABLE"},
+        {"status":"MISSING_BROKER_EXECUTABLE_QUOTES",
+         "per_pair_conditional_research_criteria":triggers,
+         "broker_spreads_verified":False,
+         "precise_entries_stops_and_targets_independently_verified":False},
+        {"status":"VERIFIED_RECORDED_EPISODE_PLUS_SITE_REPORTED_CLOSED_CANDLE",
+         "as_of_latest_observation":current.get("collected_at_utc"),
+         "episode_accountability":historical,
+         "false_positive_and_counter_rotation_cannot_be_retroactively_rewritten":True},
+    ]
+    layers=[{"layer":i+1,"title":LAYER_TITLES[i],**v} for i,v in enumerate(layer_data)]
+    auditrows=[{"layer":i+1,"coverage":layer["title"],"status":layer["status"]}
+               for i,layer in enumerate(layers)]
+    strongest=legacy["currency_strength"]["strongest"]
+    weakest=legacy["currency_strength"]["weakest"]
+    status="PARTIAL — VERIFY PUBLISHER AND BROKER SOURCE LIMITATIONS"
+    if omissions:
+        one=omissions[0]
+        status="PARTIAL — WATCH "+one["pair"]+" "+one["current_closed_candle_assessment"]
+    summary={
+        "highest_ranked_published_pair":rank[0]["pair"] if rank else None,
+        "strongest_technical_breadth_currencies":strongest,
+        "weakest_technical_breadth_currencies":weakest,
+        "most_important_unranked_closed_candle_moves":omissions[:5],
+        "top_five_published_rank_does_not_rewrite_newer_candle_assessments":True,
+        "do_not_chase_or_wait":[r for r in technical if
+                                ("WAIT" in r["updated_directional_assessment"] or
+                                 "DO NOT CHASE" in r["updated_directional_assessment"])],
+        "news_event_risk":upcoming[:10],
+        "macro_evidence_status":"PARTIAL_NOT_FULLY_VERIFIED" if not audit.get("fully_macro_verified") else "INDEPENDENTLY_AUDITED",
+        "no_executable_quotes_or_trades":True,
+        "no_mobile_or_email_alerts":True}
+    return {
+        "report_header":{
+            "title":"FOREX MAIN SIGNAL — 15-LAYER MACRO-FIRST AUDIT",
+            "as_of_ET":et(current.get("collected_at_utc") if current.get("status")=="SEPARATELY_OBSERVED_SITE_REPORTED_CLOSED_CANDLES" else unified.get("generated_at_utc")),
+            "status":status,"pair_count":11,
+            "signal_candles":["15m","30m"],"api_keys_required":False,
+            "technical_feed_collected_at_utc":current.get("collected_at_utc"),
+            "unified_published_at_utc":unified.get("generated_at_utc"),
+            "macro_collected_at_utc":raw.get("collected_at_utc"),
+            "newer_observation_than_unified":current.get("ranking_predates_latest_observation"),
+            "two_sources_not_automatically_synchronized":True,
+            "scope":"FULL_15_LAYER_ANALYSIS_NOT_A_BROKER_EXECUTION_SIGNAL"},
+        "current_currency_strength":legacy["currency_strength"],
+        "top_five_published_ranking":{
+            "heading":"TOP FIVE — PUBLISHED 50/50 TECHNICAL RANKING",
+            "as_published_at_utc":unified.get("generated_at_utc"),
+            "scores_not_probabilities":True,
+            "updated_assessments_independent_from_published_scores":True,
+            "rows":rank},
+        "critical_setups_omitted_from_top_five":{
+            "heading":"CRITICAL SETUPS OMITTED FROM TOP FIVE",
+            "not_a_recalculated_ranking":True,
+            "pairs":omissions},
+        "fifteen_layer_macro_first_audit":layers,
+        "full_15_layer_coverage_audit":auditrows,
+        "final_forex_main_signal":summary,
+        "layout_contract":{
+            "version":LAYOUT_VERSION,
+            "fixed_order":PRESENTATION_ORDER,
+            "fixed_layer_titles":LAYER_TITLES,
+            "default_locked_until_user_explicitly_changes_it":True,
+            "do_not_simplify_to_six_sections":True,
+            "no_unrecorded_retroactive_entries":True,
+            "preserve_50pct_early_50pct_trend_ranking":True,
+            "preserve_all_11_pairs":True,
+            "no_M5_signal_inputs":True,
+            "source_technical_generated_at_utc":unified.get("source_technical_generated_at_utc"),
+            "source_unified_generated_at_utc":unified.get("generated_at_utc"),
+            "source_latest_volatility_collected_at_utc":current.get("collected_at_utc"),
+            "trades_executed":False,
+            "notifications_sent":False}
+    }
+
+
+def cell(value):
+    if isinstance(value, bool):
+        return "YES" if value else "NO"
+    if value is None or value=="":
+        return "MISSING"
+    if isinstance(value,float):
+        return number(value, 2)
+    return str(value).replace("|","/").replace("\n"," ")
+
+
+def mdtable(columns, rows):
+    if not rows:
+        return "No verified rows available.\n"
+    return "\n".join(["| "+" | ".join(columns)+" |",
+                      "| "+" | ".join(["---"]*len(columns))+" |"]+
+                     ["| "+" | ".join(cell(row.get(c)) for c in columns)+" |" for row in rows])+"\n"
+
+
+def render_markdown(report):
+    """Readable full-length report matching the user's supplied section names."""
+    h=report["report_header"]
+    out=["# "+h["title"],"",
+         h["as_of_ET"]+" | 11 pairs | Closed 15m/30m candles | No API keys",
+         "","**OVERALL STATUS: "+h["status"]+"**","",
+         "Latest independently collected technical feed: "+et(h["technical_feed_collected_at_utc"])+
+         ". Authoritative unified rank: "+et(h["unified_published_at_utc"])+
+         ". Macro fetch: "+et(h["macro_collected_at_utc"])+
+         ". Published scores and newer candle assessments are deliberately distinguished.",
+         "",
+         "## CURRENT CURRENCY STRENGTH — STRONGEST AND WEAKEST",""]
+    cs=report["current_currency_strength"]
+    out+=["**Strongest:** "+", ".join(cs["strongest"] or ["UNAVAILABLE"])+
+          " | **Weakest:** "+", ".join(cs["weakest"] or ["UNAVAILABLE"]),
+          cs["method"],"",
+          mdtable(["rank","currency","breadth_score"],cs["ranked_strongest_to_weakest"]),
+          "Technical 11-pair directional breadth, not an independent live strength index.","",
+          "## TOP FIVE — PUBLISHED 50/50 TECHNICAL RANKING",""]
+    rank=report["top_five_published_ranking"]["rows"]
+    out+= [mdtable(["published_rank","pair","direction","updated_assessment","published_score"],rank),
+           "These are published technical scores, not success probabilities. Newer candle assessments do NOT revise the published rank.","",
+           "## CRITICAL SETUPS OMITTED FROM TOP FIVE",""]
+    omissions=report["critical_setups_omitted_from_top_five"]["pairs"]
+    out+= [mdtable(["pair","published_direction","current_closed_candle_assessment","15m_change_pips","30m_change_pips","episode_movement_pips"],omissions),
+           "Counter-rotations are new candle evidence, NOT invented historical SELL/BUY episodes.",""]
+    layers=report["fifteen_layer_macro_first_audit"]
+    for layer in layers:
+        n=layer["layer"]
+        out+=["---","","## "+str(n)+". "+layer["title"],"",
+              "**Coverage:** "+layer["status"],""]
+        if n==1:
+            sources=layer["news_source_statuses"]
+            out+=["Sources: "+", ".join(k+": "+str(v) for k,v in sources.items())]
+            rows=[{"published_at_utc":x.get("published_at_utc"),"provider":x.get("provider"),
+                   "title":x.get("title"),"direction":x.get("direction")}
+                  for x in layer["headlines"][:12]]
+            out+=["",mdtable(["published_at_utc","provider","title","direction"],rows),
+                  "Headlines alone do not demonstrate an independently verified immediate FX reaction."]
+        elif n==2:
+            rows=[{"currency":x.get("currency"),"title":x.get("title"),
+                   "reported_actual":x.get("reported_actual"),"forecast":x.get("forecast"),
+                   "previous":x.get("previous"),"status":x.get("status")}
+                  for x in layer["released_events"]]
+            out+=["**Released actuals**",mdtable(["currency","title","reported_actual","forecast","previous","status"],rows),
+                  "**Upcoming events (next 24h)**",
+                  mdtable(["event_at_et","currency","title","forecast","previous"],
+                          [{"event_at_et":et(x.get("event_at_utc")),**x} for x in layer["upcoming_events_next_24h"]]),
+                  "Publisher-reported actuals are not equivalent to independently isolated event-price reactions."]
+        elif n==3:
+            out+=[mdtable(["currency","rate_pct","reference_date","status"],layer["published_policy_rate_references"]),
+                  "OIS status: "+str((layer["ois"] or {}).get("status","UNAVAILABLE"))+
+                  ". Do not substitute sovereign yields for market-implied OIS."]
+        elif n==4:
+            out+=[mdtable(["country_or_currency","2Y","5Y","10Y","30Y","market_date","status"],layer["nominal_yields"]),
+                  "Same-maturity spread references and independently timed yield changes are preserved in the JSON layer; public-date yield references are not synchronized market ticks."]
+        elif n==5:
+            oil=layer["oil_oilprice_only"] or {}
+            rows=[{"commodity":k,"value_usd_per_barrel":v.get("value_usd_per_barrel"),
+                   "delay_minutes":v.get("delay_minutes"),"quote_timestamp_utc":v.get("quote_timestamp_utc")}
+                  for k,v in (oil.get("commodities") or {}).items()]
+            out+=["**Crude: OilPrice.com only**",mdtable(["commodity","value_usd_per_barrel","delay_minutes","quote_timestamp_utc"],rows)]
+            nc=layer["noncrude_forexcracked"] or {}
+            out+=["**Non-crude: ForexCracked indicative**",
+                  mdtable(["commodity","value","status"],
+                          [{"commodity":k,"value":v.get("value"),"status":v.get("status")} for k,v in nc.items()])]
+        elif n==6:
+            ix=layer["global_indices"]
+            out+=[mdtable(["indicator","value","market_date","status"],
+                         [{"indicator":k,"value":v.get("value"),
+                           "market_date":v.get("market_date"),"status":v.get("status")}
+                          for k,v in ix.items()]),
+                  "**JPY-cluster check on completed 15m/30m candles:**",
+                  mdtable(["pair","15m_change_pips","30m_change_pips"],
+                          layer["JPY_cross_closed_candles"]),
+                  "Risk-off context cannot override an unsynchronized FX cluster."]
+        elif n==7:
+            out+=["CFTC report date: "+cell(layer["report_date"]),
+                  mdtable(["currency","dealers_net","asset_managers_net","leveraged_funds_net"],
+                          layer["currency_net_futures_only_contracts"]),
+                  "Historical futures-only positions; absent prior-week comparisons remain unavailable."]
+        elif n==8:
+            out+=["Current independently verified CME volume/OI: MISSING. Historical CFTC open interest is not live CME data."]
+        elif n==9:
+            out+=["Retail status: "+cell(layer["status"])+". Myfxbook and Forex Factory dynamic positioning must not be guessed."]
+        elif n==10:
+            cs=layer["technical_breadth"]
+            out+=["Strongest: "+", ".join(cs["strongest"] or ["UNAVAILABLE"])+
+                  " | Weakest: "+", ".join(cs["weakest"] or ["UNAVAILABLE"]),
+                  mdtable(["rank","currency","breadth_score"],cs["ranked_strongest_to_weakest"])]
+        elif n==11:
+            out+=["Public technical feed collected: "+et(layer["public_feed_collected_at_utc"]),
+                  mdtable(["pair","latest_15m_closed_price","latest_15m_closed_at_utc",
+                           "15m_change_pips","30m_change_pips","original_published_direction",
+                           "updated_directional_assessment"],layer["pairs"])]
+        elif n==12:
+            out+=[mdtable(["pair","1H","4H","Daily","1H_EMA20","1H_EMA50","4H_EMA10","4H_EMA20"],layer["pairs"]),
+                  "These longer timeframes are contextual; they do not veto early completed 15m/30m rotations."]
+        elif n==13:
+            out+=[mdtable(["pair","observed_3h_width_pips","previous_3h_width_pips","ADR20_pips",
+                          "NY17_used_pips","statistical_ADR_remaining_pips"],layer["observed_three_hour_comparison"]),
+                  "Range widths are observed windows, not verified consolidation origins. ADR remaining is statistical capacity, not a target."]
+        elif n==14:
+            out+=[mdtable(["pair","original_direction","latest_provisional_assessment","conditional_research_trigger",
+                          "structural_invalidation","entry","stop","tp1","tp2"],
+                          layer["per_pair_conditional_research_criteria"]),
+                  "No independently broker-verified executable quotes, stops, spreads or targets. Research only."]
+        elif n==15:
+            out+=[mdtable(["pair","recorded_episode_direction","first_recorded_at_utc",
+                          "first_recorded_price","latest_completed_15m_price",
+                          "pips_favorable_since_first_record"],layer["episode_accountability"]),
+                  "Recorded observations do not imply realized P&L. Wrong-way episodes remain visible; counter-rotations are never retroactively invented."]
+        out+=[""]
+    out+=["---","","## FULL 15-LAYER COVERAGE AUDIT","",
+          mdtable(["layer","coverage","status"],report["full_15_layer_coverage_audit"]),
+          "---","",
+          "## FINAL FOREX MAIN SIGNAL — "+h["as_of_ET"],"",
+          "Strongest technical breadth: "+", ".join(report["final_forex_main_signal"]["strongest_technical_breadth_currencies"] or ["UNAVAILABLE"])+
+          ". Weakest: "+", ".join(report["final_forex_main_signal"]["weakest_technical_breadth_currencies"] or ["UNAVAILABLE"])+".",
+          "Highest published 50/50 research rank: "+cell(report["final_forex_main_signal"]["highest_ranked_published_pair"])+".",
+          "Important omitted counter-rotations / accelerations: "+", ".join(x["pair"] for x in omissions[:5]) if omissions else
+          "No independently qualifying omitted counter-rotation measured.",
+          "",
+          "**EXECUTION STATUS: RESEARCH WATCH ONLY.** Broker entries, stops, profit targets and spreads are not independently verified. No trades executed; no alerts generated.",
+          "",
+          "Sources: fx_unified_signals.json, fx_scan_dashboard.json, fx_volatility.json, fx_macro_raw.json, fx_macro_news.json, fx_economic_calendar.json, fx_cftc_tff.json, fx_signal_history.json, fx_integrated_audit.json.",
+          ""]
+    return "\n".join(out)
+
+
 def main():
-    report = build_report(
-        read("fx_unified_signals.json"), read("fx_scan_dashboard.json"),
-        raw=read("fx_macro_raw.json"), news=read("fx_macro_news.json"),
-        snapshot=read("fx_macro_snapshot.json"),
-        calendar=read("fx_economic_calendar.json"),
-        cftc=read("fx_cftc_tff.json"), audit=read("fx_integrated_audit.json"))
-    Path("fx_scan_report.json").write_text(
-        json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(json.dumps({"layout": LAYOUT_VERSION,
-                      "strength_ranked": len(report["currency_strength"]["ranked_strongest_to_weakest"]),
-                      "top_five": len(report["best_five_trading_pairs"]),
-                      "all_11": len(report["all_11_pairs"]),
-                      "order": PRESENTATION_ORDER}))
+    report=build_report(read("fx_unified_signals.json"),read("fx_scan_dashboard.json"),
+                        raw=read("fx_macro_raw.json"),news=read("fx_macro_news.json"),
+                        snapshot=read("fx_macro_snapshot.json"),
+                        calendar=read("fx_economic_calendar.json"),
+                        cftc=read("fx_cftc_tff.json"),
+                        audit=read("fx_integrated_audit.json"),
+                        volatility=read("fx_volatility.json"),
+                        history=read("fx_signal_history.json"),
+                        retail=read("fx_retail_positioning.json"),
+                        forexfactory=read("fx_forexfactory_markets.json"))
+    Path("fx_scan_report.json").write_text(json.dumps(report,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
+    Path("fx_scan_report.md").write_text(render_markdown(report),encoding="utf-8")
+    print(json.dumps({"layout":LAYOUT_VERSION,"layers":len(report["fifteen_layer_macro_first_audit"]),
+                      "published_top_five":len(report["top_five_published_ranking"]["rows"]),
+                      "all_11":len(report["fifteen_layer_macro_first_audit"][10]["pairs"]),
+                      "report_md":"fx_scan_report.md","order":PRESENTATION_ORDER}))
 
 
-if __name__ == "__main__":
+if __name__=="__main__":
     main()
