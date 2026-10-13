@@ -32,7 +32,7 @@ def parse_page(html,pair):
     text=" ".join(parser.parts)
     title=pair[:3]+"/"+pair[3:]
     # Store only fields that are independently visible and parseable.
-    found=bool(re.search(r"\b"+re.escape(title)+r"\\b",text))
+    found=bool(re.search(r"\b"+re.escape(title)+r"\b",text))
     pos=re.search(r"Positions for\s+"+re.escape(title)+r".{0,1000}?(\d{1,3})%\s+(\d+)\s+Traders.{0,100}?(\d+)\s+Traders\s+(\d{1,3})%",text,re.I)
     positions=None
     if pos:
