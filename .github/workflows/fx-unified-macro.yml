@@ -1,0 +1,91 @@
+name: FX Unified Macro Intelligence (No Keys, No Alerts)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'fx_macro_collector.py'
+      - 'fx_macro_engine.py'
+      - 'fx_ff_actuals_collector.py'
+      - 'fx_cftc_tff_collector.py'
+      - 'test_fx_macro_engine.py'
+      - '.github/workflows/fx-unified-macro.yml'
+  schedule:
+    - cron: '11,26,41,56 * * * *'
+    - cron: '47 21 * * 5'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fx-unified-macro
+  cancel-in-progress: false
+
+jobs:
+  collect-and-fuse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout latest
+        uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install source parser and scanner dependencies
+        run: python -m pip install -r requirements.txt beautifulsoup4
+      - name: Validate macro parsing and signal rules without network
+        run: python -m unittest -v test_fx_macro_engine
+      - name: Collect weekly CFTC historical futures-only report on first boot or Fridays
+        env:
+          EVENT_SCHEDULE: ${{ github.event.schedule }}
+        run: |
+          if [ ! -f fx_cftc_tff.json ] || [ "$EVENT_SCHEDULE" = '47 21 * * 5' ]; then
+            python fx_cftc_tff_collector.py
+          fi
+      - name: Collect Forex Factory actuals independently of weekly calendar
+        run: python fx_ff_actuals_collector.py
+      - name: Collect public macro and dated news feeds concurrently
+        run: python fx_macro_collector.py
+      - name: Fuse macro snapshots with existing closed 15m 30m technical scanner
+        run: python fx_macro_engine.py
+      - name: Check published 11-pair integrity and historical source clock metadata
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          for p in ("fx_macro_raw.json","fx_macro_snapshot.json","fx_macro_history.json",
+                    "fx_macro_news.json","fx_unified_signals.json","fx_economic_actuals.json"):
+              obj=json.loads(Path(p).read_text())
+              assert isinstance(obj,dict),p
+          obj=json.loads(Path("fx_unified_signals.json").read_text())
+          assert obj["pair_count"] == 11
+          assert len(obj["all_11"])==11
+          assert set(x["pair"] for x in obj["all_11"])==set(
+              ["AUDUSD","NZDUSD","EURUSD","GBPUSD","USDJPY",
+               "AUDJPY","NZDJPY","EURJPY","EURCAD","USDCAD","EURGBP"])
+          assert obj["no_mobile_alerts"] is True
+          assert all(p["trade_execution_allowed"] is False for p in obj["all_11"])
+          assert all(p["no_5m_signal_inputs"] is True for p in obj["all_11"])
+          assert obj["real_broker_spread_verified"] is False
+          print("Unified 11-pair snapshots validated")
+          PY
+      - name: Publish versioned macro and unified intelligence snapshots
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add fx_macro_raw.json fx_macro_snapshot.json fx_macro_history.json \
+                  fx_macro_news.json fx_unified_signals.json fx_economic_actuals.json
+          if [ -f fx_cftc_tff.json ]; then git add fx_cftc_tff.json; fi
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Refresh keyless macro intelligence and technical fusion"
+          for attempt in 1 2 3; do
+            if git pull --rebase origin main && git push origin HEAD:main; then exit 0; fi
+            git rebase --abort || true
+            sleep 5
+          done
+          echo "Git push could not publish cleanly"
+          exit 1
