@@ -121,6 +121,7 @@ def refresh(now=None):
     snap=read("fx_macro_snapshot.json")
     news=read("fx_macro_news.json")
     breaking=read("fx_news_priority.json")
+    calendar_radar=read("fx_calendar_priority.json")
     raw=read("fx_macro_raw.json")
     range_data=read("fx_range_context.json")
     cal=read("fx_economic_calendar.json")
@@ -148,9 +149,22 @@ def refresh(now=None):
                           raw if raw_ok else {})
     # Breaking news is a timestamped policy-event REVIEW QUEUE, never a
     # trade signal, 50/50 technical rank input or assumed market reaction.
+    calendar_radar_ok=fresh(calendar_radar,"generated_at_utc",20,now)
     fast_news_ok=fresh(breaking,"generated_at_utc",20,now)
     for row in rows:
         p=((breaking.get("pairs") or {}).get(row["pair"]) or {}) if fast_news_ok else {}
+        cp=((calendar_radar.get("pairs") or {}).get(row["pair"]) or {}) if calendar_radar_ok else {}
+        row["scheduled_event_radar"]={
+            "status":cp.get("research_status","UNAVAILABLE_FRESH_CALENDAR_RADAR"),
+            "as_of_utc":calendar_radar.get("generated_at_utc") if calendar_radar_ok else None,
+            "critical_within_two_hours":cp.get("critical_within_two_hours") or [],
+            "upcoming_or_recent_critical":cp.get("upcoming_or_recent_critical") or [],
+            "source_coverage_incomplete":True,
+            "fxstreet_calendar_status":"NOT_INGESTED_REQUIRES_AUTHENTICATION",
+            "event_time_is_utc_and_new_york_verified":bool(cp),
+            "directional_vote":"NONE",
+            "technical_rank_unchanged":True
+        }
         row["breaking_policy_news"]={
             "status":p.get("status","UNAVAILABLE_FRESH_APPROVED_NEWS"),
             "as_of_utc":breaking.get("generated_at_utc") if fast_news_ok else None,
@@ -186,6 +200,8 @@ def refresh(now=None):
          "no_mobile_alerts":True,"real_broker_spread_verified":False,
          "macro_snapshot_used":macro_ok,
          "context_contract": "MARKET_REFERENCES_AND_MISSING_DATA_NON_EXECUTABLE",
+         "calendar_radar_generated_at_utc":calendar_radar.get("generated_at_utc") if calendar_radar_ok else None,
+         "calendar_radar_coverage_status":"PARTIAL_FF_ONLY" if calendar_radar_ok else "STALE_OR_UNAVAILABLE",
          "breaking_news_source_generated_at_utc":breaking.get("generated_at_utc") if fast_news_ok else None,
          "breaking_news_source_status":"FRESH" if fast_news_ok else "STALE_OR_UNAVAILABLE",
          "source_freshness_minutes":{
