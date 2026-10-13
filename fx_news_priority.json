@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-13T16:03:24.861861+00:00",
+  "generated_at_utc": "2026-10-13T16:22:48.873945+00:00",
   "target_refresh_minutes": 5,
   "actual_actions_schedule_not_guaranteed": true,
   "approved_source_names": [
@@ -26,7 +26,7 @@
       "url": "https://www.newsquawk.com/headlines/pimcos-ivascyn-says-market-has-not-yet-seen-the-peak-in-us-treasury-yields-expects-fed-to-hold-in-october-with-one-or-two-more-rate-hikes-this-cycle",
       "published_at_utc": "2026-10-13T15:48:00+00:00",
       "first_seen_at_utc": "2026-10-13T16:03:24.861861+00:00",
-      "publisher_age_minutes": 15.4,
+      "publisher_age_minutes": 34.8,
       "source_latency_to_first_seen_minutes": 15.4,
       "source_public_delay_minutes_at_least": 20,
       "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -49,7 +49,7 @@
       "broker_execution_allowed": false,
       "price_reactions": {
         "AUDUSD": {
-          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
           "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
           "no_intrabar_assumptions": true,
           "causal_link_verified": false,
@@ -58,10 +58,17 @@
           "pre_event_price": 0.69791,
           "first_post_event_close_utc": "2026-10-13T16:00:00+00:00",
           "first_post_event_price": 0.69834,
-          "first_post_event_change_pips": 4.3
+          "first_post_event_change_pips": 4.3,
+          "second_post_event_close_utc": "2026-10-13T16:15:00+00:00",
+          "second_post_event_price": 0.69829,
+          "second_post_event_change_pips": -0.5,
+          "net_two_bar_event_window_pips": 3.8,
+          "early_initial_direction": "UP",
+          "second_bar_direction": "DOWN",
+          "retrospective_if_first_seen_after_first_candle": true
         },
         "NZDUSD": {
-          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
           "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
           "no_intrabar_assumptions": true,
           "causal_link_verified": false,
@@ -70,10 +77,17 @@
           "pre_event_price": 0.5611,
           "first_post_event_close_utc": "2026-10-13T16:00:00+00:00",
           "first_post_event_price": 0.5615,
-          "first_post_event_change_pips": 4.0
+          "first_post_event_change_pips": 4.0,
+          "second_post_event_close_utc": "2026-10-13T16:15:00+00:00",
+          "second_post_event_price": 0.56148,
+          "second_post_event_change_pips": -0.2,
+          "net_two_bar_event_window_pips": 3.8,
+          "early_initial_direction": "UP",
+          "second_bar_direction": "DOWN",
+          "retrospective_if_first_seen_after_first_candle": true
         },
         "EURUSD": {
-          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
           "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
           "no_intrabar_assumptions": true,
           "causal_link_verified": false,
@@ -82,10 +96,17 @@
           "pre_event_price": 1.11896,
           "first_post_event_close_utc": "2026-10-13T16:00:00+00:00",
           "first_post_event_price": 1.11954,
-          "first_post_event_change_pips": 5.8
+          "first_post_event_change_pips": 5.8,
+          "second_post_event_close_utc": "2026-10-13T16:15:00+00:00",
+          "second_post_event_price": 1.11946,
+          "second_post_event_change_pips": -0.8,
+          "net_two_bar_event_window_pips": 5.0,
+          "early_initial_direction": "UP",
+          "second_bar_direction": "DOWN",
+          "retrospective_if_first_seen_after_first_candle": true
         },
         "GBPUSD": {
-          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+          "status": "FIRST_MOVE_REVERSED_ON_SECOND_M15",
           "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
           "no_intrabar_assumptions": true,
           "causal_link_verified": false,
@@ -94,10 +115,17 @@
           "pre_event_price": 1.32451,
           "first_post_event_close_utc": "2026-10-13T16:00:00+00:00",
           "first_post_event_price": 1.32511,
-          "first_post_event_change_pips": 6.0
+          "first_post_event_change_pips": 6.0,
+          "second_post_event_close_utc": "2026-10-13T16:15:00+00:00",
+          "second_post_event_price": 1.32481,
+          "second_post_event_change_pips": -3.0,
+          "net_two_bar_event_window_pips": 3.0,
+          "early_initial_direction": "UP",
+          "second_bar_direction": "DOWN",
+          "retrospective_if_first_seen_after_first_candle": true
         },
         "USDJPY": {
-          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
           "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
           "no_intrabar_assumptions": true,
           "causal_link_verified": false,
@@ -106,10 +134,17 @@
           "pre_event_price": 158.427,
           "first_post_event_close_utc": "2026-10-13T16:00:00+00:00",
           "first_post_event_price": 158.367,
-          "first_post_event_change_pips": -6.0
+          "first_post_event_change_pips": -6.0,
+          "second_post_event_close_utc": "2026-10-13T16:15:00+00:00",
+          "second_post_event_price": 158.36,
+          "second_post_event_change_pips": -0.7,
+          "net_two_bar_event_window_pips": -6.7,
+          "early_initial_direction": "DOWN",
+          "second_bar_direction": "DOWN",
+          "retrospective_if_first_seen_after_first_candle": true
         },
         "USDCAD": {
-          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
           "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
           "no_intrabar_assumptions": true,
           "causal_link_verified": false,
@@ -118,10 +153,110 @@
           "pre_event_price": 1.4219,
           "first_post_event_close_utc": "2026-10-13T16:00:00+00:00",
           "first_post_event_price": 1.42159,
-          "first_post_event_change_pips": -3.1
+          "first_post_event_change_pips": -3.1,
+          "second_post_event_close_utc": "2026-10-13T16:15:00+00:00",
+          "second_post_event_price": 1.4213,
+          "second_post_event_change_pips": -2.9,
+          "net_two_bar_event_window_pips": -6.0,
+          "early_initial_direction": "DOWN",
+          "second_bar_direction": "DOWN",
+          "retrospective_if_first_seen_after_first_candle": true
         }
       },
       "all_price_reactions_are_noncausal_observations": true
+    },
+    {
+      "provider": "FXStreet_RSS",
+      "title": "British Pound finds fresh momentum as BoE hawks set stage for US CPI",
+      "url": "https://www.fxstreet.com/news/british-pound-finds-fresh-momentum-as-boe-hawks-set-stage-for-us-cpi-202610131539",
+      "published_at_utc": "2026-10-13T15:39:42+00:00",
+      "first_seen_at_utc": "2026-10-13T16:22:48.873945+00:00",
+      "publisher_age_minutes": 43.1,
+      "source_latency_to_first_seen_minutes": 43.1,
+      "source_public_delay_minutes_at_least": null,
+      "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+      "not_pro_feed_or_first_seen_in_real_time": false,
+      "type": "CENTRAL_BANK_POLICY",
+      "priority": "HIGH_POLICY_REACTION_CHECK",
+      "currencies": [
+        "GBP"
+      ],
+      "affected_pairs": [
+        "GBPUSD",
+        "EURGBP"
+      ],
+      "headline_direction": "UNDETERMINED",
+      "market_reaction": "NOT_VERIFIED",
+      "broker_execution_allowed": false,
+      "price_reactions": {
+        "GBPUSD": {
+          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false,
+          "pre_event_close_utc": "2026-10-13T15:30:00+00:00",
+          "pre_event_price": 1.32468,
+          "first_post_event_close_utc": "2026-10-13T15:45:00+00:00",
+          "first_post_event_price": 1.32451,
+          "first_post_event_change_pips": -1.7,
+          "second_post_event_close_utc": "2026-10-13T16:00:00+00:00",
+          "second_post_event_price": 1.32511,
+          "second_post_event_change_pips": 6.0,
+          "net_two_bar_event_window_pips": 4.3,
+          "early_initial_direction": "DOWN",
+          "second_bar_direction": "UP",
+          "retrospective_if_first_seen_after_first_candle": true
+        },
+        "EURGBP": {
+          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false,
+          "pre_event_close_utc": "2026-10-13T15:30:00+00:00",
+          "pre_event_price": 0.84493,
+          "first_post_event_close_utc": "2026-10-13T15:45:00+00:00",
+          "first_post_event_price": 0.84482,
+          "first_post_event_change_pips": -1.1,
+          "second_post_event_close_utc": "2026-10-13T16:00:00+00:00",
+          "second_post_event_price": 0.84484,
+          "second_post_event_change_pips": 0.2,
+          "net_two_bar_event_window_pips": -0.9,
+          "early_initial_direction": "DOWN",
+          "second_bar_direction": "UP",
+          "retrospective_if_first_seen_after_first_candle": true
+        }
+      },
+      "all_price_reactions_are_noncausal_observations": true
+    },
+    {
+      "provider": "FXStreet_RSS",
+      "title": "Neither a breakout nor a reversal: What OCBC, Commerzbank and ING expect from the US Dollar",
+      "url": "https://www.fxstreet.com/news/neither-a-breakout-nor-a-reversal-what-ocbc-commerzbank-and-ing-expect-from-the-us-dollar-202610131532",
+      "published_at_utc": "2026-10-13T15:32:21+00:00",
+      "first_seen_at_utc": "2026-10-13T16:22:48.873945+00:00",
+      "publisher_age_minutes": 50.5,
+      "source_latency_to_first_seen_minutes": 50.5,
+      "source_public_delay_minutes_at_least": null,
+      "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+      "not_pro_feed_or_first_seen_in_real_time": false,
+      "type": "GENERAL",
+      "priority": "CONTEXT",
+      "currencies": [
+        "USD"
+      ],
+      "affected_pairs": [
+        "AUDUSD",
+        "NZDUSD",
+        "EURUSD",
+        "GBPUSD",
+        "USDJPY",
+        "USDCAD"
+      ],
+      "headline_direction": "UNDETERMINED",
+      "market_reaction": "NOT_VERIFIED",
+      "broker_execution_allowed": false
     },
     {
       "provider": "Newsquawk_public_delayed",
@@ -129,7 +264,7 @@
       "url": "https://www.newsquawk.com/headlines/us-treasury-to-sell-usd-110bln-of-4-week-bills-and-usd-105bln-of-8-week-bills-on-october-15th-to-sell-usd-75bln-of-17-week-bills-on-october-14th-all-to-settle-ocotber-20th",
       "published_at_utc": "2026-10-13T15:21:00+00:00",
       "first_seen_at_utc": "2026-10-13T15:27:52.021824+00:00",
-      "publisher_age_minutes": 42.4,
+      "publisher_age_minutes": 61.8,
       "source_latency_to_first_seen_minutes": 6.9,
       "source_public_delay_minutes_at_least": 20,
       "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -157,7 +292,7 @@
       "url": "https://www.fxstreet.com/news/euro-finds-support-from-softer-us-dollar-french-fiscal-risks-linger-202610131509",
       "published_at_utc": "2026-10-13T15:09:19+00:00",
       "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
-      "publisher_age_minutes": 54.1,
+      "publisher_age_minutes": 73.5,
       "source_latency_to_first_seen_minutes": 37.8,
       "source_public_delay_minutes_at_least": null,
       "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -189,7 +324,7 @@
       "url": "https://www.fxstreet.com/news/british-pound-upside-momentum-builds-against-euro-societe-generale-202610131459",
       "published_at_utc": "2026-10-13T14:59:20+00:00",
       "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
-      "publisher_age_minutes": 64.1,
+      "publisher_age_minutes": 83.5,
       "source_latency_to_first_seen_minutes": 47.8,
       "source_public_delay_minutes_at_least": null,
       "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -217,7 +352,7 @@
       "url": "https://www.fxstreet.com/news/canadian-dollar-modest-gains-against-us-dollar-scotiabank-202610131423",
       "published_at_utc": "2026-10-13T14:23:57+00:00",
       "first_seen_at_utc": "2026-10-13T15:07:42.499248+00:00",
-      "publisher_age_minutes": 99.5,
+      "publisher_age_minutes": 118.9,
       "source_latency_to_first_seen_minutes": 43.8,
       "source_public_delay_minutes_at_least": null,
       "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -240,36 +375,6 @@
       "headline_direction": "UNDETERMINED",
       "market_reaction": "NOT_VERIFIED",
       "broker_execution_allowed": false
-    },
-    {
-      "provider": "FXStreet_RSS",
-      "title": "Australian Dollar : Key support at 0.6935 in focus against US Dollar   – UOB",
-      "url": "https://www.fxstreet.com/news/australian-dollar-key-support-at-06935-in-focus-against-us-dollar-uob-202610131404",
-      "published_at_utc": "2026-10-13T14:04:33+00:00",
-      "first_seen_at_utc": "2026-10-13T15:07:42.499248+00:00",
-      "publisher_age_minutes": 118.9,
-      "source_latency_to_first_seen_minutes": 63.2,
-      "source_public_delay_minutes_at_least": null,
-      "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-      "not_pro_feed_or_first_seen_in_real_time": false,
-      "type": "GENERAL",
-      "priority": "CONTEXT",
-      "currencies": [
-        "AUD",
-        "USD"
-      ],
-      "affected_pairs": [
-        "AUDUSD",
-        "NZDUSD",
-        "EURUSD",
-        "GBPUSD",
-        "USDJPY",
-        "AUDJPY",
-        "USDCAD"
-      ],
-      "headline_direction": "UNDETERMINED",
-      "market_reaction": "NOT_VERIFIED",
-      "broker_execution_allowed": false
     }
   ],
   "pairs": {
@@ -282,7 +387,7 @@
           "url": "https://www.newsquawk.com/headlines/pimcos-ivascyn-says-market-has-not-yet-seen-the-peak-in-us-treasury-yields-expects-fed-to-hold-in-october-with-one-or-two-more-rate-hikes-this-cycle",
           "published_at_utc": "2026-10-13T15:48:00+00:00",
           "first_seen_at_utc": "2026-10-13T16:03:24.861861+00:00",
-          "publisher_age_minutes": 15.4,
+          "publisher_age_minutes": 34.8,
           "source_latency_to_first_seen_minutes": 15.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -304,7 +409,7 @@
           "market_reaction": "NOT_VERIFIED",
           "broker_execution_allowed": false,
           "price_reaction_observation": {
-            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
@@ -313,7 +418,14 @@
             "pre_event_price": 0.69791,
             "first_post_event_close_utc": "2026-10-13T16:00:00+00:00",
             "first_post_event_price": 0.69834,
-            "first_post_event_change_pips": 4.3
+            "first_post_event_change_pips": 4.3,
+            "second_post_event_close_utc": "2026-10-13T16:15:00+00:00",
+            "second_post_event_price": 0.69829,
+            "second_post_event_change_pips": -0.5,
+            "net_two_bar_event_window_pips": 3.8,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": true
           }
         }
       ],
@@ -324,7 +436,7 @@
           "url": "https://www.newsquawk.com/headlines/pimcos-ivascyn-says-market-has-not-yet-seen-the-peak-in-us-treasury-yields-expects-fed-to-hold-in-october-with-one-or-two-more-rate-hikes-this-cycle",
           "published_at_utc": "2026-10-13T15:48:00+00:00",
           "first_seen_at_utc": "2026-10-13T16:03:24.861861+00:00",
-          "publisher_age_minutes": 15.4,
+          "publisher_age_minutes": 34.8,
           "source_latency_to_first_seen_minutes": 15.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -346,7 +458,7 @@
           "market_reaction": "NOT_VERIFIED",
           "broker_execution_allowed": false,
           "price_reaction_observation": {
-            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
@@ -355,8 +467,43 @@
             "pre_event_price": 0.69791,
             "first_post_event_close_utc": "2026-10-13T16:00:00+00:00",
             "first_post_event_price": 0.69834,
-            "first_post_event_change_pips": 4.3
+            "first_post_event_change_pips": 4.3,
+            "second_post_event_close_utc": "2026-10-13T16:15:00+00:00",
+            "second_post_event_price": 0.69829,
+            "second_post_event_change_pips": -0.5,
+            "net_two_bar_event_window_pips": 3.8,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": true
           }
+        },
+        {
+          "provider": "FXStreet_RSS",
+          "title": "Neither a breakout nor a reversal: What OCBC, Commerzbank and ING expect from the US Dollar",
+          "url": "https://www.fxstreet.com/news/neither-a-breakout-nor-a-reversal-what-ocbc-commerzbank-and-ing-expect-from-the-us-dollar-202610131532",
+          "published_at_utc": "2026-10-13T15:32:21+00:00",
+          "first_seen_at_utc": "2026-10-13T16:22:48.873945+00:00",
+          "publisher_age_minutes": 50.5,
+          "source_latency_to_first_seen_minutes": 50.5,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
         },
         {
           "provider": "Newsquawk_public_delayed",
@@ -364,7 +511,7 @@
           "url": "https://www.newsquawk.com/headlines/us-treasury-to-sell-usd-110bln-of-4-week-bills-and-usd-105bln-of-8-week-bills-on-october-15th-to-sell-usd-75bln-of-17-week-bills-on-october-14th-all-to-settle-ocotber-20th",
           "published_at_utc": "2026-10-13T15:21:00+00:00",
           "first_seen_at_utc": "2026-10-13T15:27:52.021824+00:00",
-          "publisher_age_minutes": 42.4,
+          "publisher_age_minutes": 61.8,
           "source_latency_to_first_seen_minutes": 6.9,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -392,7 +539,7 @@
           "url": "https://www.fxstreet.com/news/euro-finds-support-from-softer-us-dollar-french-fiscal-risks-linger-202610131509",
           "published_at_utc": "2026-10-13T15:09:19+00:00",
           "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
-          "publisher_age_minutes": 54.1,
+          "publisher_age_minutes": 73.5,
           "source_latency_to_first_seen_minutes": 37.8,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -424,7 +571,7 @@
           "url": "https://www.fxstreet.com/news/canadian-dollar-modest-gains-against-us-dollar-scotiabank-202610131423",
           "published_at_utc": "2026-10-13T14:23:57+00:00",
           "first_seen_at_utc": "2026-10-13T15:07:42.499248+00:00",
-          "publisher_age_minutes": 99.5,
+          "publisher_age_minutes": 118.9,
           "source_latency_to_first_seen_minutes": 43.8,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -442,36 +589,6 @@
             "GBPUSD",
             "USDJPY",
             "EURCAD",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Australian Dollar : Key support at 0.6935 in focus against US Dollar   – UOB",
-          "url": "https://www.fxstreet.com/news/australian-dollar-key-support-at-06935-in-focus-against-us-dollar-uob-202610131404",
-          "published_at_utc": "2026-10-13T14:04:33+00:00",
-          "first_seen_at_utc": "2026-10-13T15:07:42.499248+00:00",
-          "publisher_age_minutes": 118.9,
-          "source_latency_to_first_seen_minutes": 63.2,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "AUD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
             "USDCAD"
           ],
           "headline_direction": "UNDETERMINED",
@@ -493,7 +610,7 @@
           "url": "https://www.newsquawk.com/headlines/pimcos-ivascyn-says-market-has-not-yet-seen-the-peak-in-us-treasury-yields-expects-fed-to-hold-in-october-with-one-or-two-more-rate-hikes-this-cycle",
           "published_at_utc": "2026-10-13T15:48:00+00:00",
           "first_seen_at_utc": "2026-10-13T16:03:24.861861+00:00",
-          "publisher_age_minutes": 15.4,
+          "publisher_age_minutes": 34.8,
           "source_latency_to_first_seen_minutes": 15.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -515,7 +632,7 @@
           "market_reaction": "NOT_VERIFIED",
           "broker_execution_allowed": false,
           "price_reaction_observation": {
-            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
@@ -524,7 +641,14 @@
             "pre_event_price": 0.5611,
             "first_post_event_close_utc": "2026-10-13T16:00:00+00:00",
             "first_post_event_price": 0.5615,
-            "first_post_event_change_pips": 4.0
+            "first_post_event_change_pips": 4.0,
+            "second_post_event_close_utc": "2026-10-13T16:15:00+00:00",
+            "second_post_event_price": 0.56148,
+            "second_post_event_change_pips": -0.2,
+            "net_two_bar_event_window_pips": 3.8,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": true
           }
         }
       ],
@@ -535,7 +659,7 @@
           "url": "https://www.newsquawk.com/headlines/pimcos-ivascyn-says-market-has-not-yet-seen-the-peak-in-us-treasury-yields-expects-fed-to-hold-in-october-with-one-or-two-more-rate-hikes-this-cycle",
           "published_at_utc": "2026-10-13T15:48:00+00:00",
           "first_seen_at_utc": "2026-10-13T16:03:24.861861+00:00",
-          "publisher_age_minutes": 15.4,
+          "publisher_age_minutes": 34.8,
           "source_latency_to_first_seen_minutes": 15.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -557,7 +681,7 @@
           "market_reaction": "NOT_VERIFIED",
           "broker_execution_allowed": false,
           "price_reaction_observation": {
-            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
@@ -566,8 +690,43 @@
             "pre_event_price": 0.5611,
             "first_post_event_close_utc": "2026-10-13T16:00:00+00:00",
             "first_post_event_price": 0.5615,
-            "first_post_event_change_pips": 4.0
+            "first_post_event_change_pips": 4.0,
+            "second_post_event_close_utc": "2026-10-13T16:15:00+00:00",
+            "second_post_event_price": 0.56148,
+            "second_post_event_change_pips": -0.2,
+            "net_two_bar_event_window_pips": 3.8,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": true
           }
+        },
+        {
+          "provider": "FXStreet_RSS",
+          "title": "Neither a breakout nor a reversal: What OCBC, Commerzbank and ING expect from the US Dollar",
+          "url": "https://www.fxstreet.com/news/neither-a-breakout-nor-a-reversal-what-ocbc-commerzbank-and-ing-expect-from-the-us-dollar-202610131532",
+          "published_at_utc": "2026-10-13T15:32:21+00:00",
+          "first_seen_at_utc": "2026-10-13T16:22:48.873945+00:00",
+          "publisher_age_minutes": 50.5,
+          "source_latency_to_first_seen_minutes": 50.5,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
         },
         {
           "provider": "Newsquawk_public_delayed",
@@ -575,7 +734,7 @@
           "url": "https://www.newsquawk.com/headlines/us-treasury-to-sell-usd-110bln-of-4-week-bills-and-usd-105bln-of-8-week-bills-on-october-15th-to-sell-usd-75bln-of-17-week-bills-on-october-14th-all-to-settle-ocotber-20th",
           "published_at_utc": "2026-10-13T15:21:00+00:00",
           "first_seen_at_utc": "2026-10-13T15:27:52.021824+00:00",
-          "publisher_age_minutes": 42.4,
+          "publisher_age_minutes": 61.8,
           "source_latency_to_first_seen_minutes": 6.9,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -603,7 +762,7 @@
           "url": "https://www.fxstreet.com/news/euro-finds-support-from-softer-us-dollar-french-fiscal-risks-linger-202610131509",
           "published_at_utc": "2026-10-13T15:09:19+00:00",
           "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
-          "publisher_age_minutes": 54.1,
+          "publisher_age_minutes": 73.5,
           "source_latency_to_first_seen_minutes": 37.8,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -635,7 +794,7 @@
           "url": "https://www.fxstreet.com/news/canadian-dollar-modest-gains-against-us-dollar-scotiabank-202610131423",
           "published_at_utc": "2026-10-13T14:23:57+00:00",
           "first_seen_at_utc": "2026-10-13T15:07:42.499248+00:00",
-          "publisher_age_minutes": 99.5,
+          "publisher_age_minutes": 118.9,
           "source_latency_to_first_seen_minutes": 43.8,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -653,36 +812,6 @@
             "GBPUSD",
             "USDJPY",
             "EURCAD",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Australian Dollar : Key support at 0.6935 in focus against US Dollar   – UOB",
-          "url": "https://www.fxstreet.com/news/australian-dollar-key-support-at-06935-in-focus-against-us-dollar-uob-202610131404",
-          "published_at_utc": "2026-10-13T14:04:33+00:00",
-          "first_seen_at_utc": "2026-10-13T15:07:42.499248+00:00",
-          "publisher_age_minutes": 118.9,
-          "source_latency_to_first_seen_minutes": 63.2,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "AUD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
             "USDCAD"
           ],
           "headline_direction": "UNDETERMINED",
@@ -704,7 +833,7 @@
           "url": "https://www.newsquawk.com/headlines/pimcos-ivascyn-says-market-has-not-yet-seen-the-peak-in-us-treasury-yields-expects-fed-to-hold-in-october-with-one-or-two-more-rate-hikes-this-cycle",
           "published_at_utc": "2026-10-13T15:48:00+00:00",
           "first_seen_at_utc": "2026-10-13T16:03:24.861861+00:00",
-          "publisher_age_minutes": 15.4,
+          "publisher_age_minutes": 34.8,
           "source_latency_to_first_seen_minutes": 15.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -726,7 +855,7 @@
           "market_reaction": "NOT_VERIFIED",
           "broker_execution_allowed": false,
           "price_reaction_observation": {
-            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
@@ -735,7 +864,14 @@
             "pre_event_price": 1.11896,
             "first_post_event_close_utc": "2026-10-13T16:00:00+00:00",
             "first_post_event_price": 1.11954,
-            "first_post_event_change_pips": 5.8
+            "first_post_event_change_pips": 5.8,
+            "second_post_event_close_utc": "2026-10-13T16:15:00+00:00",
+            "second_post_event_price": 1.11946,
+            "second_post_event_change_pips": -0.8,
+            "net_two_bar_event_window_pips": 5.0,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": true
           }
         }
       ],
@@ -746,7 +882,7 @@
           "url": "https://www.newsquawk.com/headlines/pimcos-ivascyn-says-market-has-not-yet-seen-the-peak-in-us-treasury-yields-expects-fed-to-hold-in-october-with-one-or-two-more-rate-hikes-this-cycle",
           "published_at_utc": "2026-10-13T15:48:00+00:00",
           "first_seen_at_utc": "2026-10-13T16:03:24.861861+00:00",
-          "publisher_age_minutes": 15.4,
+          "publisher_age_minutes": 34.8,
           "source_latency_to_first_seen_minutes": 15.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -768,7 +904,7 @@
           "market_reaction": "NOT_VERIFIED",
           "broker_execution_allowed": false,
           "price_reaction_observation": {
-            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
@@ -777,8 +913,43 @@
             "pre_event_price": 1.11896,
             "first_post_event_close_utc": "2026-10-13T16:00:00+00:00",
             "first_post_event_price": 1.11954,
-            "first_post_event_change_pips": 5.8
+            "first_post_event_change_pips": 5.8,
+            "second_post_event_close_utc": "2026-10-13T16:15:00+00:00",
+            "second_post_event_price": 1.11946,
+            "second_post_event_change_pips": -0.8,
+            "net_two_bar_event_window_pips": 5.0,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": true
           }
+        },
+        {
+          "provider": "FXStreet_RSS",
+          "title": "Neither a breakout nor a reversal: What OCBC, Commerzbank and ING expect from the US Dollar",
+          "url": "https://www.fxstreet.com/news/neither-a-breakout-nor-a-reversal-what-ocbc-commerzbank-and-ing-expect-from-the-us-dollar-202610131532",
+          "published_at_utc": "2026-10-13T15:32:21+00:00",
+          "first_seen_at_utc": "2026-10-13T16:22:48.873945+00:00",
+          "publisher_age_minutes": 50.5,
+          "source_latency_to_first_seen_minutes": 50.5,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
         },
         {
           "provider": "Newsquawk_public_delayed",
@@ -786,7 +957,7 @@
           "url": "https://www.newsquawk.com/headlines/us-treasury-to-sell-usd-110bln-of-4-week-bills-and-usd-105bln-of-8-week-bills-on-october-15th-to-sell-usd-75bln-of-17-week-bills-on-october-14th-all-to-settle-ocotber-20th",
           "published_at_utc": "2026-10-13T15:21:00+00:00",
           "first_seen_at_utc": "2026-10-13T15:27:52.021824+00:00",
-          "publisher_age_minutes": 42.4,
+          "publisher_age_minutes": 61.8,
           "source_latency_to_first_seen_minutes": 6.9,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -814,7 +985,7 @@
           "url": "https://www.fxstreet.com/news/euro-finds-support-from-softer-us-dollar-french-fiscal-risks-linger-202610131509",
           "published_at_utc": "2026-10-13T15:09:19+00:00",
           "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
-          "publisher_age_minutes": 54.1,
+          "publisher_age_minutes": 73.5,
           "source_latency_to_first_seen_minutes": 37.8,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -846,7 +1017,7 @@
           "url": "https://www.fxstreet.com/news/british-pound-upside-momentum-builds-against-euro-societe-generale-202610131459",
           "published_at_utc": "2026-10-13T14:59:20+00:00",
           "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
-          "publisher_age_minutes": 64.1,
+          "publisher_age_minutes": 83.5,
           "source_latency_to_first_seen_minutes": 47.8,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -874,7 +1045,7 @@
           "url": "https://www.fxstreet.com/news/canadian-dollar-modest-gains-against-us-dollar-scotiabank-202610131423",
           "published_at_utc": "2026-10-13T14:23:57+00:00",
           "first_seen_at_utc": "2026-10-13T15:07:42.499248+00:00",
-          "publisher_age_minutes": 99.5,
+          "publisher_age_minutes": 118.9,
           "source_latency_to_first_seen_minutes": 43.8,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -892,36 +1063,6 @@
             "GBPUSD",
             "USDJPY",
             "EURCAD",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Australian Dollar : Key support at 0.6935 in focus against US Dollar   – UOB",
-          "url": "https://www.fxstreet.com/news/australian-dollar-key-support-at-06935-in-focus-against-us-dollar-uob-202610131404",
-          "published_at_utc": "2026-10-13T14:04:33+00:00",
-          "first_seen_at_utc": "2026-10-13T15:07:42.499248+00:00",
-          "publisher_age_minutes": 118.9,
-          "source_latency_to_first_seen_minutes": 63.2,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "AUD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
             "USDCAD"
           ],
           "headline_direction": "UNDETERMINED",
@@ -943,7 +1084,7 @@
           "url": "https://www.newsquawk.com/headlines/pimcos-ivascyn-says-market-has-not-yet-seen-the-peak-in-us-treasury-yields-expects-fed-to-hold-in-october-with-one-or-two-more-rate-hikes-this-cycle",
           "published_at_utc": "2026-10-13T15:48:00+00:00",
           "first_seen_at_utc": "2026-10-13T16:03:24.861861+00:00",
-          "publisher_age_minutes": 15.4,
+          "publisher_age_minutes": 34.8,
           "source_latency_to_first_seen_minutes": 15.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -965,7 +1106,7 @@
           "market_reaction": "NOT_VERIFIED",
           "broker_execution_allowed": false,
           "price_reaction_observation": {
-            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "status": "FIRST_MOVE_REVERSED_ON_SECOND_M15",
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
@@ -974,7 +1115,57 @@
             "pre_event_price": 1.32451,
             "first_post_event_close_utc": "2026-10-13T16:00:00+00:00",
             "first_post_event_price": 1.32511,
-            "first_post_event_change_pips": 6.0
+            "first_post_event_change_pips": 6.0,
+            "second_post_event_close_utc": "2026-10-13T16:15:00+00:00",
+            "second_post_event_price": 1.32481,
+            "second_post_event_change_pips": -3.0,
+            "net_two_bar_event_window_pips": 3.0,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": true
+          }
+        },
+        {
+          "provider": "FXStreet_RSS",
+          "title": "British Pound finds fresh momentum as BoE hawks set stage for US CPI",
+          "url": "https://www.fxstreet.com/news/british-pound-finds-fresh-momentum-as-boe-hawks-set-stage-for-us-cpi-202610131539",
+          "published_at_utc": "2026-10-13T15:39:42+00:00",
+          "first_seen_at_utc": "2026-10-13T16:22:48.873945+00:00",
+          "publisher_age_minutes": 43.1,
+          "source_latency_to_first_seen_minutes": 43.1,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "GBP"
+          ],
+          "affected_pairs": [
+            "GBPUSD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-13T15:30:00+00:00",
+            "pre_event_price": 1.32468,
+            "first_post_event_close_utc": "2026-10-13T15:45:00+00:00",
+            "first_post_event_price": 1.32451,
+            "first_post_event_change_pips": -1.7,
+            "second_post_event_close_utc": "2026-10-13T16:00:00+00:00",
+            "second_post_event_price": 1.32511,
+            "second_post_event_change_pips": 6.0,
+            "net_two_bar_event_window_pips": 4.3,
+            "early_initial_direction": "DOWN",
+            "second_bar_direction": "UP",
+            "retrospective_if_first_seen_after_first_candle": true
           }
         }
       ],
@@ -985,7 +1176,7 @@
           "url": "https://www.newsquawk.com/headlines/pimcos-ivascyn-says-market-has-not-yet-seen-the-peak-in-us-treasury-yields-expects-fed-to-hold-in-october-with-one-or-two-more-rate-hikes-this-cycle",
           "published_at_utc": "2026-10-13T15:48:00+00:00",
           "first_seen_at_utc": "2026-10-13T16:03:24.861861+00:00",
-          "publisher_age_minutes": 15.4,
+          "publisher_age_minutes": 34.8,
           "source_latency_to_first_seen_minutes": 15.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -1007,7 +1198,7 @@
           "market_reaction": "NOT_VERIFIED",
           "broker_execution_allowed": false,
           "price_reaction_observation": {
-            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "status": "FIRST_MOVE_REVERSED_ON_SECOND_M15",
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
@@ -1016,8 +1207,86 @@
             "pre_event_price": 1.32451,
             "first_post_event_close_utc": "2026-10-13T16:00:00+00:00",
             "first_post_event_price": 1.32511,
-            "first_post_event_change_pips": 6.0
+            "first_post_event_change_pips": 6.0,
+            "second_post_event_close_utc": "2026-10-13T16:15:00+00:00",
+            "second_post_event_price": 1.32481,
+            "second_post_event_change_pips": -3.0,
+            "net_two_bar_event_window_pips": 3.0,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": true
           }
+        },
+        {
+          "provider": "FXStreet_RSS",
+          "title": "British Pound finds fresh momentum as BoE hawks set stage for US CPI",
+          "url": "https://www.fxstreet.com/news/british-pound-finds-fresh-momentum-as-boe-hawks-set-stage-for-us-cpi-202610131539",
+          "published_at_utc": "2026-10-13T15:39:42+00:00",
+          "first_seen_at_utc": "2026-10-13T16:22:48.873945+00:00",
+          "publisher_age_minutes": 43.1,
+          "source_latency_to_first_seen_minutes": 43.1,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "GBP"
+          ],
+          "affected_pairs": [
+            "GBPUSD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-13T15:30:00+00:00",
+            "pre_event_price": 1.32468,
+            "first_post_event_close_utc": "2026-10-13T15:45:00+00:00",
+            "first_post_event_price": 1.32451,
+            "first_post_event_change_pips": -1.7,
+            "second_post_event_close_utc": "2026-10-13T16:00:00+00:00",
+            "second_post_event_price": 1.32511,
+            "second_post_event_change_pips": 6.0,
+            "net_two_bar_event_window_pips": 4.3,
+            "early_initial_direction": "DOWN",
+            "second_bar_direction": "UP",
+            "retrospective_if_first_seen_after_first_candle": true
+          }
+        },
+        {
+          "provider": "FXStreet_RSS",
+          "title": "Neither a breakout nor a reversal: What OCBC, Commerzbank and ING expect from the US Dollar",
+          "url": "https://www.fxstreet.com/news/neither-a-breakout-nor-a-reversal-what-ocbc-commerzbank-and-ing-expect-from-the-us-dollar-202610131532",
+          "published_at_utc": "2026-10-13T15:32:21+00:00",
+          "first_seen_at_utc": "2026-10-13T16:22:48.873945+00:00",
+          "publisher_age_minutes": 50.5,
+          "source_latency_to_first_seen_minutes": 50.5,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
         },
         {
           "provider": "Newsquawk_public_delayed",
@@ -1025,7 +1294,7 @@
           "url": "https://www.newsquawk.com/headlines/us-treasury-to-sell-usd-110bln-of-4-week-bills-and-usd-105bln-of-8-week-bills-on-october-15th-to-sell-usd-75bln-of-17-week-bills-on-october-14th-all-to-settle-ocotber-20th",
           "published_at_utc": "2026-10-13T15:21:00+00:00",
           "first_seen_at_utc": "2026-10-13T15:27:52.021824+00:00",
-          "publisher_age_minutes": 42.4,
+          "publisher_age_minutes": 61.8,
           "source_latency_to_first_seen_minutes": 6.9,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -1053,7 +1322,7 @@
           "url": "https://www.fxstreet.com/news/euro-finds-support-from-softer-us-dollar-french-fiscal-risks-linger-202610131509",
           "published_at_utc": "2026-10-13T15:09:19+00:00",
           "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
-          "publisher_age_minutes": 54.1,
+          "publisher_age_minutes": 73.5,
           "source_latency_to_first_seen_minutes": 37.8,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -1085,7 +1354,7 @@
           "url": "https://www.fxstreet.com/news/british-pound-upside-momentum-builds-against-euro-societe-generale-202610131459",
           "published_at_utc": "2026-10-13T14:59:20+00:00",
           "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
-          "publisher_age_minutes": 64.1,
+          "publisher_age_minutes": 83.5,
           "source_latency_to_first_seen_minutes": 47.8,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -1113,7 +1382,7 @@
           "url": "https://www.fxstreet.com/news/canadian-dollar-modest-gains-against-us-dollar-scotiabank-202610131423",
           "published_at_utc": "2026-10-13T14:23:57+00:00",
           "first_seen_at_utc": "2026-10-13T15:07:42.499248+00:00",
-          "publisher_age_minutes": 99.5,
+          "publisher_age_minutes": 118.9,
           "source_latency_to_first_seen_minutes": 43.8,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -1136,36 +1405,6 @@
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
           "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Australian Dollar : Key support at 0.6935 in focus against US Dollar   – UOB",
-          "url": "https://www.fxstreet.com/news/australian-dollar-key-support-at-06935-in-focus-against-us-dollar-uob-202610131404",
-          "published_at_utc": "2026-10-13T14:04:33+00:00",
-          "first_seen_at_utc": "2026-10-13T15:07:42.499248+00:00",
-          "publisher_age_minutes": 118.9,
-          "source_latency_to_first_seen_minutes": 63.2,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "AUD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
         }
       ],
       "source_coverage_incomplete": true,
@@ -1182,7 +1421,7 @@
           "url": "https://www.newsquawk.com/headlines/pimcos-ivascyn-says-market-has-not-yet-seen-the-peak-in-us-treasury-yields-expects-fed-to-hold-in-october-with-one-or-two-more-rate-hikes-this-cycle",
           "published_at_utc": "2026-10-13T15:48:00+00:00",
           "first_seen_at_utc": "2026-10-13T16:03:24.861861+00:00",
-          "publisher_age_minutes": 15.4,
+          "publisher_age_minutes": 34.8,
           "source_latency_to_first_seen_minutes": 15.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -1204,7 +1443,7 @@
           "market_reaction": "NOT_VERIFIED",
           "broker_execution_allowed": false,
           "price_reaction_observation": {
-            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
@@ -1213,7 +1452,14 @@
             "pre_event_price": 158.427,
             "first_post_event_close_utc": "2026-10-13T16:00:00+00:00",
             "first_post_event_price": 158.367,
-            "first_post_event_change_pips": -6.0
+            "first_post_event_change_pips": -6.0,
+            "second_post_event_close_utc": "2026-10-13T16:15:00+00:00",
+            "second_post_event_price": 158.36,
+            "second_post_event_change_pips": -0.7,
+            "net_two_bar_event_window_pips": -6.7,
+            "early_initial_direction": "DOWN",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": true
           }
         }
       ],
@@ -1224,7 +1470,7 @@
           "url": "https://www.newsquawk.com/headlines/pimcos-ivascyn-says-market-has-not-yet-seen-the-peak-in-us-treasury-yields-expects-fed-to-hold-in-october-with-one-or-two-more-rate-hikes-this-cycle",
           "published_at_utc": "2026-10-13T15:48:00+00:00",
           "first_seen_at_utc": "2026-10-13T16:03:24.861861+00:00",
-          "publisher_age_minutes": 15.4,
+          "publisher_age_minutes": 34.8,
           "source_latency_to_first_seen_minutes": 15.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -1246,7 +1492,7 @@
           "market_reaction": "NOT_VERIFIED",
           "broker_execution_allowed": false,
           "price_reaction_observation": {
-            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
@@ -1255,8 +1501,43 @@
             "pre_event_price": 158.427,
             "first_post_event_close_utc": "2026-10-13T16:00:00+00:00",
             "first_post_event_price": 158.367,
-            "first_post_event_change_pips": -6.0
+            "first_post_event_change_pips": -6.0,
+            "second_post_event_close_utc": "2026-10-13T16:15:00+00:00",
+            "second_post_event_price": 158.36,
+            "second_post_event_change_pips": -0.7,
+            "net_two_bar_event_window_pips": -6.7,
+            "early_initial_direction": "DOWN",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": true
           }
+        },
+        {
+          "provider": "FXStreet_RSS",
+          "title": "Neither a breakout nor a reversal: What OCBC, Commerzbank and ING expect from the US Dollar",
+          "url": "https://www.fxstreet.com/news/neither-a-breakout-nor-a-reversal-what-ocbc-commerzbank-and-ing-expect-from-the-us-dollar-202610131532",
+          "published_at_utc": "2026-10-13T15:32:21+00:00",
+          "first_seen_at_utc": "2026-10-13T16:22:48.873945+00:00",
+          "publisher_age_minutes": 50.5,
+          "source_latency_to_first_seen_minutes": 50.5,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
         },
         {
           "provider": "Newsquawk_public_delayed",
@@ -1264,7 +1545,7 @@
           "url": "https://www.newsquawk.com/headlines/us-treasury-to-sell-usd-110bln-of-4-week-bills-and-usd-105bln-of-8-week-bills-on-october-15th-to-sell-usd-75bln-of-17-week-bills-on-october-14th-all-to-settle-ocotber-20th",
           "published_at_utc": "2026-10-13T15:21:00+00:00",
           "first_seen_at_utc": "2026-10-13T15:27:52.021824+00:00",
-          "publisher_age_minutes": 42.4,
+          "publisher_age_minutes": 61.8,
           "source_latency_to_first_seen_minutes": 6.9,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -1292,7 +1573,7 @@
           "url": "https://www.fxstreet.com/news/euro-finds-support-from-softer-us-dollar-french-fiscal-risks-linger-202610131509",
           "published_at_utc": "2026-10-13T15:09:19+00:00",
           "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
-          "publisher_age_minutes": 54.1,
+          "publisher_age_minutes": 73.5,
           "source_latency_to_first_seen_minutes": 37.8,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -1324,7 +1605,7 @@
           "url": "https://www.fxstreet.com/news/canadian-dollar-modest-gains-against-us-dollar-scotiabank-202610131423",
           "published_at_utc": "2026-10-13T14:23:57+00:00",
           "first_seen_at_utc": "2026-10-13T15:07:42.499248+00:00",
-          "publisher_age_minutes": 99.5,
+          "publisher_age_minutes": 118.9,
           "source_latency_to_first_seen_minutes": 43.8,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -1347,36 +1628,6 @@
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
           "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Australian Dollar : Key support at 0.6935 in focus against US Dollar   – UOB",
-          "url": "https://www.fxstreet.com/news/australian-dollar-key-support-at-06935-in-focus-against-us-dollar-uob-202610131404",
-          "published_at_utc": "2026-10-13T14:04:33+00:00",
-          "first_seen_at_utc": "2026-10-13T15:07:42.499248+00:00",
-          "publisher_age_minutes": 118.9,
-          "source_latency_to_first_seen_minutes": 63.2,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "AUD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
         }
       ],
       "source_coverage_incomplete": true,
@@ -1385,40 +1636,9 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "AUDJPY": {
-      "status": "HEADLINES_PRESENT",
+      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
       "policy_headlines": [],
-      "news_headlines": [
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Australian Dollar : Key support at 0.6935 in focus against US Dollar   – UOB",
-          "url": "https://www.fxstreet.com/news/australian-dollar-key-support-at-06935-in-focus-against-us-dollar-uob-202610131404",
-          "published_at_utc": "2026-10-13T14:04:33+00:00",
-          "first_seen_at_utc": "2026-10-13T15:07:42.499248+00:00",
-          "publisher_age_minutes": 118.9,
-          "source_latency_to_first_seen_minutes": 63.2,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "AUD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        }
-      ],
+      "news_headlines": [],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
@@ -1443,7 +1663,7 @@
           "url": "https://www.fxstreet.com/news/euro-finds-support-from-softer-us-dollar-french-fiscal-risks-linger-202610131509",
           "published_at_utc": "2026-10-13T15:09:19+00:00",
           "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
-          "publisher_age_minutes": 54.1,
+          "publisher_age_minutes": 73.5,
           "source_latency_to_first_seen_minutes": 37.8,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -1475,7 +1695,7 @@
           "url": "https://www.fxstreet.com/news/british-pound-upside-momentum-builds-against-euro-societe-generale-202610131459",
           "published_at_utc": "2026-10-13T14:59:20+00:00",
           "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
-          "publisher_age_minutes": 64.1,
+          "publisher_age_minutes": 83.5,
           "source_latency_to_first_seen_minutes": 47.8,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -1513,7 +1733,7 @@
           "url": "https://www.fxstreet.com/news/euro-finds-support-from-softer-us-dollar-french-fiscal-risks-linger-202610131509",
           "published_at_utc": "2026-10-13T15:09:19+00:00",
           "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
-          "publisher_age_minutes": 54.1,
+          "publisher_age_minutes": 73.5,
           "source_latency_to_first_seen_minutes": 37.8,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -1545,7 +1765,7 @@
           "url": "https://www.fxstreet.com/news/british-pound-upside-momentum-builds-against-euro-societe-generale-202610131459",
           "published_at_utc": "2026-10-13T14:59:20+00:00",
           "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
-          "publisher_age_minutes": 64.1,
+          "publisher_age_minutes": 83.5,
           "source_latency_to_first_seen_minutes": 47.8,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -1573,7 +1793,7 @@
           "url": "https://www.fxstreet.com/news/canadian-dollar-modest-gains-against-us-dollar-scotiabank-202610131423",
           "published_at_utc": "2026-10-13T14:23:57+00:00",
           "first_seen_at_utc": "2026-10-13T15:07:42.499248+00:00",
-          "publisher_age_minutes": 99.5,
+          "publisher_age_minutes": 118.9,
           "source_latency_to_first_seen_minutes": 43.8,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -1612,7 +1832,7 @@
           "url": "https://www.newsquawk.com/headlines/pimcos-ivascyn-says-market-has-not-yet-seen-the-peak-in-us-treasury-yields-expects-fed-to-hold-in-october-with-one-or-two-more-rate-hikes-this-cycle",
           "published_at_utc": "2026-10-13T15:48:00+00:00",
           "first_seen_at_utc": "2026-10-13T16:03:24.861861+00:00",
-          "publisher_age_minutes": 15.4,
+          "publisher_age_minutes": 34.8,
           "source_latency_to_first_seen_minutes": 15.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -1634,7 +1854,7 @@
           "market_reaction": "NOT_VERIFIED",
           "broker_execution_allowed": false,
           "price_reaction_observation": {
-            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
@@ -1643,7 +1863,14 @@
             "pre_event_price": 1.4219,
             "first_post_event_close_utc": "2026-10-13T16:00:00+00:00",
             "first_post_event_price": 1.42159,
-            "first_post_event_change_pips": -3.1
+            "first_post_event_change_pips": -3.1,
+            "second_post_event_close_utc": "2026-10-13T16:15:00+00:00",
+            "second_post_event_price": 1.4213,
+            "second_post_event_change_pips": -2.9,
+            "net_two_bar_event_window_pips": -6.0,
+            "early_initial_direction": "DOWN",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": true
           }
         }
       ],
@@ -1654,7 +1881,7 @@
           "url": "https://www.newsquawk.com/headlines/pimcos-ivascyn-says-market-has-not-yet-seen-the-peak-in-us-treasury-yields-expects-fed-to-hold-in-october-with-one-or-two-more-rate-hikes-this-cycle",
           "published_at_utc": "2026-10-13T15:48:00+00:00",
           "first_seen_at_utc": "2026-10-13T16:03:24.861861+00:00",
-          "publisher_age_minutes": 15.4,
+          "publisher_age_minutes": 34.8,
           "source_latency_to_first_seen_minutes": 15.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -1676,7 +1903,7 @@
           "market_reaction": "NOT_VERIFIED",
           "broker_execution_allowed": false,
           "price_reaction_observation": {
-            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
@@ -1685,8 +1912,43 @@
             "pre_event_price": 1.4219,
             "first_post_event_close_utc": "2026-10-13T16:00:00+00:00",
             "first_post_event_price": 1.42159,
-            "first_post_event_change_pips": -3.1
+            "first_post_event_change_pips": -3.1,
+            "second_post_event_close_utc": "2026-10-13T16:15:00+00:00",
+            "second_post_event_price": 1.4213,
+            "second_post_event_change_pips": -2.9,
+            "net_two_bar_event_window_pips": -6.0,
+            "early_initial_direction": "DOWN",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": true
           }
+        },
+        {
+          "provider": "FXStreet_RSS",
+          "title": "Neither a breakout nor a reversal: What OCBC, Commerzbank and ING expect from the US Dollar",
+          "url": "https://www.fxstreet.com/news/neither-a-breakout-nor-a-reversal-what-ocbc-commerzbank-and-ing-expect-from-the-us-dollar-202610131532",
+          "published_at_utc": "2026-10-13T15:32:21+00:00",
+          "first_seen_at_utc": "2026-10-13T16:22:48.873945+00:00",
+          "publisher_age_minutes": 50.5,
+          "source_latency_to_first_seen_minutes": 50.5,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
         },
         {
           "provider": "Newsquawk_public_delayed",
@@ -1694,7 +1956,7 @@
           "url": "https://www.newsquawk.com/headlines/us-treasury-to-sell-usd-110bln-of-4-week-bills-and-usd-105bln-of-8-week-bills-on-october-15th-to-sell-usd-75bln-of-17-week-bills-on-october-14th-all-to-settle-ocotber-20th",
           "published_at_utc": "2026-10-13T15:21:00+00:00",
           "first_seen_at_utc": "2026-10-13T15:27:52.021824+00:00",
-          "publisher_age_minutes": 42.4,
+          "publisher_age_minutes": 61.8,
           "source_latency_to_first_seen_minutes": 6.9,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -1722,7 +1984,7 @@
           "url": "https://www.fxstreet.com/news/euro-finds-support-from-softer-us-dollar-french-fiscal-risks-linger-202610131509",
           "published_at_utc": "2026-10-13T15:09:19+00:00",
           "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
-          "publisher_age_minutes": 54.1,
+          "publisher_age_minutes": 73.5,
           "source_latency_to_first_seen_minutes": 37.8,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -1754,7 +2016,7 @@
           "url": "https://www.fxstreet.com/news/canadian-dollar-modest-gains-against-us-dollar-scotiabank-202610131423",
           "published_at_utc": "2026-10-13T14:23:57+00:00",
           "first_seen_at_utc": "2026-10-13T15:07:42.499248+00:00",
-          "publisher_age_minutes": 99.5,
+          "publisher_age_minutes": 118.9,
           "source_latency_to_first_seen_minutes": 43.8,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -1777,36 +2039,6 @@
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
           "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Australian Dollar : Key support at 0.6935 in focus against US Dollar   – UOB",
-          "url": "https://www.fxstreet.com/news/australian-dollar-key-support-at-06935-in-focus-against-us-dollar-uob-202610131404",
-          "published_at_utc": "2026-10-13T14:04:33+00:00",
-          "first_seen_at_utc": "2026-10-13T15:07:42.499248+00:00",
-          "publisher_age_minutes": 118.9,
-          "source_latency_to_first_seen_minutes": 63.2,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "AUD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
         }
       ],
       "source_coverage_incomplete": true,
@@ -1815,16 +2047,103 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "EURGBP": {
-      "status": "HEADLINES_PRESENT",
-      "policy_headlines": [],
+      "status": "POLICY_REACTION_CHECK",
+      "policy_headlines": [
+        {
+          "provider": "FXStreet_RSS",
+          "title": "British Pound finds fresh momentum as BoE hawks set stage for US CPI",
+          "url": "https://www.fxstreet.com/news/british-pound-finds-fresh-momentum-as-boe-hawks-set-stage-for-us-cpi-202610131539",
+          "published_at_utc": "2026-10-13T15:39:42+00:00",
+          "first_seen_at_utc": "2026-10-13T16:22:48.873945+00:00",
+          "publisher_age_minutes": 43.1,
+          "source_latency_to_first_seen_minutes": 43.1,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "GBP"
+          ],
+          "affected_pairs": [
+            "GBPUSD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-13T15:30:00+00:00",
+            "pre_event_price": 0.84493,
+            "first_post_event_close_utc": "2026-10-13T15:45:00+00:00",
+            "first_post_event_price": 0.84482,
+            "first_post_event_change_pips": -1.1,
+            "second_post_event_close_utc": "2026-10-13T16:00:00+00:00",
+            "second_post_event_price": 0.84484,
+            "second_post_event_change_pips": 0.2,
+            "net_two_bar_event_window_pips": -0.9,
+            "early_initial_direction": "DOWN",
+            "second_bar_direction": "UP",
+            "retrospective_if_first_seen_after_first_candle": true
+          }
+        }
+      ],
       "news_headlines": [
+        {
+          "provider": "FXStreet_RSS",
+          "title": "British Pound finds fresh momentum as BoE hawks set stage for US CPI",
+          "url": "https://www.fxstreet.com/news/british-pound-finds-fresh-momentum-as-boe-hawks-set-stage-for-us-cpi-202610131539",
+          "published_at_utc": "2026-10-13T15:39:42+00:00",
+          "first_seen_at_utc": "2026-10-13T16:22:48.873945+00:00",
+          "publisher_age_minutes": 43.1,
+          "source_latency_to_first_seen_minutes": 43.1,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "GBP"
+          ],
+          "affected_pairs": [
+            "GBPUSD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-13T15:30:00+00:00",
+            "pre_event_price": 0.84493,
+            "first_post_event_close_utc": "2026-10-13T15:45:00+00:00",
+            "first_post_event_price": 0.84482,
+            "first_post_event_change_pips": -1.1,
+            "second_post_event_close_utc": "2026-10-13T16:00:00+00:00",
+            "second_post_event_price": 0.84484,
+            "second_post_event_change_pips": 0.2,
+            "net_two_bar_event_window_pips": -0.9,
+            "early_initial_direction": "DOWN",
+            "second_bar_direction": "UP",
+            "retrospective_if_first_seen_after_first_candle": true
+          }
+        },
         {
           "provider": "FXStreet_RSS",
           "title": "Euro finds support from softer US Dollar, French fiscal risks linger",
           "url": "https://www.fxstreet.com/news/euro-finds-support-from-softer-us-dollar-french-fiscal-risks-linger-202610131509",
           "published_at_utc": "2026-10-13T15:09:19+00:00",
           "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
-          "publisher_age_minutes": 54.1,
+          "publisher_age_minutes": 73.5,
           "source_latency_to_first_seen_minutes": 37.8,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -1856,7 +2175,7 @@
           "url": "https://www.fxstreet.com/news/british-pound-upside-momentum-builds-against-euro-societe-generale-202610131459",
           "published_at_utc": "2026-10-13T14:59:20+00:00",
           "first_seen_at_utc": "2026-10-13T15:47:08.184840+00:00",
-          "publisher_age_minutes": 64.1,
+          "publisher_age_minutes": 83.5,
           "source_latency_to_first_seen_minutes": 47.8,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
