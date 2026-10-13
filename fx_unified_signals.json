@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-13T10:57:35.893410+00:00",
+  "generated_at_utc": "2026-10-13T11:00:02.664375+00:00",
   "source_technical_generated_at_utc": "2026-10-13T10:50:45.062342+00:00",
   "source_early_rotation_generated_at_utc": "2026-10-13T10:50:45.335991+00:00",
-  "source_macro_collected_at_utc": "2026-10-13T10:57:35.439701+00:00",
+  "source_macro_collected_at_utc": "2026-10-13T11:00:02.085369+00:00",
   "scope": "11_PAIR_RESEARCH_ONLY_NO_ORDERS_OR_ALERTS",
   "signals_from": "CLOSED_15M_30M_ONLY",
   "context_from": "1H_4H_DAILY_AND_MACRO",
@@ -18,8 +18,8 @@
       "technical_direction_last_known": "SELL",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
       "technical_15m30m_fresh": true,
-      "latest_closed_m15_age_minutes": 12.6,
-      "latest_closed_m30_age_minutes": 27.6,
+      "latest_closed_m15_age_minutes": 15.0,
+      "latest_closed_m30_age_minutes": 30.0,
       "possible_opposite_rotation": {
         "direction": "NONE",
         "evidence": [],
@@ -193,7 +193,7 @@
           "forecast": "98.1",
           "previous": "98.7",
           "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-13T10:57:30.487756+00:00",
+          "verified_at_utc": "2026-10-13T10:59:57.593915+00:00",
           "released_at_utc": null,
           "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
           "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
@@ -204,7 +204,7 @@
           "currency": "USD",
           "title": "ADP Weekly Employment Change",
           "scheduled_at_utc": "2026-10-13T12:15:00+00:00",
-          "minutes_until": 77.4,
+          "minutes_until": 75.0,
           "impact": "Low",
           "forecast": "",
           "previous": "23.8K"
@@ -213,7 +213,7 @@
           "currency": "USD",
           "title": "Existing Home Sales",
           "scheduled_at_utc": "2026-10-13T14:00:00+00:00",
-          "minutes_until": 182.4,
+          "minutes_until": 180.0,
           "impact": "Low",
           "forecast": "3.95M",
           "previous": "3.98M"
@@ -222,7 +222,7 @@
           "currency": "USD",
           "title": "FOMC Member Barkin Speaks",
           "scheduled_at_utc": "2026-10-13T17:00:00+00:00",
-          "minutes_until": 362.4,
+          "minutes_until": 360.0,
           "impact": "Low",
           "forecast": "",
           "previous": ""
@@ -231,7 +231,7 @@
           "currency": "USD",
           "title": "FOMC Member Collins Speaks",
           "scheduled_at_utc": "2026-10-13T20:00:00+00:00",
-          "minutes_until": 542.4,
+          "minutes_until": 540.0,
           "impact": "Low",
           "forecast": "",
           "previous": ""
@@ -240,7 +240,7 @@
           "currency": "CAD",
           "title": "BOC Gov Macklem Speaks",
           "scheduled_at_utc": "2026-10-14T06:05:00+00:00",
-          "minutes_until": 1147.4,
+          "minutes_until": 1145.0,
           "impact": "Medium",
           "forecast": "",
           "previous": ""
@@ -249,7 +249,7 @@
           "currency": "USD",
           "title": "FOMC Member Bowman Speaks",
           "scheduled_at_utc": "2026-10-14T09:40:00+00:00",
-          "minutes_until": 1362.4,
+          "minutes_until": 1360.0,
           "impact": "Low",
           "forecast": "",
           "previous": ""
@@ -260,7 +260,7 @@
           "currency": "USD",
           "title": "NFIB Small Business Index",
           "scheduled_at_utc": "2026-10-13T10:00:00+00:00",
-          "minutes_until": -57.6,
+          "minutes_until": -60.0,
           "impact": "Low",
           "forecast": "98.1",
           "previous": "98.7"
@@ -287,9 +287,9 @@
       "reference_prices": {
         "last_closed_15m": 1.42568,
         "closed_at_utc": "2026-10-13T10:45:00+00:00",
-        "forexcracked_indicative_bid": 1.42582,
-        "forexcracked_indicative_ask": 1.42582,
-        "forexcracked_reference_age_minutes": 0.8,
+        "forexcracked_indicative_bid": 1.42584,
+        "forexcracked_indicative_ask": 1.42584,
+        "forexcracked_reference_age_minutes": 1.2,
         "broker_bid_ask_verified": false,
         "spread_source": "FOREXCRACKED_INDICATIVE_NOT_EXECUTION"
       },
@@ -328,7 +328,44 @@
       "no_5m_signal_inputs": true,
       "research_rank": 1,
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "pair": "USDCAD",
+        "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
+        "ADR20_pips": 56.6,
+        "ADR20_complete_days": 20,
+        "NY17_day_used_pips": 27.9,
+        "NY17_ADR_percent_used": 49.3,
+        "ADR_remaining_reference_pips": 28.7,
+        "NY17_rollover_start_utc": "2026-10-12T21:00:00+00:00",
+        "session_ranges": {
+          "TOKYO": {
+            "high": 1.42832,
+            "low": 1.42571,
+            "first_observed_open_utc": "2026-10-13T00:00:00+00:00",
+            "last_observed_open_utc": "2026-10-13T08:45:00+00:00",
+            "closed_15m_bars": 36,
+            "range_pips": 26.1,
+            "session_start_utc": "2026-10-13T00:00:00+00:00",
+            "scheduled_session_end_utc": "2026-10-13T09:00:00+00:00",
+            "observed_partial": false
+          },
+          "LONDON": {
+            "high": 1.42695,
+            "low": 1.42554,
+            "first_observed_open_utc": "2026-10-13T07:00:00+00:00",
+            "last_observed_open_utc": "2026-10-13T10:45:00+00:00",
+            "closed_15m_bars": 16,
+            "range_pips": 14.1,
+            "session_start_utc": "2026-10-13T07:00:00+00:00",
+            "scheduled_session_end_utc": "2026-10-13T16:00:00+00:00",
+            "observed_partial": false
+          }
+        },
+        "reference_only": true,
+        "used_for_signal_direction": false,
+        "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
+        "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
+        "D1_current_session_used_for_direction": false,
+        "NY17_day_first_observed_open_utc": "2026-10-12T22:30:00+00:00"
       },
       "range_data_is_directional_signal": false,
       "session_liquidity_context": {
@@ -344,8 +381,8 @@
       "technical_direction_last_known": "BUY",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
       "technical_15m30m_fresh": true,
-      "latest_closed_m15_age_minutes": 12.6,
-      "latest_closed_m30_age_minutes": 27.6,
+      "latest_closed_m15_age_minutes": 15.0,
+      "latest_closed_m30_age_minutes": 30.0,
       "possible_opposite_rotation": {
         "direction": "NONE",
         "evidence": [],
@@ -527,7 +564,7 @@
           "forecast": "98.1",
           "previous": "98.7",
           "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-13T10:57:30.487756+00:00",
+          "verified_at_utc": "2026-10-13T10:59:57.593915+00:00",
           "released_at_utc": null,
           "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
           "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
@@ -540,7 +577,7 @@
           "forecast": "0.8%",
           "previous": "0.5%",
           "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-13T10:57:30.487756+00:00",
+          "verified_at_utc": "2026-10-13T10:59:57.593915+00:00",
           "released_at_utc": null,
           "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
           "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
@@ -551,7 +588,7 @@
           "currency": "USD",
           "title": "ADP Weekly Employment Change",
           "scheduled_at_utc": "2026-10-13T12:15:00+00:00",
-          "minutes_until": 77.4,
+          "minutes_until": 75.0,
           "impact": "Low",
           "forecast": "",
           "previous": "23.8K"
@@ -560,7 +597,7 @@
           "currency": "USD",
           "title": "Existing Home Sales",
           "scheduled_at_utc": "2026-10-13T14:00:00+00:00",
-          "minutes_until": 182.4,
+          "minutes_until": 180.0,
           "impact": "Low",
           "forecast": "3.95M",
           "previous": "3.98M"
@@ -569,7 +606,7 @@
           "currency": "USD",
           "title": "FOMC Member Barkin Speaks",
           "scheduled_at_utc": "2026-10-13T17:00:00+00:00",
-          "minutes_until": 362.4,
+          "minutes_until": 360.0,
           "impact": "Low",
           "forecast": "",
           "previous": ""
@@ -578,7 +615,7 @@
           "currency": "USD",
           "title": "FOMC Member Collins Speaks",
           "scheduled_at_utc": "2026-10-13T20:00:00+00:00",
-          "minutes_until": 542.4,
+          "minutes_until": 540.0,
           "impact": "Low",
           "forecast": "",
           "previous": ""
@@ -587,7 +624,7 @@
           "currency": "GBP",
           "title": "MPC Member Breeden Speaks",
           "scheduled_at_utc": "2026-10-14T03:30:00+00:00",
-          "minutes_until": 992.4,
+          "minutes_until": 990.0,
           "impact": "Low",
           "forecast": "",
           "previous": ""
@@ -596,7 +633,7 @@
           "currency": "GBP",
           "title": "BOE Gov Bailey Speaks",
           "scheduled_at_utc": "2026-10-14T05:30:00+00:00",
-          "minutes_until": 1112.4,
+          "minutes_until": 1110.0,
           "impact": "Medium",
           "forecast": "",
           "previous": ""
@@ -605,7 +642,7 @@
           "currency": "GBP",
           "title": "MPC Member Pill Speaks",
           "scheduled_at_utc": "2026-10-14T06:00:00+00:00",
-          "minutes_until": 1142.4,
+          "minutes_until": 1140.0,
           "impact": "Low",
           "forecast": "",
           "previous": ""
@@ -614,7 +651,7 @@
           "currency": "USD",
           "title": "FOMC Member Bowman Speaks",
           "scheduled_at_utc": "2026-10-14T09:40:00+00:00",
-          "minutes_until": 1362.4,
+          "minutes_until": 1360.0,
           "impact": "Low",
           "forecast": "",
           "previous": ""
@@ -625,7 +662,7 @@
           "currency": "USD",
           "title": "NFIB Small Business Index",
           "scheduled_at_utc": "2026-10-13T10:00:00+00:00",
-          "minutes_until": -57.6,
+          "minutes_until": -60.0,
           "impact": "Low",
           "forecast": "98.1",
           "previous": "98.7"
@@ -652,9 +689,9 @@
       "reference_prices": {
         "last_closed_15m": 1.32438,
         "closed_at_utc": "2026-10-13T10:45:00+00:00",
-        "forexcracked_indicative_bid": 1.32413,
-        "forexcracked_indicative_ask": 1.32414,
-        "forexcracked_reference_age_minutes": 0.8,
+        "forexcracked_indicative_bid": 1.32407,
+        "forexcracked_indicative_ask": 1.32408,
+        "forexcracked_reference_age_minutes": 1.2,
         "broker_bid_ask_verified": false,
         "spread_source": "FOREXCRACKED_INDICATIVE_NOT_EXECUTION"
       },
@@ -701,7 +738,44 @@
       "no_5m_signal_inputs": true,
       "research_rank": 2,
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "pair": "GBPUSD",
+        "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
+        "ADR20_pips": 70.0,
+        "ADR20_complete_days": 20,
+        "NY17_day_used_pips": 43.6,
+        "NY17_ADR_percent_used": 62.3,
+        "ADR_remaining_reference_pips": 26.4,
+        "NY17_rollover_start_utc": "2026-10-12T21:00:00+00:00",
+        "session_ranges": {
+          "TOKYO": {
+            "high": 1.32406,
+            "low": 1.32047,
+            "first_observed_open_utc": "2026-10-13T00:00:00+00:00",
+            "last_observed_open_utc": "2026-10-13T08:45:00+00:00",
+            "closed_15m_bars": 36,
+            "range_pips": 35.9,
+            "session_start_utc": "2026-10-13T00:00:00+00:00",
+            "scheduled_session_end_utc": "2026-10-13T09:00:00+00:00",
+            "observed_partial": false
+          },
+          "LONDON": {
+            "high": 1.32445,
+            "low": 1.32231,
+            "first_observed_open_utc": "2026-10-13T07:00:00+00:00",
+            "last_observed_open_utc": "2026-10-13T10:45:00+00:00",
+            "closed_15m_bars": 16,
+            "range_pips": 21.4,
+            "session_start_utc": "2026-10-13T07:00:00+00:00",
+            "scheduled_session_end_utc": "2026-10-13T16:00:00+00:00",
+            "observed_partial": false
+          }
+        },
+        "reference_only": true,
+        "used_for_signal_direction": false,
+        "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
+        "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
+        "D1_current_session_used_for_direction": false,
+        "NY17_day_first_observed_open_utc": "2026-10-12T22:30:00+00:00"
       },
       "range_data_is_directional_signal": false,
       "session_liquidity_context": {
@@ -717,8 +791,8 @@
       "technical_direction_last_known": "BUY",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
       "technical_15m30m_fresh": true,
-      "latest_closed_m15_age_minutes": 12.6,
-      "latest_closed_m30_age_minutes": 27.6,
+      "latest_closed_m15_age_minutes": 15.0,
+      "latest_closed_m30_age_minutes": 30.0,
       "possible_opposite_rotation": {
         "direction": "NONE",
         "evidence": [],
@@ -892,7 +966,7 @@
           "forecast": "98.1",
           "previous": "98.7",
           "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-13T10:57:30.487756+00:00",
+          "verified_at_utc": "2026-10-13T10:59:57.593915+00:00",
           "released_at_utc": null,
           "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
           "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
@@ -905,7 +979,7 @@
           "forecast": "",
           "previous": "-8",
           "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-13T10:57:30.487756+00:00",
+          "verified_at_utc": "2026-10-13T10:59:57.593915+00:00",
           "released_at_utc": null,
           "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
           "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
@@ -916,7 +990,7 @@
           "currency": "USD",
           "title": "ADP Weekly Employment Change",
           "scheduled_at_utc": "2026-10-13T12:15:00+00:00",
-          "minutes_until": 77.4,
+          "minutes_until": 75.0,
           "impact": "Low",
           "forecast": "",
           "previous": "23.8K"
@@ -925,7 +999,7 @@
           "currency": "USD",
           "title": "Existing Home Sales",
           "scheduled_at_utc": "2026-10-13T14:00:00+00:00",
-          "minutes_until": 182.4,
+          "minutes_until": 180.0,
           "impact": "Low",
           "forecast": "3.95M",
           "previous": "3.98M"
@@ -934,7 +1008,7 @@
           "currency": "AUD",
           "title": "CB Leading Index m/m",
           "scheduled_at_utc": "2026-10-13T14:30:00+00:00",
-          "minutes_until": 212.4,
+          "minutes_until": 210.0,
           "impact": "Low",
           "forecast": "",
           "previous": "0.5%"
@@ -943,7 +1017,7 @@
           "currency": "USD",
           "title": "FOMC Member Barkin Speaks",
           "scheduled_at_utc": "2026-10-13T17:00:00+00:00",
-          "minutes_until": 362.4,
+          "minutes_until": 360.0,
           "impact": "Low",
           "forecast": "",
           "previous": ""
@@ -952,7 +1026,7 @@
           "currency": "USD",
           "title": "FOMC Member Collins Speaks",
           "scheduled_at_utc": "2026-10-13T20:00:00+00:00",
-          "minutes_until": 542.4,
+          "minutes_until": 540.0,
           "impact": "Low",
           "forecast": "",
           "previous": ""
@@ -961,7 +1035,7 @@
           "currency": "AUD",
           "title": "MI Leading Index m/m",
           "scheduled_at_utc": "2026-10-13T23:30:00+00:00",
-          "minutes_until": 752.4,
+          "minutes_until": 750.0,
           "impact": "Low",
           "forecast": "",
           "previous": "0.0%"
@@ -970,7 +1044,7 @@
           "currency": "CNY",
           "title": "CPI y/y",
           "scheduled_at_utc": "2026-10-14T01:30:00+00:00",
-          "minutes_until": 872.4,
+          "minutes_until": 870.0,
           "impact": "Low",
           "forecast": "1.0%",
           "previous": "0.8%"
@@ -979,7 +1053,7 @@
           "currency": "CNY",
           "title": "PPI y/y",
           "scheduled_at_utc": "2026-10-14T01:30:00+00:00",
-          "minutes_until": 872.4,
+          "minutes_until": 870.0,
           "impact": "Low",
           "forecast": "4.4%",
           "previous": "3.8%"
@@ -988,7 +1062,7 @@
           "currency": "CNY",
           "title": "Trade Balance",
           "scheduled_at_utc": "2026-10-14T02:03:00+00:00",
-          "minutes_until": 905.4,
+          "minutes_until": 903.0,
           "impact": "Low",
           "forecast": "790B",
           "previous": "809B"
@@ -997,7 +1071,7 @@
           "currency": "CNY",
           "title": "USD-Denominated Trade Balance",
           "scheduled_at_utc": "2026-10-14T02:04:00+00:00",
-          "minutes_until": 906.4,
+          "minutes_until": 904.0,
           "impact": "Low",
           "forecast": "116.8B",
           "previous": "119.1B"
@@ -1006,7 +1080,7 @@
           "currency": "CNY",
           "title": "M2 Money Supply y/y",
           "scheduled_at_utc": "2026-10-14T08:03:00+00:00",
-          "minutes_until": 1265.4,
+          "minutes_until": 1263.0,
           "impact": "Low",
           "forecast": "7.4%",
           "previous": "7.5%"
@@ -1015,7 +1089,7 @@
           "currency": "CNY",
           "title": "New Loans",
           "scheduled_at_utc": "2026-10-14T08:03:00+00:00",
-          "minutes_until": 1265.4,
+          "minutes_until": 1263.0,
           "impact": "Low",
           "forecast": "1025B",
           "previous": "60B"
@@ -1024,7 +1098,7 @@
           "currency": "USD",
           "title": "FOMC Member Bowman Speaks",
           "scheduled_at_utc": "2026-10-14T09:40:00+00:00",
-          "minutes_until": 1362.4,
+          "minutes_until": 1360.0,
           "impact": "Low",
           "forecast": "",
           "previous": ""
@@ -1035,7 +1109,7 @@
           "currency": "USD",
           "title": "NFIB Small Business Index",
           "scheduled_at_utc": "2026-10-13T10:00:00+00:00",
-          "minutes_until": -57.6,
+          "minutes_until": -60.0,
           "impact": "Low",
           "forecast": "98.1",
           "previous": "98.7"
@@ -1064,7 +1138,7 @@
         "closed_at_utc": "2026-10-13T10:45:00+00:00",
         "forexcracked_indicative_bid": 0.69731,
         "forexcracked_indicative_ask": 0.69731,
-        "forexcracked_reference_age_minutes": 0.8,
+        "forexcracked_reference_age_minutes": 1.2,
         "broker_bid_ask_verified": false,
         "spread_source": "FOREXCRACKED_INDICATIVE_NOT_EXECUTION"
       },
@@ -1102,7 +1176,44 @@
       "no_5m_signal_inputs": true,
       "research_rank": 3,
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "pair": "AUDUSD",
+        "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
+        "ADR20_pips": 44.77,
+        "ADR20_complete_days": 20,
+        "NY17_day_used_pips": 26.1,
+        "NY17_ADR_percent_used": 58.3,
+        "ADR_remaining_reference_pips": 18.67,
+        "NY17_rollover_start_utc": "2026-10-12T21:00:00+00:00",
+        "session_ranges": {
+          "TOKYO": {
+            "high": 0.69728,
+            "low": 0.695,
+            "first_observed_open_utc": "2026-10-13T00:00:00+00:00",
+            "last_observed_open_utc": "2026-10-13T08:45:00+00:00",
+            "closed_15m_bars": 36,
+            "range_pips": 22.8,
+            "session_start_utc": "2026-10-13T00:00:00+00:00",
+            "scheduled_session_end_utc": "2026-10-13T09:00:00+00:00",
+            "observed_partial": false
+          },
+          "LONDON": {
+            "high": 0.69751,
+            "low": 0.69622,
+            "first_observed_open_utc": "2026-10-13T07:00:00+00:00",
+            "last_observed_open_utc": "2026-10-13T10:45:00+00:00",
+            "closed_15m_bars": 16,
+            "range_pips": 12.9,
+            "session_start_utc": "2026-10-13T07:00:00+00:00",
+            "scheduled_session_end_utc": "2026-10-13T16:00:00+00:00",
+            "observed_partial": false
+          }
+        },
+        "reference_only": true,
+        "used_for_signal_direction": false,
+        "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
+        "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
+        "D1_current_session_used_for_direction": false,
+        "NY17_day_first_observed_open_utc": "2026-10-12T22:30:00+00:00"
       },
       "range_data_is_directional_signal": false,
       "session_liquidity_context": {
@@ -1118,8 +1229,8 @@
       "technical_direction_last_known": "BUY",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
       "technical_15m30m_fresh": true,
-      "latest_closed_m15_age_minutes": 12.6,
-      "latest_closed_m30_age_minutes": 27.6,
+      "latest_closed_m15_age_minutes": 15.0,
+      "latest_closed_m30_age_minutes": 30.0,
       "possible_opposite_rotation": {
         "direction": "NONE",
         "evidence": [],
@@ -1220,7 +1331,7 @@
           "forecast": "",
           "previous": "-8",
           "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-13T10:57:30.487756+00:00",
+          "verified_at_utc": "2026-10-13T10:59:57.593915+00:00",
           "released_at_utc": null,
           "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
           "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
@@ -1233,7 +1344,7 @@
           "forecast": "5.5%",
           "previous": "5.4%",
           "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-13T10:57:30.487756+00:00",
+          "verified_at_utc": "2026-10-13T10:59:57.593915+00:00",
           "released_at_utc": null,
           "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
           "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
@@ -1246,7 +1357,7 @@
           "forecast": "7.6%",
           "previous": "7.6%",
           "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-13T10:57:30.487756+00:00",
+          "verified_at_utc": "2026-10-13T10:59:57.593915+00:00",
           "released_at_utc": null,
           "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
           "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
@@ -1257,7 +1368,7 @@
           "currency": "AUD",
           "title": "CB Leading Index m/m",
           "scheduled_at_utc": "2026-10-13T14:30:00+00:00",
-          "minutes_until": 212.4,
+          "minutes_until": 210.0,
           "impact": "Low",
           "forecast": "",
           "previous": "0.5%"
@@ -1266,7 +1377,7 @@
           "currency": "AUD",
           "title": "MI Leading Index m/m",
           "scheduled_at_utc": "2026-10-13T23:30:00+00:00",
-          "minutes_until": 752.4,
+          "minutes_until": 750.0,
           "impact": "Low",
           "forecast": "",
           "previous": "0.0%"
@@ -1275,7 +1386,7 @@
           "currency": "JPY",
           "title": "M2 Money Stock y/y",
           "scheduled_at_utc": "2026-10-13T23:50:00+00:00",
-          "minutes_until": 772.4,
+          "minutes_until": 770.0,
           "impact": "Low",
           "forecast": "2.1%",
           "previous": "2.0%"
@@ -1284,7 +1395,7 @@
           "currency": "CNY",
           "title": "CPI y/y",
           "scheduled_at_utc": "2026-10-14T01:30:00+00:00",
-          "minutes_until": 872.4,
+          "minutes_until": 870.0,
           "impact": "Low",
           "forecast": "1.0%",
           "previous": "0.8%"
@@ -1293,7 +1404,7 @@
           "currency": "CNY",
           "title": "PPI y/y",
           "scheduled_at_utc": "2026-10-14T01:30:00+00:00",
-          "minutes_until": 872.4,
+          "minutes_until": 870.0,
           "impact": "Low",
           "forecast": "4.4%",
           "previous": "3.8%"
@@ -1302,7 +1413,7 @@
           "currency": "CNY",
           "title": "Trade Balance",
           "scheduled_at_utc": "2026-10-14T02:03:00+00:00",
-          "minutes_until": 905.4,
+          "minutes_until": 903.0,
           "impact": "Low",
           "forecast": "790B",
           "previous": "809B"
@@ -1311,7 +1422,7 @@
           "currency": "CNY",
           "title": "USD-Denominated Trade Balance",
           "scheduled_at_utc": "2026-10-14T02:04:00+00:00",
-          "minutes_until": 906.4,
+          "minutes_until": 904.0,
           "impact": "Low",
           "forecast": "116.8B",
           "previous": "119.1B"
@@ -1320,7 +1431,7 @@
           "currency": "CNY",
           "title": "M2 Money Supply y/y",
           "scheduled_at_utc": "2026-10-14T08:03:00+00:00",
-          "minutes_until": 1265.4,
+          "minutes_until": 1263.0,
           "impact": "Low",
           "forecast": "7.4%",
           "previous": "7.5%"
@@ -1329,7 +1440,7 @@
           "currency": "CNY",
           "title": "New Loans",
           "scheduled_at_utc": "2026-10-14T08:03:00+00:00",
-          "minutes_until": 1265.4,
+          "minutes_until": 1263.0,
           "impact": "Low",
           "forecast": "1025B",
           "previous": "60B"
@@ -1370,9 +1481,9 @@
       "reference_prices": {
         "last_closed_15m": 110.269,
         "closed_at_utc": "2026-10-13T10:45:00+00:00",
-        "forexcracked_indicative_bid": 110.27,
-        "forexcracked_indicative_ask": 110.27,
-        "forexcracked_reference_age_minutes": 0.8,
+        "forexcracked_indicative_bid": 110.25,
+        "forexcracked_indicative_ask": 110.26,
+        "forexcracked_reference_age_minutes": 1.2,
         "broker_bid_ask_verified": false,
         "spread_source": "FOREXCRACKED_INDICATIVE_NOT_EXECUTION"
       },
@@ -1402,7 +1513,44 @@
       "no_5m_signal_inputs": true,
       "research_rank": 4,
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "pair": "AUDJPY",
+        "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
+        "ADR20_pips": 85.12,
+        "ADR20_complete_days": 20,
+        "NY17_day_used_pips": 35.8,
+        "NY17_ADR_percent_used": 42.1,
+        "ADR_remaining_reference_pips": 49.32,
+        "NY17_rollover_start_utc": "2026-10-12T21:00:00+00:00",
+        "session_ranges": {
+          "TOKYO": {
+            "high": 110.377,
+            "low": 110.032,
+            "first_observed_open_utc": "2026-10-13T00:00:00+00:00",
+            "last_observed_open_utc": "2026-10-13T08:45:00+00:00",
+            "closed_15m_bars": 36,
+            "range_pips": 34.5,
+            "session_start_utc": "2026-10-13T00:00:00+00:00",
+            "scheduled_session_end_utc": "2026-10-13T09:00:00+00:00",
+            "observed_partial": false
+          },
+          "LONDON": {
+            "high": 110.377,
+            "low": 110.032,
+            "first_observed_open_utc": "2026-10-13T07:00:00+00:00",
+            "last_observed_open_utc": "2026-10-13T10:45:00+00:00",
+            "closed_15m_bars": 16,
+            "range_pips": 34.5,
+            "session_start_utc": "2026-10-13T07:00:00+00:00",
+            "scheduled_session_end_utc": "2026-10-13T16:00:00+00:00",
+            "observed_partial": false
+          }
+        },
+        "reference_only": true,
+        "used_for_signal_direction": false,
+        "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
+        "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
+        "D1_current_session_used_for_direction": false,
+        "NY17_day_first_observed_open_utc": "2026-10-12T22:30:00+00:00"
       },
       "range_data_is_directional_signal": false,
       "session_liquidity_context": {
@@ -1418,8 +1566,8 @@
       "technical_direction_last_known": "BUY",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
       "technical_15m30m_fresh": true,
-      "latest_closed_m15_age_minutes": 12.6,
-      "latest_closed_m30_age_minutes": 27.6,
+      "latest_closed_m15_age_minutes": 15.0,
+      "latest_closed_m30_age_minutes": 30.0,
       "possible_opposite_rotation": {
         "direction": "BUY",
         "evidence": [
@@ -1558,7 +1706,7 @@
           "forecast": "0.6%",
           "previous": "0.6%",
           "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-13T10:57:30.487756+00:00",
+          "verified_at_utc": "2026-10-13T10:59:57.593915+00:00",
           "released_at_utc": null,
           "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
           "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
@@ -1571,7 +1719,7 @@
           "forecast": "5.5%",
           "previous": "5.4%",
           "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-13T10:57:30.487756+00:00",
+          "verified_at_utc": "2026-10-13T10:59:57.593915+00:00",
           "released_at_utc": null,
           "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
           "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
@@ -1584,7 +1732,7 @@
           "forecast": "7.6%",
           "previous": "7.6%",
           "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-13T10:57:30.487756+00:00",
+          "verified_at_utc": "2026-10-13T10:59:57.593915+00:00",
           "released_at_utc": null,
           "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
           "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
@@ -1595,7 +1743,7 @@
           "currency": "JPY",
           "title": "M2 Money Stock y/y",
           "scheduled_at_utc": "2026-10-13T23:50:00+00:00",
-          "minutes_until": 772.4,
+          "minutes_until": 770.0,
           "impact": "Low",
           "forecast": "2.1%",
           "previous": "2.0%"
@@ -1604,7 +1752,7 @@
           "currency": "EUR",
           "title": "ECB President Lagarde Speaks",
           "scheduled_at_utc": "2026-10-14T02:10:00+00:00",
-          "minutes_until": 912.4,
+          "minutes_until": 910.0,
           "impact": "Medium",
           "forecast": "",
           "previous": ""
@@ -1613,7 +1761,7 @@
           "currency": "EUR",
           "title": "German WPI m/m",
           "scheduled_at_utc": "2026-10-14T06:00:00+00:00",
-          "minutes_until": 1142.4,
+          "minutes_until": 1140.0,
           "impact": "Low",
           "forecast": "0.6%",
           "previous": "0.9%"
@@ -1622,7 +1770,7 @@
           "currency": "EUR",
           "title": "ECB President Lagarde Speaks",
           "scheduled_at_utc": "2026-10-14T08:30:00+00:00",
-          "minutes_until": 1292.4,
+          "minutes_until": 1290.0,
           "impact": "Medium",
           "forecast": "",
           "previous": ""
@@ -1631,7 +1779,7 @@
           "currency": "EUR",
           "title": "German 30-y Bond Auction",
           "scheduled_at_utc": "2026-10-14T09:34:00+00:00",
-          "minutes_until": 1356.4,
+          "minutes_until": 1354.0,
           "impact": "Low",
           "forecast": "",
           "previous": "3.80|1.6"
@@ -1640,7 +1788,7 @@
           "currency": "EUR",
           "title": "EU Economic Summit",
           "scheduled_at_utc": "2026-10-14T10:15:00+00:00",
-          "minutes_until": 1397.4,
+          "minutes_until": 1395.0,
           "impact": "Medium",
           "forecast": "",
           "previous": ""
@@ -1681,9 +1829,9 @@
       "reference_prices": {
         "last_closed_15m": 176.896,
         "closed_at_utc": "2026-10-13T10:45:00+00:00",
-        "forexcracked_indicative_bid": 176.86,
-        "forexcracked_indicative_ask": 176.86,
-        "forexcracked_reference_age_minutes": 0.8,
+        "forexcracked_indicative_bid": 176.84,
+        "forexcracked_indicative_ask": 176.85,
+        "forexcracked_reference_age_minutes": 1.2,
         "broker_bid_ask_verified": false,
         "spread_source": "FOREXCRACKED_INDICATIVE_NOT_EXECUTION"
       },
@@ -1713,7 +1861,44 @@
       "no_5m_signal_inputs": true,
       "research_rank": 5,
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "pair": "EURJPY",
+        "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
+        "ADR20_pips": 126.69,
+        "ADR20_complete_days": 20,
+        "NY17_day_used_pips": 61.9,
+        "NY17_ADR_percent_used": 48.9,
+        "ADR_remaining_reference_pips": 64.79,
+        "NY17_rollover_start_utc": "2026-10-12T21:00:00+00:00",
+        "session_ranges": {
+          "TOKYO": {
+            "high": 177.103,
+            "low": 176.484,
+            "first_observed_open_utc": "2026-10-13T00:00:00+00:00",
+            "last_observed_open_utc": "2026-10-13T08:45:00+00:00",
+            "closed_15m_bars": 36,
+            "range_pips": 61.9,
+            "session_start_utc": "2026-10-13T00:00:00+00:00",
+            "scheduled_session_end_utc": "2026-10-13T09:00:00+00:00",
+            "observed_partial": false
+          },
+          "LONDON": {
+            "high": 177.103,
+            "low": 176.484,
+            "first_observed_open_utc": "2026-10-13T07:00:00+00:00",
+            "last_observed_open_utc": "2026-10-13T10:45:00+00:00",
+            "closed_15m_bars": 16,
+            "range_pips": 61.9,
+            "session_start_utc": "2026-10-13T07:00:00+00:00",
+            "scheduled_session_end_utc": "2026-10-13T16:00:00+00:00",
+            "observed_partial": false
+          }
+        },
+        "reference_only": true,
+        "used_for_signal_direction": false,
+        "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
+        "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
+        "D1_current_session_used_for_direction": false,
+        "NY17_day_first_observed_open_utc": "2026-10-12T22:30:00+00:00"
       },
       "range_data_is_directional_signal": false,
       "session_liquidity_context": {
@@ -1731,8 +1916,8 @@
       "technical_direction_last_known": "SELL",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
       "technical_15m30m_fresh": true,
-      "latest_closed_m15_age_minutes": 12.6,
-      "latest_closed_m30_age_minutes": 27.6,
+      "latest_closed_m15_age_minutes": 15.0,
+      "latest_closed_m30_age_minutes": 30.0,
       "possible_opposite_rotation": {
         "direction": "NONE",
         "evidence": [],
@@ -1906,7 +2091,7 @@
           "forecast": "98.1",
           "previous": "98.7",
           "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-13T10:57:30.487756+00:00",
+          "verified_at_utc": "2026-10-13T10:59:57.593915+00:00",
           "released_at_utc": null,
           "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
           "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
@@ -1917,7 +2102,7 @@
           "currency": "USD",
           "title": "ADP Weekly Employment Change",
           "scheduled_at_utc": "2026-10-13T12:15:00+00:00",
-          "minutes_until": 77.4,
+          "minutes_until": 75.0,
           "impact": "Low",
           "forecast": "",
           "previous": "23.8K"
@@ -1926,7 +2111,7 @@
           "currency": "USD",
           "title": "Existing Home Sales",
           "scheduled_at_utc": "2026-10-13T14:00:00+00:00",
-          "minutes_until": 182.4,
+          "minutes_until": 180.0,
           "impact": "Low",
           "forecast": "3.95M",
           "previous": "3.98M"
@@ -1935,7 +2120,7 @@
           "currency": "USD",
           "title": "FOMC Member Barkin Speaks",
           "scheduled_at_utc": "2026-10-13T17:00:00+00:00",
-          "minutes_until": 362.4,
+          "minutes_until": 360.0,
           "impact": "Low",
           "forecast": "",
           "previous": ""
@@ -1944,7 +2129,7 @@
           "currency": "USD",
           "title": "FOMC Member Collins Speaks",
           "scheduled_at_utc": "2026-10-13T20:00:00+00:00",
-          "minutes_until": 542.4,
+          "minutes_until": 540.0,
           "impact": "Low",
           "forecast": "",
           "previous": ""
@@ -1953,7 +2138,7 @@
           "currency": "CAD",
           "title": "BOC Gov Macklem Speaks",
           "scheduled_at_utc": "2026-10-14T06:05:00+00:00",
-          "minutes_until": 1147.4,
+          "minutes_until": 1145.0,
           "impact": "Medium",
           "forecast": "",
           "previous": ""
@@ -1962,7 +2147,7 @@
           "currency": "USD",
           "title": "FOMC Member Bowman Speaks",
           "scheduled_at_utc": "2026-10-14T09:40:00+00:00",
-          "minutes_until": 1362.4,
+          "minutes_until": 1360.0,
           "impact": "Low",
           "forecast": "",
           "previous": ""
@@ -1973,7 +2158,7 @@
           "currency": "USD",
           "title": "NFIB Small Business Index",
           "scheduled_at_utc": "2026-10-13T10:00:00+00:00",
-          "minutes_until": -57.6,
+          "minutes_until": -60.0,
           "impact": "Low",
           "forecast": "98.1",
           "previous": "98.7"
@@ -2000,9 +2185,9 @@
       "reference_prices": {
         "last_closed_15m": 1.42568,
         "closed_at_utc": "2026-10-13T10:45:00+00:00",
-        "forexcracked_indicative_bid": 1.42582,
-        "forexcracked_indicative_ask": 1.42582,
-        "forexcracked_reference_age_minutes": 0.8,
+        "forexcracked_indicative_bid": 1.42584,
+        "forexcracked_indicative_ask": 1.42584,
+        "forexcracked_reference_age_minutes": 1.2,
         "broker_bid_ask_verified": false,
         "spread_source": "FOREXCRACKED_INDICATIVE_NOT_EXECUTION"
       },
@@ -2041,7 +2226,44 @@
       "no_5m_signal_inputs": true,
       "research_rank": 1,
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "pair": "USDCAD",
+        "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
+        "ADR20_pips": 56.6,
+        "ADR20_complete_days": 20,
+        "NY17_day_used_pips": 27.9,
+        "NY17_ADR_percent_used": 49.3,
+        "ADR_remaining_reference_pips": 28.7,
+        "NY17_rollover_start_utc": "2026-10-12T21:00:00+00:00",
+        "session_ranges": {
+          "TOKYO": {
+            "high": 1.42832,
+            "low": 1.42571,
+            "first_observed_open_utc": "2026-10-13T00:00:00+00:00",
+            "last_observed_open_utc": "2026-10-13T08:45:00+00:00",
+            "closed_15m_bars": 36,
+            "range_pips": 26.1,
+            "session_start_utc": "2026-10-13T00:00:00+00:00",
+            "scheduled_session_end_utc": "2026-10-13T09:00:00+00:00",
+            "observed_partial": false
+          },
+          "LONDON": {
+            "high": 1.42695,
+            "low": 1.42554,
+            "first_observed_open_utc": "2026-10-13T07:00:00+00:00",
+            "last_observed_open_utc": "2026-10-13T10:45:00+00:00",
+            "closed_15m_bars": 16,
+            "range_pips": 14.1,
+            "session_start_utc": "2026-10-13T07:00:00+00:00",
+            "scheduled_session_end_utc": "2026-10-13T16:00:00+00:00",
+            "observed_partial": false
+          }
+        },
+        "reference_only": true,
+        "used_for_signal_direction": false,
+        "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
+        "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
+        "D1_current_session_used_for_direction": false,
+        "NY17_day_first_observed_open_utc": "2026-10-12T22:30:00+00:00"
       },
       "range_data_is_directional_signal": false,
       "session_liquidity_context": {
@@ -2057,8 +2279,8 @@
       "technical_direction_last_known": "BUY",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
       "technical_15m30m_fresh": true,
-      "latest_closed_m15_age_minutes": 12.6,
-      "latest_closed_m30_age_minutes": 27.6,
+      "latest_closed_m15_age_minutes": 15.0,
+      "latest_closed_m30_age_minutes": 30.0,
       "possible_opposite_rotation": {
         "direction": "NONE",
         "evidence": [],
@@ -2240,7 +2462,7 @@
           "forecast": "98.1",
           "previous": "98.7",
           "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-13T10:57:30.487756+00:00",
+          "verified_at_utc": "2026-10-13T10:59:57.593915+00:00",
           "released_at_utc": null,
           "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
           "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
@@ -2253,7 +2475,7 @@
           "forecast": "0.8%",
           "previous": "0.5%",
           "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-13T10:57:30.487756+00:00",
+          "verified_at_utc": "2026-10-13T10:59:57.593915+00:00",
           "released_at_utc": null,
           "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
           "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
@@ -2264,7 +2486,7 @@
           "currency": "USD",
           "title": "ADP Weekly Employment Change",
           "scheduled_at_utc": "2026-10-13T12:15:00+00:00",
-          "minutes_until": 77.4,
+          "minutes_until": 75.0,
           "impact": "Low",
           "forecast": "",
           "previous": "23.8K"
@@ -2273,7 +2495,7 @@
           "currency": "USD",
           "title": "Existing Home Sales",
           "scheduled_at_utc": "2026-10-13T14:00:00+00:00",
-          "minutes_until": 182.4,
+          "minutes_until": 180.0,
           "impact": "Low",
           "forecast": "3.95M",
           "previous": "3.98M"
@@ -2282,7 +2504,7 @@
           "currency": "USD",
           "title": "FOMC Member Barkin Speaks",
           "scheduled_at_utc": "2026-10-13T17:00:00+00:00",
-          "minutes_until": 362.4,
+          "minutes_until": 360.0,
           "impact": "Low",
           "forecast": "",
           "previous": ""
@@ -2291,7 +2513,7 @@
           "currency": "USD",
           "title": "FOMC Member Collins Speaks",
           "scheduled_at_utc": "2026-10-13T20:00:00+00:00",
-          "minutes_until": 542.4,
+          "minutes_until": 540.0,
           "impact": "Low",
           "forecast": "",
           "previous": ""
@@ -2300,7 +2522,7 @@
           "currency": "GBP",
           "title": "MPC Member Breeden Speaks",
           "scheduled_at_utc": "2026-10-14T03:30:00+00:00",
-          "minutes_until": 992.4,
+          "minutes_until": 990.0,
           "impact": "Low",
           "forecast": "",
           "previous": ""
@@ -2309,7 +2531,7 @@
           "currency": "GBP",
           "title": "BOE Gov Bailey Speaks",
           "scheduled_at_utc": "2026-10-14T05:30:00+00:00",
-          "minutes_until": 1112.4,
+          "minutes_until": 1110.0,
           "impact": "Medium",
           "forecast": "",
           "previous": ""
@@ -2318,7 +2540,7 @@
           "currency": "GBP",
           "title": "MPC Member Pill Speaks",
           "scheduled_at_utc": "2026-10-14T06:00:00+00:00",
-          "minutes_until": 1142.4,
+          "minutes_until": 1140.0,
           "impact": "Low",
           "forecast": "",
           "previous": ""
@@ -2327,7 +2549,7 @@
           "currency": "USD",
           "title": "FOMC Member Bowman Speaks",
           "scheduled_at_utc": "2026-10-14T09:40:00+00:00",
-          "minutes_until": 1362.4,
+          "minutes_until": 1360.0,
           "impact": "Low",
           "forecast": "",
           "previous": ""
@@ -2338,7 +2560,7 @@
           "currency": "USD",
           "title": "NFIB Small Business Index",
           "scheduled_at_utc": "2026-10-13T10:00:00+00:00",
-          "minutes_until": -57.6,
+          "minutes_until": -60.0,
           "impact": "Low",
           "forecast": "98.1",
           "previous": "98.7"
@@ -2365,9 +2587,9 @@
       "reference_prices": {
         "last_closed_15m": 1.32438,
         "closed_at_utc": "2026-10-13T10:45:00+00:00",
-        "forexcracked_indicative_bid": 1.32413,
-        "forexcracked_indicative_ask": 1.32414,
-        "forexcracked_reference_age_minutes": 0.8,
+        "forexcracked_indicative_bid": 1.32407,
+        "forexcracked_indicative_ask": 1.32408,
+        "forexcracked_reference_age_minutes": 1.2,
         "broker_bid_ask_verified": false,
         "spread_source": "FOREXCRACKED_INDICATIVE_NOT_EXECUTION"
       },
@@ -2414,7 +2636,44 @@
       "no_5m_signal_inputs": true,
       "research_rank": 2,
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "pair": "GBPUSD",
+        "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
+        "ADR20_pips": 70.0,
+        "ADR20_complete_days": 20,
+        "NY17_day_used_pips": 43.6,
+        "NY17_ADR_percent_used": 62.3,
+        "ADR_remaining_reference_pips": 26.4,
+        "NY17_rollover_start_utc": "2026-10-12T21:00:00+00:00",
+        "session_ranges": {
+          "TOKYO": {
+            "high": 1.32406,
+            "low": 1.32047,
+            "first_observed_open_utc": "2026-10-13T00:00:00+00:00",
+            "last_observed_open_utc": "2026-10-13T08:45:00+00:00",
+            "closed_15m_bars": 36,
+            "range_pips": 35.9,
+            "session_start_utc": "2026-10-13T00:00:00+00:00",
+            "scheduled_session_end_utc": "2026-10-13T09:00:00+00:00",
+            "observed_partial": false
+          },
+          "LONDON": {
+            "high": 1.32445,
+            "low": 1.32231,
+            "first_observed_open_utc": "2026-10-13T07:00:00+00:00",
+            "last_observed_open_utc": "2026-10-13T10:45:00+00:00",
+            "closed_15m_bars": 16,
+            "range_pips": 21.4,
+            "session_start_utc": "2026-10-13T07:00:00+00:00",
+            "scheduled_session_end_utc": "2026-10-13T16:00:00+00:00",
+            "observed_partial": false
+          }
+        },
+        "reference_only": true,
+        "used_for_signal_direction": false,
+        "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
+        "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
+        "D1_current_session_used_for_direction": false,
+        "NY17_day_first_observed_open_utc": "2026-10-12T22:30:00+00:00"
       },
       "range_data_is_directional_signal": false,
       "session_liquidity_context": {
@@ -2430,8 +2689,8 @@
       "technical_direction_last_known": "BUY",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
       "technical_15m30m_fresh": true,
-      "latest_closed_m15_age_minutes": 12.6,
-      "latest_closed_m30_age_minutes": 27.6,
+      "latest_closed_m15_age_minutes": 15.0,
+      "latest_closed_m30_age_minutes": 30.0,
       "possible_opposite_rotation": {
         "direction": "NONE",
         "evidence": [],
@@ -2605,7 +2864,7 @@
           "forecast": "98.1",
           "previous": "98.7",
           "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-13T10:57:30.487756+00:00",
+          "verified_at_utc": "2026-10-13T10:59:57.593915+00:00",
           "released_at_utc": null,
           "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
           "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
@@ -2618,7 +2877,7 @@
           "forecast": "",
           "previous": "-8",
           "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-13T10:57:30.487756+00:00",
+          "verified_at_utc": "2026-10-13T10:59:57.593915+00:00",
           "released_at_utc": null,
           "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
           "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
@@ -2629,7 +2888,7 @@
           "currency": "USD",
           "title": "ADP Weekly Employment Change",
           "scheduled_at_utc": "2026-10-13T12:15:00+00:00",
-          "minutes_until": 77.4,
+          "minutes_until": 75.0,
           "impact": "Low",
           "forecast": "",
           "previous": "23.8K"
@@ -2638,7 +2897,7 @@
           "currency": "USD",
           "title": "Existing Home Sales",
           "scheduled_at_utc": "2026-10-13T14:00:00+00:00",
-          "minutes_until": 182.4,
+          "minutes_until": 180.0,
           "impact": "Low",
           "forecast": "3.95M",
           "previous": "3.98M"
@@ -2647,7 +2906,7 @@
           "currency": "AUD",
           "title": "CB Leading Index m/m",
           "scheduled_at_utc": "2026-10-13T14:30:00+00:00",
-          "minutes_until": 212.4,
+          "minutes_until": 210.0,
           "impact": "Low",
           "forecast": "",
           "previous": "0.5%"
@@ -2656,7 +2915,7 @@
           "currency": "USD",
           "title": "FOMC Member Barkin Speaks",
           "scheduled_at_utc": "2026-10-13T17:00:00+00:00",
-          "minutes_until": 362.4,
+          "minutes_until": 360.0,
           "impact": "Low",
           "forecast": "",
           "previous": ""
@@ -2665,7 +2924,7 @@
           "currency": "USD",
           "title": "FOMC Member Collins Speaks",
           "scheduled_at_utc": "2026-10-13T20:00:00+00:00",
-          "minutes_until": 542.4,
+          "minutes_until": 540.0,
           "impact": "Low",
           "forecast": "",
           "previous": ""
@@ -2674,7 +2933,7 @@
           "currency": "AUD",
           "title": "MI Leading Index m/m",
           "scheduled_at_utc": "2026-10-13T23:30:00+00:00",
-          "minutes_until": 752.4,
+          "minutes_until": 750.0,
           "impact": "Low",
           "forecast": "",
           "previous": "0.0%"
@@ -2683,7 +2942,7 @@
           "currency": "CNY",
           "title": "CPI y/y",
           "scheduled_at_utc": "2026-10-14T01:30:00+00:00",
-          "minutes_until": 872.4,
+          "minutes_until": 870.0,
           "impact": "Low",
           "forecast": "1.0%",
           "previous": "0.8%"
@@ -2692,7 +2951,7 @@
           "currency": "CNY",
           "title": "PPI y/y",
           "scheduled_at_utc": "2026-10-14T01:30:00+00:00",
-          "minutes_until": 872.4,
+          "minutes_until": 870.0,
           "impact": "Low",
           "forecast": "4.4%",
           "previous": "3.8%"
@@ -2701,7 +2960,7 @@
           "currency": "CNY",
           "title": "Trade Balance",
           "scheduled_at_utc": "2026-10-14T02:03:00+00:00",
-          "minutes_until": 905.4,
+          "minutes_until": 903.0,
           "impact": "Low",
           "forecast": "790B",
           "previous": "809B"
@@ -2710,7 +2969,7 @@
           "currency": "CNY",
           "title": "USD-Denominated Trade Balance",
           "scheduled_at_utc": "2026-10-14T02:04:00+00:00",
-          "minutes_until": 906.4,
+          "minutes_until": 904.0,
           "impact": "Low",
           "forecast": "116.8B",
           "previous": "119.1B"
@@ -2719,7 +2978,7 @@
           "currency": "CNY",
           "title": "M2 Money Supply y/y",
           "scheduled_at_utc": "2026-10-14T08:03:00+00:00",
-          "minutes_until": 1265.4,
+          "minutes_until": 1263.0,
           "impact": "Low",
           "forecast": "7.4%",
           "previous": "7.5%"
@@ -2728,7 +2987,7 @@
           "currency": "CNY",
           "title": "New Loans",
           "scheduled_at_utc": "2026-10-14T08:03:00+00:00",
-          "minutes_until": 1265.4,
+          "minutes_until": 1263.0,
           "impact": "Low",
           "forecast": "1025B",
           "previous": "60B"
@@ -2737,7 +2996,7 @@
           "currency": "USD",
           "title": "FOMC Member Bowman Speaks",
           "scheduled_at_utc": "2026-10-14T09:40:00+00:00",
-          "minutes_until": 1362.4,
+          "minutes_until": 1360.0,
           "impact": "Low",
           "forecast": "",
           "previous": ""
@@ -2748,7 +3007,7 @@
           "currency": "USD",
           "title": "NFIB Small Business Index",
           "scheduled_at_utc": "2026-10-13T10:00:00+00:00",
-          "minutes_until": -57.6,
+          "minutes_until": -60.0,
           "impact": "Low",
           "forecast": "98.1",
           "previous": "98.7"
@@ -2777,7 +3036,7 @@
         "closed_at_utc": "2026-10-13T10:45:00+00:00",
         "forexcracked_indicative_bid": 0.69731,
         "forexcracked_indicative_ask": 0.69731,
-        "forexcracked_reference_age_minutes": 0.8,
+        "forexcracked_reference_age_minutes": 1.2,
         "broker_bid_ask_verified": false,
         "spread_source": "FOREXCRACKED_INDICATIVE_NOT_EXECUTION"
       },
@@ -2815,7 +3074,44 @@
       "no_5m_signal_inputs": true,
       "research_rank": 3,
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "pair": "AUDUSD",
+        "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
+        "ADR20_pips": 44.77,
+        "ADR20_complete_days": 20,
+        "NY17_day_used_pips": 26.1,
+        "NY17_ADR_percent_used": 58.3,
+        "ADR_remaining_reference_pips": 18.67,
+        "NY17_rollover_start_utc": "2026-10-12T21:00:00+00:00",
+        "session_ranges": {
+          "TOKYO": {
+            "high": 0.69728,
+            "low": 0.695,
+            "first_observed_open_utc": "2026-10-13T00:00:00+00:00",
+            "last_observed_open_utc": "2026-10-13T08:45:00+00:00",
+            "closed_15m_bars": 36,
+            "range_pips": 22.8,
+            "session_start_utc": "2026-10-13T00:00:00+00:00",
+            "scheduled_session_end_utc": "2026-10-13T09:00:00+00:00",
+            "observed_partial": false
+          },
+          "LONDON": {
+            "high": 0.69751,
+            "low": 0.69622,
+            "first_observed_open_utc": "2026-10-13T07:00:00+00:00",
+            "last_observed_open_utc": "2026-10-13T10:45:00+00:00",
+            "closed_15m_bars": 16,
+            "range_pips": 12.9,
+            "session_start_utc": "2026-10-13T07:00:00+00:00",
+            "scheduled_session_end_utc": "2026-10-13T16:00:00+00:00",
+            "observed_partial": false
+          }
+        },
+        "reference_only": true,
+        "used_for_signal_direction": false,
+        "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
+        "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
+        "D1_current_session_used_for_direction": false,
+        "NY17_day_first_observed_open_utc": "2026-10-12T22:30:00+00:00"
       },
       "range_data_is_directional_signal": false,
       "session_liquidity_context": {
@@ -2831,8 +3127,8 @@
       "technical_direction_last_known": "BUY",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
       "technical_15m30m_fresh": true,
-      "latest_closed_m15_age_minutes": 12.6,
-      "latest_closed_m30_age_minutes": 27.6,
+      "latest_closed_m15_age_minutes": 15.0,
+      "latest_closed_m30_age_minutes": 30.0,
       "possible_opposite_rotation": {
         "direction": "NONE",
         "evidence": [],
@@ -2933,7 +3229,7 @@
           "forecast": "",
           "previous": "-8",
           "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-13T10:57:30.487756+00:00",
+          "verified_at_utc": "2026-10-13T10:59:57.593915+00:00",
           "released_at_utc": null,
           "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
           "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
@@ -2946,7 +3242,7 @@
           "forecast": "5.5%",
           "previous": "5.4%",
           "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-13T10:57:30.487756+00:00",
+          "verified_at_utc": "2026-10-13T10:59:57.593915+00:00",
           "released_at_utc": null,
           "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
           "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
@@ -2959,7 +3255,7 @@
           "forecast": "7.6%",
           "previous": "7.6%",
           "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-13T10:57:30.487756+00:00",
+          "verified_at_utc": "2026-10-13T10:59:57.593915+00:00",
           "released_at_utc": null,
           "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
           "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
@@ -2970,7 +3266,7 @@
           "currency": "AUD",
           "title": "CB Leading Index m/m",
           "scheduled_at_utc": "2026-10-13T14:30:00+00:00",
-          "minutes_until": 212.4,
+          "minutes_until": 210.0,
           "impact": "Low",
           "forecast": "",
           "previous": "0.5%"
@@ -2979,7 +3275,7 @@
           "currency": "AUD",
           "title": "MI Leading Index m/m",
           "scheduled_at_utc": "2026-10-13T23:30:00+00:00",
-          "minutes_until": 752.4,
+          "minutes_until": 750.0,
           "impact": "Low",
           "forecast": "",
           "previous": "0.0%"
@@ -2988,7 +3284,7 @@
           "currency": "JPY",
           "title": "M2 Money Stock y/y",
           "scheduled_at_utc": "2026-10-13T23:50:00+00:00",
-          "minutes_until": 772.4,
+          "minutes_until": 770.0,
           "impact": "Low",
           "forecast": "2.1%",
           "previous": "2.0%"
@@ -2997,7 +3293,7 @@
           "currency": "CNY",
           "title": "CPI y/y",
           "scheduled_at_utc": "2026-10-14T01:30:00+00:00",
-          "minutes_until": 872.4,
+          "minutes_until": 870.0,
           "impact": "Low",
           "forecast": "1.0%",
           "previous": "0.8%"
@@ -3006,7 +3302,7 @@
           "currency": "CNY",
           "title": "PPI y/y",
           "scheduled_at_utc": "2026-10-14T01:30:00+00:00",
-          "minutes_until": 872.4,
+          "minutes_until": 870.0,
           "impact": "Low",
           "forecast": "4.4%",
           "previous": "3.8%"
@@ -3015,7 +3311,7 @@
           "currency": "CNY",
           "title": "Trade Balance",
           "scheduled_at_utc": "2026-10-14T02:03:00+00:00",
-          "minutes_until": 905.4,
+          "minutes_until": 903.0,
           "impact": "Low",
           "forecast": "790B",
           "previous": "809B"
@@ -3024,7 +3320,7 @@
           "currency": "CNY",
           "title": "USD-Denominated Trade Balance",
           "scheduled_at_utc": "2026-10-14T02:04:00+00:00",
-          "minutes_until": 906.4,
+          "minutes_until": 904.0,
           "impact": "Low",
           "forecast": "116.8B",
           "previous": "119.1B"
@@ -3033,7 +3329,7 @@
           "currency": "CNY",
           "title": "M2 Money Supply y/y",
           "scheduled_at_utc": "2026-10-14T08:03:00+00:00",
-          "minutes_until": 1265.4,
+          "minutes_until": 1263.0,
           "impact": "Low",
           "forecast": "7.4%",
           "previous": "7.5%"
@@ -3042,7 +3338,7 @@
           "currency": "CNY",
           "title": "New Loans",
           "scheduled_at_utc": "2026-10-14T08:03:00+00:00",
-          "minutes_until": 1265.4,
+          "minutes_until": 1263.0,
           "impact": "Low",
           "forecast": "1025B",
           "previous": "60B"
@@ -3083,9 +3379,9 @@
       "reference_prices": {
         "last_closed_15m": 110.269,
         "closed_at_utc": "2026-10-13T10:45:00+00:00",
-        "forexcracked_indicative_bid": 110.27,
-        "forexcracked_indicative_ask": 110.27,
-        "forexcracked_reference_age_minutes": 0.8,
+        "forexcracked_indicative_bid": 110.25,
+        "forexcracked_indicative_ask": 110.26,
+        "forexcracked_reference_age_minutes": 1.2,
         "broker_bid_ask_verified": false,
         "spread_source": "FOREXCRACKED_INDICATIVE_NOT_EXECUTION"
       },
@@ -3115,7 +3411,44 @@
       "no_5m_signal_inputs": true,
       "research_rank": 4,
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "pair": "AUDJPY",
+        "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
+        "ADR20_pips": 85.12,
+        "ADR20_complete_days": 20,
+        "NY17_day_used_pips": 35.8,
+        "NY17_ADR_percent_used": 42.1,
+        "ADR_remaining_reference_pips": 49.32,
+        "NY17_rollover_start_utc": "2026-10-12T21:00:00+00:00",
+        "session_ranges": {
+          "TOKYO": {
+            "high": 110.377,
+            "low": 110.032,
+            "first_observed_open_utc": "2026-10-13T00:00:00+00:00",
+            "last_observed_open_utc": "2026-10-13T08:45:00+00:00",
+            "closed_15m_bars": 36,
+            "range_pips": 34.5,
+            "session_start_utc": "2026-10-13T00:00:00+00:00",
+            "scheduled_session_end_utc": "2026-10-13T09:00:00+00:00",
+            "observed_partial": false
+          },
+          "LONDON": {
+            "high": 110.377,
+            "low": 110.032,
+            "first_observed_open_utc": "2026-10-13T07:00:00+00:00",
+            "last_observed_open_utc": "2026-10-13T10:45:00+00:00",
+            "closed_15m_bars": 16,
+            "range_pips": 34.5,
+            "session_start_utc": "2026-10-13T07:00:00+00:00",
+            "scheduled_session_end_utc": "2026-10-13T16:00:00+00:00",
+            "observed_partial": false
+          }
+        },
+        "reference_only": true,
+        "used_for_signal_direction": false,
+        "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
+        "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
+        "D1_current_session_used_for_direction": false,
+        "NY17_day_first_observed_open_utc": "2026-10-12T22:30:00+00:00"
       },
       "range_data_is_directional_signal": false,
       "session_liquidity_context": {
@@ -3131,8 +3464,8 @@
       "technical_direction_last_known": "BUY",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
       "technical_15m30m_fresh": true,
-      "latest_closed_m15_age_minutes": 12.6,
-      "latest_closed_m30_age_minutes": 27.6,
+      "latest_closed_m15_age_minutes": 15.0,
+      "latest_closed_m30_age_minutes": 30.0,
       "possible_opposite_rotation": {
         "direction": "BUY",
         "evidence": [
@@ -3271,7 +3604,7 @@
           "forecast": "0.6%",
           "previous": "0.6%",
           "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-13T10:57:30.487756+00:00",
+          "verified_at_utc": "2026-10-13T10:59:57.593915+00:00",
           "released_at_utc": null,
           "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
           "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
@@ -3284,7 +3617,7 @@
           "forecast": "5.5%",
           "previous": "5.4%",
           "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-13T10:57:30.487756+00:00",
+          "verified_at_utc": "2026-10-13T10:59:57.593915+00:00",
           "released_at_utc": null,
           "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
           "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
@@ -3297,7 +3630,7 @@
           "forecast": "7.6%",
           "previous": "7.6%",
           "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-13T10:57:30.487756+00:00",
+          "verified_at_utc": "2026-10-13T10:59:57.593915+00:00",
           "released_at_utc": null,
           "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
           "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
@@ -3308,7 +3641,7 @@
           "currency": "JPY",
           "title": "M2 Money Stock y/y",
           "scheduled_at_utc": "2026-10-13T23:50:00+00:00",
-          "minutes_until": 772.4,
+          "minutes_until": 770.0,
           "impact": "Low",
           "forecast": "2.1%",
           "previous": "2.0%"
@@ -3317,7 +3650,7 @@
           "currency": "EUR",
           "title": "ECB President Lagarde Speaks",
           "scheduled_at_utc": "2026-10-14T02:10:00+00:00",
-          "minutes_until": 912.4,
+          "minutes_until": 910.0,
           "impact": "Medium",
           "forecast": "",
           "previous": ""
@@ -3326,7 +3659,7 @@
           "currency": "EUR",
           "title": "German WPI m/m",
           "scheduled_at_utc": "2026-10-14T06:00:00+00:00",
-          "minutes_until": 1142.4,
+          "minutes_until": 1140.0,
           "impact": "Low",
           "forecast": "0.6%",
           "previous": "0.9%"
@@ -3335,7 +3668,7 @@
           "currency": "EUR",
           "title": "ECB President Lagarde Speaks",
           "scheduled_at_utc": "2026-10-14T08:30:00+00:00",
-          "minutes_until": 1292.4,
+          "minutes_until": 1290.0,
           "impact": "Medium",
           "forecast": "",
           "previous": ""
@@ -3344,7 +3677,7 @@
           "currency": "EUR",
           "title": "German 30-y Bond Auction",
           "scheduled_at_utc": "2026-10-14T09:34:00+00:00",
-          "minutes_until": 1356.4,
+          "minutes_until": 1354.0,
           "impact": "Low",
           "forecast": "",
           "previous": "3.80|1.6"
@@ -3353,7 +3686,7 @@
           "currency": "EUR",
           "title": "EU Economic Summit",
           "scheduled_at_utc": "2026-10-14T10:15:00+00:00",
-          "minutes_until": 1397.4,
+          "minutes_until": 1395.0,
           "impact": "Medium",
           "forecast": "",
           "previous": ""
@@ -3394,9 +3727,9 @@
       "reference_prices": {
         "last_closed_15m": 176.896,
         "closed_at_utc": "2026-10-13T10:45:00+00:00",
-        "forexcracked_indicative_bid": 176.86,
-        "forexcracked_indicative_ask": 176.86,
-        "forexcracked_reference_age_minutes": 0.8,
+        "forexcracked_indicative_bid": 176.84,
+        "forexcracked_indicative_ask": 176.85,
+        "forexcracked_reference_age_minutes": 1.2,
         "broker_bid_ask_verified": false,
         "spread_source": "FOREXCRACKED_INDICATIVE_NOT_EXECUTION"
       },
@@ -3426,7 +3759,44 @@
       "no_5m_signal_inputs": true,
       "research_rank": 5,
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "pair": "EURJPY",
+        "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
+        "ADR20_pips": 126.69,
+        "ADR20_complete_days": 20,
+        "NY17_day_used_pips": 61.9,
+        "NY17_ADR_percent_used": 48.9,
+        "ADR_remaining_reference_pips": 64.79,
+        "NY17_rollover_start_utc": "2026-10-12T21:00:00+00:00",
+        "session_ranges": {
+          "TOKYO": {
+            "high": 177.103,
+            "low": 176.484,
+            "first_observed_open_utc": "2026-10-13T00:00:00+00:00",
+            "last_observed_open_utc": "2026-10-13T08:45:00+00:00",
+            "closed_15m_bars": 36,
+            "range_pips": 61.9,
+            "session_start_utc": "2026-10-13T00:00:00+00:00",
+            "scheduled_session_end_utc": "2026-10-13T09:00:00+00:00",
+            "observed_partial": false
+          },
+          "LONDON": {
+            "high": 177.103,
+            "low": 176.484,
+            "first_observed_open_utc": "2026-10-13T07:00:00+00:00",
+            "last_observed_open_utc": "2026-10-13T10:45:00+00:00",
+            "closed_15m_bars": 16,
+            "range_pips": 61.9,
+            "session_start_utc": "2026-10-13T07:00:00+00:00",
+            "scheduled_session_end_utc": "2026-10-13T16:00:00+00:00",
+            "observed_partial": false
+          }
+        },
+        "reference_only": true,
+        "used_for_signal_direction": false,
+        "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
+        "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
+        "D1_current_session_used_for_direction": false,
+        "NY17_day_first_observed_open_utc": "2026-10-12T22:30:00+00:00"
       },
       "range_data_is_directional_signal": false,
       "session_liquidity_context": {
@@ -3442,8 +3812,8 @@
       "technical_direction_last_known": "BUY",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
       "technical_15m30m_fresh": true,
-      "latest_closed_m15_age_minutes": 12.6,
-      "latest_closed_m30_age_minutes": 27.6,
+      "latest_closed_m15_age_minutes": 15.0,
+      "latest_closed_m30_age_minutes": 30.0,
       "possible_opposite_rotation": {
         "direction": "BUY",
         "evidence": [
@@ -3623,7 +3993,7 @@
           "forecast": "98.1",
           "previous": "98.7",
           "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-13T10:57:30.487756+00:00",
+          "verified_at_utc": "2026-10-13T10:59:57.593915+00:00",
           "released_at_utc": null,
           "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
           "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
@@ -3636,7 +4006,7 @@
           "forecast": "0.6%",
           "previous": "0.6%",
           "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-13T10:57:30.487756+00:00",
+          "verified_at_utc": "2026-10-13T10:59:57.593915+00:00",
           "released_at_utc": null,
           "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
           "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
@@ -3647,7 +4017,7 @@
           "currency": "USD",
           "title": "ADP Weekly Employment Change",
           "scheduled_at_utc": "2026-10-13T12:15:00+00:00",
-          "minutes_until": 77.4,
+          "minutes_until": 75.0,
           "impact": "Low",
           "forecast": "",
           "previous": "23.8K"
@@ -3656,7 +4026,7 @@
           "currency": "USD",
           "title": "Existing Home Sales",
           "scheduled_at_utc": "2026-10-13T14:00:00+00:00",
-          "minutes_until": 182.4,
+          "minutes_until": 180.0,
           "impact": "Low",
           "forecast": "3.95M",
           "previous": "3.98M"
@@ -3665,7 +4035,7 @@
           "currency": "USD",
           "title": "FOMC Member Barkin Speaks",
           "scheduled_at_utc": "2026-10-13T17:00:00+00:00",
-          "minutes_until": 362.4,
+          "minutes_until": 360.0,
           "impact": "Low",
           "forecast": "",
           "previous": ""
@@ -3674,7 +4044,7 @@
           "currency": "USD",
           "title": "FOMC Member Collins Speaks",
           "scheduled_at_utc": "2026-10-13T20:00:00+00:00",
-          "minutes_until": 542.4,
+          "minutes_until": 540.0,
           "impact": "Low",
           "forecast": "",
           "previous": ""
@@ -3683,7 +4053,7 @@
           "currency": "EUR",
           "title": "ECB President Lagarde Speaks",
           "scheduled_at_utc": "2026-10-14T02:10:00+00:00",
-          "minutes_until": 912.4,
+          "minutes_until": 910.0,
           "impact": "Medium",
           "forecast": "",
           "previous": ""
@@ -3692,7 +4062,7 @@
           "currency": "EUR",
           "title": "German WPI m/m",
           "scheduled_at_utc": "2026-10-14T06:00:00+00:00",
-          "minutes_until": 1142.4,
+          "minutes_until": 1140.0,
           "impact": "Low",
           "forecast": "0.6%",
           "previous": "0.9%"
@@ -3701,7 +4071,7 @@
           "currency": "EUR",
           "title": "ECB President Lagarde Speaks",
           "scheduled_at_utc": "2026-10-14T08:30:00+00:00",
-          "minutes_until": 1292.4,
+          "minutes_until": 1290.0,
           "impact": "Medium",
           "forecast": "",
           "previous": ""
@@ -3710,7 +4080,7 @@
           "currency": "EUR",
           "title": "German 30-y Bond Auction",
           "scheduled_at_utc": "2026-10-14T09:34:00+00:00",
-          "minutes_until": 1356.4,
+          "minutes_until": 1354.0,
           "impact": "Low",
           "forecast": "",
           "previous": "3.80|1.6"
@@ -3719,7 +4089,7 @@
           "currency": "USD",
           "title": "FOMC Member Bowman Speaks",
           "scheduled_at_utc": "2026-10-14T09:40:00+00:00",
-          "minutes_until": 1362.4,
+          "minutes_until": 1360.0,
           "impact": "Low",
           "forecast": "",
           "previous": ""
@@ -3728,7 +4098,7 @@
           "currency": "EUR",
           "title": "EU Economic Summit",
           "scheduled_at_utc": "2026-10-14T10:15:00+00:00",
-          "minutes_until": 1397.4,
+          "minutes_until": 1395.0,
           "impact": "Medium",
           "forecast": "",
           "previous": ""
@@ -3739,7 +4109,7 @@
           "currency": "USD",
           "title": "NFIB Small Business Index",
           "scheduled_at_utc": "2026-10-13T10:00:00+00:00",
-          "minutes_until": -57.6,
+          "minutes_until": -60.0,
           "impact": "Low",
           "forecast": "98.1",
           "previous": "98.7"
@@ -3766,9 +4136,9 @@
       "reference_prices": {
         "last_closed_15m": 1.1188,
         "closed_at_utc": "2026-10-13T10:45:00+00:00",
-        "forexcracked_indicative_bid": 1.11845,
-        "forexcracked_indicative_ask": 1.11845,
-        "forexcracked_reference_age_minutes": 0.8,
+        "forexcracked_indicative_bid": 1.1185,
+        "forexcracked_indicative_ask": 1.1185,
+        "forexcracked_reference_age_minutes": 1.2,
         "broker_bid_ask_verified": false,
         "spread_source": "FOREXCRACKED_INDICATIVE_NOT_EXECUTION"
       },
@@ -3806,7 +4176,44 @@
       "no_5m_signal_inputs": true,
       "research_rank": 6,
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "pair": "EURUSD",
+        "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
+        "ADR20_pips": 61.74,
+        "ADR20_complete_days": 20,
+        "NY17_day_used_pips": 47.4,
+        "NY17_ADR_percent_used": 76.8,
+        "ADR_remaining_reference_pips": 14.34,
+        "NY17_rollover_start_utc": "2026-10-12T21:00:00+00:00",
+        "session_ranges": {
+          "TOKYO": {
+            "high": 1.11964,
+            "low": 1.11539,
+            "first_observed_open_utc": "2026-10-13T00:00:00+00:00",
+            "last_observed_open_utc": "2026-10-13T08:45:00+00:00",
+            "closed_15m_bars": 36,
+            "range_pips": 42.5,
+            "session_start_utc": "2026-10-13T00:00:00+00:00",
+            "scheduled_session_end_utc": "2026-10-13T09:00:00+00:00",
+            "observed_partial": false
+          },
+          "LONDON": {
+            "high": 1.11964,
+            "low": 1.11751,
+            "first_observed_open_utc": "2026-10-13T07:00:00+00:00",
+            "last_observed_open_utc": "2026-10-13T10:45:00+00:00",
+            "closed_15m_bars": 16,
+            "range_pips": 21.3,
+            "session_start_utc": "2026-10-13T07:00:00+00:00",
+            "scheduled_session_end_utc": "2026-10-13T16:00:00+00:00",
+            "observed_partial": false
+          }
+        },
+        "reference_only": true,
+        "used_for_signal_direction": false,
+        "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
+        "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
+        "D1_current_session_used_for_direction": false,
+        "NY17_day_first_observed_open_utc": "2026-10-12T22:30:00+00:00"
       },
       "range_data_is_directional_signal": false,
       "session_liquidity_context": {
@@ -3822,8 +4229,8 @@
       "technical_direction_last_known": "BUY",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
       "technical_15m30m_fresh": true,
-      "latest_closed_m15_age_minutes": 12.6,
-      "latest_closed_m30_age_minutes": 27.6,
+      "latest_closed_m15_age_minutes": 15.0,
+      "latest_closed_m30_age_minutes": 30.0,
       "possible_opposite_rotation": {
         "direction": "NONE",
         "evidence": [],
@@ -3997,7 +4404,7 @@
           "forecast": "98.1",
           "previous": "98.7",
           "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-13T10:57:30.487756+00:00",
+          "verified_at_utc": "2026-10-13T10:59:57.593915+00:00",
           "released_at_utc": null,
           "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
           "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
@@ -4008,7 +4415,7 @@
           "currency": "USD",
           "title": "ADP Weekly Employment Change",
           "scheduled_at_utc": "2026-10-13T12:15:00+00:00",
-          "minutes_until": 77.4,
+          "minutes_until": 75.0,
           "impact": "Low",
           "forecast": "",
           "previous": "23.8K"
@@ -4017,7 +4424,7 @@
           "currency": "USD",
           "title": "Existing Home Sales",
           "scheduled_at_utc": "2026-10-13T14:00:00+00:00",
-          "minutes_until": 182.4,
+          "minutes_until": 180.0,
           "impact": "Low",
           "forecast": "3.95M",
           "previous": "3.98M"
@@ -4026,7 +4433,7 @@
           "currency": "USD",
           "title": "FOMC Member Barkin Speaks",
           "scheduled_at_utc": "2026-10-13T17:00:00+00:00",
-          "minutes_until": 362.4,
+          "minutes_until": 360.0,
           "impact": "Low",
           "forecast": "",
           "previous": ""
@@ -4035,7 +4442,7 @@
           "currency": "USD",
           "title": "FOMC Member Collins Speaks",
           "scheduled_at_utc": "2026-10-13T20:00:00+00:00",
-          "minutes_until": 542.4,
+          "minutes_until": 540.0,
           "impact": "Low",
           "forecast": "",
           "previous": ""
@@ -4044,7 +4451,7 @@
           "currency": "NZD",
           "title": "Visitor Arrivals m/m",
           "scheduled_at_utc": "2026-10-13T21:45:00+00:00",
-          "minutes_until": 647.4,
+          "minutes_until": 645.0,
           "impact": "Low",
           "forecast": "",
           "previous": "0.5%"
@@ -4053,7 +4460,7 @@
           "currency": "CNY",
           "title": "CPI y/y",
           "scheduled_at_utc": "2026-10-14T01:30:00+00:00",
-          "minutes_until": 872.4,
+          "minutes_until": 870.0,
           "impact": "Low",
           "forecast": "1.0%",
           "previous": "0.8%"
@@ -4062,7 +4469,7 @@
           "currency": "CNY",
           "title": "PPI y/y",
           "scheduled_at_utc": "2026-10-14T01:30:00+00:00",
-          "minutes_until": 872.4,
+          "minutes_until": 870.0,
           "impact": "Low",
           "forecast": "4.4%",
           "previous": "3.8%"
@@ -4071,7 +4478,7 @@
           "currency": "CNY",
           "title": "Trade Balance",
           "scheduled_at_utc": "2026-10-14T02:03:00+00:00",
-          "minutes_until": 905.4,
+          "minutes_until": 903.0,
           "impact": "Low",
           "forecast": "790B",
           "previous": "809B"
@@ -4080,7 +4487,7 @@
           "currency": "CNY",
           "title": "USD-Denominated Trade Balance",
           "scheduled_at_utc": "2026-10-14T02:04:00+00:00",
-          "minutes_until": 906.4,
+          "minutes_until": 904.0,
           "impact": "Low",
           "forecast": "116.8B",
           "previous": "119.1B"
@@ -4089,7 +4496,7 @@
           "currency": "CNY",
           "title": "M2 Money Supply y/y",
           "scheduled_at_utc": "2026-10-14T08:03:00+00:00",
-          "minutes_until": 1265.4,
+          "minutes_until": 1263.0,
           "impact": "Low",
           "forecast": "7.4%",
           "previous": "7.5%"
@@ -4098,7 +4505,7 @@
           "currency": "CNY",
           "title": "New Loans",
           "scheduled_at_utc": "2026-10-14T08:03:00+00:00",
-          "minutes_until": 1265.4,
+          "minutes_until": 1263.0,
           "impact": "Low",
           "forecast": "1025B",
           "previous": "60B"
@@ -4107,7 +4514,7 @@
           "currency": "USD",
           "title": "FOMC Member Bowman Speaks",
           "scheduled_at_utc": "2026-10-14T09:40:00+00:00",
-          "minutes_until": 1362.4,
+          "minutes_until": 1360.0,
           "impact": "Low",
           "forecast": "",
           "previous": ""
@@ -4118,7 +4525,7 @@
           "currency": "USD",
           "title": "NFIB Small Business Index",
           "scheduled_at_utc": "2026-10-13T10:00:00+00:00",
-          "minutes_until": -57.6,
+          "minutes_until": -60.0,
           "impact": "Low",
           "forecast": "98.1",
           "previous": "98.7"
@@ -4132,9 +4539,9 @@
       "reference_prices": {
         "last_closed_15m": 0.56092,
         "closed_at_utc": "2026-10-13T10:45:00+00:00",
-        "forexcracked_indicative_bid": 0.56079,
-        "forexcracked_indicative_ask": 0.56079,
-        "forexcracked_reference_age_minutes": 0.8,
+        "forexcracked_indicative_bid": 0.56083,
+        "forexcracked_indicative_ask": 0.56083,
+        "forexcracked_reference_age_minutes": 1.2,
         "broker_bid_ask_verified": false,
         "spread_source": "FOREXCRACKED_INDICATIVE_NOT_EXECUTION"
       },
@@ -4173,7 +4580,44 @@
       "no_5m_signal_inputs": true,
       "research_rank": 7,
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "pair": "NZDUSD",
+        "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
+        "ADR20_pips": 41.88,
+        "ADR20_complete_days": 20,
+        "NY17_day_used_pips": 31.3,
+        "NY17_ADR_percent_used": 74.7,
+        "ADR_remaining_reference_pips": 10.58,
+        "NY17_rollover_start_utc": "2026-10-12T21:00:00+00:00",
+        "session_ranges": {
+          "TOKYO": {
+            "high": 0.56056,
+            "low": 0.55798,
+            "first_observed_open_utc": "2026-10-13T00:00:00+00:00",
+            "last_observed_open_utc": "2026-10-13T08:45:00+00:00",
+            "closed_15m_bars": 36,
+            "range_pips": 25.8,
+            "session_start_utc": "2026-10-13T00:00:00+00:00",
+            "scheduled_session_end_utc": "2026-10-13T09:00:00+00:00",
+            "observed_partial": false
+          },
+          "LONDON": {
+            "high": 0.56111,
+            "low": 0.55953,
+            "first_observed_open_utc": "2026-10-13T07:00:00+00:00",
+            "last_observed_open_utc": "2026-10-13T10:45:00+00:00",
+            "closed_15m_bars": 16,
+            "range_pips": 15.8,
+            "session_start_utc": "2026-10-13T07:00:00+00:00",
+            "scheduled_session_end_utc": "2026-10-13T16:00:00+00:00",
+            "observed_partial": false
+          }
+        },
+        "reference_only": true,
+        "used_for_signal_direction": false,
+        "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
+        "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
+        "D1_current_session_used_for_direction": false,
+        "NY17_day_first_observed_open_utc": "2026-10-12T22:30:00+00:00"
       },
       "range_data_is_directional_signal": false,
       "session_liquidity_context": {
@@ -4189,8 +4633,8 @@
       "technical_direction_last_known": "BUY",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
       "technical_15m30m_fresh": true,
-      "latest_closed_m15_age_minutes": 12.6,
-      "latest_closed_m30_age_minutes": 27.6,
+      "latest_closed_m15_age_minutes": 15.0,
+      "latest_closed_m30_age_minutes": 30.0,
       "possible_opposite_rotation": {
         "direction": "NONE",
         "evidence": [],
@@ -4364,7 +4808,7 @@
           "forecast": "98.1",
           "previous": "98.7",
           "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-13T10:57:30.487756+00:00",
+          "verified_at_utc": "2026-10-13T10:59:57.593915+00:00",
           "released_at_utc": null,
           "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
           "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
@@ -4377,7 +4821,7 @@
           "forecast": "5.5%",
           "previous": "5.4%",
           "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-13T10:57:30.487756+00:00",
+          "verified_at_utc": "2026-10-13T10:59:57.593915+00:00",
           "released_at_utc": null,
           "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
           "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
@@ -4390,7 +4834,7 @@
           "forecast": "7.6%",
           "previous": "7.6%",
           "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-13T10:57:30.487756+00:00",
+          "verified_at_utc": "2026-10-13T10:59:57.593915+00:00",
           "released_at_utc": null,
           "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
           "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
@@ -4401,7 +4845,7 @@
           "currency": "USD",
           "title": "ADP Weekly Employment Change",
           "scheduled_at_utc": "2026-10-13T12:15:00+00:00",
-          "minutes_until": 77.4,
+          "minutes_until": 75.0,
           "impact": "Low",
           "forecast": "",
           "previous": "23.8K"
@@ -4410,7 +4854,7 @@
           "currency": "USD",
           "title": "Existing Home Sales",
           "scheduled_at_utc": "2026-10-13T14:00:00+00:00",
-          "minutes_until": 182.4,
+          "minutes_until": 180.0,
           "impact": "Low",
           "forecast": "3.95M",
           "previous": "3.98M"
@@ -4419,7 +4863,7 @@
           "currency": "USD",
           "title": "FOMC Member Barkin Speaks",
           "scheduled_at_utc": "2026-10-13T17:00:00+00:00",
-          "minutes_until": 362.4,
+          "minutes_until": 360.0,
           "impact": "Low",
           "forecast": "",
           "previous": ""
@@ -4428,7 +4872,7 @@
           "currency": "USD",
           "title": "FOMC Member Collins Speaks",
           "scheduled_at_utc": "2026-10-13T20:00:00+00:00",
-          "minutes_until": 542.4,
+          "minutes_until": 540.0,
           "impact": "Low",
           "forecast": "",
           "previous": ""
@@ -4437,7 +4881,7 @@
           "currency": "JPY",
           "title": "M2 Money Stock y/y",
           "scheduled_at_utc": "2026-10-13T23:50:00+00:00",
-          "minutes_until": 772.4,
+          "minutes_until": 770.0,
           "impact": "Low",
           "forecast": "2.1%",
           "previous": "2.0%"
@@ -4446,7 +4890,7 @@
           "currency": "USD",
           "title": "FOMC Member Bowman Speaks",
           "scheduled_at_utc": "2026-10-14T09:40:00+00:00",
-          "minutes_until": 1362.4,
+          "minutes_until": 1360.0,
           "impact": "Low",
           "forecast": "",
           "previous": ""
@@ -4457,7 +4901,7 @@
           "currency": "USD",
           "title": "NFIB Small Business Index",
           "scheduled_at_utc": "2026-10-13T10:00:00+00:00",
-          "minutes_until": -57.6,
+          "minutes_until": -60.0,
           "impact": "Low",
           "forecast": "98.1",
           "previous": "98.7"
@@ -4484,9 +4928,9 @@
       "reference_prices": {
         "last_closed_15m": 158.118,
         "closed_at_utc": "2026-10-13T10:45:00+00:00",
-        "forexcracked_indicative_bid": 158.13,
-        "forexcracked_indicative_ask": 158.13,
-        "forexcracked_reference_age_minutes": 0.8,
+        "forexcracked_indicative_bid": 158.11,
+        "forexcracked_indicative_ask": 158.11,
+        "forexcracked_reference_age_minutes": 1.2,
         "broker_bid_ask_verified": false,
         "spread_source": "FOREXCRACKED_INDICATIVE_NOT_EXECUTION"
       },
@@ -4524,7 +4968,44 @@
       "no_5m_signal_inputs": true,
       "research_rank": 8,
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "pair": "USDJPY",
+        "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
+        "ADR20_pips": 109.77,
+        "ADR20_complete_days": 20,
+        "NY17_day_used_pips": 80.7,
+        "NY17_ADR_percent_used": 73.5,
+        "ADR_remaining_reference_pips": 29.07,
+        "NY17_rollover_start_utc": "2026-10-12T21:00:00+00:00",
+        "session_ranges": {
+          "TOKYO": {
+            "high": 158.531,
+            "low": 157.834,
+            "first_observed_open_utc": "2026-10-13T00:00:00+00:00",
+            "last_observed_open_utc": "2026-10-13T08:45:00+00:00",
+            "closed_15m_bars": 36,
+            "range_pips": 69.7,
+            "session_start_utc": "2026-10-13T00:00:00+00:00",
+            "scheduled_session_end_utc": "2026-10-13T09:00:00+00:00",
+            "observed_partial": false
+          },
+          "LONDON": {
+            "high": 158.394,
+            "low": 157.834,
+            "first_observed_open_utc": "2026-10-13T07:00:00+00:00",
+            "last_observed_open_utc": "2026-10-13T10:45:00+00:00",
+            "closed_15m_bars": 16,
+            "range_pips": 56.0,
+            "session_start_utc": "2026-10-13T07:00:00+00:00",
+            "scheduled_session_end_utc": "2026-10-13T16:00:00+00:00",
+            "observed_partial": false
+          }
+        },
+        "reference_only": true,
+        "used_for_signal_direction": false,
+        "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
+        "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
+        "D1_current_session_used_for_direction": false,
+        "NY17_day_first_observed_open_utc": "2026-10-12T22:30:00+00:00"
       },
       "range_data_is_directional_signal": false,
       "session_liquidity_context": {
@@ -4540,8 +5021,8 @@
       "technical_direction_last_known": "BUY",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
       "technical_15m30m_fresh": true,
-      "latest_closed_m15_age_minutes": 12.6,
-      "latest_closed_m30_age_minutes": 27.6,
+      "latest_closed_m15_age_minutes": 15.0,
+      "latest_closed_m30_age_minutes": 30.0,
       "possible_opposite_rotation": {
         "direction": "NONE",
         "evidence": [],
@@ -4631,7 +5112,7 @@
           "forecast": "5.5%",
           "previous": "5.4%",
           "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-13T10:57:30.487756+00:00",
+          "verified_at_utc": "2026-10-13T10:59:57.593915+00:00",
           "released_at_utc": null,
           "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
           "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
@@ -4644,7 +5125,7 @@
           "forecast": "7.6%",
           "previous": "7.6%",
           "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-13T10:57:30.487756+00:00",
+          "verified_at_utc": "2026-10-13T10:59:57.593915+00:00",
           "released_at_utc": null,
           "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
           "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
@@ -4655,7 +5136,7 @@
           "currency": "NZD",
           "title": "Visitor Arrivals m/m",
           "scheduled_at_utc": "2026-10-13T21:45:00+00:00",
-          "minutes_until": 647.4,
+          "minutes_until": 645.0,
           "impact": "Low",
           "forecast": "",
           "previous": "0.5%"
@@ -4664,7 +5145,7 @@
           "currency": "JPY",
           "title": "M2 Money Stock y/y",
           "scheduled_at_utc": "2026-10-13T23:50:00+00:00",
-          "minutes_until": 772.4,
+          "minutes_until": 770.0,
           "impact": "Low",
           "forecast": "2.1%",
           "previous": "2.0%"
@@ -4673,7 +5154,7 @@
           "currency": "CNY",
           "title": "CPI y/y",
           "scheduled_at_utc": "2026-10-14T01:30:00+00:00",
-          "minutes_until": 872.4,
+          "minutes_until": 870.0,
           "impact": "Low",
           "forecast": "1.0%",
           "previous": "0.8%"
@@ -4682,7 +5163,7 @@
           "currency": "CNY",
           "title": "PPI y/y",
           "scheduled_at_utc": "2026-10-14T01:30:00+00:00",
-          "minutes_until": 872.4,
+          "minutes_until": 870.0,
           "impact": "Low",
           "forecast": "4.4%",
           "previous": "3.8%"
@@ -4691,7 +5172,7 @@
           "currency": "CNY",
           "title": "Trade Balance",
           "scheduled_at_utc": "2026-10-14T02:03:00+00:00",
-          "minutes_until": 905.4,
+          "minutes_until": 903.0,
           "impact": "Low",
           "forecast": "790B",
           "previous": "809B"
@@ -4700,7 +5181,7 @@
           "currency": "CNY",
           "title": "USD-Denominated Trade Balance",
           "scheduled_at_utc": "2026-10-14T02:04:00+00:00",
-          "minutes_until": 906.4,
+          "minutes_until": 904.0,
           "impact": "Low",
           "forecast": "116.8B",
           "previous": "119.1B"
@@ -4709,7 +5190,7 @@
           "currency": "CNY",
           "title": "M2 Money Supply y/y",
           "scheduled_at_utc": "2026-10-14T08:03:00+00:00",
-          "minutes_until": 1265.4,
+          "minutes_until": 1263.0,
           "impact": "Low",
           "forecast": "7.4%",
           "previous": "7.5%"
@@ -4718,7 +5199,7 @@
           "currency": "CNY",
           "title": "New Loans",
           "scheduled_at_utc": "2026-10-14T08:03:00+00:00",
-          "minutes_until": 1265.4,
+          "minutes_until": 1263.0,
           "impact": "Low",
           "forecast": "1025B",
           "previous": "60B"
@@ -4746,9 +5227,9 @@
       "reference_prices": {
         "last_closed_15m": 88.686,
         "closed_at_utc": "2026-10-13T10:45:00+00:00",
-        "forexcracked_indicative_bid": 88.677,
-        "forexcracked_indicative_ask": 88.683,
-        "forexcracked_reference_age_minutes": 0.8,
+        "forexcracked_indicative_bid": 88.672,
+        "forexcracked_indicative_ask": 88.679,
+        "forexcracked_reference_age_minutes": 1.2,
         "broker_bid_ask_verified": false,
         "spread_source": "FOREXCRACKED_INDICATIVE_NOT_EXECUTION"
       },
@@ -4778,7 +5259,44 @@
       "no_5m_signal_inputs": true,
       "research_rank": 9,
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "pair": "NZDJPY",
+        "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
+        "ADR20_pips": 68.02,
+        "ADR20_complete_days": 20,
+        "NY17_day_used_pips": 33.7,
+        "NY17_ADR_percent_used": 49.5,
+        "ADR_remaining_reference_pips": 34.32,
+        "NY17_rollover_start_utc": "2026-10-12T21:00:00+00:00",
+        "session_ranges": {
+          "TOKYO": {
+            "high": 88.729,
+            "low": 88.392,
+            "first_observed_open_utc": "2026-10-13T00:00:00+00:00",
+            "last_observed_open_utc": "2026-10-13T08:45:00+00:00",
+            "closed_15m_bars": 36,
+            "range_pips": 33.7,
+            "session_start_utc": "2026-10-13T00:00:00+00:00",
+            "scheduled_session_end_utc": "2026-10-13T09:00:00+00:00",
+            "observed_partial": false
+          },
+          "LONDON": {
+            "high": 88.729,
+            "low": 88.452,
+            "first_observed_open_utc": "2026-10-13T07:00:00+00:00",
+            "last_observed_open_utc": "2026-10-13T10:45:00+00:00",
+            "closed_15m_bars": 16,
+            "range_pips": 27.7,
+            "session_start_utc": "2026-10-13T07:00:00+00:00",
+            "scheduled_session_end_utc": "2026-10-13T16:00:00+00:00",
+            "observed_partial": false
+          }
+        },
+        "reference_only": true,
+        "used_for_signal_direction": false,
+        "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
+        "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
+        "D1_current_session_used_for_direction": false,
+        "NY17_day_first_observed_open_utc": "2026-10-12T22:30:00+00:00"
       },
       "range_data_is_directional_signal": false,
       "session_liquidity_context": {
@@ -4794,8 +5312,8 @@
       "technical_direction_last_known": "BUY",
       "technical_stage": "EARLY_M15_M30_MOMENTUM",
       "technical_15m30m_fresh": true,
-      "latest_closed_m15_age_minutes": 12.6,
-      "latest_closed_m30_age_minutes": 27.6,
+      "latest_closed_m15_age_minutes": 15.0,
+      "latest_closed_m30_age_minutes": 30.0,
       "possible_opposite_rotation": {
         "direction": "BUY",
         "evidence": [
@@ -4936,7 +5454,7 @@
           "forecast": "0.6%",
           "previous": "0.6%",
           "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-13T10:57:30.487756+00:00",
+          "verified_at_utc": "2026-10-13T10:59:57.593915+00:00",
           "released_at_utc": null,
           "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
           "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
@@ -4947,7 +5465,7 @@
           "currency": "EUR",
           "title": "ECB President Lagarde Speaks",
           "scheduled_at_utc": "2026-10-14T02:10:00+00:00",
-          "minutes_until": 912.4,
+          "minutes_until": 910.0,
           "impact": "Medium",
           "forecast": "",
           "previous": ""
@@ -4956,7 +5474,7 @@
           "currency": "EUR",
           "title": "German WPI m/m",
           "scheduled_at_utc": "2026-10-14T06:00:00+00:00",
-          "minutes_until": 1142.4,
+          "minutes_until": 1140.0,
           "impact": "Low",
           "forecast": "0.6%",
           "previous": "0.9%"
@@ -4965,7 +5483,7 @@
           "currency": "CAD",
           "title": "BOC Gov Macklem Speaks",
           "scheduled_at_utc": "2026-10-14T06:05:00+00:00",
-          "minutes_until": 1147.4,
+          "minutes_until": 1145.0,
           "impact": "Medium",
           "forecast": "",
           "previous": ""
@@ -4974,7 +5492,7 @@
           "currency": "EUR",
           "title": "ECB President Lagarde Speaks",
           "scheduled_at_utc": "2026-10-14T08:30:00+00:00",
-          "minutes_until": 1292.4,
+          "minutes_until": 1290.0,
           "impact": "Medium",
           "forecast": "",
           "previous": ""
@@ -4983,7 +5501,7 @@
           "currency": "EUR",
           "title": "German 30-y Bond Auction",
           "scheduled_at_utc": "2026-10-14T09:34:00+00:00",
-          "minutes_until": 1356.4,
+          "minutes_until": 1354.0,
           "impact": "Low",
           "forecast": "",
           "previous": "3.80|1.6"
@@ -4992,7 +5510,7 @@
           "currency": "EUR",
           "title": "EU Economic Summit",
           "scheduled_at_utc": "2026-10-14T10:15:00+00:00",
-          "minutes_until": 1397.4,
+          "minutes_until": 1395.0,
           "impact": "Medium",
           "forecast": "",
           "previous": ""
@@ -5033,9 +5551,9 @@
       "reference_prices": {
         "last_closed_15m": 1.59493,
         "closed_at_utc": "2026-10-13T10:45:00+00:00",
-        "forexcracked_indicative_bid": 1.59456,
-        "forexcracked_indicative_ask": 1.5946,
-        "forexcracked_reference_age_minutes": 0.8,
+        "forexcracked_indicative_bid": 1.59463,
+        "forexcracked_indicative_ask": 1.59467,
+        "forexcracked_reference_age_minutes": 1.2,
         "broker_bid_ask_verified": false,
         "spread_source": "FOREXCRACKED_INDICATIVE_NOT_EXECUTION"
       },
@@ -5056,7 +5574,44 @@
       "no_5m_signal_inputs": true,
       "research_rank": 10,
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "pair": "EURCAD",
+        "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
+        "ADR20_pips": 74.11,
+        "ADR20_complete_days": 20,
+        "NY17_day_used_pips": 63.7,
+        "NY17_ADR_percent_used": 86.0,
+        "ADR_remaining_reference_pips": 10.41,
+        "NY17_rollover_start_utc": "2026-10-12T21:00:00+00:00",
+        "session_ranges": {
+          "TOKYO": {
+            "high": 1.59623,
+            "low": 1.59279,
+            "first_observed_open_utc": "2026-10-13T00:00:00+00:00",
+            "last_observed_open_utc": "2026-10-13T08:45:00+00:00",
+            "closed_15m_bars": 36,
+            "range_pips": 34.4,
+            "session_start_utc": "2026-10-13T00:00:00+00:00",
+            "scheduled_session_end_utc": "2026-10-13T09:00:00+00:00",
+            "observed_partial": false
+          },
+          "LONDON": {
+            "high": 1.59623,
+            "low": 1.59362,
+            "first_observed_open_utc": "2026-10-13T07:00:00+00:00",
+            "last_observed_open_utc": "2026-10-13T10:45:00+00:00",
+            "closed_15m_bars": 16,
+            "range_pips": 26.1,
+            "session_start_utc": "2026-10-13T07:00:00+00:00",
+            "scheduled_session_end_utc": "2026-10-13T16:00:00+00:00",
+            "observed_partial": false
+          }
+        },
+        "reference_only": true,
+        "used_for_signal_direction": false,
+        "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
+        "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
+        "D1_current_session_used_for_direction": false,
+        "NY17_day_first_observed_open_utc": "2026-10-12T22:30:00+00:00"
       },
       "range_data_is_directional_signal": false,
       "session_liquidity_context": {
@@ -5072,8 +5627,8 @@
       "technical_direction_last_known": "BUY",
       "technical_stage": "EARLY_M15_M30_MOMENTUM",
       "technical_15m30m_fresh": true,
-      "latest_closed_m15_age_minutes": 12.6,
-      "latest_closed_m30_age_minutes": 27.6,
+      "latest_closed_m15_age_minutes": 15.0,
+      "latest_closed_m30_age_minutes": 30.0,
       "possible_opposite_rotation": {
         "direction": "NONE",
         "evidence": [],
@@ -5216,7 +5771,7 @@
           "forecast": "0.6%",
           "previous": "0.6%",
           "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-13T10:57:30.487756+00:00",
+          "verified_at_utc": "2026-10-13T10:59:57.593915+00:00",
           "released_at_utc": null,
           "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
           "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
@@ -5229,7 +5784,7 @@
           "forecast": "0.8%",
           "previous": "0.5%",
           "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-13T10:57:30.487756+00:00",
+          "verified_at_utc": "2026-10-13T10:59:57.593915+00:00",
           "released_at_utc": null,
           "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
           "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
@@ -5240,7 +5795,7 @@
           "currency": "EUR",
           "title": "ECB President Lagarde Speaks",
           "scheduled_at_utc": "2026-10-14T02:10:00+00:00",
-          "minutes_until": 912.4,
+          "minutes_until": 910.0,
           "impact": "Medium",
           "forecast": "",
           "previous": ""
@@ -5249,7 +5804,7 @@
           "currency": "GBP",
           "title": "MPC Member Breeden Speaks",
           "scheduled_at_utc": "2026-10-14T03:30:00+00:00",
-          "minutes_until": 992.4,
+          "minutes_until": 990.0,
           "impact": "Low",
           "forecast": "",
           "previous": ""
@@ -5258,7 +5813,7 @@
           "currency": "GBP",
           "title": "BOE Gov Bailey Speaks",
           "scheduled_at_utc": "2026-10-14T05:30:00+00:00",
-          "minutes_until": 1112.4,
+          "minutes_until": 1110.0,
           "impact": "Medium",
           "forecast": "",
           "previous": ""
@@ -5267,7 +5822,7 @@
           "currency": "EUR",
           "title": "German WPI m/m",
           "scheduled_at_utc": "2026-10-14T06:00:00+00:00",
-          "minutes_until": 1142.4,
+          "minutes_until": 1140.0,
           "impact": "Low",
           "forecast": "0.6%",
           "previous": "0.9%"
@@ -5276,7 +5831,7 @@
           "currency": "GBP",
           "title": "MPC Member Pill Speaks",
           "scheduled_at_utc": "2026-10-14T06:00:00+00:00",
-          "minutes_until": 1142.4,
+          "minutes_until": 1140.0,
           "impact": "Low",
           "forecast": "",
           "previous": ""
@@ -5285,7 +5840,7 @@
           "currency": "EUR",
           "title": "ECB President Lagarde Speaks",
           "scheduled_at_utc": "2026-10-14T08:30:00+00:00",
-          "minutes_until": 1292.4,
+          "minutes_until": 1290.0,
           "impact": "Medium",
           "forecast": "",
           "previous": ""
@@ -5294,7 +5849,7 @@
           "currency": "EUR",
           "title": "German 30-y Bond Auction",
           "scheduled_at_utc": "2026-10-14T09:34:00+00:00",
-          "minutes_until": 1356.4,
+          "minutes_until": 1354.0,
           "impact": "Low",
           "forecast": "",
           "previous": "3.80|1.6"
@@ -5303,7 +5858,7 @@
           "currency": "EUR",
           "title": "EU Economic Summit",
           "scheduled_at_utc": "2026-10-14T10:15:00+00:00",
-          "minutes_until": 1397.4,
+          "minutes_until": 1395.0,
           "impact": "Medium",
           "forecast": "",
           "previous": ""
@@ -5344,9 +5899,9 @@
       "reference_prices": {
         "last_closed_15m": 0.84474,
         "closed_at_utc": "2026-10-13T10:45:00+00:00",
-        "forexcracked_indicative_bid": 0.84467,
-        "forexcracked_indicative_ask": 0.84469,
-        "forexcracked_reference_age_minutes": 0.8,
+        "forexcracked_indicative_bid": 0.84471,
+        "forexcracked_indicative_ask": 0.84473,
+        "forexcracked_reference_age_minutes": 1.2,
         "broker_bid_ask_verified": false,
         "spread_source": "FOREXCRACKED_INDICATIVE_NOT_EXECUTION"
       },
@@ -5371,7 +5926,44 @@
       "no_5m_signal_inputs": true,
       "research_rank": 11,
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "pair": "EURGBP",
+        "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
+        "ADR20_pips": 27.34,
+        "ADR20_complete_days": 20,
+        "NY17_day_used_pips": 15.9,
+        "NY17_ADR_percent_used": 58.2,
+        "ADR_remaining_reference_pips": 11.44,
+        "NY17_rollover_start_utc": "2026-10-12T21:00:00+00:00",
+        "session_ranges": {
+          "TOKYO": {
+            "high": 0.84577,
+            "low": 0.84466,
+            "first_observed_open_utc": "2026-10-13T00:00:00+00:00",
+            "last_observed_open_utc": "2026-10-13T08:45:00+00:00",
+            "closed_15m_bars": 36,
+            "range_pips": 11.1,
+            "session_start_utc": "2026-10-13T00:00:00+00:00",
+            "scheduled_session_end_utc": "2026-10-13T09:00:00+00:00",
+            "observed_partial": false
+          },
+          "LONDON": {
+            "high": 0.84577,
+            "low": 0.84435,
+            "first_observed_open_utc": "2026-10-13T07:00:00+00:00",
+            "last_observed_open_utc": "2026-10-13T10:45:00+00:00",
+            "closed_15m_bars": 16,
+            "range_pips": 14.2,
+            "session_start_utc": "2026-10-13T07:00:00+00:00",
+            "scheduled_session_end_utc": "2026-10-13T16:00:00+00:00",
+            "observed_partial": false
+          }
+        },
+        "reference_only": true,
+        "used_for_signal_direction": false,
+        "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
+        "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
+        "D1_current_session_used_for_direction": false,
+        "NY17_day_first_observed_open_utc": "2026-10-12T22:30:00+00:00"
       },
       "range_data_is_directional_signal": false,
       "session_liquidity_context": {
