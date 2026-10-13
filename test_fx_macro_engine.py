@@ -195,6 +195,40 @@ class FusionTests(unittest.TestCase):
         hist[0]["metrics"]["BOND:USD:2Y"]["source"] = "not TE"
         self.assertIsNone(derived_deltas({"BOND:USD:2Y":new},hist,NOW)["BOND:USD:2Y"]["30"])
 
+    def test_nominal_yield_never_compared_to_historical_TIPS(self):
+        # Earlier scraper accidentally recorded US 10Y TIPS as US 10Y.
+        # Its historical observation must not contaminate the new nominal feed.
+        old = metric(2.86, "percent_yield", "TE", "DATED_REFERENCE",
+                     market_date="2026-10-13")
+        old["source_instrument"] = "US 10Y TIPS"
+        new = metric(5.20, "percent_yield", "TE", "DATED_REFERENCE",
+                     market_date="2026-10-13")
+        new["source_instrument"] = "US 10Y"
+        sample = [{"at_utc": (NOW-timedelta(minutes=30)).isoformat(),
+                   "metrics": {"BOND:USD:10Y": old}}]
+        self.assertIsNone(derived_deltas({"BOND:USD:10Y": new},
+                          sample, NOW)["BOND:USD:10Y"]["30"])
+
+    def test_pushed_snapshots_are_not_treated_as_30min_observations(self):
+        old = metric(4.8, "percent_yield", "TE", "DATED_REFERENCE",
+                     market_date="2026-10-13")
+        new = metric(4.76, "percent_yield", "TE", "DATED_REFERENCE",
+                     market_date="2026-10-13")
+        sample = [{"at_utc": (NOW-timedelta(minutes=18)).isoformat(),
+                   "metrics": {"BOND:USD:2Y": old}}]
+        self.assertIsNone(derived_deltas({"BOND:USD:2Y": new},
+                          sample, NOW)["BOND:USD:2Y"]["30"])
+
+    def test_suspect_rate_shock_does_not_vote_without_confirmation(self):
+        old = metric(2.5, "percent_yield", "TE", "DATED_REFERENCE",
+                     market_date="2026-10-13")
+        new = metric(5.2, "percent_yield", "TE", "DATED_REFERENCE",
+                     market_date="2026-10-13")
+        sample = [{"at_utc": (NOW-timedelta(minutes=15)).isoformat(),
+                   "metrics": {"BOND:USD:10Y": old}}]
+        self.assertIsNone(derived_deltas({"BOND:USD:10Y": new},
+                          sample, NOW)["BOND:USD:10Y"]["15"])
+
     def test_no_spread_of_non_matching_maturities(self):
         items = {"BOND:USD:2Y": metric(4.8,"percent_yield","TE","DATED_REFERENCE",market_date="2026-10-13"),
                  "BOND:JPY:10Y":metric(3.1,"percent_yield","TE","DATED_REFERENCE",market_date="2026-10-13")}
