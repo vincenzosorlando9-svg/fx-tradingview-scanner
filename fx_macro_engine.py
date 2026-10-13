@@ -128,6 +128,12 @@ def normalize(raw):
                    item.get("status"), source_observed_at_utc=item.get("quote_timestamp_utc"),
                    retrieved_at_utc=fx.get("retrieved_at_utc"))
         if m: result["COMMODITY:" + symbol] = m
+    # CNH is a CHINA-RISK REFERENCE, never an extra trade pair.
+    cnh=(fx.get("cross_risk") or {}).get("USD_CNH") or {}
+    m=metric(cnh.get("bid"),"indicative_USD_per_CNH",fx.get("url"),
+             cnh.get("status"),source_observed_at_utc=cnh.get("quote_timestamp_utc"),
+             retrieved_at_utc=fx.get("retrieved_at_utc"))
+    if m: result["CHINA:USD_CNH"]=m
     oil = raw.get("oilprice") or {}
     for symbol, item in (oil.get("commodities") or {}).items():
         if symbol not in ("WTI", "BRENT"):
@@ -332,6 +338,15 @@ def evidence_for_pair(pair, spreads, deltas, metrics, now):
             risk.append({"driver": symbol + "_DATED_CONTEXT", "value": ix["v"],
                          "market_date": ix.get("market_date"),
                          "note": "Daily context only; no direct BUY/SELL vote"})
+    yuan=metrics.get("CHINA:USD_CNH")
+    if yuan and observation_recent(yuan,now) and ("AUD" in pair or "NZD" in pair):
+        change=next(((deltas.get("CHINA:USD_CNH") or {}).get(str(w))
+                     for w in (30,60,15) if (deltas.get("CHINA:USD_CNH") or {}).get(str(w))),
+                    None)
+        risk.append({"driver":"USD_CNH_CHINA_REFERENCE",
+                     "indicative_level":yuan["v"],
+                     "sampled_change":change,
+                     "note":"CNH proxy for AUD/NZD risk context; NOT an automatic directional vote or confirmed source of FX move"})
     for symbol in ("FEAR_GREED",):
         x = sampled(symbol, 5)
         if x:
@@ -516,6 +531,7 @@ def main():
         "index_observations_count": sum(k.startswith("INDEX:") for k in metrics),
         "commodity_observations_count": sum(k.startswith("COMMODITY:") for k in metrics),
         "fx_pairs_indicative_count": len(raw.get("forexcracked", {}).get("pairs", {})),
+        "USDCNH_china_indicative_context": "PRESENT" if "CHINA:USD_CNH" in metrics else "UNAVAILABLE",
         "CFTC_report": cftc.get("status", "UNAVAILABLE"),
         "CME_daily_open_interest": "UNAVAILABLE_INDEPENDENT_CME_SOURCE",
         "forexfactory_actuals": actuals.get("status", "UNAVAILABLE"),
