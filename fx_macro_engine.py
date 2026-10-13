@@ -7,6 +7,7 @@ labelled as a difference observed between fetches, not a tick-timestamped move.
 """
 import json
 import math
+import os
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -533,7 +534,11 @@ def main():
         "no_mobile_alerts": True, "real_broker_spread_verified": False,
         "top_five": rows[:5], "all_11": rows, "pair_count": len(rows),
         "integrity": coverage}
-    write("fx_unified_signals.json", signal)
+    # The 5-minute technical workflow is the EXCLUSIVE publisher of the
+    # unified signal board. Macro collection computes metrics and 15m changes
+    # independently so simultaneous 5m/15m commits cannot conflict.
+    if os.environ.get("FX_MACRO_NO_UNIFIED_WRITE") != "1":
+        write("fx_unified_signals.json", signal)
     assert len(rows) == len(PAIRS) and {r["pair"] for r in rows} == set(PAIRS)
     assert all(r["trade_execution_allowed"] is False for r in rows)
     assert all(r["no_5m_signal_inputs"] for r in rows)
