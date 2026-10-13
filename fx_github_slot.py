@@ -21,9 +21,10 @@ GATE=Path("fx_scan_gate.json")
 HEALTH=Path("fx_scan_health.json")
 HISTORY=Path("fx_scan_slot_history.json")
 RETRY_INTERVAL_SECONDS=10
-START_TOLERANCE_SECONDS=480
-# Backups can start at :05/:20/:35/:50, or arrive late. No new
-# signal is publishable after the deadline. Hard cutoff remains < next close.
+RETRY_DEADLINE_AFTER_SLOT_SECONDS=480
+# A START must pass expected_slot.accepting_new_scan (<=4 min from due).
+# An already-started scan may retry a delayed data provider until +8 min,
+# but cannot publish once the final +9.5-minute limit has expired.
 # The exact slot should be available early; never chase a 15m-old candle.
 LATEST_ACCEPTABLE_COMPLETION_SECONDS=570
 HISTORY_CAP=384
@@ -124,7 +125,7 @@ def collect():
         print("EXACT_SLOT",current["status"],slot["seconds_after_target"])
         return 1
     due=parse(slot["scheduled_for_utc"])
-    deadline=due+timedelta(seconds=START_TOLERANCE_SECONDS)
+    deadline=due+timedelta(seconds=RETRY_DEADLINE_AFTER_SLOT_SECONDS)
     while True:
         current["attempts"]+=1
         try:
