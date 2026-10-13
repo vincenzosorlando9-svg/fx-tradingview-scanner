@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-13T14:21:30.561337+00:00",
+  "generated_at_utc": "2026-10-13T14:24:30.024212+00:00",
   "target_refresh_minutes": 5,
   "actual_actions_schedule_not_guaranteed": true,
   "approved_source_names": [
@@ -18,38 +18,11 @@
   "recent_headlines": [
     {
       "provider": "FXStreet_RSS",
-      "title": "Australian Dollar edges higher as softer US Dollar, hawkish RBA offer support",
-      "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
-      "published_at_utc": "2026-10-13T13:36:54+00:00",
-      "first_seen_at_utc": "2026-10-13T14:21:30.561337+00:00",
-      "publisher_age_minutes": 44.6,
-      "source_latency_to_first_seen_minutes": 44.6,
-      "type": "CENTRAL_BANK_POLICY",
-      "priority": "HIGH_POLICY_REACTION_CHECK",
-      "currencies": [
-        "AUD",
-        "USD"
-      ],
-      "affected_pairs": [
-        "AUDUSD",
-        "NZDUSD",
-        "EURUSD",
-        "GBPUSD",
-        "USDJPY",
-        "AUDJPY",
-        "USDCAD"
-      ],
-      "headline_direction": "UNDETERMINED",
-      "market_reaction": "NOT_VERIFIED",
-      "broker_execution_allowed": false
-    },
-    {
-      "provider": "FXStreet_RSS",
       "title": "Australian Dollar: RBA inflation focus shapes outlook – Commerzbank",
       "url": "https://www.fxstreet.com/news/australian-dollar-rba-inflation-focus-shapes-outlook-commerzbank-202610131251",
       "published_at_utc": "2026-10-13T12:51:41+00:00",
       "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-      "publisher_age_minutes": 89.8,
+      "publisher_age_minutes": 92.8,
       "source_latency_to_first_seen_minutes": 88.4,
       "type": "CENTRAL_BANK_POLICY",
       "priority": "HIGH_POLICY_REACTION_CHECK",
@@ -62,7 +35,67 @@
       ],
       "headline_direction": "UNDETERMINED",
       "market_reaction": "NOT_VERIFIED",
-      "broker_execution_allowed": false
+      "broker_execution_allowed": false,
+      "price_reactions": {
+        "AUDUSD": {
+          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false,
+          "pre_event_close_utc": "2026-10-13T12:45:00+00:00",
+          "pre_event_price": 0.69783,
+          "first_post_event_close_utc": "2026-10-13T13:00:00+00:00",
+          "first_post_event_price": 0.6979,
+          "first_post_event_change_pips": 0.7,
+          "second_post_event_close_utc": "2026-10-13T13:15:00+00:00",
+          "second_post_event_price": 0.69773,
+          "second_post_event_change_pips": -1.7,
+          "net_two_bar_event_window_pips": -1.0,
+          "early_initial_direction": "UP",
+          "second_bar_direction": "DOWN",
+          "retrospective_if_first_seen_after_first_candle": true
+        },
+        "AUDJPY": {
+          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false,
+          "pre_event_close_utc": "2026-10-13T12:45:00+00:00",
+          "pre_event_price": 110.364,
+          "first_post_event_close_utc": "2026-10-13T13:00:00+00:00",
+          "first_post_event_price": 110.383,
+          "first_post_event_change_pips": 1.9,
+          "second_post_event_close_utc": "2026-10-13T13:15:00+00:00",
+          "second_post_event_price": 110.437,
+          "second_post_event_change_pips": 5.4,
+          "net_two_bar_event_window_pips": 7.3,
+          "early_initial_direction": "UP",
+          "second_bar_direction": "UP",
+          "retrospective_if_first_seen_after_first_candle": true
+        }
+      },
+      "all_price_reactions_are_noncausal_observations": true,
+      "price_reaction_observation": {
+        "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+        "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+        "no_intrabar_assumptions": true,
+        "causal_link_verified": false,
+        "first_seen_before_market_reaction": false,
+        "pre_event_close_utc": "2026-10-13T12:45:00+00:00",
+        "pre_event_price": 110.364,
+        "first_post_event_close_utc": "2026-10-13T13:00:00+00:00",
+        "first_post_event_price": 110.383,
+        "first_post_event_change_pips": 1.9,
+        "second_post_event_close_utc": "2026-10-13T13:15:00+00:00",
+        "second_post_event_price": 110.437,
+        "second_post_event_change_pips": 5.4,
+        "net_two_bar_event_window_pips": 7.3,
+        "early_initial_direction": "UP",
+        "second_bar_direction": "UP",
+        "retrospective_if_first_seen_after_first_candle": true
+      }
     },
     {
       "provider": "FXStreet_RSS",
@@ -70,7 +103,7 @@
       "url": "https://www.fxstreet.com/news/us-dollar-supported-but-capped-by-cpi-risks-ocbc-202610131316",
       "published_at_utc": "2026-10-13T13:16:33+00:00",
       "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-      "publisher_age_minutes": 65.0,
+      "publisher_age_minutes": 68.0,
       "source_latency_to_first_seen_minutes": 63.6,
       "type": "MACRO_DATA_OR_YIELD",
       "priority": "MEDIUM_RELEASE_REACTION_CHECK",
@@ -91,38 +124,11 @@
     },
     {
       "provider": "FXStreet_RSS",
-      "title": "Australian Dollar : Key support at 0.6935 in focus against US Dollar   – UOB",
-      "url": "https://www.fxstreet.com/news/australian-dollar-key-support-at-06935-in-focus-against-us-dollar-uob-202610131404",
-      "published_at_utc": "2026-10-13T14:04:33+00:00",
-      "first_seen_at_utc": "2026-10-13T14:21:30.561337+00:00",
-      "publisher_age_minutes": 17.0,
-      "source_latency_to_first_seen_minutes": 17.0,
-      "type": "GENERAL",
-      "priority": "CONTEXT",
-      "currencies": [
-        "AUD",
-        "USD"
-      ],
-      "affected_pairs": [
-        "AUDUSD",
-        "NZDUSD",
-        "EURUSD",
-        "GBPUSD",
-        "USDJPY",
-        "AUDJPY",
-        "USDCAD"
-      ],
-      "headline_direction": "UNDETERMINED",
-      "market_reaction": "NOT_VERIFIED",
-      "broker_execution_allowed": false
-    },
-    {
-      "provider": "FXStreet_RSS",
       "title": "Indian Rupee: RBI defense limits losses against US Dollar – Societe Generale",
       "url": "https://www.fxstreet.com/news/indian-rupee-rbi-defense-limits-losses-against-us-dollar-societe-generale-202610131331",
       "published_at_utc": "2026-10-13T13:31:02+00:00",
       "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-      "publisher_age_minutes": 50.5,
+      "publisher_age_minutes": 53.5,
       "source_latency_to_first_seen_minutes": 49.1,
       "type": "GENERAL",
       "priority": "CONTEXT",
@@ -147,7 +153,7 @@
       "url": "https://www.fxstreet.com/news/euro-lower-year-end-target-at-113-against-us-dollar-ing-202610131304",
       "published_at_utc": "2026-10-13T13:04:42+00:00",
       "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-      "publisher_age_minutes": 76.8,
+      "publisher_age_minutes": 79.8,
       "source_latency_to_first_seen_minutes": 75.4,
       "type": "GENERAL",
       "priority": "CONTEXT",
@@ -176,7 +182,7 @@
       "url": "https://www.fxstreet.com/news/japanese-yen-weakness-may-deepen-toward-15905-against-us-dollar-uob-202610131241",
       "published_at_utc": "2026-10-13T12:41:01+00:00",
       "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-      "publisher_age_minutes": 100.5,
+      "publisher_age_minutes": 103.5,
       "source_latency_to_first_seen_minutes": 99.1,
       "type": "GENERAL",
       "priority": "CONTEXT",
@@ -206,38 +212,11 @@
       "policy_headlines": [
         {
           "provider": "FXStreet_RSS",
-          "title": "Australian Dollar edges higher as softer US Dollar, hawkish RBA offer support",
-          "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
-          "published_at_utc": "2026-10-13T13:36:54+00:00",
-          "first_seen_at_utc": "2026-10-13T14:21:30.561337+00:00",
-          "publisher_age_minutes": 44.6,
-          "source_latency_to_first_seen_minutes": 44.6,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "AUD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
           "title": "Australian Dollar: RBA inflation focus shapes outlook – Commerzbank",
           "url": "https://www.fxstreet.com/news/australian-dollar-rba-inflation-focus-shapes-outlook-commerzbank-202610131251",
           "published_at_utc": "2026-10-13T12:51:41+00:00",
           "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 89.8,
+          "publisher_age_minutes": 92.8,
           "source_latency_to_first_seen_minutes": 88.4,
           "type": "CENTRAL_BANK_POLICY",
           "priority": "HIGH_POLICY_REACTION_CHECK",
@@ -250,44 +229,77 @@
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
+          "broker_execution_allowed": false,
+          "price_reactions": {
+            "AUDUSD": {
+              "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+              "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+              "no_intrabar_assumptions": true,
+              "causal_link_verified": false,
+              "first_seen_before_market_reaction": false,
+              "pre_event_close_utc": "2026-10-13T12:45:00+00:00",
+              "pre_event_price": 0.69783,
+              "first_post_event_close_utc": "2026-10-13T13:00:00+00:00",
+              "first_post_event_price": 0.6979,
+              "first_post_event_change_pips": 0.7,
+              "second_post_event_close_utc": "2026-10-13T13:15:00+00:00",
+              "second_post_event_price": 0.69773,
+              "second_post_event_change_pips": -1.7,
+              "net_two_bar_event_window_pips": -1.0,
+              "early_initial_direction": "UP",
+              "second_bar_direction": "DOWN",
+              "retrospective_if_first_seen_after_first_candle": true
+            },
+            "AUDJPY": {
+              "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+              "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+              "no_intrabar_assumptions": true,
+              "causal_link_verified": false,
+              "first_seen_before_market_reaction": false,
+              "pre_event_close_utc": "2026-10-13T12:45:00+00:00",
+              "pre_event_price": 110.364,
+              "first_post_event_close_utc": "2026-10-13T13:00:00+00:00",
+              "first_post_event_price": 110.383,
+              "first_post_event_change_pips": 1.9,
+              "second_post_event_close_utc": "2026-10-13T13:15:00+00:00",
+              "second_post_event_price": 110.437,
+              "second_post_event_change_pips": 5.4,
+              "net_two_bar_event_window_pips": 7.3,
+              "early_initial_direction": "UP",
+              "second_bar_direction": "UP",
+              "retrospective_if_first_seen_after_first_candle": true
+            }
+          },
+          "all_price_reactions_are_noncausal_observations": true,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-13T12:45:00+00:00",
+            "pre_event_price": 110.364,
+            "first_post_event_close_utc": "2026-10-13T13:00:00+00:00",
+            "first_post_event_price": 110.383,
+            "first_post_event_change_pips": 1.9,
+            "second_post_event_close_utc": "2026-10-13T13:15:00+00:00",
+            "second_post_event_price": 110.437,
+            "second_post_event_change_pips": 5.4,
+            "net_two_bar_event_window_pips": 7.3,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "UP",
+            "retrospective_if_first_seen_after_first_candle": true
+          }
         }
       ],
       "news_headlines": [
         {
           "provider": "FXStreet_RSS",
-          "title": "Australian Dollar edges higher as softer US Dollar, hawkish RBA offer support",
-          "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
-          "published_at_utc": "2026-10-13T13:36:54+00:00",
-          "first_seen_at_utc": "2026-10-13T14:21:30.561337+00:00",
-          "publisher_age_minutes": 44.6,
-          "source_latency_to_first_seen_minutes": 44.6,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "AUD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
           "title": "Australian Dollar: RBA inflation focus shapes outlook – Commerzbank",
           "url": "https://www.fxstreet.com/news/australian-dollar-rba-inflation-focus-shapes-outlook-commerzbank-202610131251",
           "published_at_utc": "2026-10-13T12:51:41+00:00",
           "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 89.8,
+          "publisher_age_minutes": 92.8,
           "source_latency_to_first_seen_minutes": 88.4,
           "type": "CENTRAL_BANK_POLICY",
           "priority": "HIGH_POLICY_REACTION_CHECK",
@@ -300,7 +312,67 @@
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
+          "broker_execution_allowed": false,
+          "price_reactions": {
+            "AUDUSD": {
+              "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+              "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+              "no_intrabar_assumptions": true,
+              "causal_link_verified": false,
+              "first_seen_before_market_reaction": false,
+              "pre_event_close_utc": "2026-10-13T12:45:00+00:00",
+              "pre_event_price": 0.69783,
+              "first_post_event_close_utc": "2026-10-13T13:00:00+00:00",
+              "first_post_event_price": 0.6979,
+              "first_post_event_change_pips": 0.7,
+              "second_post_event_close_utc": "2026-10-13T13:15:00+00:00",
+              "second_post_event_price": 0.69773,
+              "second_post_event_change_pips": -1.7,
+              "net_two_bar_event_window_pips": -1.0,
+              "early_initial_direction": "UP",
+              "second_bar_direction": "DOWN",
+              "retrospective_if_first_seen_after_first_candle": true
+            },
+            "AUDJPY": {
+              "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+              "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+              "no_intrabar_assumptions": true,
+              "causal_link_verified": false,
+              "first_seen_before_market_reaction": false,
+              "pre_event_close_utc": "2026-10-13T12:45:00+00:00",
+              "pre_event_price": 110.364,
+              "first_post_event_close_utc": "2026-10-13T13:00:00+00:00",
+              "first_post_event_price": 110.383,
+              "first_post_event_change_pips": 1.9,
+              "second_post_event_close_utc": "2026-10-13T13:15:00+00:00",
+              "second_post_event_price": 110.437,
+              "second_post_event_change_pips": 5.4,
+              "net_two_bar_event_window_pips": 7.3,
+              "early_initial_direction": "UP",
+              "second_bar_direction": "UP",
+              "retrospective_if_first_seen_after_first_candle": true
+            }
+          },
+          "all_price_reactions_are_noncausal_observations": true,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-13T12:45:00+00:00",
+            "pre_event_price": 110.364,
+            "first_post_event_close_utc": "2026-10-13T13:00:00+00:00",
+            "first_post_event_price": 110.383,
+            "first_post_event_change_pips": 1.9,
+            "second_post_event_close_utc": "2026-10-13T13:15:00+00:00",
+            "second_post_event_price": 110.437,
+            "second_post_event_change_pips": 5.4,
+            "net_two_bar_event_window_pips": 7.3,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "UP",
+            "retrospective_if_first_seen_after_first_candle": true
+          }
         },
         {
           "provider": "FXStreet_RSS",
@@ -308,7 +380,7 @@
           "url": "https://www.fxstreet.com/news/us-dollar-supported-but-capped-by-cpi-risks-ocbc-202610131316",
           "published_at_utc": "2026-10-13T13:16:33+00:00",
           "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 65.0,
+          "publisher_age_minutes": 68.0,
           "source_latency_to_first_seen_minutes": 63.6,
           "type": "MACRO_DATA_OR_YIELD",
           "priority": "MEDIUM_RELEASE_REACTION_CHECK",
@@ -329,38 +401,11 @@
         },
         {
           "provider": "FXStreet_RSS",
-          "title": "Australian Dollar : Key support at 0.6935 in focus against US Dollar   – UOB",
-          "url": "https://www.fxstreet.com/news/australian-dollar-key-support-at-06935-in-focus-against-us-dollar-uob-202610131404",
-          "published_at_utc": "2026-10-13T14:04:33+00:00",
-          "first_seen_at_utc": "2026-10-13T14:21:30.561337+00:00",
-          "publisher_age_minutes": 17.0,
-          "source_latency_to_first_seen_minutes": 17.0,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "AUD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
           "title": "Indian Rupee: RBI defense limits losses against US Dollar – Societe Generale",
           "url": "https://www.fxstreet.com/news/indian-rupee-rbi-defense-limits-losses-against-us-dollar-societe-generale-202610131331",
           "published_at_utc": "2026-10-13T13:31:02+00:00",
           "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 50.5,
+          "publisher_age_minutes": 53.5,
           "source_latency_to_first_seen_minutes": 49.1,
           "type": "GENERAL",
           "priority": "CONTEXT",
@@ -385,7 +430,7 @@
           "url": "https://www.fxstreet.com/news/euro-lower-year-end-target-at-113-against-us-dollar-ing-202610131304",
           "published_at_utc": "2026-10-13T13:04:42+00:00",
           "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 76.8,
+          "publisher_age_minutes": 79.8,
           "source_latency_to_first_seen_minutes": 75.4,
           "type": "GENERAL",
           "priority": "CONTEXT",
@@ -414,7 +459,7 @@
           "url": "https://www.fxstreet.com/news/japanese-yen-weakness-may-deepen-toward-15905-against-us-dollar-uob-202610131241",
           "published_at_utc": "2026-10-13T12:41:01+00:00",
           "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 100.5,
+          "publisher_age_minutes": 103.5,
           "source_latency_to_first_seen_minutes": 99.1,
           "type": "GENERAL",
           "priority": "CONTEXT",
@@ -444,71 +489,16 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "NZDUSD": {
-      "status": "POLICY_REACTION_CHECK",
-      "policy_headlines": [
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Australian Dollar edges higher as softer US Dollar, hawkish RBA offer support",
-          "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
-          "published_at_utc": "2026-10-13T13:36:54+00:00",
-          "first_seen_at_utc": "2026-10-13T14:21:30.561337+00:00",
-          "publisher_age_minutes": 44.6,
-          "source_latency_to_first_seen_minutes": 44.6,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "AUD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        }
-      ],
+      "status": "HEADLINES_PRESENT",
+      "policy_headlines": [],
       "news_headlines": [
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Australian Dollar edges higher as softer US Dollar, hawkish RBA offer support",
-          "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
-          "published_at_utc": "2026-10-13T13:36:54+00:00",
-          "first_seen_at_utc": "2026-10-13T14:21:30.561337+00:00",
-          "publisher_age_minutes": 44.6,
-          "source_latency_to_first_seen_minutes": 44.6,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "AUD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
         {
           "provider": "FXStreet_RSS",
           "title": "US Dollar: Supported but capped by CPI risks – OCBC",
           "url": "https://www.fxstreet.com/news/us-dollar-supported-but-capped-by-cpi-risks-ocbc-202610131316",
           "published_at_utc": "2026-10-13T13:16:33+00:00",
           "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 65.0,
+          "publisher_age_minutes": 68.0,
           "source_latency_to_first_seen_minutes": 63.6,
           "type": "MACRO_DATA_OR_YIELD",
           "priority": "MEDIUM_RELEASE_REACTION_CHECK",
@@ -529,38 +519,11 @@
         },
         {
           "provider": "FXStreet_RSS",
-          "title": "Australian Dollar : Key support at 0.6935 in focus against US Dollar   – UOB",
-          "url": "https://www.fxstreet.com/news/australian-dollar-key-support-at-06935-in-focus-against-us-dollar-uob-202610131404",
-          "published_at_utc": "2026-10-13T14:04:33+00:00",
-          "first_seen_at_utc": "2026-10-13T14:21:30.561337+00:00",
-          "publisher_age_minutes": 17.0,
-          "source_latency_to_first_seen_minutes": 17.0,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "AUD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
           "title": "Indian Rupee: RBI defense limits losses against US Dollar – Societe Generale",
           "url": "https://www.fxstreet.com/news/indian-rupee-rbi-defense-limits-losses-against-us-dollar-societe-generale-202610131331",
           "published_at_utc": "2026-10-13T13:31:02+00:00",
           "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 50.5,
+          "publisher_age_minutes": 53.5,
           "source_latency_to_first_seen_minutes": 49.1,
           "type": "GENERAL",
           "priority": "CONTEXT",
@@ -585,7 +548,7 @@
           "url": "https://www.fxstreet.com/news/euro-lower-year-end-target-at-113-against-us-dollar-ing-202610131304",
           "published_at_utc": "2026-10-13T13:04:42+00:00",
           "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 76.8,
+          "publisher_age_minutes": 79.8,
           "source_latency_to_first_seen_minutes": 75.4,
           "type": "GENERAL",
           "priority": "CONTEXT",
@@ -614,7 +577,7 @@
           "url": "https://www.fxstreet.com/news/japanese-yen-weakness-may-deepen-toward-15905-against-us-dollar-uob-202610131241",
           "published_at_utc": "2026-10-13T12:41:01+00:00",
           "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 100.5,
+          "publisher_age_minutes": 103.5,
           "source_latency_to_first_seen_minutes": 99.1,
           "type": "GENERAL",
           "priority": "CONTEXT",
@@ -644,71 +607,16 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "EURUSD": {
-      "status": "POLICY_REACTION_CHECK",
-      "policy_headlines": [
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Australian Dollar edges higher as softer US Dollar, hawkish RBA offer support",
-          "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
-          "published_at_utc": "2026-10-13T13:36:54+00:00",
-          "first_seen_at_utc": "2026-10-13T14:21:30.561337+00:00",
-          "publisher_age_minutes": 44.6,
-          "source_latency_to_first_seen_minutes": 44.6,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "AUD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        }
-      ],
+      "status": "HEADLINES_PRESENT",
+      "policy_headlines": [],
       "news_headlines": [
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Australian Dollar edges higher as softer US Dollar, hawkish RBA offer support",
-          "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
-          "published_at_utc": "2026-10-13T13:36:54+00:00",
-          "first_seen_at_utc": "2026-10-13T14:21:30.561337+00:00",
-          "publisher_age_minutes": 44.6,
-          "source_latency_to_first_seen_minutes": 44.6,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "AUD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
         {
           "provider": "FXStreet_RSS",
           "title": "US Dollar: Supported but capped by CPI risks – OCBC",
           "url": "https://www.fxstreet.com/news/us-dollar-supported-but-capped-by-cpi-risks-ocbc-202610131316",
           "published_at_utc": "2026-10-13T13:16:33+00:00",
           "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 65.0,
+          "publisher_age_minutes": 68.0,
           "source_latency_to_first_seen_minutes": 63.6,
           "type": "MACRO_DATA_OR_YIELD",
           "priority": "MEDIUM_RELEASE_REACTION_CHECK",
@@ -729,38 +637,11 @@
         },
         {
           "provider": "FXStreet_RSS",
-          "title": "Australian Dollar : Key support at 0.6935 in focus against US Dollar   – UOB",
-          "url": "https://www.fxstreet.com/news/australian-dollar-key-support-at-06935-in-focus-against-us-dollar-uob-202610131404",
-          "published_at_utc": "2026-10-13T14:04:33+00:00",
-          "first_seen_at_utc": "2026-10-13T14:21:30.561337+00:00",
-          "publisher_age_minutes": 17.0,
-          "source_latency_to_first_seen_minutes": 17.0,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "AUD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
           "title": "Indian Rupee: RBI defense limits losses against US Dollar – Societe Generale",
           "url": "https://www.fxstreet.com/news/indian-rupee-rbi-defense-limits-losses-against-us-dollar-societe-generale-202610131331",
           "published_at_utc": "2026-10-13T13:31:02+00:00",
           "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 50.5,
+          "publisher_age_minutes": 53.5,
           "source_latency_to_first_seen_minutes": 49.1,
           "type": "GENERAL",
           "priority": "CONTEXT",
@@ -785,7 +666,7 @@
           "url": "https://www.fxstreet.com/news/euro-lower-year-end-target-at-113-against-us-dollar-ing-202610131304",
           "published_at_utc": "2026-10-13T13:04:42+00:00",
           "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 76.8,
+          "publisher_age_minutes": 79.8,
           "source_latency_to_first_seen_minutes": 75.4,
           "type": "GENERAL",
           "priority": "CONTEXT",
@@ -814,7 +695,7 @@
           "url": "https://www.fxstreet.com/news/japanese-yen-weakness-may-deepen-toward-15905-against-us-dollar-uob-202610131241",
           "published_at_utc": "2026-10-13T12:41:01+00:00",
           "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 100.5,
+          "publisher_age_minutes": 103.5,
           "source_latency_to_first_seen_minutes": 99.1,
           "type": "GENERAL",
           "priority": "CONTEXT",
@@ -844,71 +725,16 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "GBPUSD": {
-      "status": "POLICY_REACTION_CHECK",
-      "policy_headlines": [
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Australian Dollar edges higher as softer US Dollar, hawkish RBA offer support",
-          "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
-          "published_at_utc": "2026-10-13T13:36:54+00:00",
-          "first_seen_at_utc": "2026-10-13T14:21:30.561337+00:00",
-          "publisher_age_minutes": 44.6,
-          "source_latency_to_first_seen_minutes": 44.6,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "AUD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        }
-      ],
+      "status": "HEADLINES_PRESENT",
+      "policy_headlines": [],
       "news_headlines": [
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Australian Dollar edges higher as softer US Dollar, hawkish RBA offer support",
-          "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
-          "published_at_utc": "2026-10-13T13:36:54+00:00",
-          "first_seen_at_utc": "2026-10-13T14:21:30.561337+00:00",
-          "publisher_age_minutes": 44.6,
-          "source_latency_to_first_seen_minutes": 44.6,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "AUD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
         {
           "provider": "FXStreet_RSS",
           "title": "US Dollar: Supported but capped by CPI risks – OCBC",
           "url": "https://www.fxstreet.com/news/us-dollar-supported-but-capped-by-cpi-risks-ocbc-202610131316",
           "published_at_utc": "2026-10-13T13:16:33+00:00",
           "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 65.0,
+          "publisher_age_minutes": 68.0,
           "source_latency_to_first_seen_minutes": 63.6,
           "type": "MACRO_DATA_OR_YIELD",
           "priority": "MEDIUM_RELEASE_REACTION_CHECK",
@@ -929,38 +755,11 @@
         },
         {
           "provider": "FXStreet_RSS",
-          "title": "Australian Dollar : Key support at 0.6935 in focus against US Dollar   – UOB",
-          "url": "https://www.fxstreet.com/news/australian-dollar-key-support-at-06935-in-focus-against-us-dollar-uob-202610131404",
-          "published_at_utc": "2026-10-13T14:04:33+00:00",
-          "first_seen_at_utc": "2026-10-13T14:21:30.561337+00:00",
-          "publisher_age_minutes": 17.0,
-          "source_latency_to_first_seen_minutes": 17.0,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "AUD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
           "title": "Indian Rupee: RBI defense limits losses against US Dollar – Societe Generale",
           "url": "https://www.fxstreet.com/news/indian-rupee-rbi-defense-limits-losses-against-us-dollar-societe-generale-202610131331",
           "published_at_utc": "2026-10-13T13:31:02+00:00",
           "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 50.5,
+          "publisher_age_minutes": 53.5,
           "source_latency_to_first_seen_minutes": 49.1,
           "type": "GENERAL",
           "priority": "CONTEXT",
@@ -985,7 +784,7 @@
           "url": "https://www.fxstreet.com/news/euro-lower-year-end-target-at-113-against-us-dollar-ing-202610131304",
           "published_at_utc": "2026-10-13T13:04:42+00:00",
           "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 76.8,
+          "publisher_age_minutes": 79.8,
           "source_latency_to_first_seen_minutes": 75.4,
           "type": "GENERAL",
           "priority": "CONTEXT",
@@ -1014,7 +813,7 @@
           "url": "https://www.fxstreet.com/news/japanese-yen-weakness-may-deepen-toward-15905-against-us-dollar-uob-202610131241",
           "published_at_utc": "2026-10-13T12:41:01+00:00",
           "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 100.5,
+          "publisher_age_minutes": 103.5,
           "source_latency_to_first_seen_minutes": 99.1,
           "type": "GENERAL",
           "priority": "CONTEXT",
@@ -1044,71 +843,16 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "USDJPY": {
-      "status": "POLICY_REACTION_CHECK",
-      "policy_headlines": [
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Australian Dollar edges higher as softer US Dollar, hawkish RBA offer support",
-          "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
-          "published_at_utc": "2026-10-13T13:36:54+00:00",
-          "first_seen_at_utc": "2026-10-13T14:21:30.561337+00:00",
-          "publisher_age_minutes": 44.6,
-          "source_latency_to_first_seen_minutes": 44.6,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "AUD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        }
-      ],
+      "status": "HEADLINES_PRESENT",
+      "policy_headlines": [],
       "news_headlines": [
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Australian Dollar edges higher as softer US Dollar, hawkish RBA offer support",
-          "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
-          "published_at_utc": "2026-10-13T13:36:54+00:00",
-          "first_seen_at_utc": "2026-10-13T14:21:30.561337+00:00",
-          "publisher_age_minutes": 44.6,
-          "source_latency_to_first_seen_minutes": 44.6,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "AUD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
         {
           "provider": "FXStreet_RSS",
           "title": "US Dollar: Supported but capped by CPI risks – OCBC",
           "url": "https://www.fxstreet.com/news/us-dollar-supported-but-capped-by-cpi-risks-ocbc-202610131316",
           "published_at_utc": "2026-10-13T13:16:33+00:00",
           "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 65.0,
+          "publisher_age_minutes": 68.0,
           "source_latency_to_first_seen_minutes": 63.6,
           "type": "MACRO_DATA_OR_YIELD",
           "priority": "MEDIUM_RELEASE_REACTION_CHECK",
@@ -1129,38 +873,11 @@
         },
         {
           "provider": "FXStreet_RSS",
-          "title": "Australian Dollar : Key support at 0.6935 in focus against US Dollar   – UOB",
-          "url": "https://www.fxstreet.com/news/australian-dollar-key-support-at-06935-in-focus-against-us-dollar-uob-202610131404",
-          "published_at_utc": "2026-10-13T14:04:33+00:00",
-          "first_seen_at_utc": "2026-10-13T14:21:30.561337+00:00",
-          "publisher_age_minutes": 17.0,
-          "source_latency_to_first_seen_minutes": 17.0,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "AUD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
           "title": "Indian Rupee: RBI defense limits losses against US Dollar – Societe Generale",
           "url": "https://www.fxstreet.com/news/indian-rupee-rbi-defense-limits-losses-against-us-dollar-societe-generale-202610131331",
           "published_at_utc": "2026-10-13T13:31:02+00:00",
           "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 50.5,
+          "publisher_age_minutes": 53.5,
           "source_latency_to_first_seen_minutes": 49.1,
           "type": "GENERAL",
           "priority": "CONTEXT",
@@ -1185,7 +902,7 @@
           "url": "https://www.fxstreet.com/news/euro-lower-year-end-target-at-113-against-us-dollar-ing-202610131304",
           "published_at_utc": "2026-10-13T13:04:42+00:00",
           "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 76.8,
+          "publisher_age_minutes": 79.8,
           "source_latency_to_first_seen_minutes": 75.4,
           "type": "GENERAL",
           "priority": "CONTEXT",
@@ -1214,7 +931,7 @@
           "url": "https://www.fxstreet.com/news/japanese-yen-weakness-may-deepen-toward-15905-against-us-dollar-uob-202610131241",
           "published_at_utc": "2026-10-13T12:41:01+00:00",
           "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 100.5,
+          "publisher_age_minutes": 103.5,
           "source_latency_to_first_seen_minutes": 99.1,
           "type": "GENERAL",
           "priority": "CONTEXT",
@@ -1248,38 +965,11 @@
       "policy_headlines": [
         {
           "provider": "FXStreet_RSS",
-          "title": "Australian Dollar edges higher as softer US Dollar, hawkish RBA offer support",
-          "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
-          "published_at_utc": "2026-10-13T13:36:54+00:00",
-          "first_seen_at_utc": "2026-10-13T14:21:30.561337+00:00",
-          "publisher_age_minutes": 44.6,
-          "source_latency_to_first_seen_minutes": 44.6,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "AUD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
           "title": "Australian Dollar: RBA inflation focus shapes outlook – Commerzbank",
           "url": "https://www.fxstreet.com/news/australian-dollar-rba-inflation-focus-shapes-outlook-commerzbank-202610131251",
           "published_at_utc": "2026-10-13T12:51:41+00:00",
           "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 89.8,
+          "publisher_age_minutes": 92.8,
           "source_latency_to_first_seen_minutes": 88.4,
           "type": "CENTRAL_BANK_POLICY",
           "priority": "HIGH_POLICY_REACTION_CHECK",
@@ -1292,44 +982,77 @@
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
+          "broker_execution_allowed": false,
+          "price_reactions": {
+            "AUDUSD": {
+              "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+              "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+              "no_intrabar_assumptions": true,
+              "causal_link_verified": false,
+              "first_seen_before_market_reaction": false,
+              "pre_event_close_utc": "2026-10-13T12:45:00+00:00",
+              "pre_event_price": 0.69783,
+              "first_post_event_close_utc": "2026-10-13T13:00:00+00:00",
+              "first_post_event_price": 0.6979,
+              "first_post_event_change_pips": 0.7,
+              "second_post_event_close_utc": "2026-10-13T13:15:00+00:00",
+              "second_post_event_price": 0.69773,
+              "second_post_event_change_pips": -1.7,
+              "net_two_bar_event_window_pips": -1.0,
+              "early_initial_direction": "UP",
+              "second_bar_direction": "DOWN",
+              "retrospective_if_first_seen_after_first_candle": true
+            },
+            "AUDJPY": {
+              "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+              "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+              "no_intrabar_assumptions": true,
+              "causal_link_verified": false,
+              "first_seen_before_market_reaction": false,
+              "pre_event_close_utc": "2026-10-13T12:45:00+00:00",
+              "pre_event_price": 110.364,
+              "first_post_event_close_utc": "2026-10-13T13:00:00+00:00",
+              "first_post_event_price": 110.383,
+              "first_post_event_change_pips": 1.9,
+              "second_post_event_close_utc": "2026-10-13T13:15:00+00:00",
+              "second_post_event_price": 110.437,
+              "second_post_event_change_pips": 5.4,
+              "net_two_bar_event_window_pips": 7.3,
+              "early_initial_direction": "UP",
+              "second_bar_direction": "UP",
+              "retrospective_if_first_seen_after_first_candle": true
+            }
+          },
+          "all_price_reactions_are_noncausal_observations": true,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-13T12:45:00+00:00",
+            "pre_event_price": 110.364,
+            "first_post_event_close_utc": "2026-10-13T13:00:00+00:00",
+            "first_post_event_price": 110.383,
+            "first_post_event_change_pips": 1.9,
+            "second_post_event_close_utc": "2026-10-13T13:15:00+00:00",
+            "second_post_event_price": 110.437,
+            "second_post_event_change_pips": 5.4,
+            "net_two_bar_event_window_pips": 7.3,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "UP",
+            "retrospective_if_first_seen_after_first_candle": true
+          }
         }
       ],
       "news_headlines": [
         {
           "provider": "FXStreet_RSS",
-          "title": "Australian Dollar edges higher as softer US Dollar, hawkish RBA offer support",
-          "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
-          "published_at_utc": "2026-10-13T13:36:54+00:00",
-          "first_seen_at_utc": "2026-10-13T14:21:30.561337+00:00",
-          "publisher_age_minutes": 44.6,
-          "source_latency_to_first_seen_minutes": 44.6,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "AUD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
           "title": "Australian Dollar: RBA inflation focus shapes outlook – Commerzbank",
           "url": "https://www.fxstreet.com/news/australian-dollar-rba-inflation-focus-shapes-outlook-commerzbank-202610131251",
           "published_at_utc": "2026-10-13T12:51:41+00:00",
           "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 89.8,
+          "publisher_age_minutes": 92.8,
           "source_latency_to_first_seen_minutes": 88.4,
           "type": "CENTRAL_BANK_POLICY",
           "priority": "HIGH_POLICY_REACTION_CHECK",
@@ -1342,34 +1065,67 @@
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Australian Dollar : Key support at 0.6935 in focus against US Dollar   – UOB",
-          "url": "https://www.fxstreet.com/news/australian-dollar-key-support-at-06935-in-focus-against-us-dollar-uob-202610131404",
-          "published_at_utc": "2026-10-13T14:04:33+00:00",
-          "first_seen_at_utc": "2026-10-13T14:21:30.561337+00:00",
-          "publisher_age_minutes": 17.0,
-          "source_latency_to_first_seen_minutes": 17.0,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "AUD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
+          "broker_execution_allowed": false,
+          "price_reactions": {
+            "AUDUSD": {
+              "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+              "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+              "no_intrabar_assumptions": true,
+              "causal_link_verified": false,
+              "first_seen_before_market_reaction": false,
+              "pre_event_close_utc": "2026-10-13T12:45:00+00:00",
+              "pre_event_price": 0.69783,
+              "first_post_event_close_utc": "2026-10-13T13:00:00+00:00",
+              "first_post_event_price": 0.6979,
+              "first_post_event_change_pips": 0.7,
+              "second_post_event_close_utc": "2026-10-13T13:15:00+00:00",
+              "second_post_event_price": 0.69773,
+              "second_post_event_change_pips": -1.7,
+              "net_two_bar_event_window_pips": -1.0,
+              "early_initial_direction": "UP",
+              "second_bar_direction": "DOWN",
+              "retrospective_if_first_seen_after_first_candle": true
+            },
+            "AUDJPY": {
+              "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+              "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+              "no_intrabar_assumptions": true,
+              "causal_link_verified": false,
+              "first_seen_before_market_reaction": false,
+              "pre_event_close_utc": "2026-10-13T12:45:00+00:00",
+              "pre_event_price": 110.364,
+              "first_post_event_close_utc": "2026-10-13T13:00:00+00:00",
+              "first_post_event_price": 110.383,
+              "first_post_event_change_pips": 1.9,
+              "second_post_event_close_utc": "2026-10-13T13:15:00+00:00",
+              "second_post_event_price": 110.437,
+              "second_post_event_change_pips": 5.4,
+              "net_two_bar_event_window_pips": 7.3,
+              "early_initial_direction": "UP",
+              "second_bar_direction": "UP",
+              "retrospective_if_first_seen_after_first_candle": true
+            }
+          },
+          "all_price_reactions_are_noncausal_observations": true,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-13T12:45:00+00:00",
+            "pre_event_price": 110.364,
+            "first_post_event_close_utc": "2026-10-13T13:00:00+00:00",
+            "first_post_event_price": 110.383,
+            "first_post_event_change_pips": 1.9,
+            "second_post_event_close_utc": "2026-10-13T13:15:00+00:00",
+            "second_post_event_price": 110.437,
+            "second_post_event_change_pips": 5.4,
+            "net_two_bar_event_window_pips": 7.3,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "UP",
+            "retrospective_if_first_seen_after_first_candle": true
+          }
         },
         {
           "provider": "FXStreet_RSS",
@@ -1377,7 +1133,7 @@
           "url": "https://www.fxstreet.com/news/japanese-yen-weakness-may-deepen-toward-15905-against-us-dollar-uob-202610131241",
           "published_at_utc": "2026-10-13T12:41:01+00:00",
           "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 100.5,
+          "publisher_age_minutes": 103.5,
           "source_latency_to_first_seen_minutes": 99.1,
           "type": "GENERAL",
           "priority": "CONTEXT",
@@ -1416,7 +1172,7 @@
           "url": "https://www.fxstreet.com/news/japanese-yen-weakness-may-deepen-toward-15905-against-us-dollar-uob-202610131241",
           "published_at_utc": "2026-10-13T12:41:01+00:00",
           "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 100.5,
+          "publisher_age_minutes": 103.5,
           "source_latency_to_first_seen_minutes": 99.1,
           "type": "GENERAL",
           "priority": "CONTEXT",
@@ -1455,7 +1211,7 @@
           "url": "https://www.fxstreet.com/news/euro-lower-year-end-target-at-113-against-us-dollar-ing-202610131304",
           "published_at_utc": "2026-10-13T13:04:42+00:00",
           "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 76.8,
+          "publisher_age_minutes": 79.8,
           "source_latency_to_first_seen_minutes": 75.4,
           "type": "GENERAL",
           "priority": "CONTEXT",
@@ -1484,7 +1240,7 @@
           "url": "https://www.fxstreet.com/news/japanese-yen-weakness-may-deepen-toward-15905-against-us-dollar-uob-202610131241",
           "published_at_utc": "2026-10-13T12:41:01+00:00",
           "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 100.5,
+          "publisher_age_minutes": 103.5,
           "source_latency_to_first_seen_minutes": 99.1,
           "type": "GENERAL",
           "priority": "CONTEXT",
@@ -1523,7 +1279,7 @@
           "url": "https://www.fxstreet.com/news/euro-lower-year-end-target-at-113-against-us-dollar-ing-202610131304",
           "published_at_utc": "2026-10-13T13:04:42+00:00",
           "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 76.8,
+          "publisher_age_minutes": 79.8,
           "source_latency_to_first_seen_minutes": 75.4,
           "type": "GENERAL",
           "priority": "CONTEXT",
@@ -1553,71 +1309,16 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "USDCAD": {
-      "status": "POLICY_REACTION_CHECK",
-      "policy_headlines": [
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Australian Dollar edges higher as softer US Dollar, hawkish RBA offer support",
-          "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
-          "published_at_utc": "2026-10-13T13:36:54+00:00",
-          "first_seen_at_utc": "2026-10-13T14:21:30.561337+00:00",
-          "publisher_age_minutes": 44.6,
-          "source_latency_to_first_seen_minutes": 44.6,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "AUD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        }
-      ],
+      "status": "HEADLINES_PRESENT",
+      "policy_headlines": [],
       "news_headlines": [
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Australian Dollar edges higher as softer US Dollar, hawkish RBA offer support",
-          "url": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
-          "published_at_utc": "2026-10-13T13:36:54+00:00",
-          "first_seen_at_utc": "2026-10-13T14:21:30.561337+00:00",
-          "publisher_age_minutes": 44.6,
-          "source_latency_to_first_seen_minutes": 44.6,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "AUD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
         {
           "provider": "FXStreet_RSS",
           "title": "US Dollar: Supported but capped by CPI risks – OCBC",
           "url": "https://www.fxstreet.com/news/us-dollar-supported-but-capped-by-cpi-risks-ocbc-202610131316",
           "published_at_utc": "2026-10-13T13:16:33+00:00",
           "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 65.0,
+          "publisher_age_minutes": 68.0,
           "source_latency_to_first_seen_minutes": 63.6,
           "type": "MACRO_DATA_OR_YIELD",
           "priority": "MEDIUM_RELEASE_REACTION_CHECK",
@@ -1638,38 +1339,11 @@
         },
         {
           "provider": "FXStreet_RSS",
-          "title": "Australian Dollar : Key support at 0.6935 in focus against US Dollar   – UOB",
-          "url": "https://www.fxstreet.com/news/australian-dollar-key-support-at-06935-in-focus-against-us-dollar-uob-202610131404",
-          "published_at_utc": "2026-10-13T14:04:33+00:00",
-          "first_seen_at_utc": "2026-10-13T14:21:30.561337+00:00",
-          "publisher_age_minutes": 17.0,
-          "source_latency_to_first_seen_minutes": 17.0,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "AUD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
           "title": "Indian Rupee: RBI defense limits losses against US Dollar – Societe Generale",
           "url": "https://www.fxstreet.com/news/indian-rupee-rbi-defense-limits-losses-against-us-dollar-societe-generale-202610131331",
           "published_at_utc": "2026-10-13T13:31:02+00:00",
           "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 50.5,
+          "publisher_age_minutes": 53.5,
           "source_latency_to_first_seen_minutes": 49.1,
           "type": "GENERAL",
           "priority": "CONTEXT",
@@ -1694,7 +1368,7 @@
           "url": "https://www.fxstreet.com/news/euro-lower-year-end-target-at-113-against-us-dollar-ing-202610131304",
           "published_at_utc": "2026-10-13T13:04:42+00:00",
           "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 76.8,
+          "publisher_age_minutes": 79.8,
           "source_latency_to_first_seen_minutes": 75.4,
           "type": "GENERAL",
           "priority": "CONTEXT",
@@ -1723,7 +1397,7 @@
           "url": "https://www.fxstreet.com/news/japanese-yen-weakness-may-deepen-toward-15905-against-us-dollar-uob-202610131241",
           "published_at_utc": "2026-10-13T12:41:01+00:00",
           "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 100.5,
+          "publisher_age_minutes": 103.5,
           "source_latency_to_first_seen_minutes": 99.1,
           "type": "GENERAL",
           "priority": "CONTEXT",
@@ -1762,7 +1436,7 @@
           "url": "https://www.fxstreet.com/news/euro-lower-year-end-target-at-113-against-us-dollar-ing-202610131304",
           "published_at_utc": "2026-10-13T13:04:42+00:00",
           "first_seen_at_utc": "2026-10-13T14:20:06.729685+00:00",
-          "publisher_age_minutes": 76.8,
+          "publisher_age_minutes": 79.8,
           "source_latency_to_first_seen_minutes": 75.4,
           "type": "GENERAL",
           "priority": "CONTEXT",
