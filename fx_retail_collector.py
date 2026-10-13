@@ -66,13 +66,18 @@ def parse(html, pair):
         return result
     # English public prose fallback: numeric percentages require both sides
     # and no claim that the observation clock equals the fetch clock.
-    summary = re.search(
-        r"\b(\d{1,3})%\s+of\s+the\s+forex\s+traders\s+are\s+currently\s+going\s+short"
-        r"\s+with\s+" + re.escape(pair[:3]) + r"\s*/\s*" + re.escape(pair[3:]) +
-        r".{0,200}?\b(\d{1,3})%\s+of\s+the\s+forex\s+traders\s+are\s+going\s+long",
-        text,re.I)
-    if summary:
-        shorts, longs = int(summary.group(1)),int(summary.group(2))
+    # Match explicitly paired publisher percentages for this page, even when
+    # the summary contains line breaks, commas, or an extended narrative.
+    short_pattern = (r"(\d{1,3})\s*%\s+of\s+the\s+forex\s+traders"
+                     r".{0,120}?\bgoing\s+short\s+with\s+" +
+                     re.escape(pair[:3]) + r"\s*/\s*" + re.escape(pair[3:]))
+    long_pattern = (r"(\d{1,3})\s*%\s+of\s+the\s+forex\s+traders"
+                    r".{0,120}?\bgoing\s+long\s+with\s+" +
+                    re.escape(pair[:3]) + r"\s*/\s*" + re.escape(pair[3:]))
+    sm = re.search(short_pattern, text, re.I)
+    lm = re.search(long_pattern, text, re.I)
+    if sm and lm:
+        shorts, longs = int(sm.group(1)), int(lm.group(1))
         if shorts+longs == 100 and 0<=shorts<=100:
             result.update(long_pct=longs,short_pct=shorts,
                           status="PUBLISHED_RETAIL_SAMPLE_DELAYED_60_MIN")
