@@ -345,6 +345,18 @@ def render_issue(events, early, now):
             "**Why this alert:** " + str(e.get("reason")),
             "",
         ]
+    asia=early.get("asian_risk_context") or {}
+    if (asia.get("risk_off_corrob_by_closed_jpy_15m_30m") and
+        any(e.get("label")=="JPY_STRENGTH" for e in clusters)):
+        lines += [
+            "### Asian equities corroboration (not an independent trade signal)",
+            "**KOSPI dated daily CFD change:** " + str(asia.get("daily_reference_change_pct")) + "%",
+            "**KOSPI reference day (Korea):** " + str(asia.get("reference_date_kst")),
+            "**15m/30m JPY-strength cross count:** " + str(asia.get("jpy_strength_crosses_closed_15m_30m")),
+            "**Data status:** " + str(asia.get("status")) + "; NOT a verified current KRX intraday quote.",
+            "**Source:** https://tradingeconomics.com/south-korea/stock-market",
+            "",
+        ]
     lines += [
         "### Data limitations",
         "Closed-candle prices are reference data, not guaranteed executable quotes. "
