@@ -398,17 +398,65 @@ def run(vol,calendar=None,at=None,previous=None,strict_freshness=True):
     result["status"]="RESEARCH_ONLY_QUIET" if quiet else "RESEARCH_ONLY_PARTIAL_MACRO"
     return result
 
+def asian_risk_context(snapshot, cluster, now):
+    """Date-stamped KOSPI daily context; no 5m, no live equity signal."""
+    source="https://tradingeconomics.com/south-korea/stock-market"
+    out={"source":"Trading Economics public KOSPI page","source_url":source,
+         "status":"UNAVAILABLE","risk_tier":"UNAVAILABLE",
+         "risk_off_corrob_by_closed_jpy_15m_30m":False,
+         "verified_intraday_kospi_quote":False,"affects_direction_automatically":False,
+         "signal_rule":"KOSPI daily context can corroborate but never override closed 15m/30m JPY structure"}
+    if not isinstance(snapshot,dict):
+        return out
+    last=parse(snapshot.get("collected_at_utc"))
+    minutes=(now-last).total_seconds()/60 if last else None
+    out["collector_age_minutes"]=round(minutes,1) if minutes is not None else None
+    out["source_publication_clock_verified"]=False
+    out["reference_date_kst"]=snapshot.get("reference_date_kst")
+    out["dated_news_day"]=snapshot.get("intraday_news_date")
+    out["dated_news_headline"]=snapshot.get("intraday_news_summary")
+    out["daily_reference_change_pct"]=snapshot.get("daily_reference_change_pct")
+    out["daily_reference_level"]=snapshot.get("daily_reference_level")
+    if minutes is None or not (-2<=minutes<=40):
+        out.update(status="COLLECTION_STALE_OR_MISSING",risk_tier="UNAVAILABLE",
+                   dated_news_headline=None,daily_reference_change_pct=None,
+                   daily_reference_level=None)
+        return out
+    reference_ok=(snapshot.get("daily_reference_status")==
+                  "DATED_PUBLIC_DAILY_CFD_REFERENCE")
+    if reference_ok:
+        out["status"]="DATED_DAILY_RISK_CONTEXT_ONLY"
+        out["risk_tier"]=snapshot.get("risk_tier_from_daily_reference","UNAVAILABLE")
+    elif snapshot.get("intraday_news_summary"):
+        out["status"]="DATED_NEWS_CONTEXT_ONLY"
+    else:
+        out["status"]="UNAVAILABLE"
+    jpy=cluster.get("jpy_strength_crosses",0) if isinstance(cluster,dict) else 0
+    out["jpy_strength_crosses_closed_15m_30m"]=jpy
+    out["risk_off_corrob_by_closed_jpy_15m_30m"]=(
+        reference_ok and out["risk_tier"] in
+        ("SEVERE_DAILY_RISK_OFF","ELEVATED_DAILY_RISK_OFF") and jpy>=3)
+    return out
+
+
 def main():
     vol=load("fx_volatility.json")
     calendar=load("fx_economic_calendar.json")
     previous=load("fx_early_rotation.json")
     result=run(vol,calendar,previous=previous)
+    result["asian_risk_context"]=asian_risk_context(
+        load("fx_asian_risk.json"),result.get("jpy_cluster"),datetime.now(UTC))
+    for pairrow in result.get("pairs",[]):
+        if pairrow["pair"] in JPY:
+            pairrow["asian_risk_corrob_context_only"]=result["asian_risk_context"].get(
+                "risk_off_corrob_by_closed_jpy_15m_30m",False)
     Path("fx_early_rotation.json").write_text(json.dumps(result,indent=2)+"\n",encoding="utf-8")
     dash=load("fx_scan_dashboard.json")
     if isinstance(dash,dict):
         dash["early_rotation_generated_at_utc"]=result["generated_at_utc"]
         dash["early_rotation_status"]=result.get("status")
         dash["early_rotation_jpy_cluster"]=result.get("jpy_cluster")
+        dash["asian_risk_context"]=result["asian_risk_context"]
         dash["early_rotation_top_five"]=result["top_five_early_priority"]
 
         # Expose one canonical scanner direction while preserving the raw
