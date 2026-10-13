@@ -103,8 +103,8 @@ def compute(pair,raw,offset,now):
                 vals=[float(x) for x in (o,h,l,c)]
                 if (abs((open_dt-day_start).total_seconds()) <= 600 and
                     all(math.isfinite(x) for x in vals) and
-                    vals[2]>=max(vals[0],vals[3],vals[1]) and
-                    vals[3]<=min(vals[0],vals[2],vals[1])):
+                    vals[1]>=max(vals[0],vals[2],vals[3]) and
+                    vals[2]<=min(vals[0],vals[1],vals[3])):
                     day_high=max([float(h)]+([day_high] if day_high is not None else []))
                     day_low=min([float(l)]+([day_low] if day_low is not None else []))
                     out["day_range_completeness"]="RUNNING_D1_REFERENCE_NY17_ALIGNED"
