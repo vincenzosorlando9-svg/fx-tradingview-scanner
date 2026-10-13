@@ -38,6 +38,8 @@ def enrich_source_context(rows, now, dashboard, early, ff_market, levels, histor
     breadth = dashboard.get("currency_strength_breadth") or {}
     cluster = early.get("jpy_cluster") or dashboard.get("early_rotation_jpy_cluster") or {}
     historic = history.get("pairs") or {}
+    technical = {x.get("pair"): x for x in dashboard.get("pairs", [])
+                 if isinstance(x, dict)}
     for row in rows:
         pair = row["pair"]
         ff = (ff_market.get("pairs") or {}).get(pair, {}) if ff_ok else {}
@@ -46,6 +48,19 @@ def enrich_source_context(rows, now, dashboard, early, ff_market, levels, histor
         active = h.get("active") if isinstance(h, dict) else None
         active_ok = isinstance(active, dict) and available(active, "last_observed_at_utc", 20)
         p1, p2 = pair[:3], pair[3:]
+        source_row = technical.get(pair) or {}
+        # This view contains CLOSED 15m/30m direction evidence and 1H/4H/Daily
+        # context only. Never copy the 5m raw feed into the unified board.
+        frames = source_row.get("timeframes") or {}
+        row["closed_candle_timeframe_context"] = {
+            tf: frames.get(tf, {"error": "UNAVAILABLE"})
+            for tf in ("15m", "30m", "1H", "4H", "1D")}
+        row["higher_timeframe_trend_context"] = {
+            "closed_candle_structure": source_row.get("higher_timeframe"),
+            "EMA_context": source_row.get("higher_timeframe_indicators"),
+            "participates_in_technical_rank": True,
+            "directional_trigger_from": ["15m", "30m"],
+            "excluded": ["5m"]}
         policies = (raw.get("policy_rates") or {}) if raw_ok else {}
         row["policy_rate_context"] = {
             c: {"reference_rate_pct": policies.get(c, {}).get("policy_rate_pct"),
