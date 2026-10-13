@@ -140,7 +140,7 @@ def extract_bond_table(html, country):
             label_lower = label.lower()
             if not label_lower.startswith(wanted.lower() + " "):
                 continue
-            m = re.search(r"\b(2|5|10|30)Y\b", label, re.I)
+            m = re.fullmatch(re.escape(wanted) + r"\s+(2|5|10|30)Y", label, re.I)
             if not m:
                 continue
             years = m.group(1) + "Y"
@@ -179,7 +179,7 @@ def parse_bonds(page, country):
 def parse_policy(page, currency):
     obj = {"source": "Trading Economics policy-rate public page", "url": page["url"],
            "retrieved_at_utc": page["retrieved_at_utc"], "status": page["http_status"],
-           "policy_rate_pct": None, "reference_date": None,
+           "policy_rate_pct": None, "reference_date": None, "reference_period": None,
            "ois_rate_pct": None, "ois_status": "UNAVAILABLE_NO_VALIDATED_PUBLIC_OIS"}
     if page["http_status"] != "OK":
         return obj
@@ -187,31 +187,98 @@ def parse_policy(page, currency):
     if "interest rate" not in t.lower():
         obj["status"] = "UNRECOGNIZED_PAGE"
         return obj
-    m = re.search(r"\bActual\s+([+\-]?\d{1,2}(?:\.\d{1,4})?)\b", t)
+    # Policy-rate series are often published MONTHLY. Do not assign today's
+    # date to a September rate merely because the HTML was downloaded today.
+    m = re.search(r"\b(?:benchmark|key)\s+interest rate\b.{0,130}?"
+                  r"(?:last recorded at|was|stands at|remains at)\s+"
+                  r"([+\-]?\d{1,2}(?:\.\d{1,4})?)\s+percent", t, re.I)
+    if not m:
+        m = re.search(r"\binterest rate.{0,90}?\b(?:last recorded at|stands at)\s+"
+                      r"([+\-]?\d{1,2}(?:\.\d{1,4})?)\s+percent", t, re.I)
     if m:
         val = numeric(m.group(1))
         if val is not None and -5 <= val <= 30:
             obj["policy_rate_pct"] = val
-    obj["reference_date"] = source_date(t)
-    obj["status"] = reference_status(obj["reference_date"]) if obj["policy_rate_pct"] is not None else "UNAVAILABLE_RATE_NOT_FOUND"
+    # Extract month/year only from an explicit Related rates table, not prose.
+    soup = BeautifulSoup(page["body"], "html.parser")
+    for tr in soup.select("tr"):
+        cells = [x.get_text(" ", strip=True) for x in tr.find_all(["td", "th"], recursive=False)]
+        if len(cells) < 5 or not re.search(r"Interest Rate$", cells[0], re.I):
+            continue
+        rate = numeric(cells[1])
+        mdate = re.fullmatch(r"[A-Za-z]{3}\s+20\d{2}", cells[-1])
+        if rate is None or not mdate or not -5 <= rate <= 30:
+            continue
+        if obj["policy_rate_pct"] is not None and abs(rate - obj["policy_rate_pct"]) > .2:
+            continue
+        obj["policy_rate_pct"] = rate
+        obj["reference_period"] = cells[-1]
+        break
+    obj["status"] = "REPORTED_PUBLISHED_POLICY_RATE_NOT_OIS" if obj["policy_rate_pct"] is not None else "UNAVAILABLE_RATE_NOT_FOUND"
     return obj
 
+
 def parse_index(page, symbol):
-    obj = {"source": "Trading Economics public daily market page", "url": page["url"],
+    obj = {"source": "Trading Economics public dated market reference", "url": page["url"],
            "retrieved_at_utc": page["retrieved_at_utc"], "status": page["http_status"],
            "value": None, "daily_change_pct": None, "market_date": None,
            "quote_timestamp_utc": None, "verified_intraday": False}
     if page["http_status"] != "OK":
         return obj
-    t = text_of(page["body"])
-    m = re.search(r"\bActual\s+([\d,]+(?:\.\d+)?)\s+(?:Daily Change|Day Change)\b", t, re.I)
-    ch = re.search(r"\bDaily Change\s+([+\-]?\d+(?:\.\d+)?)\s*%", t, re.I)
-    if m and ch:
-        obj["value"] = numeric(m.group(1))
-        obj["daily_change_pct"] = numeric(ch.group(1))
-    obj["market_date"] = source_date(t)
+    text = text_of(page["body"])
+    wanted = {"KOSPI": "KOSPI", "NIKKEI": "JP225",
+              "CHINA_EQUITIES": "SHANGHAI", "DXY": "DXY"}[symbol]
+    # Use a labelled table row (not arbitrary price or unrelated headline).
+    soup = BeautifulSoup(page["body"], "html.parser")
+    for table in soup.find_all("table"):
+        header = " ".join(th.get_text(" ", strip=True) for th in table.find_all("th")[:10]).lower()
+        if ("indexes" not in header and "crosses" not in header) or "price" not in header:
+            continue
+        for row in table.find_all("tr"):
+            cells = [el.get_text(" ", strip=True) for el in row.find_all(["td","th"], recursive=False)]
+            if len(cells) < 2:
+                continue
+            if cells[0].strip().upper() != wanted:
+                continue
+            price = numeric(cells[1])
+            if price is None or not .01 < price < 1e7:
+                continue
+            obj["value"] = price
+            changes = [numeric(x) for x in cells[2:]
+                       if re.fullmatch(r"[+\-]?\d+(?:\.\d+)?%", x.replace(",",""))]
+            if changes:
+                obj["daily_change_pct"] = changes[-1] if symbol == "KOSPI" else changes[0]
+            break
+        if obj["value"] is not None:
+            break
+    # Header cards sometimes render when the row table is server-side absent.
+    if obj["value"] is None:
+        m = re.search(r"\b(?:Actual|Exchange Rate)\s+([\d,]+(?:\.\d+)?)"
+                      r"\s+Daily Change\s+([+\-]?\d+(?:\.\d+)?)\s*%", text, re.I)
+        if m:
+            obj["value"], obj["daily_change_pct"] = numeric(m.group(1)), numeric(m.group(2))
+    # For the KOSPI: unambiguous dated stats prose fallback, no later news.
+    if obj["value"] is None and symbol == "KOSPI":
+        stat = re.search(r"South Korea Stock Market - Stats\s+(.{0,1000})", text, re.I)
+        st = stat.group(1) if stat else ""
+        m = re.search(r"\bKOSPI,\s+(?:fell|rose|climbed|slipped|plunged)"
+                      r"\s+to\s+([\d,]+(?:\.\d+)?)\s+points\s+on\s+"
+                      r"(" + MONTH_PATTERN + r"\s+\d{1,2},\s+20\d{2})"
+                      r".{0,90}?\b(?:losing|gaining|falling|rising)\s+"
+                      r"([\d.]+)\s*%", st, re.I)
+        if m:
+            obj["value"] = numeric(m.group(1))
+            obj["daily_change_pct"] = (-1 if "fell" in m.group(0) or "plunged" in m.group(0) or "slipped" in m.group(0) else 1) * float(m.group(3))
+    obj["market_date"] = source_date(text)
+    # Currency DXY page does not include a Stock Market - Stats section.
+    if not obj["market_date"] and symbol == "DXY":
+        today = utcnow().date()
+        today_in_text = today.strftime("%B ") + str(today.day)
+        if re.search(r"\bDollar Index traded at\b.{0,140}?\bthis\s+\w+\s+" +
+                     re.escape(today_in_text) + r"(?:st|nd|rd|th)?\b", text, re.I):
+            obj["market_date"] = today.isoformat()
+            obj["date_method"] = "PUBLIC_DESCRIPTION_MONTH_DAY_MATCHES_FETCH_UTC_DATE"
     obj["status"] = reference_status(obj["market_date"]) if obj["value"] is not None else "UNAVAILABLE_NO_DATED_INDEX_VALUE"
-    # A dated public CFD/reference is not a timestamped exchange quote.
     if obj["status"] == "FUTURE_DATED_REJECTED":
         obj["value"] = None
     return obj
@@ -408,7 +475,7 @@ def collect():
     for c, slug in COUNTRIES.items():
         tasks["yield:" + c] = BASE_TE + slug + "/government-bond-yield"
         if c in ("USD", "EUR", "GBP", "JPY", "CAD", "AUD", "NZD"):
-            tasks["policy:" + c] = BASE_TE + slug + "/interest-rate"
+            tasks["policy:" + c] = BASE_TE + ("euro-area" if c == "EUR" else slug) + "/interest-rate"
     tasks.update({"risk:" + k: BASE_TE + v for k, v in RISK_PAGES.items()})
     tasks.update({"forexcracked": FOREXCRACKED, "oilprice": OILPRICE,
                   "feargreed": FEAR_GREED})
