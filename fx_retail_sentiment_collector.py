@@ -54,8 +54,8 @@ def parse(body, now=None):
             mshort = re.search(r"\bshort\b\s*(\d{1,3})\s*%",lower)
             mlong = re.search(r"\blong\b\s*(\d{1,3})\s*%",lower)
             if not mshort or not mlong:
-                mshort = re.search(r"\b(\d{1,3})\s*%\s+of\s+(?:the\s+)?(?:forex\s+)?traders.{0,35}\bshort\b",lower)
-                mlong = re.search(r"\b(\d{1,3})\s*%\s+of\s+(?:the\s+)?(?:forex\s+)?traders.{0,35}\blong\b",lower)
+                mshort = re.search(r"\b(\d{1,3})\s*%\s+of\s+(?:the\s+)?(?:forex\s+)?traders.{0,90}\bshort\b",lower)
+                mlong = re.search(r"\b(\d{1,3})\s*%\s+of\s+(?:the\s+)?(?:forex\s+)?traders.{0,90}\blong\b",lower)
             if not mshort or not mlong:
                 continue
             short,long=int(mshort.group(1)),int(mlong.group(1))
