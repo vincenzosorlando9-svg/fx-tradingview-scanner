@@ -11,6 +11,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from fx_macro_collector import NEWS_URLS, PAIRS, get, parse_news
+from fx_approved_public_sources import NEWSQUAWK, collect_newsquawk
 
 UTC = timezone.utc
 FILE = Path("fx_news_priority.json")
@@ -82,7 +83,7 @@ def make_watch(news_sources, previous=None, now=None):
             for x in previous.get("recent_headlines", [])
             if parse_utc(x.get("first_seen_at_utc"))}
     statuses, newest = {}, {}
-    for name in NEWS_URLS:
+    for name in list(NEWS_URLS) + ["Newsquawk_public_delayed"]:
         feed = news_sources.get(name) or {}
         statuses[name] = feed.get("status") or "UNAVAILABLE"
         for item in feed.get("articles") or []:
@@ -115,13 +116,16 @@ def make_watch(news_sources, previous=None, now=None):
         "generated_at_utc": now.isoformat(),
         "target_refresh_minutes": 5,
         "actual_actions_schedule_not_guaranteed": True,
-        "approved_source_names": sorted(NEWS_URLS),
+        "approved_source_names": sorted(list(NEWS_URLS)+["Newsquawk_public_delayed"]),
+        "Newsquawk_public_delay_minutes_at_least": 20,
+        "Newsquawk_is_not_realtime_professional_feed": True,
         "source_statuses": statuses,
         "source_coverage_gaps": gaps,
         "any_provider_unavailable": bool(gaps),
         "recent_headlines": headlines[:60],
         "pairs": by_pair,
-        "no_new_sources": True,
+        "no_new_sources": False,
+        "no_unapproved_sources": True,
         "no_headline_buy_sell_votes": True,
         "no_trades_or_alerts": True,
     }
@@ -219,9 +223,13 @@ def enrich_with_closed_reactions(watch, volatility):
 
 
 def main():
-    with concurrent.futures.ThreadPoolExecutor(max_workers=2) as pool:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
         jobs = {name: pool.submit(get, url, 9) for name, url in NEWS_URLS.items()}
-        feeds = {name: parse_news(job.result(), name) for name, job in jobs.items()}
+        jobs["Newsquawk_public_delayed"] = pool.submit(get, NEWSQUAWK, 10)
+        feeds = {name: parse_news(job.result(), name) for name, job in jobs.items()
+                 if name in NEWS_URLS}
+        feeds["Newsquawk_public_delayed"] = collect_newsquawk(
+            jobs["Newsquawk_public_delayed"].result())
     try:
         previous = json.loads(FILE.read_text(encoding="utf-8")) if FILE.exists() else {}
     except (ValueError, OSError):
