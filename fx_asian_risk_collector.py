@@ -108,6 +108,10 @@ def parse_page(page, now=None):
             output["daily_reference_level"] = level
             output["daily_reference_change_pct"] = daily_change
 
+    # Some TE renders omit the numeric 'Actual' card in server HTML, even
+    # while the dated KOSPI Stats sentence provides the same daily CFD close.
+    # Parse the stats fallback ONLY if it explicitly includes the points,
+    # source date and signed percentage; never use the newer News Stream.
     # The 'Stats' prose is the date of this daily value; do not infer it
     # from news title date, HTTP fetch time, or 'last updated' site clock.
     stat = re.search(r"South Korea Stock Market - Stats\s+(.{0,950})", text,
@@ -122,6 +126,32 @@ def parse_page(page, now=None):
             output["reference_age_calendar_days"] = (now.astimezone(KST).date() - stamp).days
         except ValueError:
             pass
+
+    dated_stats = re.search(
+        r"\b(fell|slipped|declined|dropped|plunged|rose|gained|climbed|advanced|rallied)"
+        r"\s+to\s+([0-9][0-9,]*\.?[0-9]*)\s+points\s+on\s+("
+        + MONTH +
+        r"\s+\d{1,2},\s+\d{4})\s*,\s*(losing|falling|gaining|rising)\s+"
+        r"([0-9]+(?:\.[0-9]+)?)\s*%", stat_text, re.IGNORECASE)
+    if dated_stats and output["reference_date_kst"]:
+        verb=dated_stats.group(1).lower()
+        qualifier=dated_stats.group(4).lower()
+        falling=verb in ("fell","slipped","declined","dropped","plunged")
+        consistent=(qualifier in ("losing","falling"))==falling
+        value=float(dated_stats.group(2).replace(",",""))
+        pct=float(dated_stats.group(5))*(-1 if falling else 1)
+        if consistent and 100<=value<=100000 and -30<=pct<=30:
+            header_value=output["daily_reference_level"]
+            header_pct=output["daily_reference_change_pct"]
+            if (header_value is None or
+                (abs(header_value-value)/max(1.,value)<.005 and
+                 header_pct is not None and abs(header_pct-pct)<.15)):
+                output["daily_reference_level"]=value
+                output["daily_reference_change_pct"]=pct
+            else:
+                output["daily_reference_level"]=None
+                output["daily_reference_change_pct"]=None
+                output["error"]="CONFLICTING_DAILY_SOURCE_VALUES"
 
     if output["daily_reference_level"] is not None and output["reference_date_kst"]:
         delay = output["reference_age_calendar_days"]
