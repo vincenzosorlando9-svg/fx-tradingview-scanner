@@ -64,6 +64,13 @@ def headline_priority(headline, now, first_seen=None):
         "publisher_age_minutes": round(age, 1),
         "source_latency_to_first_seen_minutes": round(
             (parse_utc(first_seen or now.isoformat()) - published).total_seconds() / 60, 1),
+        "source_public_delay_minutes_at_least": (
+            int(headline.get("public_delay_at_least_minutes") or 20)
+            if headline.get("provider")=="Newsquawk_public_delayed" else None),
+        "publication_clock_basis": (
+            headline.get("timestamp_basis") or "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME"),
+        "not_pro_feed_or_first_seen_in_real_time": (
+            headline.get("provider")=="Newsquawk_public_delayed"),
         "type": typ,
         "priority": "HIGH_POLICY_REACTION_CHECK" if typ == "CENTRAL_BANK_POLICY" else
                     "MEDIUM_RELEASE_REACTION_CHECK" if typ == "MACRO_DATA_OR_YIELD" else
