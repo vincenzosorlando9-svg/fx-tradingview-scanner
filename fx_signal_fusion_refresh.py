@@ -35,7 +35,6 @@ def refresh(now=None):
     news=read("fx_macro_news.json")
     raw=read("fx_macro_raw.json")
     range_data=read("fx_range_context.json")
-    retail=read("fx_retail_sentiment.json")
     cal=read("fx_economic_calendar.json")
     cftc=read("fx_cftc_tff.json")
     retail=read("fx_retail_positioning.json")
@@ -45,7 +44,6 @@ def refresh(now=None):
     raw_ok=fresh(raw,"collected_at_utc",45,now)
     news_ok=fresh(news,"generated_at_utc",60,now)
     range_ok=fresh(range_data,"generated_at_utc",45,now)
-    retail_ok=fresh(retail,"collected_at_utc",70,now)
     metrics=snap.get("metrics",{}) if macro_ok else {}
     spreads=snap.get("same_maturity_yield_spreads",{}) if macro_ok else {}
     deltas=snap.get("observed_fetch_deltas",{}) if macro_ok else {}
@@ -56,9 +54,6 @@ def refresh(now=None):
                      spreads,deltas,metrics,cftc,(raw if raw_ok else {}),now,
                      retail=retail)
     for row in rows:
-        ret=(retail.get("pairs") or {}).get(row["pair"]) if retail_ok else None
-        row["retail_positioning"]=ret or {"status":"UNAVAILABLE_OR_UNVERIFIED_DELAYED_RETAIL"}
-        row["retail_data_alters_direction"]=False
         ctx=(range_data.get("pairs") or {}).get(row["pair"]) if range_ok else None
         row["range_context"]=ctx or {"status":"UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"}
         row["range_data_is_directional_signal"]=False
