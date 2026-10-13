@@ -1,10 +1,10 @@
 # FOREX MAIN SIGNAL — 15-LAYER MACRO-FIRST AUDIT
 
-Tue Oct 13, 2026 10:51:26 AM ET | 11 pairs | Closed 15m/30m candles | No API keys
+Tue Oct 13, 2026 10:52:05 AM ET | 11 pairs | Closed 15m/30m candles | No API keys
 
 **OVERALL STATUS: PARTIAL — VERIFY PUBLISHER AND BROKER SOURCE LIMITATIONS**
 
-Latest separately fetched public technical feed: Tue Oct 13, 2026 10:51:26 AM ET. Authoritative unified rank: Tue Oct 13, 2026 10:51:39 AM ET. Macro fetch: Tue Oct 13, 2026 10:48:36 AM ET. Published scores and newer candle assessments are deliberately distinguished.
+Latest separately fetched public technical feed: Tue Oct 13, 2026 10:52:05 AM ET. Authoritative unified rank: Tue Oct 13, 2026 10:52:19 AM ET. Macro fetch: Tue Oct 13, 2026 10:48:36 AM ET. Published scores and newer candle assessments are deliberately distinguished.
 
 ## 1. BEST 5 TRADING PAIRS — BUY / SHORT
 
@@ -46,13 +46,12 @@ Counter-rotations are new candle evidence, NOT invented historical SELL/BUY epis
 **Coverage:** PARTIAL_DATED_OR_BLOCKED
 
 **Breaking central-bank policy watch (five-minute target)**
-Fast source collection: Tue Oct 13, 2026 10:51:37 AM ET
+Fast source collection: Tue Oct 13, 2026 10:52:17 AM ET
 Source gaps: Reuters_currency_page:UNAVAILABLE_HTTPERROR
 A missing approved news story never establishes that no policy headline occurred.
 | published_at_utc | provider | title | affected_pairs | first_seen_at_utc | reaction_review |
 | --- | --- | --- | --- | --- | --- |
-| Tue Oct 13, 2026 9:36:54 AM ET | FXStreet_RSS | [Australian Dollar edges higher amid softer US Dollar, hawkish RBA](https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336) | AUDUSD, NZDUSD, EURUSD, GBPUSD, USDJPY, AUDJPY, USDCAD | Tue Oct 13, 2026 10:25:45 AM ET | USDJPY: TWO_COMPLETED_M15_BARS_OBSERVED (7.0/3.6p), RETROSPECTIVE; AUDJPY: FIRST_MOVE_REVERSED_ON_SECOND_M15 (8.1/-7.3p), RETROSPECTIVE |
-| Tue Oct 13, 2026 8:51:41 AM ET | FXStreet_RSS | [Australian Dollar: RBA inflation focus shapes outlook – Commerzbank](https://www.fxstreet.com/news/australian-dollar-rba-inflation-focus-shapes-outlook-commerzbank-202610131251) | AUDUSD, AUDJPY | Tue Oct 13, 2026 10:20:06 AM ET | AUDJPY: TWO_COMPLETED_M15_BARS_OBSERVED (1.9/5.4p), RETROSPECTIVE |
+| Tue Oct 13, 2026 9:36:54 AM ET | FXStreet_RSS | [Australian Dollar edges higher as softer US Dollar, hawkish RBA offer support](https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336) | AUDUSD, NZDUSD, EURUSD, GBPUSD, USDJPY, AUDJPY, USDCAD | Tue Oct 13, 2026 10:25:45 AM ET | USDJPY: TWO_COMPLETED_M15_BARS_OBSERVED (7.0/3.6p), RETROSPECTIVE; AUDJPY: FIRST_MOVE_REVERSED_ON_SECOND_M15 (8.1/-7.3p), RETROSPECTIVE |
 
 The publisher clock and first-seen time are DIFFERENT; RETROSPECTIVE means this was NOT detected ahead of the initial move.
 The first two event-aligned 15m changes describe price observations, NOT causal proof or executable trading signals.
@@ -83,7 +82,7 @@ Headlines alone do not demonstrate an independently verified immediate FX reacti
 **Coverage:** PARTIAL_PUBLISHER_ACTUAL_TIMES_UNVERIFIED
 
 **Central-bank speech and scheduled macro radar (Eastern Time)**
-Radar compiled: Tue Oct 13, 2026 10:51:38 AM ET
+Radar compiled: Tue Oct 13, 2026 10:52:19 AM ET
 Coverage: FRESH_FF_PLUS_FXBLUE | FXStreet calendar: UNAVAILABLE_OAUTH_REQUIRED_NOT_INGESTED
 Important: not every FXStreet speech is present in the Forex Factory public feed.
 | event_at_et | currency | title | urgency | event_window | forecast | previous |
@@ -308,7 +307,7 @@ Strongest: AUD, CAD, NZD | Weakest: JPY
 
 **Coverage:** SEPARATELY_OBSERVED_SITE_REPORTED_CLOSED_CANDLES
 
-Public technical feed collected: Tue Oct 13, 2026 10:51:26 AM ET
+Public technical feed collected: Tue Oct 13, 2026 10:52:05 AM ET
 | pair | latest_15m_closed_price | latest_15m_closed_at_utc | 15m_change_pips | 30m_change_pips | original_published_direction | updated_directional_assessment |
 | --- | --- | --- | --- | --- | --- | --- |
 | EURCAD | 1.59420 | 2026-10-13T14:45:00+00:00 | -7.5 | 3.6 | SELL | SELL EPISODE / MIXED CLOSED CANDLES — WAIT |
@@ -346,17 +345,17 @@ Evidence is public completed-candle structure only. Trigger: Require supporting 
 
 | pair | 1H | 4H | Daily | 1H_EMA20 | 1H_EMA50 | 4H_EMA10 | 4H_EMA20 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| EURCAD | MIXED | BEARISH | BEARISH | 1.59369 | 1.59462 | 1.59345 | 1.59469 |
-| USDCAD | BEARISH | MIXED | BULLISH | 1.42543 | 1.42576 | 1.42482 | 1.42495 |
+| EURCAD | MIXED | BEARISH | BEARISH | 1.59370 | 1.59462 | 1.59346 | 1.59470 |
+| USDCAD | BEARISH | MIXED | BULLISH | 1.42545 | 1.42577 | 1.42482 | 1.42495 |
 | AUDJPY | MIXED | MIXED | MIXED | 110.321 | 110.323 | 110.383 | 110.323 |
-| EURUSD | MIXED | BEARISH | BEARISH | 1.11808 | 1.11847 | 1.11838 | 1.11915 |
-| USDJPY | MIXED | MIXED | MIXED | 158.289 | 158.316 | 158.335 | 158.283 |
-| EURJPY | MIXED | MIXED | BEARISH | 176.981 | 177.074 | 177.080 | 177.144 |
-| NZDUSD | BULLISH | MIXED | BEARISH | 0.56017 | 0.56004 | 0.56027 | 0.56027 |
-| GBPUSD | BULLISH | MIXED | MIXED | 1.32318 | 1.32285 | 1.32323 | 1.32306 |
-| NZDJPY | BULLISH | MIXED | MIXED | 88.669 | 88.663 | 88.710 | 88.680 |
-| AUDUSD | BULLISH | MIXED | MIXED | 0.69696 | 0.69685 | 0.69714 | 0.69699 |
-| EURGBP | MIXED | BEARISH | BEARISH | 0.84494 | 0.84544 | 0.84509 | 0.84578 |
+| EURUSD | MIXED | BEARISH | BEARISH | 1.11806 | 1.11846 | 1.11837 | 1.11915 |
+| USDJPY | MIXED | MIXED | MIXED | 158.289 | 158.316 | 158.336 | 158.283 |
+| EURJPY | MIXED | MIXED | BEARISH | 176.979 | 177.073 | 177.076 | 177.142 |
+| NZDUSD | BULLISH | MIXED | BEARISH | 0.56017 | 0.56003 | 0.56026 | 0.56027 |
+| GBPUSD | BULLISH | MIXED | MIXED | 1.32319 | 1.32286 | 1.32325 | 1.32307 |
+| NZDJPY | BULLISH | MIXED | MIXED | 88.670 | 88.663 | 88.709 | 88.679 |
+| AUDUSD | BULLISH | MIXED | MIXED | 0.69696 | 0.69685 | 0.69715 | 0.69699 |
+| EURGBP | MIXED | BEARISH | BEARISH | 0.84494 | 0.84544 | 0.84508 | 0.84578 |
 
 These longer timeframes are contextual; they do not veto early completed 15m/30m rotations.
 
@@ -450,7 +449,7 @@ Recorded observations do not imply realized P&L. Wrong-way episodes remain visib
 
 ---
 
-## FINAL FOREX MAIN SIGNAL — Tue Oct 13, 2026 10:51:26 AM ET
+## FINAL FOREX MAIN SIGNAL — Tue Oct 13, 2026 10:52:05 AM ET
 
 Strongest technical breadth: AUD, CAD, NZD. Weakest: JPY.
 Highest published 50/50 research rank: EURCAD (published score; separate from later candles).
