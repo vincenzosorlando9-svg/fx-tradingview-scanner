@@ -257,6 +257,55 @@ class SessionRangeTests(unittest.TestCase):
         self.assertFalse(result["used_for_signal_direction"])
         self.assertFalse(result["D1_current_session_used_for_direction"])
 
+class SourceContextIntegrationTests(unittest.TestCase):
+    def test_all_11_contexts_preserve_technical_signal_and_missing_quotes(self):
+        from fx_signal_fusion_refresh import enrich_source_context
+        from fx_macro_collector import PAIRS
+        rows=[{"pair":p,"direction":"BUY","technical_research_rank_score":.7,
+               "trade_execution_allowed":False,"no_5m_signal_inputs":True} for p in PAIRS]
+        ff={"collected_at_utc":NOW.isoformat(),"pairs":{
+            "AUDUSD":{"status":"PARTIAL","source_url":"https://www.forexfactory.com/market/audusd",
+                      "price":None,"spread":None,"price_status":"UNAVAILABLE_UNVERIFIED",
+                      "spread_status":"UNAVAILABLE_UNVERIFIED"}}}
+        levels={"generated_at_utc":NOW.isoformat(),"pairs":{"AUDUSD":{"status":"COMPLETE",
+               "daily_open":0.7}}}
+        dash={"daily_weekly_levels_generated_at_utc":NOW.isoformat(),
+              "currency_strength_breadth":{"AUD":2,"USD":-6}}
+        early={"jpy_cluster":{"status":"BROAD_JPY_STRENGTH","pairs":{}}}
+        raw={"collected_at_utc":NOW.isoformat(),
+             "ois":{"status":"UNAVAILABLE_NO_VERIFIED_PUBLIC_OIS"},
+             "cme_futures":{"status":"UNAVAILABLE_NO_VERIFIED_PUBLIC_CONTRACT_DATA"},
+             "policy_rates":{"AUD":{"status":"DATED_REFERENCE","policy_rate_pct":4.0},
+                             "USD":{"status":"DATED_REFERENCE","policy_rate_pct":4.5}}}
+        output=enrich_source_context(rows,NOW,dash,early,ff,levels,{"pairs":{}},raw)
+        self.assertEqual(len(output),11)
+        self.assertEqual(output[0]["direction"],"BUY")
+        self.assertIsNone(output[0]["forexfactory_market_context"]["price"])
+        self.assertIsNone(output[0]["forexfactory_market_context"]["spread"])
+        self.assertFalse(output[0]["forexfactory_market_context"]["broker_executable"])
+        self.assertEqual(output[0]["daily_weekly_price_levels"]["status"],"COMPLETE")
+        self.assertEqual(output[0]["currency_strength_cluster_context"]["base_breadth"],2)
+        self.assertEqual(output[0]["policy_rate_context"]["AUD"]["reference_rate_pct"],4.0)
+        self.assertEqual(output[0]["ois_reference"]["status"],"UNAVAILABLE_NO_VERIFIED_PUBLIC_OIS")
+        self.assertTrue(all(x["direction"]=="BUY" and not x["trade_execution_allowed"]
+                            and x["no_5m_signal_inputs"] for x in output))
+
+    def test_stale_or_unsynced_context_is_unavailable(self):
+        from fx_signal_fusion_refresh import enrich_source_context
+        item={"pair":"EURUSD","direction":"SELL","trade_execution_allowed":False}
+        d={"daily_weekly_levels_generated_at_utc":NOW.isoformat()}
+        ff={"collected_at_utc":(NOW-timedelta(hours=2)).isoformat(),
+            "pairs":{"EURUSD":{"price":1.123,"spread":.0002}}}
+        levels={"generated_at_utc":(NOW-timedelta(minutes=10)).isoformat(),
+                "pairs":{"EURUSD":{"daily_open":1.123}}}
+        out=enrich_source_context([item],NOW,d,{},ff,levels,{},{} )[0]
+        self.assertIsNone(out["forexfactory_market_context"]["price"])
+        self.assertIsNone(out["forexfactory_market_context"]["spread"])
+        self.assertEqual(out["daily_weekly_price_levels"]["status"],
+                         "UNAVAILABLE_STALE_OR_UNSYNCHRONIZED")
+        self.assertEqual(out["direction"],"SELL")
+
+
 class FusionTests(unittest.TestCase):
     def test_date_only_yield_has_no_intraday_clock(self):
         m = metric(4.8, "percent_yield", "TE", "DATED_REFERENCE",
