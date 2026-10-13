@@ -114,6 +114,13 @@ jobs:
           git add fx_volatility.json fx_technicals.json fx_rotation_signals.json fx_scan_dashboard.json fx_daily_weekly_levels.json fx_signal_history.json fx_early_rotation.json fx_unified_signals.json
           if ! git diff --cached --quiet; then
             git commit -m "Update synchronized FX technical dashboard with Daily and 4H"
-            git pull --rebase origin main
-            git push
+            for attempt in 1 2 3 4 5; do
+              if git pull --rebase origin main && git push origin HEAD:main; then
+                exit 0
+              fi
+              git rebase --abort || true
+              sleep 4
+            done
+            echo "Unable to publish technical signal files after retries"
+            exit 1
           fi
