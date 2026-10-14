@@ -23,12 +23,14 @@ jobs:
           python-version: '3.11'
       - name: Syntax and registry validation
         run: |
-          python -m py_compile forex-engine/engine.py forex-engine/quotes.py
+          python -m py_compile forex-engine/engine.py forex-engine/quotes.py forex-engine/scanner_feeds.py
           python -c "import json; p=json.load(open('forex-engine/sources.json')); assert len(p)==len({x['id'] for x in p}) and len(p)>0; print('registered:',len(p))"
       - name: Offline unit tests
         run: python -m unittest discover -s forex-engine -p 'test_*.py' -v
       - name: Attempt registered source endpoints
         run: python forex-engine/engine.py --database /tmp/fx-audit.sqlite3 --output /tmp/fx-latest-report.json --timeout 8 --concurrency 8 --max-runtime 150
+      - name: Audit existing scanner JSON feed freshness
+        run: python forex-engine/scanner_feeds.py --output /tmp/fx-scanner-feed-audit.json
       - name: Verify coverage and fail-closed signal gate
         run: |
           python -c "import json; r=json.load(open('/tmp/fx-latest-report.json')); assert r['source_attempt_coverage_pass']; assert r['attempted_count']==r['registry_count']; assert r['source_submission_coverage_pass']; assert r['analysis_allowed'] is False; print('audit-only coverage verified')"
@@ -40,4 +42,5 @@ jobs:
           path: |
             /tmp/fx-latest-report.json
             /tmp/fx-audit.sqlite3
+            /tmp/fx-scanner-feed-audit.json
           retention-days: 7
