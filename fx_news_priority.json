@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-14T02:04:33.089406+00:00",
+  "generated_at_utc": "2026-10-14T02:35:18.281147+00:00",
   "target_refresh_minutes": 5,
   "actual_actions_schedule_not_guaranteed": true,
   "approved_source_names": [
@@ -21,16 +21,252 @@
   "any_provider_unavailable": true,
   "recent_headlines": [
     {
+      "provider": "FXStreet_RSS",
+      "title": "Japanese Yen softens as October BoJ hike bets fade; stuck in a range vs USD ahead of US CPI",
+      "url": "https://www.fxstreet.com/news/japanese-yen-softens-as-october-boj-hike-bets-fade-stuck-in-a-range-vs-usd-ahead-of-us-cpi-202610140127",
+      "published_at_utc": "2026-10-14T01:27:03+00:00",
+      "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+      "publisher_age_minutes": 68.3,
+      "source_latency_to_first_seen_minutes": 68.3,
+      "source_public_delay_minutes_at_least": null,
+      "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+      "not_pro_feed_or_first_seen_in_real_time": false,
+      "type": "CENTRAL_BANK_POLICY",
+      "priority": "HIGH_POLICY_REACTION_CHECK",
+      "currencies": [
+        "JPY"
+      ],
+      "affected_pairs": [
+        "USDJPY",
+        "AUDJPY",
+        "NZDJPY",
+        "EURJPY"
+      ],
+      "headline_direction": "UNDETERMINED",
+      "market_reaction": "NOT_VERIFIED",
+      "broker_execution_allowed": false,
+      "price_reactions": {
+        "USDJPY": {
+          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false,
+          "pre_event_close_utc": "2026-10-14T01:15:00+00:00",
+          "pre_event_price": 158.477,
+          "first_post_event_close_utc": "2026-10-14T01:30:00+00:00",
+          "first_post_event_price": 158.468,
+          "first_post_event_change_pips": -0.9,
+          "second_post_event_close_utc": "2026-10-14T01:45:00+00:00",
+          "second_post_event_price": 158.443,
+          "second_post_event_change_pips": -2.5,
+          "net_two_bar_event_window_pips": -3.4,
+          "early_initial_direction": "DOWN",
+          "second_bar_direction": "DOWN",
+          "retrospective_if_first_seen_after_first_candle": true
+        },
+        "AUDJPY": {
+          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false,
+          "pre_event_close_utc": "2026-10-14T01:15:00+00:00",
+          "pre_event_price": 110.746,
+          "first_post_event_close_utc": "2026-10-14T01:30:00+00:00",
+          "first_post_event_price": 110.767,
+          "first_post_event_change_pips": 2.1,
+          "second_post_event_close_utc": "2026-10-14T01:45:00+00:00",
+          "second_post_event_price": 110.738,
+          "second_post_event_change_pips": -2.9,
+          "net_two_bar_event_window_pips": -0.8,
+          "early_initial_direction": "UP",
+          "second_bar_direction": "DOWN",
+          "retrospective_if_first_seen_after_first_candle": true
+        },
+        "NZDJPY": {
+          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false,
+          "pre_event_close_utc": "2026-10-14T01:15:00+00:00",
+          "pre_event_price": 89.075,
+          "first_post_event_close_utc": "2026-10-14T01:30:00+00:00",
+          "first_post_event_price": 89.105,
+          "first_post_event_change_pips": 3.0,
+          "second_post_event_close_utc": "2026-10-14T01:45:00+00:00",
+          "second_post_event_price": 89.082,
+          "second_post_event_change_pips": -2.3,
+          "net_two_bar_event_window_pips": 0.7,
+          "early_initial_direction": "UP",
+          "second_bar_direction": "DOWN",
+          "retrospective_if_first_seen_after_first_candle": true
+        },
+        "EURJPY": {
+          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false,
+          "pre_event_close_utc": "2026-10-14T01:15:00+00:00",
+          "pre_event_price": 177.554,
+          "first_post_event_close_utc": "2026-10-14T01:30:00+00:00",
+          "first_post_event_price": 177.542,
+          "first_post_event_change_pips": -1.2,
+          "second_post_event_close_utc": "2026-10-14T01:45:00+00:00",
+          "second_post_event_price": 177.518,
+          "second_post_event_change_pips": -2.4,
+          "net_two_bar_event_window_pips": -3.6,
+          "early_initial_direction": "DOWN",
+          "second_bar_direction": "DOWN",
+          "retrospective_if_first_seen_after_first_candle": true
+        }
+      },
+      "all_price_reactions_are_noncausal_observations": true
+    },
+    {
+      "provider": "FXStreet_RSS",
+      "title": "Australian Dollar gains against Japanese Yen as China CPI inflation rises in September",
+      "url": "https://www.fxstreet.com/news/australian-dollar-gains-against-japanese-yen-as-china-cpi-inflation-rises-in-september-202610140224",
+      "published_at_utc": "2026-10-14T02:24:57+00:00",
+      "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+      "publisher_age_minutes": 10.4,
+      "source_latency_to_first_seen_minutes": 10.4,
+      "source_public_delay_minutes_at_least": null,
+      "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+      "not_pro_feed_or_first_seen_in_real_time": false,
+      "type": "MACRO_DATA_OR_YIELD",
+      "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+      "currencies": [
+        "AUD",
+        "CNY",
+        "JPY"
+      ],
+      "affected_pairs": [
+        "AUDUSD",
+        "NZDUSD",
+        "USDJPY",
+        "AUDJPY",
+        "NZDJPY",
+        "EURJPY"
+      ],
+      "headline_direction": "UNDETERMINED",
+      "market_reaction": "NOT_VERIFIED",
+      "broker_execution_allowed": false
+    },
+    {
       "provider": "Newsquawk_public_delayed",
-      "title": "[MARKET UPDATE] Asia-Pac stocks are mixed as the region attempts to claw back the recent tech-related losses, while participants await key releases from China including the latest inflation and trade figures",
-      "url": "https://www.newsquawk.com/headlines/market-update-asia-pac-stocks-are-mixed-as-the-region-attempts-to-claw-back-the-recent-tech-related-losses-while-participants-await-key-releases-from-china-including-the-latest-inflation-and-trade-figures",
-      "published_at_utc": "2026-10-14T00:36:00+00:00",
-      "first_seen_at_utc": "2026-10-14T01:03:19.076240+00:00",
-      "publisher_age_minutes": 88.6,
-      "source_latency_to_first_seen_minutes": 27.3,
+      "title": "Japan Vice Minister for International Affairs Mimura says all ASEAN economies need to tackle imminent challenges like energy shock and inflation, adds in delivering fiscal support, we all know it should be targeted, tail",
+      "url": "https://www.newsquawk.com/headlines/japan-vice-minister-for-international-affairs-mimura-says-all-asean-economies-need-to-tackle-imminent-challenges-like-energy-shock-and-inflation-adds-in-delivering-fiscal-support-we-all-know-it-should-be-targeted-tailored-and-temporary",
+      "published_at_utc": "2026-10-14T02:13:00+00:00",
+      "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+      "publisher_age_minutes": 22.3,
+      "source_latency_to_first_seen_minutes": 22.3,
       "source_public_delay_minutes_at_least": 20,
       "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
       "not_pro_feed_or_first_seen_in_real_time": true,
+      "type": "MACRO_DATA_OR_YIELD",
+      "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+      "currencies": [
+        "JPY"
+      ],
+      "affected_pairs": [
+        "USDJPY",
+        "AUDJPY",
+        "NZDJPY",
+        "EURJPY"
+      ],
+      "headline_direction": "UNDETERMINED",
+      "market_reaction": "NOT_VERIFIED",
+      "broker_execution_allowed": false
+    },
+    {
+      "provider": "FXStreet_RSS",
+      "title": "New Zealand Dollar clings to gains near 0.5620 vs USD after China's inflation data",
+      "url": "https://www.fxstreet.com/news/new-zealand-dollar-clings-to-gains-near-05620-vs-usd-after-chinas-inflation-data-202610140150",
+      "published_at_utc": "2026-10-14T01:50:59+00:00",
+      "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+      "publisher_age_minutes": 44.3,
+      "source_latency_to_first_seen_minutes": 44.3,
+      "source_public_delay_minutes_at_least": null,
+      "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+      "not_pro_feed_or_first_seen_in_real_time": false,
+      "type": "MACRO_DATA_OR_YIELD",
+      "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+      "currencies": [
+        "CNY",
+        "NZD"
+      ],
+      "affected_pairs": [
+        "AUDUSD",
+        "NZDUSD",
+        "AUDJPY",
+        "NZDJPY"
+      ],
+      "headline_direction": "UNDETERMINED",
+      "market_reaction": "NOT_VERIFIED",
+      "broker_execution_allowed": false
+    },
+    {
+      "provider": "FXStreet_RSS",
+      "title": "Australian Dollar holds gains following Chinese inflation data",
+      "url": "https://www.fxstreet.com/news/australian-dollar-holds-gains-following-chinese-inflation-data-202610140146",
+      "published_at_utc": "2026-10-14T01:46:12+00:00",
+      "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+      "publisher_age_minutes": 49.1,
+      "source_latency_to_first_seen_minutes": 49.1,
+      "source_public_delay_minutes_at_least": null,
+      "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+      "not_pro_feed_or_first_seen_in_real_time": false,
+      "type": "MACRO_DATA_OR_YIELD",
+      "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+      "currencies": [
+        "AUD"
+      ],
+      "affected_pairs": [
+        "AUDUSD",
+        "AUDJPY"
+      ],
+      "headline_direction": "UNDETERMINED",
+      "market_reaction": "NOT_VERIFIED",
+      "broker_execution_allowed": false
+    },
+    {
+      "provider": "FXStreet_RSS",
+      "title": "British Pound strengthens above 1.3250, traders await US CPI inflation data",
+      "url": "https://www.fxstreet.com/news/british-pound-strengthens-above-13250-traders-await-us-cpi-inflation-data-202610140145",
+      "published_at_utc": "2026-10-14T01:45:35+00:00",
+      "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+      "publisher_age_minutes": 49.7,
+      "source_latency_to_first_seen_minutes": 49.7,
+      "source_public_delay_minutes_at_least": null,
+      "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+      "not_pro_feed_or_first_seen_in_real_time": false,
+      "type": "MACRO_DATA_OR_YIELD",
+      "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+      "currencies": [
+        "GBP"
+      ],
+      "affected_pairs": [
+        "GBPUSD",
+        "EURGBP"
+      ],
+      "headline_direction": "UNDETERMINED",
+      "market_reaction": "NOT_VERIFIED",
+      "broker_execution_allowed": false
+    },
+    {
+      "provider": "FXStreet_RSS",
+      "title": "Breaking: China’s CPI inflation rises to 0.9% YoY in September, vs. 1.0% expected",
+      "url": "https://www.fxstreet.com/news/breaking-chinas-cpi-inflation-rises-to-09-yoy-in-september-vs-10-expected-202610140131",
+      "published_at_utc": "2026-10-14T01:31:21+00:00",
+      "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+      "publisher_age_minutes": 64.0,
+      "source_latency_to_first_seen_minutes": 64.0,
+      "source_public_delay_minutes_at_least": null,
+      "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+      "not_pro_feed_or_first_seen_in_real_time": false,
       "type": "MACRO_DATA_OR_YIELD",
       "priority": "MEDIUM_RELEASE_REACTION_CHECK",
       "currencies": [
@@ -47,26 +283,104 @@
       "broker_execution_allowed": false
     },
     {
+      "provider": "Newsquawk_public_delayed",
+      "title": "China's Customs Vice Minister says in the first three quarters, China's foreign trade has effectively dealt with various external shocks and China's foreign trade has kept good development momentum",
+      "url": "https://www.newsquawk.com/headlines/chinas-customs-vice-minister-says-in-the-first-three-quarters-chinas-foreign-trade-has-effectively-dealt-with-various-external-shocks-and-chinas-foreign-trade-has-kept-good-development-momentum",
+      "published_at_utc": "2026-10-14T02:32:00+00:00",
+      "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+      "publisher_age_minutes": 3.3,
+      "source_latency_to_first_seen_minutes": 3.3,
+      "source_public_delay_minutes_at_least": 20,
+      "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+      "not_pro_feed_or_first_seen_in_real_time": true,
+      "type": "GENERAL",
+      "priority": "CONTEXT",
+      "currencies": [
+        "CNY"
+      ],
+      "affected_pairs": [
+        "AUDUSD",
+        "NZDUSD",
+        "AUDJPY",
+        "NZDJPY"
+      ],
+      "headline_direction": "UNDETERMINED",
+      "market_reaction": "NOT_VERIFIED",
+      "broker_execution_allowed": false
+    },
+    {
+      "provider": "Newsquawk_public_delayed",
+      "title": "China-North Korea bridge will open on October 15th",
+      "url": "https://www.newsquawk.com/headlines/china-north-korea-bridge-will-open-on-october-15th",
+      "published_at_utc": "2026-10-14T02:31:00+00:00",
+      "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+      "publisher_age_minutes": 4.3,
+      "source_latency_to_first_seen_minutes": 4.3,
+      "source_public_delay_minutes_at_least": 20,
+      "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+      "not_pro_feed_or_first_seen_in_real_time": true,
+      "type": "GENERAL",
+      "priority": "CONTEXT",
+      "currencies": [
+        "CNY"
+      ],
+      "affected_pairs": [
+        "AUDUSD",
+        "NZDUSD",
+        "AUDJPY",
+        "NZDJPY"
+      ],
+      "headline_direction": "UNDETERMINED",
+      "market_reaction": "NOT_VERIFIED",
+      "broker_execution_allowed": false
+    },
+    {
       "provider": "FXStreet_RSS",
-      "title": "Euro edges higher above 1.1200 despite France fiscal risks, US CPI in focus",
-      "url": "https://www.fxstreet.com/news/euro-edges-higher-above-11200-despite-france-fiscal-risks-us-cpi-in-focus-202610140034",
-      "published_at_utc": "2026-10-14T00:34:34+00:00",
-      "first_seen_at_utc": "2026-10-14T01:34:55.752547+00:00",
-      "publisher_age_minutes": 90.0,
-      "source_latency_to_first_seen_minutes": 60.4,
+      "title": "China's September Trade Balance: Exports and Imports beat estimates",
+      "url": "https://www.fxstreet.com/news/chinas-september-trade-balance-exports-and-imports-beat-estimates-202610140227",
+      "published_at_utc": "2026-10-14T02:27:40+00:00",
+      "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+      "publisher_age_minutes": 7.6,
+      "source_latency_to_first_seen_minutes": 7.6,
       "source_public_delay_minutes_at_least": null,
       "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
       "not_pro_feed_or_first_seen_in_real_time": false,
-      "type": "MACRO_DATA_OR_YIELD",
-      "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+      "type": "GENERAL",
+      "priority": "CONTEXT",
       "currencies": [
-        "EUR"
+        "CNY"
       ],
       "affected_pairs": [
-        "EURUSD",
-        "EURJPY",
-        "EURCAD",
-        "EURGBP"
+        "AUDUSD",
+        "NZDUSD",
+        "AUDJPY",
+        "NZDJPY"
+      ],
+      "headline_direction": "UNDETERMINED",
+      "market_reaction": "NOT_VERIFIED",
+      "broker_execution_allowed": false
+    },
+    {
+      "provider": "Newsquawk_public_delayed",
+      "title": "Japan's Foreign Minister says the Japanese embassy in Russia is requesting information from Russian authorities regarding a detained Japanese citizen, and Japan is requesting fair treatment of the detained Japanese citiz",
+      "url": "https://www.newsquawk.com/headlines/japans-foreign-minister-says-the-japanese-embassy-in-russia-is-requesting-information-from-russian-authorities-regarding-a-detained-japanese-citizen-and-japan-is-requesting-fair-treatment-of-the-detained-japanese-citizen-to-russian-authorities",
+      "published_at_utc": "2026-10-14T02:11:00+00:00",
+      "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+      "publisher_age_minutes": 24.3,
+      "source_latency_to_first_seen_minutes": 24.3,
+      "source_public_delay_minutes_at_least": 20,
+      "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+      "not_pro_feed_or_first_seen_in_real_time": true,
+      "type": "GENERAL",
+      "priority": "CONTEXT",
+      "currencies": [
+        "JPY"
+      ],
+      "affected_pairs": [
+        "USDJPY",
+        "AUDJPY",
+        "NZDJPY",
+        "EURJPY"
       ],
       "headline_direction": "UNDETERMINED",
       "market_reaction": "NOT_VERIFIED",
@@ -79,18 +393,177 @@
       "policy_headlines": [],
       "news_headlines": [
         {
+          "provider": "FXStreet_RSS",
+          "title": "Australian Dollar gains against Japanese Yen as China CPI inflation rises in September",
+          "url": "https://www.fxstreet.com/news/australian-dollar-gains-against-japanese-yen-as-china-cpi-inflation-rises-in-september-202610140224",
+          "published_at_utc": "2026-10-14T02:24:57+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 10.4,
+          "source_latency_to_first_seen_minutes": 10.4,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "MACRO_DATA_OR_YIELD",
+          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "currencies": [
+            "AUD",
+            "CNY",
+            "JPY"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "USDJPY",
+            "AUDJPY",
+            "NZDJPY",
+            "EURJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "FXStreet_RSS",
+          "title": "New Zealand Dollar clings to gains near 0.5620 vs USD after China's inflation data",
+          "url": "https://www.fxstreet.com/news/new-zealand-dollar-clings-to-gains-near-05620-vs-usd-after-chinas-inflation-data-202610140150",
+          "published_at_utc": "2026-10-14T01:50:59+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 44.3,
+          "source_latency_to_first_seen_minutes": 44.3,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "MACRO_DATA_OR_YIELD",
+          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "currencies": [
+            "CNY",
+            "NZD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "AUDJPY",
+            "NZDJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "FXStreet_RSS",
+          "title": "Australian Dollar holds gains following Chinese inflation data",
+          "url": "https://www.fxstreet.com/news/australian-dollar-holds-gains-following-chinese-inflation-data-202610140146",
+          "published_at_utc": "2026-10-14T01:46:12+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 49.1,
+          "source_latency_to_first_seen_minutes": 49.1,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "MACRO_DATA_OR_YIELD",
+          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "currencies": [
+            "AUD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "AUDJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "FXStreet_RSS",
+          "title": "Breaking: China’s CPI inflation rises to 0.9% YoY in September, vs. 1.0% expected",
+          "url": "https://www.fxstreet.com/news/breaking-chinas-cpi-inflation-rises-to-09-yoy-in-september-vs-10-expected-202610140131",
+          "published_at_utc": "2026-10-14T01:31:21+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 64.0,
+          "source_latency_to_first_seen_minutes": 64.0,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "MACRO_DATA_OR_YIELD",
+          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "currencies": [
+            "CNY"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "AUDJPY",
+            "NZDJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
           "provider": "Newsquawk_public_delayed",
-          "title": "[MARKET UPDATE] Asia-Pac stocks are mixed as the region attempts to claw back the recent tech-related losses, while participants await key releases from China including the latest inflation and trade figures",
-          "url": "https://www.newsquawk.com/headlines/market-update-asia-pac-stocks-are-mixed-as-the-region-attempts-to-claw-back-the-recent-tech-related-losses-while-participants-await-key-releases-from-china-including-the-latest-inflation-and-trade-figures",
-          "published_at_utc": "2026-10-14T00:36:00+00:00",
-          "first_seen_at_utc": "2026-10-14T01:03:19.076240+00:00",
-          "publisher_age_minutes": 88.6,
-          "source_latency_to_first_seen_minutes": 27.3,
+          "title": "China's Customs Vice Minister says in the first three quarters, China's foreign trade has effectively dealt with various external shocks and China's foreign trade has kept good development momentum",
+          "url": "https://www.newsquawk.com/headlines/chinas-customs-vice-minister-says-in-the-first-three-quarters-chinas-foreign-trade-has-effectively-dealt-with-various-external-shocks-and-chinas-foreign-trade-has-kept-good-development-momentum",
+          "published_at_utc": "2026-10-14T02:32:00+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 3.3,
+          "source_latency_to_first_seen_minutes": 3.3,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "CNY"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "AUDJPY",
+            "NZDJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "China-North Korea bridge will open on October 15th",
+          "url": "https://www.newsquawk.com/headlines/china-north-korea-bridge-will-open-on-october-15th",
+          "published_at_utc": "2026-10-14T02:31:00+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 4.3,
+          "source_latency_to_first_seen_minutes": 4.3,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "CNY"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "AUDJPY",
+            "NZDJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "FXStreet_RSS",
+          "title": "China's September Trade Balance: Exports and Imports beat estimates",
+          "url": "https://www.fxstreet.com/news/chinas-september-trade-balance-exports-and-imports-beat-estimates-202610140227",
+          "published_at_utc": "2026-10-14T02:27:40+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 7.6,
+          "source_latency_to_first_seen_minutes": 7.6,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
           "currencies": [
             "CNY"
           ],
@@ -115,18 +588,153 @@
       "policy_headlines": [],
       "news_headlines": [
         {
+          "provider": "FXStreet_RSS",
+          "title": "Australian Dollar gains against Japanese Yen as China CPI inflation rises in September",
+          "url": "https://www.fxstreet.com/news/australian-dollar-gains-against-japanese-yen-as-china-cpi-inflation-rises-in-september-202610140224",
+          "published_at_utc": "2026-10-14T02:24:57+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 10.4,
+          "source_latency_to_first_seen_minutes": 10.4,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "MACRO_DATA_OR_YIELD",
+          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "currencies": [
+            "AUD",
+            "CNY",
+            "JPY"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "USDJPY",
+            "AUDJPY",
+            "NZDJPY",
+            "EURJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "FXStreet_RSS",
+          "title": "New Zealand Dollar clings to gains near 0.5620 vs USD after China's inflation data",
+          "url": "https://www.fxstreet.com/news/new-zealand-dollar-clings-to-gains-near-05620-vs-usd-after-chinas-inflation-data-202610140150",
+          "published_at_utc": "2026-10-14T01:50:59+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 44.3,
+          "source_latency_to_first_seen_minutes": 44.3,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "MACRO_DATA_OR_YIELD",
+          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "currencies": [
+            "CNY",
+            "NZD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "AUDJPY",
+            "NZDJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "FXStreet_RSS",
+          "title": "Breaking: China’s CPI inflation rises to 0.9% YoY in September, vs. 1.0% expected",
+          "url": "https://www.fxstreet.com/news/breaking-chinas-cpi-inflation-rises-to-09-yoy-in-september-vs-10-expected-202610140131",
+          "published_at_utc": "2026-10-14T01:31:21+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 64.0,
+          "source_latency_to_first_seen_minutes": 64.0,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "MACRO_DATA_OR_YIELD",
+          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "currencies": [
+            "CNY"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "AUDJPY",
+            "NZDJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
           "provider": "Newsquawk_public_delayed",
-          "title": "[MARKET UPDATE] Asia-Pac stocks are mixed as the region attempts to claw back the recent tech-related losses, while participants await key releases from China including the latest inflation and trade figures",
-          "url": "https://www.newsquawk.com/headlines/market-update-asia-pac-stocks-are-mixed-as-the-region-attempts-to-claw-back-the-recent-tech-related-losses-while-participants-await-key-releases-from-china-including-the-latest-inflation-and-trade-figures",
-          "published_at_utc": "2026-10-14T00:36:00+00:00",
-          "first_seen_at_utc": "2026-10-14T01:03:19.076240+00:00",
-          "publisher_age_minutes": 88.6,
-          "source_latency_to_first_seen_minutes": 27.3,
+          "title": "China's Customs Vice Minister says in the first three quarters, China's foreign trade has effectively dealt with various external shocks and China's foreign trade has kept good development momentum",
+          "url": "https://www.newsquawk.com/headlines/chinas-customs-vice-minister-says-in-the-first-three-quarters-chinas-foreign-trade-has-effectively-dealt-with-various-external-shocks-and-chinas-foreign-trade-has-kept-good-development-momentum",
+          "published_at_utc": "2026-10-14T02:32:00+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 3.3,
+          "source_latency_to_first_seen_minutes": 3.3,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "CNY"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "AUDJPY",
+            "NZDJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "China-North Korea bridge will open on October 15th",
+          "url": "https://www.newsquawk.com/headlines/china-north-korea-bridge-will-open-on-october-15th",
+          "published_at_utc": "2026-10-14T02:31:00+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 4.3,
+          "source_latency_to_first_seen_minutes": 4.3,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "CNY"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "AUDJPY",
+            "NZDJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "FXStreet_RSS",
+          "title": "China's September Trade Balance: Exports and Imports beat estimates",
+          "url": "https://www.fxstreet.com/news/chinas-september-trade-balance-exports-and-imports-beat-estimates-202610140227",
+          "published_at_utc": "2026-10-14T02:27:40+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 7.6,
+          "source_latency_to_first_seen_minutes": 7.6,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
           "currencies": [
             "CNY"
           ],
@@ -147,29 +755,36 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "EURUSD": {
+      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
+      "policy_headlines": [],
+      "news_headlines": [],
+      "source_coverage_incomplete": true,
+      "no_news_is_not_proof_of_no_catalyst": true,
+      "directional_vote": "NONE",
+      "price_reaction_requires_completed_15m30m_candles": true
+    },
+    "GBPUSD": {
       "status": "HEADLINES_PRESENT",
       "policy_headlines": [],
       "news_headlines": [
         {
           "provider": "FXStreet_RSS",
-          "title": "Euro edges higher above 1.1200 despite France fiscal risks, US CPI in focus",
-          "url": "https://www.fxstreet.com/news/euro-edges-higher-above-11200-despite-france-fiscal-risks-us-cpi-in-focus-202610140034",
-          "published_at_utc": "2026-10-14T00:34:34+00:00",
-          "first_seen_at_utc": "2026-10-14T01:34:55.752547+00:00",
-          "publisher_age_minutes": 90.0,
-          "source_latency_to_first_seen_minutes": 60.4,
+          "title": "British Pound strengthens above 1.3250, traders await US CPI inflation data",
+          "url": "https://www.fxstreet.com/news/british-pound-strengthens-above-13250-traders-await-us-cpi-inflation-data-202610140145",
+          "published_at_utc": "2026-10-14T01:45:35+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 49.7,
+          "source_latency_to_first_seen_minutes": 49.7,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
           "not_pro_feed_or_first_seen_in_real_time": false,
           "type": "MACRO_DATA_OR_YIELD",
           "priority": "MEDIUM_RELEASE_REACTION_CHECK",
           "currencies": [
-            "EUR"
+            "GBP"
           ],
           "affected_pairs": [
-            "EURUSD",
-            "EURJPY",
-            "EURCAD",
+            "GBPUSD",
             "EURGBP"
           ],
           "headline_direction": "UNDETERMINED",
@@ -182,41 +797,456 @@
       "directional_vote": "NONE",
       "price_reaction_requires_completed_15m30m_candles": true
     },
-    "GBPUSD": {
-      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
-      "policy_headlines": [],
-      "news_headlines": [],
-      "source_coverage_incomplete": true,
-      "no_news_is_not_proof_of_no_catalyst": true,
-      "directional_vote": "NONE",
-      "price_reaction_requires_completed_15m30m_candles": true
-    },
     "USDJPY": {
-      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
-      "policy_headlines": [],
-      "news_headlines": [],
+      "status": "POLICY_REACTION_CHECK",
+      "policy_headlines": [
+        {
+          "provider": "FXStreet_RSS",
+          "title": "Japanese Yen softens as October BoJ hike bets fade; stuck in a range vs USD ahead of US CPI",
+          "url": "https://www.fxstreet.com/news/japanese-yen-softens-as-october-boj-hike-bets-fade-stuck-in-a-range-vs-usd-ahead-of-us-cpi-202610140127",
+          "published_at_utc": "2026-10-14T01:27:03+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 68.3,
+          "source_latency_to_first_seen_minutes": 68.3,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "JPY"
+          ],
+          "affected_pairs": [
+            "USDJPY",
+            "AUDJPY",
+            "NZDJPY",
+            "EURJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-14T01:15:00+00:00",
+            "pre_event_price": 158.477,
+            "first_post_event_close_utc": "2026-10-14T01:30:00+00:00",
+            "first_post_event_price": 158.468,
+            "first_post_event_change_pips": -0.9,
+            "second_post_event_close_utc": "2026-10-14T01:45:00+00:00",
+            "second_post_event_price": 158.443,
+            "second_post_event_change_pips": -2.5,
+            "net_two_bar_event_window_pips": -3.4,
+            "early_initial_direction": "DOWN",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": true
+          }
+        }
+      ],
+      "news_headlines": [
+        {
+          "provider": "FXStreet_RSS",
+          "title": "Japanese Yen softens as October BoJ hike bets fade; stuck in a range vs USD ahead of US CPI",
+          "url": "https://www.fxstreet.com/news/japanese-yen-softens-as-october-boj-hike-bets-fade-stuck-in-a-range-vs-usd-ahead-of-us-cpi-202610140127",
+          "published_at_utc": "2026-10-14T01:27:03+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 68.3,
+          "source_latency_to_first_seen_minutes": 68.3,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "JPY"
+          ],
+          "affected_pairs": [
+            "USDJPY",
+            "AUDJPY",
+            "NZDJPY",
+            "EURJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-14T01:15:00+00:00",
+            "pre_event_price": 158.477,
+            "first_post_event_close_utc": "2026-10-14T01:30:00+00:00",
+            "first_post_event_price": 158.468,
+            "first_post_event_change_pips": -0.9,
+            "second_post_event_close_utc": "2026-10-14T01:45:00+00:00",
+            "second_post_event_price": 158.443,
+            "second_post_event_change_pips": -2.5,
+            "net_two_bar_event_window_pips": -3.4,
+            "early_initial_direction": "DOWN",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": true
+          }
+        },
+        {
+          "provider": "FXStreet_RSS",
+          "title": "Australian Dollar gains against Japanese Yen as China CPI inflation rises in September",
+          "url": "https://www.fxstreet.com/news/australian-dollar-gains-against-japanese-yen-as-china-cpi-inflation-rises-in-september-202610140224",
+          "published_at_utc": "2026-10-14T02:24:57+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 10.4,
+          "source_latency_to_first_seen_minutes": 10.4,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "MACRO_DATA_OR_YIELD",
+          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "currencies": [
+            "AUD",
+            "CNY",
+            "JPY"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "USDJPY",
+            "AUDJPY",
+            "NZDJPY",
+            "EURJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "Japan Vice Minister for International Affairs Mimura says all ASEAN economies need to tackle imminent challenges like energy shock and inflation, adds in delivering fiscal support, we all know it should be targeted, tail",
+          "url": "https://www.newsquawk.com/headlines/japan-vice-minister-for-international-affairs-mimura-says-all-asean-economies-need-to-tackle-imminent-challenges-like-energy-shock-and-inflation-adds-in-delivering-fiscal-support-we-all-know-it-should-be-targeted-tailored-and-temporary",
+          "published_at_utc": "2026-10-14T02:13:00+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 22.3,
+          "source_latency_to_first_seen_minutes": 22.3,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "MACRO_DATA_OR_YIELD",
+          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "currencies": [
+            "JPY"
+          ],
+          "affected_pairs": [
+            "USDJPY",
+            "AUDJPY",
+            "NZDJPY",
+            "EURJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "Japan's Foreign Minister says the Japanese embassy in Russia is requesting information from Russian authorities regarding a detained Japanese citizen, and Japan is requesting fair treatment of the detained Japanese citiz",
+          "url": "https://www.newsquawk.com/headlines/japans-foreign-minister-says-the-japanese-embassy-in-russia-is-requesting-information-from-russian-authorities-regarding-a-detained-japanese-citizen-and-japan-is-requesting-fair-treatment-of-the-detained-japanese-citizen-to-russian-authorities",
+          "published_at_utc": "2026-10-14T02:11:00+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 24.3,
+          "source_latency_to_first_seen_minutes": 24.3,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "JPY"
+          ],
+          "affected_pairs": [
+            "USDJPY",
+            "AUDJPY",
+            "NZDJPY",
+            "EURJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        }
+      ],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "AUDJPY": {
-      "status": "HEADLINES_PRESENT",
-      "policy_headlines": [],
+      "status": "POLICY_REACTION_CHECK",
+      "policy_headlines": [
+        {
+          "provider": "FXStreet_RSS",
+          "title": "Japanese Yen softens as October BoJ hike bets fade; stuck in a range vs USD ahead of US CPI",
+          "url": "https://www.fxstreet.com/news/japanese-yen-softens-as-october-boj-hike-bets-fade-stuck-in-a-range-vs-usd-ahead-of-us-cpi-202610140127",
+          "published_at_utc": "2026-10-14T01:27:03+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 68.3,
+          "source_latency_to_first_seen_minutes": 68.3,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "JPY"
+          ],
+          "affected_pairs": [
+            "USDJPY",
+            "AUDJPY",
+            "NZDJPY",
+            "EURJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-14T01:15:00+00:00",
+            "pre_event_price": 110.746,
+            "first_post_event_close_utc": "2026-10-14T01:30:00+00:00",
+            "first_post_event_price": 110.767,
+            "first_post_event_change_pips": 2.1,
+            "second_post_event_close_utc": "2026-10-14T01:45:00+00:00",
+            "second_post_event_price": 110.738,
+            "second_post_event_change_pips": -2.9,
+            "net_two_bar_event_window_pips": -0.8,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": true
+          }
+        }
+      ],
       "news_headlines": [
         {
+          "provider": "FXStreet_RSS",
+          "title": "Japanese Yen softens as October BoJ hike bets fade; stuck in a range vs USD ahead of US CPI",
+          "url": "https://www.fxstreet.com/news/japanese-yen-softens-as-october-boj-hike-bets-fade-stuck-in-a-range-vs-usd-ahead-of-us-cpi-202610140127",
+          "published_at_utc": "2026-10-14T01:27:03+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 68.3,
+          "source_latency_to_first_seen_minutes": 68.3,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "JPY"
+          ],
+          "affected_pairs": [
+            "USDJPY",
+            "AUDJPY",
+            "NZDJPY",
+            "EURJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-14T01:15:00+00:00",
+            "pre_event_price": 110.746,
+            "first_post_event_close_utc": "2026-10-14T01:30:00+00:00",
+            "first_post_event_price": 110.767,
+            "first_post_event_change_pips": 2.1,
+            "second_post_event_close_utc": "2026-10-14T01:45:00+00:00",
+            "second_post_event_price": 110.738,
+            "second_post_event_change_pips": -2.9,
+            "net_two_bar_event_window_pips": -0.8,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": true
+          }
+        },
+        {
+          "provider": "FXStreet_RSS",
+          "title": "Australian Dollar gains against Japanese Yen as China CPI inflation rises in September",
+          "url": "https://www.fxstreet.com/news/australian-dollar-gains-against-japanese-yen-as-china-cpi-inflation-rises-in-september-202610140224",
+          "published_at_utc": "2026-10-14T02:24:57+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 10.4,
+          "source_latency_to_first_seen_minutes": 10.4,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "MACRO_DATA_OR_YIELD",
+          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "currencies": [
+            "AUD",
+            "CNY",
+            "JPY"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "USDJPY",
+            "AUDJPY",
+            "NZDJPY",
+            "EURJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
           "provider": "Newsquawk_public_delayed",
-          "title": "[MARKET UPDATE] Asia-Pac stocks are mixed as the region attempts to claw back the recent tech-related losses, while participants await key releases from China including the latest inflation and trade figures",
-          "url": "https://www.newsquawk.com/headlines/market-update-asia-pac-stocks-are-mixed-as-the-region-attempts-to-claw-back-the-recent-tech-related-losses-while-participants-await-key-releases-from-china-including-the-latest-inflation-and-trade-figures",
-          "published_at_utc": "2026-10-14T00:36:00+00:00",
-          "first_seen_at_utc": "2026-10-14T01:03:19.076240+00:00",
-          "publisher_age_minutes": 88.6,
-          "source_latency_to_first_seen_minutes": 27.3,
+          "title": "Japan Vice Minister for International Affairs Mimura says all ASEAN economies need to tackle imminent challenges like energy shock and inflation, adds in delivering fiscal support, we all know it should be targeted, tail",
+          "url": "https://www.newsquawk.com/headlines/japan-vice-minister-for-international-affairs-mimura-says-all-asean-economies-need-to-tackle-imminent-challenges-like-energy-shock-and-inflation-adds-in-delivering-fiscal-support-we-all-know-it-should-be-targeted-tailored-and-temporary",
+          "published_at_utc": "2026-10-14T02:13:00+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 22.3,
+          "source_latency_to_first_seen_minutes": 22.3,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
           "type": "MACRO_DATA_OR_YIELD",
           "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "currencies": [
+            "JPY"
+          ],
+          "affected_pairs": [
+            "USDJPY",
+            "AUDJPY",
+            "NZDJPY",
+            "EURJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "FXStreet_RSS",
+          "title": "New Zealand Dollar clings to gains near 0.5620 vs USD after China's inflation data",
+          "url": "https://www.fxstreet.com/news/new-zealand-dollar-clings-to-gains-near-05620-vs-usd-after-chinas-inflation-data-202610140150",
+          "published_at_utc": "2026-10-14T01:50:59+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 44.3,
+          "source_latency_to_first_seen_minutes": 44.3,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "MACRO_DATA_OR_YIELD",
+          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "currencies": [
+            "CNY",
+            "NZD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "AUDJPY",
+            "NZDJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "FXStreet_RSS",
+          "title": "Australian Dollar holds gains following Chinese inflation data",
+          "url": "https://www.fxstreet.com/news/australian-dollar-holds-gains-following-chinese-inflation-data-202610140146",
+          "published_at_utc": "2026-10-14T01:46:12+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 49.1,
+          "source_latency_to_first_seen_minutes": 49.1,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "MACRO_DATA_OR_YIELD",
+          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "currencies": [
+            "AUD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "AUDJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "FXStreet_RSS",
+          "title": "Breaking: China’s CPI inflation rises to 0.9% YoY in September, vs. 1.0% expected",
+          "url": "https://www.fxstreet.com/news/breaking-chinas-cpi-inflation-rises-to-09-yoy-in-september-vs-10-expected-202610140131",
+          "published_at_utc": "2026-10-14T01:31:21+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 64.0,
+          "source_latency_to_first_seen_minutes": 64.0,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "MACRO_DATA_OR_YIELD",
+          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "currencies": [
+            "CNY"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "AUDJPY",
+            "NZDJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "China's Customs Vice Minister says in the first three quarters, China's foreign trade has effectively dealt with various external shocks and China's foreign trade has kept good development momentum",
+          "url": "https://www.newsquawk.com/headlines/chinas-customs-vice-minister-says-in-the-first-three-quarters-chinas-foreign-trade-has-effectively-dealt-with-various-external-shocks-and-chinas-foreign-trade-has-kept-good-development-momentum",
+          "published_at_utc": "2026-10-14T02:32:00+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 3.3,
+          "source_latency_to_first_seen_minutes": 3.3,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "CNY"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "AUDJPY",
+            "NZDJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "China-North Korea bridge will open on October 15th",
+          "url": "https://www.newsquawk.com/headlines/china-north-korea-bridge-will-open-on-october-15th",
+          "published_at_utc": "2026-10-14T02:31:00+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 4.3,
+          "source_latency_to_first_seen_minutes": 4.3,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
           "currencies": [
             "CNY"
           ],
@@ -237,22 +1267,274 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "NZDJPY": {
-      "status": "HEADLINES_PRESENT",
-      "policy_headlines": [],
+      "status": "POLICY_REACTION_CHECK",
+      "policy_headlines": [
+        {
+          "provider": "FXStreet_RSS",
+          "title": "Japanese Yen softens as October BoJ hike bets fade; stuck in a range vs USD ahead of US CPI",
+          "url": "https://www.fxstreet.com/news/japanese-yen-softens-as-october-boj-hike-bets-fade-stuck-in-a-range-vs-usd-ahead-of-us-cpi-202610140127",
+          "published_at_utc": "2026-10-14T01:27:03+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 68.3,
+          "source_latency_to_first_seen_minutes": 68.3,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "JPY"
+          ],
+          "affected_pairs": [
+            "USDJPY",
+            "AUDJPY",
+            "NZDJPY",
+            "EURJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-14T01:15:00+00:00",
+            "pre_event_price": 89.075,
+            "first_post_event_close_utc": "2026-10-14T01:30:00+00:00",
+            "first_post_event_price": 89.105,
+            "first_post_event_change_pips": 3.0,
+            "second_post_event_close_utc": "2026-10-14T01:45:00+00:00",
+            "second_post_event_price": 89.082,
+            "second_post_event_change_pips": -2.3,
+            "net_two_bar_event_window_pips": 0.7,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": true
+          }
+        }
+      ],
       "news_headlines": [
         {
+          "provider": "FXStreet_RSS",
+          "title": "Japanese Yen softens as October BoJ hike bets fade; stuck in a range vs USD ahead of US CPI",
+          "url": "https://www.fxstreet.com/news/japanese-yen-softens-as-october-boj-hike-bets-fade-stuck-in-a-range-vs-usd-ahead-of-us-cpi-202610140127",
+          "published_at_utc": "2026-10-14T01:27:03+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 68.3,
+          "source_latency_to_first_seen_minutes": 68.3,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "JPY"
+          ],
+          "affected_pairs": [
+            "USDJPY",
+            "AUDJPY",
+            "NZDJPY",
+            "EURJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-14T01:15:00+00:00",
+            "pre_event_price": 89.075,
+            "first_post_event_close_utc": "2026-10-14T01:30:00+00:00",
+            "first_post_event_price": 89.105,
+            "first_post_event_change_pips": 3.0,
+            "second_post_event_close_utc": "2026-10-14T01:45:00+00:00",
+            "second_post_event_price": 89.082,
+            "second_post_event_change_pips": -2.3,
+            "net_two_bar_event_window_pips": 0.7,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": true
+          }
+        },
+        {
+          "provider": "FXStreet_RSS",
+          "title": "Australian Dollar gains against Japanese Yen as China CPI inflation rises in September",
+          "url": "https://www.fxstreet.com/news/australian-dollar-gains-against-japanese-yen-as-china-cpi-inflation-rises-in-september-202610140224",
+          "published_at_utc": "2026-10-14T02:24:57+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 10.4,
+          "source_latency_to_first_seen_minutes": 10.4,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "MACRO_DATA_OR_YIELD",
+          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "currencies": [
+            "AUD",
+            "CNY",
+            "JPY"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "USDJPY",
+            "AUDJPY",
+            "NZDJPY",
+            "EURJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
           "provider": "Newsquawk_public_delayed",
-          "title": "[MARKET UPDATE] Asia-Pac stocks are mixed as the region attempts to claw back the recent tech-related losses, while participants await key releases from China including the latest inflation and trade figures",
-          "url": "https://www.newsquawk.com/headlines/market-update-asia-pac-stocks-are-mixed-as-the-region-attempts-to-claw-back-the-recent-tech-related-losses-while-participants-await-key-releases-from-china-including-the-latest-inflation-and-trade-figures",
-          "published_at_utc": "2026-10-14T00:36:00+00:00",
-          "first_seen_at_utc": "2026-10-14T01:03:19.076240+00:00",
-          "publisher_age_minutes": 88.6,
-          "source_latency_to_first_seen_minutes": 27.3,
+          "title": "Japan Vice Minister for International Affairs Mimura says all ASEAN economies need to tackle imminent challenges like energy shock and inflation, adds in delivering fiscal support, we all know it should be targeted, tail",
+          "url": "https://www.newsquawk.com/headlines/japan-vice-minister-for-international-affairs-mimura-says-all-asean-economies-need-to-tackle-imminent-challenges-like-energy-shock-and-inflation-adds-in-delivering-fiscal-support-we-all-know-it-should-be-targeted-tailored-and-temporary",
+          "published_at_utc": "2026-10-14T02:13:00+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 22.3,
+          "source_latency_to_first_seen_minutes": 22.3,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
           "type": "MACRO_DATA_OR_YIELD",
           "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "currencies": [
+            "JPY"
+          ],
+          "affected_pairs": [
+            "USDJPY",
+            "AUDJPY",
+            "NZDJPY",
+            "EURJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "FXStreet_RSS",
+          "title": "New Zealand Dollar clings to gains near 0.5620 vs USD after China's inflation data",
+          "url": "https://www.fxstreet.com/news/new-zealand-dollar-clings-to-gains-near-05620-vs-usd-after-chinas-inflation-data-202610140150",
+          "published_at_utc": "2026-10-14T01:50:59+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 44.3,
+          "source_latency_to_first_seen_minutes": 44.3,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "MACRO_DATA_OR_YIELD",
+          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "currencies": [
+            "CNY",
+            "NZD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "AUDJPY",
+            "NZDJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "FXStreet_RSS",
+          "title": "Breaking: China’s CPI inflation rises to 0.9% YoY in September, vs. 1.0% expected",
+          "url": "https://www.fxstreet.com/news/breaking-chinas-cpi-inflation-rises-to-09-yoy-in-september-vs-10-expected-202610140131",
+          "published_at_utc": "2026-10-14T01:31:21+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 64.0,
+          "source_latency_to_first_seen_minutes": 64.0,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "MACRO_DATA_OR_YIELD",
+          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "currencies": [
+            "CNY"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "AUDJPY",
+            "NZDJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "China's Customs Vice Minister says in the first three quarters, China's foreign trade has effectively dealt with various external shocks and China's foreign trade has kept good development momentum",
+          "url": "https://www.newsquawk.com/headlines/chinas-customs-vice-minister-says-in-the-first-three-quarters-chinas-foreign-trade-has-effectively-dealt-with-various-external-shocks-and-chinas-foreign-trade-has-kept-good-development-momentum",
+          "published_at_utc": "2026-10-14T02:32:00+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 3.3,
+          "source_latency_to_first_seen_minutes": 3.3,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "CNY"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "AUDJPY",
+            "NZDJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "China-North Korea bridge will open on October 15th",
+          "url": "https://www.newsquawk.com/headlines/china-north-korea-bridge-will-open-on-october-15th",
+          "published_at_utc": "2026-10-14T02:31:00+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 4.3,
+          "source_latency_to_first_seen_minutes": 4.3,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "CNY"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "AUDJPY",
+            "NZDJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "FXStreet_RSS",
+          "title": "China's September Trade Balance: Exports and Imports beat estimates",
+          "url": "https://www.fxstreet.com/news/chinas-september-trade-balance-exports-and-imports-beat-estimates-202610140227",
+          "published_at_utc": "2026-10-14T02:27:40+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 7.6,
+          "source_latency_to_first_seen_minutes": 7.6,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
           "currencies": [
             "CNY"
           ],
@@ -273,30 +1555,177 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "EURJPY": {
-      "status": "HEADLINES_PRESENT",
-      "policy_headlines": [],
+      "status": "POLICY_REACTION_CHECK",
+      "policy_headlines": [
+        {
+          "provider": "FXStreet_RSS",
+          "title": "Japanese Yen softens as October BoJ hike bets fade; stuck in a range vs USD ahead of US CPI",
+          "url": "https://www.fxstreet.com/news/japanese-yen-softens-as-october-boj-hike-bets-fade-stuck-in-a-range-vs-usd-ahead-of-us-cpi-202610140127",
+          "published_at_utc": "2026-10-14T01:27:03+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 68.3,
+          "source_latency_to_first_seen_minutes": 68.3,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "JPY"
+          ],
+          "affected_pairs": [
+            "USDJPY",
+            "AUDJPY",
+            "NZDJPY",
+            "EURJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-14T01:15:00+00:00",
+            "pre_event_price": 177.554,
+            "first_post_event_close_utc": "2026-10-14T01:30:00+00:00",
+            "first_post_event_price": 177.542,
+            "first_post_event_change_pips": -1.2,
+            "second_post_event_close_utc": "2026-10-14T01:45:00+00:00",
+            "second_post_event_price": 177.518,
+            "second_post_event_change_pips": -2.4,
+            "net_two_bar_event_window_pips": -3.6,
+            "early_initial_direction": "DOWN",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": true
+          }
+        }
+      ],
       "news_headlines": [
         {
           "provider": "FXStreet_RSS",
-          "title": "Euro edges higher above 1.1200 despite France fiscal risks, US CPI in focus",
-          "url": "https://www.fxstreet.com/news/euro-edges-higher-above-11200-despite-france-fiscal-risks-us-cpi-in-focus-202610140034",
-          "published_at_utc": "2026-10-14T00:34:34+00:00",
-          "first_seen_at_utc": "2026-10-14T01:34:55.752547+00:00",
-          "publisher_age_minutes": 90.0,
-          "source_latency_to_first_seen_minutes": 60.4,
+          "title": "Japanese Yen softens as October BoJ hike bets fade; stuck in a range vs USD ahead of US CPI",
+          "url": "https://www.fxstreet.com/news/japanese-yen-softens-as-october-boj-hike-bets-fade-stuck-in-a-range-vs-usd-ahead-of-us-cpi-202610140127",
+          "published_at_utc": "2026-10-14T01:27:03+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 68.3,
+          "source_latency_to_first_seen_minutes": 68.3,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "JPY"
+          ],
+          "affected_pairs": [
+            "USDJPY",
+            "AUDJPY",
+            "NZDJPY",
+            "EURJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-14T01:15:00+00:00",
+            "pre_event_price": 177.554,
+            "first_post_event_close_utc": "2026-10-14T01:30:00+00:00",
+            "first_post_event_price": 177.542,
+            "first_post_event_change_pips": -1.2,
+            "second_post_event_close_utc": "2026-10-14T01:45:00+00:00",
+            "second_post_event_price": 177.518,
+            "second_post_event_change_pips": -2.4,
+            "net_two_bar_event_window_pips": -3.6,
+            "early_initial_direction": "DOWN",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": true
+          }
+        },
+        {
+          "provider": "FXStreet_RSS",
+          "title": "Australian Dollar gains against Japanese Yen as China CPI inflation rises in September",
+          "url": "https://www.fxstreet.com/news/australian-dollar-gains-against-japanese-yen-as-china-cpi-inflation-rises-in-september-202610140224",
+          "published_at_utc": "2026-10-14T02:24:57+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 10.4,
+          "source_latency_to_first_seen_minutes": 10.4,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
           "not_pro_feed_or_first_seen_in_real_time": false,
           "type": "MACRO_DATA_OR_YIELD",
           "priority": "MEDIUM_RELEASE_REACTION_CHECK",
           "currencies": [
-            "EUR"
+            "AUD",
+            "CNY",
+            "JPY"
           ],
           "affected_pairs": [
-            "EURUSD",
-            "EURJPY",
-            "EURCAD",
-            "EURGBP"
+            "AUDUSD",
+            "NZDUSD",
+            "USDJPY",
+            "AUDJPY",
+            "NZDJPY",
+            "EURJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "Japan Vice Minister for International Affairs Mimura says all ASEAN economies need to tackle imminent challenges like energy shock and inflation, adds in delivering fiscal support, we all know it should be targeted, tail",
+          "url": "https://www.newsquawk.com/headlines/japan-vice-minister-for-international-affairs-mimura-says-all-asean-economies-need-to-tackle-imminent-challenges-like-energy-shock-and-inflation-adds-in-delivering-fiscal-support-we-all-know-it-should-be-targeted-tailored-and-temporary",
+          "published_at_utc": "2026-10-14T02:13:00+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 22.3,
+          "source_latency_to_first_seen_minutes": 22.3,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "MACRO_DATA_OR_YIELD",
+          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "currencies": [
+            "JPY"
+          ],
+          "affected_pairs": [
+            "USDJPY",
+            "AUDJPY",
+            "NZDJPY",
+            "EURJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "Japan's Foreign Minister says the Japanese embassy in Russia is requesting information from Russian authorities regarding a detained Japanese citizen, and Japan is requesting fair treatment of the detained Japanese citiz",
+          "url": "https://www.newsquawk.com/headlines/japans-foreign-minister-says-the-japanese-embassy-in-russia-is-requesting-information-from-russian-authorities-regarding-a-detained-japanese-citizen-and-japan-is-requesting-fair-treatment-of-the-detained-japanese-citizen-to-russian-authorities",
+          "published_at_utc": "2026-10-14T02:11:00+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 24.3,
+          "source_latency_to_first_seen_minutes": 24.3,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "JPY"
+          ],
+          "affected_pairs": [
+            "USDJPY",
+            "AUDJPY",
+            "NZDJPY",
+            "EURJPY"
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
@@ -309,36 +1738,9 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "EURCAD": {
-      "status": "HEADLINES_PRESENT",
+      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
       "policy_headlines": [],
-      "news_headlines": [
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Euro edges higher above 1.1200 despite France fiscal risks, US CPI in focus",
-          "url": "https://www.fxstreet.com/news/euro-edges-higher-above-11200-despite-france-fiscal-risks-us-cpi-in-focus-202610140034",
-          "published_at_utc": "2026-10-14T00:34:34+00:00",
-          "first_seen_at_utc": "2026-10-14T01:34:55.752547+00:00",
-          "publisher_age_minutes": 90.0,
-          "source_latency_to_first_seen_minutes": 60.4,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
-          "currencies": [
-            "EUR"
-          ],
-          "affected_pairs": [
-            "EURUSD",
-            "EURJPY",
-            "EURCAD",
-            "EURGBP"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        }
-      ],
+      "news_headlines": [],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
@@ -359,24 +1761,22 @@
       "news_headlines": [
         {
           "provider": "FXStreet_RSS",
-          "title": "Euro edges higher above 1.1200 despite France fiscal risks, US CPI in focus",
-          "url": "https://www.fxstreet.com/news/euro-edges-higher-above-11200-despite-france-fiscal-risks-us-cpi-in-focus-202610140034",
-          "published_at_utc": "2026-10-14T00:34:34+00:00",
-          "first_seen_at_utc": "2026-10-14T01:34:55.752547+00:00",
-          "publisher_age_minutes": 90.0,
-          "source_latency_to_first_seen_minutes": 60.4,
+          "title": "British Pound strengthens above 1.3250, traders await US CPI inflation data",
+          "url": "https://www.fxstreet.com/news/british-pound-strengthens-above-13250-traders-await-us-cpi-inflation-data-202610140145",
+          "published_at_utc": "2026-10-14T01:45:35+00:00",
+          "first_seen_at_utc": "2026-10-14T02:35:18.281147+00:00",
+          "publisher_age_minutes": 49.7,
+          "source_latency_to_first_seen_minutes": 49.7,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
           "not_pro_feed_or_first_seen_in_real_time": false,
           "type": "MACRO_DATA_OR_YIELD",
           "priority": "MEDIUM_RELEASE_REACTION_CHECK",
           "currencies": [
-            "EUR"
+            "GBP"
           ],
           "affected_pairs": [
-            "EURUSD",
-            "EURJPY",
-            "EURCAD",
+            "GBPUSD",
             "EURGBP"
           ],
           "headline_direction": "UNDETERMINED",
