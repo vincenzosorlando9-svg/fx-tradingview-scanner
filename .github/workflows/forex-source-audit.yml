@@ -18,7 +18,9 @@ jobs:
         run: |
           python -m py_compile forex-engine/engine.py
           python -c "import json; p=json.load(open('forex-engine/sources.json')); assert len(p)==len({x['id'] for x in p}) and len(p)>0; print('registered:',len(p))"
-      - name: Offline unit tests\n        run: python -m unittest discover -s forex-engine -p 'test_*.py' -v\n      - name: Attempt registered source endpoints
+      - name: Offline unit tests
+        run: python -m unittest discover -s forex-engine -p 'test_*.py' -v
+      - name: Attempt registered source endpoints
         run: python forex-engine/engine.py --database /tmp/fx-audit.sqlite3 --output /tmp/fx-latest-report.json --timeout 8 --concurrency 8
       - name: Verify coverage and fail-closed signal gate
         run: |
