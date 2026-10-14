@@ -1,26 +1,26 @@
 {
-  "generated_at_utc": "2026-10-14T06:06:33.538080+00:00",
+  "generated_at_utc": "2026-10-14T06:47:31.002149+00:00",
   "purpose": "FULL_SOURCE_AUDIT_NOT_EXECUTABLE_TRADE_ORDERS",
   "sources": {
     "technicals": {
-      "status": "FRESH",
-      "age_minutes": 16.1
+      "status": "STALE",
+      "age_minutes": 57.1
     },
     "dashboard": {
-      "status": "FRESH",
-      "age_minutes": 16.0
+      "status": "STALE",
+      "age_minutes": 57.0
     },
     "calendar": {
       "status": "FRESH",
-      "age_minutes": 34.6
+      "age_minutes": 7.8
     },
     "ff_markets": {
       "status": "FRESH",
-      "age_minutes": 14.7
+      "age_minutes": 6.5
     },
     "volatility": {
-      "status": "FRESH",
-      "age_minutes": 16.1
+      "status": "STALE",
+      "age_minutes": 57.1
     },
     "kospi_te_public_page": {
       "status": "DATED_DAILY_CONTEXT",
@@ -29,49 +29,49 @@
       "verified_intraday_quote": false
     },
     "macro_snapshot": {
-      "status": "FRESH",
-      "age_minutes": 9.8
+      "status": "STALE",
+      "age_minutes": 50.8
     },
     "macro_raw": {
-      "status": "FRESH",
-      "age_minutes": 9.9
+      "status": "STALE",
+      "age_minutes": 50.8
     },
     "macro_news": {
-      "status": "FRESH",
-      "age_minutes": 9.8
+      "status": "STALE",
+      "age_minutes": 50.8
     },
     "unified_signals": {
-      "status": "FRESH",
-      "age_minutes": 15.9
+      "status": "STALE",
+      "age_minutes": 56.9
     },
     "economic_actuals": {
       "status": "FRESH",
-      "age_minutes": 10.1
+      "age_minutes": 51.1
     },
     "range_context": {
-      "status": "FRESH",
-      "age_minutes": 9.8
+      "status": "STALE",
+      "age_minutes": 50.8
     },
     "retail": {
       "status": "FRESH",
-      "age_minutes": 9.8
+      "age_minutes": 50.8
     }
   },
   "macro_layers": {
-    "reuters_fxstreet_catalysts": "PARTIAL_FXSTREET_DATED_HEADLINES_REUTERS_INACCESSIBLE",
+    "reuters_fxstreet_catalysts": "UNAVAILABLE",
     "calendar_schedule": "VERIFIED_WEEKLY_SCHEDULE_NO_OFFICIAL_ACTUALS",
-    "economic_actuals": "PARTIAL_PUBLISHER_REPORTED_NO_OFFICIAL_RELEASE_CLOCK",
-    "sovereign_yield_differentials": "PARTIAL_DATED_YIELD_TABLES_NO_VERIFIED_INTRADAY_QUOTE_TIME",
-    "policy_rates": "PUBLISHED_POLICY_RATE_REFERENCES_NOT_CURRENT_OIS",
+    "economic_actuals": "UNAVAILABLE",
+    "sovereign_yield_differentials": "UNAVAILABLE",
+    "policy_rates": "UNAVAILABLE",
     "ois": "UNAVAILABLE_NO_VALIDATED_PUBLIC_OIS",
-    "commodities": "PARTIAL_OILPRICE_DELAYED_AND_FOREXCRACKED_INDICATIVE",
-    "dxy_equities_sentiment": "PARTIAL_DATED_DXY_NIKKEI_KOSPI_CHINA_FEAR_GREED",
+    "commodities": "UNAVAILABLE",
+    "dxy_equities_sentiment": "UNAVAILABLE",
     "cftc_tff_positioning": "VERIFIED_WEEKLY_HISTORICAL_NOT_REALTIME",
     "cme_volume_open_interest": "PARTIAL_CFTC_WEEKLY_OI_CME_DAILY_DATA_UNVERIFIED",
     "retail_positioning": "UNAVAILABLE_CURRENT",
     "currency_strength_clusters": "DERIVED_FROM_11_FX_PAIRS",
-    "closed_15m30m_direction": "FRESH_TECHNICAL_WATCH_NOT_BROKER_EXECUTION",
-    "atr_adr_session_levels": "PARTIAL_OR_COMPLETE_REFERENCE_CONTEXT_NOT_EXECUTION",
+    "closed_15m30m_direction": "STALE_OR_UNAVAILABLE",
+    "atr_adr_session_levels": "PARTIAL_LEGACY_ATR_LEVELS",
     "independent_live_spreads": "UNAVAILABLE_BROKER_EXECUTABLE_QUOTE",
     "signal_history": "VERIFIED_RECORDED_SIGNAL_OBSERVATIONS",
     "kospi_asian_equities": "DATED_DAILY_CONTEXT_NOT_INTRADAY_KRX"
@@ -93,150 +93,16 @@
   "pairs": [
     {
       "pair": "AUDUSD",
-      "technical_direction": "BUY",
-      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "BUY",
+      "technical_direction": "NO_RANKED_CANDIDATE",
+      "technical_stage": "UNRANKED",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
-      "publisher_reported_actuals": [
-        {
-          "currency": "CNY",
-          "title": "Trade Balance",
-          "scheduled_at_utc": "2026-10-14T02:31:00+00:00",
-          "reported_actual": "906B",
-          "forecast": "790B",
-          "previous": "809B",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "CNY",
-          "title": "USD-Denominated Trade Balance",
-          "scheduled_at_utc": "2026-10-14T02:31:00+00:00",
-          "reported_actual": "133.5B",
-          "forecast": "116.8B",
-          "previous": "119.1B",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "CNY",
-          "title": "CPI y/y",
-          "scheduled_at_utc": "2026-10-14T01:30:00+00:00",
-          "reported_actual": "0.9%",
-          "forecast": "1.0%",
-          "previous": "0.8%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "CNY",
-          "title": "PPI y/y",
-          "scheduled_at_utc": "2026-10-14T01:30:00+00:00",
-          "reported_actual": "5.0%",
-          "forecast": "4.4%",
-          "previous": "3.8%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "AUD",
-          "title": "MI Leading Index m/m",
-          "scheduled_at_utc": "2026-10-13T23:30:00+00:00",
-          "reported_actual": "-0.1%",
-          "forecast": "",
-          "previous": "0.0%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "AUD",
-          "title": "CB Leading Index m/m",
-          "scheduled_at_utc": "2026-10-13T14:30:00+00:00",
-          "reported_actual": "-0.3%",
-          "forecast": "",
-          "previous": "0.5%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Existing Home Sales",
-          "scheduled_at_utc": "2026-10-13T14:00:00+00:00",
-          "reported_actual": "3.99M",
-          "forecast": "3.95M",
-          "previous": "3.98M",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "ADP Weekly Employment Change",
-          "scheduled_at_utc": "2026-10-13T12:15:00+00:00",
-          "reported_actual": "24.8K",
-          "forecast": "",
-          "previous": "23.8K",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "NFIB Small Business Index",
-          "scheduled_at_utc": "2026-10-13T10:00:00+00:00",
-          "reported_actual": "97.9",
-          "forecast": "98.1",
-          "previous": "98.7",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "AUD",
-          "title": "NAB Business Confidence",
-          "scheduled_at_utc": "2026-10-13T00:30:00+00:00",
-          "reported_actual": "-13",
-          "forecast": "",
-          "previous": "-8",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        }
-      ],
+      "publisher_reported_actuals": [],
       "range_context": {
-        "pair": "AUDUSD",
-        "status": "UNAVAILABLE",
-        "reason": "upstream_volatility_feed_stale",
-        "used_for_signal_direction": false
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "ABOVE_BOTH",
@@ -252,7 +118,7 @@
           "forecast": "7.4%",
           "previous": "7.5%",
           "actual": null,
-          "minutes_until": 116,
+          "minutes_until": 75,
           "time_status": "IMMINENT"
         },
         {
@@ -263,7 +129,7 @@
           "forecast": "1025B",
           "previous": "60B",
           "actual": null,
-          "minutes_until": 116,
+          "minutes_until": 75,
           "time_status": "IMMINENT"
         },
         {
@@ -274,7 +140,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 213,
+          "minutes_until": 172,
           "time_status": "UPCOMING"
         },
         {
@@ -285,7 +151,7 @@
           "forecast": "0.2%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -296,7 +162,7 @@
           "forecast": "2.5%",
           "previous": "2.4%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -307,7 +173,7 @@
           "forecast": "0.6%",
           "previous": "0.4%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -318,7 +184,7 @@
           "forecast": "3.6%",
           "previous": "3.4%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -329,7 +195,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 683,
+          "minutes_until": 642,
           "time_status": "UPCOMING"
         },
         {
@@ -340,7 +206,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 713,
+          "minutes_until": 672,
           "time_status": "UPCOMING"
         },
         {
@@ -351,7 +217,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 773,
+          "minutes_until": 732,
           "time_status": "UPCOMING"
         },
         {
@@ -362,7 +228,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 863,
+          "minutes_until": 822,
           "time_status": "UPCOMING"
         },
         {
@@ -373,7 +239,7 @@
           "forecast": "19.6K",
           "previous": "39.5K",
           "actual": null,
-          "minutes_until": 1103,
+          "minutes_until": 1062,
           "time_status": "UPCOMING"
         },
         {
@@ -384,7 +250,7 @@
           "forecast": "4.6%",
           "previous": "4.6%",
           "actual": null,
-          "minutes_until": 1103,
+          "minutes_until": 1062,
           "time_status": "UPCOMING"
         },
         {
@@ -395,7 +261,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1248,
+          "minutes_until": 1207,
           "time_status": "UPCOMING"
         },
         {
@@ -406,7 +272,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1338,
+          "minutes_until": 1297,
           "time_status": "UPCOMING"
         },
         {
@@ -417,7 +283,7 @@
           "forecast": "0.3%",
           "previous": "0.2%",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -428,7 +294,7 @@
           "forecast": "0.6%",
           "previous": "1.4%",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -439,7 +305,7 @@
           "forecast": "0.6%",
           "previous": "0.4%",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -450,7 +316,7 @@
           "forecast": "0.3%",
           "previous": "1.2%",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -461,7 +327,7 @@
           "forecast": "28.2",
           "previous": "37.8",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -472,7 +338,7 @@
           "forecast": "199K",
           "previous": "197K",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -483,7 +349,7 @@
           "forecast": "12.1",
           "previous": "7.6",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -494,7 +360,7 @@
           "forecast": "0.4%",
           "previous": "0.8%",
           "actual": null,
-          "minutes_until": 1913,
+          "minutes_until": 1872,
           "time_status": "UPCOMING"
         },
         {
@@ -505,7 +371,7 @@
           "forecast": "",
           "previous": "85B",
           "actual": null,
-          "minutes_until": 1943,
+          "minutes_until": 1902,
           "time_status": "UPCOMING"
         },
         {
@@ -516,7 +382,7 @@
           "forecast": "",
           "previous": "-3.2M",
           "actual": null,
-          "minutes_until": 2033,
+          "minutes_until": 1992,
           "time_status": "UPCOMING"
         },
         {
@@ -527,7 +393,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2303,
+          "minutes_until": 2262,
           "time_status": "UPCOMING"
         },
         {
@@ -538,7 +404,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2723,
+          "minutes_until": 2682,
           "time_status": "UPCOMING"
         }
       ],
@@ -551,7 +417,7 @@
           "forecast": "7.4%",
           "previous": "7.5%",
           "actual": null,
-          "minutes_until": 116,
+          "minutes_until": 75,
           "time_status": "IMMINENT"
         },
         {
@@ -562,7 +428,7 @@
           "forecast": "1025B",
           "previous": "60B",
           "actual": null,
-          "minutes_until": 116,
+          "minutes_until": 75,
           "time_status": "IMMINENT"
         },
         {
@@ -573,7 +439,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 213,
+          "minutes_until": 172,
           "time_status": "UPCOMING"
         },
         {
@@ -584,7 +450,7 @@
           "forecast": "0.2%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -595,7 +461,7 @@
           "forecast": "2.5%",
           "previous": "2.4%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -606,7 +472,7 @@
           "forecast": "0.6%",
           "previous": "0.4%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -617,7 +483,7 @@
           "forecast": "3.6%",
           "previous": "3.4%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -628,7 +494,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 683,
+          "minutes_until": 642,
           "time_status": "UPCOMING"
         },
         {
@@ -639,7 +505,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 713,
+          "minutes_until": 672,
           "time_status": "UPCOMING"
         },
         {
@@ -650,7 +516,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 773,
+          "minutes_until": 732,
           "time_status": "UPCOMING"
         },
         {
@@ -661,7 +527,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 863,
+          "minutes_until": 822,
           "time_status": "UPCOMING"
         },
         {
@@ -672,7 +538,7 @@
           "forecast": "19.6K",
           "previous": "39.5K",
           "actual": null,
-          "minutes_until": 1103,
+          "minutes_until": 1062,
           "time_status": "UPCOMING"
         },
         {
@@ -683,7 +549,7 @@
           "forecast": "4.6%",
           "previous": "4.6%",
           "actual": null,
-          "minutes_until": 1103,
+          "minutes_until": 1062,
           "time_status": "UPCOMING"
         },
         {
@@ -694,7 +560,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1248,
+          "minutes_until": 1207,
           "time_status": "UPCOMING"
         },
         {
@@ -705,7 +571,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1338,
+          "minutes_until": 1297,
           "time_status": "UPCOMING"
         }
       ],
@@ -718,7 +584,7 @@
           "forecast": "7.4%",
           "previous": "7.5%",
           "actual": null,
-          "minutes_until": 116,
+          "minutes_until": 75,
           "time_status": "IMMINENT"
         },
         {
@@ -729,7 +595,7 @@
           "forecast": "1025B",
           "previous": "60B",
           "actual": null,
-          "minutes_until": 116,
+          "minutes_until": 75,
           "time_status": "IMMINENT"
         }
       ],
@@ -737,14 +603,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE_HTTPERROR",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": "2026-10-14T05:20:30.219835+00:00",
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -761,7 +620,7 @@
       },
       "asian_risk_directional_note": "Asian equity risk may affect AUD/NZD, but FX must confirm",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -769,130 +628,22 @@
     },
     {
       "pair": "NZDUSD",
-      "technical_direction": "SELL",
-      "technical_stage": "EARLY_M15_M30_MOMENTUM",
-      "unified_signal_direction": "SELL",
+      "technical_direction": "NO_RANKED_CANDIDATE",
+      "technical_stage": "UNRANKED",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
-      "publisher_reported_actuals": [
-        {
-          "currency": "CNY",
-          "title": "Trade Balance",
-          "scheduled_at_utc": "2026-10-14T02:31:00+00:00",
-          "reported_actual": "906B",
-          "forecast": "790B",
-          "previous": "809B",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "CNY",
-          "title": "USD-Denominated Trade Balance",
-          "scheduled_at_utc": "2026-10-14T02:31:00+00:00",
-          "reported_actual": "133.5B",
-          "forecast": "116.8B",
-          "previous": "119.1B",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "CNY",
-          "title": "CPI y/y",
-          "scheduled_at_utc": "2026-10-14T01:30:00+00:00",
-          "reported_actual": "0.9%",
-          "forecast": "1.0%",
-          "previous": "0.8%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "CNY",
-          "title": "PPI y/y",
-          "scheduled_at_utc": "2026-10-14T01:30:00+00:00",
-          "reported_actual": "5.0%",
-          "forecast": "4.4%",
-          "previous": "3.8%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "NZD",
-          "title": "Visitor Arrivals m/m",
-          "scheduled_at_utc": "2026-10-13T21:45:00+00:00",
-          "reported_actual": "2.8%",
-          "forecast": "",
-          "previous": "0.5%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Existing Home Sales",
-          "scheduled_at_utc": "2026-10-13T14:00:00+00:00",
-          "reported_actual": "3.99M",
-          "forecast": "3.95M",
-          "previous": "3.98M",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "ADP Weekly Employment Change",
-          "scheduled_at_utc": "2026-10-13T12:15:00+00:00",
-          "reported_actual": "24.8K",
-          "forecast": "",
-          "previous": "23.8K",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "NFIB Small Business Index",
-          "scheduled_at_utc": "2026-10-13T10:00:00+00:00",
-          "reported_actual": "97.9",
-          "forecast": "98.1",
-          "previous": "98.7",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        }
-      ],
+      "publisher_reported_actuals": [],
       "range_context": {
-        "pair": "NZDUSD",
-        "status": "UNAVAILABLE",
-        "reason": "upstream_volatility_feed_stale",
-        "used_for_signal_direction": false
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "ABOVE_BOTH",
       "h4_ema20_50": "ABOVE_BOTH",
       "timeframes_present": true,
-      "higher_timeframe_conflict": true,
+      "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
         {
           "title": "M2 Money Supply y/y",
@@ -902,7 +653,7 @@
           "forecast": "7.4%",
           "previous": "7.5%",
           "actual": null,
-          "minutes_until": 116,
+          "minutes_until": 75,
           "time_status": "IMMINENT"
         },
         {
@@ -913,7 +664,7 @@
           "forecast": "1025B",
           "previous": "60B",
           "actual": null,
-          "minutes_until": 116,
+          "minutes_until": 75,
           "time_status": "IMMINENT"
         },
         {
@@ -924,7 +675,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 213,
+          "minutes_until": 172,
           "time_status": "UPCOMING"
         },
         {
@@ -935,7 +686,7 @@
           "forecast": "0.2%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -946,7 +697,7 @@
           "forecast": "2.5%",
           "previous": "2.4%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -957,7 +708,7 @@
           "forecast": "0.6%",
           "previous": "0.4%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -968,7 +719,7 @@
           "forecast": "3.6%",
           "previous": "3.4%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -979,7 +730,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 683,
+          "minutes_until": 642,
           "time_status": "UPCOMING"
         },
         {
@@ -990,7 +741,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 713,
+          "minutes_until": 672,
           "time_status": "UPCOMING"
         },
         {
@@ -1001,7 +752,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 773,
+          "minutes_until": 732,
           "time_status": "UPCOMING"
         },
         {
@@ -1012,7 +763,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 863,
+          "minutes_until": 822,
           "time_status": "UPCOMING"
         },
         {
@@ -1023,7 +774,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1248,
+          "minutes_until": 1207,
           "time_status": "UPCOMING"
         },
         {
@@ -1034,7 +785,7 @@
           "forecast": "0.3%",
           "previous": "0.2%",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -1045,7 +796,7 @@
           "forecast": "0.6%",
           "previous": "1.4%",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -1056,7 +807,7 @@
           "forecast": "0.6%",
           "previous": "0.4%",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -1067,7 +818,7 @@
           "forecast": "0.3%",
           "previous": "1.2%",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -1078,7 +829,7 @@
           "forecast": "28.2",
           "previous": "37.8",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -1089,7 +840,7 @@
           "forecast": "199K",
           "previous": "197K",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -1100,7 +851,7 @@
           "forecast": "12.1",
           "previous": "7.6",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -1111,7 +862,7 @@
           "forecast": "0.4%",
           "previous": "0.8%",
           "actual": null,
-          "minutes_until": 1913,
+          "minutes_until": 1872,
           "time_status": "UPCOMING"
         },
         {
@@ -1122,7 +873,7 @@
           "forecast": "",
           "previous": "85B",
           "actual": null,
-          "minutes_until": 1943,
+          "minutes_until": 1902,
           "time_status": "UPCOMING"
         },
         {
@@ -1133,7 +884,7 @@
           "forecast": "",
           "previous": "-3.2M",
           "actual": null,
-          "minutes_until": 2033,
+          "minutes_until": 1992,
           "time_status": "UPCOMING"
         },
         {
@@ -1144,7 +895,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2303,
+          "minutes_until": 2262,
           "time_status": "UPCOMING"
         },
         {
@@ -1155,7 +906,7 @@
           "forecast": "",
           "previous": "53.1",
           "actual": null,
-          "minutes_until": 2363,
+          "minutes_until": 2322,
           "time_status": "UPCOMING"
         },
         {
@@ -1166,7 +917,7 @@
           "forecast": "",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 2378,
+          "minutes_until": 2337,
           "time_status": "UPCOMING"
         },
         {
@@ -1177,7 +928,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2723,
+          "minutes_until": 2682,
           "time_status": "UPCOMING"
         }
       ],
@@ -1190,7 +941,7 @@
           "forecast": "7.4%",
           "previous": "7.5%",
           "actual": null,
-          "minutes_until": 116,
+          "minutes_until": 75,
           "time_status": "IMMINENT"
         },
         {
@@ -1201,7 +952,7 @@
           "forecast": "1025B",
           "previous": "60B",
           "actual": null,
-          "minutes_until": 116,
+          "minutes_until": 75,
           "time_status": "IMMINENT"
         },
         {
@@ -1212,7 +963,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 213,
+          "minutes_until": 172,
           "time_status": "UPCOMING"
         },
         {
@@ -1223,7 +974,7 @@
           "forecast": "0.2%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -1234,7 +985,7 @@
           "forecast": "2.5%",
           "previous": "2.4%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -1245,7 +996,7 @@
           "forecast": "0.6%",
           "previous": "0.4%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -1256,7 +1007,7 @@
           "forecast": "3.6%",
           "previous": "3.4%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -1267,7 +1018,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 683,
+          "minutes_until": 642,
           "time_status": "UPCOMING"
         },
         {
@@ -1278,7 +1029,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 713,
+          "minutes_until": 672,
           "time_status": "UPCOMING"
         },
         {
@@ -1289,7 +1040,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 773,
+          "minutes_until": 732,
           "time_status": "UPCOMING"
         },
         {
@@ -1300,7 +1051,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 863,
+          "minutes_until": 822,
           "time_status": "UPCOMING"
         },
         {
@@ -1311,7 +1062,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1248,
+          "minutes_until": 1207,
           "time_status": "UPCOMING"
         }
       ],
@@ -1324,7 +1075,7 @@
           "forecast": "7.4%",
           "previous": "7.5%",
           "actual": null,
-          "minutes_until": 116,
+          "minutes_until": 75,
           "time_status": "IMMINENT"
         },
         {
@@ -1335,7 +1086,7 @@
           "forecast": "1025B",
           "previous": "60B",
           "actual": null,
-          "minutes_until": 116,
+          "minutes_until": 75,
           "time_status": "IMMINENT"
         }
       ],
@@ -1343,14 +1094,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE_HTTPERROR",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": "2026-10-14T05:20:30.220727+00:00",
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -1367,7 +1111,7 @@
       },
       "asian_risk_directional_note": "Asian equity risk may affect AUD/NZD, but FX must confirm",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -1377,70 +1121,14 @@
       "pair": "EURUSD",
       "technical_direction": "SELL",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "SELL",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
-      "publisher_reported_actuals": [
-        {
-          "currency": "USD",
-          "title": "Existing Home Sales",
-          "scheduled_at_utc": "2026-10-13T14:00:00+00:00",
-          "reported_actual": "3.99M",
-          "forecast": "3.95M",
-          "previous": "3.98M",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "ADP Weekly Employment Change",
-          "scheduled_at_utc": "2026-10-13T12:15:00+00:00",
-          "reported_actual": "24.8K",
-          "forecast": "",
-          "previous": "23.8K",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "NFIB Small Business Index",
-          "scheduled_at_utc": "2026-10-13T10:00:00+00:00",
-          "reported_actual": "97.9",
-          "forecast": "98.1",
-          "previous": "98.7",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "EUR",
-          "title": "German Final CPI m/m",
-          "scheduled_at_utc": "2026-10-13T06:00:00+00:00",
-          "reported_actual": "0.6%",
-          "forecast": "0.6%",
-          "previous": "0.6%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        }
-      ],
+      "publisher_reported_actuals": [],
       "range_context": {
-        "pair": "EURUSD",
-        "status": "UNAVAILABLE",
-        "reason": "upstream_volatility_feed_stale",
-        "used_for_signal_direction": false
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "ABOVE_BOTH",
@@ -1449,17 +1137,6 @@
       "higher_timeframe_conflict": true,
       "upcoming_48h_events": [
         {
-          "title": "German WPI m/m",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-14T02:00:00-04:00",
-          "forecast": "0.6%",
-          "previous": "0.9%",
-          "actual": null,
-          "minutes_until": -7,
-          "time_status": "IMMINENT"
-        },
-        {
           "title": "ECB President Lagarde Speaks",
           "currency": "EUR",
           "impact": "Medium",
@@ -1467,8 +1144,8 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 143,
-          "time_status": "UPCOMING"
+          "minutes_until": 102,
+          "time_status": "IMMINENT"
         },
         {
           "title": "German 30-y Bond Auction",
@@ -1478,7 +1155,7 @@
           "forecast": "",
           "previous": "3.80|1.6",
           "actual": null,
-          "minutes_until": 207,
+          "minutes_until": 166,
           "time_status": "UPCOMING"
         },
         {
@@ -1489,7 +1166,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 213,
+          "minutes_until": 172,
           "time_status": "UPCOMING"
         },
         {
@@ -1500,7 +1177,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 248,
+          "minutes_until": 207,
           "time_status": "UPCOMING"
         },
         {
@@ -1511,7 +1188,7 @@
           "forecast": "0.2%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -1522,7 +1199,7 @@
           "forecast": "2.5%",
           "previous": "2.4%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -1533,7 +1210,7 @@
           "forecast": "0.6%",
           "previous": "0.4%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -1544,7 +1221,7 @@
           "forecast": "3.6%",
           "previous": "3.4%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -1555,7 +1232,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 683,
+          "minutes_until": 642,
           "time_status": "UPCOMING"
         },
         {
@@ -1566,7 +1243,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 713,
+          "minutes_until": 672,
           "time_status": "UPCOMING"
         },
         {
@@ -1577,7 +1254,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 773,
+          "minutes_until": 732,
           "time_status": "UPCOMING"
         },
         {
@@ -1588,7 +1265,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 863,
+          "minutes_until": 822,
           "time_status": "UPCOMING"
         },
         {
@@ -1599,7 +1276,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1248,
+          "minutes_until": 1207,
           "time_status": "UPCOMING"
         },
         {
@@ -1610,7 +1287,7 @@
           "forecast": "-0.3%",
           "previous": "-0.3%",
           "actual": null,
-          "minutes_until": 1478,
+          "minutes_until": 1437,
           "time_status": "UPCOMING"
         },
         {
@@ -1621,7 +1298,7 @@
           "forecast": "0.0%",
           "previous": "-0.1%",
           "actual": null,
-          "minutes_until": 1613,
+          "minutes_until": 1572,
           "time_status": "UPCOMING"
         },
         {
@@ -1632,7 +1309,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1688,
+          "minutes_until": 1647,
           "time_status": "UPCOMING"
         },
         {
@@ -1643,7 +1320,7 @@
           "forecast": "0.3%",
           "previous": "0.2%",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -1654,7 +1331,7 @@
           "forecast": "0.6%",
           "previous": "1.4%",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -1665,7 +1342,7 @@
           "forecast": "0.6%",
           "previous": "0.4%",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -1676,7 +1353,7 @@
           "forecast": "0.3%",
           "previous": "1.2%",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -1687,7 +1364,7 @@
           "forecast": "28.2",
           "previous": "37.8",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -1698,7 +1375,7 @@
           "forecast": "199K",
           "previous": "197K",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -1709,7 +1386,7 @@
           "forecast": "12.1",
           "previous": "7.6",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -1720,7 +1397,7 @@
           "forecast": "0.4%",
           "previous": "0.8%",
           "actual": null,
-          "minutes_until": 1913,
+          "minutes_until": 1872,
           "time_status": "UPCOMING"
         },
         {
@@ -1731,7 +1408,7 @@
           "forecast": "",
           "previous": "85B",
           "actual": null,
-          "minutes_until": 1943,
+          "minutes_until": 1902,
           "time_status": "UPCOMING"
         },
         {
@@ -1742,7 +1419,7 @@
           "forecast": "",
           "previous": "-3.2M",
           "actual": null,
-          "minutes_until": 2033,
+          "minutes_until": 1992,
           "time_status": "UPCOMING"
         },
         {
@@ -1753,7 +1430,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2303,
+          "minutes_until": 2262,
           "time_status": "UPCOMING"
         },
         {
@@ -1764,7 +1441,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2663,
+          "minutes_until": 2622,
           "time_status": "UPCOMING"
         },
         {
@@ -1775,7 +1452,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2723,
+          "minutes_until": 2682,
           "time_status": "UPCOMING"
         }
       ],
@@ -1788,8 +1465,8 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 143,
-          "time_status": "UPCOMING"
+          "minutes_until": 102,
+          "time_status": "IMMINENT"
         },
         {
           "title": "German 30-y Bond Auction",
@@ -1799,7 +1476,7 @@
           "forecast": "",
           "previous": "3.80|1.6",
           "actual": null,
-          "minutes_until": 207,
+          "minutes_until": 166,
           "time_status": "UPCOMING"
         },
         {
@@ -1810,7 +1487,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 213,
+          "minutes_until": 172,
           "time_status": "UPCOMING"
         },
         {
@@ -1821,7 +1498,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 248,
+          "minutes_until": 207,
           "time_status": "UPCOMING"
         },
         {
@@ -1832,7 +1509,7 @@
           "forecast": "0.2%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -1843,7 +1520,7 @@
           "forecast": "2.5%",
           "previous": "2.4%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -1854,7 +1531,7 @@
           "forecast": "0.6%",
           "previous": "0.4%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -1865,7 +1542,7 @@
           "forecast": "3.6%",
           "previous": "3.4%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -1876,7 +1553,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 683,
+          "minutes_until": 642,
           "time_status": "UPCOMING"
         },
         {
@@ -1887,7 +1564,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 713,
+          "minutes_until": 672,
           "time_status": "UPCOMING"
         },
         {
@@ -1898,7 +1575,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 773,
+          "minutes_until": 732,
           "time_status": "UPCOMING"
         },
         {
@@ -1909,7 +1586,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 863,
+          "minutes_until": 822,
           "time_status": "UPCOMING"
         },
         {
@@ -1920,20 +1597,31 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1248,
+          "minutes_until": 1207,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "French Final CPI m/m",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-10-15T02:45:00-04:00",
+          "forecast": "-0.3%",
+          "previous": "-0.3%",
+          "actual": null,
+          "minutes_until": 1437,
           "time_status": "UPCOMING"
         }
       ],
       "imminent_events": [
         {
-          "title": "German WPI m/m",
+          "title": "ECB President Lagarde Speaks",
           "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-14T02:00:00-04:00",
-          "forecast": "0.6%",
-          "previous": "0.9%",
+          "impact": "Medium",
+          "event_at_et": "2026-10-14T04:30:00-04:00",
+          "forecast": "",
+          "previous": "",
           "actual": null,
-          "minutes_until": -7,
+          "minutes_until": 102,
           "time_status": "IMMINENT"
         }
       ],
@@ -1941,14 +1629,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE_HTTPERROR",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": "2026-10-14T05:20:30.221245+00:00",
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -1956,7 +1637,7 @@
       },
       "asian_risk_directional_note": "Not a direct directional driver",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -1964,72 +1645,16 @@
     },
     {
       "pair": "GBPUSD",
-      "technical_direction": "NONE",
-      "technical_stage": "WAIT",
-      "unified_signal_direction": "NONE",
+      "technical_direction": "NO_RANKED_CANDIDATE",
+      "technical_stage": "UNRANKED",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
-      "publisher_reported_actuals": [
-        {
-          "currency": "USD",
-          "title": "Existing Home Sales",
-          "scheduled_at_utc": "2026-10-13T14:00:00+00:00",
-          "reported_actual": "3.99M",
-          "forecast": "3.95M",
-          "previous": "3.98M",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "ADP Weekly Employment Change",
-          "scheduled_at_utc": "2026-10-13T12:15:00+00:00",
-          "reported_actual": "24.8K",
-          "forecast": "",
-          "previous": "23.8K",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "NFIB Small Business Index",
-          "scheduled_at_utc": "2026-10-13T10:00:00+00:00",
-          "reported_actual": "97.9",
-          "forecast": "98.1",
-          "previous": "98.7",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "GBP",
-          "title": "BRC Retail Sales Monitor y/y",
-          "scheduled_at_utc": "2026-10-12T23:01:00+00:00",
-          "reported_actual": "1.0%",
-          "forecast": "0.8%",
-          "previous": "0.5%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        }
-      ],
+      "publisher_reported_actuals": [],
       "range_context": {
-        "pair": "GBPUSD",
-        "status": "UNAVAILABLE",
-        "reason": "upstream_volatility_feed_stale",
-        "used_for_signal_direction": false
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "ABOVE_BOTH",
@@ -2038,17 +1663,6 @@
       "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
         {
-          "title": "MPC Member Pill Speaks",
-          "currency": "GBP",
-          "impact": "Low",
-          "event_at_et": "2026-10-14T02:00:00-04:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": -7,
-          "time_status": "IMMINENT"
-        },
-        {
           "title": "FOMC Member Bowman Speaks",
           "currency": "USD",
           "impact": "Low",
@@ -2056,7 +1670,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 213,
+          "minutes_until": 172,
           "time_status": "UPCOMING"
         },
         {
@@ -2067,7 +1681,7 @@
           "forecast": "0.2%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -2078,7 +1692,7 @@
           "forecast": "2.5%",
           "previous": "2.4%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -2089,7 +1703,7 @@
           "forecast": "0.6%",
           "previous": "0.4%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -2100,7 +1714,7 @@
           "forecast": "3.6%",
           "previous": "3.4%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -2111,7 +1725,7 @@
           "forecast": "",
           "previous": "-0.1%",
           "actual": null,
-          "minutes_until": 443,
+          "minutes_until": 402,
           "time_status": "UPCOMING"
         },
         {
@@ -2122,7 +1736,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 683,
+          "minutes_until": 642,
           "time_status": "UPCOMING"
         },
         {
@@ -2133,7 +1747,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 713,
+          "minutes_until": 672,
           "time_status": "UPCOMING"
         },
         {
@@ -2144,7 +1758,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 773,
+          "minutes_until": 732,
           "time_status": "UPCOMING"
         },
         {
@@ -2155,7 +1769,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 863,
+          "minutes_until": 822,
           "time_status": "UPCOMING"
         },
         {
@@ -2166,7 +1780,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1248,
+          "minutes_until": 1207,
           "time_status": "UPCOMING"
         },
         {
@@ -2177,7 +1791,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1288,
+          "minutes_until": 1247,
           "time_status": "UPCOMING"
         },
         {
@@ -2188,7 +1802,7 @@
           "forecast": "-0.1%",
           "previous": "0.4%",
           "actual": null,
-          "minutes_until": 1433,
+          "minutes_until": 1392,
           "time_status": "UPCOMING"
         },
         {
@@ -2199,7 +1813,7 @@
           "forecast": "0.0%",
           "previous": "0.1%",
           "actual": null,
-          "minutes_until": 1433,
+          "minutes_until": 1392,
           "time_status": "UPCOMING"
         },
         {
@@ -2210,7 +1824,7 @@
           "forecast": "-21.9B",
           "previous": "-21.0B",
           "actual": null,
-          "minutes_until": 1433,
+          "minutes_until": 1392,
           "time_status": "UPCOMING"
         },
         {
@@ -2221,7 +1835,7 @@
           "forecast": "0.8%",
           "previous": "0.6%",
           "actual": null,
-          "minutes_until": 1433,
+          "minutes_until": 1392,
           "time_status": "UPCOMING"
         },
         {
@@ -2232,7 +1846,7 @@
           "forecast": "-0.1%",
           "previous": "0.2%",
           "actual": null,
-          "minutes_until": 1433,
+          "minutes_until": 1392,
           "time_status": "UPCOMING"
         },
         {
@@ -2243,7 +1857,7 @@
           "forecast": "-0.1%",
           "previous": "0.9%",
           "actual": null,
-          "minutes_until": 1433,
+          "minutes_until": 1392,
           "time_status": "UPCOMING"
         },
         {
@@ -2254,7 +1868,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1478,
+          "minutes_until": 1437,
           "time_status": "UPCOMING"
         },
         {
@@ -2265,7 +1879,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1523,
+          "minutes_until": 1482,
           "time_status": "UPCOMING"
         },
         {
@@ -2276,7 +1890,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1598,
+          "minutes_until": 1557,
           "time_status": "UPCOMING"
         },
         {
@@ -2287,7 +1901,7 @@
           "forecast": "0.3%",
           "previous": "0.2%",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -2298,7 +1912,7 @@
           "forecast": "0.6%",
           "previous": "1.4%",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -2309,7 +1923,7 @@
           "forecast": "0.6%",
           "previous": "0.4%",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -2320,7 +1934,7 @@
           "forecast": "0.3%",
           "previous": "1.2%",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -2331,7 +1945,7 @@
           "forecast": "28.2",
           "previous": "37.8",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -2342,7 +1956,7 @@
           "forecast": "199K",
           "previous": "197K",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -2353,7 +1967,7 @@
           "forecast": "12.1",
           "previous": "7.6",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -2364,7 +1978,7 @@
           "forecast": "0.4%",
           "previous": "0.8%",
           "actual": null,
-          "minutes_until": 1913,
+          "minutes_until": 1872,
           "time_status": "UPCOMING"
         },
         {
@@ -2375,7 +1989,7 @@
           "forecast": "",
           "previous": "85B",
           "actual": null,
-          "minutes_until": 1943,
+          "minutes_until": 1902,
           "time_status": "UPCOMING"
         },
         {
@@ -2386,7 +2000,7 @@
           "forecast": "",
           "previous": "-3.2M",
           "actual": null,
-          "minutes_until": 2033,
+          "minutes_until": 1992,
           "time_status": "UPCOMING"
         },
         {
@@ -2397,7 +2011,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2303,
+          "minutes_until": 2262,
           "time_status": "UPCOMING"
         },
         {
@@ -2408,7 +2022,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2633,
+          "minutes_until": 2592,
           "time_status": "UPCOMING"
         },
         {
@@ -2419,7 +2033,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2723,
+          "minutes_until": 2682,
           "time_status": "UPCOMING"
         }
       ],
@@ -2432,7 +2046,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 213,
+          "minutes_until": 172,
           "time_status": "UPCOMING"
         },
         {
@@ -2443,7 +2057,7 @@
           "forecast": "0.2%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -2454,7 +2068,7 @@
           "forecast": "2.5%",
           "previous": "2.4%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -2465,7 +2079,7 @@
           "forecast": "0.6%",
           "previous": "0.4%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -2476,7 +2090,7 @@
           "forecast": "3.6%",
           "previous": "3.4%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -2487,7 +2101,7 @@
           "forecast": "",
           "previous": "-0.1%",
           "actual": null,
-          "minutes_until": 443,
+          "minutes_until": 402,
           "time_status": "UPCOMING"
         },
         {
@@ -2498,7 +2112,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 683,
+          "minutes_until": 642,
           "time_status": "UPCOMING"
         },
         {
@@ -2509,7 +2123,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 713,
+          "minutes_until": 672,
           "time_status": "UPCOMING"
         },
         {
@@ -2520,7 +2134,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 773,
+          "minutes_until": 732,
           "time_status": "UPCOMING"
         },
         {
@@ -2531,7 +2145,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 863,
+          "minutes_until": 822,
           "time_status": "UPCOMING"
         },
         {
@@ -2542,7 +2156,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1248,
+          "minutes_until": 1207,
           "time_status": "UPCOMING"
         },
         {
@@ -2553,7 +2167,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1288,
+          "minutes_until": 1247,
           "time_status": "UPCOMING"
         },
         {
@@ -2564,7 +2178,7 @@
           "forecast": "-0.1%",
           "previous": "0.4%",
           "actual": null,
-          "minutes_until": 1433,
+          "minutes_until": 1392,
           "time_status": "UPCOMING"
         },
         {
@@ -2575,7 +2189,7 @@
           "forecast": "0.0%",
           "previous": "0.1%",
           "actual": null,
-          "minutes_until": 1433,
+          "minutes_until": 1392,
           "time_status": "UPCOMING"
         },
         {
@@ -2586,7 +2200,7 @@
           "forecast": "-21.9B",
           "previous": "-21.0B",
           "actual": null,
-          "minutes_until": 1433,
+          "minutes_until": 1392,
           "time_status": "UPCOMING"
         },
         {
@@ -2597,7 +2211,7 @@
           "forecast": "0.8%",
           "previous": "0.6%",
           "actual": null,
-          "minutes_until": 1433,
+          "minutes_until": 1392,
           "time_status": "UPCOMING"
         },
         {
@@ -2608,7 +2222,7 @@
           "forecast": "-0.1%",
           "previous": "0.2%",
           "actual": null,
-          "minutes_until": 1433,
+          "minutes_until": 1392,
           "time_status": "UPCOMING"
         },
         {
@@ -2619,35 +2233,27 @@
           "forecast": "-0.1%",
           "previous": "0.9%",
           "actual": null,
-          "minutes_until": 1433,
+          "minutes_until": 1392,
           "time_status": "UPCOMING"
-        }
-      ],
-      "imminent_events": [
+        },
         {
-          "title": "MPC Member Pill Speaks",
+          "title": "MPC Member Greene Speaks",
           "currency": "GBP",
           "impact": "Low",
-          "event_at_et": "2026-10-14T02:00:00-04:00",
+          "event_at_et": "2026-10-15T02:45:00-04:00",
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": -7,
-          "time_status": "IMMINENT"
+          "minutes_until": 1437,
+          "time_status": "UPCOMING"
         }
       ],
-      "event_risk": "IMMINENT_EVENT",
+      "imminent_events": [],
+      "event_risk": "EVENT_WITHIN_24H",
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE_HTTPERROR",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": "2026-10-14T05:20:30.222100+00:00",
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -2663,104 +2269,22 @@
     },
     {
       "pair": "USDJPY",
-      "technical_direction": "BUY",
-      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "BUY",
+      "technical_direction": "NO_RANKED_CANDIDATE",
+      "technical_stage": "UNRANKED",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
-      "publisher_reported_actuals": [
-        {
-          "currency": "JPY",
-          "title": "M2 Money Stock y/y",
-          "scheduled_at_utc": "2026-10-13T23:50:00+00:00",
-          "reported_actual": "2.0%",
-          "forecast": "2.1%",
-          "previous": "2.0%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Existing Home Sales",
-          "scheduled_at_utc": "2026-10-13T14:00:00+00:00",
-          "reported_actual": "3.99M",
-          "forecast": "3.95M",
-          "previous": "3.98M",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "ADP Weekly Employment Change",
-          "scheduled_at_utc": "2026-10-13T12:15:00+00:00",
-          "reported_actual": "24.8K",
-          "forecast": "",
-          "previous": "23.8K",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "NFIB Small Business Index",
-          "scheduled_at_utc": "2026-10-13T10:00:00+00:00",
-          "reported_actual": "97.9",
-          "forecast": "98.1",
-          "previous": "98.7",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "JPY",
-          "title": "Bank Lending y/y",
-          "scheduled_at_utc": "2026-10-12T23:50:00+00:00",
-          "reported_actual": "5.3%",
-          "forecast": "5.5%",
-          "previous": "5.4%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "JPY",
-          "title": "PPI y/y",
-          "scheduled_at_utc": "2026-10-12T23:50:00+00:00",
-          "reported_actual": "6.8%",
-          "forecast": "7.6%",
-          "previous": "7.6%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        }
-      ],
+      "publisher_reported_actuals": [],
       "range_context": {
-        "pair": "USDJPY",
-        "status": "UNAVAILABLE",
-        "reason": "upstream_volatility_feed_stale",
-        "used_for_signal_direction": false
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
       "h4_ema20_50": "MIXED",
       "timeframes_present": true,
-      "higher_timeframe_conflict": true,
+      "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
         {
           "title": "FOMC Member Bowman Speaks",
@@ -2770,7 +2294,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 213,
+          "minutes_until": 172,
           "time_status": "UPCOMING"
         },
         {
@@ -2781,7 +2305,7 @@
           "forecast": "0.2%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -2792,7 +2316,7 @@
           "forecast": "2.5%",
           "previous": "2.4%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -2803,7 +2327,7 @@
           "forecast": "0.6%",
           "previous": "0.4%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -2814,7 +2338,7 @@
           "forecast": "3.6%",
           "previous": "3.4%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -2825,7 +2349,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 683,
+          "minutes_until": 642,
           "time_status": "UPCOMING"
         },
         {
@@ -2836,7 +2360,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 713,
+          "minutes_until": 672,
           "time_status": "UPCOMING"
         },
         {
@@ -2847,7 +2371,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 773,
+          "minutes_until": 732,
           "time_status": "UPCOMING"
         },
         {
@@ -2858,7 +2382,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 863,
+          "minutes_until": 822,
           "time_status": "UPCOMING"
         },
         {
@@ -2869,7 +2393,7 @@
           "forecast": "2.2%",
           "previous": "-3.7%",
           "actual": null,
-          "minutes_until": 1063,
+          "minutes_until": 1022,
           "time_status": "UPCOMING"
         },
         {
@@ -2880,7 +2404,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1248,
+          "minutes_until": 1207,
           "time_status": "UPCOMING"
         },
         {
@@ -2891,7 +2415,7 @@
           "forecast": "-1.7%",
           "previous": "-1.7%",
           "actual": null,
-          "minutes_until": 1343,
+          "minutes_until": 1302,
           "time_status": "UPCOMING"
         },
         {
@@ -2902,7 +2426,7 @@
           "forecast": "0.3%",
           "previous": "0.2%",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -2913,7 +2437,7 @@
           "forecast": "0.6%",
           "previous": "1.4%",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -2924,7 +2448,7 @@
           "forecast": "0.6%",
           "previous": "0.4%",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -2935,7 +2459,7 @@
           "forecast": "0.3%",
           "previous": "1.2%",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -2946,7 +2470,7 @@
           "forecast": "28.2",
           "previous": "37.8",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -2957,7 +2481,7 @@
           "forecast": "199K",
           "previous": "197K",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -2968,7 +2492,7 @@
           "forecast": "12.1",
           "previous": "7.6",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -2979,7 +2503,7 @@
           "forecast": "0.4%",
           "previous": "0.8%",
           "actual": null,
-          "minutes_until": 1913,
+          "minutes_until": 1872,
           "time_status": "UPCOMING"
         },
         {
@@ -2990,7 +2514,7 @@
           "forecast": "",
           "previous": "85B",
           "actual": null,
-          "minutes_until": 1943,
+          "minutes_until": 1902,
           "time_status": "UPCOMING"
         },
         {
@@ -3001,7 +2525,7 @@
           "forecast": "",
           "previous": "-3.2M",
           "actual": null,
-          "minutes_until": 2033,
+          "minutes_until": 1992,
           "time_status": "UPCOMING"
         },
         {
@@ -3012,7 +2536,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2303,
+          "minutes_until": 2262,
           "time_status": "UPCOMING"
         },
         {
@@ -3023,7 +2547,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2723,
+          "minutes_until": 2682,
           "time_status": "UPCOMING"
         }
       ],
@@ -3036,7 +2560,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 213,
+          "minutes_until": 172,
           "time_status": "UPCOMING"
         },
         {
@@ -3047,7 +2571,7 @@
           "forecast": "0.2%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -3058,7 +2582,7 @@
           "forecast": "2.5%",
           "previous": "2.4%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -3069,7 +2593,7 @@
           "forecast": "0.6%",
           "previous": "0.4%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -3080,7 +2604,7 @@
           "forecast": "3.6%",
           "previous": "3.4%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -3091,7 +2615,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 683,
+          "minutes_until": 642,
           "time_status": "UPCOMING"
         },
         {
@@ -3102,7 +2626,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 713,
+          "minutes_until": 672,
           "time_status": "UPCOMING"
         },
         {
@@ -3113,7 +2637,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 773,
+          "minutes_until": 732,
           "time_status": "UPCOMING"
         },
         {
@@ -3124,7 +2648,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 863,
+          "minutes_until": 822,
           "time_status": "UPCOMING"
         },
         {
@@ -3135,7 +2659,7 @@
           "forecast": "2.2%",
           "previous": "-3.7%",
           "actual": null,
-          "minutes_until": 1063,
+          "minutes_until": 1022,
           "time_status": "UPCOMING"
         },
         {
@@ -3146,7 +2670,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1248,
+          "minutes_until": 1207,
           "time_status": "UPCOMING"
         },
         {
@@ -3157,7 +2681,7 @@
           "forecast": "-1.7%",
           "previous": "-1.7%",
           "actual": null,
-          "minutes_until": 1343,
+          "minutes_until": 1302,
           "time_status": "UPCOMING"
         }
       ],
@@ -3166,14 +2690,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE_HTTPERROR",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": "2026-10-14T05:20:30.225259+00:00",
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -3190,7 +2707,7 @@
       },
       "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -3200,148 +2717,14 @@
       "pair": "AUDJPY",
       "technical_direction": "BUY",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "BUY",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
-      "publisher_reported_actuals": [
-        {
-          "currency": "CNY",
-          "title": "Trade Balance",
-          "scheduled_at_utc": "2026-10-14T02:31:00+00:00",
-          "reported_actual": "906B",
-          "forecast": "790B",
-          "previous": "809B",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "CNY",
-          "title": "USD-Denominated Trade Balance",
-          "scheduled_at_utc": "2026-10-14T02:31:00+00:00",
-          "reported_actual": "133.5B",
-          "forecast": "116.8B",
-          "previous": "119.1B",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "CNY",
-          "title": "CPI y/y",
-          "scheduled_at_utc": "2026-10-14T01:30:00+00:00",
-          "reported_actual": "0.9%",
-          "forecast": "1.0%",
-          "previous": "0.8%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "CNY",
-          "title": "PPI y/y",
-          "scheduled_at_utc": "2026-10-14T01:30:00+00:00",
-          "reported_actual": "5.0%",
-          "forecast": "4.4%",
-          "previous": "3.8%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "JPY",
-          "title": "M2 Money Stock y/y",
-          "scheduled_at_utc": "2026-10-13T23:50:00+00:00",
-          "reported_actual": "2.0%",
-          "forecast": "2.1%",
-          "previous": "2.0%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "AUD",
-          "title": "MI Leading Index m/m",
-          "scheduled_at_utc": "2026-10-13T23:30:00+00:00",
-          "reported_actual": "-0.1%",
-          "forecast": "",
-          "previous": "0.0%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "AUD",
-          "title": "CB Leading Index m/m",
-          "scheduled_at_utc": "2026-10-13T14:30:00+00:00",
-          "reported_actual": "-0.3%",
-          "forecast": "",
-          "previous": "0.5%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "AUD",
-          "title": "NAB Business Confidence",
-          "scheduled_at_utc": "2026-10-13T00:30:00+00:00",
-          "reported_actual": "-13",
-          "forecast": "",
-          "previous": "-8",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "JPY",
-          "title": "Bank Lending y/y",
-          "scheduled_at_utc": "2026-10-12T23:50:00+00:00",
-          "reported_actual": "5.3%",
-          "forecast": "5.5%",
-          "previous": "5.4%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "JPY",
-          "title": "PPI y/y",
-          "scheduled_at_utc": "2026-10-12T23:50:00+00:00",
-          "reported_actual": "6.8%",
-          "forecast": "7.6%",
-          "previous": "7.6%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        }
-      ],
+      "publisher_reported_actuals": [],
       "range_context": {
-        "pair": "AUDJPY",
-        "status": "UNAVAILABLE",
-        "reason": "upstream_volatility_feed_stale",
-        "used_for_signal_direction": false
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "ABOVE_BOTH",
@@ -3357,7 +2740,7 @@
           "forecast": "7.4%",
           "previous": "7.5%",
           "actual": null,
-          "minutes_until": 116,
+          "minutes_until": 75,
           "time_status": "IMMINENT"
         },
         {
@@ -3368,7 +2751,7 @@
           "forecast": "1025B",
           "previous": "60B",
           "actual": null,
-          "minutes_until": 116,
+          "minutes_until": 75,
           "time_status": "IMMINENT"
         },
         {
@@ -3379,7 +2762,7 @@
           "forecast": "2.2%",
           "previous": "-3.7%",
           "actual": null,
-          "minutes_until": 1063,
+          "minutes_until": 1022,
           "time_status": "UPCOMING"
         },
         {
@@ -3390,7 +2773,7 @@
           "forecast": "19.6K",
           "previous": "39.5K",
           "actual": null,
-          "minutes_until": 1103,
+          "minutes_until": 1062,
           "time_status": "UPCOMING"
         },
         {
@@ -3401,7 +2784,7 @@
           "forecast": "4.6%",
           "previous": "4.6%",
           "actual": null,
-          "minutes_until": 1103,
+          "minutes_until": 1062,
           "time_status": "UPCOMING"
         },
         {
@@ -3412,7 +2795,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1338,
+          "minutes_until": 1297,
           "time_status": "UPCOMING"
         },
         {
@@ -3423,7 +2806,7 @@
           "forecast": "-1.7%",
           "previous": "-1.7%",
           "actual": null,
-          "minutes_until": 1343,
+          "minutes_until": 1302,
           "time_status": "UPCOMING"
         }
       ],
@@ -3436,7 +2819,7 @@
           "forecast": "7.4%",
           "previous": "7.5%",
           "actual": null,
-          "minutes_until": 116,
+          "minutes_until": 75,
           "time_status": "IMMINENT"
         },
         {
@@ -3447,7 +2830,7 @@
           "forecast": "1025B",
           "previous": "60B",
           "actual": null,
-          "minutes_until": 116,
+          "minutes_until": 75,
           "time_status": "IMMINENT"
         },
         {
@@ -3458,7 +2841,7 @@
           "forecast": "2.2%",
           "previous": "-3.7%",
           "actual": null,
-          "minutes_until": 1063,
+          "minutes_until": 1022,
           "time_status": "UPCOMING"
         },
         {
@@ -3469,7 +2852,7 @@
           "forecast": "19.6K",
           "previous": "39.5K",
           "actual": null,
-          "minutes_until": 1103,
+          "minutes_until": 1062,
           "time_status": "UPCOMING"
         },
         {
@@ -3480,7 +2863,7 @@
           "forecast": "4.6%",
           "previous": "4.6%",
           "actual": null,
-          "minutes_until": 1103,
+          "minutes_until": 1062,
           "time_status": "UPCOMING"
         },
         {
@@ -3491,7 +2874,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1338,
+          "minutes_until": 1297,
           "time_status": "UPCOMING"
         },
         {
@@ -3502,7 +2885,7 @@
           "forecast": "-1.7%",
           "previous": "-1.7%",
           "actual": null,
-          "minutes_until": 1343,
+          "minutes_until": 1302,
           "time_status": "UPCOMING"
         }
       ],
@@ -3515,7 +2898,7 @@
           "forecast": "7.4%",
           "previous": "7.5%",
           "actual": null,
-          "minutes_until": 116,
+          "minutes_until": 75,
           "time_status": "IMMINENT"
         },
         {
@@ -3526,7 +2909,7 @@
           "forecast": "1025B",
           "previous": "60B",
           "actual": null,
-          "minutes_until": 116,
+          "minutes_until": 75,
           "time_status": "IMMINENT"
         }
       ],
@@ -3534,14 +2917,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE_HTTPERROR",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": "2026-10-14T05:20:30.346503+00:00",
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -3558,7 +2934,7 @@
       },
       "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -3568,122 +2944,14 @@
       "pair": "NZDJPY",
       "technical_direction": "BUY",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "BUY",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
-      "publisher_reported_actuals": [
-        {
-          "currency": "CNY",
-          "title": "Trade Balance",
-          "scheduled_at_utc": "2026-10-14T02:31:00+00:00",
-          "reported_actual": "906B",
-          "forecast": "790B",
-          "previous": "809B",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "CNY",
-          "title": "USD-Denominated Trade Balance",
-          "scheduled_at_utc": "2026-10-14T02:31:00+00:00",
-          "reported_actual": "133.5B",
-          "forecast": "116.8B",
-          "previous": "119.1B",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "CNY",
-          "title": "CPI y/y",
-          "scheduled_at_utc": "2026-10-14T01:30:00+00:00",
-          "reported_actual": "0.9%",
-          "forecast": "1.0%",
-          "previous": "0.8%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "CNY",
-          "title": "PPI y/y",
-          "scheduled_at_utc": "2026-10-14T01:30:00+00:00",
-          "reported_actual": "5.0%",
-          "forecast": "4.4%",
-          "previous": "3.8%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "JPY",
-          "title": "M2 Money Stock y/y",
-          "scheduled_at_utc": "2026-10-13T23:50:00+00:00",
-          "reported_actual": "2.0%",
-          "forecast": "2.1%",
-          "previous": "2.0%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "NZD",
-          "title": "Visitor Arrivals m/m",
-          "scheduled_at_utc": "2026-10-13T21:45:00+00:00",
-          "reported_actual": "2.8%",
-          "forecast": "",
-          "previous": "0.5%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "JPY",
-          "title": "Bank Lending y/y",
-          "scheduled_at_utc": "2026-10-12T23:50:00+00:00",
-          "reported_actual": "5.3%",
-          "forecast": "5.5%",
-          "previous": "5.4%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "JPY",
-          "title": "PPI y/y",
-          "scheduled_at_utc": "2026-10-12T23:50:00+00:00",
-          "reported_actual": "6.8%",
-          "forecast": "7.6%",
-          "previous": "7.6%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        }
-      ],
+      "publisher_reported_actuals": [],
       "range_context": {
-        "pair": "NZDJPY",
-        "status": "UNAVAILABLE",
-        "reason": "upstream_volatility_feed_stale",
-        "used_for_signal_direction": false
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "ABOVE_BOTH",
@@ -3699,7 +2967,7 @@
           "forecast": "7.4%",
           "previous": "7.5%",
           "actual": null,
-          "minutes_until": 116,
+          "minutes_until": 75,
           "time_status": "IMMINENT"
         },
         {
@@ -3710,7 +2978,7 @@
           "forecast": "1025B",
           "previous": "60B",
           "actual": null,
-          "minutes_until": 116,
+          "minutes_until": 75,
           "time_status": "IMMINENT"
         },
         {
@@ -3721,7 +2989,7 @@
           "forecast": "2.2%",
           "previous": "-3.7%",
           "actual": null,
-          "minutes_until": 1063,
+          "minutes_until": 1022,
           "time_status": "UPCOMING"
         },
         {
@@ -3732,7 +3000,7 @@
           "forecast": "-1.7%",
           "previous": "-1.7%",
           "actual": null,
-          "minutes_until": 1343,
+          "minutes_until": 1302,
           "time_status": "UPCOMING"
         },
         {
@@ -3743,7 +3011,7 @@
           "forecast": "",
           "previous": "53.1",
           "actual": null,
-          "minutes_until": 2363,
+          "minutes_until": 2322,
           "time_status": "UPCOMING"
         },
         {
@@ -3754,7 +3022,7 @@
           "forecast": "",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 2378,
+          "minutes_until": 2337,
           "time_status": "UPCOMING"
         }
       ],
@@ -3767,7 +3035,7 @@
           "forecast": "7.4%",
           "previous": "7.5%",
           "actual": null,
-          "minutes_until": 116,
+          "minutes_until": 75,
           "time_status": "IMMINENT"
         },
         {
@@ -3778,7 +3046,7 @@
           "forecast": "1025B",
           "previous": "60B",
           "actual": null,
-          "minutes_until": 116,
+          "minutes_until": 75,
           "time_status": "IMMINENT"
         },
         {
@@ -3789,7 +3057,7 @@
           "forecast": "2.2%",
           "previous": "-3.7%",
           "actual": null,
-          "minutes_until": 1063,
+          "minutes_until": 1022,
           "time_status": "UPCOMING"
         },
         {
@@ -3800,7 +3068,7 @@
           "forecast": "-1.7%",
           "previous": "-1.7%",
           "actual": null,
-          "minutes_until": 1343,
+          "minutes_until": 1302,
           "time_status": "UPCOMING"
         }
       ],
@@ -3813,7 +3081,7 @@
           "forecast": "7.4%",
           "previous": "7.5%",
           "actual": null,
-          "minutes_until": 116,
+          "minutes_until": 75,
           "time_status": "IMMINENT"
         },
         {
@@ -3824,7 +3092,7 @@
           "forecast": "1025B",
           "previous": "60B",
           "actual": null,
-          "minutes_until": 116,
+          "minutes_until": 75,
           "time_status": "IMMINENT"
         }
       ],
@@ -3832,14 +3100,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE_HTTPERROR",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": "2026-10-14T05:20:30.349710+00:00",
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -3856,7 +3117,7 @@
       },
       "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -3866,70 +3127,14 @@
       "pair": "EURJPY",
       "technical_direction": "BUY",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "BUY",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
-      "publisher_reported_actuals": [
-        {
-          "currency": "JPY",
-          "title": "M2 Money Stock y/y",
-          "scheduled_at_utc": "2026-10-13T23:50:00+00:00",
-          "reported_actual": "2.0%",
-          "forecast": "2.1%",
-          "previous": "2.0%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "EUR",
-          "title": "German Final CPI m/m",
-          "scheduled_at_utc": "2026-10-13T06:00:00+00:00",
-          "reported_actual": "0.6%",
-          "forecast": "0.6%",
-          "previous": "0.6%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "JPY",
-          "title": "Bank Lending y/y",
-          "scheduled_at_utc": "2026-10-12T23:50:00+00:00",
-          "reported_actual": "5.3%",
-          "forecast": "5.5%",
-          "previous": "5.4%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "JPY",
-          "title": "PPI y/y",
-          "scheduled_at_utc": "2026-10-12T23:50:00+00:00",
-          "reported_actual": "6.8%",
-          "forecast": "7.6%",
-          "previous": "7.6%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        }
-      ],
+      "publisher_reported_actuals": [],
       "range_context": {
-        "pair": "EURJPY",
-        "status": "UNAVAILABLE",
-        "reason": "upstream_volatility_feed_stale",
-        "used_for_signal_direction": false
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "ABOVE_BOTH",
@@ -3938,17 +3143,6 @@
       "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
         {
-          "title": "German WPI m/m",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-14T02:00:00-04:00",
-          "forecast": "0.6%",
-          "previous": "0.9%",
-          "actual": null,
-          "minutes_until": -7,
-          "time_status": "IMMINENT"
-        },
-        {
           "title": "ECB President Lagarde Speaks",
           "currency": "EUR",
           "impact": "Medium",
@@ -3956,8 +3150,8 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 143,
-          "time_status": "UPCOMING"
+          "minutes_until": 102,
+          "time_status": "IMMINENT"
         },
         {
           "title": "German 30-y Bond Auction",
@@ -3967,7 +3161,7 @@
           "forecast": "",
           "previous": "3.80|1.6",
           "actual": null,
-          "minutes_until": 207,
+          "minutes_until": 166,
           "time_status": "UPCOMING"
         },
         {
@@ -3978,7 +3172,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 248,
+          "minutes_until": 207,
           "time_status": "UPCOMING"
         },
         {
@@ -3989,7 +3183,7 @@
           "forecast": "2.2%",
           "previous": "-3.7%",
           "actual": null,
-          "minutes_until": 1063,
+          "minutes_until": 1022,
           "time_status": "UPCOMING"
         },
         {
@@ -4000,7 +3194,7 @@
           "forecast": "-1.7%",
           "previous": "-1.7%",
           "actual": null,
-          "minutes_until": 1343,
+          "minutes_until": 1302,
           "time_status": "UPCOMING"
         },
         {
@@ -4011,7 +3205,7 @@
           "forecast": "-0.3%",
           "previous": "-0.3%",
           "actual": null,
-          "minutes_until": 1478,
+          "minutes_until": 1437,
           "time_status": "UPCOMING"
         },
         {
@@ -4022,7 +3216,7 @@
           "forecast": "0.0%",
           "previous": "-0.1%",
           "actual": null,
-          "minutes_until": 1613,
+          "minutes_until": 1572,
           "time_status": "UPCOMING"
         },
         {
@@ -4033,7 +3227,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1688,
+          "minutes_until": 1647,
           "time_status": "UPCOMING"
         },
         {
@@ -4044,7 +3238,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2663,
+          "minutes_until": 2622,
           "time_status": "UPCOMING"
         }
       ],
@@ -4057,8 +3251,8 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 143,
-          "time_status": "UPCOMING"
+          "minutes_until": 102,
+          "time_status": "IMMINENT"
         },
         {
           "title": "German 30-y Bond Auction",
@@ -4068,7 +3262,7 @@
           "forecast": "",
           "previous": "3.80|1.6",
           "actual": null,
-          "minutes_until": 207,
+          "minutes_until": 166,
           "time_status": "UPCOMING"
         },
         {
@@ -4079,7 +3273,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 248,
+          "minutes_until": 207,
           "time_status": "UPCOMING"
         },
         {
@@ -4090,7 +3284,7 @@
           "forecast": "2.2%",
           "previous": "-3.7%",
           "actual": null,
-          "minutes_until": 1063,
+          "minutes_until": 1022,
           "time_status": "UPCOMING"
         },
         {
@@ -4101,20 +3295,31 @@
           "forecast": "-1.7%",
           "previous": "-1.7%",
           "actual": null,
-          "minutes_until": 1343,
+          "minutes_until": 1302,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "French Final CPI m/m",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-10-15T02:45:00-04:00",
+          "forecast": "-0.3%",
+          "previous": "-0.3%",
+          "actual": null,
+          "minutes_until": 1437,
           "time_status": "UPCOMING"
         }
       ],
       "imminent_events": [
         {
-          "title": "German WPI m/m",
+          "title": "ECB President Lagarde Speaks",
           "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-14T02:00:00-04:00",
-          "forecast": "0.6%",
-          "previous": "0.9%",
+          "impact": "Medium",
+          "event_at_et": "2026-10-14T04:30:00-04:00",
+          "forecast": "",
+          "previous": "",
           "actual": null,
-          "minutes_until": -7,
+          "minutes_until": 102,
           "time_status": "IMMINENT"
         }
       ],
@@ -4122,14 +3327,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE_HTTPERROR",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": "2026-10-14T05:20:30.351707+00:00",
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -4146,7 +3344,7 @@
       },
       "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -4154,33 +3352,16 @@
     },
     {
       "pair": "EURCAD",
-      "technical_direction": "SELL",
-      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "SELL",
+      "technical_direction": "NO_RANKED_CANDIDATE",
+      "technical_stage": "UNRANKED",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
-      "publisher_reported_actuals": [
-        {
-          "currency": "EUR",
-          "title": "German Final CPI m/m",
-          "scheduled_at_utc": "2026-10-13T06:00:00+00:00",
-          "reported_actual": "0.6%",
-          "forecast": "0.6%",
-          "previous": "0.6%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        }
-      ],
+      "publisher_reported_actuals": [],
       "range_context": {
-        "pair": "EURCAD",
-        "status": "UNAVAILABLE",
-        "reason": "upstream_volatility_feed_stale",
-        "used_for_signal_direction": false
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
@@ -4189,28 +3370,6 @@
       "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
         {
-          "title": "German WPI m/m",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-14T02:00:00-04:00",
-          "forecast": "0.6%",
-          "previous": "0.9%",
-          "actual": null,
-          "minutes_until": -7,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "BOC Gov Macklem Speaks",
-          "currency": "CAD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-14T02:05:00-04:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": -2,
-          "time_status": "IMMINENT"
-        },
-        {
           "title": "ECB President Lagarde Speaks",
           "currency": "EUR",
           "impact": "Medium",
@@ -4218,8 +3377,8 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 143,
-          "time_status": "UPCOMING"
+          "minutes_until": 102,
+          "time_status": "IMMINENT"
         },
         {
           "title": "German 30-y Bond Auction",
@@ -4229,7 +3388,7 @@
           "forecast": "",
           "previous": "3.80|1.6",
           "actual": null,
-          "minutes_until": 207,
+          "minutes_until": 166,
           "time_status": "UPCOMING"
         },
         {
@@ -4240,7 +3399,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 248,
+          "minutes_until": 207,
           "time_status": "UPCOMING"
         },
         {
@@ -4251,7 +3410,7 @@
           "forecast": "2.9%",
           "previous": "-17.3%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -4262,7 +3421,7 @@
           "forecast": "-0.3%",
           "previous": "-0.3%",
           "actual": null,
-          "minutes_until": 1478,
+          "minutes_until": 1437,
           "time_status": "UPCOMING"
         },
         {
@@ -4273,7 +3432,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1613,
+          "minutes_until": 1572,
           "time_status": "UPCOMING"
         },
         {
@@ -4284,7 +3443,7 @@
           "forecast": "0.0%",
           "previous": "-0.1%",
           "actual": null,
-          "minutes_until": 1613,
+          "minutes_until": 1572,
           "time_status": "UPCOMING"
         },
         {
@@ -4295,7 +3454,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1688,
+          "minutes_until": 1647,
           "time_status": "UPCOMING"
         },
         {
@@ -4306,7 +3465,7 @@
           "forecast": "1.1%",
           "previous": "-0.4%",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -4317,7 +3476,7 @@
           "forecast": "-1.5%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -4328,7 +3487,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2663,
+          "minutes_until": 2622,
           "time_status": "UPCOMING"
         },
         {
@@ -4339,7 +3498,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2768,
+          "minutes_until": 2727,
           "time_status": "UPCOMING"
         }
       ],
@@ -4352,8 +3511,8 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 143,
-          "time_status": "UPCOMING"
+          "minutes_until": 102,
+          "time_status": "IMMINENT"
         },
         {
           "title": "German 30-y Bond Auction",
@@ -4363,7 +3522,7 @@
           "forecast": "",
           "previous": "3.80|1.6",
           "actual": null,
-          "minutes_until": 207,
+          "minutes_until": 166,
           "time_status": "UPCOMING"
         },
         {
@@ -4374,7 +3533,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 248,
+          "minutes_until": 207,
           "time_status": "UPCOMING"
         },
         {
@@ -4385,31 +3544,31 @@
           "forecast": "2.9%",
           "previous": "-17.3%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "French Final CPI m/m",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-10-15T02:45:00-04:00",
+          "forecast": "-0.3%",
+          "previous": "-0.3%",
+          "actual": null,
+          "minutes_until": 1437,
           "time_status": "UPCOMING"
         }
       ],
       "imminent_events": [
         {
-          "title": "German WPI m/m",
+          "title": "ECB President Lagarde Speaks",
           "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-14T02:00:00-04:00",
-          "forecast": "0.6%",
-          "previous": "0.9%",
-          "actual": null,
-          "minutes_until": -7,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "BOC Gov Macklem Speaks",
-          "currency": "CAD",
           "impact": "Medium",
-          "event_at_et": "2026-10-14T02:05:00-04:00",
+          "event_at_et": "2026-10-14T04:30:00-04:00",
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": -2,
+          "minutes_until": 102,
           "time_status": "IMMINENT"
         }
       ],
@@ -4417,14 +3576,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE_HTTPERROR",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": "2026-10-14T05:20:30.355182+00:00",
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -4432,7 +3584,7 @@
       },
       "asian_risk_directional_note": "Not a direct directional driver",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -4440,77 +3592,23 @@
     },
     {
       "pair": "USDCAD",
-      "technical_direction": "BUY",
-      "technical_stage": "EARLY_M15_M30_MOMENTUM",
-      "unified_signal_direction": "BUY",
+      "technical_direction": "NO_RANKED_CANDIDATE",
+      "technical_stage": "UNRANKED",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
-      "publisher_reported_actuals": [
-        {
-          "currency": "USD",
-          "title": "Existing Home Sales",
-          "scheduled_at_utc": "2026-10-13T14:00:00+00:00",
-          "reported_actual": "3.99M",
-          "forecast": "3.95M",
-          "previous": "3.98M",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "ADP Weekly Employment Change",
-          "scheduled_at_utc": "2026-10-13T12:15:00+00:00",
-          "reported_actual": "24.8K",
-          "forecast": "",
-          "previous": "23.8K",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "NFIB Small Business Index",
-          "scheduled_at_utc": "2026-10-13T10:00:00+00:00",
-          "reported_actual": "97.9",
-          "forecast": "98.1",
-          "previous": "98.7",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        }
-      ],
+      "publisher_reported_actuals": [],
       "range_context": {
-        "pair": "USDCAD",
-        "status": "UNAVAILABLE",
-        "reason": "upstream_volatility_feed_stale",
-        "used_for_signal_direction": false
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
       "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
-      "higher_timeframe_conflict": true,
+      "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
-        {
-          "title": "BOC Gov Macklem Speaks",
-          "currency": "CAD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-14T02:05:00-04:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": -2,
-          "time_status": "IMMINENT"
-        },
         {
           "title": "FOMC Member Bowman Speaks",
           "currency": "USD",
@@ -4519,7 +3617,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 213,
+          "minutes_until": 172,
           "time_status": "UPCOMING"
         },
         {
@@ -4530,7 +3628,7 @@
           "forecast": "2.9%",
           "previous": "-17.3%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -4541,7 +3639,7 @@
           "forecast": "0.2%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -4552,7 +3650,7 @@
           "forecast": "2.5%",
           "previous": "2.4%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -4563,7 +3661,7 @@
           "forecast": "0.6%",
           "previous": "0.4%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -4574,7 +3672,7 @@
           "forecast": "3.6%",
           "previous": "3.4%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -4585,7 +3683,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 683,
+          "minutes_until": 642,
           "time_status": "UPCOMING"
         },
         {
@@ -4596,7 +3694,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 713,
+          "minutes_until": 672,
           "time_status": "UPCOMING"
         },
         {
@@ -4607,7 +3705,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 773,
+          "minutes_until": 732,
           "time_status": "UPCOMING"
         },
         {
@@ -4618,7 +3716,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 863,
+          "minutes_until": 822,
           "time_status": "UPCOMING"
         },
         {
@@ -4629,7 +3727,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1248,
+          "minutes_until": 1207,
           "time_status": "UPCOMING"
         },
         {
@@ -4640,7 +3738,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1613,
+          "minutes_until": 1572,
           "time_status": "UPCOMING"
         },
         {
@@ -4651,7 +3749,7 @@
           "forecast": "1.1%",
           "previous": "-0.4%",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -4662,7 +3760,7 @@
           "forecast": "-1.5%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -4673,7 +3771,7 @@
           "forecast": "0.3%",
           "previous": "0.2%",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -4684,7 +3782,7 @@
           "forecast": "0.6%",
           "previous": "1.4%",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -4695,7 +3793,7 @@
           "forecast": "0.6%",
           "previous": "0.4%",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -4706,7 +3804,7 @@
           "forecast": "0.3%",
           "previous": "1.2%",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -4717,7 +3815,7 @@
           "forecast": "28.2",
           "previous": "37.8",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -4728,7 +3826,7 @@
           "forecast": "199K",
           "previous": "197K",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -4739,7 +3837,7 @@
           "forecast": "12.1",
           "previous": "7.6",
           "actual": null,
-          "minutes_until": 1823,
+          "minutes_until": 1782,
           "time_status": "UPCOMING"
         },
         {
@@ -4750,7 +3848,7 @@
           "forecast": "0.4%",
           "previous": "0.8%",
           "actual": null,
-          "minutes_until": 1913,
+          "minutes_until": 1872,
           "time_status": "UPCOMING"
         },
         {
@@ -4761,7 +3859,7 @@
           "forecast": "",
           "previous": "85B",
           "actual": null,
-          "minutes_until": 1943,
+          "minutes_until": 1902,
           "time_status": "UPCOMING"
         },
         {
@@ -4772,7 +3870,7 @@
           "forecast": "",
           "previous": "-3.2M",
           "actual": null,
-          "minutes_until": 2033,
+          "minutes_until": 1992,
           "time_status": "UPCOMING"
         },
         {
@@ -4783,7 +3881,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2303,
+          "minutes_until": 2262,
           "time_status": "UPCOMING"
         },
         {
@@ -4794,7 +3892,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2723,
+          "minutes_until": 2682,
           "time_status": "UPCOMING"
         },
         {
@@ -4805,7 +3903,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2768,
+          "minutes_until": 2727,
           "time_status": "UPCOMING"
         }
       ],
@@ -4818,7 +3916,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 213,
+          "minutes_until": 172,
           "time_status": "UPCOMING"
         },
         {
@@ -4829,7 +3927,7 @@
           "forecast": "2.9%",
           "previous": "-17.3%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -4840,7 +3938,7 @@
           "forecast": "0.2%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -4851,7 +3949,7 @@
           "forecast": "2.5%",
           "previous": "2.4%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -4862,7 +3960,7 @@
           "forecast": "0.6%",
           "previous": "0.4%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -4873,7 +3971,7 @@
           "forecast": "3.6%",
           "previous": "3.4%",
           "actual": null,
-          "minutes_until": 383,
+          "minutes_until": 342,
           "time_status": "UPCOMING"
         },
         {
@@ -4884,7 +3982,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 683,
+          "minutes_until": 642,
           "time_status": "UPCOMING"
         },
         {
@@ -4895,7 +3993,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 713,
+          "minutes_until": 672,
           "time_status": "UPCOMING"
         },
         {
@@ -4906,7 +4004,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 773,
+          "minutes_until": 732,
           "time_status": "UPCOMING"
         },
         {
@@ -4917,7 +4015,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 863,
+          "minutes_until": 822,
           "time_status": "UPCOMING"
         },
         {
@@ -4928,35 +4026,16 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1248,
+          "minutes_until": 1207,
           "time_status": "UPCOMING"
         }
       ],
-      "imminent_events": [
-        {
-          "title": "BOC Gov Macklem Speaks",
-          "currency": "CAD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-14T02:05:00-04:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": -2,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "event_risk": "IMMINENT_EVENT",
+      "imminent_events": [],
+      "event_risk": "EVENT_WITHIN_24H",
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE_HTTPERROR",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": "2026-10-14T05:20:30.360544+00:00",
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -4964,7 +4043,7 @@
       },
       "asian_risk_directional_note": "Not a direct directional driver",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -4974,44 +4053,14 @@
       "pair": "EURGBP",
       "technical_direction": "SELL",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "SELL",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
-      "publisher_reported_actuals": [
-        {
-          "currency": "EUR",
-          "title": "German Final CPI m/m",
-          "scheduled_at_utc": "2026-10-13T06:00:00+00:00",
-          "reported_actual": "0.6%",
-          "forecast": "0.6%",
-          "previous": "0.6%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "GBP",
-          "title": "BRC Retail Sales Monitor y/y",
-          "scheduled_at_utc": "2026-10-12T23:01:00+00:00",
-          "reported_actual": "1.0%",
-          "forecast": "0.8%",
-          "previous": "0.5%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-14T05:20:24.419042+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        }
-      ],
+      "publisher_reported_actuals": [],
       "range_context": {
-        "pair": "EURGBP",
-        "status": "UNAVAILABLE",
-        "reason": "upstream_volatility_feed_stale",
-        "used_for_signal_direction": false
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
@@ -5020,28 +4069,6 @@
       "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
         {
-          "title": "German WPI m/m",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-14T02:00:00-04:00",
-          "forecast": "0.6%",
-          "previous": "0.9%",
-          "actual": null,
-          "minutes_until": -7,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "MPC Member Pill Speaks",
-          "currency": "GBP",
-          "impact": "Low",
-          "event_at_et": "2026-10-14T02:00:00-04:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": -7,
-          "time_status": "IMMINENT"
-        },
-        {
           "title": "ECB President Lagarde Speaks",
           "currency": "EUR",
           "impact": "Medium",
@@ -5049,8 +4076,8 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 143,
-          "time_status": "UPCOMING"
+          "minutes_until": 102,
+          "time_status": "IMMINENT"
         },
         {
           "title": "German 30-y Bond Auction",
@@ -5060,7 +4087,7 @@
           "forecast": "",
           "previous": "3.80|1.6",
           "actual": null,
-          "minutes_until": 207,
+          "minutes_until": 166,
           "time_status": "UPCOMING"
         },
         {
@@ -5071,7 +4098,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 248,
+          "minutes_until": 207,
           "time_status": "UPCOMING"
         },
         {
@@ -5082,7 +4109,7 @@
           "forecast": "",
           "previous": "-0.1%",
           "actual": null,
-          "minutes_until": 443,
+          "minutes_until": 402,
           "time_status": "UPCOMING"
         },
         {
@@ -5093,7 +4120,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1288,
+          "minutes_until": 1247,
           "time_status": "UPCOMING"
         },
         {
@@ -5104,7 +4131,7 @@
           "forecast": "-0.1%",
           "previous": "0.4%",
           "actual": null,
-          "minutes_until": 1433,
+          "minutes_until": 1392,
           "time_status": "UPCOMING"
         },
         {
@@ -5115,7 +4142,7 @@
           "forecast": "0.0%",
           "previous": "0.1%",
           "actual": null,
-          "minutes_until": 1433,
+          "minutes_until": 1392,
           "time_status": "UPCOMING"
         },
         {
@@ -5126,7 +4153,7 @@
           "forecast": "-21.9B",
           "previous": "-21.0B",
           "actual": null,
-          "minutes_until": 1433,
+          "minutes_until": 1392,
           "time_status": "UPCOMING"
         },
         {
@@ -5137,7 +4164,7 @@
           "forecast": "0.8%",
           "previous": "0.6%",
           "actual": null,
-          "minutes_until": 1433,
+          "minutes_until": 1392,
           "time_status": "UPCOMING"
         },
         {
@@ -5148,7 +4175,7 @@
           "forecast": "-0.1%",
           "previous": "0.2%",
           "actual": null,
-          "minutes_until": 1433,
+          "minutes_until": 1392,
           "time_status": "UPCOMING"
         },
         {
@@ -5159,7 +4186,7 @@
           "forecast": "-0.1%",
           "previous": "0.9%",
           "actual": null,
-          "minutes_until": 1433,
+          "minutes_until": 1392,
           "time_status": "UPCOMING"
         },
         {
@@ -5170,7 +4197,7 @@
           "forecast": "-0.3%",
           "previous": "-0.3%",
           "actual": null,
-          "minutes_until": 1478,
+          "minutes_until": 1437,
           "time_status": "UPCOMING"
         },
         {
@@ -5181,7 +4208,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1478,
+          "minutes_until": 1437,
           "time_status": "UPCOMING"
         },
         {
@@ -5192,7 +4219,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1523,
+          "minutes_until": 1482,
           "time_status": "UPCOMING"
         },
         {
@@ -5203,7 +4230,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1598,
+          "minutes_until": 1557,
           "time_status": "UPCOMING"
         },
         {
@@ -5214,7 +4241,7 @@
           "forecast": "0.0%",
           "previous": "-0.1%",
           "actual": null,
-          "minutes_until": 1613,
+          "minutes_until": 1572,
           "time_status": "UPCOMING"
         },
         {
@@ -5225,7 +4252,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1688,
+          "minutes_until": 1647,
           "time_status": "UPCOMING"
         },
         {
@@ -5236,7 +4263,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2633,
+          "minutes_until": 2592,
           "time_status": "UPCOMING"
         },
         {
@@ -5247,7 +4274,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2663,
+          "minutes_until": 2622,
           "time_status": "UPCOMING"
         }
       ],
@@ -5260,8 +4287,8 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 143,
-          "time_status": "UPCOMING"
+          "minutes_until": 102,
+          "time_status": "IMMINENT"
         },
         {
           "title": "German 30-y Bond Auction",
@@ -5271,7 +4298,7 @@
           "forecast": "",
           "previous": "3.80|1.6",
           "actual": null,
-          "minutes_until": 207,
+          "minutes_until": 166,
           "time_status": "UPCOMING"
         },
         {
@@ -5282,7 +4309,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 248,
+          "minutes_until": 207,
           "time_status": "UPCOMING"
         },
         {
@@ -5293,7 +4320,7 @@
           "forecast": "",
           "previous": "-0.1%",
           "actual": null,
-          "minutes_until": 443,
+          "minutes_until": 402,
           "time_status": "UPCOMING"
         },
         {
@@ -5304,7 +4331,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1288,
+          "minutes_until": 1247,
           "time_status": "UPCOMING"
         },
         {
@@ -5315,7 +4342,7 @@
           "forecast": "-0.1%",
           "previous": "0.4%",
           "actual": null,
-          "minutes_until": 1433,
+          "minutes_until": 1392,
           "time_status": "UPCOMING"
         },
         {
@@ -5326,7 +4353,7 @@
           "forecast": "0.0%",
           "previous": "0.1%",
           "actual": null,
-          "minutes_until": 1433,
+          "minutes_until": 1392,
           "time_status": "UPCOMING"
         },
         {
@@ -5337,7 +4364,7 @@
           "forecast": "-21.9B",
           "previous": "-21.0B",
           "actual": null,
-          "minutes_until": 1433,
+          "minutes_until": 1392,
           "time_status": "UPCOMING"
         },
         {
@@ -5348,7 +4375,7 @@
           "forecast": "0.8%",
           "previous": "0.6%",
           "actual": null,
-          "minutes_until": 1433,
+          "minutes_until": 1392,
           "time_status": "UPCOMING"
         },
         {
@@ -5359,7 +4386,7 @@
           "forecast": "-0.1%",
           "previous": "0.2%",
           "actual": null,
-          "minutes_until": 1433,
+          "minutes_until": 1392,
           "time_status": "UPCOMING"
         },
         {
@@ -5370,31 +4397,42 @@
           "forecast": "-0.1%",
           "previous": "0.9%",
           "actual": null,
-          "minutes_until": 1433,
+          "minutes_until": 1392,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "French Final CPI m/m",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-10-15T02:45:00-04:00",
+          "forecast": "-0.3%",
+          "previous": "-0.3%",
+          "actual": null,
+          "minutes_until": 1437,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "MPC Member Greene Speaks",
+          "currency": "GBP",
+          "impact": "Low",
+          "event_at_et": "2026-10-15T02:45:00-04:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1437,
           "time_status": "UPCOMING"
         }
       ],
       "imminent_events": [
         {
-          "title": "German WPI m/m",
+          "title": "ECB President Lagarde Speaks",
           "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-14T02:00:00-04:00",
-          "forecast": "0.6%",
-          "previous": "0.9%",
-          "actual": null,
-          "minutes_until": -7,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "MPC Member Pill Speaks",
-          "currency": "GBP",
-          "impact": "Low",
-          "event_at_et": "2026-10-14T02:00:00-04:00",
+          "impact": "Medium",
+          "event_at_et": "2026-10-14T04:30:00-04:00",
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": -7,
+          "minutes_until": 102,
           "time_status": "IMMINENT"
         }
       ],
@@ -5402,14 +4440,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE_HTTPERROR",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": "2026-10-14T05:20:30.381933+00:00",
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -5417,7 +4448,7 @@
       },
       "asian_risk_directional_note": "Not a direct directional driver",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -5433,11 +4464,13 @@
     "reuters_fxstreet_catalysts",
     "economic_actuals",
     "sovereign_yield_differentials",
+    "policy_rates",
     "ois",
     "commodities",
     "dxy_equities_sentiment",
     "cme_volume_open_interest",
     "retail_positioning",
+    "closed_15m30m_direction",
     "atr_adr_session_levels",
     "independent_live_spreads"
   ],
