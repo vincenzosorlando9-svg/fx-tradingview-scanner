@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-14T22:03:26.516231+00:00",
+  "generated_at_utc": "2026-10-14T22:18:24.078034+00:00",
   "target_refresh_minutes": 5,
   "actual_actions_schedule_not_guaranteed": true,
   "approved_source_names": [
@@ -27,7 +27,7 @@
       "url": "https://www.newsquawk.com/headlines/feds-daly-2027-voter-says-we-are-more-likely-than-not-to-need-more-rate-hikes-but-still-deliberating-on-timing-adds-not-in-a-posture-of-urgency-and-better-to-be-thoughtful-and-deliberate",
       "published_at_utc": "2026-10-14T22:02:00+00:00",
       "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
-      "publisher_age_minutes": 1.4,
+      "publisher_age_minutes": 16.4,
       "source_latency_to_first_seen_minutes": 1.4,
       "source_public_delay_minutes_at_least": 20,
       "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -50,46 +50,76 @@
       "broker_execution_allowed": false,
       "price_reactions": {
         "AUDUSD": {
-          "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
+          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
           "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
           "no_intrabar_assumptions": true,
           "causal_link_verified": false,
-          "first_seen_before_market_reaction": false
+          "first_seen_before_market_reaction": true,
+          "pre_event_close_utc": "2026-10-14T22:00:00+00:00",
+          "pre_event_price": 0.69709,
+          "first_post_event_close_utc": "2026-10-14T22:15:00+00:00",
+          "first_post_event_price": 0.6972,
+          "first_post_event_change_pips": 1.1
         },
         "NZDUSD": {
-          "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
+          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
           "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
           "no_intrabar_assumptions": true,
           "causal_link_verified": false,
-          "first_seen_before_market_reaction": false
+          "first_seen_before_market_reaction": true,
+          "pre_event_close_utc": "2026-10-14T22:00:00+00:00",
+          "pre_event_price": 0.5591,
+          "first_post_event_close_utc": "2026-10-14T22:15:00+00:00",
+          "first_post_event_price": 0.55922,
+          "first_post_event_change_pips": 1.2
         },
         "EURUSD": {
-          "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
+          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
           "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
           "no_intrabar_assumptions": true,
           "causal_link_verified": false,
-          "first_seen_before_market_reaction": false
+          "first_seen_before_market_reaction": true,
+          "pre_event_close_utc": "2026-10-14T22:00:00+00:00",
+          "pre_event_price": 1.11525,
+          "first_post_event_close_utc": "2026-10-14T22:15:00+00:00",
+          "first_post_event_price": 1.11569,
+          "first_post_event_change_pips": 4.4
         },
         "GBPUSD": {
-          "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
+          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
           "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
           "no_intrabar_assumptions": true,
           "causal_link_verified": false,
-          "first_seen_before_market_reaction": false
+          "first_seen_before_market_reaction": true,
+          "pre_event_close_utc": "2026-10-14T22:00:00+00:00",
+          "pre_event_price": 1.31835,
+          "first_post_event_close_utc": "2026-10-14T22:15:00+00:00",
+          "first_post_event_price": 1.3193,
+          "first_post_event_change_pips": 9.5
         },
         "USDJPY": {
-          "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
+          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
           "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
           "no_intrabar_assumptions": true,
           "causal_link_verified": false,
-          "first_seen_before_market_reaction": false
+          "first_seen_before_market_reaction": true,
+          "pre_event_close_utc": "2026-10-14T22:00:00+00:00",
+          "pre_event_price": 158.29,
+          "first_post_event_close_utc": "2026-10-14T22:15:00+00:00",
+          "first_post_event_price": 158.287,
+          "first_post_event_change_pips": -0.3
         },
         "USDCAD": {
-          "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
+          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
           "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
           "no_intrabar_assumptions": true,
           "causal_link_verified": false,
-          "first_seen_before_market_reaction": false
+          "first_seen_before_market_reaction": true,
+          "pre_event_close_utc": "2026-10-14T22:00:00+00:00",
+          "pre_event_price": 1.42334,
+          "first_post_event_close_utc": "2026-10-14T22:15:00+00:00",
+          "first_post_event_price": 1.42368,
+          "first_post_event_change_pips": 3.4
         }
       },
       "all_price_reactions_are_noncausal_observations": true
@@ -100,7 +130,7 @@
       "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
       "published_at_utc": "2026-10-14T21:47:00+00:00",
       "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
-      "publisher_age_minutes": 16.4,
+      "publisher_age_minutes": 31.4,
       "source_latency_to_first_seen_minutes": 16.4,
       "source_public_delay_minutes_at_least": 20,
       "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -123,7 +153,7 @@
       "broker_execution_allowed": false,
       "price_reactions": {
         "AUDUSD": {
-          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
           "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
           "no_intrabar_assumptions": true,
           "causal_link_verified": false,
@@ -132,10 +162,17 @@
           "pre_event_price": 0.697,
           "first_post_event_close_utc": "2026-10-14T22:00:00+00:00",
           "first_post_event_price": 0.69709,
-          "first_post_event_change_pips": 0.9
+          "first_post_event_change_pips": 0.9,
+          "second_post_event_close_utc": "2026-10-14T22:15:00+00:00",
+          "second_post_event_price": 0.6972,
+          "second_post_event_change_pips": 1.1,
+          "net_two_bar_event_window_pips": 2.0,
+          "early_initial_direction": "UP",
+          "second_bar_direction": "UP",
+          "retrospective_if_first_seen_after_first_candle": true
         },
         "NZDUSD": {
-          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
           "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
           "no_intrabar_assumptions": true,
           "causal_link_verified": false,
@@ -144,10 +181,17 @@
           "pre_event_price": 0.55878,
           "first_post_event_close_utc": "2026-10-14T22:00:00+00:00",
           "first_post_event_price": 0.5591,
-          "first_post_event_change_pips": 3.2
+          "first_post_event_change_pips": 3.2,
+          "second_post_event_close_utc": "2026-10-14T22:15:00+00:00",
+          "second_post_event_price": 0.55922,
+          "second_post_event_change_pips": 1.2,
+          "net_two_bar_event_window_pips": 4.4,
+          "early_initial_direction": "UP",
+          "second_bar_direction": "UP",
+          "retrospective_if_first_seen_after_first_candle": true
         },
         "EURUSD": {
-          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
           "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
           "no_intrabar_assumptions": true,
           "causal_link_verified": false,
@@ -156,10 +200,17 @@
           "pre_event_price": 1.1151,
           "first_post_event_close_utc": "2026-10-14T22:00:00+00:00",
           "first_post_event_price": 1.11525,
-          "first_post_event_change_pips": 1.5
+          "first_post_event_change_pips": 1.5,
+          "second_post_event_close_utc": "2026-10-14T22:15:00+00:00",
+          "second_post_event_price": 1.11569,
+          "second_post_event_change_pips": 4.4,
+          "net_two_bar_event_window_pips": 5.9,
+          "early_initial_direction": "UP",
+          "second_bar_direction": "UP",
+          "retrospective_if_first_seen_after_first_candle": true
         },
         "GBPUSD": {
-          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
           "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
           "no_intrabar_assumptions": true,
           "causal_link_verified": false,
@@ -168,10 +219,17 @@
           "pre_event_price": 1.3185,
           "first_post_event_close_utc": "2026-10-14T22:00:00+00:00",
           "first_post_event_price": 1.31835,
-          "first_post_event_change_pips": -1.5
+          "first_post_event_change_pips": -1.5,
+          "second_post_event_close_utc": "2026-10-14T22:15:00+00:00",
+          "second_post_event_price": 1.3193,
+          "second_post_event_change_pips": 9.5,
+          "net_two_bar_event_window_pips": 8.0,
+          "early_initial_direction": "DOWN",
+          "second_bar_direction": "UP",
+          "retrospective_if_first_seen_after_first_candle": true
         },
         "USDJPY": {
-          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
           "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
           "no_intrabar_assumptions": true,
           "causal_link_verified": false,
@@ -180,10 +238,17 @@
           "pre_event_price": 158.288,
           "first_post_event_close_utc": "2026-10-14T22:00:00+00:00",
           "first_post_event_price": 158.29,
-          "first_post_event_change_pips": 0.2
+          "first_post_event_change_pips": 0.2,
+          "second_post_event_close_utc": "2026-10-14T22:15:00+00:00",
+          "second_post_event_price": 158.287,
+          "second_post_event_change_pips": -0.3,
+          "net_two_bar_event_window_pips": -0.1,
+          "early_initial_direction": "UP",
+          "second_bar_direction": "DOWN",
+          "retrospective_if_first_seen_after_first_candle": true
         },
         "USDCAD": {
-          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
           "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
           "no_intrabar_assumptions": true,
           "causal_link_verified": false,
@@ -192,7 +257,14 @@
           "pre_event_price": 1.42354,
           "first_post_event_close_utc": "2026-10-14T22:00:00+00:00",
           "first_post_event_price": 1.42334,
-          "first_post_event_change_pips": -2.0
+          "first_post_event_change_pips": -2.0,
+          "second_post_event_close_utc": "2026-10-14T22:15:00+00:00",
+          "second_post_event_price": 1.42368,
+          "second_post_event_change_pips": 3.4,
+          "net_two_bar_event_window_pips": 1.4,
+          "early_initial_direction": "DOWN",
+          "second_bar_direction": "UP",
+          "retrospective_if_first_seen_after_first_candle": true
         }
       },
       "all_price_reactions_are_noncausal_observations": true
@@ -208,43 +280,8 @@
           "url": "https://www.newsquawk.com/headlines/feds-daly-2027-voter-says-we-are-more-likely-than-not-to-need-more-rate-hikes-but-still-deliberating-on-timing-adds-not-in-a-posture-of-urgency-and-better-to-be-thoughtful-and-deliberate",
           "published_at_utc": "2026-10-14T22:02:00+00:00",
           "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
-          "publisher_age_minutes": 1.4,
-          "source_latency_to_first_seen_minutes": 1.4,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false
-          }
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "US President Trump says the Fed has interest rates artificially high",
-          "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
-          "published_at_utc": "2026-10-14T21:47:00+00:00",
-          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
           "publisher_age_minutes": 16.4,
-          "source_latency_to_first_seen_minutes": 16.4,
+          "source_latency_to_first_seen_minutes": 1.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
@@ -269,12 +306,59 @@
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
+            "first_seen_before_market_reaction": true,
+            "pre_event_close_utc": "2026-10-14T22:00:00+00:00",
+            "pre_event_price": 0.69709,
+            "first_post_event_close_utc": "2026-10-14T22:15:00+00:00",
+            "first_post_event_price": 0.6972,
+            "first_post_event_change_pips": 1.1
+          }
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "US President Trump says the Fed has interest rates artificially high",
+          "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
+          "published_at_utc": "2026-10-14T21:47:00+00:00",
+          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+          "publisher_age_minutes": 31.4,
+          "source_latency_to_first_seen_minutes": 16.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
             "first_seen_before_market_reaction": false,
             "pre_event_close_utc": "2026-10-14T21:45:00+00:00",
             "pre_event_price": 0.697,
             "first_post_event_close_utc": "2026-10-14T22:00:00+00:00",
             "first_post_event_price": 0.69709,
-            "first_post_event_change_pips": 0.9
+            "first_post_event_change_pips": 0.9,
+            "second_post_event_close_utc": "2026-10-14T22:15:00+00:00",
+            "second_post_event_price": 0.6972,
+            "second_post_event_change_pips": 1.1,
+            "net_two_bar_event_window_pips": 2.0,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "UP",
+            "retrospective_if_first_seen_after_first_candle": true
           }
         }
       ],
@@ -285,43 +369,8 @@
           "url": "https://www.newsquawk.com/headlines/feds-daly-2027-voter-says-we-are-more-likely-than-not-to-need-more-rate-hikes-but-still-deliberating-on-timing-adds-not-in-a-posture-of-urgency-and-better-to-be-thoughtful-and-deliberate",
           "published_at_utc": "2026-10-14T22:02:00+00:00",
           "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
-          "publisher_age_minutes": 1.4,
-          "source_latency_to_first_seen_minutes": 1.4,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false
-          }
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "US President Trump says the Fed has interest rates artificially high",
-          "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
-          "published_at_utc": "2026-10-14T21:47:00+00:00",
-          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
           "publisher_age_minutes": 16.4,
-          "source_latency_to_first_seen_minutes": 16.4,
+          "source_latency_to_first_seen_minutes": 1.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
@@ -346,12 +395,59 @@
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
+            "first_seen_before_market_reaction": true,
+            "pre_event_close_utc": "2026-10-14T22:00:00+00:00",
+            "pre_event_price": 0.69709,
+            "first_post_event_close_utc": "2026-10-14T22:15:00+00:00",
+            "first_post_event_price": 0.6972,
+            "first_post_event_change_pips": 1.1
+          }
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "US President Trump says the Fed has interest rates artificially high",
+          "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
+          "published_at_utc": "2026-10-14T21:47:00+00:00",
+          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+          "publisher_age_minutes": 31.4,
+          "source_latency_to_first_seen_minutes": 16.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
             "first_seen_before_market_reaction": false,
             "pre_event_close_utc": "2026-10-14T21:45:00+00:00",
             "pre_event_price": 0.697,
             "first_post_event_close_utc": "2026-10-14T22:00:00+00:00",
             "first_post_event_price": 0.69709,
-            "first_post_event_change_pips": 0.9
+            "first_post_event_change_pips": 0.9,
+            "second_post_event_close_utc": "2026-10-14T22:15:00+00:00",
+            "second_post_event_price": 0.6972,
+            "second_post_event_change_pips": 1.1,
+            "net_two_bar_event_window_pips": 2.0,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "UP",
+            "retrospective_if_first_seen_after_first_candle": true
           }
         }
       ],
@@ -369,43 +465,8 @@
           "url": "https://www.newsquawk.com/headlines/feds-daly-2027-voter-says-we-are-more-likely-than-not-to-need-more-rate-hikes-but-still-deliberating-on-timing-adds-not-in-a-posture-of-urgency-and-better-to-be-thoughtful-and-deliberate",
           "published_at_utc": "2026-10-14T22:02:00+00:00",
           "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
-          "publisher_age_minutes": 1.4,
-          "source_latency_to_first_seen_minutes": 1.4,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false
-          }
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "US President Trump says the Fed has interest rates artificially high",
-          "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
-          "published_at_utc": "2026-10-14T21:47:00+00:00",
-          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
           "publisher_age_minutes": 16.4,
-          "source_latency_to_first_seen_minutes": 16.4,
+          "source_latency_to_first_seen_minutes": 1.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
@@ -430,12 +491,59 @@
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
+            "first_seen_before_market_reaction": true,
+            "pre_event_close_utc": "2026-10-14T22:00:00+00:00",
+            "pre_event_price": 0.5591,
+            "first_post_event_close_utc": "2026-10-14T22:15:00+00:00",
+            "first_post_event_price": 0.55922,
+            "first_post_event_change_pips": 1.2
+          }
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "US President Trump says the Fed has interest rates artificially high",
+          "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
+          "published_at_utc": "2026-10-14T21:47:00+00:00",
+          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+          "publisher_age_minutes": 31.4,
+          "source_latency_to_first_seen_minutes": 16.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
             "first_seen_before_market_reaction": false,
             "pre_event_close_utc": "2026-10-14T21:45:00+00:00",
             "pre_event_price": 0.55878,
             "first_post_event_close_utc": "2026-10-14T22:00:00+00:00",
             "first_post_event_price": 0.5591,
-            "first_post_event_change_pips": 3.2
+            "first_post_event_change_pips": 3.2,
+            "second_post_event_close_utc": "2026-10-14T22:15:00+00:00",
+            "second_post_event_price": 0.55922,
+            "second_post_event_change_pips": 1.2,
+            "net_two_bar_event_window_pips": 4.4,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "UP",
+            "retrospective_if_first_seen_after_first_candle": true
           }
         }
       ],
@@ -446,43 +554,8 @@
           "url": "https://www.newsquawk.com/headlines/feds-daly-2027-voter-says-we-are-more-likely-than-not-to-need-more-rate-hikes-but-still-deliberating-on-timing-adds-not-in-a-posture-of-urgency-and-better-to-be-thoughtful-and-deliberate",
           "published_at_utc": "2026-10-14T22:02:00+00:00",
           "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
-          "publisher_age_minutes": 1.4,
-          "source_latency_to_first_seen_minutes": 1.4,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false
-          }
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "US President Trump says the Fed has interest rates artificially high",
-          "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
-          "published_at_utc": "2026-10-14T21:47:00+00:00",
-          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
           "publisher_age_minutes": 16.4,
-          "source_latency_to_first_seen_minutes": 16.4,
+          "source_latency_to_first_seen_minutes": 1.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
@@ -507,12 +580,59 @@
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
+            "first_seen_before_market_reaction": true,
+            "pre_event_close_utc": "2026-10-14T22:00:00+00:00",
+            "pre_event_price": 0.5591,
+            "first_post_event_close_utc": "2026-10-14T22:15:00+00:00",
+            "first_post_event_price": 0.55922,
+            "first_post_event_change_pips": 1.2
+          }
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "US President Trump says the Fed has interest rates artificially high",
+          "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
+          "published_at_utc": "2026-10-14T21:47:00+00:00",
+          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+          "publisher_age_minutes": 31.4,
+          "source_latency_to_first_seen_minutes": 16.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
             "first_seen_before_market_reaction": false,
             "pre_event_close_utc": "2026-10-14T21:45:00+00:00",
             "pre_event_price": 0.55878,
             "first_post_event_close_utc": "2026-10-14T22:00:00+00:00",
             "first_post_event_price": 0.5591,
-            "first_post_event_change_pips": 3.2
+            "first_post_event_change_pips": 3.2,
+            "second_post_event_close_utc": "2026-10-14T22:15:00+00:00",
+            "second_post_event_price": 0.55922,
+            "second_post_event_change_pips": 1.2,
+            "net_two_bar_event_window_pips": 4.4,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "UP",
+            "retrospective_if_first_seen_after_first_candle": true
           }
         }
       ],
@@ -530,43 +650,8 @@
           "url": "https://www.newsquawk.com/headlines/feds-daly-2027-voter-says-we-are-more-likely-than-not-to-need-more-rate-hikes-but-still-deliberating-on-timing-adds-not-in-a-posture-of-urgency-and-better-to-be-thoughtful-and-deliberate",
           "published_at_utc": "2026-10-14T22:02:00+00:00",
           "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
-          "publisher_age_minutes": 1.4,
-          "source_latency_to_first_seen_minutes": 1.4,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false
-          }
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "US President Trump says the Fed has interest rates artificially high",
-          "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
-          "published_at_utc": "2026-10-14T21:47:00+00:00",
-          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
           "publisher_age_minutes": 16.4,
-          "source_latency_to_first_seen_minutes": 16.4,
+          "source_latency_to_first_seen_minutes": 1.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
@@ -591,12 +676,59 @@
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
+            "first_seen_before_market_reaction": true,
+            "pre_event_close_utc": "2026-10-14T22:00:00+00:00",
+            "pre_event_price": 1.11525,
+            "first_post_event_close_utc": "2026-10-14T22:15:00+00:00",
+            "first_post_event_price": 1.11569,
+            "first_post_event_change_pips": 4.4
+          }
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "US President Trump says the Fed has interest rates artificially high",
+          "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
+          "published_at_utc": "2026-10-14T21:47:00+00:00",
+          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+          "publisher_age_minutes": 31.4,
+          "source_latency_to_first_seen_minutes": 16.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
             "first_seen_before_market_reaction": false,
             "pre_event_close_utc": "2026-10-14T21:45:00+00:00",
             "pre_event_price": 1.1151,
             "first_post_event_close_utc": "2026-10-14T22:00:00+00:00",
             "first_post_event_price": 1.11525,
-            "first_post_event_change_pips": 1.5
+            "first_post_event_change_pips": 1.5,
+            "second_post_event_close_utc": "2026-10-14T22:15:00+00:00",
+            "second_post_event_price": 1.11569,
+            "second_post_event_change_pips": 4.4,
+            "net_two_bar_event_window_pips": 5.9,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "UP",
+            "retrospective_if_first_seen_after_first_candle": true
           }
         }
       ],
@@ -607,43 +739,8 @@
           "url": "https://www.newsquawk.com/headlines/feds-daly-2027-voter-says-we-are-more-likely-than-not-to-need-more-rate-hikes-but-still-deliberating-on-timing-adds-not-in-a-posture-of-urgency-and-better-to-be-thoughtful-and-deliberate",
           "published_at_utc": "2026-10-14T22:02:00+00:00",
           "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
-          "publisher_age_minutes": 1.4,
-          "source_latency_to_first_seen_minutes": 1.4,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false
-          }
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "US President Trump says the Fed has interest rates artificially high",
-          "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
-          "published_at_utc": "2026-10-14T21:47:00+00:00",
-          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
           "publisher_age_minutes": 16.4,
-          "source_latency_to_first_seen_minutes": 16.4,
+          "source_latency_to_first_seen_minutes": 1.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
@@ -668,12 +765,59 @@
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
+            "first_seen_before_market_reaction": true,
+            "pre_event_close_utc": "2026-10-14T22:00:00+00:00",
+            "pre_event_price": 1.11525,
+            "first_post_event_close_utc": "2026-10-14T22:15:00+00:00",
+            "first_post_event_price": 1.11569,
+            "first_post_event_change_pips": 4.4
+          }
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "US President Trump says the Fed has interest rates artificially high",
+          "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
+          "published_at_utc": "2026-10-14T21:47:00+00:00",
+          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+          "publisher_age_minutes": 31.4,
+          "source_latency_to_first_seen_minutes": 16.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
             "first_seen_before_market_reaction": false,
             "pre_event_close_utc": "2026-10-14T21:45:00+00:00",
             "pre_event_price": 1.1151,
             "first_post_event_close_utc": "2026-10-14T22:00:00+00:00",
             "first_post_event_price": 1.11525,
-            "first_post_event_change_pips": 1.5
+            "first_post_event_change_pips": 1.5,
+            "second_post_event_close_utc": "2026-10-14T22:15:00+00:00",
+            "second_post_event_price": 1.11569,
+            "second_post_event_change_pips": 4.4,
+            "net_two_bar_event_window_pips": 5.9,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "UP",
+            "retrospective_if_first_seen_after_first_candle": true
           }
         }
       ],
@@ -691,43 +835,8 @@
           "url": "https://www.newsquawk.com/headlines/feds-daly-2027-voter-says-we-are-more-likely-than-not-to-need-more-rate-hikes-but-still-deliberating-on-timing-adds-not-in-a-posture-of-urgency-and-better-to-be-thoughtful-and-deliberate",
           "published_at_utc": "2026-10-14T22:02:00+00:00",
           "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
-          "publisher_age_minutes": 1.4,
-          "source_latency_to_first_seen_minutes": 1.4,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false
-          }
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "US President Trump says the Fed has interest rates artificially high",
-          "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
-          "published_at_utc": "2026-10-14T21:47:00+00:00",
-          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
           "publisher_age_minutes": 16.4,
-          "source_latency_to_first_seen_minutes": 16.4,
+          "source_latency_to_first_seen_minutes": 1.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
@@ -752,12 +861,59 @@
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
+            "first_seen_before_market_reaction": true,
+            "pre_event_close_utc": "2026-10-14T22:00:00+00:00",
+            "pre_event_price": 1.31835,
+            "first_post_event_close_utc": "2026-10-14T22:15:00+00:00",
+            "first_post_event_price": 1.3193,
+            "first_post_event_change_pips": 9.5
+          }
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "US President Trump says the Fed has interest rates artificially high",
+          "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
+          "published_at_utc": "2026-10-14T21:47:00+00:00",
+          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+          "publisher_age_minutes": 31.4,
+          "source_latency_to_first_seen_minutes": 16.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
             "first_seen_before_market_reaction": false,
             "pre_event_close_utc": "2026-10-14T21:45:00+00:00",
             "pre_event_price": 1.3185,
             "first_post_event_close_utc": "2026-10-14T22:00:00+00:00",
             "first_post_event_price": 1.31835,
-            "first_post_event_change_pips": -1.5
+            "first_post_event_change_pips": -1.5,
+            "second_post_event_close_utc": "2026-10-14T22:15:00+00:00",
+            "second_post_event_price": 1.3193,
+            "second_post_event_change_pips": 9.5,
+            "net_two_bar_event_window_pips": 8.0,
+            "early_initial_direction": "DOWN",
+            "second_bar_direction": "UP",
+            "retrospective_if_first_seen_after_first_candle": true
           }
         }
       ],
@@ -768,43 +924,8 @@
           "url": "https://www.newsquawk.com/headlines/feds-daly-2027-voter-says-we-are-more-likely-than-not-to-need-more-rate-hikes-but-still-deliberating-on-timing-adds-not-in-a-posture-of-urgency-and-better-to-be-thoughtful-and-deliberate",
           "published_at_utc": "2026-10-14T22:02:00+00:00",
           "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
-          "publisher_age_minutes": 1.4,
-          "source_latency_to_first_seen_minutes": 1.4,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false
-          }
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "US President Trump says the Fed has interest rates artificially high",
-          "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
-          "published_at_utc": "2026-10-14T21:47:00+00:00",
-          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
           "publisher_age_minutes": 16.4,
-          "source_latency_to_first_seen_minutes": 16.4,
+          "source_latency_to_first_seen_minutes": 1.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
@@ -829,12 +950,59 @@
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
+            "first_seen_before_market_reaction": true,
+            "pre_event_close_utc": "2026-10-14T22:00:00+00:00",
+            "pre_event_price": 1.31835,
+            "first_post_event_close_utc": "2026-10-14T22:15:00+00:00",
+            "first_post_event_price": 1.3193,
+            "first_post_event_change_pips": 9.5
+          }
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "US President Trump says the Fed has interest rates artificially high",
+          "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
+          "published_at_utc": "2026-10-14T21:47:00+00:00",
+          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+          "publisher_age_minutes": 31.4,
+          "source_latency_to_first_seen_minutes": 16.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
             "first_seen_before_market_reaction": false,
             "pre_event_close_utc": "2026-10-14T21:45:00+00:00",
             "pre_event_price": 1.3185,
             "first_post_event_close_utc": "2026-10-14T22:00:00+00:00",
             "first_post_event_price": 1.31835,
-            "first_post_event_change_pips": -1.5
+            "first_post_event_change_pips": -1.5,
+            "second_post_event_close_utc": "2026-10-14T22:15:00+00:00",
+            "second_post_event_price": 1.3193,
+            "second_post_event_change_pips": 9.5,
+            "net_two_bar_event_window_pips": 8.0,
+            "early_initial_direction": "DOWN",
+            "second_bar_direction": "UP",
+            "retrospective_if_first_seen_after_first_candle": true
           }
         }
       ],
@@ -852,43 +1020,8 @@
           "url": "https://www.newsquawk.com/headlines/feds-daly-2027-voter-says-we-are-more-likely-than-not-to-need-more-rate-hikes-but-still-deliberating-on-timing-adds-not-in-a-posture-of-urgency-and-better-to-be-thoughtful-and-deliberate",
           "published_at_utc": "2026-10-14T22:02:00+00:00",
           "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
-          "publisher_age_minutes": 1.4,
-          "source_latency_to_first_seen_minutes": 1.4,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false
-          }
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "US President Trump says the Fed has interest rates artificially high",
-          "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
-          "published_at_utc": "2026-10-14T21:47:00+00:00",
-          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
           "publisher_age_minutes": 16.4,
-          "source_latency_to_first_seen_minutes": 16.4,
+          "source_latency_to_first_seen_minutes": 1.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
@@ -913,12 +1046,59 @@
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
+            "first_seen_before_market_reaction": true,
+            "pre_event_close_utc": "2026-10-14T22:00:00+00:00",
+            "pre_event_price": 158.29,
+            "first_post_event_close_utc": "2026-10-14T22:15:00+00:00",
+            "first_post_event_price": 158.287,
+            "first_post_event_change_pips": -0.3
+          }
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "US President Trump says the Fed has interest rates artificially high",
+          "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
+          "published_at_utc": "2026-10-14T21:47:00+00:00",
+          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+          "publisher_age_minutes": 31.4,
+          "source_latency_to_first_seen_minutes": 16.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
             "first_seen_before_market_reaction": false,
             "pre_event_close_utc": "2026-10-14T21:45:00+00:00",
             "pre_event_price": 158.288,
             "first_post_event_close_utc": "2026-10-14T22:00:00+00:00",
             "first_post_event_price": 158.29,
-            "first_post_event_change_pips": 0.2
+            "first_post_event_change_pips": 0.2,
+            "second_post_event_close_utc": "2026-10-14T22:15:00+00:00",
+            "second_post_event_price": 158.287,
+            "second_post_event_change_pips": -0.3,
+            "net_two_bar_event_window_pips": -0.1,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": true
           }
         }
       ],
@@ -929,43 +1109,8 @@
           "url": "https://www.newsquawk.com/headlines/feds-daly-2027-voter-says-we-are-more-likely-than-not-to-need-more-rate-hikes-but-still-deliberating-on-timing-adds-not-in-a-posture-of-urgency-and-better-to-be-thoughtful-and-deliberate",
           "published_at_utc": "2026-10-14T22:02:00+00:00",
           "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
-          "publisher_age_minutes": 1.4,
-          "source_latency_to_first_seen_minutes": 1.4,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false
-          }
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "US President Trump says the Fed has interest rates artificially high",
-          "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
-          "published_at_utc": "2026-10-14T21:47:00+00:00",
-          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
           "publisher_age_minutes": 16.4,
-          "source_latency_to_first_seen_minutes": 16.4,
+          "source_latency_to_first_seen_minutes": 1.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
@@ -990,12 +1135,59 @@
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
+            "first_seen_before_market_reaction": true,
+            "pre_event_close_utc": "2026-10-14T22:00:00+00:00",
+            "pre_event_price": 158.29,
+            "first_post_event_close_utc": "2026-10-14T22:15:00+00:00",
+            "first_post_event_price": 158.287,
+            "first_post_event_change_pips": -0.3
+          }
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "US President Trump says the Fed has interest rates artificially high",
+          "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
+          "published_at_utc": "2026-10-14T21:47:00+00:00",
+          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+          "publisher_age_minutes": 31.4,
+          "source_latency_to_first_seen_minutes": 16.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
             "first_seen_before_market_reaction": false,
             "pre_event_close_utc": "2026-10-14T21:45:00+00:00",
             "pre_event_price": 158.288,
             "first_post_event_close_utc": "2026-10-14T22:00:00+00:00",
             "first_post_event_price": 158.29,
-            "first_post_event_change_pips": 0.2
+            "first_post_event_change_pips": 0.2,
+            "second_post_event_close_utc": "2026-10-14T22:15:00+00:00",
+            "second_post_event_price": 158.287,
+            "second_post_event_change_pips": -0.3,
+            "net_two_bar_event_window_pips": -0.1,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": true
           }
         }
       ],
@@ -1049,43 +1241,8 @@
           "url": "https://www.newsquawk.com/headlines/feds-daly-2027-voter-says-we-are-more-likely-than-not-to-need-more-rate-hikes-but-still-deliberating-on-timing-adds-not-in-a-posture-of-urgency-and-better-to-be-thoughtful-and-deliberate",
           "published_at_utc": "2026-10-14T22:02:00+00:00",
           "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
-          "publisher_age_minutes": 1.4,
-          "source_latency_to_first_seen_minutes": 1.4,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false
-          }
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "US President Trump says the Fed has interest rates artificially high",
-          "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
-          "published_at_utc": "2026-10-14T21:47:00+00:00",
-          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
           "publisher_age_minutes": 16.4,
-          "source_latency_to_first_seen_minutes": 16.4,
+          "source_latency_to_first_seen_minutes": 1.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
@@ -1110,12 +1267,59 @@
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
+            "first_seen_before_market_reaction": true,
+            "pre_event_close_utc": "2026-10-14T22:00:00+00:00",
+            "pre_event_price": 1.42334,
+            "first_post_event_close_utc": "2026-10-14T22:15:00+00:00",
+            "first_post_event_price": 1.42368,
+            "first_post_event_change_pips": 3.4
+          }
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "US President Trump says the Fed has interest rates artificially high",
+          "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
+          "published_at_utc": "2026-10-14T21:47:00+00:00",
+          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+          "publisher_age_minutes": 31.4,
+          "source_latency_to_first_seen_minutes": 16.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
             "first_seen_before_market_reaction": false,
             "pre_event_close_utc": "2026-10-14T21:45:00+00:00",
             "pre_event_price": 1.42354,
             "first_post_event_close_utc": "2026-10-14T22:00:00+00:00",
             "first_post_event_price": 1.42334,
-            "first_post_event_change_pips": -2.0
+            "first_post_event_change_pips": -2.0,
+            "second_post_event_close_utc": "2026-10-14T22:15:00+00:00",
+            "second_post_event_price": 1.42368,
+            "second_post_event_change_pips": 3.4,
+            "net_two_bar_event_window_pips": 1.4,
+            "early_initial_direction": "DOWN",
+            "second_bar_direction": "UP",
+            "retrospective_if_first_seen_after_first_candle": true
           }
         }
       ],
@@ -1126,43 +1330,8 @@
           "url": "https://www.newsquawk.com/headlines/feds-daly-2027-voter-says-we-are-more-likely-than-not-to-need-more-rate-hikes-but-still-deliberating-on-timing-adds-not-in-a-posture-of-urgency-and-better-to-be-thoughtful-and-deliberate",
           "published_at_utc": "2026-10-14T22:02:00+00:00",
           "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
-          "publisher_age_minutes": 1.4,
-          "source_latency_to_first_seen_minutes": 1.4,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false
-          }
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "US President Trump says the Fed has interest rates artificially high",
-          "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
-          "published_at_utc": "2026-10-14T21:47:00+00:00",
-          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
           "publisher_age_minutes": 16.4,
-          "source_latency_to_first_seen_minutes": 16.4,
+          "source_latency_to_first_seen_minutes": 1.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
@@ -1187,12 +1356,59 @@
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
+            "first_seen_before_market_reaction": true,
+            "pre_event_close_utc": "2026-10-14T22:00:00+00:00",
+            "pre_event_price": 1.42334,
+            "first_post_event_close_utc": "2026-10-14T22:15:00+00:00",
+            "first_post_event_price": 1.42368,
+            "first_post_event_change_pips": 3.4
+          }
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "US President Trump says the Fed has interest rates artificially high",
+          "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
+          "published_at_utc": "2026-10-14T21:47:00+00:00",
+          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+          "publisher_age_minutes": 31.4,
+          "source_latency_to_first_seen_minutes": 16.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
             "first_seen_before_market_reaction": false,
             "pre_event_close_utc": "2026-10-14T21:45:00+00:00",
             "pre_event_price": 1.42354,
             "first_post_event_close_utc": "2026-10-14T22:00:00+00:00",
             "first_post_event_price": 1.42334,
-            "first_post_event_change_pips": -2.0
+            "first_post_event_change_pips": -2.0,
+            "second_post_event_close_utc": "2026-10-14T22:15:00+00:00",
+            "second_post_event_price": 1.42368,
+            "second_post_event_change_pips": 3.4,
+            "net_two_bar_event_window_pips": 1.4,
+            "early_initial_direction": "DOWN",
+            "second_bar_direction": "UP",
+            "retrospective_if_first_seen_after_first_candle": true
           }
         }
       ],
