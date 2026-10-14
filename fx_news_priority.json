@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-14T21:19:43.474614+00:00",
+  "generated_at_utc": "2026-10-14T22:03:26.516231+00:00",
   "target_refresh_minutes": 5,
   "actual_actions_schedule_not_guaranteed": true,
   "approved_source_names": [
@@ -23,54 +23,17 @@
   "recent_headlines": [
     {
       "provider": "Newsquawk_public_delayed",
-      "title": "US Market Wrap: Stocks hit on AI concerns and hot CPI",
-      "url": "https://www.newsquawk.com/headlines/us-market-wrap-stocks-hit-on-ai-concerns-and-hot-cpi",
-      "published_at_utc": "2026-10-14T20:44:00+00:00",
-      "first_seen_at_utc": "2026-10-14T21:19:43.474614+00:00",
-      "publisher_age_minutes": 35.7,
-      "source_latency_to_first_seen_minutes": 35.7,
+      "title": "Fed's Daly (2027 voter) says we are more likely than not to need more rate hikes, but still deliberating on timing, adds not in a posture of urgency and better to be thoughtful and deliberate",
+      "url": "https://www.newsquawk.com/headlines/feds-daly-2027-voter-says-we-are-more-likely-than-not-to-need-more-rate-hikes-but-still-deliberating-on-timing-adds-not-in-a-posture-of-urgency-and-better-to-be-thoughtful-and-deliberate",
+      "published_at_utc": "2026-10-14T22:02:00+00:00",
+      "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+      "publisher_age_minutes": 1.4,
+      "source_latency_to_first_seen_minutes": 1.4,
       "source_public_delay_minutes_at_least": 20,
       "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
       "not_pro_feed_or_first_seen_in_real_time": true,
-      "type": "MACRO_DATA_OR_YIELD",
-      "priority": "MEDIUM_RELEASE_REACTION_CHECK",
-      "currencies": [
-        "AUD",
-        "EUR",
-        "GBP",
-        "JPY",
-        "USD"
-      ],
-      "affected_pairs": [
-        "AUDUSD",
-        "NZDUSD",
-        "EURUSD",
-        "GBPUSD",
-        "USDJPY",
-        "AUDJPY",
-        "NZDJPY",
-        "EURJPY",
-        "EURCAD",
-        "USDCAD",
-        "EURGBP"
-      ],
-      "headline_direction": "UNDETERMINED",
-      "market_reaction": "NOT_VERIFIED",
-      "broker_execution_allowed": false
-    },
-    {
-      "provider": "Newsquawk_public_delayed",
-      "title": "Fed's Goolsbee (2027 voter) says a hotter-than-expected reading on Sept inflation is “discouraging\" but wants to wait for more data before taking action to raise rates higher",
-      "url": "https://www.newsquawk.com/headlines/feds-goolsbee-2027-voter-says-a-hotter-than-expected-reading-on-sept-inflation-is-discouraging-but-wants-to-wait-for-more-data-before-taking-action-to-raise-rates-higher",
-      "published_at_utc": "2026-10-14T19:20:00+00:00",
-      "first_seen_at_utc": "2026-10-14T19:35:55.511809+00:00",
-      "publisher_age_minutes": 119.7,
-      "source_latency_to_first_seen_minutes": 15.9,
-      "source_public_delay_minutes_at_least": 20,
-      "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-      "not_pro_feed_or_first_seen_in_real_time": true,
-      "type": "MACRO_DATA_OR_YIELD",
-      "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+      "type": "CENTRAL_BANK_POLICY",
+      "priority": "HIGH_POLICY_REACTION_CHECK",
       "currencies": [
         "USD"
       ],
@@ -84,47 +47,66 @@
       ],
       "headline_direction": "UNDETERMINED",
       "market_reaction": "NOT_VERIFIED",
-      "broker_execution_allowed": false
+      "broker_execution_allowed": false,
+      "price_reactions": {
+        "AUDUSD": {
+          "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false
+        },
+        "NZDUSD": {
+          "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false
+        },
+        "EURUSD": {
+          "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false
+        },
+        "GBPUSD": {
+          "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false
+        },
+        "USDJPY": {
+          "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false
+        },
+        "USDCAD": {
+          "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false
+        }
+      },
+      "all_price_reactions_are_noncausal_observations": true
     },
     {
       "provider": "Newsquawk_public_delayed",
-      "title": "Apple (AAPL) reportedly plans to launch Apple Intelligence in China in iOS 27.3; will debut first AI features in China in December",
-      "url": "https://www.newsquawk.com/headlines/apple-aapl-reportedly-plans-to-launch-apple-intelligence-in-china-in-ios-273-will-debut-first-ai-features-in-china-in-december",
-      "published_at_utc": "2026-10-14T20:11:00+00:00",
-      "first_seen_at_utc": "2026-10-14T20:21:00.687984+00:00",
-      "publisher_age_minutes": 68.7,
-      "source_latency_to_first_seen_minutes": 10.0,
+      "title": "US President Trump says the Fed has interest rates artificially high",
+      "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
+      "published_at_utc": "2026-10-14T21:47:00+00:00",
+      "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+      "publisher_age_minutes": 16.4,
+      "source_latency_to_first_seen_minutes": 16.4,
       "source_public_delay_minutes_at_least": 20,
       "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
       "not_pro_feed_or_first_seen_in_real_time": true,
-      "type": "GENERAL",
-      "priority": "CONTEXT",
-      "currencies": [
-        "CNY"
-      ],
-      "affected_pairs": [
-        "AUDUSD",
-        "NZDUSD",
-        "AUDJPY",
-        "NZDJPY"
-      ],
-      "headline_direction": "UNDETERMINED",
-      "market_reaction": "NOT_VERIFIED",
-      "broker_execution_allowed": false
-    },
-    {
-      "provider": "Newsquawk_public_delayed",
-      "title": "NY Fed desk plans to conduct c. USD 14.6bln (prev. USD 15.6bln) in reinvestment purchases between Oct 15th and Nov 13th",
-      "url": "https://www.newsquawk.com/headlines/ny-fed-desk-plans-to-conduct-c-usd-146bln-in-reinvestment-purchases-between-oct-15th-and-nov-13th",
-      "published_at_utc": "2026-10-14T19:27:00+00:00",
-      "first_seen_at_utc": "2026-10-14T19:35:55.511809+00:00",
-      "publisher_age_minutes": 112.7,
-      "source_latency_to_first_seen_minutes": 8.9,
-      "source_public_delay_minutes_at_least": 20,
-      "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-      "not_pro_feed_or_first_seen_in_real_time": true,
-      "type": "GENERAL",
-      "priority": "CONTEXT",
+      "type": "CENTRAL_BANK_POLICY",
+      "priority": "HIGH_POLICY_REACTION_CHECK",
       "currencies": [
         "USD"
       ],
@@ -138,64 +120,178 @@
       ],
       "headline_direction": "UNDETERMINED",
       "market_reaction": "NOT_VERIFIED",
-      "broker_execution_allowed": false
+      "broker_execution_allowed": false,
+      "price_reactions": {
+        "AUDUSD": {
+          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false,
+          "pre_event_close_utc": "2026-10-14T21:45:00+00:00",
+          "pre_event_price": 0.697,
+          "first_post_event_close_utc": "2026-10-14T22:00:00+00:00",
+          "first_post_event_price": 0.69709,
+          "first_post_event_change_pips": 0.9
+        },
+        "NZDUSD": {
+          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false,
+          "pre_event_close_utc": "2026-10-14T21:45:00+00:00",
+          "pre_event_price": 0.55878,
+          "first_post_event_close_utc": "2026-10-14T22:00:00+00:00",
+          "first_post_event_price": 0.5591,
+          "first_post_event_change_pips": 3.2
+        },
+        "EURUSD": {
+          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false,
+          "pre_event_close_utc": "2026-10-14T21:45:00+00:00",
+          "pre_event_price": 1.1151,
+          "first_post_event_close_utc": "2026-10-14T22:00:00+00:00",
+          "first_post_event_price": 1.11525,
+          "first_post_event_change_pips": 1.5
+        },
+        "GBPUSD": {
+          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false,
+          "pre_event_close_utc": "2026-10-14T21:45:00+00:00",
+          "pre_event_price": 1.3185,
+          "first_post_event_close_utc": "2026-10-14T22:00:00+00:00",
+          "first_post_event_price": 1.31835,
+          "first_post_event_change_pips": -1.5
+        },
+        "USDJPY": {
+          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false,
+          "pre_event_close_utc": "2026-10-14T21:45:00+00:00",
+          "pre_event_price": 158.288,
+          "first_post_event_close_utc": "2026-10-14T22:00:00+00:00",
+          "first_post_event_price": 158.29,
+          "first_post_event_change_pips": 0.2
+        },
+        "USDCAD": {
+          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false,
+          "pre_event_close_utc": "2026-10-14T21:45:00+00:00",
+          "pre_event_price": 1.42354,
+          "first_post_event_close_utc": "2026-10-14T22:00:00+00:00",
+          "first_post_event_price": 1.42334,
+          "first_post_event_change_pips": -2.0
+        }
+      },
+      "all_price_reactions_are_noncausal_observations": true
     }
   ],
   "pairs": {
     "AUDUSD": {
-      "status": "HEADLINES_PRESENT",
-      "policy_headlines": [],
+      "status": "POLICY_REACTION_CHECK",
+      "policy_headlines": [
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "Fed's Daly (2027 voter) says we are more likely than not to need more rate hikes, but still deliberating on timing, adds not in a posture of urgency and better to be thoughtful and deliberate",
+          "url": "https://www.newsquawk.com/headlines/feds-daly-2027-voter-says-we-are-more-likely-than-not-to-need-more-rate-hikes-but-still-deliberating-on-timing-adds-not-in-a-posture-of-urgency-and-better-to-be-thoughtful-and-deliberate",
+          "published_at_utc": "2026-10-14T22:02:00+00:00",
+          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+          "publisher_age_minutes": 1.4,
+          "source_latency_to_first_seen_minutes": 1.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false
+          }
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "US President Trump says the Fed has interest rates artificially high",
+          "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
+          "published_at_utc": "2026-10-14T21:47:00+00:00",
+          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+          "publisher_age_minutes": 16.4,
+          "source_latency_to_first_seen_minutes": 16.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-14T21:45:00+00:00",
+            "pre_event_price": 0.697,
+            "first_post_event_close_utc": "2026-10-14T22:00:00+00:00",
+            "first_post_event_price": 0.69709,
+            "first_post_event_change_pips": 0.9
+          }
+        }
+      ],
       "news_headlines": [
         {
           "provider": "Newsquawk_public_delayed",
-          "title": "US Market Wrap: Stocks hit on AI concerns and hot CPI",
-          "url": "https://www.newsquawk.com/headlines/us-market-wrap-stocks-hit-on-ai-concerns-and-hot-cpi",
-          "published_at_utc": "2026-10-14T20:44:00+00:00",
-          "first_seen_at_utc": "2026-10-14T21:19:43.474614+00:00",
-          "publisher_age_minutes": 35.7,
-          "source_latency_to_first_seen_minutes": 35.7,
+          "title": "Fed's Daly (2027 voter) says we are more likely than not to need more rate hikes, but still deliberating on timing, adds not in a posture of urgency and better to be thoughtful and deliberate",
+          "url": "https://www.newsquawk.com/headlines/feds-daly-2027-voter-says-we-are-more-likely-than-not-to-need-more-rate-hikes-but-still-deliberating-on-timing-adds-not-in-a-posture-of-urgency-and-better-to-be-thoughtful-and-deliberate",
+          "published_at_utc": "2026-10-14T22:02:00+00:00",
+          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+          "publisher_age_minutes": 1.4,
+          "source_latency_to_first_seen_minutes": 1.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
-          "currencies": [
-            "AUD",
-            "EUR",
-            "GBP",
-            "JPY",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "NZDJPY",
-            "EURJPY",
-            "EURCAD",
-            "USDCAD",
-            "EURGBP"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "Fed's Goolsbee (2027 voter) says a hotter-than-expected reading on Sept inflation is “discouraging\" but wants to wait for more data before taking action to raise rates higher",
-          "url": "https://www.newsquawk.com/headlines/feds-goolsbee-2027-voter-says-a-hotter-than-expected-reading-on-sept-inflation-is-discouraging-but-wants-to-wait-for-more-data-before-taking-action-to-raise-rates-higher",
-          "published_at_utc": "2026-10-14T19:20:00+00:00",
-          "first_seen_at_utc": "2026-10-14T19:35:55.511809+00:00",
-          "publisher_age_minutes": 119.7,
-          "source_latency_to_first_seen_minutes": 15.9,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
           "currencies": [
             "USD"
           ],
@@ -209,47 +305,28 @@
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false
+          }
         },
         {
           "provider": "Newsquawk_public_delayed",
-          "title": "Apple (AAPL) reportedly plans to launch Apple Intelligence in China in iOS 27.3; will debut first AI features in China in December",
-          "url": "https://www.newsquawk.com/headlines/apple-aapl-reportedly-plans-to-launch-apple-intelligence-in-china-in-ios-273-will-debut-first-ai-features-in-china-in-december",
-          "published_at_utc": "2026-10-14T20:11:00+00:00",
-          "first_seen_at_utc": "2026-10-14T20:21:00.687984+00:00",
-          "publisher_age_minutes": 68.7,
-          "source_latency_to_first_seen_minutes": 10.0,
+          "title": "US President Trump says the Fed has interest rates artificially high",
+          "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
+          "published_at_utc": "2026-10-14T21:47:00+00:00",
+          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+          "publisher_age_minutes": 16.4,
+          "source_latency_to_first_seen_minutes": 16.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "CNY"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "AUDJPY",
-            "NZDJPY"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "NY Fed desk plans to conduct c. USD 14.6bln (prev. USD 15.6bln) in reinvestment purchases between Oct 15th and Nov 13th",
-          "url": "https://www.newsquawk.com/headlines/ny-fed-desk-plans-to-conduct-c-usd-146bln-in-reinvestment-purchases-between-oct-15th-and-nov-13th",
-          "published_at_utc": "2026-10-14T19:27:00+00:00",
-          "first_seen_at_utc": "2026-10-14T19:35:55.511809+00:00",
-          "publisher_age_minutes": 112.7,
-          "source_latency_to_first_seen_minutes": 8.9,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
           "currencies": [
             "USD"
           ],
@@ -263,7 +340,19 @@
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-14T21:45:00+00:00",
+            "pre_event_price": 0.697,
+            "first_post_event_close_utc": "2026-10-14T22:00:00+00:00",
+            "first_post_event_price": 0.69709,
+            "first_post_event_change_pips": 0.9
+          }
         }
       ],
       "source_coverage_incomplete": true,
@@ -272,59 +361,98 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "NZDUSD": {
-      "status": "HEADLINES_PRESENT",
-      "policy_headlines": [],
+      "status": "POLICY_REACTION_CHECK",
+      "policy_headlines": [
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "Fed's Daly (2027 voter) says we are more likely than not to need more rate hikes, but still deliberating on timing, adds not in a posture of urgency and better to be thoughtful and deliberate",
+          "url": "https://www.newsquawk.com/headlines/feds-daly-2027-voter-says-we-are-more-likely-than-not-to-need-more-rate-hikes-but-still-deliberating-on-timing-adds-not-in-a-posture-of-urgency-and-better-to-be-thoughtful-and-deliberate",
+          "published_at_utc": "2026-10-14T22:02:00+00:00",
+          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+          "publisher_age_minutes": 1.4,
+          "source_latency_to_first_seen_minutes": 1.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false
+          }
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "US President Trump says the Fed has interest rates artificially high",
+          "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
+          "published_at_utc": "2026-10-14T21:47:00+00:00",
+          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+          "publisher_age_minutes": 16.4,
+          "source_latency_to_first_seen_minutes": 16.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-14T21:45:00+00:00",
+            "pre_event_price": 0.55878,
+            "first_post_event_close_utc": "2026-10-14T22:00:00+00:00",
+            "first_post_event_price": 0.5591,
+            "first_post_event_change_pips": 3.2
+          }
+        }
+      ],
       "news_headlines": [
         {
           "provider": "Newsquawk_public_delayed",
-          "title": "US Market Wrap: Stocks hit on AI concerns and hot CPI",
-          "url": "https://www.newsquawk.com/headlines/us-market-wrap-stocks-hit-on-ai-concerns-and-hot-cpi",
-          "published_at_utc": "2026-10-14T20:44:00+00:00",
-          "first_seen_at_utc": "2026-10-14T21:19:43.474614+00:00",
-          "publisher_age_minutes": 35.7,
-          "source_latency_to_first_seen_minutes": 35.7,
+          "title": "Fed's Daly (2027 voter) says we are more likely than not to need more rate hikes, but still deliberating on timing, adds not in a posture of urgency and better to be thoughtful and deliberate",
+          "url": "https://www.newsquawk.com/headlines/feds-daly-2027-voter-says-we-are-more-likely-than-not-to-need-more-rate-hikes-but-still-deliberating-on-timing-adds-not-in-a-posture-of-urgency-and-better-to-be-thoughtful-and-deliberate",
+          "published_at_utc": "2026-10-14T22:02:00+00:00",
+          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+          "publisher_age_minutes": 1.4,
+          "source_latency_to_first_seen_minutes": 1.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
-          "currencies": [
-            "AUD",
-            "EUR",
-            "GBP",
-            "JPY",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "NZDJPY",
-            "EURJPY",
-            "EURCAD",
-            "USDCAD",
-            "EURGBP"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "Fed's Goolsbee (2027 voter) says a hotter-than-expected reading on Sept inflation is “discouraging\" but wants to wait for more data before taking action to raise rates higher",
-          "url": "https://www.newsquawk.com/headlines/feds-goolsbee-2027-voter-says-a-hotter-than-expected-reading-on-sept-inflation-is-discouraging-but-wants-to-wait-for-more-data-before-taking-action-to-raise-rates-higher",
-          "published_at_utc": "2026-10-14T19:20:00+00:00",
-          "first_seen_at_utc": "2026-10-14T19:35:55.511809+00:00",
-          "publisher_age_minutes": 119.7,
-          "source_latency_to_first_seen_minutes": 15.9,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
           "currencies": [
             "USD"
           ],
@@ -338,47 +466,28 @@
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false
+          }
         },
         {
           "provider": "Newsquawk_public_delayed",
-          "title": "Apple (AAPL) reportedly plans to launch Apple Intelligence in China in iOS 27.3; will debut first AI features in China in December",
-          "url": "https://www.newsquawk.com/headlines/apple-aapl-reportedly-plans-to-launch-apple-intelligence-in-china-in-ios-273-will-debut-first-ai-features-in-china-in-december",
-          "published_at_utc": "2026-10-14T20:11:00+00:00",
-          "first_seen_at_utc": "2026-10-14T20:21:00.687984+00:00",
-          "publisher_age_minutes": 68.7,
-          "source_latency_to_first_seen_minutes": 10.0,
+          "title": "US President Trump says the Fed has interest rates artificially high",
+          "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
+          "published_at_utc": "2026-10-14T21:47:00+00:00",
+          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+          "publisher_age_minutes": 16.4,
+          "source_latency_to_first_seen_minutes": 16.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "CNY"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "AUDJPY",
-            "NZDJPY"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "NY Fed desk plans to conduct c. USD 14.6bln (prev. USD 15.6bln) in reinvestment purchases between Oct 15th and Nov 13th",
-          "url": "https://www.newsquawk.com/headlines/ny-fed-desk-plans-to-conduct-c-usd-146bln-in-reinvestment-purchases-between-oct-15th-and-nov-13th",
-          "published_at_utc": "2026-10-14T19:27:00+00:00",
-          "first_seen_at_utc": "2026-10-14T19:35:55.511809+00:00",
-          "publisher_age_minutes": 112.7,
-          "source_latency_to_first_seen_minutes": 8.9,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
           "currencies": [
             "USD"
           ],
@@ -392,7 +501,19 @@
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-14T21:45:00+00:00",
+            "pre_event_price": 0.55878,
+            "first_post_event_close_utc": "2026-10-14T22:00:00+00:00",
+            "first_post_event_price": 0.5591,
+            "first_post_event_change_pips": 3.2
+          }
         }
       ],
       "source_coverage_incomplete": true,
@@ -401,59 +522,98 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "EURUSD": {
-      "status": "HEADLINES_PRESENT",
-      "policy_headlines": [],
+      "status": "POLICY_REACTION_CHECK",
+      "policy_headlines": [
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "Fed's Daly (2027 voter) says we are more likely than not to need more rate hikes, but still deliberating on timing, adds not in a posture of urgency and better to be thoughtful and deliberate",
+          "url": "https://www.newsquawk.com/headlines/feds-daly-2027-voter-says-we-are-more-likely-than-not-to-need-more-rate-hikes-but-still-deliberating-on-timing-adds-not-in-a-posture-of-urgency-and-better-to-be-thoughtful-and-deliberate",
+          "published_at_utc": "2026-10-14T22:02:00+00:00",
+          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+          "publisher_age_minutes": 1.4,
+          "source_latency_to_first_seen_minutes": 1.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false
+          }
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "US President Trump says the Fed has interest rates artificially high",
+          "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
+          "published_at_utc": "2026-10-14T21:47:00+00:00",
+          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+          "publisher_age_minutes": 16.4,
+          "source_latency_to_first_seen_minutes": 16.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-14T21:45:00+00:00",
+            "pre_event_price": 1.1151,
+            "first_post_event_close_utc": "2026-10-14T22:00:00+00:00",
+            "first_post_event_price": 1.11525,
+            "first_post_event_change_pips": 1.5
+          }
+        }
+      ],
       "news_headlines": [
         {
           "provider": "Newsquawk_public_delayed",
-          "title": "US Market Wrap: Stocks hit on AI concerns and hot CPI",
-          "url": "https://www.newsquawk.com/headlines/us-market-wrap-stocks-hit-on-ai-concerns-and-hot-cpi",
-          "published_at_utc": "2026-10-14T20:44:00+00:00",
-          "first_seen_at_utc": "2026-10-14T21:19:43.474614+00:00",
-          "publisher_age_minutes": 35.7,
-          "source_latency_to_first_seen_minutes": 35.7,
+          "title": "Fed's Daly (2027 voter) says we are more likely than not to need more rate hikes, but still deliberating on timing, adds not in a posture of urgency and better to be thoughtful and deliberate",
+          "url": "https://www.newsquawk.com/headlines/feds-daly-2027-voter-says-we-are-more-likely-than-not-to-need-more-rate-hikes-but-still-deliberating-on-timing-adds-not-in-a-posture-of-urgency-and-better-to-be-thoughtful-and-deliberate",
+          "published_at_utc": "2026-10-14T22:02:00+00:00",
+          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+          "publisher_age_minutes": 1.4,
+          "source_latency_to_first_seen_minutes": 1.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
-          "currencies": [
-            "AUD",
-            "EUR",
-            "GBP",
-            "JPY",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "NZDJPY",
-            "EURJPY",
-            "EURCAD",
-            "USDCAD",
-            "EURGBP"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "Fed's Goolsbee (2027 voter) says a hotter-than-expected reading on Sept inflation is “discouraging\" but wants to wait for more data before taking action to raise rates higher",
-          "url": "https://www.newsquawk.com/headlines/feds-goolsbee-2027-voter-says-a-hotter-than-expected-reading-on-sept-inflation-is-discouraging-but-wants-to-wait-for-more-data-before-taking-action-to-raise-rates-higher",
-          "published_at_utc": "2026-10-14T19:20:00+00:00",
-          "first_seen_at_utc": "2026-10-14T19:35:55.511809+00:00",
-          "publisher_age_minutes": 119.7,
-          "source_latency_to_first_seen_minutes": 15.9,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
           "currencies": [
             "USD"
           ],
@@ -467,21 +627,28 @@
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false
+          }
         },
         {
           "provider": "Newsquawk_public_delayed",
-          "title": "NY Fed desk plans to conduct c. USD 14.6bln (prev. USD 15.6bln) in reinvestment purchases between Oct 15th and Nov 13th",
-          "url": "https://www.newsquawk.com/headlines/ny-fed-desk-plans-to-conduct-c-usd-146bln-in-reinvestment-purchases-between-oct-15th-and-nov-13th",
-          "published_at_utc": "2026-10-14T19:27:00+00:00",
-          "first_seen_at_utc": "2026-10-14T19:35:55.511809+00:00",
-          "publisher_age_minutes": 112.7,
-          "source_latency_to_first_seen_minutes": 8.9,
+          "title": "US President Trump says the Fed has interest rates artificially high",
+          "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
+          "published_at_utc": "2026-10-14T21:47:00+00:00",
+          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+          "publisher_age_minutes": 16.4,
+          "source_latency_to_first_seen_minutes": 16.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
           "currencies": [
             "USD"
           ],
@@ -495,7 +662,19 @@
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-14T21:45:00+00:00",
+            "pre_event_price": 1.1151,
+            "first_post_event_close_utc": "2026-10-14T22:00:00+00:00",
+            "first_post_event_price": 1.11525,
+            "first_post_event_change_pips": 1.5
+          }
         }
       ],
       "source_coverage_incomplete": true,
@@ -504,59 +683,98 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "GBPUSD": {
-      "status": "HEADLINES_PRESENT",
-      "policy_headlines": [],
+      "status": "POLICY_REACTION_CHECK",
+      "policy_headlines": [
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "Fed's Daly (2027 voter) says we are more likely than not to need more rate hikes, but still deliberating on timing, adds not in a posture of urgency and better to be thoughtful and deliberate",
+          "url": "https://www.newsquawk.com/headlines/feds-daly-2027-voter-says-we-are-more-likely-than-not-to-need-more-rate-hikes-but-still-deliberating-on-timing-adds-not-in-a-posture-of-urgency-and-better-to-be-thoughtful-and-deliberate",
+          "published_at_utc": "2026-10-14T22:02:00+00:00",
+          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+          "publisher_age_minutes": 1.4,
+          "source_latency_to_first_seen_minutes": 1.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false
+          }
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "US President Trump says the Fed has interest rates artificially high",
+          "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
+          "published_at_utc": "2026-10-14T21:47:00+00:00",
+          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+          "publisher_age_minutes": 16.4,
+          "source_latency_to_first_seen_minutes": 16.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-14T21:45:00+00:00",
+            "pre_event_price": 1.3185,
+            "first_post_event_close_utc": "2026-10-14T22:00:00+00:00",
+            "first_post_event_price": 1.31835,
+            "first_post_event_change_pips": -1.5
+          }
+        }
+      ],
       "news_headlines": [
         {
           "provider": "Newsquawk_public_delayed",
-          "title": "US Market Wrap: Stocks hit on AI concerns and hot CPI",
-          "url": "https://www.newsquawk.com/headlines/us-market-wrap-stocks-hit-on-ai-concerns-and-hot-cpi",
-          "published_at_utc": "2026-10-14T20:44:00+00:00",
-          "first_seen_at_utc": "2026-10-14T21:19:43.474614+00:00",
-          "publisher_age_minutes": 35.7,
-          "source_latency_to_first_seen_minutes": 35.7,
+          "title": "Fed's Daly (2027 voter) says we are more likely than not to need more rate hikes, but still deliberating on timing, adds not in a posture of urgency and better to be thoughtful and deliberate",
+          "url": "https://www.newsquawk.com/headlines/feds-daly-2027-voter-says-we-are-more-likely-than-not-to-need-more-rate-hikes-but-still-deliberating-on-timing-adds-not-in-a-posture-of-urgency-and-better-to-be-thoughtful-and-deliberate",
+          "published_at_utc": "2026-10-14T22:02:00+00:00",
+          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+          "publisher_age_minutes": 1.4,
+          "source_latency_to_first_seen_minutes": 1.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
-          "currencies": [
-            "AUD",
-            "EUR",
-            "GBP",
-            "JPY",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "NZDJPY",
-            "EURJPY",
-            "EURCAD",
-            "USDCAD",
-            "EURGBP"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "Fed's Goolsbee (2027 voter) says a hotter-than-expected reading on Sept inflation is “discouraging\" but wants to wait for more data before taking action to raise rates higher",
-          "url": "https://www.newsquawk.com/headlines/feds-goolsbee-2027-voter-says-a-hotter-than-expected-reading-on-sept-inflation-is-discouraging-but-wants-to-wait-for-more-data-before-taking-action-to-raise-rates-higher",
-          "published_at_utc": "2026-10-14T19:20:00+00:00",
-          "first_seen_at_utc": "2026-10-14T19:35:55.511809+00:00",
-          "publisher_age_minutes": 119.7,
-          "source_latency_to_first_seen_minutes": 15.9,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
           "currencies": [
             "USD"
           ],
@@ -570,21 +788,28 @@
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false
+          }
         },
         {
           "provider": "Newsquawk_public_delayed",
-          "title": "NY Fed desk plans to conduct c. USD 14.6bln (prev. USD 15.6bln) in reinvestment purchases between Oct 15th and Nov 13th",
-          "url": "https://www.newsquawk.com/headlines/ny-fed-desk-plans-to-conduct-c-usd-146bln-in-reinvestment-purchases-between-oct-15th-and-nov-13th",
-          "published_at_utc": "2026-10-14T19:27:00+00:00",
-          "first_seen_at_utc": "2026-10-14T19:35:55.511809+00:00",
-          "publisher_age_minutes": 112.7,
-          "source_latency_to_first_seen_minutes": 8.9,
+          "title": "US President Trump says the Fed has interest rates artificially high",
+          "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
+          "published_at_utc": "2026-10-14T21:47:00+00:00",
+          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+          "publisher_age_minutes": 16.4,
+          "source_latency_to_first_seen_minutes": 16.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
           "currencies": [
             "USD"
           ],
@@ -598,7 +823,19 @@
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-14T21:45:00+00:00",
+            "pre_event_price": 1.3185,
+            "first_post_event_close_utc": "2026-10-14T22:00:00+00:00",
+            "first_post_event_price": 1.31835,
+            "first_post_event_change_pips": -1.5
+          }
         }
       ],
       "source_coverage_incomplete": true,
@@ -607,59 +844,98 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "USDJPY": {
-      "status": "HEADLINES_PRESENT",
-      "policy_headlines": [],
+      "status": "POLICY_REACTION_CHECK",
+      "policy_headlines": [
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "Fed's Daly (2027 voter) says we are more likely than not to need more rate hikes, but still deliberating on timing, adds not in a posture of urgency and better to be thoughtful and deliberate",
+          "url": "https://www.newsquawk.com/headlines/feds-daly-2027-voter-says-we-are-more-likely-than-not-to-need-more-rate-hikes-but-still-deliberating-on-timing-adds-not-in-a-posture-of-urgency-and-better-to-be-thoughtful-and-deliberate",
+          "published_at_utc": "2026-10-14T22:02:00+00:00",
+          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+          "publisher_age_minutes": 1.4,
+          "source_latency_to_first_seen_minutes": 1.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false
+          }
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "US President Trump says the Fed has interest rates artificially high",
+          "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
+          "published_at_utc": "2026-10-14T21:47:00+00:00",
+          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+          "publisher_age_minutes": 16.4,
+          "source_latency_to_first_seen_minutes": 16.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-14T21:45:00+00:00",
+            "pre_event_price": 158.288,
+            "first_post_event_close_utc": "2026-10-14T22:00:00+00:00",
+            "first_post_event_price": 158.29,
+            "first_post_event_change_pips": 0.2
+          }
+        }
+      ],
       "news_headlines": [
         {
           "provider": "Newsquawk_public_delayed",
-          "title": "US Market Wrap: Stocks hit on AI concerns and hot CPI",
-          "url": "https://www.newsquawk.com/headlines/us-market-wrap-stocks-hit-on-ai-concerns-and-hot-cpi",
-          "published_at_utc": "2026-10-14T20:44:00+00:00",
-          "first_seen_at_utc": "2026-10-14T21:19:43.474614+00:00",
-          "publisher_age_minutes": 35.7,
-          "source_latency_to_first_seen_minutes": 35.7,
+          "title": "Fed's Daly (2027 voter) says we are more likely than not to need more rate hikes, but still deliberating on timing, adds not in a posture of urgency and better to be thoughtful and deliberate",
+          "url": "https://www.newsquawk.com/headlines/feds-daly-2027-voter-says-we-are-more-likely-than-not-to-need-more-rate-hikes-but-still-deliberating-on-timing-adds-not-in-a-posture-of-urgency-and-better-to-be-thoughtful-and-deliberate",
+          "published_at_utc": "2026-10-14T22:02:00+00:00",
+          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+          "publisher_age_minutes": 1.4,
+          "source_latency_to_first_seen_minutes": 1.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
-          "currencies": [
-            "AUD",
-            "EUR",
-            "GBP",
-            "JPY",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "NZDJPY",
-            "EURJPY",
-            "EURCAD",
-            "USDCAD",
-            "EURGBP"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "Fed's Goolsbee (2027 voter) says a hotter-than-expected reading on Sept inflation is “discouraging\" but wants to wait for more data before taking action to raise rates higher",
-          "url": "https://www.newsquawk.com/headlines/feds-goolsbee-2027-voter-says-a-hotter-than-expected-reading-on-sept-inflation-is-discouraging-but-wants-to-wait-for-more-data-before-taking-action-to-raise-rates-higher",
-          "published_at_utc": "2026-10-14T19:20:00+00:00",
-          "first_seen_at_utc": "2026-10-14T19:35:55.511809+00:00",
-          "publisher_age_minutes": 119.7,
-          "source_latency_to_first_seen_minutes": 15.9,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
           "currencies": [
             "USD"
           ],
@@ -673,21 +949,28 @@
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false
+          }
         },
         {
           "provider": "Newsquawk_public_delayed",
-          "title": "NY Fed desk plans to conduct c. USD 14.6bln (prev. USD 15.6bln) in reinvestment purchases between Oct 15th and Nov 13th",
-          "url": "https://www.newsquawk.com/headlines/ny-fed-desk-plans-to-conduct-c-usd-146bln-in-reinvestment-purchases-between-oct-15th-and-nov-13th",
-          "published_at_utc": "2026-10-14T19:27:00+00:00",
-          "first_seen_at_utc": "2026-10-14T19:35:55.511809+00:00",
-          "publisher_age_minutes": 112.7,
-          "source_latency_to_first_seen_minutes": 8.9,
+          "title": "US President Trump says the Fed has interest rates artificially high",
+          "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
+          "published_at_utc": "2026-10-14T21:47:00+00:00",
+          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+          "publisher_age_minutes": 16.4,
+          "source_latency_to_first_seen_minutes": 16.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
           "currencies": [
             "USD"
           ],
@@ -701,7 +984,19 @@
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-14T21:45:00+00:00",
+            "pre_event_price": 158.288,
+            "first_post_event_close_utc": "2026-10-14T22:00:00+00:00",
+            "first_post_event_price": 158.29,
+            "first_post_event_change_pips": 0.2
+          }
         }
       ],
       "source_coverage_incomplete": true,
@@ -710,299 +1005,134 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "AUDJPY": {
-      "status": "HEADLINES_PRESENT",
+      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
       "policy_headlines": [],
-      "news_headlines": [
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "US Market Wrap: Stocks hit on AI concerns and hot CPI",
-          "url": "https://www.newsquawk.com/headlines/us-market-wrap-stocks-hit-on-ai-concerns-and-hot-cpi",
-          "published_at_utc": "2026-10-14T20:44:00+00:00",
-          "first_seen_at_utc": "2026-10-14T21:19:43.474614+00:00",
-          "publisher_age_minutes": 35.7,
-          "source_latency_to_first_seen_minutes": 35.7,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
-          "currencies": [
-            "AUD",
-            "EUR",
-            "GBP",
-            "JPY",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "NZDJPY",
-            "EURJPY",
-            "EURCAD",
-            "USDCAD",
-            "EURGBP"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "Apple (AAPL) reportedly plans to launch Apple Intelligence in China in iOS 27.3; will debut first AI features in China in December",
-          "url": "https://www.newsquawk.com/headlines/apple-aapl-reportedly-plans-to-launch-apple-intelligence-in-china-in-ios-273-will-debut-first-ai-features-in-china-in-december",
-          "published_at_utc": "2026-10-14T20:11:00+00:00",
-          "first_seen_at_utc": "2026-10-14T20:21:00.687984+00:00",
-          "publisher_age_minutes": 68.7,
-          "source_latency_to_first_seen_minutes": 10.0,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "CNY"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "AUDJPY",
-            "NZDJPY"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        }
-      ],
+      "news_headlines": [],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "NZDJPY": {
-      "status": "HEADLINES_PRESENT",
+      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
       "policy_headlines": [],
-      "news_headlines": [
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "US Market Wrap: Stocks hit on AI concerns and hot CPI",
-          "url": "https://www.newsquawk.com/headlines/us-market-wrap-stocks-hit-on-ai-concerns-and-hot-cpi",
-          "published_at_utc": "2026-10-14T20:44:00+00:00",
-          "first_seen_at_utc": "2026-10-14T21:19:43.474614+00:00",
-          "publisher_age_minutes": 35.7,
-          "source_latency_to_first_seen_minutes": 35.7,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
-          "currencies": [
-            "AUD",
-            "EUR",
-            "GBP",
-            "JPY",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "NZDJPY",
-            "EURJPY",
-            "EURCAD",
-            "USDCAD",
-            "EURGBP"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "Apple (AAPL) reportedly plans to launch Apple Intelligence in China in iOS 27.3; will debut first AI features in China in December",
-          "url": "https://www.newsquawk.com/headlines/apple-aapl-reportedly-plans-to-launch-apple-intelligence-in-china-in-ios-273-will-debut-first-ai-features-in-china-in-december",
-          "published_at_utc": "2026-10-14T20:11:00+00:00",
-          "first_seen_at_utc": "2026-10-14T20:21:00.687984+00:00",
-          "publisher_age_minutes": 68.7,
-          "source_latency_to_first_seen_minutes": 10.0,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "CNY"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "AUDJPY",
-            "NZDJPY"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        }
-      ],
+      "news_headlines": [],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "EURJPY": {
-      "status": "HEADLINES_PRESENT",
+      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
       "policy_headlines": [],
-      "news_headlines": [
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "US Market Wrap: Stocks hit on AI concerns and hot CPI",
-          "url": "https://www.newsquawk.com/headlines/us-market-wrap-stocks-hit-on-ai-concerns-and-hot-cpi",
-          "published_at_utc": "2026-10-14T20:44:00+00:00",
-          "first_seen_at_utc": "2026-10-14T21:19:43.474614+00:00",
-          "publisher_age_minutes": 35.7,
-          "source_latency_to_first_seen_minutes": 35.7,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
-          "currencies": [
-            "AUD",
-            "EUR",
-            "GBP",
-            "JPY",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "NZDJPY",
-            "EURJPY",
-            "EURCAD",
-            "USDCAD",
-            "EURGBP"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        }
-      ],
+      "news_headlines": [],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "EURCAD": {
-      "status": "HEADLINES_PRESENT",
+      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
       "policy_headlines": [],
-      "news_headlines": [
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "US Market Wrap: Stocks hit on AI concerns and hot CPI",
-          "url": "https://www.newsquawk.com/headlines/us-market-wrap-stocks-hit-on-ai-concerns-and-hot-cpi",
-          "published_at_utc": "2026-10-14T20:44:00+00:00",
-          "first_seen_at_utc": "2026-10-14T21:19:43.474614+00:00",
-          "publisher_age_minutes": 35.7,
-          "source_latency_to_first_seen_minutes": 35.7,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
-          "currencies": [
-            "AUD",
-            "EUR",
-            "GBP",
-            "JPY",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "NZDJPY",
-            "EURJPY",
-            "EURCAD",
-            "USDCAD",
-            "EURGBP"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        }
-      ],
+      "news_headlines": [],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "USDCAD": {
-      "status": "HEADLINES_PRESENT",
-      "policy_headlines": [],
+      "status": "POLICY_REACTION_CHECK",
+      "policy_headlines": [
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "Fed's Daly (2027 voter) says we are more likely than not to need more rate hikes, but still deliberating on timing, adds not in a posture of urgency and better to be thoughtful and deliberate",
+          "url": "https://www.newsquawk.com/headlines/feds-daly-2027-voter-says-we-are-more-likely-than-not-to-need-more-rate-hikes-but-still-deliberating-on-timing-adds-not-in-a-posture-of-urgency-and-better-to-be-thoughtful-and-deliberate",
+          "published_at_utc": "2026-10-14T22:02:00+00:00",
+          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+          "publisher_age_minutes": 1.4,
+          "source_latency_to_first_seen_minutes": 1.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false
+          }
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "US President Trump says the Fed has interest rates artificially high",
+          "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
+          "published_at_utc": "2026-10-14T21:47:00+00:00",
+          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+          "publisher_age_minutes": 16.4,
+          "source_latency_to_first_seen_minutes": 16.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-14T21:45:00+00:00",
+            "pre_event_price": 1.42354,
+            "first_post_event_close_utc": "2026-10-14T22:00:00+00:00",
+            "first_post_event_price": 1.42334,
+            "first_post_event_change_pips": -2.0
+          }
+        }
+      ],
       "news_headlines": [
         {
           "provider": "Newsquawk_public_delayed",
-          "title": "US Market Wrap: Stocks hit on AI concerns and hot CPI",
-          "url": "https://www.newsquawk.com/headlines/us-market-wrap-stocks-hit-on-ai-concerns-and-hot-cpi",
-          "published_at_utc": "2026-10-14T20:44:00+00:00",
-          "first_seen_at_utc": "2026-10-14T21:19:43.474614+00:00",
-          "publisher_age_minutes": 35.7,
-          "source_latency_to_first_seen_minutes": 35.7,
+          "title": "Fed's Daly (2027 voter) says we are more likely than not to need more rate hikes, but still deliberating on timing, adds not in a posture of urgency and better to be thoughtful and deliberate",
+          "url": "https://www.newsquawk.com/headlines/feds-daly-2027-voter-says-we-are-more-likely-than-not-to-need-more-rate-hikes-but-still-deliberating-on-timing-adds-not-in-a-posture-of-urgency-and-better-to-be-thoughtful-and-deliberate",
+          "published_at_utc": "2026-10-14T22:02:00+00:00",
+          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+          "publisher_age_minutes": 1.4,
+          "source_latency_to_first_seen_minutes": 1.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
-          "currencies": [
-            "AUD",
-            "EUR",
-            "GBP",
-            "JPY",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "NZDJPY",
-            "EURJPY",
-            "EURCAD",
-            "USDCAD",
-            "EURGBP"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "Fed's Goolsbee (2027 voter) says a hotter-than-expected reading on Sept inflation is “discouraging\" but wants to wait for more data before taking action to raise rates higher",
-          "url": "https://www.newsquawk.com/headlines/feds-goolsbee-2027-voter-says-a-hotter-than-expected-reading-on-sept-inflation-is-discouraging-but-wants-to-wait-for-more-data-before-taking-action-to-raise-rates-higher",
-          "published_at_utc": "2026-10-14T19:20:00+00:00",
-          "first_seen_at_utc": "2026-10-14T19:35:55.511809+00:00",
-          "publisher_age_minutes": 119.7,
-          "source_latency_to_first_seen_minutes": 15.9,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
           "currencies": [
             "USD"
           ],
@@ -1016,21 +1146,28 @@
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false
+          }
         },
         {
           "provider": "Newsquawk_public_delayed",
-          "title": "NY Fed desk plans to conduct c. USD 14.6bln (prev. USD 15.6bln) in reinvestment purchases between Oct 15th and Nov 13th",
-          "url": "https://www.newsquawk.com/headlines/ny-fed-desk-plans-to-conduct-c-usd-146bln-in-reinvestment-purchases-between-oct-15th-and-nov-13th",
-          "published_at_utc": "2026-10-14T19:27:00+00:00",
-          "first_seen_at_utc": "2026-10-14T19:35:55.511809+00:00",
-          "publisher_age_minutes": 112.7,
-          "source_latency_to_first_seen_minutes": 8.9,
+          "title": "US President Trump says the Fed has interest rates artificially high",
+          "url": "https://www.newsquawk.com/headlines/us-president-trump-says-the-fed-has-interest-rates-artifically-high",
+          "published_at_utc": "2026-10-14T21:47:00+00:00",
+          "first_seen_at_utc": "2026-10-14T22:03:26.516231+00:00",
+          "publisher_age_minutes": 16.4,
+          "source_latency_to_first_seen_minutes": 16.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
           "currencies": [
             "USD"
           ],
@@ -1044,7 +1181,19 @@
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-14T21:45:00+00:00",
+            "pre_event_price": 1.42354,
+            "first_post_event_close_utc": "2026-10-14T22:00:00+00:00",
+            "first_post_event_price": 1.42334,
+            "first_post_event_change_pips": -2.0
+          }
         }
       ],
       "source_coverage_incomplete": true,
@@ -1053,47 +1202,9 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "EURGBP": {
-      "status": "HEADLINES_PRESENT",
+      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
       "policy_headlines": [],
-      "news_headlines": [
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "US Market Wrap: Stocks hit on AI concerns and hot CPI",
-          "url": "https://www.newsquawk.com/headlines/us-market-wrap-stocks-hit-on-ai-concerns-and-hot-cpi",
-          "published_at_utc": "2026-10-14T20:44:00+00:00",
-          "first_seen_at_utc": "2026-10-14T21:19:43.474614+00:00",
-          "publisher_age_minutes": 35.7,
-          "source_latency_to_first_seen_minutes": 35.7,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
-          "currencies": [
-            "AUD",
-            "EUR",
-            "GBP",
-            "JPY",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "AUDJPY",
-            "NZDJPY",
-            "EURJPY",
-            "EURCAD",
-            "USDCAD",
-            "EURGBP"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        }
-      ],
+      "news_headlines": [],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
