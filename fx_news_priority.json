@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-13T23:05:44.115492+00:00",
+  "generated_at_utc": "2026-10-14T00:33:25.933049+00:00",
   "target_refresh_minutes": 5,
   "actual_actions_schedule_not_guaranteed": true,
   "approved_source_names": [
@@ -21,144 +21,104 @@
   "any_provider_unavailable": true,
   "recent_headlines": [
     {
-      "provider": "Newsquawk_public_delayed",
-      "title": "Fed Governor Cook's lawyer denounces the Trump administration's new investigation and says that she will not be able to attend the hearing on November 5th, according to New York Times",
-      "url": "https://www.newsquawk.com/headlines/fed-governor-cooks-lawyer-denounces-the-trump-administrations-new-investigation-and-says-that-she-will-not-be-able-to-attend-the-hearing-on-november-5th-according-to-new-york-times",
-      "published_at_utc": "2026-10-13T21:37:00+00:00",
-      "first_seen_at_utc": "2026-10-13T21:58:02.541965+00:00",
-      "publisher_age_minutes": 88.7,
-      "source_latency_to_first_seen_minutes": 21.0,
-      "source_public_delay_minutes_at_least": 20,
-      "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-      "not_pro_feed_or_first_seen_in_real_time": true,
+      "provider": "FXStreet_RSS",
+      "title": "Yen trails the majors as the BoJ is said to lean against a hike",
+      "url": "https://www.fxstreet.com/news/yen-trails-the-majors-as-the-boj-is-said-to-lean-against-a-hike-202610132241",
+      "published_at_utc": "2026-10-13T22:41:05+00:00",
+      "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+      "publisher_age_minutes": 112.3,
+      "source_latency_to_first_seen_minutes": 112.3,
+      "source_public_delay_minutes_at_least": null,
+      "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+      "not_pro_feed_or_first_seen_in_real_time": false,
       "type": "CENTRAL_BANK_POLICY",
       "priority": "HIGH_POLICY_REACTION_CHECK",
       "currencies": [
-        "USD"
+        "JPY"
       ],
       "affected_pairs": [
-        "AUDUSD",
-        "NZDUSD",
-        "EURUSD",
-        "GBPUSD",
         "USDJPY",
-        "USDCAD"
+        "AUDJPY",
+        "NZDJPY",
+        "EURJPY"
       ],
       "headline_direction": "UNDETERMINED",
       "market_reaction": "NOT_VERIFIED",
       "broker_execution_allowed": false,
       "price_reactions": {
-        "AUDUSD": {
-          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-          "no_intrabar_assumptions": true,
-          "causal_link_verified": false,
-          "first_seen_before_market_reaction": false,
-          "pre_event_close_utc": "2026-10-13T21:30:00+00:00",
-          "pre_event_price": 0.69791,
-          "first_post_event_close_utc": "2026-10-13T21:45:00+00:00",
-          "first_post_event_price": 0.69811,
-          "first_post_event_change_pips": 2.0,
-          "second_post_event_close_utc": "2026-10-13T22:00:00+00:00",
-          "second_post_event_price": 0.69765,
-          "second_post_event_change_pips": -4.6,
-          "net_two_bar_event_window_pips": -2.6,
-          "early_initial_direction": "UP",
-          "second_bar_direction": "DOWN",
-          "retrospective_if_first_seen_after_first_candle": true
-        },
-        "NZDUSD": {
-          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-          "no_intrabar_assumptions": true,
-          "causal_link_verified": false,
-          "first_seen_before_market_reaction": false,
-          "pre_event_close_utc": "2026-10-13T21:30:00+00:00",
-          "pre_event_price": 0.56125,
-          "first_post_event_close_utc": "2026-10-13T21:45:00+00:00",
-          "first_post_event_price": 0.56097,
-          "first_post_event_change_pips": -2.8,
-          "second_post_event_close_utc": "2026-10-13T22:00:00+00:00",
-          "second_post_event_price": 0.56071,
-          "second_post_event_change_pips": -2.6,
-          "net_two_bar_event_window_pips": -5.4,
-          "early_initial_direction": "DOWN",
-          "second_bar_direction": "DOWN",
-          "retrospective_if_first_seen_after_first_candle": true
-        },
-        "EURUSD": {
-          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-          "no_intrabar_assumptions": true,
-          "causal_link_verified": false,
-          "first_seen_before_market_reaction": false,
-          "pre_event_close_utc": "2026-10-13T21:30:00+00:00",
-          "pre_event_price": 1.11979,
-          "first_post_event_close_utc": "2026-10-13T21:45:00+00:00",
-          "first_post_event_price": 1.11967,
-          "first_post_event_change_pips": -1.2,
-          "second_post_event_close_utc": "2026-10-13T22:00:00+00:00",
-          "second_post_event_price": 1.11953,
-          "second_post_event_change_pips": -1.4,
-          "net_two_bar_event_window_pips": -2.6,
-          "early_initial_direction": "DOWN",
-          "second_bar_direction": "DOWN",
-          "retrospective_if_first_seen_after_first_candle": true
-        },
-        "GBPUSD": {
-          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-          "no_intrabar_assumptions": true,
-          "causal_link_verified": false,
-          "first_seen_before_market_reaction": false,
-          "pre_event_close_utc": "2026-10-13T21:30:00+00:00",
-          "pre_event_price": 1.3255,
-          "first_post_event_close_utc": "2026-10-13T21:45:00+00:00",
-          "first_post_event_price": 1.3257,
-          "first_post_event_change_pips": 2.0,
-          "second_post_event_close_utc": "2026-10-13T22:00:00+00:00",
-          "second_post_event_price": 1.32456,
-          "second_post_event_change_pips": -11.4,
-          "net_two_bar_event_window_pips": -9.4,
-          "early_initial_direction": "UP",
-          "second_bar_direction": "DOWN",
-          "retrospective_if_first_seen_after_first_candle": true
-        },
         "USDJPY": {
           "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
           "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
           "no_intrabar_assumptions": true,
           "causal_link_verified": false,
           "first_seen_before_market_reaction": false,
-          "pre_event_close_utc": "2026-10-13T21:30:00+00:00",
-          "pre_event_price": 158.353,
-          "first_post_event_close_utc": "2026-10-13T21:45:00+00:00",
-          "first_post_event_price": 158.337,
-          "first_post_event_change_pips": -1.6,
-          "second_post_event_close_utc": "2026-10-13T22:00:00+00:00",
-          "second_post_event_price": 158.329,
-          "second_post_event_change_pips": -0.8,
-          "net_two_bar_event_window_pips": -2.4,
+          "pre_event_close_utc": "2026-10-13T22:30:00+00:00",
+          "pre_event_price": 158.351,
+          "first_post_event_close_utc": "2026-10-13T22:45:00+00:00",
+          "first_post_event_price": 158.345,
+          "first_post_event_change_pips": -0.6,
+          "second_post_event_close_utc": "2026-10-13T23:00:00+00:00",
+          "second_post_event_price": 158.344,
+          "second_post_event_change_pips": -0.1,
+          "net_two_bar_event_window_pips": -0.7,
           "early_initial_direction": "DOWN",
           "second_bar_direction": "DOWN",
           "retrospective_if_first_seen_after_first_candle": true
         },
-        "USDCAD": {
+        "AUDJPY": {
           "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
           "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
           "no_intrabar_assumptions": true,
           "causal_link_verified": false,
           "first_seen_before_market_reaction": false,
-          "pre_event_close_utc": "2026-10-13T21:30:00+00:00",
-          "pre_event_price": 1.42187,
-          "first_post_event_close_utc": "2026-10-13T21:45:00+00:00",
-          "first_post_event_price": 1.4217,
-          "first_post_event_change_pips": -1.7,
-          "second_post_event_close_utc": "2026-10-13T22:00:00+00:00",
-          "second_post_event_price": 1.42136,
-          "second_post_event_change_pips": -3.4,
-          "net_two_bar_event_window_pips": -5.1,
+          "pre_event_close_utc": "2026-10-13T22:30:00+00:00",
+          "pre_event_price": 110.57,
+          "first_post_event_close_utc": "2026-10-13T22:45:00+00:00",
+          "first_post_event_price": 110.569,
+          "first_post_event_change_pips": -0.1,
+          "second_post_event_close_utc": "2026-10-13T23:00:00+00:00",
+          "second_post_event_price": 110.571,
+          "second_post_event_change_pips": 0.2,
+          "net_two_bar_event_window_pips": 0.1,
           "early_initial_direction": "DOWN",
+          "second_bar_direction": "UP",
+          "retrospective_if_first_seen_after_first_candle": true
+        },
+        "NZDJPY": {
+          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false,
+          "pre_event_close_utc": "2026-10-13T22:30:00+00:00",
+          "pre_event_price": 88.881,
+          "first_post_event_close_utc": "2026-10-13T22:45:00+00:00",
+          "first_post_event_price": 88.86,
+          "first_post_event_change_pips": -2.1,
+          "second_post_event_close_utc": "2026-10-13T23:00:00+00:00",
+          "second_post_event_price": 88.846,
+          "second_post_event_change_pips": -1.4,
+          "net_two_bar_event_window_pips": -3.5,
+          "early_initial_direction": "DOWN",
+          "second_bar_direction": "DOWN",
+          "retrospective_if_first_seen_after_first_candle": true
+        },
+        "EURJPY": {
+          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false,
+          "pre_event_close_utc": "2026-10-13T22:30:00+00:00",
+          "pre_event_price": 177.315,
+          "first_post_event_close_utc": "2026-10-13T22:45:00+00:00",
+          "first_post_event_price": 177.318,
+          "first_post_event_change_pips": 0.3,
+          "second_post_event_close_utc": "2026-10-13T23:00:00+00:00",
+          "second_post_event_price": 177.313,
+          "second_post_event_change_pips": -0.5,
+          "net_two_bar_event_window_pips": -0.2,
+          "early_initial_direction": "UP",
           "second_bar_direction": "DOWN",
           "retrospective_if_first_seen_after_first_candle": true
         }
@@ -167,92 +127,75 @@
     },
     {
       "provider": "Newsquawk_public_delayed",
-      "title": "BoE Governor Bailey says UK companies are focusing intensely on containing costs amid surging energy prices caused by the Iran war, while he reiterated that broader UK inflation pressure from the energy shock has remaine",
-      "url": "https://www.newsquawk.com/headlines/boe-governor-bailey-says-uk-companies-are-focusing-intensely-on-containing-costs-amid-surging-energy-prices-caused-by-the-iran-war-while-he-reiterated-that-broader-uk-inflation-pressure-from-the-energy-shock-has-remained-subdued-so-far",
-      "published_at_utc": "2026-10-13T21:18:00+00:00",
-      "first_seen_at_utc": "2026-10-13T21:30:46.237285+00:00",
-      "publisher_age_minutes": 107.7,
-      "source_latency_to_first_seen_minutes": 12.8,
+      "title": "Australia sells AUD 700mln 4.25% March 2036 bonds avg. yield 5.2899%, b/c 4.90",
+      "url": "https://www.newsquawk.com/headlines/australia-sells-aud-700mln-425-march-2036-bonds-avg-yield-52899-bc-490",
+      "published_at_utc": "2026-10-14T00:27:00+00:00",
+      "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+      "publisher_age_minutes": 6.4,
+      "source_latency_to_first_seen_minutes": 6.4,
       "source_public_delay_minutes_at_least": 20,
       "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
       "not_pro_feed_or_first_seen_in_real_time": true,
-      "type": "CENTRAL_BANK_POLICY",
-      "priority": "HIGH_POLICY_REACTION_CHECK",
+      "type": "GENERAL",
+      "priority": "CONTEXT",
       "currencies": [
-        "GBP"
+        "AUD"
       ],
       "affected_pairs": [
-        "GBPUSD",
-        "EURGBP"
+        "AUDUSD",
+        "AUDJPY"
       ],
       "headline_direction": "UNDETERMINED",
       "market_reaction": "NOT_VERIFIED",
-      "broker_execution_allowed": false,
-      "price_reactions": {
-        "GBPUSD": {
-          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-          "no_intrabar_assumptions": true,
-          "causal_link_verified": false,
-          "first_seen_before_market_reaction": false,
-          "pre_event_close_utc": "2026-10-13T21:15:00+00:00",
-          "pre_event_price": 1.32548,
-          "first_post_event_close_utc": "2026-10-13T21:30:00+00:00",
-          "first_post_event_price": 1.3255,
-          "first_post_event_change_pips": 0.2,
-          "second_post_event_close_utc": "2026-10-13T21:45:00+00:00",
-          "second_post_event_price": 1.3257,
-          "second_post_event_change_pips": 2.0,
-          "net_two_bar_event_window_pips": 2.2,
-          "early_initial_direction": "UP",
-          "second_bar_direction": "UP",
-          "retrospective_if_first_seen_after_first_candle": true
-        },
-        "EURGBP": {
-          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-          "no_intrabar_assumptions": true,
-          "causal_link_verified": false,
-          "first_seen_before_market_reaction": false,
-          "pre_event_close_utc": "2026-10-13T21:15:00+00:00",
-          "pre_event_price": 0.84468,
-          "first_post_event_close_utc": "2026-10-13T21:30:00+00:00",
-          "first_post_event_price": 0.84469,
-          "first_post_event_change_pips": 0.1,
-          "second_post_event_close_utc": "2026-10-13T21:45:00+00:00",
-          "second_post_event_price": 0.84457,
-          "second_post_event_change_pips": -1.2,
-          "net_two_bar_event_window_pips": -1.1,
-          "early_initial_direction": "UP",
-          "second_bar_direction": "DOWN",
-          "retrospective_if_first_seen_after_first_candle": true
-        }
-      },
-      "all_price_reactions_are_noncausal_observations": true
+      "broker_execution_allowed": false
     },
     {
-      "provider": "FXStreet_RSS",
-      "title": "Mexican Peso buckles as Fed inflation fears overshadow dovish Williams",
-      "url": "https://www.fxstreet.com/news/mexican-peso-buckles-as-fed-inflation-fears-overshadow-dovish-williams-202610132217",
-      "published_at_utc": "2026-10-13T22:17:16+00:00",
-      "first_seen_at_utc": "2026-10-13T23:05:44.115492+00:00",
-      "publisher_age_minutes": 48.5,
-      "source_latency_to_first_seen_minutes": 48.5,
-      "source_public_delay_minutes_at_least": null,
-      "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-      "not_pro_feed_or_first_seen_in_real_time": false,
-      "type": "MACRO_DATA_OR_YIELD",
-      "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+      "provider": "Newsquawk_public_delayed",
+      "title": "PRE-MARKET JAPANESE AND SOUTH KOREAN STOCKS NEWS: Hyundai Motor (005380 KS) plans to invest USD 15.5bln in India through 2032 to expand manufacturing, R&D and other operations amid intensifying competition and declining",
+      "url": "https://www.newsquawk.com/headlines/pre-market-japanese-and-south-korean-stocks-news-hyundai-motor-005380-ks-plans-to-invest-usd-155bln-in-india-through-2032-to-expand-manufacturing-rd-and-other-operations-amid-intensifying-competition-and-declining-market-share",
+      "published_at_utc": "2026-10-13T23:47:00+00:00",
+      "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+      "publisher_age_minutes": 46.4,
+      "source_latency_to_first_seen_minutes": 46.4,
+      "source_public_delay_minutes_at_least": 20,
+      "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+      "not_pro_feed_or_first_seen_in_real_time": true,
+      "type": "GENERAL",
+      "priority": "CONTEXT",
       "currencies": [
-        "USD"
+        "JPY"
+      ],
+      "affected_pairs": [
+        "USDJPY",
+        "AUDJPY",
+        "NZDJPY",
+        "EURJPY"
+      ],
+      "headline_direction": "UNDETERMINED",
+      "market_reaction": "NOT_VERIFIED",
+      "broker_execution_allowed": false
+    },
+    {
+      "provider": "Newsquawk_public_delayed",
+      "title": "China's PLA Navy organized Liaoning aircraft carrier strike group to conduct training exercises in the waters of the Western Pacific, according to CCTV",
+      "url": "https://www.newsquawk.com/headlines/chinas-pla-navy-organized-liaoning-aircraft-carrier-strike-group-to-conduct-training-exercises-in-the-waters-of-the-western-pacific-according-to-cctv",
+      "published_at_utc": "2026-10-13T23:36:00+00:00",
+      "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+      "publisher_age_minutes": 57.4,
+      "source_latency_to_first_seen_minutes": 57.4,
+      "source_public_delay_minutes_at_least": 20,
+      "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+      "not_pro_feed_or_first_seen_in_real_time": true,
+      "type": "GENERAL",
+      "priority": "CONTEXT",
+      "currencies": [
+        "CNY"
       ],
       "affected_pairs": [
         "AUDUSD",
         "NZDUSD",
-        "EURUSD",
-        "GBPUSD",
-        "USDJPY",
-        "USDCAD"
+        "AUDJPY",
+        "NZDJPY"
       ],
       "headline_direction": "UNDETERMINED",
       "market_reaction": "NOT_VERIFIED",
@@ -260,19 +203,19 @@
     },
     {
       "provider": "FXStreet_RSS",
-      "title": "Pound gains as Fed's Williams sees no 2027 hike",
-      "url": "https://www.fxstreet.com/news/pound-gains-and-stays-inside-its-range-for-a-third-week-202610132134",
-      "published_at_utc": "2026-10-13T21:34:48+00:00",
-      "first_seen_at_utc": "2026-10-13T22:17:23.577219+00:00",
-      "publisher_age_minutes": 90.9,
-      "source_latency_to_first_seen_minutes": 42.6,
+      "title": "Australian Dollar climbs as Fed’s Williams push the brakes on rates",
+      "url": "https://www.fxstreet.com/news/australian-dollar-climbs-as-feds-williams-push-the-brakes-on-rates-202610132334",
+      "published_at_utc": "2026-10-13T23:34:13+00:00",
+      "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+      "publisher_age_minutes": 59.2,
+      "source_latency_to_first_seen_minutes": 59.2,
       "source_public_delay_minutes_at_least": null,
       "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
       "not_pro_feed_or_first_seen_in_real_time": false,
       "type": "GENERAL",
       "priority": "CONTEXT",
       "currencies": [
-        "GBP",
+        "AUD",
         "USD"
       ],
       "affected_pairs": [
@@ -281,8 +224,36 @@
         "EURUSD",
         "GBPUSD",
         "USDJPY",
-        "USDCAD",
-        "EURGBP"
+        "AUDJPY",
+        "USDCAD"
+      ],
+      "headline_direction": "UNDETERMINED",
+      "market_reaction": "NOT_VERIFIED",
+      "broker_execution_allowed": false
+    },
+    {
+      "provider": "Newsquawk_public_delayed",
+      "title": "South Korea is considering cutting treasury bond issuance by between KRW 5tln-10tln",
+      "url": "https://www.newsquawk.com/headlines/south-korea-is-considering-cutting-treasury-bond-issuance-by-between-krw-5tln-10tln",
+      "published_at_utc": "2026-10-13T23:20:00+00:00",
+      "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+      "publisher_age_minutes": 73.4,
+      "source_latency_to_first_seen_minutes": 73.4,
+      "source_public_delay_minutes_at_least": 20,
+      "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+      "not_pro_feed_or_first_seen_in_real_time": true,
+      "type": "GENERAL",
+      "priority": "CONTEXT",
+      "currencies": [
+        "USD"
+      ],
+      "affected_pairs": [
+        "AUDUSD",
+        "NZDUSD",
+        "EURUSD",
+        "GBPUSD",
+        "USDJPY",
+        "USDCAD"
       ],
       "headline_direction": "UNDETERMINED",
       "market_reaction": "NOT_VERIFIED",
@@ -291,127 +262,54 @@
   ],
   "pairs": {
     "AUDUSD": {
-      "status": "POLICY_REACTION_CHECK",
-      "policy_headlines": [
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "Fed Governor Cook's lawyer denounces the Trump administration's new investigation and says that she will not be able to attend the hearing on November 5th, according to New York Times",
-          "url": "https://www.newsquawk.com/headlines/fed-governor-cooks-lawyer-denounces-the-trump-administrations-new-investigation-and-says-that-she-will-not-be-able-to-attend-the-hearing-on-november-5th-according-to-new-york-times",
-          "published_at_utc": "2026-10-13T21:37:00+00:00",
-          "first_seen_at_utc": "2026-10-13T21:58:02.541965+00:00",
-          "publisher_age_minutes": 88.7,
-          "source_latency_to_first_seen_minutes": 21.0,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T21:30:00+00:00",
-            "pre_event_price": 0.69791,
-            "first_post_event_close_utc": "2026-10-13T21:45:00+00:00",
-            "first_post_event_price": 0.69811,
-            "first_post_event_change_pips": 2.0,
-            "second_post_event_close_utc": "2026-10-13T22:00:00+00:00",
-            "second_post_event_price": 0.69765,
-            "second_post_event_change_pips": -4.6,
-            "net_two_bar_event_window_pips": -2.6,
-            "early_initial_direction": "UP",
-            "second_bar_direction": "DOWN",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
-        }
-      ],
+      "status": "HEADLINES_PRESENT",
+      "policy_headlines": [],
       "news_headlines": [
         {
           "provider": "Newsquawk_public_delayed",
-          "title": "Fed Governor Cook's lawyer denounces the Trump administration's new investigation and says that she will not be able to attend the hearing on November 5th, according to New York Times",
-          "url": "https://www.newsquawk.com/headlines/fed-governor-cooks-lawyer-denounces-the-trump-administrations-new-investigation-and-says-that-she-will-not-be-able-to-attend-the-hearing-on-november-5th-according-to-new-york-times",
-          "published_at_utc": "2026-10-13T21:37:00+00:00",
-          "first_seen_at_utc": "2026-10-13T21:58:02.541965+00:00",
-          "publisher_age_minutes": 88.7,
-          "source_latency_to_first_seen_minutes": 21.0,
+          "title": "Australia sells AUD 700mln 4.25% March 2036 bonds avg. yield 5.2899%, b/c 4.90",
+          "url": "https://www.newsquawk.com/headlines/australia-sells-aud-700mln-425-march-2036-bonds-avg-yield-52899-bc-490",
+          "published_at_utc": "2026-10-14T00:27:00+00:00",
+          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+          "publisher_age_minutes": 6.4,
+          "source_latency_to_first_seen_minutes": 6.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "type": "GENERAL",
+          "priority": "CONTEXT",
           "currencies": [
-            "USD"
+            "AUD"
           ],
           "affected_pairs": [
             "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD"
+            "AUDJPY"
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T21:30:00+00:00",
-            "pre_event_price": 0.69791,
-            "first_post_event_close_utc": "2026-10-13T21:45:00+00:00",
-            "first_post_event_price": 0.69811,
-            "first_post_event_change_pips": 2.0,
-            "second_post_event_close_utc": "2026-10-13T22:00:00+00:00",
-            "second_post_event_price": 0.69765,
-            "second_post_event_change_pips": -4.6,
-            "net_two_bar_event_window_pips": -2.6,
-            "early_initial_direction": "UP",
-            "second_bar_direction": "DOWN",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
+          "broker_execution_allowed": false
         },
         {
-          "provider": "FXStreet_RSS",
-          "title": "Mexican Peso buckles as Fed inflation fears overshadow dovish Williams",
-          "url": "https://www.fxstreet.com/news/mexican-peso-buckles-as-fed-inflation-fears-overshadow-dovish-williams-202610132217",
-          "published_at_utc": "2026-10-13T22:17:16+00:00",
-          "first_seen_at_utc": "2026-10-13T23:05:44.115492+00:00",
-          "publisher_age_minutes": 48.5,
-          "source_latency_to_first_seen_minutes": 48.5,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "provider": "Newsquawk_public_delayed",
+          "title": "China's PLA Navy organized Liaoning aircraft carrier strike group to conduct training exercises in the waters of the Western Pacific, according to CCTV",
+          "url": "https://www.newsquawk.com/headlines/chinas-pla-navy-organized-liaoning-aircraft-carrier-strike-group-to-conduct-training-exercises-in-the-waters-of-the-western-pacific-according-to-cctv",
+          "published_at_utc": "2026-10-13T23:36:00+00:00",
+          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+          "publisher_age_minutes": 57.4,
+          "source_latency_to_first_seen_minutes": 57.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
           "currencies": [
-            "USD"
+            "CNY"
           ],
           "affected_pairs": [
             "AUDUSD",
             "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD"
+            "AUDJPY",
+            "NZDJPY"
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
@@ -419,19 +317,19 @@
         },
         {
           "provider": "FXStreet_RSS",
-          "title": "Pound gains as Fed's Williams sees no 2027 hike",
-          "url": "https://www.fxstreet.com/news/pound-gains-and-stays-inside-its-range-for-a-third-week-202610132134",
-          "published_at_utc": "2026-10-13T21:34:48+00:00",
-          "first_seen_at_utc": "2026-10-13T22:17:23.577219+00:00",
-          "publisher_age_minutes": 90.9,
-          "source_latency_to_first_seen_minutes": 42.6,
+          "title": "Australian Dollar climbs as Fed’s Williams push the brakes on rates",
+          "url": "https://www.fxstreet.com/news/australian-dollar-climbs-as-feds-williams-push-the-brakes-on-rates-202610132334",
+          "published_at_utc": "2026-10-13T23:34:13+00:00",
+          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+          "publisher_age_minutes": 59.2,
+          "source_latency_to_first_seen_minutes": 59.2,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
           "not_pro_feed_or_first_seen_in_real_time": false,
           "type": "GENERAL",
           "priority": "CONTEXT",
           "currencies": [
-            "GBP",
+            "AUD",
             "USD"
           ],
           "affected_pairs": [
@@ -440,8 +338,36 @@
             "EURUSD",
             "GBPUSD",
             "USDJPY",
-            "USDCAD",
-            "EURGBP"
+            "AUDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "South Korea is considering cutting treasury bond issuance by between KRW 5tln-10tln",
+          "url": "https://www.newsquawk.com/headlines/south-korea-is-considering-cutting-treasury-bond-issuance-by-between-krw-5tln-10tln",
+          "published_at_utc": "2026-10-13T23:20:00+00:00",
+          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+          "publisher_age_minutes": 73.4,
+          "source_latency_to_first_seen_minutes": 73.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
@@ -454,127 +380,30 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "NZDUSD": {
-      "status": "POLICY_REACTION_CHECK",
-      "policy_headlines": [
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "Fed Governor Cook's lawyer denounces the Trump administration's new investigation and says that she will not be able to attend the hearing on November 5th, according to New York Times",
-          "url": "https://www.newsquawk.com/headlines/fed-governor-cooks-lawyer-denounces-the-trump-administrations-new-investigation-and-says-that-she-will-not-be-able-to-attend-the-hearing-on-november-5th-according-to-new-york-times",
-          "published_at_utc": "2026-10-13T21:37:00+00:00",
-          "first_seen_at_utc": "2026-10-13T21:58:02.541965+00:00",
-          "publisher_age_minutes": 88.7,
-          "source_latency_to_first_seen_minutes": 21.0,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T21:30:00+00:00",
-            "pre_event_price": 0.56125,
-            "first_post_event_close_utc": "2026-10-13T21:45:00+00:00",
-            "first_post_event_price": 0.56097,
-            "first_post_event_change_pips": -2.8,
-            "second_post_event_close_utc": "2026-10-13T22:00:00+00:00",
-            "second_post_event_price": 0.56071,
-            "second_post_event_change_pips": -2.6,
-            "net_two_bar_event_window_pips": -5.4,
-            "early_initial_direction": "DOWN",
-            "second_bar_direction": "DOWN",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
-        }
-      ],
+      "status": "HEADLINES_PRESENT",
+      "policy_headlines": [],
       "news_headlines": [
         {
           "provider": "Newsquawk_public_delayed",
-          "title": "Fed Governor Cook's lawyer denounces the Trump administration's new investigation and says that she will not be able to attend the hearing on November 5th, according to New York Times",
-          "url": "https://www.newsquawk.com/headlines/fed-governor-cooks-lawyer-denounces-the-trump-administrations-new-investigation-and-says-that-she-will-not-be-able-to-attend-the-hearing-on-november-5th-according-to-new-york-times",
-          "published_at_utc": "2026-10-13T21:37:00+00:00",
-          "first_seen_at_utc": "2026-10-13T21:58:02.541965+00:00",
-          "publisher_age_minutes": 88.7,
-          "source_latency_to_first_seen_minutes": 21.0,
+          "title": "China's PLA Navy organized Liaoning aircraft carrier strike group to conduct training exercises in the waters of the Western Pacific, according to CCTV",
+          "url": "https://www.newsquawk.com/headlines/chinas-pla-navy-organized-liaoning-aircraft-carrier-strike-group-to-conduct-training-exercises-in-the-waters-of-the-western-pacific-according-to-cctv",
+          "published_at_utc": "2026-10-13T23:36:00+00:00",
+          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+          "publisher_age_minutes": 57.4,
+          "source_latency_to_first_seen_minutes": 57.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "type": "GENERAL",
+          "priority": "CONTEXT",
           "currencies": [
-            "USD"
+            "CNY"
           ],
           "affected_pairs": [
             "AUDUSD",
             "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T21:30:00+00:00",
-            "pre_event_price": 0.56125,
-            "first_post_event_close_utc": "2026-10-13T21:45:00+00:00",
-            "first_post_event_price": 0.56097,
-            "first_post_event_change_pips": -2.8,
-            "second_post_event_close_utc": "2026-10-13T22:00:00+00:00",
-            "second_post_event_price": 0.56071,
-            "second_post_event_change_pips": -2.6,
-            "net_two_bar_event_window_pips": -5.4,
-            "early_initial_direction": "DOWN",
-            "second_bar_direction": "DOWN",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
-        },
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Mexican Peso buckles as Fed inflation fears overshadow dovish Williams",
-          "url": "https://www.fxstreet.com/news/mexican-peso-buckles-as-fed-inflation-fears-overshadow-dovish-williams-202610132217",
-          "published_at_utc": "2026-10-13T22:17:16+00:00",
-          "first_seen_at_utc": "2026-10-13T23:05:44.115492+00:00",
-          "publisher_age_minutes": 48.5,
-          "source_latency_to_first_seen_minutes": 48.5,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD"
+            "AUDJPY",
+            "NZDJPY"
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
@@ -582,19 +411,19 @@
         },
         {
           "provider": "FXStreet_RSS",
-          "title": "Pound gains as Fed's Williams sees no 2027 hike",
-          "url": "https://www.fxstreet.com/news/pound-gains-and-stays-inside-its-range-for-a-third-week-202610132134",
-          "published_at_utc": "2026-10-13T21:34:48+00:00",
-          "first_seen_at_utc": "2026-10-13T22:17:23.577219+00:00",
-          "publisher_age_minutes": 90.9,
-          "source_latency_to_first_seen_minutes": 42.6,
+          "title": "Australian Dollar climbs as Fed’s Williams push the brakes on rates",
+          "url": "https://www.fxstreet.com/news/australian-dollar-climbs-as-feds-williams-push-the-brakes-on-rates-202610132334",
+          "published_at_utc": "2026-10-13T23:34:13+00:00",
+          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+          "publisher_age_minutes": 59.2,
+          "source_latency_to_first_seen_minutes": 59.2,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
           "not_pro_feed_or_first_seen_in_real_time": false,
           "type": "GENERAL",
           "priority": "CONTEXT",
           "currencies": [
-            "GBP",
+            "AUD",
             "USD"
           ],
           "affected_pairs": [
@@ -603,8 +432,36 @@
             "EURUSD",
             "GBPUSD",
             "USDJPY",
-            "USDCAD",
-            "EURGBP"
+            "AUDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "South Korea is considering cutting treasury bond issuance by between KRW 5tln-10tln",
+          "url": "https://www.newsquawk.com/headlines/south-korea-is-considering-cutting-treasury-bond-issuance-by-between-krw-5tln-10tln",
+          "published_at_utc": "2026-10-13T23:20:00+00:00",
+          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+          "publisher_age_minutes": 73.4,
+          "source_latency_to_first_seen_minutes": 73.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
@@ -617,118 +474,24 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "EURUSD": {
-      "status": "POLICY_REACTION_CHECK",
-      "policy_headlines": [
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "Fed Governor Cook's lawyer denounces the Trump administration's new investigation and says that she will not be able to attend the hearing on November 5th, according to New York Times",
-          "url": "https://www.newsquawk.com/headlines/fed-governor-cooks-lawyer-denounces-the-trump-administrations-new-investigation-and-says-that-she-will-not-be-able-to-attend-the-hearing-on-november-5th-according-to-new-york-times",
-          "published_at_utc": "2026-10-13T21:37:00+00:00",
-          "first_seen_at_utc": "2026-10-13T21:58:02.541965+00:00",
-          "publisher_age_minutes": 88.7,
-          "source_latency_to_first_seen_minutes": 21.0,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T21:30:00+00:00",
-            "pre_event_price": 1.11979,
-            "first_post_event_close_utc": "2026-10-13T21:45:00+00:00",
-            "first_post_event_price": 1.11967,
-            "first_post_event_change_pips": -1.2,
-            "second_post_event_close_utc": "2026-10-13T22:00:00+00:00",
-            "second_post_event_price": 1.11953,
-            "second_post_event_change_pips": -1.4,
-            "net_two_bar_event_window_pips": -2.6,
-            "early_initial_direction": "DOWN",
-            "second_bar_direction": "DOWN",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
-        }
-      ],
+      "status": "HEADLINES_PRESENT",
+      "policy_headlines": [],
       "news_headlines": [
         {
-          "provider": "Newsquawk_public_delayed",
-          "title": "Fed Governor Cook's lawyer denounces the Trump administration's new investigation and says that she will not be able to attend the hearing on November 5th, according to New York Times",
-          "url": "https://www.newsquawk.com/headlines/fed-governor-cooks-lawyer-denounces-the-trump-administrations-new-investigation-and-says-that-she-will-not-be-able-to-attend-the-hearing-on-november-5th-according-to-new-york-times",
-          "published_at_utc": "2026-10-13T21:37:00+00:00",
-          "first_seen_at_utc": "2026-10-13T21:58:02.541965+00:00",
-          "publisher_age_minutes": 88.7,
-          "source_latency_to_first_seen_minutes": 21.0,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T21:30:00+00:00",
-            "pre_event_price": 1.11979,
-            "first_post_event_close_utc": "2026-10-13T21:45:00+00:00",
-            "first_post_event_price": 1.11967,
-            "first_post_event_change_pips": -1.2,
-            "second_post_event_close_utc": "2026-10-13T22:00:00+00:00",
-            "second_post_event_price": 1.11953,
-            "second_post_event_change_pips": -1.4,
-            "net_two_bar_event_window_pips": -2.6,
-            "early_initial_direction": "DOWN",
-            "second_bar_direction": "DOWN",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
-        },
-        {
           "provider": "FXStreet_RSS",
-          "title": "Mexican Peso buckles as Fed inflation fears overshadow dovish Williams",
-          "url": "https://www.fxstreet.com/news/mexican-peso-buckles-as-fed-inflation-fears-overshadow-dovish-williams-202610132217",
-          "published_at_utc": "2026-10-13T22:17:16+00:00",
-          "first_seen_at_utc": "2026-10-13T23:05:44.115492+00:00",
-          "publisher_age_minutes": 48.5,
-          "source_latency_to_first_seen_minutes": 48.5,
+          "title": "Australian Dollar climbs as Fed’s Williams push the brakes on rates",
+          "url": "https://www.fxstreet.com/news/australian-dollar-climbs-as-feds-williams-push-the-brakes-on-rates-202610132334",
+          "published_at_utc": "2026-10-13T23:34:13+00:00",
+          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+          "publisher_age_minutes": 59.2,
+          "source_latency_to_first_seen_minutes": 59.2,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
           "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "type": "GENERAL",
+          "priority": "CONTEXT",
           "currencies": [
+            "AUD",
             "USD"
           ],
           "affected_pairs": [
@@ -737,6 +500,7 @@
             "EURUSD",
             "GBPUSD",
             "USDJPY",
+            "AUDJPY",
             "USDCAD"
           ],
           "headline_direction": "UNDETERMINED",
@@ -744,20 +508,19 @@
           "broker_execution_allowed": false
         },
         {
-          "provider": "FXStreet_RSS",
-          "title": "Pound gains as Fed's Williams sees no 2027 hike",
-          "url": "https://www.fxstreet.com/news/pound-gains-and-stays-inside-its-range-for-a-third-week-202610132134",
-          "published_at_utc": "2026-10-13T21:34:48+00:00",
-          "first_seen_at_utc": "2026-10-13T22:17:23.577219+00:00",
-          "publisher_age_minutes": 90.9,
-          "source_latency_to_first_seen_minutes": 42.6,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
+          "provider": "Newsquawk_public_delayed",
+          "title": "South Korea is considering cutting treasury bond issuance by between KRW 5tln-10tln",
+          "url": "https://www.newsquawk.com/headlines/south-korea-is-considering-cutting-treasury-bond-issuance-by-between-krw-5tln-10tln",
+          "published_at_utc": "2026-10-13T23:20:00+00:00",
+          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+          "publisher_age_minutes": 73.4,
+          "source_latency_to_first_seen_minutes": 73.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
           "type": "GENERAL",
           "priority": "CONTEXT",
           "currencies": [
-            "GBP",
             "USD"
           ],
           "affected_pairs": [
@@ -766,8 +529,7 @@
             "EURUSD",
             "GBPUSD",
             "USDJPY",
-            "USDCAD",
-            "EURGBP"
+            "USDCAD"
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
@@ -780,204 +542,24 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "GBPUSD": {
-      "status": "POLICY_REACTION_CHECK",
-      "policy_headlines": [
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "Fed Governor Cook's lawyer denounces the Trump administration's new investigation and says that she will not be able to attend the hearing on November 5th, according to New York Times",
-          "url": "https://www.newsquawk.com/headlines/fed-governor-cooks-lawyer-denounces-the-trump-administrations-new-investigation-and-says-that-she-will-not-be-able-to-attend-the-hearing-on-november-5th-according-to-new-york-times",
-          "published_at_utc": "2026-10-13T21:37:00+00:00",
-          "first_seen_at_utc": "2026-10-13T21:58:02.541965+00:00",
-          "publisher_age_minutes": 88.7,
-          "source_latency_to_first_seen_minutes": 21.0,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T21:30:00+00:00",
-            "pre_event_price": 1.3255,
-            "first_post_event_close_utc": "2026-10-13T21:45:00+00:00",
-            "first_post_event_price": 1.3257,
-            "first_post_event_change_pips": 2.0,
-            "second_post_event_close_utc": "2026-10-13T22:00:00+00:00",
-            "second_post_event_price": 1.32456,
-            "second_post_event_change_pips": -11.4,
-            "net_two_bar_event_window_pips": -9.4,
-            "early_initial_direction": "UP",
-            "second_bar_direction": "DOWN",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "BoE Governor Bailey says UK companies are focusing intensely on containing costs amid surging energy prices caused by the Iran war, while he reiterated that broader UK inflation pressure from the energy shock has remaine",
-          "url": "https://www.newsquawk.com/headlines/boe-governor-bailey-says-uk-companies-are-focusing-intensely-on-containing-costs-amid-surging-energy-prices-caused-by-the-iran-war-while-he-reiterated-that-broader-uk-inflation-pressure-from-the-energy-shock-has-remained-subdued-so-far",
-          "published_at_utc": "2026-10-13T21:18:00+00:00",
-          "first_seen_at_utc": "2026-10-13T21:30:46.237285+00:00",
-          "publisher_age_minutes": 107.7,
-          "source_latency_to_first_seen_minutes": 12.8,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "GBP"
-          ],
-          "affected_pairs": [
-            "GBPUSD",
-            "EURGBP"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T21:15:00+00:00",
-            "pre_event_price": 1.32548,
-            "first_post_event_close_utc": "2026-10-13T21:30:00+00:00",
-            "first_post_event_price": 1.3255,
-            "first_post_event_change_pips": 0.2,
-            "second_post_event_close_utc": "2026-10-13T21:45:00+00:00",
-            "second_post_event_price": 1.3257,
-            "second_post_event_change_pips": 2.0,
-            "net_two_bar_event_window_pips": 2.2,
-            "early_initial_direction": "UP",
-            "second_bar_direction": "UP",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
-        }
-      ],
+      "status": "HEADLINES_PRESENT",
+      "policy_headlines": [],
       "news_headlines": [
         {
-          "provider": "Newsquawk_public_delayed",
-          "title": "Fed Governor Cook's lawyer denounces the Trump administration's new investigation and says that she will not be able to attend the hearing on November 5th, according to New York Times",
-          "url": "https://www.newsquawk.com/headlines/fed-governor-cooks-lawyer-denounces-the-trump-administrations-new-investigation-and-says-that-she-will-not-be-able-to-attend-the-hearing-on-november-5th-according-to-new-york-times",
-          "published_at_utc": "2026-10-13T21:37:00+00:00",
-          "first_seen_at_utc": "2026-10-13T21:58:02.541965+00:00",
-          "publisher_age_minutes": 88.7,
-          "source_latency_to_first_seen_minutes": 21.0,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T21:30:00+00:00",
-            "pre_event_price": 1.3255,
-            "first_post_event_close_utc": "2026-10-13T21:45:00+00:00",
-            "first_post_event_price": 1.3257,
-            "first_post_event_change_pips": 2.0,
-            "second_post_event_close_utc": "2026-10-13T22:00:00+00:00",
-            "second_post_event_price": 1.32456,
-            "second_post_event_change_pips": -11.4,
-            "net_two_bar_event_window_pips": -9.4,
-            "early_initial_direction": "UP",
-            "second_bar_direction": "DOWN",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "BoE Governor Bailey says UK companies are focusing intensely on containing costs amid surging energy prices caused by the Iran war, while he reiterated that broader UK inflation pressure from the energy shock has remaine",
-          "url": "https://www.newsquawk.com/headlines/boe-governor-bailey-says-uk-companies-are-focusing-intensely-on-containing-costs-amid-surging-energy-prices-caused-by-the-iran-war-while-he-reiterated-that-broader-uk-inflation-pressure-from-the-energy-shock-has-remained-subdued-so-far",
-          "published_at_utc": "2026-10-13T21:18:00+00:00",
-          "first_seen_at_utc": "2026-10-13T21:30:46.237285+00:00",
-          "publisher_age_minutes": 107.7,
-          "source_latency_to_first_seen_minutes": 12.8,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "GBP"
-          ],
-          "affected_pairs": [
-            "GBPUSD",
-            "EURGBP"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T21:15:00+00:00",
-            "pre_event_price": 1.32548,
-            "first_post_event_close_utc": "2026-10-13T21:30:00+00:00",
-            "first_post_event_price": 1.3255,
-            "first_post_event_change_pips": 0.2,
-            "second_post_event_close_utc": "2026-10-13T21:45:00+00:00",
-            "second_post_event_price": 1.3257,
-            "second_post_event_change_pips": 2.0,
-            "net_two_bar_event_window_pips": 2.2,
-            "early_initial_direction": "UP",
-            "second_bar_direction": "UP",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
-        },
-        {
           "provider": "FXStreet_RSS",
-          "title": "Mexican Peso buckles as Fed inflation fears overshadow dovish Williams",
-          "url": "https://www.fxstreet.com/news/mexican-peso-buckles-as-fed-inflation-fears-overshadow-dovish-williams-202610132217",
-          "published_at_utc": "2026-10-13T22:17:16+00:00",
-          "first_seen_at_utc": "2026-10-13T23:05:44.115492+00:00",
-          "publisher_age_minutes": 48.5,
-          "source_latency_to_first_seen_minutes": 48.5,
+          "title": "Australian Dollar climbs as Fed’s Williams push the brakes on rates",
+          "url": "https://www.fxstreet.com/news/australian-dollar-climbs-as-feds-williams-push-the-brakes-on-rates-202610132334",
+          "published_at_utc": "2026-10-13T23:34:13+00:00",
+          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+          "publisher_age_minutes": 59.2,
+          "source_latency_to_first_seen_minutes": 59.2,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
           "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "type": "GENERAL",
+          "priority": "CONTEXT",
           "currencies": [
+            "AUD",
             "USD"
           ],
           "affected_pairs": [
@@ -986,6 +568,7 @@
             "EURUSD",
             "GBPUSD",
             "USDJPY",
+            "AUDJPY",
             "USDCAD"
           ],
           "headline_direction": "UNDETERMINED",
@@ -993,20 +576,19 @@
           "broker_execution_allowed": false
         },
         {
-          "provider": "FXStreet_RSS",
-          "title": "Pound gains as Fed's Williams sees no 2027 hike",
-          "url": "https://www.fxstreet.com/news/pound-gains-and-stays-inside-its-range-for-a-third-week-202610132134",
-          "published_at_utc": "2026-10-13T21:34:48+00:00",
-          "first_seen_at_utc": "2026-10-13T22:17:23.577219+00:00",
-          "publisher_age_minutes": 90.9,
-          "source_latency_to_first_seen_minutes": 42.6,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
+          "provider": "Newsquawk_public_delayed",
+          "title": "South Korea is considering cutting treasury bond issuance by between KRW 5tln-10tln",
+          "url": "https://www.newsquawk.com/headlines/south-korea-is-considering-cutting-treasury-bond-issuance-by-between-krw-5tln-10tln",
+          "published_at_utc": "2026-10-13T23:20:00+00:00",
+          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+          "publisher_age_minutes": 73.4,
+          "source_latency_to_first_seen_minutes": 73.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
           "type": "GENERAL",
           "priority": "CONTEXT",
           "currencies": [
-            "GBP",
             "USD"
           ],
           "affected_pairs": [
@@ -1015,8 +597,7 @@
             "EURUSD",
             "GBPUSD",
             "USDJPY",
-            "USDCAD",
-            "EURGBP"
+            "USDCAD"
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
@@ -1032,28 +613,26 @@
       "status": "POLICY_REACTION_CHECK",
       "policy_headlines": [
         {
-          "provider": "Newsquawk_public_delayed",
-          "title": "Fed Governor Cook's lawyer denounces the Trump administration's new investigation and says that she will not be able to attend the hearing on November 5th, according to New York Times",
-          "url": "https://www.newsquawk.com/headlines/fed-governor-cooks-lawyer-denounces-the-trump-administrations-new-investigation-and-says-that-she-will-not-be-able-to-attend-the-hearing-on-november-5th-according-to-new-york-times",
-          "published_at_utc": "2026-10-13T21:37:00+00:00",
-          "first_seen_at_utc": "2026-10-13T21:58:02.541965+00:00",
-          "publisher_age_minutes": 88.7,
-          "source_latency_to_first_seen_minutes": 21.0,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
+          "provider": "FXStreet_RSS",
+          "title": "Yen trails the majors as the BoJ is said to lean against a hike",
+          "url": "https://www.fxstreet.com/news/yen-trails-the-majors-as-the-boj-is-said-to-lean-against-a-hike-202610132241",
+          "published_at_utc": "2026-10-13T22:41:05+00:00",
+          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+          "publisher_age_minutes": 112.3,
+          "source_latency_to_first_seen_minutes": 112.3,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
           "type": "CENTRAL_BANK_POLICY",
           "priority": "HIGH_POLICY_REACTION_CHECK",
           "currencies": [
-            "USD"
+            "JPY"
           ],
           "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
             "USDJPY",
-            "USDCAD"
+            "AUDJPY",
+            "NZDJPY",
+            "EURJPY"
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
@@ -1064,15 +643,15 @@
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
             "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T21:30:00+00:00",
-            "pre_event_price": 158.353,
-            "first_post_event_close_utc": "2026-10-13T21:45:00+00:00",
-            "first_post_event_price": 158.337,
-            "first_post_event_change_pips": -1.6,
-            "second_post_event_close_utc": "2026-10-13T22:00:00+00:00",
-            "second_post_event_price": 158.329,
-            "second_post_event_change_pips": -0.8,
-            "net_two_bar_event_window_pips": -2.4,
+            "pre_event_close_utc": "2026-10-13T22:30:00+00:00",
+            "pre_event_price": 158.351,
+            "first_post_event_close_utc": "2026-10-13T22:45:00+00:00",
+            "first_post_event_price": 158.345,
+            "first_post_event_change_pips": -0.6,
+            "second_post_event_close_utc": "2026-10-13T23:00:00+00:00",
+            "second_post_event_price": 158.344,
+            "second_post_event_change_pips": -0.1,
+            "net_two_bar_event_window_pips": -0.7,
             "early_initial_direction": "DOWN",
             "second_bar_direction": "DOWN",
             "retrospective_if_first_seen_after_first_candle": true
@@ -1081,28 +660,26 @@
       ],
       "news_headlines": [
         {
-          "provider": "Newsquawk_public_delayed",
-          "title": "Fed Governor Cook's lawyer denounces the Trump administration's new investigation and says that she will not be able to attend the hearing on November 5th, according to New York Times",
-          "url": "https://www.newsquawk.com/headlines/fed-governor-cooks-lawyer-denounces-the-trump-administrations-new-investigation-and-says-that-she-will-not-be-able-to-attend-the-hearing-on-november-5th-according-to-new-york-times",
-          "published_at_utc": "2026-10-13T21:37:00+00:00",
-          "first_seen_at_utc": "2026-10-13T21:58:02.541965+00:00",
-          "publisher_age_minutes": 88.7,
-          "source_latency_to_first_seen_minutes": 21.0,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
+          "provider": "FXStreet_RSS",
+          "title": "Yen trails the majors as the BoJ is said to lean against a hike",
+          "url": "https://www.fxstreet.com/news/yen-trails-the-majors-as-the-boj-is-said-to-lean-against-a-hike-202610132241",
+          "published_at_utc": "2026-10-13T22:41:05+00:00",
+          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+          "publisher_age_minutes": 112.3,
+          "source_latency_to_first_seen_minutes": 112.3,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
           "type": "CENTRAL_BANK_POLICY",
           "priority": "HIGH_POLICY_REACTION_CHECK",
           "currencies": [
-            "USD"
+            "JPY"
           ],
           "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
             "USDJPY",
-            "USDCAD"
+            "AUDJPY",
+            "NZDJPY",
+            "EURJPY"
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
@@ -1113,33 +690,89 @@
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
             "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T21:30:00+00:00",
-            "pre_event_price": 158.353,
-            "first_post_event_close_utc": "2026-10-13T21:45:00+00:00",
-            "first_post_event_price": 158.337,
-            "first_post_event_change_pips": -1.6,
-            "second_post_event_close_utc": "2026-10-13T22:00:00+00:00",
-            "second_post_event_price": 158.329,
-            "second_post_event_change_pips": -0.8,
-            "net_two_bar_event_window_pips": -2.4,
+            "pre_event_close_utc": "2026-10-13T22:30:00+00:00",
+            "pre_event_price": 158.351,
+            "first_post_event_close_utc": "2026-10-13T22:45:00+00:00",
+            "first_post_event_price": 158.345,
+            "first_post_event_change_pips": -0.6,
+            "second_post_event_close_utc": "2026-10-13T23:00:00+00:00",
+            "second_post_event_price": 158.344,
+            "second_post_event_change_pips": -0.1,
+            "net_two_bar_event_window_pips": -0.7,
             "early_initial_direction": "DOWN",
             "second_bar_direction": "DOWN",
             "retrospective_if_first_seen_after_first_candle": true
           }
         },
         {
+          "provider": "Newsquawk_public_delayed",
+          "title": "PRE-MARKET JAPANESE AND SOUTH KOREAN STOCKS NEWS: Hyundai Motor (005380 KS) plans to invest USD 15.5bln in India through 2032 to expand manufacturing, R&D and other operations amid intensifying competition and declining",
+          "url": "https://www.newsquawk.com/headlines/pre-market-japanese-and-south-korean-stocks-news-hyundai-motor-005380-ks-plans-to-invest-usd-155bln-in-india-through-2032-to-expand-manufacturing-rd-and-other-operations-amid-intensifying-competition-and-declining-market-share",
+          "published_at_utc": "2026-10-13T23:47:00+00:00",
+          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+          "publisher_age_minutes": 46.4,
+          "source_latency_to_first_seen_minutes": 46.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "JPY"
+          ],
+          "affected_pairs": [
+            "USDJPY",
+            "AUDJPY",
+            "NZDJPY",
+            "EURJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
           "provider": "FXStreet_RSS",
-          "title": "Mexican Peso buckles as Fed inflation fears overshadow dovish Williams",
-          "url": "https://www.fxstreet.com/news/mexican-peso-buckles-as-fed-inflation-fears-overshadow-dovish-williams-202610132217",
-          "published_at_utc": "2026-10-13T22:17:16+00:00",
-          "first_seen_at_utc": "2026-10-13T23:05:44.115492+00:00",
-          "publisher_age_minutes": 48.5,
-          "source_latency_to_first_seen_minutes": 48.5,
+          "title": "Australian Dollar climbs as Fed’s Williams push the brakes on rates",
+          "url": "https://www.fxstreet.com/news/australian-dollar-climbs-as-feds-williams-push-the-brakes-on-rates-202610132334",
+          "published_at_utc": "2026-10-13T23:34:13+00:00",
+          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+          "publisher_age_minutes": 59.2,
+          "source_latency_to_first_seen_minutes": 59.2,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
           "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "AUD",
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "AUDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "South Korea is considering cutting treasury bond issuance by between KRW 5tln-10tln",
+          "url": "https://www.newsquawk.com/headlines/south-korea-is-considering-cutting-treasury-bond-issuance-by-between-krw-5tln-10tln",
+          "published_at_utc": "2026-10-13T23:20:00+00:00",
+          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+          "publisher_age_minutes": 73.4,
+          "source_latency_to_first_seen_minutes": 73.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
           "currencies": [
             "USD"
           ],
@@ -1150,36 +783,6 @@
             "GBPUSD",
             "USDJPY",
             "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Pound gains as Fed's Williams sees no 2027 hike",
-          "url": "https://www.fxstreet.com/news/pound-gains-and-stays-inside-its-range-for-a-third-week-202610132134",
-          "published_at_utc": "2026-10-13T21:34:48+00:00",
-          "first_seen_at_utc": "2026-10-13T22:17:23.577219+00:00",
-          "publisher_age_minutes": 90.9,
-          "source_latency_to_first_seen_minutes": 42.6,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "GBP",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD",
-            "EURGBP"
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
@@ -1192,27 +795,487 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "AUDJPY": {
-      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
-      "policy_headlines": [],
-      "news_headlines": [],
+      "status": "POLICY_REACTION_CHECK",
+      "policy_headlines": [
+        {
+          "provider": "FXStreet_RSS",
+          "title": "Yen trails the majors as the BoJ is said to lean against a hike",
+          "url": "https://www.fxstreet.com/news/yen-trails-the-majors-as-the-boj-is-said-to-lean-against-a-hike-202610132241",
+          "published_at_utc": "2026-10-13T22:41:05+00:00",
+          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+          "publisher_age_minutes": 112.3,
+          "source_latency_to_first_seen_minutes": 112.3,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "JPY"
+          ],
+          "affected_pairs": [
+            "USDJPY",
+            "AUDJPY",
+            "NZDJPY",
+            "EURJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-13T22:30:00+00:00",
+            "pre_event_price": 110.57,
+            "first_post_event_close_utc": "2026-10-13T22:45:00+00:00",
+            "first_post_event_price": 110.569,
+            "first_post_event_change_pips": -0.1,
+            "second_post_event_close_utc": "2026-10-13T23:00:00+00:00",
+            "second_post_event_price": 110.571,
+            "second_post_event_change_pips": 0.2,
+            "net_two_bar_event_window_pips": 0.1,
+            "early_initial_direction": "DOWN",
+            "second_bar_direction": "UP",
+            "retrospective_if_first_seen_after_first_candle": true
+          }
+        }
+      ],
+      "news_headlines": [
+        {
+          "provider": "FXStreet_RSS",
+          "title": "Yen trails the majors as the BoJ is said to lean against a hike",
+          "url": "https://www.fxstreet.com/news/yen-trails-the-majors-as-the-boj-is-said-to-lean-against-a-hike-202610132241",
+          "published_at_utc": "2026-10-13T22:41:05+00:00",
+          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+          "publisher_age_minutes": 112.3,
+          "source_latency_to_first_seen_minutes": 112.3,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "JPY"
+          ],
+          "affected_pairs": [
+            "USDJPY",
+            "AUDJPY",
+            "NZDJPY",
+            "EURJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-13T22:30:00+00:00",
+            "pre_event_price": 110.57,
+            "first_post_event_close_utc": "2026-10-13T22:45:00+00:00",
+            "first_post_event_price": 110.569,
+            "first_post_event_change_pips": -0.1,
+            "second_post_event_close_utc": "2026-10-13T23:00:00+00:00",
+            "second_post_event_price": 110.571,
+            "second_post_event_change_pips": 0.2,
+            "net_two_bar_event_window_pips": 0.1,
+            "early_initial_direction": "DOWN",
+            "second_bar_direction": "UP",
+            "retrospective_if_first_seen_after_first_candle": true
+          }
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "Australia sells AUD 700mln 4.25% March 2036 bonds avg. yield 5.2899%, b/c 4.90",
+          "url": "https://www.newsquawk.com/headlines/australia-sells-aud-700mln-425-march-2036-bonds-avg-yield-52899-bc-490",
+          "published_at_utc": "2026-10-14T00:27:00+00:00",
+          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+          "publisher_age_minutes": 6.4,
+          "source_latency_to_first_seen_minutes": 6.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "AUD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "AUDJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "PRE-MARKET JAPANESE AND SOUTH KOREAN STOCKS NEWS: Hyundai Motor (005380 KS) plans to invest USD 15.5bln in India through 2032 to expand manufacturing, R&D and other operations amid intensifying competition and declining",
+          "url": "https://www.newsquawk.com/headlines/pre-market-japanese-and-south-korean-stocks-news-hyundai-motor-005380-ks-plans-to-invest-usd-155bln-in-india-through-2032-to-expand-manufacturing-rd-and-other-operations-amid-intensifying-competition-and-declining-market-share",
+          "published_at_utc": "2026-10-13T23:47:00+00:00",
+          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+          "publisher_age_minutes": 46.4,
+          "source_latency_to_first_seen_minutes": 46.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "JPY"
+          ],
+          "affected_pairs": [
+            "USDJPY",
+            "AUDJPY",
+            "NZDJPY",
+            "EURJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "China's PLA Navy organized Liaoning aircraft carrier strike group to conduct training exercises in the waters of the Western Pacific, according to CCTV",
+          "url": "https://www.newsquawk.com/headlines/chinas-pla-navy-organized-liaoning-aircraft-carrier-strike-group-to-conduct-training-exercises-in-the-waters-of-the-western-pacific-according-to-cctv",
+          "published_at_utc": "2026-10-13T23:36:00+00:00",
+          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+          "publisher_age_minutes": 57.4,
+          "source_latency_to_first_seen_minutes": 57.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "CNY"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "AUDJPY",
+            "NZDJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "FXStreet_RSS",
+          "title": "Australian Dollar climbs as Fed’s Williams push the brakes on rates",
+          "url": "https://www.fxstreet.com/news/australian-dollar-climbs-as-feds-williams-push-the-brakes-on-rates-202610132334",
+          "published_at_utc": "2026-10-13T23:34:13+00:00",
+          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+          "publisher_age_minutes": 59.2,
+          "source_latency_to_first_seen_minutes": 59.2,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "AUD",
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "AUDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        }
+      ],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "NZDJPY": {
-      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
-      "policy_headlines": [],
-      "news_headlines": [],
+      "status": "POLICY_REACTION_CHECK",
+      "policy_headlines": [
+        {
+          "provider": "FXStreet_RSS",
+          "title": "Yen trails the majors as the BoJ is said to lean against a hike",
+          "url": "https://www.fxstreet.com/news/yen-trails-the-majors-as-the-boj-is-said-to-lean-against-a-hike-202610132241",
+          "published_at_utc": "2026-10-13T22:41:05+00:00",
+          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+          "publisher_age_minutes": 112.3,
+          "source_latency_to_first_seen_minutes": 112.3,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "JPY"
+          ],
+          "affected_pairs": [
+            "USDJPY",
+            "AUDJPY",
+            "NZDJPY",
+            "EURJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-13T22:30:00+00:00",
+            "pre_event_price": 88.881,
+            "first_post_event_close_utc": "2026-10-13T22:45:00+00:00",
+            "first_post_event_price": 88.86,
+            "first_post_event_change_pips": -2.1,
+            "second_post_event_close_utc": "2026-10-13T23:00:00+00:00",
+            "second_post_event_price": 88.846,
+            "second_post_event_change_pips": -1.4,
+            "net_two_bar_event_window_pips": -3.5,
+            "early_initial_direction": "DOWN",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": true
+          }
+        }
+      ],
+      "news_headlines": [
+        {
+          "provider": "FXStreet_RSS",
+          "title": "Yen trails the majors as the BoJ is said to lean against a hike",
+          "url": "https://www.fxstreet.com/news/yen-trails-the-majors-as-the-boj-is-said-to-lean-against-a-hike-202610132241",
+          "published_at_utc": "2026-10-13T22:41:05+00:00",
+          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+          "publisher_age_minutes": 112.3,
+          "source_latency_to_first_seen_minutes": 112.3,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "JPY"
+          ],
+          "affected_pairs": [
+            "USDJPY",
+            "AUDJPY",
+            "NZDJPY",
+            "EURJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-13T22:30:00+00:00",
+            "pre_event_price": 88.881,
+            "first_post_event_close_utc": "2026-10-13T22:45:00+00:00",
+            "first_post_event_price": 88.86,
+            "first_post_event_change_pips": -2.1,
+            "second_post_event_close_utc": "2026-10-13T23:00:00+00:00",
+            "second_post_event_price": 88.846,
+            "second_post_event_change_pips": -1.4,
+            "net_two_bar_event_window_pips": -3.5,
+            "early_initial_direction": "DOWN",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": true
+          }
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "PRE-MARKET JAPANESE AND SOUTH KOREAN STOCKS NEWS: Hyundai Motor (005380 KS) plans to invest USD 15.5bln in India through 2032 to expand manufacturing, R&D and other operations amid intensifying competition and declining",
+          "url": "https://www.newsquawk.com/headlines/pre-market-japanese-and-south-korean-stocks-news-hyundai-motor-005380-ks-plans-to-invest-usd-155bln-in-india-through-2032-to-expand-manufacturing-rd-and-other-operations-amid-intensifying-competition-and-declining-market-share",
+          "published_at_utc": "2026-10-13T23:47:00+00:00",
+          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+          "publisher_age_minutes": 46.4,
+          "source_latency_to_first_seen_minutes": 46.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "JPY"
+          ],
+          "affected_pairs": [
+            "USDJPY",
+            "AUDJPY",
+            "NZDJPY",
+            "EURJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "China's PLA Navy organized Liaoning aircraft carrier strike group to conduct training exercises in the waters of the Western Pacific, according to CCTV",
+          "url": "https://www.newsquawk.com/headlines/chinas-pla-navy-organized-liaoning-aircraft-carrier-strike-group-to-conduct-training-exercises-in-the-waters-of-the-western-pacific-according-to-cctv",
+          "published_at_utc": "2026-10-13T23:36:00+00:00",
+          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+          "publisher_age_minutes": 57.4,
+          "source_latency_to_first_seen_minutes": 57.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "CNY"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "AUDJPY",
+            "NZDJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        }
+      ],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "EURJPY": {
-      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
-      "policy_headlines": [],
-      "news_headlines": [],
+      "status": "POLICY_REACTION_CHECK",
+      "policy_headlines": [
+        {
+          "provider": "FXStreet_RSS",
+          "title": "Yen trails the majors as the BoJ is said to lean against a hike",
+          "url": "https://www.fxstreet.com/news/yen-trails-the-majors-as-the-boj-is-said-to-lean-against-a-hike-202610132241",
+          "published_at_utc": "2026-10-13T22:41:05+00:00",
+          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+          "publisher_age_minutes": 112.3,
+          "source_latency_to_first_seen_minutes": 112.3,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "JPY"
+          ],
+          "affected_pairs": [
+            "USDJPY",
+            "AUDJPY",
+            "NZDJPY",
+            "EURJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-13T22:30:00+00:00",
+            "pre_event_price": 177.315,
+            "first_post_event_close_utc": "2026-10-13T22:45:00+00:00",
+            "first_post_event_price": 177.318,
+            "first_post_event_change_pips": 0.3,
+            "second_post_event_close_utc": "2026-10-13T23:00:00+00:00",
+            "second_post_event_price": 177.313,
+            "second_post_event_change_pips": -0.5,
+            "net_two_bar_event_window_pips": -0.2,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": true
+          }
+        }
+      ],
+      "news_headlines": [
+        {
+          "provider": "FXStreet_RSS",
+          "title": "Yen trails the majors as the BoJ is said to lean against a hike",
+          "url": "https://www.fxstreet.com/news/yen-trails-the-majors-as-the-boj-is-said-to-lean-against-a-hike-202610132241",
+          "published_at_utc": "2026-10-13T22:41:05+00:00",
+          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+          "publisher_age_minutes": 112.3,
+          "source_latency_to_first_seen_minutes": 112.3,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "JPY"
+          ],
+          "affected_pairs": [
+            "USDJPY",
+            "AUDJPY",
+            "NZDJPY",
+            "EURJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-13T22:30:00+00:00",
+            "pre_event_price": 177.315,
+            "first_post_event_close_utc": "2026-10-13T22:45:00+00:00",
+            "first_post_event_price": 177.318,
+            "first_post_event_change_pips": 0.3,
+            "second_post_event_close_utc": "2026-10-13T23:00:00+00:00",
+            "second_post_event_price": 177.313,
+            "second_post_event_change_pips": -0.5,
+            "net_two_bar_event_window_pips": -0.2,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": true
+          }
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "PRE-MARKET JAPANESE AND SOUTH KOREAN STOCKS NEWS: Hyundai Motor (005380 KS) plans to invest USD 15.5bln in India through 2032 to expand manufacturing, R&D and other operations amid intensifying competition and declining",
+          "url": "https://www.newsquawk.com/headlines/pre-market-japanese-and-south-korean-stocks-news-hyundai-motor-005380-ks-plans-to-invest-usd-155bln-in-india-through-2032-to-expand-manufacturing-rd-and-other-operations-amid-intensifying-competition-and-declining-market-share",
+          "published_at_utc": "2026-10-13T23:47:00+00:00",
+          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+          "publisher_age_minutes": 46.4,
+          "source_latency_to_first_seen_minutes": 46.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "JPY"
+          ],
+          "affected_pairs": [
+            "USDJPY",
+            "AUDJPY",
+            "NZDJPY",
+            "EURJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        }
+      ],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
@@ -1228,118 +1291,24 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "USDCAD": {
-      "status": "POLICY_REACTION_CHECK",
-      "policy_headlines": [
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "Fed Governor Cook's lawyer denounces the Trump administration's new investigation and says that she will not be able to attend the hearing on November 5th, according to New York Times",
-          "url": "https://www.newsquawk.com/headlines/fed-governor-cooks-lawyer-denounces-the-trump-administrations-new-investigation-and-says-that-she-will-not-be-able-to-attend-the-hearing-on-november-5th-according-to-new-york-times",
-          "published_at_utc": "2026-10-13T21:37:00+00:00",
-          "first_seen_at_utc": "2026-10-13T21:58:02.541965+00:00",
-          "publisher_age_minutes": 88.7,
-          "source_latency_to_first_seen_minutes": 21.0,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T21:30:00+00:00",
-            "pre_event_price": 1.42187,
-            "first_post_event_close_utc": "2026-10-13T21:45:00+00:00",
-            "first_post_event_price": 1.4217,
-            "first_post_event_change_pips": -1.7,
-            "second_post_event_close_utc": "2026-10-13T22:00:00+00:00",
-            "second_post_event_price": 1.42136,
-            "second_post_event_change_pips": -3.4,
-            "net_two_bar_event_window_pips": -5.1,
-            "early_initial_direction": "DOWN",
-            "second_bar_direction": "DOWN",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
-        }
-      ],
+      "status": "HEADLINES_PRESENT",
+      "policy_headlines": [],
       "news_headlines": [
         {
-          "provider": "Newsquawk_public_delayed",
-          "title": "Fed Governor Cook's lawyer denounces the Trump administration's new investigation and says that she will not be able to attend the hearing on November 5th, according to New York Times",
-          "url": "https://www.newsquawk.com/headlines/fed-governor-cooks-lawyer-denounces-the-trump-administrations-new-investigation-and-says-that-she-will-not-be-able-to-attend-the-hearing-on-november-5th-according-to-new-york-times",
-          "published_at_utc": "2026-10-13T21:37:00+00:00",
-          "first_seen_at_utc": "2026-10-13T21:58:02.541965+00:00",
-          "publisher_age_minutes": 88.7,
-          "source_latency_to_first_seen_minutes": 21.0,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T21:30:00+00:00",
-            "pre_event_price": 1.42187,
-            "first_post_event_close_utc": "2026-10-13T21:45:00+00:00",
-            "first_post_event_price": 1.4217,
-            "first_post_event_change_pips": -1.7,
-            "second_post_event_close_utc": "2026-10-13T22:00:00+00:00",
-            "second_post_event_price": 1.42136,
-            "second_post_event_change_pips": -3.4,
-            "net_two_bar_event_window_pips": -5.1,
-            "early_initial_direction": "DOWN",
-            "second_bar_direction": "DOWN",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
-        },
-        {
           "provider": "FXStreet_RSS",
-          "title": "Mexican Peso buckles as Fed inflation fears overshadow dovish Williams",
-          "url": "https://www.fxstreet.com/news/mexican-peso-buckles-as-fed-inflation-fears-overshadow-dovish-williams-202610132217",
-          "published_at_utc": "2026-10-13T22:17:16+00:00",
-          "first_seen_at_utc": "2026-10-13T23:05:44.115492+00:00",
-          "publisher_age_minutes": 48.5,
-          "source_latency_to_first_seen_minutes": 48.5,
+          "title": "Australian Dollar climbs as Fed’s Williams push the brakes on rates",
+          "url": "https://www.fxstreet.com/news/australian-dollar-climbs-as-feds-williams-push-the-brakes-on-rates-202610132334",
+          "published_at_utc": "2026-10-13T23:34:13+00:00",
+          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+          "publisher_age_minutes": 59.2,
+          "source_latency_to_first_seen_minutes": 59.2,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
           "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "type": "GENERAL",
+          "priority": "CONTEXT",
           "currencies": [
+            "AUD",
             "USD"
           ],
           "affected_pairs": [
@@ -1348,6 +1317,7 @@
             "EURUSD",
             "GBPUSD",
             "USDJPY",
+            "AUDJPY",
             "USDCAD"
           ],
           "headline_direction": "UNDETERMINED",
@@ -1355,20 +1325,19 @@
           "broker_execution_allowed": false
         },
         {
-          "provider": "FXStreet_RSS",
-          "title": "Pound gains as Fed's Williams sees no 2027 hike",
-          "url": "https://www.fxstreet.com/news/pound-gains-and-stays-inside-its-range-for-a-third-week-202610132134",
-          "published_at_utc": "2026-10-13T21:34:48+00:00",
-          "first_seen_at_utc": "2026-10-13T22:17:23.577219+00:00",
-          "publisher_age_minutes": 90.9,
-          "source_latency_to_first_seen_minutes": 42.6,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
+          "provider": "Newsquawk_public_delayed",
+          "title": "South Korea is considering cutting treasury bond issuance by between KRW 5tln-10tln",
+          "url": "https://www.newsquawk.com/headlines/south-korea-is-considering-cutting-treasury-bond-issuance-by-between-krw-5tln-10tln",
+          "published_at_utc": "2026-10-13T23:20:00+00:00",
+          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
+          "publisher_age_minutes": 73.4,
+          "source_latency_to_first_seen_minutes": 73.4,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
           "type": "GENERAL",
           "priority": "CONTEXT",
           "currencies": [
-            "GBP",
             "USD"
           ],
           "affected_pairs": [
@@ -1377,8 +1346,7 @@
             "EURUSD",
             "GBPUSD",
             "USDJPY",
-            "USDCAD",
-            "EURGBP"
+            "USDCAD"
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
@@ -1391,127 +1359,9 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "EURGBP": {
-      "status": "POLICY_REACTION_CHECK",
-      "policy_headlines": [
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "BoE Governor Bailey says UK companies are focusing intensely on containing costs amid surging energy prices caused by the Iran war, while he reiterated that broader UK inflation pressure from the energy shock has remaine",
-          "url": "https://www.newsquawk.com/headlines/boe-governor-bailey-says-uk-companies-are-focusing-intensely-on-containing-costs-amid-surging-energy-prices-caused-by-the-iran-war-while-he-reiterated-that-broader-uk-inflation-pressure-from-the-energy-shock-has-remained-subdued-so-far",
-          "published_at_utc": "2026-10-13T21:18:00+00:00",
-          "first_seen_at_utc": "2026-10-13T21:30:46.237285+00:00",
-          "publisher_age_minutes": 107.7,
-          "source_latency_to_first_seen_minutes": 12.8,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "GBP"
-          ],
-          "affected_pairs": [
-            "GBPUSD",
-            "EURGBP"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T21:15:00+00:00",
-            "pre_event_price": 0.84468,
-            "first_post_event_close_utc": "2026-10-13T21:30:00+00:00",
-            "first_post_event_price": 0.84469,
-            "first_post_event_change_pips": 0.1,
-            "second_post_event_close_utc": "2026-10-13T21:45:00+00:00",
-            "second_post_event_price": 0.84457,
-            "second_post_event_change_pips": -1.2,
-            "net_two_bar_event_window_pips": -1.1,
-            "early_initial_direction": "UP",
-            "second_bar_direction": "DOWN",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
-        }
-      ],
-      "news_headlines": [
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "BoE Governor Bailey says UK companies are focusing intensely on containing costs amid surging energy prices caused by the Iran war, while he reiterated that broader UK inflation pressure from the energy shock has remaine",
-          "url": "https://www.newsquawk.com/headlines/boe-governor-bailey-says-uk-companies-are-focusing-intensely-on-containing-costs-amid-surging-energy-prices-caused-by-the-iran-war-while-he-reiterated-that-broader-uk-inflation-pressure-from-the-energy-shock-has-remained-subdued-so-far",
-          "published_at_utc": "2026-10-13T21:18:00+00:00",
-          "first_seen_at_utc": "2026-10-13T21:30:46.237285+00:00",
-          "publisher_age_minutes": 107.7,
-          "source_latency_to_first_seen_minutes": 12.8,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "GBP"
-          ],
-          "affected_pairs": [
-            "GBPUSD",
-            "EURGBP"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T21:15:00+00:00",
-            "pre_event_price": 0.84468,
-            "first_post_event_close_utc": "2026-10-13T21:30:00+00:00",
-            "first_post_event_price": 0.84469,
-            "first_post_event_change_pips": 0.1,
-            "second_post_event_close_utc": "2026-10-13T21:45:00+00:00",
-            "second_post_event_price": 0.84457,
-            "second_post_event_change_pips": -1.2,
-            "net_two_bar_event_window_pips": -1.1,
-            "early_initial_direction": "UP",
-            "second_bar_direction": "DOWN",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
-        },
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Pound gains as Fed's Williams sees no 2027 hike",
-          "url": "https://www.fxstreet.com/news/pound-gains-and-stays-inside-its-range-for-a-third-week-202610132134",
-          "published_at_utc": "2026-10-13T21:34:48+00:00",
-          "first_seen_at_utc": "2026-10-13T22:17:23.577219+00:00",
-          "publisher_age_minutes": 90.9,
-          "source_latency_to_first_seen_minutes": 42.6,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "GBP",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD",
-            "EURGBP"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        }
-      ],
+      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
+      "policy_headlines": [],
+      "news_headlines": [],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
