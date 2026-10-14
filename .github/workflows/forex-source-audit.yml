@@ -1,6 +1,11 @@
-name: FX source audit (manual test only)
+name: FX source audit (testing only)
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'forex-engine/**'
+      - '.github/workflows/forex-source-audit.yml'
 
 permissions:
   contents: read
