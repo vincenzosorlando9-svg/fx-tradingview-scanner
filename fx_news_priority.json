@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-14T00:33:25.933049+00:00",
+  "generated_at_utc": "2026-10-14T01:03:19.076240+00:00",
   "target_refresh_minutes": 5,
   "actual_actions_schedule_not_guaranteed": true,
   "approved_source_names": [
@@ -21,109 +21,30 @@
   "any_provider_unavailable": true,
   "recent_headlines": [
     {
-      "provider": "FXStreet_RSS",
-      "title": "Yen trails the majors as the BoJ is said to lean against a hike",
-      "url": "https://www.fxstreet.com/news/yen-trails-the-majors-as-the-boj-is-said-to-lean-against-a-hike-202610132241",
-      "published_at_utc": "2026-10-13T22:41:05+00:00",
-      "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-      "publisher_age_minutes": 112.3,
-      "source_latency_to_first_seen_minutes": 112.3,
-      "source_public_delay_minutes_at_least": null,
-      "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-      "not_pro_feed_or_first_seen_in_real_time": false,
-      "type": "CENTRAL_BANK_POLICY",
-      "priority": "HIGH_POLICY_REACTION_CHECK",
+      "provider": "Newsquawk_public_delayed",
+      "title": "[MARKET UPDATE] Asia-Pac stocks are mixed as the region attempts to claw back the recent tech-related losses, while participants await key releases from China including the latest inflation and trade figures",
+      "url": "https://www.newsquawk.com/headlines/market-update-asia-pac-stocks-are-mixed-as-the-region-attempts-to-claw-back-the-recent-tech-related-losses-while-participants-await-key-releases-from-china-including-the-latest-inflation-and-trade-figures",
+      "published_at_utc": "2026-10-14T00:36:00+00:00",
+      "first_seen_at_utc": "2026-10-14T01:03:19.076240+00:00",
+      "publisher_age_minutes": 27.3,
+      "source_latency_to_first_seen_minutes": 27.3,
+      "source_public_delay_minutes_at_least": 20,
+      "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+      "not_pro_feed_or_first_seen_in_real_time": true,
+      "type": "MACRO_DATA_OR_YIELD",
+      "priority": "MEDIUM_RELEASE_REACTION_CHECK",
       "currencies": [
-        "JPY"
+        "CNY"
       ],
       "affected_pairs": [
-        "USDJPY",
+        "AUDUSD",
+        "NZDUSD",
         "AUDJPY",
-        "NZDJPY",
-        "EURJPY"
+        "NZDJPY"
       ],
       "headline_direction": "UNDETERMINED",
       "market_reaction": "NOT_VERIFIED",
-      "broker_execution_allowed": false,
-      "price_reactions": {
-        "USDJPY": {
-          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-          "no_intrabar_assumptions": true,
-          "causal_link_verified": false,
-          "first_seen_before_market_reaction": false,
-          "pre_event_close_utc": "2026-10-13T22:30:00+00:00",
-          "pre_event_price": 158.351,
-          "first_post_event_close_utc": "2026-10-13T22:45:00+00:00",
-          "first_post_event_price": 158.345,
-          "first_post_event_change_pips": -0.6,
-          "second_post_event_close_utc": "2026-10-13T23:00:00+00:00",
-          "second_post_event_price": 158.344,
-          "second_post_event_change_pips": -0.1,
-          "net_two_bar_event_window_pips": -0.7,
-          "early_initial_direction": "DOWN",
-          "second_bar_direction": "DOWN",
-          "retrospective_if_first_seen_after_first_candle": true
-        },
-        "AUDJPY": {
-          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-          "no_intrabar_assumptions": true,
-          "causal_link_verified": false,
-          "first_seen_before_market_reaction": false,
-          "pre_event_close_utc": "2026-10-13T22:30:00+00:00",
-          "pre_event_price": 110.57,
-          "first_post_event_close_utc": "2026-10-13T22:45:00+00:00",
-          "first_post_event_price": 110.569,
-          "first_post_event_change_pips": -0.1,
-          "second_post_event_close_utc": "2026-10-13T23:00:00+00:00",
-          "second_post_event_price": 110.571,
-          "second_post_event_change_pips": 0.2,
-          "net_two_bar_event_window_pips": 0.1,
-          "early_initial_direction": "DOWN",
-          "second_bar_direction": "UP",
-          "retrospective_if_first_seen_after_first_candle": true
-        },
-        "NZDJPY": {
-          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-          "no_intrabar_assumptions": true,
-          "causal_link_verified": false,
-          "first_seen_before_market_reaction": false,
-          "pre_event_close_utc": "2026-10-13T22:30:00+00:00",
-          "pre_event_price": 88.881,
-          "first_post_event_close_utc": "2026-10-13T22:45:00+00:00",
-          "first_post_event_price": 88.86,
-          "first_post_event_change_pips": -2.1,
-          "second_post_event_close_utc": "2026-10-13T23:00:00+00:00",
-          "second_post_event_price": 88.846,
-          "second_post_event_change_pips": -1.4,
-          "net_two_bar_event_window_pips": -3.5,
-          "early_initial_direction": "DOWN",
-          "second_bar_direction": "DOWN",
-          "retrospective_if_first_seen_after_first_candle": true
-        },
-        "EURJPY": {
-          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-          "no_intrabar_assumptions": true,
-          "causal_link_verified": false,
-          "first_seen_before_market_reaction": false,
-          "pre_event_close_utc": "2026-10-13T22:30:00+00:00",
-          "pre_event_price": 177.315,
-          "first_post_event_close_utc": "2026-10-13T22:45:00+00:00",
-          "first_post_event_price": 177.318,
-          "first_post_event_change_pips": 0.3,
-          "second_post_event_close_utc": "2026-10-13T23:00:00+00:00",
-          "second_post_event_price": 177.313,
-          "second_post_event_change_pips": -0.5,
-          "net_two_bar_event_window_pips": -0.2,
-          "early_initial_direction": "UP",
-          "second_bar_direction": "DOWN",
-          "retrospective_if_first_seen_after_first_candle": true
-        }
-      },
-      "all_price_reactions_are_noncausal_observations": true
+      "broker_execution_allowed": false
     },
     {
       "provider": "Newsquawk_public_delayed",
@@ -131,7 +52,7 @@
       "url": "https://www.newsquawk.com/headlines/australia-sells-aud-700mln-425-march-2036-bonds-avg-yield-52899-bc-490",
       "published_at_utc": "2026-10-14T00:27:00+00:00",
       "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-      "publisher_age_minutes": 6.4,
+      "publisher_age_minutes": 36.3,
       "source_latency_to_first_seen_minutes": 6.4,
       "source_public_delay_minutes_at_least": 20,
       "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -155,7 +76,7 @@
       "url": "https://www.newsquawk.com/headlines/pre-market-japanese-and-south-korean-stocks-news-hyundai-motor-005380-ks-plans-to-invest-usd-155bln-in-india-through-2032-to-expand-manufacturing-rd-and-other-operations-amid-intensifying-competition-and-declining-market-share",
       "published_at_utc": "2026-10-13T23:47:00+00:00",
       "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-      "publisher_age_minutes": 46.4,
+      "publisher_age_minutes": 76.3,
       "source_latency_to_first_seen_minutes": 46.4,
       "source_public_delay_minutes_at_least": 20,
       "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -181,7 +102,7 @@
       "url": "https://www.newsquawk.com/headlines/chinas-pla-navy-organized-liaoning-aircraft-carrier-strike-group-to-conduct-training-exercises-in-the-waters-of-the-western-pacific-according-to-cctv",
       "published_at_utc": "2026-10-13T23:36:00+00:00",
       "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-      "publisher_age_minutes": 57.4,
+      "publisher_age_minutes": 87.3,
       "source_latency_to_first_seen_minutes": 57.4,
       "source_public_delay_minutes_at_least": 20,
       "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -207,7 +128,7 @@
       "url": "https://www.fxstreet.com/news/australian-dollar-climbs-as-feds-williams-push-the-brakes-on-rates-202610132334",
       "published_at_utc": "2026-10-13T23:34:13+00:00",
       "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-      "publisher_age_minutes": 59.2,
+      "publisher_age_minutes": 89.1,
       "source_latency_to_first_seen_minutes": 59.2,
       "source_public_delay_minutes_at_least": null,
       "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -230,34 +151,6 @@
       "headline_direction": "UNDETERMINED",
       "market_reaction": "NOT_VERIFIED",
       "broker_execution_allowed": false
-    },
-    {
-      "provider": "Newsquawk_public_delayed",
-      "title": "South Korea is considering cutting treasury bond issuance by between KRW 5tln-10tln",
-      "url": "https://www.newsquawk.com/headlines/south-korea-is-considering-cutting-treasury-bond-issuance-by-between-krw-5tln-10tln",
-      "published_at_utc": "2026-10-13T23:20:00+00:00",
-      "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-      "publisher_age_minutes": 73.4,
-      "source_latency_to_first_seen_minutes": 73.4,
-      "source_public_delay_minutes_at_least": 20,
-      "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-      "not_pro_feed_or_first_seen_in_real_time": true,
-      "type": "GENERAL",
-      "priority": "CONTEXT",
-      "currencies": [
-        "USD"
-      ],
-      "affected_pairs": [
-        "AUDUSD",
-        "NZDUSD",
-        "EURUSD",
-        "GBPUSD",
-        "USDJPY",
-        "USDCAD"
-      ],
-      "headline_direction": "UNDETERMINED",
-      "market_reaction": "NOT_VERIFIED",
-      "broker_execution_allowed": false
     }
   ],
   "pairs": {
@@ -267,11 +160,37 @@
       "news_headlines": [
         {
           "provider": "Newsquawk_public_delayed",
+          "title": "[MARKET UPDATE] Asia-Pac stocks are mixed as the region attempts to claw back the recent tech-related losses, while participants await key releases from China including the latest inflation and trade figures",
+          "url": "https://www.newsquawk.com/headlines/market-update-asia-pac-stocks-are-mixed-as-the-region-attempts-to-claw-back-the-recent-tech-related-losses-while-participants-await-key-releases-from-china-including-the-latest-inflation-and-trade-figures",
+          "published_at_utc": "2026-10-14T00:36:00+00:00",
+          "first_seen_at_utc": "2026-10-14T01:03:19.076240+00:00",
+          "publisher_age_minutes": 27.3,
+          "source_latency_to_first_seen_minutes": 27.3,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "MACRO_DATA_OR_YIELD",
+          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "currencies": [
+            "CNY"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "AUDJPY",
+            "NZDJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
           "title": "Australia sells AUD 700mln 4.25% March 2036 bonds avg. yield 5.2899%, b/c 4.90",
           "url": "https://www.newsquawk.com/headlines/australia-sells-aud-700mln-425-march-2036-bonds-avg-yield-52899-bc-490",
           "published_at_utc": "2026-10-14T00:27:00+00:00",
           "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-          "publisher_age_minutes": 6.4,
+          "publisher_age_minutes": 36.3,
           "source_latency_to_first_seen_minutes": 6.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -295,7 +214,7 @@
           "url": "https://www.newsquawk.com/headlines/chinas-pla-navy-organized-liaoning-aircraft-carrier-strike-group-to-conduct-training-exercises-in-the-waters-of-the-western-pacific-according-to-cctv",
           "published_at_utc": "2026-10-13T23:36:00+00:00",
           "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-          "publisher_age_minutes": 57.4,
+          "publisher_age_minutes": 87.3,
           "source_latency_to_first_seen_minutes": 57.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -321,7 +240,7 @@
           "url": "https://www.fxstreet.com/news/australian-dollar-climbs-as-feds-williams-push-the-brakes-on-rates-202610132334",
           "published_at_utc": "2026-10-13T23:34:13+00:00",
           "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-          "publisher_age_minutes": 59.2,
+          "publisher_age_minutes": 89.1,
           "source_latency_to_first_seen_minutes": 59.2,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -339,34 +258,6 @@
             "GBPUSD",
             "USDJPY",
             "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "South Korea is considering cutting treasury bond issuance by between KRW 5tln-10tln",
-          "url": "https://www.newsquawk.com/headlines/south-korea-is-considering-cutting-treasury-bond-issuance-by-between-krw-5tln-10tln",
-          "published_at_utc": "2026-10-13T23:20:00+00:00",
-          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-          "publisher_age_minutes": 73.4,
-          "source_latency_to_first_seen_minutes": 73.4,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
             "USDCAD"
           ],
           "headline_direction": "UNDETERMINED",
@@ -385,11 +276,37 @@
       "news_headlines": [
         {
           "provider": "Newsquawk_public_delayed",
+          "title": "[MARKET UPDATE] Asia-Pac stocks are mixed as the region attempts to claw back the recent tech-related losses, while participants await key releases from China including the latest inflation and trade figures",
+          "url": "https://www.newsquawk.com/headlines/market-update-asia-pac-stocks-are-mixed-as-the-region-attempts-to-claw-back-the-recent-tech-related-losses-while-participants-await-key-releases-from-china-including-the-latest-inflation-and-trade-figures",
+          "published_at_utc": "2026-10-14T00:36:00+00:00",
+          "first_seen_at_utc": "2026-10-14T01:03:19.076240+00:00",
+          "publisher_age_minutes": 27.3,
+          "source_latency_to_first_seen_minutes": 27.3,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "MACRO_DATA_OR_YIELD",
+          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "currencies": [
+            "CNY"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "AUDJPY",
+            "NZDJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
           "title": "China's PLA Navy organized Liaoning aircraft carrier strike group to conduct training exercises in the waters of the Western Pacific, according to CCTV",
           "url": "https://www.newsquawk.com/headlines/chinas-pla-navy-organized-liaoning-aircraft-carrier-strike-group-to-conduct-training-exercises-in-the-waters-of-the-western-pacific-according-to-cctv",
           "published_at_utc": "2026-10-13T23:36:00+00:00",
           "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-          "publisher_age_minutes": 57.4,
+          "publisher_age_minutes": 87.3,
           "source_latency_to_first_seen_minutes": 57.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -415,7 +332,7 @@
           "url": "https://www.fxstreet.com/news/australian-dollar-climbs-as-feds-williams-push-the-brakes-on-rates-202610132334",
           "published_at_utc": "2026-10-13T23:34:13+00:00",
           "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-          "publisher_age_minutes": 59.2,
+          "publisher_age_minutes": 89.1,
           "source_latency_to_first_seen_minutes": 59.2,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -433,34 +350,6 @@
             "GBPUSD",
             "USDJPY",
             "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "South Korea is considering cutting treasury bond issuance by between KRW 5tln-10tln",
-          "url": "https://www.newsquawk.com/headlines/south-korea-is-considering-cutting-treasury-bond-issuance-by-between-krw-5tln-10tln",
-          "published_at_utc": "2026-10-13T23:20:00+00:00",
-          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-          "publisher_age_minutes": 73.4,
-          "source_latency_to_first_seen_minutes": 73.4,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
             "USDCAD"
           ],
           "headline_direction": "UNDETERMINED",
@@ -483,7 +372,7 @@
           "url": "https://www.fxstreet.com/news/australian-dollar-climbs-as-feds-williams-push-the-brakes-on-rates-202610132334",
           "published_at_utc": "2026-10-13T23:34:13+00:00",
           "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-          "publisher_age_minutes": 59.2,
+          "publisher_age_minutes": 89.1,
           "source_latency_to_first_seen_minutes": 59.2,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -501,34 +390,6 @@
             "GBPUSD",
             "USDJPY",
             "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "South Korea is considering cutting treasury bond issuance by between KRW 5tln-10tln",
-          "url": "https://www.newsquawk.com/headlines/south-korea-is-considering-cutting-treasury-bond-issuance-by-between-krw-5tln-10tln",
-          "published_at_utc": "2026-10-13T23:20:00+00:00",
-          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-          "publisher_age_minutes": 73.4,
-          "source_latency_to_first_seen_minutes": 73.4,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
             "USDCAD"
           ],
           "headline_direction": "UNDETERMINED",
@@ -551,7 +412,7 @@
           "url": "https://www.fxstreet.com/news/australian-dollar-climbs-as-feds-williams-push-the-brakes-on-rates-202610132334",
           "published_at_utc": "2026-10-13T23:34:13+00:00",
           "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-          "publisher_age_minutes": 59.2,
+          "publisher_age_minutes": 89.1,
           "source_latency_to_first_seen_minutes": 59.2,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -574,34 +435,6 @@
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
           "broker_execution_allowed": false
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "South Korea is considering cutting treasury bond issuance by between KRW 5tln-10tln",
-          "url": "https://www.newsquawk.com/headlines/south-korea-is-considering-cutting-treasury-bond-issuance-by-between-krw-5tln-10tln",
-          "published_at_utc": "2026-10-13T23:20:00+00:00",
-          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-          "publisher_age_minutes": 73.4,
-          "source_latency_to_first_seen_minutes": 73.4,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
         }
       ],
       "source_coverage_incomplete": true,
@@ -610,107 +443,16 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "USDJPY": {
-      "status": "POLICY_REACTION_CHECK",
-      "policy_headlines": [
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Yen trails the majors as the BoJ is said to lean against a hike",
-          "url": "https://www.fxstreet.com/news/yen-trails-the-majors-as-the-boj-is-said-to-lean-against-a-hike-202610132241",
-          "published_at_utc": "2026-10-13T22:41:05+00:00",
-          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-          "publisher_age_minutes": 112.3,
-          "source_latency_to_first_seen_minutes": 112.3,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "JPY"
-          ],
-          "affected_pairs": [
-            "USDJPY",
-            "AUDJPY",
-            "NZDJPY",
-            "EURJPY"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T22:30:00+00:00",
-            "pre_event_price": 158.351,
-            "first_post_event_close_utc": "2026-10-13T22:45:00+00:00",
-            "first_post_event_price": 158.345,
-            "first_post_event_change_pips": -0.6,
-            "second_post_event_close_utc": "2026-10-13T23:00:00+00:00",
-            "second_post_event_price": 158.344,
-            "second_post_event_change_pips": -0.1,
-            "net_two_bar_event_window_pips": -0.7,
-            "early_initial_direction": "DOWN",
-            "second_bar_direction": "DOWN",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
-        }
-      ],
+      "status": "HEADLINES_PRESENT",
+      "policy_headlines": [],
       "news_headlines": [
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Yen trails the majors as the BoJ is said to lean against a hike",
-          "url": "https://www.fxstreet.com/news/yen-trails-the-majors-as-the-boj-is-said-to-lean-against-a-hike-202610132241",
-          "published_at_utc": "2026-10-13T22:41:05+00:00",
-          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-          "publisher_age_minutes": 112.3,
-          "source_latency_to_first_seen_minutes": 112.3,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "JPY"
-          ],
-          "affected_pairs": [
-            "USDJPY",
-            "AUDJPY",
-            "NZDJPY",
-            "EURJPY"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T22:30:00+00:00",
-            "pre_event_price": 158.351,
-            "first_post_event_close_utc": "2026-10-13T22:45:00+00:00",
-            "first_post_event_price": 158.345,
-            "first_post_event_change_pips": -0.6,
-            "second_post_event_close_utc": "2026-10-13T23:00:00+00:00",
-            "second_post_event_price": 158.344,
-            "second_post_event_change_pips": -0.1,
-            "net_two_bar_event_window_pips": -0.7,
-            "early_initial_direction": "DOWN",
-            "second_bar_direction": "DOWN",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
-        },
         {
           "provider": "Newsquawk_public_delayed",
           "title": "PRE-MARKET JAPANESE AND SOUTH KOREAN STOCKS NEWS: Hyundai Motor (005380 KS) plans to invest USD 15.5bln in India through 2032 to expand manufacturing, R&D and other operations amid intensifying competition and declining",
           "url": "https://www.newsquawk.com/headlines/pre-market-japanese-and-south-korean-stocks-news-hyundai-motor-005380-ks-plans-to-invest-usd-155bln-in-india-through-2032-to-expand-manufacturing-rd-and-other-operations-amid-intensifying-competition-and-declining-market-share",
           "published_at_utc": "2026-10-13T23:47:00+00:00",
           "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-          "publisher_age_minutes": 46.4,
+          "publisher_age_minutes": 76.3,
           "source_latency_to_first_seen_minutes": 46.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -736,7 +478,7 @@
           "url": "https://www.fxstreet.com/news/australian-dollar-climbs-as-feds-williams-push-the-brakes-on-rates-202610132334",
           "published_at_utc": "2026-10-13T23:34:13+00:00",
           "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-          "publisher_age_minutes": 59.2,
+          "publisher_age_minutes": 89.1,
           "source_latency_to_first_seen_minutes": 59.2,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -759,34 +501,6 @@
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
           "broker_execution_allowed": false
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "South Korea is considering cutting treasury bond issuance by between KRW 5tln-10tln",
-          "url": "https://www.newsquawk.com/headlines/south-korea-is-considering-cutting-treasury-bond-issuance-by-between-krw-5tln-10tln",
-          "published_at_utc": "2026-10-13T23:20:00+00:00",
-          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-          "publisher_age_minutes": 73.4,
-          "source_latency_to_first_seen_minutes": 73.4,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
         }
       ],
       "source_coverage_incomplete": true,
@@ -795,99 +509,34 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "AUDJPY": {
-      "status": "POLICY_REACTION_CHECK",
-      "policy_headlines": [
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Yen trails the majors as the BoJ is said to lean against a hike",
-          "url": "https://www.fxstreet.com/news/yen-trails-the-majors-as-the-boj-is-said-to-lean-against-a-hike-202610132241",
-          "published_at_utc": "2026-10-13T22:41:05+00:00",
-          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-          "publisher_age_minutes": 112.3,
-          "source_latency_to_first_seen_minutes": 112.3,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "JPY"
-          ],
-          "affected_pairs": [
-            "USDJPY",
-            "AUDJPY",
-            "NZDJPY",
-            "EURJPY"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T22:30:00+00:00",
-            "pre_event_price": 110.57,
-            "first_post_event_close_utc": "2026-10-13T22:45:00+00:00",
-            "first_post_event_price": 110.569,
-            "first_post_event_change_pips": -0.1,
-            "second_post_event_close_utc": "2026-10-13T23:00:00+00:00",
-            "second_post_event_price": 110.571,
-            "second_post_event_change_pips": 0.2,
-            "net_two_bar_event_window_pips": 0.1,
-            "early_initial_direction": "DOWN",
-            "second_bar_direction": "UP",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
-        }
-      ],
+      "status": "HEADLINES_PRESENT",
+      "policy_headlines": [],
       "news_headlines": [
         {
-          "provider": "FXStreet_RSS",
-          "title": "Yen trails the majors as the BoJ is said to lean against a hike",
-          "url": "https://www.fxstreet.com/news/yen-trails-the-majors-as-the-boj-is-said-to-lean-against-a-hike-202610132241",
-          "published_at_utc": "2026-10-13T22:41:05+00:00",
-          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-          "publisher_age_minutes": 112.3,
-          "source_latency_to_first_seen_minutes": 112.3,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "provider": "Newsquawk_public_delayed",
+          "title": "[MARKET UPDATE] Asia-Pac stocks are mixed as the region attempts to claw back the recent tech-related losses, while participants await key releases from China including the latest inflation and trade figures",
+          "url": "https://www.newsquawk.com/headlines/market-update-asia-pac-stocks-are-mixed-as-the-region-attempts-to-claw-back-the-recent-tech-related-losses-while-participants-await-key-releases-from-china-including-the-latest-inflation-and-trade-figures",
+          "published_at_utc": "2026-10-14T00:36:00+00:00",
+          "first_seen_at_utc": "2026-10-14T01:03:19.076240+00:00",
+          "publisher_age_minutes": 27.3,
+          "source_latency_to_first_seen_minutes": 27.3,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "MACRO_DATA_OR_YIELD",
+          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
           "currencies": [
-            "JPY"
+            "CNY"
           ],
           "affected_pairs": [
-            "USDJPY",
+            "AUDUSD",
+            "NZDUSD",
             "AUDJPY",
-            "NZDJPY",
-            "EURJPY"
+            "NZDJPY"
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T22:30:00+00:00",
-            "pre_event_price": 110.57,
-            "first_post_event_close_utc": "2026-10-13T22:45:00+00:00",
-            "first_post_event_price": 110.569,
-            "first_post_event_change_pips": -0.1,
-            "second_post_event_close_utc": "2026-10-13T23:00:00+00:00",
-            "second_post_event_price": 110.571,
-            "second_post_event_change_pips": 0.2,
-            "net_two_bar_event_window_pips": 0.1,
-            "early_initial_direction": "DOWN",
-            "second_bar_direction": "UP",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
+          "broker_execution_allowed": false
         },
         {
           "provider": "Newsquawk_public_delayed",
@@ -895,7 +544,7 @@
           "url": "https://www.newsquawk.com/headlines/australia-sells-aud-700mln-425-march-2036-bonds-avg-yield-52899-bc-490",
           "published_at_utc": "2026-10-14T00:27:00+00:00",
           "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-          "publisher_age_minutes": 6.4,
+          "publisher_age_minutes": 36.3,
           "source_latency_to_first_seen_minutes": 6.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -919,7 +568,7 @@
           "url": "https://www.newsquawk.com/headlines/pre-market-japanese-and-south-korean-stocks-news-hyundai-motor-005380-ks-plans-to-invest-usd-155bln-in-india-through-2032-to-expand-manufacturing-rd-and-other-operations-amid-intensifying-competition-and-declining-market-share",
           "published_at_utc": "2026-10-13T23:47:00+00:00",
           "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-          "publisher_age_minutes": 46.4,
+          "publisher_age_minutes": 76.3,
           "source_latency_to_first_seen_minutes": 46.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -945,7 +594,7 @@
           "url": "https://www.newsquawk.com/headlines/chinas-pla-navy-organized-liaoning-aircraft-carrier-strike-group-to-conduct-training-exercises-in-the-waters-of-the-western-pacific-according-to-cctv",
           "published_at_utc": "2026-10-13T23:36:00+00:00",
           "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-          "publisher_age_minutes": 57.4,
+          "publisher_age_minutes": 87.3,
           "source_latency_to_first_seen_minutes": 57.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -971,7 +620,7 @@
           "url": "https://www.fxstreet.com/news/australian-dollar-climbs-as-feds-williams-push-the-brakes-on-rates-202610132334",
           "published_at_utc": "2026-10-13T23:34:13+00:00",
           "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-          "publisher_age_minutes": 59.2,
+          "publisher_age_minutes": 89.1,
           "source_latency_to_first_seen_minutes": 59.2,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -1002,99 +651,34 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "NZDJPY": {
-      "status": "POLICY_REACTION_CHECK",
-      "policy_headlines": [
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Yen trails the majors as the BoJ is said to lean against a hike",
-          "url": "https://www.fxstreet.com/news/yen-trails-the-majors-as-the-boj-is-said-to-lean-against-a-hike-202610132241",
-          "published_at_utc": "2026-10-13T22:41:05+00:00",
-          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-          "publisher_age_minutes": 112.3,
-          "source_latency_to_first_seen_minutes": 112.3,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "JPY"
-          ],
-          "affected_pairs": [
-            "USDJPY",
-            "AUDJPY",
-            "NZDJPY",
-            "EURJPY"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T22:30:00+00:00",
-            "pre_event_price": 88.881,
-            "first_post_event_close_utc": "2026-10-13T22:45:00+00:00",
-            "first_post_event_price": 88.86,
-            "first_post_event_change_pips": -2.1,
-            "second_post_event_close_utc": "2026-10-13T23:00:00+00:00",
-            "second_post_event_price": 88.846,
-            "second_post_event_change_pips": -1.4,
-            "net_two_bar_event_window_pips": -3.5,
-            "early_initial_direction": "DOWN",
-            "second_bar_direction": "DOWN",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
-        }
-      ],
+      "status": "HEADLINES_PRESENT",
+      "policy_headlines": [],
       "news_headlines": [
         {
-          "provider": "FXStreet_RSS",
-          "title": "Yen trails the majors as the BoJ is said to lean against a hike",
-          "url": "https://www.fxstreet.com/news/yen-trails-the-majors-as-the-boj-is-said-to-lean-against-a-hike-202610132241",
-          "published_at_utc": "2026-10-13T22:41:05+00:00",
-          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-          "publisher_age_minutes": 112.3,
-          "source_latency_to_first_seen_minutes": 112.3,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "provider": "Newsquawk_public_delayed",
+          "title": "[MARKET UPDATE] Asia-Pac stocks are mixed as the region attempts to claw back the recent tech-related losses, while participants await key releases from China including the latest inflation and trade figures",
+          "url": "https://www.newsquawk.com/headlines/market-update-asia-pac-stocks-are-mixed-as-the-region-attempts-to-claw-back-the-recent-tech-related-losses-while-participants-await-key-releases-from-china-including-the-latest-inflation-and-trade-figures",
+          "published_at_utc": "2026-10-14T00:36:00+00:00",
+          "first_seen_at_utc": "2026-10-14T01:03:19.076240+00:00",
+          "publisher_age_minutes": 27.3,
+          "source_latency_to_first_seen_minutes": 27.3,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "MACRO_DATA_OR_YIELD",
+          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
           "currencies": [
-            "JPY"
+            "CNY"
           ],
           "affected_pairs": [
-            "USDJPY",
+            "AUDUSD",
+            "NZDUSD",
             "AUDJPY",
-            "NZDJPY",
-            "EURJPY"
+            "NZDJPY"
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T22:30:00+00:00",
-            "pre_event_price": 88.881,
-            "first_post_event_close_utc": "2026-10-13T22:45:00+00:00",
-            "first_post_event_price": 88.86,
-            "first_post_event_change_pips": -2.1,
-            "second_post_event_close_utc": "2026-10-13T23:00:00+00:00",
-            "second_post_event_price": 88.846,
-            "second_post_event_change_pips": -1.4,
-            "net_two_bar_event_window_pips": -3.5,
-            "early_initial_direction": "DOWN",
-            "second_bar_direction": "DOWN",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
+          "broker_execution_allowed": false
         },
         {
           "provider": "Newsquawk_public_delayed",
@@ -1102,7 +686,7 @@
           "url": "https://www.newsquawk.com/headlines/pre-market-japanese-and-south-korean-stocks-news-hyundai-motor-005380-ks-plans-to-invest-usd-155bln-in-india-through-2032-to-expand-manufacturing-rd-and-other-operations-amid-intensifying-competition-and-declining-market-share",
           "published_at_utc": "2026-10-13T23:47:00+00:00",
           "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-          "publisher_age_minutes": 46.4,
+          "publisher_age_minutes": 76.3,
           "source_latency_to_first_seen_minutes": 46.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -1128,7 +712,7 @@
           "url": "https://www.newsquawk.com/headlines/chinas-pla-navy-organized-liaoning-aircraft-carrier-strike-group-to-conduct-training-exercises-in-the-waters-of-the-western-pacific-according-to-cctv",
           "published_at_utc": "2026-10-13T23:36:00+00:00",
           "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-          "publisher_age_minutes": 57.4,
+          "publisher_age_minutes": 87.3,
           "source_latency_to_first_seen_minutes": 57.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -1155,107 +739,16 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "EURJPY": {
-      "status": "POLICY_REACTION_CHECK",
-      "policy_headlines": [
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Yen trails the majors as the BoJ is said to lean against a hike",
-          "url": "https://www.fxstreet.com/news/yen-trails-the-majors-as-the-boj-is-said-to-lean-against-a-hike-202610132241",
-          "published_at_utc": "2026-10-13T22:41:05+00:00",
-          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-          "publisher_age_minutes": 112.3,
-          "source_latency_to_first_seen_minutes": 112.3,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "JPY"
-          ],
-          "affected_pairs": [
-            "USDJPY",
-            "AUDJPY",
-            "NZDJPY",
-            "EURJPY"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T22:30:00+00:00",
-            "pre_event_price": 177.315,
-            "first_post_event_close_utc": "2026-10-13T22:45:00+00:00",
-            "first_post_event_price": 177.318,
-            "first_post_event_change_pips": 0.3,
-            "second_post_event_close_utc": "2026-10-13T23:00:00+00:00",
-            "second_post_event_price": 177.313,
-            "second_post_event_change_pips": -0.5,
-            "net_two_bar_event_window_pips": -0.2,
-            "early_initial_direction": "UP",
-            "second_bar_direction": "DOWN",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
-        }
-      ],
+      "status": "HEADLINES_PRESENT",
+      "policy_headlines": [],
       "news_headlines": [
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Yen trails the majors as the BoJ is said to lean against a hike",
-          "url": "https://www.fxstreet.com/news/yen-trails-the-majors-as-the-boj-is-said-to-lean-against-a-hike-202610132241",
-          "published_at_utc": "2026-10-13T22:41:05+00:00",
-          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-          "publisher_age_minutes": 112.3,
-          "source_latency_to_first_seen_minutes": 112.3,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "JPY"
-          ],
-          "affected_pairs": [
-            "USDJPY",
-            "AUDJPY",
-            "NZDJPY",
-            "EURJPY"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-13T22:30:00+00:00",
-            "pre_event_price": 177.315,
-            "first_post_event_close_utc": "2026-10-13T22:45:00+00:00",
-            "first_post_event_price": 177.318,
-            "first_post_event_change_pips": 0.3,
-            "second_post_event_close_utc": "2026-10-13T23:00:00+00:00",
-            "second_post_event_price": 177.313,
-            "second_post_event_change_pips": -0.5,
-            "net_two_bar_event_window_pips": -0.2,
-            "early_initial_direction": "UP",
-            "second_bar_direction": "DOWN",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
-        },
         {
           "provider": "Newsquawk_public_delayed",
           "title": "PRE-MARKET JAPANESE AND SOUTH KOREAN STOCKS NEWS: Hyundai Motor (005380 KS) plans to invest USD 15.5bln in India through 2032 to expand manufacturing, R&D and other operations amid intensifying competition and declining",
           "url": "https://www.newsquawk.com/headlines/pre-market-japanese-and-south-korean-stocks-news-hyundai-motor-005380-ks-plans-to-invest-usd-155bln-in-india-through-2032-to-expand-manufacturing-rd-and-other-operations-amid-intensifying-competition-and-declining-market-share",
           "published_at_utc": "2026-10-13T23:47:00+00:00",
           "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-          "publisher_age_minutes": 46.4,
+          "publisher_age_minutes": 76.3,
           "source_latency_to_first_seen_minutes": 46.4,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -1300,7 +793,7 @@
           "url": "https://www.fxstreet.com/news/australian-dollar-climbs-as-feds-williams-push-the-brakes-on-rates-202610132334",
           "published_at_utc": "2026-10-13T23:34:13+00:00",
           "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-          "publisher_age_minutes": 59.2,
+          "publisher_age_minutes": 89.1,
           "source_latency_to_first_seen_minutes": 59.2,
           "source_public_delay_minutes_at_least": null,
           "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
@@ -1318,34 +811,6 @@
             "GBPUSD",
             "USDJPY",
             "AUDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "South Korea is considering cutting treasury bond issuance by between KRW 5tln-10tln",
-          "url": "https://www.newsquawk.com/headlines/south-korea-is-considering-cutting-treasury-bond-issuance-by-between-krw-5tln-10tln",
-          "published_at_utc": "2026-10-13T23:20:00+00:00",
-          "first_seen_at_utc": "2026-10-14T00:33:25.933049+00:00",
-          "publisher_age_minutes": 73.4,
-          "source_latency_to_first_seen_minutes": 73.4,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
             "USDCAD"
           ],
           "headline_direction": "UNDETERMINED",
