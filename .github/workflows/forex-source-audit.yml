@@ -1,0 +1,34 @@
+name: FX source audit (manual test only)
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Syntax and registry validation
+        run: |
+          python -m py_compile forex-engine/engine.py
+          python -c "import json; p=json.load(open('forex-engine/sources.json')); assert len(p)==len({x['id'] for x in p}) and len(p)>0; print('registered:',len(p))"
+      - name: Attempt registered source endpoints
+        run: python forex-engine/engine.py --database /tmp/fx-audit.sqlite3 --output /tmp/fx-latest-report.json --timeout 8 --concurrency 8
+      - name: Verify coverage and fail-closed signal gate
+        run: |
+          python -c "import json; r=json.load(open('/tmp/fx-latest-report.json')); assert r['source_attempt_coverage_pass']; assert r['attempted_count']==r['registry_count']; assert r['analysis_allowed'] is False; print('audit-only coverage verified')"
+      - name: Upload audit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fx-source-audit
+          path: |
+            /tmp/fx-latest-report.json
+            /tmp/fx-audit.sqlite3
+          retention-days: 7
