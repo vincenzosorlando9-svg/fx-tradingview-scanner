@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-14T09:34:32.950106+00:00",
+  "generated_at_utc": "2026-10-14T11:33:37.290241+00:00",
   "target_refresh_minutes": 5,
   "actual_actions_schedule_not_guaranteed": true,
   "approved_source_names": [
@@ -11,56 +11,29 @@
   "Newsquawk_public_delay_minutes_at_least": 20,
   "Newsquawk_is_not_realtime_professional_feed": true,
   "source_statuses": {
-    "FXStreet_RSS": "DATED_HEADLINES",
+    "FXStreet_RSS": "UNAVAILABLE_HTTPERROR",
     "Reuters_currency_page": "UNAVAILABLE_HTTPERROR",
     "Newsquawk_public_delayed": "DATED_HEADLINES"
   },
   "source_coverage_gaps": [
+    "FXStreet_RSS:UNAVAILABLE_HTTPERROR",
     "Reuters_currency_page:UNAVAILABLE_HTTPERROR"
   ],
   "any_provider_unavailable": true,
   "recent_headlines": [
     {
-      "provider": "FXStreet_RSS",
-      "title": "US CPI data expected to rise in September as markets reassess Fed rate outlook",
-      "url": "https://www.fxstreet.com/news/us-cpi-data-expected-to-rise-in-september-as-markets-reassess-fed-rate-outlook-202610140830",
-      "published_at_utc": "2026-10-14T08:30:00+00:00",
-      "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-      "publisher_age_minutes": 64.5,
-      "source_latency_to_first_seen_minutes": 64.5,
-      "source_public_delay_minutes_at_least": null,
-      "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-      "not_pro_feed_or_first_seen_in_real_time": false,
-      "type": "MACRO_DATA_OR_YIELD",
-      "priority": "MEDIUM_RELEASE_REACTION_CHECK",
-      "currencies": [
-        "USD"
-      ],
-      "affected_pairs": [
-        "AUDUSD",
-        "NZDUSD",
-        "EURUSD",
-        "GBPUSD",
-        "USDJPY",
-        "USDCAD"
-      ],
-      "headline_direction": "UNDETERMINED",
-      "market_reaction": "NOT_VERIFIED",
-      "broker_execution_allowed": false
-    },
-    {
-      "provider": "FXStreet_RSS",
-      "title": "Japanese Yen extends range play vs USD; looks to US CPI report for some impetus",
-      "url": "https://www.fxstreet.com/news/japanese-yen-extends-range-play-vs-usd-looks-to-us-cpi-report-for-some-impetus-202610140827",
-      "published_at_utc": "2026-10-14T08:27:43+00:00",
-      "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-      "publisher_age_minutes": 66.8,
-      "source_latency_to_first_seen_minutes": 66.8,
-      "source_public_delay_minutes_at_least": null,
-      "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-      "not_pro_feed_or_first_seen_in_real_time": false,
-      "type": "MACRO_DATA_OR_YIELD",
-      "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+      "provider": "Newsquawk_public_delayed",
+      "title": "PBoC Governor reportedly to be meeting BoJ and BoJ counterparts on the sidelines of IMF annual meeting being held in Bangkok",
+      "url": "https://www.newsquawk.com/headlines/pboc-governor-reportedly-to-be-meeting-boj-and-boj-counterparts-on-the-sidelines-of-imf-annual-meeting-being-held-in-bangkok",
+      "published_at_utc": "2026-10-14T11:25:00+00:00",
+      "first_seen_at_utc": "2026-10-14T11:33:37.290241+00:00",
+      "publisher_age_minutes": 8.6,
+      "source_latency_to_first_seen_minutes": 8.6,
+      "source_public_delay_minutes_at_least": 20,
+      "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+      "not_pro_feed_or_first_seen_in_real_time": true,
+      "type": "CENTRAL_BANK_POLICY",
+      "priority": "HIGH_POLICY_REACTION_CHECK",
       "currencies": [
         "JPY"
       ],
@@ -72,715 +45,113 @@
       ],
       "headline_direction": "UNDETERMINED",
       "market_reaction": "NOT_VERIFIED",
-      "broker_execution_allowed": false
-    },
-    {
-      "provider": "Newsquawk_public_delayed",
-      "title": "China M2 Money Supply (Sept): 7.2% Y/Y (exp. 7.4%)",
-      "url": "https://www.newsquawk.com/headlines/china-m2-money-supply-sept-72-yy-exp-74",
-      "published_at_utc": "2026-10-14T09:22:00+00:00",
-      "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-      "publisher_age_minutes": 12.5,
-      "source_latency_to_first_seen_minutes": 12.5,
-      "source_public_delay_minutes_at_least": 20,
-      "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-      "not_pro_feed_or_first_seen_in_real_time": true,
-      "type": "GENERAL",
-      "priority": "CONTEXT",
-      "currencies": [
-        "CNY"
-      ],
-      "affected_pairs": [
-        "AUDUSD",
-        "NZDUSD",
-        "AUDJPY",
-        "NZDJPY"
-      ],
-      "headline_direction": "UNDETERMINED",
-      "market_reaction": "NOT_VERIFIED",
-      "broker_execution_allowed": false
-    },
-    {
-      "provider": "Newsquawk_public_delayed",
-      "title": "European oil refinery margins have reportedly slumped, which increases the chance of output cuts, the FT reports",
-      "url": "https://www.newsquawk.com/headlines/european-oil-refinery-margins-have-reportedly-slumped-which-increases-the-chance-of-output-cuts-the-ft-reports",
-      "published_at_utc": "2026-10-14T08:54:00+00:00",
-      "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-      "publisher_age_minutes": 40.5,
-      "source_latency_to_first_seen_minutes": 40.5,
-      "source_public_delay_minutes_at_least": 20,
-      "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-      "not_pro_feed_or_first_seen_in_real_time": true,
-      "type": "GENERAL",
-      "priority": "CONTEXT",
-      "currencies": [
-        "EUR"
-      ],
-      "affected_pairs": [
-        "EURUSD",
-        "EURJPY",
-        "EURCAD",
-        "EURGBP"
-      ],
-      "headline_direction": "UNDETERMINED",
-      "market_reaction": "NOT_VERIFIED",
-      "broker_execution_allowed": false
-    },
-    {
-      "provider": "Newsquawk_public_delayed",
-      "title": "China bought 8-10 cargoes of US soybeans for December shipment, according to traders",
-      "url": "https://www.newsquawk.com/headlines/china-bought-8-10-cargoes-of-us-soybeans-for-december-shipment",
-      "published_at_utc": "2026-10-14T08:34:00+00:00",
-      "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-      "publisher_age_minutes": 60.5,
-      "source_latency_to_first_seen_minutes": 60.5,
-      "source_public_delay_minutes_at_least": 20,
-      "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-      "not_pro_feed_or_first_seen_in_real_time": true,
-      "type": "GENERAL",
-      "priority": "CONTEXT",
-      "currencies": [
-        "CNY"
-      ],
-      "affected_pairs": [
-        "AUDUSD",
-        "NZDUSD",
-        "AUDJPY",
-        "NZDJPY"
-      ],
-      "headline_direction": "UNDETERMINED",
-      "market_reaction": "NOT_VERIFIED",
-      "broker_execution_allowed": false
-    },
-    {
-      "provider": "FXStreet_RSS",
-      "title": "New Zealand Dollar gains as US Dollar weakens on falling yields",
-      "url": "https://www.fxstreet.com/news/new-zealand-dollar-gains-as-us-dollar-weakens-on-falling-yields-202610140817",
-      "published_at_utc": "2026-10-14T08:17:29+00:00",
-      "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-      "publisher_age_minutes": 77.1,
-      "source_latency_to_first_seen_minutes": 77.1,
-      "source_public_delay_minutes_at_least": null,
-      "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-      "not_pro_feed_or_first_seen_in_real_time": false,
-      "type": "GENERAL",
-      "priority": "CONTEXT",
-      "currencies": [
-        "NZD",
-        "USD"
-      ],
-      "affected_pairs": [
-        "AUDUSD",
-        "NZDUSD",
-        "EURUSD",
-        "GBPUSD",
-        "USDJPY",
-        "NZDJPY",
-        "USDCAD"
-      ],
-      "headline_direction": "UNDETERMINED",
-      "market_reaction": "NOT_VERIFIED",
-      "broker_execution_allowed": false
-    },
-    {
-      "provider": "FXStreet_RSS",
-      "title": "British Pound: Upside extension capped by 1.3280 against US Dollar  – UOB",
-      "url": "https://www.fxstreet.com/news/british-pound-upside-extension-capped-by-13280-against-us-dollar-uob-202610140814",
-      "published_at_utc": "2026-10-14T08:14:54+00:00",
-      "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-      "publisher_age_minutes": 79.6,
-      "source_latency_to_first_seen_minutes": 79.6,
-      "source_public_delay_minutes_at_least": null,
-      "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-      "not_pro_feed_or_first_seen_in_real_time": false,
-      "type": "GENERAL",
-      "priority": "CONTEXT",
-      "currencies": [
-        "GBP",
-        "USD"
-      ],
-      "affected_pairs": [
-        "AUDUSD",
-        "NZDUSD",
-        "EURUSD",
-        "GBPUSD",
-        "USDJPY",
-        "USDCAD",
-        "EURGBP"
-      ],
-      "headline_direction": "UNDETERMINED",
-      "market_reaction": "NOT_VERIFIED",
-      "broker_execution_allowed": false
+      "broker_execution_allowed": false,
+      "price_reactions": {
+        "USDJPY": {
+          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false,
+          "pre_event_close_utc": "2026-10-14T11:15:00+00:00",
+          "pre_event_price": 158.459,
+          "first_post_event_close_utc": "2026-10-14T11:30:00+00:00",
+          "first_post_event_price": 158.464,
+          "first_post_event_change_pips": 0.5
+        },
+        "AUDJPY": {
+          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false,
+          "pre_event_close_utc": "2026-10-14T11:15:00+00:00",
+          "pre_event_price": 111,
+          "first_post_event_close_utc": "2026-10-14T11:30:00+00:00",
+          "first_post_event_price": 111.015,
+          "first_post_event_change_pips": 1.5
+        },
+        "NZDJPY": {
+          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false,
+          "pre_event_close_utc": "2026-10-14T11:15:00+00:00",
+          "pre_event_price": 88.957,
+          "first_post_event_close_utc": "2026-10-14T11:30:00+00:00",
+          "first_post_event_price": 88.93,
+          "first_post_event_change_pips": -2.7
+        },
+        "EURJPY": {
+          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false,
+          "pre_event_close_utc": "2026-10-14T11:15:00+00:00",
+          "pre_event_price": 177.345,
+          "first_post_event_close_utc": "2026-10-14T11:30:00+00:00",
+          "first_post_event_price": 177.363,
+          "first_post_event_change_pips": 1.8
+        }
+      },
+      "all_price_reactions_are_noncausal_observations": true
     }
   ],
   "pairs": {
     "AUDUSD": {
-      "status": "HEADLINES_PRESENT",
+      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
       "policy_headlines": [],
-      "news_headlines": [
-        {
-          "provider": "FXStreet_RSS",
-          "title": "US CPI data expected to rise in September as markets reassess Fed rate outlook",
-          "url": "https://www.fxstreet.com/news/us-cpi-data-expected-to-rise-in-september-as-markets-reassess-fed-rate-outlook-202610140830",
-          "published_at_utc": "2026-10-14T08:30:00+00:00",
-          "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-          "publisher_age_minutes": 64.5,
-          "source_latency_to_first_seen_minutes": 64.5,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "China M2 Money Supply (Sept): 7.2% Y/Y (exp. 7.4%)",
-          "url": "https://www.newsquawk.com/headlines/china-m2-money-supply-sept-72-yy-exp-74",
-          "published_at_utc": "2026-10-14T09:22:00+00:00",
-          "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-          "publisher_age_minutes": 12.5,
-          "source_latency_to_first_seen_minutes": 12.5,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "CNY"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "AUDJPY",
-            "NZDJPY"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "China bought 8-10 cargoes of US soybeans for December shipment, according to traders",
-          "url": "https://www.newsquawk.com/headlines/china-bought-8-10-cargoes-of-us-soybeans-for-december-shipment",
-          "published_at_utc": "2026-10-14T08:34:00+00:00",
-          "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-          "publisher_age_minutes": 60.5,
-          "source_latency_to_first_seen_minutes": 60.5,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "CNY"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "AUDJPY",
-            "NZDJPY"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
-          "title": "New Zealand Dollar gains as US Dollar weakens on falling yields",
-          "url": "https://www.fxstreet.com/news/new-zealand-dollar-gains-as-us-dollar-weakens-on-falling-yields-202610140817",
-          "published_at_utc": "2026-10-14T08:17:29+00:00",
-          "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-          "publisher_age_minutes": 77.1,
-          "source_latency_to_first_seen_minutes": 77.1,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "NZD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "NZDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
-          "title": "British Pound: Upside extension capped by 1.3280 against US Dollar  – UOB",
-          "url": "https://www.fxstreet.com/news/british-pound-upside-extension-capped-by-13280-against-us-dollar-uob-202610140814",
-          "published_at_utc": "2026-10-14T08:14:54+00:00",
-          "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-          "publisher_age_minutes": 79.6,
-          "source_latency_to_first_seen_minutes": 79.6,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "GBP",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD",
-            "EURGBP"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        }
-      ],
+      "news_headlines": [],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "NZDUSD": {
-      "status": "HEADLINES_PRESENT",
+      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
       "policy_headlines": [],
-      "news_headlines": [
-        {
-          "provider": "FXStreet_RSS",
-          "title": "US CPI data expected to rise in September as markets reassess Fed rate outlook",
-          "url": "https://www.fxstreet.com/news/us-cpi-data-expected-to-rise-in-september-as-markets-reassess-fed-rate-outlook-202610140830",
-          "published_at_utc": "2026-10-14T08:30:00+00:00",
-          "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-          "publisher_age_minutes": 64.5,
-          "source_latency_to_first_seen_minutes": 64.5,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "China M2 Money Supply (Sept): 7.2% Y/Y (exp. 7.4%)",
-          "url": "https://www.newsquawk.com/headlines/china-m2-money-supply-sept-72-yy-exp-74",
-          "published_at_utc": "2026-10-14T09:22:00+00:00",
-          "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-          "publisher_age_minutes": 12.5,
-          "source_latency_to_first_seen_minutes": 12.5,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "CNY"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "AUDJPY",
-            "NZDJPY"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "China bought 8-10 cargoes of US soybeans for December shipment, according to traders",
-          "url": "https://www.newsquawk.com/headlines/china-bought-8-10-cargoes-of-us-soybeans-for-december-shipment",
-          "published_at_utc": "2026-10-14T08:34:00+00:00",
-          "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-          "publisher_age_minutes": 60.5,
-          "source_latency_to_first_seen_minutes": 60.5,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "CNY"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "AUDJPY",
-            "NZDJPY"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
-          "title": "New Zealand Dollar gains as US Dollar weakens on falling yields",
-          "url": "https://www.fxstreet.com/news/new-zealand-dollar-gains-as-us-dollar-weakens-on-falling-yields-202610140817",
-          "published_at_utc": "2026-10-14T08:17:29+00:00",
-          "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-          "publisher_age_minutes": 77.1,
-          "source_latency_to_first_seen_minutes": 77.1,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "NZD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "NZDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
-          "title": "British Pound: Upside extension capped by 1.3280 against US Dollar  – UOB",
-          "url": "https://www.fxstreet.com/news/british-pound-upside-extension-capped-by-13280-against-us-dollar-uob-202610140814",
-          "published_at_utc": "2026-10-14T08:14:54+00:00",
-          "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-          "publisher_age_minutes": 79.6,
-          "source_latency_to_first_seen_minutes": 79.6,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "GBP",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD",
-            "EURGBP"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        }
-      ],
+      "news_headlines": [],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "EURUSD": {
-      "status": "HEADLINES_PRESENT",
+      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
       "policy_headlines": [],
-      "news_headlines": [
-        {
-          "provider": "FXStreet_RSS",
-          "title": "US CPI data expected to rise in September as markets reassess Fed rate outlook",
-          "url": "https://www.fxstreet.com/news/us-cpi-data-expected-to-rise-in-september-as-markets-reassess-fed-rate-outlook-202610140830",
-          "published_at_utc": "2026-10-14T08:30:00+00:00",
-          "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-          "publisher_age_minutes": 64.5,
-          "source_latency_to_first_seen_minutes": 64.5,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "European oil refinery margins have reportedly slumped, which increases the chance of output cuts, the FT reports",
-          "url": "https://www.newsquawk.com/headlines/european-oil-refinery-margins-have-reportedly-slumped-which-increases-the-chance-of-output-cuts-the-ft-reports",
-          "published_at_utc": "2026-10-14T08:54:00+00:00",
-          "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-          "publisher_age_minutes": 40.5,
-          "source_latency_to_first_seen_minutes": 40.5,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "EUR"
-          ],
-          "affected_pairs": [
-            "EURUSD",
-            "EURJPY",
-            "EURCAD",
-            "EURGBP"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
-          "title": "New Zealand Dollar gains as US Dollar weakens on falling yields",
-          "url": "https://www.fxstreet.com/news/new-zealand-dollar-gains-as-us-dollar-weakens-on-falling-yields-202610140817",
-          "published_at_utc": "2026-10-14T08:17:29+00:00",
-          "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-          "publisher_age_minutes": 77.1,
-          "source_latency_to_first_seen_minutes": 77.1,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "NZD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "NZDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
-          "title": "British Pound: Upside extension capped by 1.3280 against US Dollar  – UOB",
-          "url": "https://www.fxstreet.com/news/british-pound-upside-extension-capped-by-13280-against-us-dollar-uob-202610140814",
-          "published_at_utc": "2026-10-14T08:14:54+00:00",
-          "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-          "publisher_age_minutes": 79.6,
-          "source_latency_to_first_seen_minutes": 79.6,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "GBP",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD",
-            "EURGBP"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        }
-      ],
+      "news_headlines": [],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "GBPUSD": {
-      "status": "HEADLINES_PRESENT",
+      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
       "policy_headlines": [],
-      "news_headlines": [
-        {
-          "provider": "FXStreet_RSS",
-          "title": "US CPI data expected to rise in September as markets reassess Fed rate outlook",
-          "url": "https://www.fxstreet.com/news/us-cpi-data-expected-to-rise-in-september-as-markets-reassess-fed-rate-outlook-202610140830",
-          "published_at_utc": "2026-10-14T08:30:00+00:00",
-          "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-          "publisher_age_minutes": 64.5,
-          "source_latency_to_first_seen_minutes": 64.5,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
-          "title": "New Zealand Dollar gains as US Dollar weakens on falling yields",
-          "url": "https://www.fxstreet.com/news/new-zealand-dollar-gains-as-us-dollar-weakens-on-falling-yields-202610140817",
-          "published_at_utc": "2026-10-14T08:17:29+00:00",
-          "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-          "publisher_age_minutes": 77.1,
-          "source_latency_to_first_seen_minutes": 77.1,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "NZD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "NZDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
-          "title": "British Pound: Upside extension capped by 1.3280 against US Dollar  – UOB",
-          "url": "https://www.fxstreet.com/news/british-pound-upside-extension-capped-by-13280-against-us-dollar-uob-202610140814",
-          "published_at_utc": "2026-10-14T08:14:54+00:00",
-          "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-          "publisher_age_minutes": 79.6,
-          "source_latency_to_first_seen_minutes": 79.6,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "GBP",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD",
-            "EURGBP"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        }
-      ],
+      "news_headlines": [],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "USDJPY": {
-      "status": "HEADLINES_PRESENT",
-      "policy_headlines": [],
-      "news_headlines": [
+      "status": "POLICY_REACTION_CHECK",
+      "policy_headlines": [
         {
-          "provider": "FXStreet_RSS",
-          "title": "US CPI data expected to rise in September as markets reassess Fed rate outlook",
-          "url": "https://www.fxstreet.com/news/us-cpi-data-expected-to-rise-in-september-as-markets-reassess-fed-rate-outlook-202610140830",
-          "published_at_utc": "2026-10-14T08:30:00+00:00",
-          "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-          "publisher_age_minutes": 64.5,
-          "source_latency_to_first_seen_minutes": 64.5,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
-          "title": "Japanese Yen extends range play vs USD; looks to US CPI report for some impetus",
-          "url": "https://www.fxstreet.com/news/japanese-yen-extends-range-play-vs-usd-looks-to-us-cpi-report-for-some-impetus-202610140827",
-          "published_at_utc": "2026-10-14T08:27:43+00:00",
-          "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-          "publisher_age_minutes": 66.8,
-          "source_latency_to_first_seen_minutes": 66.8,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "provider": "Newsquawk_public_delayed",
+          "title": "PBoC Governor reportedly to be meeting BoJ and BoJ counterparts on the sidelines of IMF annual meeting being held in Bangkok",
+          "url": "https://www.newsquawk.com/headlines/pboc-governor-reportedly-to-be-meeting-boj-and-boj-counterparts-on-the-sidelines-of-imf-annual-meeting-being-held-in-bangkok",
+          "published_at_utc": "2026-10-14T11:25:00+00:00",
+          "first_seen_at_utc": "2026-10-14T11:33:37.290241+00:00",
+          "publisher_age_minutes": 8.6,
+          "source_latency_to_first_seen_minutes": 8.6,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
           "currencies": [
             "JPY"
           ],
@@ -792,67 +163,59 @@
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-14T11:15:00+00:00",
+            "pre_event_price": 158.459,
+            "first_post_event_close_utc": "2026-10-14T11:30:00+00:00",
+            "first_post_event_price": 158.464,
+            "first_post_event_change_pips": 0.5
+          }
+        }
+      ],
+      "news_headlines": [
         {
-          "provider": "FXStreet_RSS",
-          "title": "New Zealand Dollar gains as US Dollar weakens on falling yields",
-          "url": "https://www.fxstreet.com/news/new-zealand-dollar-gains-as-us-dollar-weakens-on-falling-yields-202610140817",
-          "published_at_utc": "2026-10-14T08:17:29+00:00",
-          "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-          "publisher_age_minutes": 77.1,
-          "source_latency_to_first_seen_minutes": 77.1,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
+          "provider": "Newsquawk_public_delayed",
+          "title": "PBoC Governor reportedly to be meeting BoJ and BoJ counterparts on the sidelines of IMF annual meeting being held in Bangkok",
+          "url": "https://www.newsquawk.com/headlines/pboc-governor-reportedly-to-be-meeting-boj-and-boj-counterparts-on-the-sidelines-of-imf-annual-meeting-being-held-in-bangkok",
+          "published_at_utc": "2026-10-14T11:25:00+00:00",
+          "first_seen_at_utc": "2026-10-14T11:33:37.290241+00:00",
+          "publisher_age_minutes": 8.6,
+          "source_latency_to_first_seen_minutes": 8.6,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
           "currencies": [
-            "NZD",
-            "USD"
+            "JPY"
           ],
           "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
             "USDJPY",
+            "AUDJPY",
             "NZDJPY",
-            "USDCAD"
+            "EURJPY"
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
-          "title": "British Pound: Upside extension capped by 1.3280 against US Dollar  – UOB",
-          "url": "https://www.fxstreet.com/news/british-pound-upside-extension-capped-by-13280-against-us-dollar-uob-202610140814",
-          "published_at_utc": "2026-10-14T08:14:54+00:00",
-          "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-          "publisher_age_minutes": 79.6,
-          "source_latency_to_first_seen_minutes": 79.6,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "GBP",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD",
-            "EURGBP"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-14T11:15:00+00:00",
+            "pre_event_price": 158.459,
+            "first_post_event_close_utc": "2026-10-14T11:30:00+00:00",
+            "first_post_event_price": 158.464,
+            "first_post_event_change_pips": 0.5
+          }
         }
       ],
       "source_coverage_incomplete": true,
@@ -861,22 +224,21 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "AUDJPY": {
-      "status": "HEADLINES_PRESENT",
-      "policy_headlines": [],
-      "news_headlines": [
+      "status": "POLICY_REACTION_CHECK",
+      "policy_headlines": [
         {
-          "provider": "FXStreet_RSS",
-          "title": "Japanese Yen extends range play vs USD; looks to US CPI report for some impetus",
-          "url": "https://www.fxstreet.com/news/japanese-yen-extends-range-play-vs-usd-looks-to-us-cpi-report-for-some-impetus-202610140827",
-          "published_at_utc": "2026-10-14T08:27:43+00:00",
-          "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-          "publisher_age_minutes": 66.8,
-          "source_latency_to_first_seen_minutes": 66.8,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "provider": "Newsquawk_public_delayed",
+          "title": "PBoC Governor reportedly to be meeting BoJ and BoJ counterparts on the sidelines of IMF annual meeting being held in Bangkok",
+          "url": "https://www.newsquawk.com/headlines/pboc-governor-reportedly-to-be-meeting-boj-and-boj-counterparts-on-the-sidelines-of-imf-annual-meeting-being-held-in-bangkok",
+          "published_at_utc": "2026-10-14T11:25:00+00:00",
+          "first_seen_at_utc": "2026-10-14T11:33:37.290241+00:00",
+          "publisher_age_minutes": 8.6,
+          "source_latency_to_first_seen_minutes": 8.6,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
           "currencies": [
             "JPY"
           ],
@@ -888,59 +250,59 @@
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-14T11:15:00+00:00",
+            "pre_event_price": 111,
+            "first_post_event_close_utc": "2026-10-14T11:30:00+00:00",
+            "first_post_event_price": 111.015,
+            "first_post_event_change_pips": 1.5
+          }
+        }
+      ],
+      "news_headlines": [
         {
           "provider": "Newsquawk_public_delayed",
-          "title": "China M2 Money Supply (Sept): 7.2% Y/Y (exp. 7.4%)",
-          "url": "https://www.newsquawk.com/headlines/china-m2-money-supply-sept-72-yy-exp-74",
-          "published_at_utc": "2026-10-14T09:22:00+00:00",
-          "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-          "publisher_age_minutes": 12.5,
-          "source_latency_to_first_seen_minutes": 12.5,
+          "title": "PBoC Governor reportedly to be meeting BoJ and BoJ counterparts on the sidelines of IMF annual meeting being held in Bangkok",
+          "url": "https://www.newsquawk.com/headlines/pboc-governor-reportedly-to-be-meeting-boj-and-boj-counterparts-on-the-sidelines-of-imf-annual-meeting-being-held-in-bangkok",
+          "published_at_utc": "2026-10-14T11:25:00+00:00",
+          "first_seen_at_utc": "2026-10-14T11:33:37.290241+00:00",
+          "publisher_age_minutes": 8.6,
+          "source_latency_to_first_seen_minutes": 8.6,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
           "currencies": [
-            "CNY"
+            "JPY"
           ],
           "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
+            "USDJPY",
             "AUDJPY",
-            "NZDJPY"
+            "NZDJPY",
+            "EURJPY"
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "China bought 8-10 cargoes of US soybeans for December shipment, according to traders",
-          "url": "https://www.newsquawk.com/headlines/china-bought-8-10-cargoes-of-us-soybeans-for-december-shipment",
-          "published_at_utc": "2026-10-14T08:34:00+00:00",
-          "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-          "publisher_age_minutes": 60.5,
-          "source_latency_to_first_seen_minutes": 60.5,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "CNY"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "AUDJPY",
-            "NZDJPY"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-14T11:15:00+00:00",
+            "pre_event_price": 111,
+            "first_post_event_close_utc": "2026-10-14T11:30:00+00:00",
+            "first_post_event_price": 111.015,
+            "first_post_event_change_pips": 1.5
+          }
         }
       ],
       "source_coverage_incomplete": true,
@@ -949,22 +311,21 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "NZDJPY": {
-      "status": "HEADLINES_PRESENT",
-      "policy_headlines": [],
-      "news_headlines": [
+      "status": "POLICY_REACTION_CHECK",
+      "policy_headlines": [
         {
-          "provider": "FXStreet_RSS",
-          "title": "Japanese Yen extends range play vs USD; looks to US CPI report for some impetus",
-          "url": "https://www.fxstreet.com/news/japanese-yen-extends-range-play-vs-usd-looks-to-us-cpi-report-for-some-impetus-202610140827",
-          "published_at_utc": "2026-10-14T08:27:43+00:00",
-          "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-          "publisher_age_minutes": 66.8,
-          "source_latency_to_first_seen_minutes": 66.8,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "provider": "Newsquawk_public_delayed",
+          "title": "PBoC Governor reportedly to be meeting BoJ and BoJ counterparts on the sidelines of IMF annual meeting being held in Bangkok",
+          "url": "https://www.newsquawk.com/headlines/pboc-governor-reportedly-to-be-meeting-boj-and-boj-counterparts-on-the-sidelines-of-imf-annual-meeting-being-held-in-bangkok",
+          "published_at_utc": "2026-10-14T11:25:00+00:00",
+          "first_seen_at_utc": "2026-10-14T11:33:37.290241+00:00",
+          "publisher_age_minutes": 8.6,
+          "source_latency_to_first_seen_minutes": 8.6,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
           "currencies": [
             "JPY"
           ],
@@ -976,89 +337,59 @@
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-14T11:15:00+00:00",
+            "pre_event_price": 88.957,
+            "first_post_event_close_utc": "2026-10-14T11:30:00+00:00",
+            "first_post_event_price": 88.93,
+            "first_post_event_change_pips": -2.7
+          }
+        }
+      ],
+      "news_headlines": [
         {
           "provider": "Newsquawk_public_delayed",
-          "title": "China M2 Money Supply (Sept): 7.2% Y/Y (exp. 7.4%)",
-          "url": "https://www.newsquawk.com/headlines/china-m2-money-supply-sept-72-yy-exp-74",
-          "published_at_utc": "2026-10-14T09:22:00+00:00",
-          "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-          "publisher_age_minutes": 12.5,
-          "source_latency_to_first_seen_minutes": 12.5,
+          "title": "PBoC Governor reportedly to be meeting BoJ and BoJ counterparts on the sidelines of IMF annual meeting being held in Bangkok",
+          "url": "https://www.newsquawk.com/headlines/pboc-governor-reportedly-to-be-meeting-boj-and-boj-counterparts-on-the-sidelines-of-imf-annual-meeting-being-held-in-bangkok",
+          "published_at_utc": "2026-10-14T11:25:00+00:00",
+          "first_seen_at_utc": "2026-10-14T11:33:37.290241+00:00",
+          "publisher_age_minutes": 8.6,
+          "source_latency_to_first_seen_minutes": 8.6,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
           "currencies": [
-            "CNY"
+            "JPY"
           ],
           "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "AUDJPY",
-            "NZDJPY"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "China bought 8-10 cargoes of US soybeans for December shipment, according to traders",
-          "url": "https://www.newsquawk.com/headlines/china-bought-8-10-cargoes-of-us-soybeans-for-december-shipment",
-          "published_at_utc": "2026-10-14T08:34:00+00:00",
-          "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-          "publisher_age_minutes": 60.5,
-          "source_latency_to_first_seen_minutes": 60.5,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "CNY"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "AUDJPY",
-            "NZDJPY"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
-          "title": "New Zealand Dollar gains as US Dollar weakens on falling yields",
-          "url": "https://www.fxstreet.com/news/new-zealand-dollar-gains-as-us-dollar-weakens-on-falling-yields-202610140817",
-          "published_at_utc": "2026-10-14T08:17:29+00:00",
-          "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-          "publisher_age_minutes": 77.1,
-          "source_latency_to_first_seen_minutes": 77.1,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "NZD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
             "USDJPY",
+            "AUDJPY",
             "NZDJPY",
-            "USDCAD"
+            "EURJPY"
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-14T11:15:00+00:00",
+            "pre_event_price": 88.957,
+            "first_post_event_close_utc": "2026-10-14T11:30:00+00:00",
+            "first_post_event_price": 88.93,
+            "first_post_event_change_pips": -2.7
+          }
         }
       ],
       "source_coverage_incomplete": true,
@@ -1067,22 +398,21 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "EURJPY": {
-      "status": "HEADLINES_PRESENT",
-      "policy_headlines": [],
-      "news_headlines": [
+      "status": "POLICY_REACTION_CHECK",
+      "policy_headlines": [
         {
-          "provider": "FXStreet_RSS",
-          "title": "Japanese Yen extends range play vs USD; looks to US CPI report for some impetus",
-          "url": "https://www.fxstreet.com/news/japanese-yen-extends-range-play-vs-usd-looks-to-us-cpi-report-for-some-impetus-202610140827",
-          "published_at_utc": "2026-10-14T08:27:43+00:00",
-          "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-          "publisher_age_minutes": 66.8,
-          "source_latency_to_first_seen_minutes": 66.8,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "provider": "Newsquawk_public_delayed",
+          "title": "PBoC Governor reportedly to be meeting BoJ and BoJ counterparts on the sidelines of IMF annual meeting being held in Bangkok",
+          "url": "https://www.newsquawk.com/headlines/pboc-governor-reportedly-to-be-meeting-boj-and-boj-counterparts-on-the-sidelines-of-imf-annual-meeting-being-held-in-bangkok",
+          "published_at_utc": "2026-10-14T11:25:00+00:00",
+          "first_seen_at_utc": "2026-10-14T11:33:37.290241+00:00",
+          "publisher_age_minutes": 8.6,
+          "source_latency_to_first_seen_minutes": 8.6,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
           "currencies": [
             "JPY"
           ],
@@ -1094,33 +424,59 @@
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-14T11:15:00+00:00",
+            "pre_event_price": 177.345,
+            "first_post_event_close_utc": "2026-10-14T11:30:00+00:00",
+            "first_post_event_price": 177.363,
+            "first_post_event_change_pips": 1.8
+          }
+        }
+      ],
+      "news_headlines": [
         {
           "provider": "Newsquawk_public_delayed",
-          "title": "European oil refinery margins have reportedly slumped, which increases the chance of output cuts, the FT reports",
-          "url": "https://www.newsquawk.com/headlines/european-oil-refinery-margins-have-reportedly-slumped-which-increases-the-chance-of-output-cuts-the-ft-reports",
-          "published_at_utc": "2026-10-14T08:54:00+00:00",
-          "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-          "publisher_age_minutes": 40.5,
-          "source_latency_to_first_seen_minutes": 40.5,
+          "title": "PBoC Governor reportedly to be meeting BoJ and BoJ counterparts on the sidelines of IMF annual meeting being held in Bangkok",
+          "url": "https://www.newsquawk.com/headlines/pboc-governor-reportedly-to-be-meeting-boj-and-boj-counterparts-on-the-sidelines-of-imf-annual-meeting-being-held-in-bangkok",
+          "published_at_utc": "2026-10-14T11:25:00+00:00",
+          "first_seen_at_utc": "2026-10-14T11:33:37.290241+00:00",
+          "publisher_age_minutes": 8.6,
+          "source_latency_to_first_seen_minutes": 8.6,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
           "currencies": [
-            "EUR"
+            "JPY"
           ],
           "affected_pairs": [
-            "EURUSD",
-            "EURJPY",
-            "EURCAD",
-            "EURGBP"
+            "USDJPY",
+            "AUDJPY",
+            "NZDJPY",
+            "EURJPY"
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-14T11:15:00+00:00",
+            "pre_event_price": 177.345,
+            "first_post_event_close_utc": "2026-10-14T11:30:00+00:00",
+            "first_post_event_price": 177.363,
+            "first_post_event_change_pips": 1.8
+          }
         }
       ],
       "source_coverage_incomplete": true,
@@ -1129,200 +485,27 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "EURCAD": {
-      "status": "HEADLINES_PRESENT",
+      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
       "policy_headlines": [],
-      "news_headlines": [
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "European oil refinery margins have reportedly slumped, which increases the chance of output cuts, the FT reports",
-          "url": "https://www.newsquawk.com/headlines/european-oil-refinery-margins-have-reportedly-slumped-which-increases-the-chance-of-output-cuts-the-ft-reports",
-          "published_at_utc": "2026-10-14T08:54:00+00:00",
-          "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-          "publisher_age_minutes": 40.5,
-          "source_latency_to_first_seen_minutes": 40.5,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "EUR"
-          ],
-          "affected_pairs": [
-            "EURUSD",
-            "EURJPY",
-            "EURCAD",
-            "EURGBP"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        }
-      ],
+      "news_headlines": [],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "USDCAD": {
-      "status": "HEADLINES_PRESENT",
+      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
       "policy_headlines": [],
-      "news_headlines": [
-        {
-          "provider": "FXStreet_RSS",
-          "title": "US CPI data expected to rise in September as markets reassess Fed rate outlook",
-          "url": "https://www.fxstreet.com/news/us-cpi-data-expected-to-rise-in-september-as-markets-reassess-fed-rate-outlook-202610140830",
-          "published_at_utc": "2026-10-14T08:30:00+00:00",
-          "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-          "publisher_age_minutes": 64.5,
-          "source_latency_to_first_seen_minutes": 64.5,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
-          "currencies": [
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
-          "title": "New Zealand Dollar gains as US Dollar weakens on falling yields",
-          "url": "https://www.fxstreet.com/news/new-zealand-dollar-gains-as-us-dollar-weakens-on-falling-yields-202610140817",
-          "published_at_utc": "2026-10-14T08:17:29+00:00",
-          "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-          "publisher_age_minutes": 77.1,
-          "source_latency_to_first_seen_minutes": 77.1,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "NZD",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "NZDJPY",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
-          "title": "British Pound: Upside extension capped by 1.3280 against US Dollar  – UOB",
-          "url": "https://www.fxstreet.com/news/british-pound-upside-extension-capped-by-13280-against-us-dollar-uob-202610140814",
-          "published_at_utc": "2026-10-14T08:14:54+00:00",
-          "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-          "publisher_age_minutes": 79.6,
-          "source_latency_to_first_seen_minutes": 79.6,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "GBP",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD",
-            "EURGBP"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        }
-      ],
+      "news_headlines": [],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "EURGBP": {
-      "status": "HEADLINES_PRESENT",
+      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
       "policy_headlines": [],
-      "news_headlines": [
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "European oil refinery margins have reportedly slumped, which increases the chance of output cuts, the FT reports",
-          "url": "https://www.newsquawk.com/headlines/european-oil-refinery-margins-have-reportedly-slumped-which-increases-the-chance-of-output-cuts-the-ft-reports",
-          "published_at_utc": "2026-10-14T08:54:00+00:00",
-          "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-          "publisher_age_minutes": 40.5,
-          "source_latency_to_first_seen_minutes": 40.5,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "EUR"
-          ],
-          "affected_pairs": [
-            "EURUSD",
-            "EURJPY",
-            "EURCAD",
-            "EURGBP"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "FXStreet_RSS",
-          "title": "British Pound: Upside extension capped by 1.3280 against US Dollar  – UOB",
-          "url": "https://www.fxstreet.com/news/british-pound-upside-extension-capped-by-13280-against-us-dollar-uob-202610140814",
-          "published_at_utc": "2026-10-14T08:14:54+00:00",
-          "first_seen_at_utc": "2026-10-14T09:34:32.950106+00:00",
-          "publisher_age_minutes": 79.6,
-          "source_latency_to_first_seen_minutes": 79.6,
-          "source_public_delay_minutes_at_least": null,
-          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
-          "not_pro_feed_or_first_seen_in_real_time": false,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "GBP",
-            "USD"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "GBPUSD",
-            "USDJPY",
-            "USDCAD",
-            "EURGBP"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        }
-      ],
+      "news_headlines": [],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
