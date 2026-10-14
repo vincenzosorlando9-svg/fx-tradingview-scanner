@@ -23,7 +23,7 @@ jobs:
           python-version: '3.11'
       - name: Syntax and registry validation
         run: |
-          python -m py_compile forex-engine/engine.py
+          python -m py_compile forex-engine/engine.py forex-engine/quotes.py
           python -c "import json; p=json.load(open('forex-engine/sources.json')); assert len(p)==len({x['id'] for x in p}) and len(p)>0; print('registered:',len(p))"
       - name: Offline unit tests
         run: python -m unittest discover -s forex-engine -p 'test_*.py' -v
