@@ -1,6 +1,8 @@
 name: FX source audit (testing only)
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '7 * * * *'
   push:
     branches: [main]
     paths:
