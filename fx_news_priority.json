@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-15T06:03:18.788715+00:00",
+  "generated_at_utc": "2026-10-15T06:49:36.672612+00:00",
   "target_refresh_minutes": 5,
   "actual_actions_schedule_not_guaranteed": true,
   "approved_source_names": [
@@ -27,7 +27,7 @@
       "url": "https://www.newsquawk.com/headlines/bojs-koeda-says-that-the-monetary-environment-has-been-accommodative-",
       "published_at_utc": "2026-10-15T06:00:00+00:00",
       "first_seen_at_utc": "2026-10-15T06:03:18.788715+00:00",
-      "publisher_age_minutes": 3.3,
+      "publisher_age_minutes": 49.6,
       "source_latency_to_first_seen_minutes": 3.3,
       "source_public_delay_minutes_at_least": 20,
       "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -48,97 +48,80 @@
       "broker_execution_allowed": false,
       "price_reactions": {
         "USDJPY": {
-          "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
+          "status": "FIRST_MOVE_REVERSED_ON_SECOND_M15",
           "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
           "no_intrabar_assumptions": true,
           "causal_link_verified": false,
-          "first_seen_before_market_reaction": false
-        },
-        "AUDJPY": {
-          "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
-          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-          "no_intrabar_assumptions": true,
-          "causal_link_verified": false,
-          "first_seen_before_market_reaction": false
-        },
-        "NZDJPY": {
-          "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
-          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-          "no_intrabar_assumptions": true,
-          "causal_link_verified": false,
-          "first_seen_before_market_reaction": false
-        },
-        "EURJPY": {
-          "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
-          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-          "no_intrabar_assumptions": true,
-          "causal_link_verified": false,
-          "first_seen_before_market_reaction": false
-        }
-      },
-      "all_price_reactions_are_noncausal_observations": true
-    },
-    {
-      "provider": "Newsquawk_public_delayed",
-      "title": "BoE's chief economist Pill said should not give impression that hike now would be at the start of a series of increases",
-      "url": "https://www.newsquawk.com/headlines/boes-chief-economist-pill-said-should-not-give-impression-that-hike-now-would-be-at-the-start-of-a-series-of-increases",
-      "published_at_utc": "2026-10-15T04:22:00+00:00",
-      "first_seen_at_utc": "2026-10-15T06:03:18.788715+00:00",
-      "publisher_age_minutes": 101.3,
-      "source_latency_to_first_seen_minutes": 101.3,
-      "source_public_delay_minutes_at_least": 20,
-      "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-      "not_pro_feed_or_first_seen_in_real_time": true,
-      "type": "CENTRAL_BANK_POLICY",
-      "priority": "HIGH_POLICY_REACTION_CHECK",
-      "currencies": [
-        "GBP"
-      ],
-      "affected_pairs": [
-        "GBPUSD",
-        "EURGBP"
-      ],
-      "headline_direction": "UNDETERMINED",
-      "market_reaction": "NOT_VERIFIED",
-      "broker_execution_allowed": false,
-      "price_reactions": {
-        "GBPUSD": {
-          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-          "no_intrabar_assumptions": true,
-          "causal_link_verified": false,
-          "first_seen_before_market_reaction": false,
-          "pre_event_close_utc": "2026-10-15T04:15:00+00:00",
-          "pre_event_price": 1.32444,
-          "first_post_event_close_utc": "2026-10-15T04:30:00+00:00",
-          "first_post_event_price": 1.32457,
-          "first_post_event_change_pips": 1.3,
-          "second_post_event_close_utc": "2026-10-15T04:45:00+00:00",
-          "second_post_event_price": 1.32446,
-          "second_post_event_change_pips": -1.1,
-          "net_two_bar_event_window_pips": 0.2,
+          "first_seen_before_market_reaction": true,
+          "pre_event_close_utc": "2026-10-15T06:00:00+00:00",
+          "pre_event_price": 157.893,
+          "first_post_event_close_utc": "2026-10-15T06:15:00+00:00",
+          "first_post_event_price": 157.983,
+          "first_post_event_change_pips": 9.0,
+          "second_post_event_close_utc": "2026-10-15T06:30:00+00:00",
+          "second_post_event_price": 157.927,
+          "second_post_event_change_pips": -5.6,
+          "net_two_bar_event_window_pips": 3.4,
           "early_initial_direction": "UP",
           "second_bar_direction": "DOWN",
-          "retrospective_if_first_seen_after_first_candle": true
+          "retrospective_if_first_seen_after_first_candle": false
         },
-        "EURGBP": {
-          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+        "AUDJPY": {
+          "status": "FIRST_MOVE_REVERSED_ON_SECOND_M15",
           "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
           "no_intrabar_assumptions": true,
           "causal_link_verified": false,
-          "first_seen_before_market_reaction": false,
-          "pre_event_close_utc": "2026-10-15T04:15:00+00:00",
-          "pre_event_price": 0.84716,
-          "first_post_event_close_utc": "2026-10-15T04:30:00+00:00",
-          "first_post_event_price": 0.84697,
-          "first_post_event_change_pips": -1.9,
-          "second_post_event_close_utc": "2026-10-15T04:45:00+00:00",
-          "second_post_event_price": 0.84681,
-          "second_post_event_change_pips": -1.6,
-          "net_two_bar_event_window_pips": -3.5,
-          "early_initial_direction": "DOWN",
+          "first_seen_before_market_reaction": true,
+          "pre_event_close_utc": "2026-10-15T06:00:00+00:00",
+          "pre_event_price": 109.749,
+          "first_post_event_close_utc": "2026-10-15T06:15:00+00:00",
+          "first_post_event_price": 109.779,
+          "first_post_event_change_pips": 3.0,
+          "second_post_event_close_utc": "2026-10-15T06:30:00+00:00",
+          "second_post_event_price": 109.703,
+          "second_post_event_change_pips": -7.6,
+          "net_two_bar_event_window_pips": -4.6,
+          "early_initial_direction": "UP",
           "second_bar_direction": "DOWN",
-          "retrospective_if_first_seen_after_first_candle": true
+          "retrospective_if_first_seen_after_first_candle": false
+        },
+        "NZDJPY": {
+          "status": "FIRST_MOVE_REVERSED_ON_SECOND_M15",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": true,
+          "pre_event_close_utc": "2026-10-15T06:00:00+00:00",
+          "pre_event_price": 88.627,
+          "first_post_event_close_utc": "2026-10-15T06:15:00+00:00",
+          "first_post_event_price": 88.68,
+          "first_post_event_change_pips": 5.3,
+          "second_post_event_close_utc": "2026-10-15T06:30:00+00:00",
+          "second_post_event_price": 88.594,
+          "second_post_event_change_pips": -8.6,
+          "net_two_bar_event_window_pips": -3.3,
+          "early_initial_direction": "UP",
+          "second_bar_direction": "DOWN",
+          "retrospective_if_first_seen_after_first_candle": false
+        },
+        "EURJPY": {
+          "status": "FIRST_MOVE_REVERSED_ON_SECOND_M15",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": true,
+          "pre_event_close_utc": "2026-10-15T06:00:00+00:00",
+          "pre_event_price": 177.085,
+          "first_post_event_close_utc": "2026-10-15T06:15:00+00:00",
+          "first_post_event_price": 177.129,
+          "first_post_event_change_pips": 4.4,
+          "second_post_event_close_utc": "2026-10-15T06:30:00+00:00",
+          "second_post_event_price": 177.014,
+          "second_post_event_change_pips": -11.5,
+          "net_two_bar_event_window_pips": -7.1,
+          "early_initial_direction": "UP",
+          "second_bar_direction": "DOWN",
+          "retrospective_if_first_seen_after_first_candle": false
         }
       },
       "all_price_reactions_are_noncausal_observations": true
@@ -149,7 +132,7 @@
       "url": "https://www.newsquawk.com/headlines/iimf-official-says-middle-east-forecast-assumes-oil-prices-are-to-remain-higher-and-sees-return-to-normal-trade-and-shipping-in-the-first-quarter-2027-while-imf-official-says-all-risks-are-tilting-to-the-downside",
       "published_at_utc": "2026-10-15T05:09:00+00:00",
       "first_seen_at_utc": "2026-10-15T06:03:18.788715+00:00",
-      "publisher_age_minutes": 54.3,
+      "publisher_age_minutes": 100.6,
       "source_latency_to_first_seen_minutes": 54.3,
       "source_public_delay_minutes_at_least": 20,
       "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -169,25 +152,51 @@
     },
     {
       "provider": "Newsquawk_public_delayed",
-      "title": "Chinese Premier Li says regarding New Yalu River Bridge, which connects China and North Korea, says opening of the bridge will strongly promote economic and trade cooperation and further strengthen personnel exchanges",
-      "url": "https://www.newsquawk.com/headlines/-chinese-premier-li-says-regarding-new-yalu-river-bridge-which-connects-china-and-north-korea-says-opening-of-the-bridge-will-strongly-promote-economic-and-trade-cooperation-and-further-strengthen-personnel-exchanges",
-      "published_at_utc": "2026-10-15T04:26:00+00:00",
-      "first_seen_at_utc": "2026-10-15T06:03:18.788715+00:00",
-      "publisher_age_minutes": 97.3,
-      "source_latency_to_first_seen_minutes": 97.3,
+      "title": "European Pre-Market Summary 15th October 2026: European bourses set for a dire open; focus on the tech-sell off after the KOSPI slumped",
+      "url": "https://www.newsquawk.com/headlines/european-pre-market-summary-15th-october-2026-european-bourses-set-for-a-dire-open-focus-on-the-tech-sell-off-after-the-kospi-slumped",
+      "published_at_utc": "2026-10-15T06:35:00+00:00",
+      "first_seen_at_utc": "2026-10-15T06:49:36.672612+00:00",
+      "publisher_age_minutes": 14.6,
+      "source_latency_to_first_seen_minutes": 14.6,
       "source_public_delay_minutes_at_least": 20,
       "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
       "not_pro_feed_or_first_seen_in_real_time": true,
       "type": "GENERAL",
       "priority": "CONTEXT",
       "currencies": [
-        "CNY"
+        "EUR"
       ],
       "affected_pairs": [
-        "AUDUSD",
-        "NZDUSD",
-        "AUDJPY",
-        "NZDJPY"
+        "EURUSD",
+        "EURJPY",
+        "EURCAD",
+        "EURGBP"
+      ],
+      "headline_direction": "UNDETERMINED",
+      "market_reaction": "NOT_VERIFIED",
+      "broker_execution_allowed": false
+    },
+    {
+      "provider": "Newsquawk_public_delayed",
+      "title": "Newsquawk Daily European Equity Opening News - 15th October 2026",
+      "url": "https://www.newsquawk.com/headlines/newsquawk-daily-european-equity-opening-news---15th-october-2026",
+      "published_at_utc": "2026-10-15T06:05:00+00:00",
+      "first_seen_at_utc": "2026-10-15T06:49:36.672612+00:00",
+      "publisher_age_minutes": 44.6,
+      "source_latency_to_first_seen_minutes": 44.6,
+      "source_public_delay_minutes_at_least": 20,
+      "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+      "not_pro_feed_or_first_seen_in_real_time": true,
+      "type": "GENERAL",
+      "priority": "CONTEXT",
+      "currencies": [
+        "EUR"
+      ],
+      "affected_pairs": [
+        "EURUSD",
+        "EURJPY",
+        "EURCAD",
+        "EURGBP"
       ],
       "headline_direction": "UNDETERMINED",
       "market_reaction": "NOT_VERIFIED",
@@ -196,78 +205,6 @@
   ],
   "pairs": {
     "AUDUSD": {
-      "status": "HEADLINES_PRESENT",
-      "policy_headlines": [],
-      "news_headlines": [
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "Chinese Premier Li says regarding New Yalu River Bridge, which connects China and North Korea, says opening of the bridge will strongly promote economic and trade cooperation and further strengthen personnel exchanges",
-          "url": "https://www.newsquawk.com/headlines/-chinese-premier-li-says-regarding-new-yalu-river-bridge-which-connects-china-and-north-korea-says-opening-of-the-bridge-will-strongly-promote-economic-and-trade-cooperation-and-further-strengthen-personnel-exchanges",
-          "published_at_utc": "2026-10-15T04:26:00+00:00",
-          "first_seen_at_utc": "2026-10-15T06:03:18.788715+00:00",
-          "publisher_age_minutes": 97.3,
-          "source_latency_to_first_seen_minutes": 97.3,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "CNY"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "AUDJPY",
-            "NZDJPY"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        }
-      ],
-      "source_coverage_incomplete": true,
-      "no_news_is_not_proof_of_no_catalyst": true,
-      "directional_vote": "NONE",
-      "price_reaction_requires_completed_15m30m_candles": true
-    },
-    "NZDUSD": {
-      "status": "HEADLINES_PRESENT",
-      "policy_headlines": [],
-      "news_headlines": [
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "Chinese Premier Li says regarding New Yalu River Bridge, which connects China and North Korea, says opening of the bridge will strongly promote economic and trade cooperation and further strengthen personnel exchanges",
-          "url": "https://www.newsquawk.com/headlines/-chinese-premier-li-says-regarding-new-yalu-river-bridge-which-connects-china-and-north-korea-says-opening-of-the-bridge-will-strongly-promote-economic-and-trade-cooperation-and-further-strengthen-personnel-exchanges",
-          "published_at_utc": "2026-10-15T04:26:00+00:00",
-          "first_seen_at_utc": "2026-10-15T06:03:18.788715+00:00",
-          "publisher_age_minutes": 97.3,
-          "source_latency_to_first_seen_minutes": 97.3,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "CNY"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "AUDJPY",
-            "NZDJPY"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        }
-      ],
-      "source_coverage_incomplete": true,
-      "no_news_is_not_proof_of_no_catalyst": true,
-      "directional_vote": "NONE",
-      "price_reaction_requires_completed_15m30m_candles": true
-    },
-    "EURUSD": {
       "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
       "policy_headlines": [],
       "news_headlines": [],
@@ -276,98 +213,81 @@
       "directional_vote": "NONE",
       "price_reaction_requires_completed_15m30m_candles": true
     },
-    "GBPUSD": {
-      "status": "POLICY_REACTION_CHECK",
-      "policy_headlines": [
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "BoE's chief economist Pill said should not give impression that hike now would be at the start of a series of increases",
-          "url": "https://www.newsquawk.com/headlines/boes-chief-economist-pill-said-should-not-give-impression-that-hike-now-would-be-at-the-start-of-a-series-of-increases",
-          "published_at_utc": "2026-10-15T04:22:00+00:00",
-          "first_seen_at_utc": "2026-10-15T06:03:18.788715+00:00",
-          "publisher_age_minutes": 101.3,
-          "source_latency_to_first_seen_minutes": 101.3,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "GBP"
-          ],
-          "affected_pairs": [
-            "GBPUSD",
-            "EURGBP"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-15T04:15:00+00:00",
-            "pre_event_price": 1.32444,
-            "first_post_event_close_utc": "2026-10-15T04:30:00+00:00",
-            "first_post_event_price": 1.32457,
-            "first_post_event_change_pips": 1.3,
-            "second_post_event_close_utc": "2026-10-15T04:45:00+00:00",
-            "second_post_event_price": 1.32446,
-            "second_post_event_change_pips": -1.1,
-            "net_two_bar_event_window_pips": 0.2,
-            "early_initial_direction": "UP",
-            "second_bar_direction": "DOWN",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
-        }
-      ],
+    "NZDUSD": {
+      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
+      "policy_headlines": [],
+      "news_headlines": [],
+      "source_coverage_incomplete": true,
+      "no_news_is_not_proof_of_no_catalyst": true,
+      "directional_vote": "NONE",
+      "price_reaction_requires_completed_15m30m_candles": true
+    },
+    "EURUSD": {
+      "status": "HEADLINES_PRESENT",
+      "policy_headlines": [],
       "news_headlines": [
         {
           "provider": "Newsquawk_public_delayed",
-          "title": "BoE's chief economist Pill said should not give impression that hike now would be at the start of a series of increases",
-          "url": "https://www.newsquawk.com/headlines/boes-chief-economist-pill-said-should-not-give-impression-that-hike-now-would-be-at-the-start-of-a-series-of-increases",
-          "published_at_utc": "2026-10-15T04:22:00+00:00",
-          "first_seen_at_utc": "2026-10-15T06:03:18.788715+00:00",
-          "publisher_age_minutes": 101.3,
-          "source_latency_to_first_seen_minutes": 101.3,
+          "title": "European Pre-Market Summary 15th October 2026: European bourses set for a dire open; focus on the tech-sell off after the KOSPI slumped",
+          "url": "https://www.newsquawk.com/headlines/european-pre-market-summary-15th-october-2026-european-bourses-set-for-a-dire-open-focus-on-the-tech-sell-off-after-the-kospi-slumped",
+          "published_at_utc": "2026-10-15T06:35:00+00:00",
+          "first_seen_at_utc": "2026-10-15T06:49:36.672612+00:00",
+          "publisher_age_minutes": 14.6,
+          "source_latency_to_first_seen_minutes": 14.6,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "type": "GENERAL",
+          "priority": "CONTEXT",
           "currencies": [
-            "GBP"
+            "EUR"
           ],
           "affected_pairs": [
-            "GBPUSD",
+            "EURUSD",
+            "EURJPY",
+            "EURCAD",
             "EURGBP"
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-15T04:15:00+00:00",
-            "pre_event_price": 1.32444,
-            "first_post_event_close_utc": "2026-10-15T04:30:00+00:00",
-            "first_post_event_price": 1.32457,
-            "first_post_event_change_pips": 1.3,
-            "second_post_event_close_utc": "2026-10-15T04:45:00+00:00",
-            "second_post_event_price": 1.32446,
-            "second_post_event_change_pips": -1.1,
-            "net_two_bar_event_window_pips": 0.2,
-            "early_initial_direction": "UP",
-            "second_bar_direction": "DOWN",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "Newsquawk Daily European Equity Opening News - 15th October 2026",
+          "url": "https://www.newsquawk.com/headlines/newsquawk-daily-european-equity-opening-news---15th-october-2026",
+          "published_at_utc": "2026-10-15T06:05:00+00:00",
+          "first_seen_at_utc": "2026-10-15T06:49:36.672612+00:00",
+          "publisher_age_minutes": 44.6,
+          "source_latency_to_first_seen_minutes": 44.6,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "EUR"
+          ],
+          "affected_pairs": [
+            "EURUSD",
+            "EURJPY",
+            "EURCAD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
         }
       ],
+      "source_coverage_incomplete": true,
+      "no_news_is_not_proof_of_no_catalyst": true,
+      "directional_vote": "NONE",
+      "price_reaction_requires_completed_15m30m_candles": true
+    },
+    "GBPUSD": {
+      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
+      "policy_headlines": [],
+      "news_headlines": [],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
@@ -382,7 +302,7 @@
           "url": "https://www.newsquawk.com/headlines/bojs-koeda-says-that-the-monetary-environment-has-been-accommodative-",
           "published_at_utc": "2026-10-15T06:00:00+00:00",
           "first_seen_at_utc": "2026-10-15T06:03:18.788715+00:00",
-          "publisher_age_minutes": 3.3,
+          "publisher_age_minutes": 49.6,
           "source_latency_to_first_seen_minutes": 3.3,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -402,11 +322,23 @@
           "market_reaction": "NOT_VERIFIED",
           "broker_execution_allowed": false,
           "price_reaction_observation": {
-            "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
+            "status": "FIRST_MOVE_REVERSED_ON_SECOND_M15",
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
-            "first_seen_before_market_reaction": false
+            "first_seen_before_market_reaction": true,
+            "pre_event_close_utc": "2026-10-15T06:00:00+00:00",
+            "pre_event_price": 157.893,
+            "first_post_event_close_utc": "2026-10-15T06:15:00+00:00",
+            "first_post_event_price": 157.983,
+            "first_post_event_change_pips": 9.0,
+            "second_post_event_close_utc": "2026-10-15T06:30:00+00:00",
+            "second_post_event_price": 157.927,
+            "second_post_event_change_pips": -5.6,
+            "net_two_bar_event_window_pips": 3.4,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": false
           }
         }
       ],
@@ -417,7 +349,7 @@
           "url": "https://www.newsquawk.com/headlines/bojs-koeda-says-that-the-monetary-environment-has-been-accommodative-",
           "published_at_utc": "2026-10-15T06:00:00+00:00",
           "first_seen_at_utc": "2026-10-15T06:03:18.788715+00:00",
-          "publisher_age_minutes": 3.3,
+          "publisher_age_minutes": 49.6,
           "source_latency_to_first_seen_minutes": 3.3,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -437,11 +369,23 @@
           "market_reaction": "NOT_VERIFIED",
           "broker_execution_allowed": false,
           "price_reaction_observation": {
-            "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
+            "status": "FIRST_MOVE_REVERSED_ON_SECOND_M15",
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
-            "first_seen_before_market_reaction": false
+            "first_seen_before_market_reaction": true,
+            "pre_event_close_utc": "2026-10-15T06:00:00+00:00",
+            "pre_event_price": 157.893,
+            "first_post_event_close_utc": "2026-10-15T06:15:00+00:00",
+            "first_post_event_price": 157.983,
+            "first_post_event_change_pips": 9.0,
+            "second_post_event_close_utc": "2026-10-15T06:30:00+00:00",
+            "second_post_event_price": 157.927,
+            "second_post_event_change_pips": -5.6,
+            "net_two_bar_event_window_pips": 3.4,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": false
           }
         }
       ],
@@ -459,7 +403,7 @@
           "url": "https://www.newsquawk.com/headlines/bojs-koeda-says-that-the-monetary-environment-has-been-accommodative-",
           "published_at_utc": "2026-10-15T06:00:00+00:00",
           "first_seen_at_utc": "2026-10-15T06:03:18.788715+00:00",
-          "publisher_age_minutes": 3.3,
+          "publisher_age_minutes": 49.6,
           "source_latency_to_first_seen_minutes": 3.3,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -479,11 +423,23 @@
           "market_reaction": "NOT_VERIFIED",
           "broker_execution_allowed": false,
           "price_reaction_observation": {
-            "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
+            "status": "FIRST_MOVE_REVERSED_ON_SECOND_M15",
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
-            "first_seen_before_market_reaction": false
+            "first_seen_before_market_reaction": true,
+            "pre_event_close_utc": "2026-10-15T06:00:00+00:00",
+            "pre_event_price": 109.749,
+            "first_post_event_close_utc": "2026-10-15T06:15:00+00:00",
+            "first_post_event_price": 109.779,
+            "first_post_event_change_pips": 3.0,
+            "second_post_event_close_utc": "2026-10-15T06:30:00+00:00",
+            "second_post_event_price": 109.703,
+            "second_post_event_change_pips": -7.6,
+            "net_two_bar_event_window_pips": -4.6,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": false
           }
         }
       ],
@@ -494,7 +450,7 @@
           "url": "https://www.newsquawk.com/headlines/bojs-koeda-says-that-the-monetary-environment-has-been-accommodative-",
           "published_at_utc": "2026-10-15T06:00:00+00:00",
           "first_seen_at_utc": "2026-10-15T06:03:18.788715+00:00",
-          "publisher_age_minutes": 3.3,
+          "publisher_age_minutes": 49.6,
           "source_latency_to_first_seen_minutes": 3.3,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -514,38 +470,24 @@
           "market_reaction": "NOT_VERIFIED",
           "broker_execution_allowed": false,
           "price_reaction_observation": {
-            "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
+            "status": "FIRST_MOVE_REVERSED_ON_SECOND_M15",
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
-            "first_seen_before_market_reaction": false
+            "first_seen_before_market_reaction": true,
+            "pre_event_close_utc": "2026-10-15T06:00:00+00:00",
+            "pre_event_price": 109.749,
+            "first_post_event_close_utc": "2026-10-15T06:15:00+00:00",
+            "first_post_event_price": 109.779,
+            "first_post_event_change_pips": 3.0,
+            "second_post_event_close_utc": "2026-10-15T06:30:00+00:00",
+            "second_post_event_price": 109.703,
+            "second_post_event_change_pips": -7.6,
+            "net_two_bar_event_window_pips": -4.6,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": false
           }
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "Chinese Premier Li says regarding New Yalu River Bridge, which connects China and North Korea, says opening of the bridge will strongly promote economic and trade cooperation and further strengthen personnel exchanges",
-          "url": "https://www.newsquawk.com/headlines/-chinese-premier-li-says-regarding-new-yalu-river-bridge-which-connects-china-and-north-korea-says-opening-of-the-bridge-will-strongly-promote-economic-and-trade-cooperation-and-further-strengthen-personnel-exchanges",
-          "published_at_utc": "2026-10-15T04:26:00+00:00",
-          "first_seen_at_utc": "2026-10-15T06:03:18.788715+00:00",
-          "publisher_age_minutes": 97.3,
-          "source_latency_to_first_seen_minutes": 97.3,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "CNY"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "AUDJPY",
-            "NZDJPY"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
         }
       ],
       "source_coverage_incomplete": true,
@@ -562,7 +504,7 @@
           "url": "https://www.newsquawk.com/headlines/bojs-koeda-says-that-the-monetary-environment-has-been-accommodative-",
           "published_at_utc": "2026-10-15T06:00:00+00:00",
           "first_seen_at_utc": "2026-10-15T06:03:18.788715+00:00",
-          "publisher_age_minutes": 3.3,
+          "publisher_age_minutes": 49.6,
           "source_latency_to_first_seen_minutes": 3.3,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -582,11 +524,23 @@
           "market_reaction": "NOT_VERIFIED",
           "broker_execution_allowed": false,
           "price_reaction_observation": {
-            "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
+            "status": "FIRST_MOVE_REVERSED_ON_SECOND_M15",
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
-            "first_seen_before_market_reaction": false
+            "first_seen_before_market_reaction": true,
+            "pre_event_close_utc": "2026-10-15T06:00:00+00:00",
+            "pre_event_price": 88.627,
+            "first_post_event_close_utc": "2026-10-15T06:15:00+00:00",
+            "first_post_event_price": 88.68,
+            "first_post_event_change_pips": 5.3,
+            "second_post_event_close_utc": "2026-10-15T06:30:00+00:00",
+            "second_post_event_price": 88.594,
+            "second_post_event_change_pips": -8.6,
+            "net_two_bar_event_window_pips": -3.3,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": false
           }
         }
       ],
@@ -597,7 +551,7 @@
           "url": "https://www.newsquawk.com/headlines/bojs-koeda-says-that-the-monetary-environment-has-been-accommodative-",
           "published_at_utc": "2026-10-15T06:00:00+00:00",
           "first_seen_at_utc": "2026-10-15T06:03:18.788715+00:00",
-          "publisher_age_minutes": 3.3,
+          "publisher_age_minutes": 49.6,
           "source_latency_to_first_seen_minutes": 3.3,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -617,38 +571,24 @@
           "market_reaction": "NOT_VERIFIED",
           "broker_execution_allowed": false,
           "price_reaction_observation": {
-            "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
+            "status": "FIRST_MOVE_REVERSED_ON_SECOND_M15",
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
-            "first_seen_before_market_reaction": false
+            "first_seen_before_market_reaction": true,
+            "pre_event_close_utc": "2026-10-15T06:00:00+00:00",
+            "pre_event_price": 88.627,
+            "first_post_event_close_utc": "2026-10-15T06:15:00+00:00",
+            "first_post_event_price": 88.68,
+            "first_post_event_change_pips": 5.3,
+            "second_post_event_close_utc": "2026-10-15T06:30:00+00:00",
+            "second_post_event_price": 88.594,
+            "second_post_event_change_pips": -8.6,
+            "net_two_bar_event_window_pips": -3.3,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": false
           }
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "Chinese Premier Li says regarding New Yalu River Bridge, which connects China and North Korea, says opening of the bridge will strongly promote economic and trade cooperation and further strengthen personnel exchanges",
-          "url": "https://www.newsquawk.com/headlines/-chinese-premier-li-says-regarding-new-yalu-river-bridge-which-connects-china-and-north-korea-says-opening-of-the-bridge-will-strongly-promote-economic-and-trade-cooperation-and-further-strengthen-personnel-exchanges",
-          "published_at_utc": "2026-10-15T04:26:00+00:00",
-          "first_seen_at_utc": "2026-10-15T06:03:18.788715+00:00",
-          "publisher_age_minutes": 97.3,
-          "source_latency_to_first_seen_minutes": 97.3,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "CNY"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "AUDJPY",
-            "NZDJPY"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
         }
       ],
       "source_coverage_incomplete": true,
@@ -665,7 +605,7 @@
           "url": "https://www.newsquawk.com/headlines/bojs-koeda-says-that-the-monetary-environment-has-been-accommodative-",
           "published_at_utc": "2026-10-15T06:00:00+00:00",
           "first_seen_at_utc": "2026-10-15T06:03:18.788715+00:00",
-          "publisher_age_minutes": 3.3,
+          "publisher_age_minutes": 49.6,
           "source_latency_to_first_seen_minutes": 3.3,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -685,11 +625,23 @@
           "market_reaction": "NOT_VERIFIED",
           "broker_execution_allowed": false,
           "price_reaction_observation": {
-            "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
+            "status": "FIRST_MOVE_REVERSED_ON_SECOND_M15",
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
-            "first_seen_before_market_reaction": false
+            "first_seen_before_market_reaction": true,
+            "pre_event_close_utc": "2026-10-15T06:00:00+00:00",
+            "pre_event_price": 177.085,
+            "first_post_event_close_utc": "2026-10-15T06:15:00+00:00",
+            "first_post_event_price": 177.129,
+            "first_post_event_change_pips": 4.4,
+            "second_post_event_close_utc": "2026-10-15T06:30:00+00:00",
+            "second_post_event_price": 177.014,
+            "second_post_event_change_pips": -11.5,
+            "net_two_bar_event_window_pips": -7.1,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": false
           }
         }
       ],
@@ -700,7 +652,7 @@
           "url": "https://www.newsquawk.com/headlines/bojs-koeda-says-that-the-monetary-environment-has-been-accommodative-",
           "published_at_utc": "2026-10-15T06:00:00+00:00",
           "first_seen_at_utc": "2026-10-15T06:03:18.788715+00:00",
-          "publisher_age_minutes": 3.3,
+          "publisher_age_minutes": 49.6,
           "source_latency_to_first_seen_minutes": 3.3,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -720,12 +672,76 @@
           "market_reaction": "NOT_VERIFIED",
           "broker_execution_allowed": false,
           "price_reaction_observation": {
-            "status": "UNAVAILABLE_EVENT_ALIGNED_CLOSED_BARS",
+            "status": "FIRST_MOVE_REVERSED_ON_SECOND_M15",
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
-            "first_seen_before_market_reaction": false
+            "first_seen_before_market_reaction": true,
+            "pre_event_close_utc": "2026-10-15T06:00:00+00:00",
+            "pre_event_price": 177.085,
+            "first_post_event_close_utc": "2026-10-15T06:15:00+00:00",
+            "first_post_event_price": 177.129,
+            "first_post_event_change_pips": 4.4,
+            "second_post_event_close_utc": "2026-10-15T06:30:00+00:00",
+            "second_post_event_price": 177.014,
+            "second_post_event_change_pips": -11.5,
+            "net_two_bar_event_window_pips": -7.1,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": false
           }
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "European Pre-Market Summary 15th October 2026: European bourses set for a dire open; focus on the tech-sell off after the KOSPI slumped",
+          "url": "https://www.newsquawk.com/headlines/european-pre-market-summary-15th-october-2026-european-bourses-set-for-a-dire-open-focus-on-the-tech-sell-off-after-the-kospi-slumped",
+          "published_at_utc": "2026-10-15T06:35:00+00:00",
+          "first_seen_at_utc": "2026-10-15T06:49:36.672612+00:00",
+          "publisher_age_minutes": 14.6,
+          "source_latency_to_first_seen_minutes": 14.6,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "EUR"
+          ],
+          "affected_pairs": [
+            "EURUSD",
+            "EURJPY",
+            "EURCAD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "Newsquawk Daily European Equity Opening News - 15th October 2026",
+          "url": "https://www.newsquawk.com/headlines/newsquawk-daily-european-equity-opening-news---15th-october-2026",
+          "published_at_utc": "2026-10-15T06:05:00+00:00",
+          "first_seen_at_utc": "2026-10-15T06:49:36.672612+00:00",
+          "publisher_age_minutes": 44.6,
+          "source_latency_to_first_seen_minutes": 44.6,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "EUR"
+          ],
+          "affected_pairs": [
+            "EURUSD",
+            "EURJPY",
+            "EURCAD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
         }
       ],
       "source_coverage_incomplete": true,
@@ -743,7 +759,7 @@
           "url": "https://www.newsquawk.com/headlines/iimf-official-says-middle-east-forecast-assumes-oil-prices-are-to-remain-higher-and-sees-return-to-normal-trade-and-shipping-in-the-first-quarter-2027-while-imf-official-says-all-risks-are-tilting-to-the-downside",
           "published_at_utc": "2026-10-15T05:09:00+00:00",
           "first_seen_at_utc": "2026-10-15T06:03:18.788715+00:00",
-          "publisher_age_minutes": 54.3,
+          "publisher_age_minutes": 100.6,
           "source_latency_to_first_seen_minutes": 54.3,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -756,6 +772,58 @@
           "affected_pairs": [
             "EURCAD",
             "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "European Pre-Market Summary 15th October 2026: European bourses set for a dire open; focus on the tech-sell off after the KOSPI slumped",
+          "url": "https://www.newsquawk.com/headlines/european-pre-market-summary-15th-october-2026-european-bourses-set-for-a-dire-open-focus-on-the-tech-sell-off-after-the-kospi-slumped",
+          "published_at_utc": "2026-10-15T06:35:00+00:00",
+          "first_seen_at_utc": "2026-10-15T06:49:36.672612+00:00",
+          "publisher_age_minutes": 14.6,
+          "source_latency_to_first_seen_minutes": 14.6,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "EUR"
+          ],
+          "affected_pairs": [
+            "EURUSD",
+            "EURJPY",
+            "EURCAD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "Newsquawk Daily European Equity Opening News - 15th October 2026",
+          "url": "https://www.newsquawk.com/headlines/newsquawk-daily-european-equity-opening-news---15th-october-2026",
+          "published_at_utc": "2026-10-15T06:05:00+00:00",
+          "first_seen_at_utc": "2026-10-15T06:49:36.672612+00:00",
+          "publisher_age_minutes": 44.6,
+          "source_latency_to_first_seen_minutes": 44.6,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "EUR"
+          ],
+          "affected_pairs": [
+            "EURUSD",
+            "EURJPY",
+            "EURCAD",
+            "EURGBP"
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
@@ -777,7 +845,7 @@
           "url": "https://www.newsquawk.com/headlines/iimf-official-says-middle-east-forecast-assumes-oil-prices-are-to-remain-higher-and-sees-return-to-normal-trade-and-shipping-in-the-first-quarter-2027-while-imf-official-says-all-risks-are-tilting-to-the-downside",
           "published_at_utc": "2026-10-15T05:09:00+00:00",
           "first_seen_at_utc": "2026-10-15T06:03:18.788715+00:00",
-          "publisher_age_minutes": 54.3,
+          "publisher_age_minutes": 100.6,
           "source_latency_to_first_seen_minutes": 54.3,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -802,95 +870,60 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "EURGBP": {
-      "status": "POLICY_REACTION_CHECK",
-      "policy_headlines": [
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "BoE's chief economist Pill said should not give impression that hike now would be at the start of a series of increases",
-          "url": "https://www.newsquawk.com/headlines/boes-chief-economist-pill-said-should-not-give-impression-that-hike-now-would-be-at-the-start-of-a-series-of-increases",
-          "published_at_utc": "2026-10-15T04:22:00+00:00",
-          "first_seen_at_utc": "2026-10-15T06:03:18.788715+00:00",
-          "publisher_age_minutes": 101.3,
-          "source_latency_to_first_seen_minutes": 101.3,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
-          "currencies": [
-            "GBP"
-          ],
-          "affected_pairs": [
-            "GBPUSD",
-            "EURGBP"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-15T04:15:00+00:00",
-            "pre_event_price": 0.84716,
-            "first_post_event_close_utc": "2026-10-15T04:30:00+00:00",
-            "first_post_event_price": 0.84697,
-            "first_post_event_change_pips": -1.9,
-            "second_post_event_close_utc": "2026-10-15T04:45:00+00:00",
-            "second_post_event_price": 0.84681,
-            "second_post_event_change_pips": -1.6,
-            "net_two_bar_event_window_pips": -3.5,
-            "early_initial_direction": "DOWN",
-            "second_bar_direction": "DOWN",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
-        }
-      ],
+      "status": "HEADLINES_PRESENT",
+      "policy_headlines": [],
       "news_headlines": [
         {
           "provider": "Newsquawk_public_delayed",
-          "title": "BoE's chief economist Pill said should not give impression that hike now would be at the start of a series of increases",
-          "url": "https://www.newsquawk.com/headlines/boes-chief-economist-pill-said-should-not-give-impression-that-hike-now-would-be-at-the-start-of-a-series-of-increases",
-          "published_at_utc": "2026-10-15T04:22:00+00:00",
-          "first_seen_at_utc": "2026-10-15T06:03:18.788715+00:00",
-          "publisher_age_minutes": 101.3,
-          "source_latency_to_first_seen_minutes": 101.3,
+          "title": "European Pre-Market Summary 15th October 2026: European bourses set for a dire open; focus on the tech-sell off after the KOSPI slumped",
+          "url": "https://www.newsquawk.com/headlines/european-pre-market-summary-15th-october-2026-european-bourses-set-for-a-dire-open-focus-on-the-tech-sell-off-after-the-kospi-slumped",
+          "published_at_utc": "2026-10-15T06:35:00+00:00",
+          "first_seen_at_utc": "2026-10-15T06:49:36.672612+00:00",
+          "publisher_age_minutes": 14.6,
+          "source_latency_to_first_seen_minutes": 14.6,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "CENTRAL_BANK_POLICY",
-          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "type": "GENERAL",
+          "priority": "CONTEXT",
           "currencies": [
-            "GBP"
+            "EUR"
           ],
           "affected_pairs": [
-            "GBPUSD",
+            "EURUSD",
+            "EURJPY",
+            "EURCAD",
             "EURGBP"
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false,
-          "price_reaction_observation": {
-            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
-            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
-            "no_intrabar_assumptions": true,
-            "causal_link_verified": false,
-            "first_seen_before_market_reaction": false,
-            "pre_event_close_utc": "2026-10-15T04:15:00+00:00",
-            "pre_event_price": 0.84716,
-            "first_post_event_close_utc": "2026-10-15T04:30:00+00:00",
-            "first_post_event_price": 0.84697,
-            "first_post_event_change_pips": -1.9,
-            "second_post_event_close_utc": "2026-10-15T04:45:00+00:00",
-            "second_post_event_price": 0.84681,
-            "second_post_event_change_pips": -1.6,
-            "net_two_bar_event_window_pips": -3.5,
-            "early_initial_direction": "DOWN",
-            "second_bar_direction": "DOWN",
-            "retrospective_if_first_seen_after_first_candle": true
-          }
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "Newsquawk Daily European Equity Opening News - 15th October 2026",
+          "url": "https://www.newsquawk.com/headlines/newsquawk-daily-european-equity-opening-news---15th-october-2026",
+          "published_at_utc": "2026-10-15T06:05:00+00:00",
+          "first_seen_at_utc": "2026-10-15T06:49:36.672612+00:00",
+          "publisher_age_minutes": 44.6,
+          "source_latency_to_first_seen_minutes": 44.6,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "EUR"
+          ],
+          "affected_pairs": [
+            "EURUSD",
+            "EURJPY",
+            "EURCAD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
         }
       ],
       "source_coverage_incomplete": true,
