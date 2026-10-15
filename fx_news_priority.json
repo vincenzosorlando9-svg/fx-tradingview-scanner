@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-15T09:34:51.852127+00:00",
+  "generated_at_utc": "2026-10-15T11:33:00.527289+00:00",
   "target_refresh_minutes": 5,
   "actual_actions_schedule_not_guaranteed": true,
   "approved_source_names": [
@@ -23,17 +23,122 @@
   "recent_headlines": [
     {
       "provider": "Newsquawk_public_delayed",
-      "title": "[MARKET ANALYSIS] DXY pressured on lower yields & AI concerns; AUD underperforms post-jobs data",
-      "url": "https://www.newsquawk.com/headlines/market-analysis-dxy-pressured-on-lower-yields--ai-concerns-aud-underperforms-post-jobs-data",
-      "published_at_utc": "2026-10-15T08:48:00+00:00",
-      "first_seen_at_utc": "2026-10-15T09:34:51.852127+00:00",
-      "publisher_age_minutes": 46.9,
-      "source_latency_to_first_seen_minutes": 46.9,
+      "title": "ECB's Moulin says France can cut the deficit to 3% in three years",
+      "url": "https://www.newsquawk.com/headlines/ecbs-moulin-says-france-can-cut-the-deficit-to-3-in-three-years",
+      "published_at_utc": "2026-10-15T10:29:00+00:00",
+      "first_seen_at_utc": "2026-10-15T11:33:00.527289+00:00",
+      "publisher_age_minutes": 64.0,
+      "source_latency_to_first_seen_minutes": 64.0,
       "source_public_delay_minutes_at_least": 20,
       "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
       "not_pro_feed_or_first_seen_in_real_time": true,
-      "type": "MACRO_DATA_OR_YIELD",
-      "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+      "type": "CENTRAL_BANK_POLICY",
+      "priority": "HIGH_POLICY_REACTION_CHECK",
+      "currencies": [
+        "EUR"
+      ],
+      "affected_pairs": [
+        "EURUSD",
+        "EURJPY",
+        "EURCAD",
+        "EURGBP"
+      ],
+      "headline_direction": "UNDETERMINED",
+      "market_reaction": "NOT_VERIFIED",
+      "broker_execution_allowed": false,
+      "price_reactions": {
+        "EURUSD": {
+          "status": "FIRST_MOVE_REVERSED_ON_SECOND_M15",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false,
+          "pre_event_close_utc": "2026-10-15T10:15:00+00:00",
+          "pre_event_price": 1.12116,
+          "first_post_event_close_utc": "2026-10-15T10:30:00+00:00",
+          "first_post_event_price": 1.12046,
+          "first_post_event_change_pips": -7.0,
+          "second_post_event_close_utc": "2026-10-15T10:45:00+00:00",
+          "second_post_event_price": 1.12087,
+          "second_post_event_change_pips": 4.1,
+          "net_two_bar_event_window_pips": -2.9,
+          "early_initial_direction": "DOWN",
+          "second_bar_direction": "UP",
+          "retrospective_if_first_seen_after_first_candle": true
+        },
+        "EURJPY": {
+          "status": "FIRST_MOVE_REVERSED_ON_SECOND_M15",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false,
+          "pre_event_close_utc": "2026-10-15T10:15:00+00:00",
+          "pre_event_price": 176.822,
+          "first_post_event_close_utc": "2026-10-15T10:30:00+00:00",
+          "first_post_event_price": 176.783,
+          "first_post_event_change_pips": -3.9,
+          "second_post_event_close_utc": "2026-10-15T10:45:00+00:00",
+          "second_post_event_price": 176.917,
+          "second_post_event_change_pips": 13.4,
+          "net_two_bar_event_window_pips": 9.5,
+          "early_initial_direction": "DOWN",
+          "second_bar_direction": "UP",
+          "retrospective_if_first_seen_after_first_candle": true
+        },
+        "EURCAD": {
+          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false,
+          "pre_event_close_utc": "2026-10-15T10:15:00+00:00",
+          "pre_event_price": 1.59248,
+          "first_post_event_close_utc": "2026-10-15T10:30:00+00:00",
+          "first_post_event_price": 1.59185,
+          "first_post_event_change_pips": -6.3,
+          "second_post_event_close_utc": "2026-10-15T10:45:00+00:00",
+          "second_post_event_price": 1.592,
+          "second_post_event_change_pips": 1.5,
+          "net_two_bar_event_window_pips": -4.8,
+          "early_initial_direction": "DOWN",
+          "second_bar_direction": "UP",
+          "retrospective_if_first_seen_after_first_candle": true
+        },
+        "EURGBP": {
+          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false,
+          "pre_event_close_utc": "2026-10-15T10:15:00+00:00",
+          "pre_event_price": 0.8459,
+          "first_post_event_close_utc": "2026-10-15T10:30:00+00:00",
+          "first_post_event_price": 0.8457,
+          "first_post_event_change_pips": -2.0,
+          "second_post_event_close_utc": "2026-10-15T10:45:00+00:00",
+          "second_post_event_price": 0.84593,
+          "second_post_event_change_pips": 2.3,
+          "net_two_bar_event_window_pips": 0.3,
+          "early_initial_direction": "DOWN",
+          "second_bar_direction": "UP",
+          "retrospective_if_first_seen_after_first_candle": true
+        }
+      },
+      "all_price_reactions_are_noncausal_observations": true
+    },
+    {
+      "provider": "Newsquawk_public_delayed",
+      "title": "[CALENDAR ADDITION] Fed's Goolsbee (2027 Voter, Neutral) to speak on a podcast at 10:00EDT/15:00BST",
+      "url": "https://www.newsquawk.com/headlines/calendar-additon-feds-goolsbee-2027-voter-neutral-to-speak-on-a-podcast-at-1000edt1500bst",
+      "published_at_utc": "2026-10-15T10:14:00+00:00",
+      "first_seen_at_utc": "2026-10-15T11:33:00.527289+00:00",
+      "publisher_age_minutes": 79.0,
+      "source_latency_to_first_seen_minutes": 79.0,
+      "source_public_delay_minutes_at_least": 20,
+      "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+      "not_pro_feed_or_first_seen_in_real_time": true,
+      "type": "GENERAL",
+      "priority": "CONTEXT",
       "currencies": [
         "USD"
       ],
@@ -48,63 +153,6 @@
       "headline_direction": "UNDETERMINED",
       "market_reaction": "NOT_VERIFIED",
       "broker_execution_allowed": false
-    },
-    {
-      "provider": "Newsquawk_public_delayed",
-      "title": "China is reportedly open to still approve rare earth licenses to Europe, CNBC reports",
-      "url": "https://www.newsquawk.com/headlines/china-is-reportedly-open-to-still-approve-rare-earth-licenses-to-europe-cnbc-reports",
-      "published_at_utc": "2026-10-15T09:33:00+00:00",
-      "first_seen_at_utc": "2026-10-15T09:34:51.852127+00:00",
-      "publisher_age_minutes": 1.9,
-      "source_latency_to_first_seen_minutes": 1.9,
-      "source_public_delay_minutes_at_least": 20,
-      "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-      "not_pro_feed_or_first_seen_in_real_time": true,
-      "type": "GENERAL",
-      "priority": "CONTEXT",
-      "currencies": [
-        "CNY",
-        "EUR"
-      ],
-      "affected_pairs": [
-        "AUDUSD",
-        "NZDUSD",
-        "EURUSD",
-        "AUDJPY",
-        "NZDJPY",
-        "EURJPY",
-        "EURCAD",
-        "EURGBP"
-      ],
-      "headline_direction": "UNDETERMINED",
-      "market_reaction": "NOT_VERIFIED",
-      "broker_execution_allowed": false
-    },
-    {
-      "provider": "Newsquawk_public_delayed",
-      "title": "Apple (AAPL) Chairman Cook says Apple Intelligence has been approved in China and the test version will be due later in October",
-      "url": "https://www.newsquawk.com/headlines/apple-aapl-chairman-cook-says-apple-intelligence-has-been-approved-in-china-and-the-test-version-will-be-due-later-in-october",
-      "published_at_utc": "2026-10-15T09:15:00+00:00",
-      "first_seen_at_utc": "2026-10-15T09:34:51.852127+00:00",
-      "publisher_age_minutes": 19.9,
-      "source_latency_to_first_seen_minutes": 19.9,
-      "source_public_delay_minutes_at_least": 20,
-      "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-      "not_pro_feed_or_first_seen_in_real_time": true,
-      "type": "GENERAL",
-      "priority": "CONTEXT",
-      "currencies": [
-        "CNY"
-      ],
-      "affected_pairs": [
-        "AUDUSD",
-        "NZDUSD",
-        "AUDJPY",
-        "NZDJPY"
-      ],
-      "headline_direction": "UNDETERMINED",
-      "market_reaction": "NOT_VERIFIED",
-      "broker_execution_allowed": false
     }
   ],
   "pairs": {
@@ -114,17 +162,17 @@
       "news_headlines": [
         {
           "provider": "Newsquawk_public_delayed",
-          "title": "[MARKET ANALYSIS] DXY pressured on lower yields & AI concerns; AUD underperforms post-jobs data",
-          "url": "https://www.newsquawk.com/headlines/market-analysis-dxy-pressured-on-lower-yields--ai-concerns-aud-underperforms-post-jobs-data",
-          "published_at_utc": "2026-10-15T08:48:00+00:00",
-          "first_seen_at_utc": "2026-10-15T09:34:51.852127+00:00",
-          "publisher_age_minutes": 46.9,
-          "source_latency_to_first_seen_minutes": 46.9,
+          "title": "[CALENDAR ADDITION] Fed's Goolsbee (2027 Voter, Neutral) to speak on a podcast at 10:00EDT/15:00BST",
+          "url": "https://www.newsquawk.com/headlines/calendar-additon-feds-goolsbee-2027-voter-neutral-to-speak-on-a-podcast-at-1000edt1500bst",
+          "published_at_utc": "2026-10-15T10:14:00+00:00",
+          "first_seen_at_utc": "2026-10-15T11:33:00.527289+00:00",
+          "publisher_age_minutes": 79.0,
+          "source_latency_to_first_seen_minutes": 79.0,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "type": "GENERAL",
+          "priority": "CONTEXT",
           "currencies": [
             "USD"
           ],
@@ -135,63 +183,6 @@
             "GBPUSD",
             "USDJPY",
             "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "China is reportedly open to still approve rare earth licenses to Europe, CNBC reports",
-          "url": "https://www.newsquawk.com/headlines/china-is-reportedly-open-to-still-approve-rare-earth-licenses-to-europe-cnbc-reports",
-          "published_at_utc": "2026-10-15T09:33:00+00:00",
-          "first_seen_at_utc": "2026-10-15T09:34:51.852127+00:00",
-          "publisher_age_minutes": 1.9,
-          "source_latency_to_first_seen_minutes": 1.9,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "CNY",
-            "EUR"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "AUDJPY",
-            "NZDJPY",
-            "EURJPY",
-            "EURCAD",
-            "EURGBP"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "Apple (AAPL) Chairman Cook says Apple Intelligence has been approved in China and the test version will be due later in October",
-          "url": "https://www.newsquawk.com/headlines/apple-aapl-chairman-cook-says-apple-intelligence-has-been-approved-in-china-and-the-test-version-will-be-due-later-in-october",
-          "published_at_utc": "2026-10-15T09:15:00+00:00",
-          "first_seen_at_utc": "2026-10-15T09:34:51.852127+00:00",
-          "publisher_age_minutes": 19.9,
-          "source_latency_to_first_seen_minutes": 19.9,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "CNY"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "AUDJPY",
-            "NZDJPY"
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
@@ -209,17 +200,17 @@
       "news_headlines": [
         {
           "provider": "Newsquawk_public_delayed",
-          "title": "[MARKET ANALYSIS] DXY pressured on lower yields & AI concerns; AUD underperforms post-jobs data",
-          "url": "https://www.newsquawk.com/headlines/market-analysis-dxy-pressured-on-lower-yields--ai-concerns-aud-underperforms-post-jobs-data",
-          "published_at_utc": "2026-10-15T08:48:00+00:00",
-          "first_seen_at_utc": "2026-10-15T09:34:51.852127+00:00",
-          "publisher_age_minutes": 46.9,
-          "source_latency_to_first_seen_minutes": 46.9,
+          "title": "[CALENDAR ADDITION] Fed's Goolsbee (2027 Voter, Neutral) to speak on a podcast at 10:00EDT/15:00BST",
+          "url": "https://www.newsquawk.com/headlines/calendar-additon-feds-goolsbee-2027-voter-neutral-to-speak-on-a-podcast-at-1000edt1500bst",
+          "published_at_utc": "2026-10-15T10:14:00+00:00",
+          "first_seen_at_utc": "2026-10-15T11:33:00.527289+00:00",
+          "publisher_age_minutes": 79.0,
+          "source_latency_to_first_seen_minutes": 79.0,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "type": "GENERAL",
+          "priority": "CONTEXT",
           "currencies": [
             "USD"
           ],
@@ -230,63 +221,6 @@
             "GBPUSD",
             "USDJPY",
             "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "China is reportedly open to still approve rare earth licenses to Europe, CNBC reports",
-          "url": "https://www.newsquawk.com/headlines/china-is-reportedly-open-to-still-approve-rare-earth-licenses-to-europe-cnbc-reports",
-          "published_at_utc": "2026-10-15T09:33:00+00:00",
-          "first_seen_at_utc": "2026-10-15T09:34:51.852127+00:00",
-          "publisher_age_minutes": 1.9,
-          "source_latency_to_first_seen_minutes": 1.9,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "CNY",
-            "EUR"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "AUDJPY",
-            "NZDJPY",
-            "EURJPY",
-            "EURCAD",
-            "EURGBP"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "Apple (AAPL) Chairman Cook says Apple Intelligence has been approved in China and the test version will be due later in October",
-          "url": "https://www.newsquawk.com/headlines/apple-aapl-chairman-cook-says-apple-intelligence-has-been-approved-in-china-and-the-test-version-will-be-due-later-in-october",
-          "published_at_utc": "2026-10-15T09:15:00+00:00",
-          "first_seen_at_utc": "2026-10-15T09:34:51.852127+00:00",
-          "publisher_age_minutes": 19.9,
-          "source_latency_to_first_seen_minutes": 19.9,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "CNY"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "AUDJPY",
-            "NZDJPY"
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
@@ -299,22 +233,113 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "EURUSD": {
-      "status": "HEADLINES_PRESENT",
-      "policy_headlines": [],
-      "news_headlines": [
+      "status": "POLICY_REACTION_CHECK",
+      "policy_headlines": [
         {
           "provider": "Newsquawk_public_delayed",
-          "title": "[MARKET ANALYSIS] DXY pressured on lower yields & AI concerns; AUD underperforms post-jobs data",
-          "url": "https://www.newsquawk.com/headlines/market-analysis-dxy-pressured-on-lower-yields--ai-concerns-aud-underperforms-post-jobs-data",
-          "published_at_utc": "2026-10-15T08:48:00+00:00",
-          "first_seen_at_utc": "2026-10-15T09:34:51.852127+00:00",
-          "publisher_age_minutes": 46.9,
-          "source_latency_to_first_seen_minutes": 46.9,
+          "title": "ECB's Moulin says France can cut the deficit to 3% in three years",
+          "url": "https://www.newsquawk.com/headlines/ecbs-moulin-says-france-can-cut-the-deficit-to-3-in-three-years",
+          "published_at_utc": "2026-10-15T10:29:00+00:00",
+          "first_seen_at_utc": "2026-10-15T11:33:00.527289+00:00",
+          "publisher_age_minutes": 64.0,
+          "source_latency_to_first_seen_minutes": 64.0,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "EUR"
+          ],
+          "affected_pairs": [
+            "EURUSD",
+            "EURJPY",
+            "EURCAD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_MOVE_REVERSED_ON_SECOND_M15",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-15T10:15:00+00:00",
+            "pre_event_price": 1.12116,
+            "first_post_event_close_utc": "2026-10-15T10:30:00+00:00",
+            "first_post_event_price": 1.12046,
+            "first_post_event_change_pips": -7.0,
+            "second_post_event_close_utc": "2026-10-15T10:45:00+00:00",
+            "second_post_event_price": 1.12087,
+            "second_post_event_change_pips": 4.1,
+            "net_two_bar_event_window_pips": -2.9,
+            "early_initial_direction": "DOWN",
+            "second_bar_direction": "UP",
+            "retrospective_if_first_seen_after_first_candle": true
+          }
+        }
+      ],
+      "news_headlines": [
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "ECB's Moulin says France can cut the deficit to 3% in three years",
+          "url": "https://www.newsquawk.com/headlines/ecbs-moulin-says-france-can-cut-the-deficit-to-3-in-three-years",
+          "published_at_utc": "2026-10-15T10:29:00+00:00",
+          "first_seen_at_utc": "2026-10-15T11:33:00.527289+00:00",
+          "publisher_age_minutes": 64.0,
+          "source_latency_to_first_seen_minutes": 64.0,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "EUR"
+          ],
+          "affected_pairs": [
+            "EURUSD",
+            "EURJPY",
+            "EURCAD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_MOVE_REVERSED_ON_SECOND_M15",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-15T10:15:00+00:00",
+            "pre_event_price": 1.12116,
+            "first_post_event_close_utc": "2026-10-15T10:30:00+00:00",
+            "first_post_event_price": 1.12046,
+            "first_post_event_change_pips": -7.0,
+            "second_post_event_close_utc": "2026-10-15T10:45:00+00:00",
+            "second_post_event_price": 1.12087,
+            "second_post_event_change_pips": 4.1,
+            "net_two_bar_event_window_pips": -2.9,
+            "early_initial_direction": "DOWN",
+            "second_bar_direction": "UP",
+            "retrospective_if_first_seen_after_first_candle": true
+          }
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "[CALENDAR ADDITION] Fed's Goolsbee (2027 Voter, Neutral) to speak on a podcast at 10:00EDT/15:00BST",
+          "url": "https://www.newsquawk.com/headlines/calendar-additon-feds-goolsbee-2027-voter-neutral-to-speak-on-a-podcast-at-1000edt1500bst",
+          "published_at_utc": "2026-10-15T10:14:00+00:00",
+          "first_seen_at_utc": "2026-10-15T11:33:00.527289+00:00",
+          "publisher_age_minutes": 79.0,
+          "source_latency_to_first_seen_minutes": 79.0,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
           "currencies": [
             "USD"
           ],
@@ -325,37 +350,6 @@
             "GBPUSD",
             "USDJPY",
             "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "China is reportedly open to still approve rare earth licenses to Europe, CNBC reports",
-          "url": "https://www.newsquawk.com/headlines/china-is-reportedly-open-to-still-approve-rare-earth-licenses-to-europe-cnbc-reports",
-          "published_at_utc": "2026-10-15T09:33:00+00:00",
-          "first_seen_at_utc": "2026-10-15T09:34:51.852127+00:00",
-          "publisher_age_minutes": 1.9,
-          "source_latency_to_first_seen_minutes": 1.9,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "CNY",
-            "EUR"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "AUDJPY",
-            "NZDJPY",
-            "EURJPY",
-            "EURCAD",
-            "EURGBP"
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
@@ -373,17 +367,17 @@
       "news_headlines": [
         {
           "provider": "Newsquawk_public_delayed",
-          "title": "[MARKET ANALYSIS] DXY pressured on lower yields & AI concerns; AUD underperforms post-jobs data",
-          "url": "https://www.newsquawk.com/headlines/market-analysis-dxy-pressured-on-lower-yields--ai-concerns-aud-underperforms-post-jobs-data",
-          "published_at_utc": "2026-10-15T08:48:00+00:00",
-          "first_seen_at_utc": "2026-10-15T09:34:51.852127+00:00",
-          "publisher_age_minutes": 46.9,
-          "source_latency_to_first_seen_minutes": 46.9,
+          "title": "[CALENDAR ADDITION] Fed's Goolsbee (2027 Voter, Neutral) to speak on a podcast at 10:00EDT/15:00BST",
+          "url": "https://www.newsquawk.com/headlines/calendar-additon-feds-goolsbee-2027-voter-neutral-to-speak-on-a-podcast-at-1000edt1500bst",
+          "published_at_utc": "2026-10-15T10:14:00+00:00",
+          "first_seen_at_utc": "2026-10-15T11:33:00.527289+00:00",
+          "publisher_age_minutes": 79.0,
+          "source_latency_to_first_seen_minutes": 79.0,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "type": "GENERAL",
+          "priority": "CONTEXT",
           "currencies": [
             "USD"
           ],
@@ -411,17 +405,17 @@
       "news_headlines": [
         {
           "provider": "Newsquawk_public_delayed",
-          "title": "[MARKET ANALYSIS] DXY pressured on lower yields & AI concerns; AUD underperforms post-jobs data",
-          "url": "https://www.newsquawk.com/headlines/market-analysis-dxy-pressured-on-lower-yields--ai-concerns-aud-underperforms-post-jobs-data",
-          "published_at_utc": "2026-10-15T08:48:00+00:00",
-          "first_seen_at_utc": "2026-10-15T09:34:51.852127+00:00",
-          "publisher_age_minutes": 46.9,
-          "source_latency_to_first_seen_minutes": 46.9,
+          "title": "[CALENDAR ADDITION] Fed's Goolsbee (2027 Voter, Neutral) to speak on a podcast at 10:00EDT/15:00BST",
+          "url": "https://www.newsquawk.com/headlines/calendar-additon-feds-goolsbee-2027-voter-neutral-to-speak-on-a-podcast-at-1000edt1500bst",
+          "published_at_utc": "2026-10-15T10:14:00+00:00",
+          "first_seen_at_utc": "2026-10-15T11:33:00.527289+00:00",
+          "publisher_age_minutes": 79.0,
+          "source_latency_to_first_seen_minutes": 79.0,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "type": "GENERAL",
+          "priority": "CONTEXT",
           "currencies": [
             "USD"
           ],
@@ -444,173 +438,117 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "AUDJPY": {
-      "status": "HEADLINES_PRESENT",
+      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
       "policy_headlines": [],
-      "news_headlines": [
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "China is reportedly open to still approve rare earth licenses to Europe, CNBC reports",
-          "url": "https://www.newsquawk.com/headlines/china-is-reportedly-open-to-still-approve-rare-earth-licenses-to-europe-cnbc-reports",
-          "published_at_utc": "2026-10-15T09:33:00+00:00",
-          "first_seen_at_utc": "2026-10-15T09:34:51.852127+00:00",
-          "publisher_age_minutes": 1.9,
-          "source_latency_to_first_seen_minutes": 1.9,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "CNY",
-            "EUR"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "AUDJPY",
-            "NZDJPY",
-            "EURJPY",
-            "EURCAD",
-            "EURGBP"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "Apple (AAPL) Chairman Cook says Apple Intelligence has been approved in China and the test version will be due later in October",
-          "url": "https://www.newsquawk.com/headlines/apple-aapl-chairman-cook-says-apple-intelligence-has-been-approved-in-china-and-the-test-version-will-be-due-later-in-october",
-          "published_at_utc": "2026-10-15T09:15:00+00:00",
-          "first_seen_at_utc": "2026-10-15T09:34:51.852127+00:00",
-          "publisher_age_minutes": 19.9,
-          "source_latency_to_first_seen_minutes": 19.9,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "CNY"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "AUDJPY",
-            "NZDJPY"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        }
-      ],
+      "news_headlines": [],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "NZDJPY": {
-      "status": "HEADLINES_PRESENT",
+      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
       "policy_headlines": [],
-      "news_headlines": [
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "China is reportedly open to still approve rare earth licenses to Europe, CNBC reports",
-          "url": "https://www.newsquawk.com/headlines/china-is-reportedly-open-to-still-approve-rare-earth-licenses-to-europe-cnbc-reports",
-          "published_at_utc": "2026-10-15T09:33:00+00:00",
-          "first_seen_at_utc": "2026-10-15T09:34:51.852127+00:00",
-          "publisher_age_minutes": 1.9,
-          "source_latency_to_first_seen_minutes": 1.9,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "CNY",
-            "EUR"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "EURUSD",
-            "AUDJPY",
-            "NZDJPY",
-            "EURJPY",
-            "EURCAD",
-            "EURGBP"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        },
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "Apple (AAPL) Chairman Cook says Apple Intelligence has been approved in China and the test version will be due later in October",
-          "url": "https://www.newsquawk.com/headlines/apple-aapl-chairman-cook-says-apple-intelligence-has-been-approved-in-china-and-the-test-version-will-be-due-later-in-october",
-          "published_at_utc": "2026-10-15T09:15:00+00:00",
-          "first_seen_at_utc": "2026-10-15T09:34:51.852127+00:00",
-          "publisher_age_minutes": 19.9,
-          "source_latency_to_first_seen_minutes": 19.9,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "CNY"
-          ],
-          "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
-            "AUDJPY",
-            "NZDJPY"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        }
-      ],
+      "news_headlines": [],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "EURJPY": {
-      "status": "HEADLINES_PRESENT",
-      "policy_headlines": [],
-      "news_headlines": [
+      "status": "POLICY_REACTION_CHECK",
+      "policy_headlines": [
         {
           "provider": "Newsquawk_public_delayed",
-          "title": "China is reportedly open to still approve rare earth licenses to Europe, CNBC reports",
-          "url": "https://www.newsquawk.com/headlines/china-is-reportedly-open-to-still-approve-rare-earth-licenses-to-europe-cnbc-reports",
-          "published_at_utc": "2026-10-15T09:33:00+00:00",
-          "first_seen_at_utc": "2026-10-15T09:34:51.852127+00:00",
-          "publisher_age_minutes": 1.9,
-          "source_latency_to_first_seen_minutes": 1.9,
+          "title": "ECB's Moulin says France can cut the deficit to 3% in three years",
+          "url": "https://www.newsquawk.com/headlines/ecbs-moulin-says-france-can-cut-the-deficit-to-3-in-three-years",
+          "published_at_utc": "2026-10-15T10:29:00+00:00",
+          "first_seen_at_utc": "2026-10-15T11:33:00.527289+00:00",
+          "publisher_age_minutes": 64.0,
+          "source_latency_to_first_seen_minutes": 64.0,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
           "currencies": [
-            "CNY",
             "EUR"
           ],
           "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
             "EURUSD",
-            "AUDJPY",
-            "NZDJPY",
             "EURJPY",
             "EURCAD",
             "EURGBP"
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_MOVE_REVERSED_ON_SECOND_M15",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-15T10:15:00+00:00",
+            "pre_event_price": 176.822,
+            "first_post_event_close_utc": "2026-10-15T10:30:00+00:00",
+            "first_post_event_price": 176.783,
+            "first_post_event_change_pips": -3.9,
+            "second_post_event_close_utc": "2026-10-15T10:45:00+00:00",
+            "second_post_event_price": 176.917,
+            "second_post_event_change_pips": 13.4,
+            "net_two_bar_event_window_pips": 9.5,
+            "early_initial_direction": "DOWN",
+            "second_bar_direction": "UP",
+            "retrospective_if_first_seen_after_first_candle": true
+          }
+        }
+      ],
+      "news_headlines": [
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "ECB's Moulin says France can cut the deficit to 3% in three years",
+          "url": "https://www.newsquawk.com/headlines/ecbs-moulin-says-france-can-cut-the-deficit-to-3-in-three-years",
+          "published_at_utc": "2026-10-15T10:29:00+00:00",
+          "first_seen_at_utc": "2026-10-15T11:33:00.527289+00:00",
+          "publisher_age_minutes": 64.0,
+          "source_latency_to_first_seen_minutes": 64.0,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "EUR"
+          ],
+          "affected_pairs": [
+            "EURUSD",
+            "EURJPY",
+            "EURCAD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_MOVE_REVERSED_ON_SECOND_M15",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-15T10:15:00+00:00",
+            "pre_event_price": 176.822,
+            "first_post_event_close_utc": "2026-10-15T10:30:00+00:00",
+            "first_post_event_price": 176.783,
+            "first_post_event_change_pips": -3.9,
+            "second_post_event_close_utc": "2026-10-15T10:45:00+00:00",
+            "second_post_event_price": 176.917,
+            "second_post_event_change_pips": 13.4,
+            "net_two_bar_event_window_pips": 9.5,
+            "early_initial_direction": "DOWN",
+            "second_bar_direction": "UP",
+            "retrospective_if_first_seen_after_first_candle": true
+          }
         }
       ],
       "source_coverage_incomplete": true,
@@ -619,39 +557,99 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "EURCAD": {
-      "status": "HEADLINES_PRESENT",
-      "policy_headlines": [],
-      "news_headlines": [
+      "status": "POLICY_REACTION_CHECK",
+      "policy_headlines": [
         {
           "provider": "Newsquawk_public_delayed",
-          "title": "China is reportedly open to still approve rare earth licenses to Europe, CNBC reports",
-          "url": "https://www.newsquawk.com/headlines/china-is-reportedly-open-to-still-approve-rare-earth-licenses-to-europe-cnbc-reports",
-          "published_at_utc": "2026-10-15T09:33:00+00:00",
-          "first_seen_at_utc": "2026-10-15T09:34:51.852127+00:00",
-          "publisher_age_minutes": 1.9,
-          "source_latency_to_first_seen_minutes": 1.9,
+          "title": "ECB's Moulin says France can cut the deficit to 3% in three years",
+          "url": "https://www.newsquawk.com/headlines/ecbs-moulin-says-france-can-cut-the-deficit-to-3-in-three-years",
+          "published_at_utc": "2026-10-15T10:29:00+00:00",
+          "first_seen_at_utc": "2026-10-15T11:33:00.527289+00:00",
+          "publisher_age_minutes": 64.0,
+          "source_latency_to_first_seen_minutes": 64.0,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
           "currencies": [
-            "CNY",
             "EUR"
           ],
           "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
             "EURUSD",
-            "AUDJPY",
-            "NZDJPY",
             "EURJPY",
             "EURCAD",
             "EURGBP"
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-15T10:15:00+00:00",
+            "pre_event_price": 1.59248,
+            "first_post_event_close_utc": "2026-10-15T10:30:00+00:00",
+            "first_post_event_price": 1.59185,
+            "first_post_event_change_pips": -6.3,
+            "second_post_event_close_utc": "2026-10-15T10:45:00+00:00",
+            "second_post_event_price": 1.592,
+            "second_post_event_change_pips": 1.5,
+            "net_two_bar_event_window_pips": -4.8,
+            "early_initial_direction": "DOWN",
+            "second_bar_direction": "UP",
+            "retrospective_if_first_seen_after_first_candle": true
+          }
+        }
+      ],
+      "news_headlines": [
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "ECB's Moulin says France can cut the deficit to 3% in three years",
+          "url": "https://www.newsquawk.com/headlines/ecbs-moulin-says-france-can-cut-the-deficit-to-3-in-three-years",
+          "published_at_utc": "2026-10-15T10:29:00+00:00",
+          "first_seen_at_utc": "2026-10-15T11:33:00.527289+00:00",
+          "publisher_age_minutes": 64.0,
+          "source_latency_to_first_seen_minutes": 64.0,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "EUR"
+          ],
+          "affected_pairs": [
+            "EURUSD",
+            "EURJPY",
+            "EURCAD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-15T10:15:00+00:00",
+            "pre_event_price": 1.59248,
+            "first_post_event_close_utc": "2026-10-15T10:30:00+00:00",
+            "first_post_event_price": 1.59185,
+            "first_post_event_change_pips": -6.3,
+            "second_post_event_close_utc": "2026-10-15T10:45:00+00:00",
+            "second_post_event_price": 1.592,
+            "second_post_event_change_pips": 1.5,
+            "net_two_bar_event_window_pips": -4.8,
+            "early_initial_direction": "DOWN",
+            "second_bar_direction": "UP",
+            "retrospective_if_first_seen_after_first_candle": true
+          }
         }
       ],
       "source_coverage_incomplete": true,
@@ -665,17 +663,17 @@
       "news_headlines": [
         {
           "provider": "Newsquawk_public_delayed",
-          "title": "[MARKET ANALYSIS] DXY pressured on lower yields & AI concerns; AUD underperforms post-jobs data",
-          "url": "https://www.newsquawk.com/headlines/market-analysis-dxy-pressured-on-lower-yields--ai-concerns-aud-underperforms-post-jobs-data",
-          "published_at_utc": "2026-10-15T08:48:00+00:00",
-          "first_seen_at_utc": "2026-10-15T09:34:51.852127+00:00",
-          "publisher_age_minutes": 46.9,
-          "source_latency_to_first_seen_minutes": 46.9,
+          "title": "[CALENDAR ADDITION] Fed's Goolsbee (2027 Voter, Neutral) to speak on a podcast at 10:00EDT/15:00BST",
+          "url": "https://www.newsquawk.com/headlines/calendar-additon-feds-goolsbee-2027-voter-neutral-to-speak-on-a-podcast-at-1000edt1500bst",
+          "published_at_utc": "2026-10-15T10:14:00+00:00",
+          "first_seen_at_utc": "2026-10-15T11:33:00.527289+00:00",
+          "publisher_age_minutes": 79.0,
+          "source_latency_to_first_seen_minutes": 79.0,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "MACRO_DATA_OR_YIELD",
-          "priority": "MEDIUM_RELEASE_REACTION_CHECK",
+          "type": "GENERAL",
+          "priority": "CONTEXT",
           "currencies": [
             "USD"
           ],
@@ -698,39 +696,99 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "EURGBP": {
-      "status": "HEADLINES_PRESENT",
-      "policy_headlines": [],
-      "news_headlines": [
+      "status": "POLICY_REACTION_CHECK",
+      "policy_headlines": [
         {
           "provider": "Newsquawk_public_delayed",
-          "title": "China is reportedly open to still approve rare earth licenses to Europe, CNBC reports",
-          "url": "https://www.newsquawk.com/headlines/china-is-reportedly-open-to-still-approve-rare-earth-licenses-to-europe-cnbc-reports",
-          "published_at_utc": "2026-10-15T09:33:00+00:00",
-          "first_seen_at_utc": "2026-10-15T09:34:51.852127+00:00",
-          "publisher_age_minutes": 1.9,
-          "source_latency_to_first_seen_minutes": 1.9,
+          "title": "ECB's Moulin says France can cut the deficit to 3% in three years",
+          "url": "https://www.newsquawk.com/headlines/ecbs-moulin-says-france-can-cut-the-deficit-to-3-in-three-years",
+          "published_at_utc": "2026-10-15T10:29:00+00:00",
+          "first_seen_at_utc": "2026-10-15T11:33:00.527289+00:00",
+          "publisher_age_minutes": 64.0,
+          "source_latency_to_first_seen_minutes": 64.0,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
           "currencies": [
-            "CNY",
             "EUR"
           ],
           "affected_pairs": [
-            "AUDUSD",
-            "NZDUSD",
             "EURUSD",
-            "AUDJPY",
-            "NZDJPY",
             "EURJPY",
             "EURCAD",
             "EURGBP"
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-15T10:15:00+00:00",
+            "pre_event_price": 0.8459,
+            "first_post_event_close_utc": "2026-10-15T10:30:00+00:00",
+            "first_post_event_price": 0.8457,
+            "first_post_event_change_pips": -2.0,
+            "second_post_event_close_utc": "2026-10-15T10:45:00+00:00",
+            "second_post_event_price": 0.84593,
+            "second_post_event_change_pips": 2.3,
+            "net_two_bar_event_window_pips": 0.3,
+            "early_initial_direction": "DOWN",
+            "second_bar_direction": "UP",
+            "retrospective_if_first_seen_after_first_candle": true
+          }
+        }
+      ],
+      "news_headlines": [
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "ECB's Moulin says France can cut the deficit to 3% in three years",
+          "url": "https://www.newsquawk.com/headlines/ecbs-moulin-says-france-can-cut-the-deficit-to-3-in-three-years",
+          "published_at_utc": "2026-10-15T10:29:00+00:00",
+          "first_seen_at_utc": "2026-10-15T11:33:00.527289+00:00",
+          "publisher_age_minutes": 64.0,
+          "source_latency_to_first_seen_minutes": 64.0,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "EUR"
+          ],
+          "affected_pairs": [
+            "EURUSD",
+            "EURJPY",
+            "EURCAD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-15T10:15:00+00:00",
+            "pre_event_price": 0.8459,
+            "first_post_event_close_utc": "2026-10-15T10:30:00+00:00",
+            "first_post_event_price": 0.8457,
+            "first_post_event_change_pips": -2.0,
+            "second_post_event_close_utc": "2026-10-15T10:45:00+00:00",
+            "second_post_event_price": 0.84593,
+            "second_post_event_change_pips": 2.3,
+            "net_two_bar_event_window_pips": 0.3,
+            "early_initial_direction": "DOWN",
+            "second_bar_direction": "UP",
+            "retrospective_if_first_seen_after_first_candle": true
+          }
         }
       ],
       "source_coverage_incomplete": true,
