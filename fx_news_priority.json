@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-15T18:20:45.076966+00:00",
+  "generated_at_utc": "2026-10-15T19:32:56.082678+00:00",
   "target_refresh_minutes": 5,
   "actual_actions_schedule_not_guaranteed": true,
   "approved_source_names": [
@@ -27,7 +27,7 @@
       "url": "https://www.newsquawk.com/headlines/unicredit-ucg-im-receives-green-light-from-ecb-to-acquire-control-of-commerzbank-cbk-gy",
       "published_at_utc": "2026-10-15T18:02:00+00:00",
       "first_seen_at_utc": "2026-10-15T18:20:45.076966+00:00",
-      "publisher_age_minutes": 18.8,
+      "publisher_age_minutes": 90.9,
       "source_latency_to_first_seen_minutes": 18.8,
       "source_public_delay_minutes_at_least": 20,
       "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -48,7 +48,7 @@
       "broker_execution_allowed": false,
       "price_reactions": {
         "EURUSD": {
-          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
           "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
           "no_intrabar_assumptions": true,
           "causal_link_verified": false,
@@ -57,10 +57,17 @@
           "pre_event_price": 1.12168,
           "first_post_event_close_utc": "2026-10-15T18:15:00+00:00",
           "first_post_event_price": 1.1218,
-          "first_post_event_change_pips": 1.2
+          "first_post_event_change_pips": 1.2,
+          "second_post_event_close_utc": "2026-10-15T18:30:00+00:00",
+          "second_post_event_price": 1.12189,
+          "second_post_event_change_pips": 0.9,
+          "net_two_bar_event_window_pips": 2.1,
+          "early_initial_direction": "UP",
+          "second_bar_direction": "UP",
+          "retrospective_if_first_seen_after_first_candle": true
         },
         "EURJPY": {
-          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
           "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
           "no_intrabar_assumptions": true,
           "causal_link_verified": false,
@@ -69,10 +76,17 @@
           "pre_event_price": 177.347,
           "first_post_event_close_utc": "2026-10-15T18:15:00+00:00",
           "first_post_event_price": 177.321,
-          "first_post_event_change_pips": -2.6
+          "first_post_event_change_pips": -2.6,
+          "second_post_event_close_utc": "2026-10-15T18:30:00+00:00",
+          "second_post_event_price": 177.291,
+          "second_post_event_change_pips": -3.0,
+          "net_two_bar_event_window_pips": -5.6,
+          "early_initial_direction": "DOWN",
+          "second_bar_direction": "DOWN",
+          "retrospective_if_first_seen_after_first_candle": true
         },
         "EURCAD": {
-          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
           "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
           "no_intrabar_assumptions": true,
           "causal_link_verified": false,
@@ -81,10 +95,17 @@
           "pre_event_price": 1.59091,
           "first_post_event_close_utc": "2026-10-15T18:15:00+00:00",
           "first_post_event_price": 1.59113,
-          "first_post_event_change_pips": 2.2
+          "first_post_event_change_pips": 2.2,
+          "second_post_event_close_utc": "2026-10-15T18:30:00+00:00",
+          "second_post_event_price": 1.59093,
+          "second_post_event_change_pips": -2.0,
+          "net_two_bar_event_window_pips": 0.2,
+          "early_initial_direction": "UP",
+          "second_bar_direction": "DOWN",
+          "retrospective_if_first_seen_after_first_candle": true
         },
         "EURGBP": {
-          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
           "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
           "no_intrabar_assumptions": true,
           "causal_link_verified": false,
@@ -93,26 +114,281 @@
           "pre_event_price": 0.84501,
           "first_post_event_close_utc": "2026-10-15T18:15:00+00:00",
           "first_post_event_price": 0.84494,
-          "first_post_event_change_pips": -0.7
+          "first_post_event_change_pips": -0.7,
+          "second_post_event_close_utc": "2026-10-15T18:30:00+00:00",
+          "second_post_event_price": 0.84492,
+          "second_post_event_change_pips": -0.2,
+          "net_two_bar_event_window_pips": -0.9,
+          "early_initial_direction": "DOWN",
+          "second_bar_direction": "DOWN",
+          "retrospective_if_first_seen_after_first_candle": true
         }
       },
       "all_price_reactions_are_noncausal_observations": true
+    },
+    {
+      "provider": "Newsquawk_public_delayed",
+      "title": "Treasury Block Trades [Rolling Headline, 15th October 2026]",
+      "url": "https://www.newsquawk.com/headlines/treasury-block-trades-rolling-headline-15th-october-2026",
+      "published_at_utc": "2026-10-15T18:48:00+00:00",
+      "first_seen_at_utc": "2026-10-15T19:32:56.082678+00:00",
+      "publisher_age_minutes": 44.9,
+      "source_latency_to_first_seen_minutes": 44.9,
+      "source_public_delay_minutes_at_least": 20,
+      "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+      "not_pro_feed_or_first_seen_in_real_time": true,
+      "type": "GENERAL",
+      "priority": "CONTEXT",
+      "currencies": [
+        "USD"
+      ],
+      "affected_pairs": [
+        "AUDUSD",
+        "NZDUSD",
+        "EURUSD",
+        "GBPUSD",
+        "USDJPY",
+        "USDCAD"
+      ],
+      "headline_direction": "UNDETERMINED",
+      "market_reaction": "NOT_VERIFIED",
+      "broker_execution_allowed": false
+    },
+    {
+      "provider": "Newsquawk_public_delayed",
+      "title": "EU plans a trade tool that may block China from the single market",
+      "url": "https://www.newsquawk.com/headlines/eu-plans-a-trade-tool-that-may-block-china-from-the-single-market",
+      "published_at_utc": "2026-10-15T18:22:00+00:00",
+      "first_seen_at_utc": "2026-10-15T19:32:56.082678+00:00",
+      "publisher_age_minutes": 70.9,
+      "source_latency_to_first_seen_minutes": 70.9,
+      "source_public_delay_minutes_at_least": 20,
+      "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+      "not_pro_feed_or_first_seen_in_real_time": true,
+      "type": "GENERAL",
+      "priority": "CONTEXT",
+      "currencies": [
+        "CNY"
+      ],
+      "affected_pairs": [
+        "AUDUSD",
+        "NZDUSD",
+        "AUDJPY",
+        "NZDJPY"
+      ],
+      "headline_direction": "UNDETERMINED",
+      "market_reaction": "NOT_VERIFIED",
+      "broker_execution_allowed": false
+    },
+    {
+      "provider": "Newsquawk_public_delayed",
+      "title": "Treasury Buyback [Liquidity support, 20-30-year, max USD 6bln]: Accepts USD 6.0bln of USD 40.84bln offers; accepts 3 of 42 eligible securities",
+      "url": "https://www.newsquawk.com/headlines/treasury-buyback-liquidity-support-20-30-year-max-usd-6bln-accepts-usd-60bln-of-usd-4084bln-offers-accepts-3-of-42-eligible-securities",
+      "published_at_utc": "2026-10-15T18:22:00+00:00",
+      "first_seen_at_utc": "2026-10-15T19:32:56.082678+00:00",
+      "publisher_age_minutes": 70.9,
+      "source_latency_to_first_seen_minutes": 70.9,
+      "source_public_delay_minutes_at_least": 20,
+      "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+      "not_pro_feed_or_first_seen_in_real_time": true,
+      "type": "GENERAL",
+      "priority": "CONTEXT",
+      "currencies": [
+        "USD"
+      ],
+      "affected_pairs": [
+        "AUDUSD",
+        "NZDUSD",
+        "EURUSD",
+        "GBPUSD",
+        "USDJPY",
+        "USDCAD"
+      ],
+      "headline_direction": "UNDETERMINED",
+      "market_reaction": "NOT_VERIFIED",
+      "broker_execution_allowed": false
     }
   ],
   "pairs": {
     "AUDUSD": {
-      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
+      "status": "HEADLINES_PRESENT",
       "policy_headlines": [],
-      "news_headlines": [],
+      "news_headlines": [
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "Treasury Block Trades [Rolling Headline, 15th October 2026]",
+          "url": "https://www.newsquawk.com/headlines/treasury-block-trades-rolling-headline-15th-october-2026",
+          "published_at_utc": "2026-10-15T18:48:00+00:00",
+          "first_seen_at_utc": "2026-10-15T19:32:56.082678+00:00",
+          "publisher_age_minutes": 44.9,
+          "source_latency_to_first_seen_minutes": 44.9,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "EU plans a trade tool that may block China from the single market",
+          "url": "https://www.newsquawk.com/headlines/eu-plans-a-trade-tool-that-may-block-china-from-the-single-market",
+          "published_at_utc": "2026-10-15T18:22:00+00:00",
+          "first_seen_at_utc": "2026-10-15T19:32:56.082678+00:00",
+          "publisher_age_minutes": 70.9,
+          "source_latency_to_first_seen_minutes": 70.9,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "CNY"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "AUDJPY",
+            "NZDJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "Treasury Buyback [Liquidity support, 20-30-year, max USD 6bln]: Accepts USD 6.0bln of USD 40.84bln offers; accepts 3 of 42 eligible securities",
+          "url": "https://www.newsquawk.com/headlines/treasury-buyback-liquidity-support-20-30-year-max-usd-6bln-accepts-usd-60bln-of-usd-4084bln-offers-accepts-3-of-42-eligible-securities",
+          "published_at_utc": "2026-10-15T18:22:00+00:00",
+          "first_seen_at_utc": "2026-10-15T19:32:56.082678+00:00",
+          "publisher_age_minutes": 70.9,
+          "source_latency_to_first_seen_minutes": 70.9,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        }
+      ],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "NZDUSD": {
-      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
+      "status": "HEADLINES_PRESENT",
       "policy_headlines": [],
-      "news_headlines": [],
+      "news_headlines": [
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "Treasury Block Trades [Rolling Headline, 15th October 2026]",
+          "url": "https://www.newsquawk.com/headlines/treasury-block-trades-rolling-headline-15th-october-2026",
+          "published_at_utc": "2026-10-15T18:48:00+00:00",
+          "first_seen_at_utc": "2026-10-15T19:32:56.082678+00:00",
+          "publisher_age_minutes": 44.9,
+          "source_latency_to_first_seen_minutes": 44.9,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "EU plans a trade tool that may block China from the single market",
+          "url": "https://www.newsquawk.com/headlines/eu-plans-a-trade-tool-that-may-block-china-from-the-single-market",
+          "published_at_utc": "2026-10-15T18:22:00+00:00",
+          "first_seen_at_utc": "2026-10-15T19:32:56.082678+00:00",
+          "publisher_age_minutes": 70.9,
+          "source_latency_to_first_seen_minutes": 70.9,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "CNY"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "AUDJPY",
+            "NZDJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "Treasury Buyback [Liquidity support, 20-30-year, max USD 6bln]: Accepts USD 6.0bln of USD 40.84bln offers; accepts 3 of 42 eligible securities",
+          "url": "https://www.newsquawk.com/headlines/treasury-buyback-liquidity-support-20-30-year-max-usd-6bln-accepts-usd-60bln-of-usd-4084bln-offers-accepts-3-of-42-eligible-securities",
+          "published_at_utc": "2026-10-15T18:22:00+00:00",
+          "first_seen_at_utc": "2026-10-15T19:32:56.082678+00:00",
+          "publisher_age_minutes": 70.9,
+          "source_latency_to_first_seen_minutes": 70.9,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        }
+      ],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
@@ -127,7 +403,7 @@
           "url": "https://www.newsquawk.com/headlines/unicredit-ucg-im-receives-green-light-from-ecb-to-acquire-control-of-commerzbank-cbk-gy",
           "published_at_utc": "2026-10-15T18:02:00+00:00",
           "first_seen_at_utc": "2026-10-15T18:20:45.076966+00:00",
-          "publisher_age_minutes": 18.8,
+          "publisher_age_minutes": 90.9,
           "source_latency_to_first_seen_minutes": 18.8,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -147,7 +423,7 @@
           "market_reaction": "NOT_VERIFIED",
           "broker_execution_allowed": false,
           "price_reaction_observation": {
-            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
@@ -156,7 +432,14 @@
             "pre_event_price": 1.12168,
             "first_post_event_close_utc": "2026-10-15T18:15:00+00:00",
             "first_post_event_price": 1.1218,
-            "first_post_event_change_pips": 1.2
+            "first_post_event_change_pips": 1.2,
+            "second_post_event_close_utc": "2026-10-15T18:30:00+00:00",
+            "second_post_event_price": 1.12189,
+            "second_post_event_change_pips": 0.9,
+            "net_two_bar_event_window_pips": 2.1,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "UP",
+            "retrospective_if_first_seen_after_first_candle": true
           }
         }
       ],
@@ -167,7 +450,7 @@
           "url": "https://www.newsquawk.com/headlines/unicredit-ucg-im-receives-green-light-from-ecb-to-acquire-control-of-commerzbank-cbk-gy",
           "published_at_utc": "2026-10-15T18:02:00+00:00",
           "first_seen_at_utc": "2026-10-15T18:20:45.076966+00:00",
-          "publisher_age_minutes": 18.8,
+          "publisher_age_minutes": 90.9,
           "source_latency_to_first_seen_minutes": 18.8,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -187,7 +470,7 @@
           "market_reaction": "NOT_VERIFIED",
           "broker_execution_allowed": false,
           "price_reaction_observation": {
-            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
@@ -196,8 +479,71 @@
             "pre_event_price": 1.12168,
             "first_post_event_close_utc": "2026-10-15T18:15:00+00:00",
             "first_post_event_price": 1.1218,
-            "first_post_event_change_pips": 1.2
+            "first_post_event_change_pips": 1.2,
+            "second_post_event_close_utc": "2026-10-15T18:30:00+00:00",
+            "second_post_event_price": 1.12189,
+            "second_post_event_change_pips": 0.9,
+            "net_two_bar_event_window_pips": 2.1,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "UP",
+            "retrospective_if_first_seen_after_first_candle": true
           }
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "Treasury Block Trades [Rolling Headline, 15th October 2026]",
+          "url": "https://www.newsquawk.com/headlines/treasury-block-trades-rolling-headline-15th-october-2026",
+          "published_at_utc": "2026-10-15T18:48:00+00:00",
+          "first_seen_at_utc": "2026-10-15T19:32:56.082678+00:00",
+          "publisher_age_minutes": 44.9,
+          "source_latency_to_first_seen_minutes": 44.9,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "Treasury Buyback [Liquidity support, 20-30-year, max USD 6bln]: Accepts USD 6.0bln of USD 40.84bln offers; accepts 3 of 42 eligible securities",
+          "url": "https://www.newsquawk.com/headlines/treasury-buyback-liquidity-support-20-30-year-max-usd-6bln-accepts-usd-60bln-of-usd-4084bln-offers-accepts-3-of-42-eligible-securities",
+          "published_at_utc": "2026-10-15T18:22:00+00:00",
+          "first_seen_at_utc": "2026-10-15T19:32:56.082678+00:00",
+          "publisher_age_minutes": 70.9,
+          "source_latency_to_first_seen_minutes": 70.9,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
         }
       ],
       "source_coverage_incomplete": true,
@@ -206,36 +552,204 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "GBPUSD": {
-      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
+      "status": "HEADLINES_PRESENT",
       "policy_headlines": [],
-      "news_headlines": [],
+      "news_headlines": [
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "Treasury Block Trades [Rolling Headline, 15th October 2026]",
+          "url": "https://www.newsquawk.com/headlines/treasury-block-trades-rolling-headline-15th-october-2026",
+          "published_at_utc": "2026-10-15T18:48:00+00:00",
+          "first_seen_at_utc": "2026-10-15T19:32:56.082678+00:00",
+          "publisher_age_minutes": 44.9,
+          "source_latency_to_first_seen_minutes": 44.9,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "Treasury Buyback [Liquidity support, 20-30-year, max USD 6bln]: Accepts USD 6.0bln of USD 40.84bln offers; accepts 3 of 42 eligible securities",
+          "url": "https://www.newsquawk.com/headlines/treasury-buyback-liquidity-support-20-30-year-max-usd-6bln-accepts-usd-60bln-of-usd-4084bln-offers-accepts-3-of-42-eligible-securities",
+          "published_at_utc": "2026-10-15T18:22:00+00:00",
+          "first_seen_at_utc": "2026-10-15T19:32:56.082678+00:00",
+          "publisher_age_minutes": 70.9,
+          "source_latency_to_first_seen_minutes": 70.9,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        }
+      ],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "USDJPY": {
-      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
+      "status": "HEADLINES_PRESENT",
       "policy_headlines": [],
-      "news_headlines": [],
+      "news_headlines": [
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "Treasury Block Trades [Rolling Headline, 15th October 2026]",
+          "url": "https://www.newsquawk.com/headlines/treasury-block-trades-rolling-headline-15th-october-2026",
+          "published_at_utc": "2026-10-15T18:48:00+00:00",
+          "first_seen_at_utc": "2026-10-15T19:32:56.082678+00:00",
+          "publisher_age_minutes": 44.9,
+          "source_latency_to_first_seen_minutes": 44.9,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "Treasury Buyback [Liquidity support, 20-30-year, max USD 6bln]: Accepts USD 6.0bln of USD 40.84bln offers; accepts 3 of 42 eligible securities",
+          "url": "https://www.newsquawk.com/headlines/treasury-buyback-liquidity-support-20-30-year-max-usd-6bln-accepts-usd-60bln-of-usd-4084bln-offers-accepts-3-of-42-eligible-securities",
+          "published_at_utc": "2026-10-15T18:22:00+00:00",
+          "first_seen_at_utc": "2026-10-15T19:32:56.082678+00:00",
+          "publisher_age_minutes": 70.9,
+          "source_latency_to_first_seen_minutes": 70.9,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        }
+      ],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "AUDJPY": {
-      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
+      "status": "HEADLINES_PRESENT",
       "policy_headlines": [],
-      "news_headlines": [],
+      "news_headlines": [
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "EU plans a trade tool that may block China from the single market",
+          "url": "https://www.newsquawk.com/headlines/eu-plans-a-trade-tool-that-may-block-china-from-the-single-market",
+          "published_at_utc": "2026-10-15T18:22:00+00:00",
+          "first_seen_at_utc": "2026-10-15T19:32:56.082678+00:00",
+          "publisher_age_minutes": 70.9,
+          "source_latency_to_first_seen_minutes": 70.9,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "CNY"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "AUDJPY",
+            "NZDJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        }
+      ],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "NZDJPY": {
-      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
+      "status": "HEADLINES_PRESENT",
       "policy_headlines": [],
-      "news_headlines": [],
+      "news_headlines": [
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "EU plans a trade tool that may block China from the single market",
+          "url": "https://www.newsquawk.com/headlines/eu-plans-a-trade-tool-that-may-block-china-from-the-single-market",
+          "published_at_utc": "2026-10-15T18:22:00+00:00",
+          "first_seen_at_utc": "2026-10-15T19:32:56.082678+00:00",
+          "publisher_age_minutes": 70.9,
+          "source_latency_to_first_seen_minutes": 70.9,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "CNY"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "AUDJPY",
+            "NZDJPY"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        }
+      ],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
@@ -250,7 +764,7 @@
           "url": "https://www.newsquawk.com/headlines/unicredit-ucg-im-receives-green-light-from-ecb-to-acquire-control-of-commerzbank-cbk-gy",
           "published_at_utc": "2026-10-15T18:02:00+00:00",
           "first_seen_at_utc": "2026-10-15T18:20:45.076966+00:00",
-          "publisher_age_minutes": 18.8,
+          "publisher_age_minutes": 90.9,
           "source_latency_to_first_seen_minutes": 18.8,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -270,7 +784,7 @@
           "market_reaction": "NOT_VERIFIED",
           "broker_execution_allowed": false,
           "price_reaction_observation": {
-            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
@@ -279,7 +793,14 @@
             "pre_event_price": 177.347,
             "first_post_event_close_utc": "2026-10-15T18:15:00+00:00",
             "first_post_event_price": 177.321,
-            "first_post_event_change_pips": -2.6
+            "first_post_event_change_pips": -2.6,
+            "second_post_event_close_utc": "2026-10-15T18:30:00+00:00",
+            "second_post_event_price": 177.291,
+            "second_post_event_change_pips": -3.0,
+            "net_two_bar_event_window_pips": -5.6,
+            "early_initial_direction": "DOWN",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": true
           }
         }
       ],
@@ -290,7 +811,7 @@
           "url": "https://www.newsquawk.com/headlines/unicredit-ucg-im-receives-green-light-from-ecb-to-acquire-control-of-commerzbank-cbk-gy",
           "published_at_utc": "2026-10-15T18:02:00+00:00",
           "first_seen_at_utc": "2026-10-15T18:20:45.076966+00:00",
-          "publisher_age_minutes": 18.8,
+          "publisher_age_minutes": 90.9,
           "source_latency_to_first_seen_minutes": 18.8,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -310,7 +831,7 @@
           "market_reaction": "NOT_VERIFIED",
           "broker_execution_allowed": false,
           "price_reaction_observation": {
-            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
@@ -319,7 +840,14 @@
             "pre_event_price": 177.347,
             "first_post_event_close_utc": "2026-10-15T18:15:00+00:00",
             "first_post_event_price": 177.321,
-            "first_post_event_change_pips": -2.6
+            "first_post_event_change_pips": -2.6,
+            "second_post_event_close_utc": "2026-10-15T18:30:00+00:00",
+            "second_post_event_price": 177.291,
+            "second_post_event_change_pips": -3.0,
+            "net_two_bar_event_window_pips": -5.6,
+            "early_initial_direction": "DOWN",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": true
           }
         }
       ],
@@ -337,7 +865,7 @@
           "url": "https://www.newsquawk.com/headlines/unicredit-ucg-im-receives-green-light-from-ecb-to-acquire-control-of-commerzbank-cbk-gy",
           "published_at_utc": "2026-10-15T18:02:00+00:00",
           "first_seen_at_utc": "2026-10-15T18:20:45.076966+00:00",
-          "publisher_age_minutes": 18.8,
+          "publisher_age_minutes": 90.9,
           "source_latency_to_first_seen_minutes": 18.8,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -357,7 +885,7 @@
           "market_reaction": "NOT_VERIFIED",
           "broker_execution_allowed": false,
           "price_reaction_observation": {
-            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
@@ -366,7 +894,14 @@
             "pre_event_price": 1.59091,
             "first_post_event_close_utc": "2026-10-15T18:15:00+00:00",
             "first_post_event_price": 1.59113,
-            "first_post_event_change_pips": 2.2
+            "first_post_event_change_pips": 2.2,
+            "second_post_event_close_utc": "2026-10-15T18:30:00+00:00",
+            "second_post_event_price": 1.59093,
+            "second_post_event_change_pips": -2.0,
+            "net_two_bar_event_window_pips": 0.2,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": true
           }
         }
       ],
@@ -377,7 +912,7 @@
           "url": "https://www.newsquawk.com/headlines/unicredit-ucg-im-receives-green-light-from-ecb-to-acquire-control-of-commerzbank-cbk-gy",
           "published_at_utc": "2026-10-15T18:02:00+00:00",
           "first_seen_at_utc": "2026-10-15T18:20:45.076966+00:00",
-          "publisher_age_minutes": 18.8,
+          "publisher_age_minutes": 90.9,
           "source_latency_to_first_seen_minutes": 18.8,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -397,7 +932,7 @@
           "market_reaction": "NOT_VERIFIED",
           "broker_execution_allowed": false,
           "price_reaction_observation": {
-            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
@@ -406,7 +941,14 @@
             "pre_event_price": 1.59091,
             "first_post_event_close_utc": "2026-10-15T18:15:00+00:00",
             "first_post_event_price": 1.59113,
-            "first_post_event_change_pips": 2.2
+            "first_post_event_change_pips": 2.2,
+            "second_post_event_close_utc": "2026-10-15T18:30:00+00:00",
+            "second_post_event_price": 1.59093,
+            "second_post_event_change_pips": -2.0,
+            "net_two_bar_event_window_pips": 0.2,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": true
           }
         }
       ],
@@ -416,9 +958,66 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "USDCAD": {
-      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
+      "status": "HEADLINES_PRESENT",
       "policy_headlines": [],
-      "news_headlines": [],
+      "news_headlines": [
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "Treasury Block Trades [Rolling Headline, 15th October 2026]",
+          "url": "https://www.newsquawk.com/headlines/treasury-block-trades-rolling-headline-15th-october-2026",
+          "published_at_utc": "2026-10-15T18:48:00+00:00",
+          "first_seen_at_utc": "2026-10-15T19:32:56.082678+00:00",
+          "publisher_age_minutes": 44.9,
+          "source_latency_to_first_seen_minutes": 44.9,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        },
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "Treasury Buyback [Liquidity support, 20-30-year, max USD 6bln]: Accepts USD 6.0bln of USD 40.84bln offers; accepts 3 of 42 eligible securities",
+          "url": "https://www.newsquawk.com/headlines/treasury-buyback-liquidity-support-20-30-year-max-usd-6bln-accepts-usd-60bln-of-usd-4084bln-offers-accepts-3-of-42-eligible-securities",
+          "published_at_utc": "2026-10-15T18:22:00+00:00",
+          "first_seen_at_utc": "2026-10-15T19:32:56.082678+00:00",
+          "publisher_age_minutes": 70.9,
+          "source_latency_to_first_seen_minutes": 70.9,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "GENERAL",
+          "priority": "CONTEXT",
+          "currencies": [
+            "USD"
+          ],
+          "affected_pairs": [
+            "AUDUSD",
+            "NZDUSD",
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "USDCAD"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false
+        }
+      ],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
@@ -433,7 +1032,7 @@
           "url": "https://www.newsquawk.com/headlines/unicredit-ucg-im-receives-green-light-from-ecb-to-acquire-control-of-commerzbank-cbk-gy",
           "published_at_utc": "2026-10-15T18:02:00+00:00",
           "first_seen_at_utc": "2026-10-15T18:20:45.076966+00:00",
-          "publisher_age_minutes": 18.8,
+          "publisher_age_minutes": 90.9,
           "source_latency_to_first_seen_minutes": 18.8,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -453,7 +1052,7 @@
           "market_reaction": "NOT_VERIFIED",
           "broker_execution_allowed": false,
           "price_reaction_observation": {
-            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
@@ -462,7 +1061,14 @@
             "pre_event_price": 0.84501,
             "first_post_event_close_utc": "2026-10-15T18:15:00+00:00",
             "first_post_event_price": 0.84494,
-            "first_post_event_change_pips": -0.7
+            "first_post_event_change_pips": -0.7,
+            "second_post_event_close_utc": "2026-10-15T18:30:00+00:00",
+            "second_post_event_price": 0.84492,
+            "second_post_event_change_pips": -0.2,
+            "net_two_bar_event_window_pips": -0.9,
+            "early_initial_direction": "DOWN",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": true
           }
         }
       ],
@@ -473,7 +1079,7 @@
           "url": "https://www.newsquawk.com/headlines/unicredit-ucg-im-receives-green-light-from-ecb-to-acquire-control-of-commerzbank-cbk-gy",
           "published_at_utc": "2026-10-15T18:02:00+00:00",
           "first_seen_at_utc": "2026-10-15T18:20:45.076966+00:00",
-          "publisher_age_minutes": 18.8,
+          "publisher_age_minutes": 90.9,
           "source_latency_to_first_seen_minutes": 18.8,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
@@ -493,7 +1099,7 @@
           "market_reaction": "NOT_VERIFIED",
           "broker_execution_allowed": false,
           "price_reaction_observation": {
-            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
             "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
             "no_intrabar_assumptions": true,
             "causal_link_verified": false,
@@ -502,7 +1108,14 @@
             "pre_event_price": 0.84501,
             "first_post_event_close_utc": "2026-10-15T18:15:00+00:00",
             "first_post_event_price": 0.84494,
-            "first_post_event_change_pips": -0.7
+            "first_post_event_change_pips": -0.7,
+            "second_post_event_close_utc": "2026-10-15T18:30:00+00:00",
+            "second_post_event_price": 0.84492,
+            "second_post_event_change_pips": -0.2,
+            "net_two_bar_event_window_pips": -0.9,
+            "early_initial_direction": "DOWN",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": true
           }
         }
       ],
