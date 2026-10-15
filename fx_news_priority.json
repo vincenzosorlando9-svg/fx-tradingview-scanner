@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-15T17:49:43.754095+00:00",
+  "generated_at_utc": "2026-10-15T18:20:45.076966+00:00",
   "target_refresh_minutes": 5,
   "actual_actions_schedule_not_guaranteed": true,
   "approved_source_names": [
@@ -23,27 +23,80 @@
   "recent_headlines": [
     {
       "provider": "Newsquawk_public_delayed",
-      "title": "US EIA Crude Oil Imports Change (Oct/09) -0.596M (Prev. -0.053M)",
-      "url": "https://www.newsquawk.com/headlines/us-eia-crude-oil-imports-change-oct09--0596m-prev--0053m",
-      "published_at_utc": "2026-10-15T16:20:00+00:00",
-      "first_seen_at_utc": "2026-10-15T16:34:23.040611+00:00",
-      "publisher_age_minutes": 89.7,
-      "source_latency_to_first_seen_minutes": 14.4,
+      "title": "Unicredit (UCG IM) receives green light from ECB to acquire control of Commerzbank (CBK GY)",
+      "url": "https://www.newsquawk.com/headlines/unicredit-ucg-im-receives-green-light-from-ecb-to-acquire-control-of-commerzbank-cbk-gy",
+      "published_at_utc": "2026-10-15T18:02:00+00:00",
+      "first_seen_at_utc": "2026-10-15T18:20:45.076966+00:00",
+      "publisher_age_minutes": 18.8,
+      "source_latency_to_first_seen_minutes": 18.8,
       "source_public_delay_minutes_at_least": 20,
       "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
       "not_pro_feed_or_first_seen_in_real_time": true,
-      "type": "GENERAL",
-      "priority": "CONTEXT",
+      "type": "CENTRAL_BANK_POLICY",
+      "priority": "HIGH_POLICY_REACTION_CHECK",
       "currencies": [
-        "CAD"
+        "EUR"
       ],
       "affected_pairs": [
+        "EURUSD",
+        "EURJPY",
         "EURCAD",
-        "USDCAD"
+        "EURGBP"
       ],
       "headline_direction": "UNDETERMINED",
       "market_reaction": "NOT_VERIFIED",
-      "broker_execution_allowed": false
+      "broker_execution_allowed": false,
+      "price_reactions": {
+        "EURUSD": {
+          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false,
+          "pre_event_close_utc": "2026-10-15T18:00:00+00:00",
+          "pre_event_price": 1.12168,
+          "first_post_event_close_utc": "2026-10-15T18:15:00+00:00",
+          "first_post_event_price": 1.1218,
+          "first_post_event_change_pips": 1.2
+        },
+        "EURJPY": {
+          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false,
+          "pre_event_close_utc": "2026-10-15T18:00:00+00:00",
+          "pre_event_price": 177.347,
+          "first_post_event_close_utc": "2026-10-15T18:15:00+00:00",
+          "first_post_event_price": 177.321,
+          "first_post_event_change_pips": -2.6
+        },
+        "EURCAD": {
+          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false,
+          "pre_event_close_utc": "2026-10-15T18:00:00+00:00",
+          "pre_event_price": 1.59091,
+          "first_post_event_close_utc": "2026-10-15T18:15:00+00:00",
+          "first_post_event_price": 1.59113,
+          "first_post_event_change_pips": 2.2
+        },
+        "EURGBP": {
+          "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false,
+          "pre_event_close_utc": "2026-10-15T18:00:00+00:00",
+          "pre_event_price": 0.84501,
+          "first_post_event_close_utc": "2026-10-15T18:15:00+00:00",
+          "first_post_event_price": 0.84494,
+          "first_post_event_change_pips": -0.7
+        }
+      },
+      "all_price_reactions_are_noncausal_observations": true
     }
   ],
   "pairs": {
@@ -66,9 +119,87 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "EURUSD": {
-      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
-      "policy_headlines": [],
-      "news_headlines": [],
+      "status": "POLICY_REACTION_CHECK",
+      "policy_headlines": [
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "Unicredit (UCG IM) receives green light from ECB to acquire control of Commerzbank (CBK GY)",
+          "url": "https://www.newsquawk.com/headlines/unicredit-ucg-im-receives-green-light-from-ecb-to-acquire-control-of-commerzbank-cbk-gy",
+          "published_at_utc": "2026-10-15T18:02:00+00:00",
+          "first_seen_at_utc": "2026-10-15T18:20:45.076966+00:00",
+          "publisher_age_minutes": 18.8,
+          "source_latency_to_first_seen_minutes": 18.8,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "EUR"
+          ],
+          "affected_pairs": [
+            "EURUSD",
+            "EURJPY",
+            "EURCAD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-15T18:00:00+00:00",
+            "pre_event_price": 1.12168,
+            "first_post_event_close_utc": "2026-10-15T18:15:00+00:00",
+            "first_post_event_price": 1.1218,
+            "first_post_event_change_pips": 1.2
+          }
+        }
+      ],
+      "news_headlines": [
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "Unicredit (UCG IM) receives green light from ECB to acquire control of Commerzbank (CBK GY)",
+          "url": "https://www.newsquawk.com/headlines/unicredit-ucg-im-receives-green-light-from-ecb-to-acquire-control-of-commerzbank-cbk-gy",
+          "published_at_utc": "2026-10-15T18:02:00+00:00",
+          "first_seen_at_utc": "2026-10-15T18:20:45.076966+00:00",
+          "publisher_age_minutes": 18.8,
+          "source_latency_to_first_seen_minutes": 18.8,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "EUR"
+          ],
+          "affected_pairs": [
+            "EURUSD",
+            "EURJPY",
+            "EURCAD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-15T18:00:00+00:00",
+            "pre_event_price": 1.12168,
+            "first_post_event_close_utc": "2026-10-15T18:15:00+00:00",
+            "first_post_event_price": 1.1218,
+            "first_post_event_change_pips": 1.2
+          }
+        }
+      ],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
@@ -111,41 +242,172 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "EURJPY": {
-      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
-      "policy_headlines": [],
-      "news_headlines": [],
+      "status": "POLICY_REACTION_CHECK",
+      "policy_headlines": [
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "Unicredit (UCG IM) receives green light from ECB to acquire control of Commerzbank (CBK GY)",
+          "url": "https://www.newsquawk.com/headlines/unicredit-ucg-im-receives-green-light-from-ecb-to-acquire-control-of-commerzbank-cbk-gy",
+          "published_at_utc": "2026-10-15T18:02:00+00:00",
+          "first_seen_at_utc": "2026-10-15T18:20:45.076966+00:00",
+          "publisher_age_minutes": 18.8,
+          "source_latency_to_first_seen_minutes": 18.8,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "EUR"
+          ],
+          "affected_pairs": [
+            "EURUSD",
+            "EURJPY",
+            "EURCAD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-15T18:00:00+00:00",
+            "pre_event_price": 177.347,
+            "first_post_event_close_utc": "2026-10-15T18:15:00+00:00",
+            "first_post_event_price": 177.321,
+            "first_post_event_change_pips": -2.6
+          }
+        }
+      ],
+      "news_headlines": [
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "Unicredit (UCG IM) receives green light from ECB to acquire control of Commerzbank (CBK GY)",
+          "url": "https://www.newsquawk.com/headlines/unicredit-ucg-im-receives-green-light-from-ecb-to-acquire-control-of-commerzbank-cbk-gy",
+          "published_at_utc": "2026-10-15T18:02:00+00:00",
+          "first_seen_at_utc": "2026-10-15T18:20:45.076966+00:00",
+          "publisher_age_minutes": 18.8,
+          "source_latency_to_first_seen_minutes": 18.8,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "EUR"
+          ],
+          "affected_pairs": [
+            "EURUSD",
+            "EURJPY",
+            "EURCAD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-15T18:00:00+00:00",
+            "pre_event_price": 177.347,
+            "first_post_event_close_utc": "2026-10-15T18:15:00+00:00",
+            "first_post_event_price": 177.321,
+            "first_post_event_change_pips": -2.6
+          }
+        }
+      ],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "EURCAD": {
-      "status": "HEADLINES_PRESENT",
-      "policy_headlines": [],
-      "news_headlines": [
+      "status": "POLICY_REACTION_CHECK",
+      "policy_headlines": [
         {
           "provider": "Newsquawk_public_delayed",
-          "title": "US EIA Crude Oil Imports Change (Oct/09) -0.596M (Prev. -0.053M)",
-          "url": "https://www.newsquawk.com/headlines/us-eia-crude-oil-imports-change-oct09--0596m-prev--0053m",
-          "published_at_utc": "2026-10-15T16:20:00+00:00",
-          "first_seen_at_utc": "2026-10-15T16:34:23.040611+00:00",
-          "publisher_age_minutes": 89.7,
-          "source_latency_to_first_seen_minutes": 14.4,
+          "title": "Unicredit (UCG IM) receives green light from ECB to acquire control of Commerzbank (CBK GY)",
+          "url": "https://www.newsquawk.com/headlines/unicredit-ucg-im-receives-green-light-from-ecb-to-acquire-control-of-commerzbank-cbk-gy",
+          "published_at_utc": "2026-10-15T18:02:00+00:00",
+          "first_seen_at_utc": "2026-10-15T18:20:45.076966+00:00",
+          "publisher_age_minutes": 18.8,
+          "source_latency_to_first_seen_minutes": 18.8,
           "source_public_delay_minutes_at_least": 20,
           "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
           "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
           "currencies": [
-            "CAD"
+            "EUR"
           ],
           "affected_pairs": [
+            "EURUSD",
+            "EURJPY",
             "EURCAD",
-            "USDCAD"
+            "EURGBP"
           ],
           "headline_direction": "UNDETERMINED",
           "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-15T18:00:00+00:00",
+            "pre_event_price": 1.59091,
+            "first_post_event_close_utc": "2026-10-15T18:15:00+00:00",
+            "first_post_event_price": 1.59113,
+            "first_post_event_change_pips": 2.2
+          }
+        }
+      ],
+      "news_headlines": [
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "Unicredit (UCG IM) receives green light from ECB to acquire control of Commerzbank (CBK GY)",
+          "url": "https://www.newsquawk.com/headlines/unicredit-ucg-im-receives-green-light-from-ecb-to-acquire-control-of-commerzbank-cbk-gy",
+          "published_at_utc": "2026-10-15T18:02:00+00:00",
+          "first_seen_at_utc": "2026-10-15T18:20:45.076966+00:00",
+          "publisher_age_minutes": 18.8,
+          "source_latency_to_first_seen_minutes": 18.8,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "EUR"
+          ],
+          "affected_pairs": [
+            "EURUSD",
+            "EURJPY",
+            "EURCAD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-15T18:00:00+00:00",
+            "pre_event_price": 1.59091,
+            "first_post_event_close_utc": "2026-10-15T18:15:00+00:00",
+            "first_post_event_price": 1.59113,
+            "first_post_event_change_pips": 2.2
+          }
         }
       ],
       "source_coverage_incomplete": true,
@@ -154,43 +416,96 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "USDCAD": {
-      "status": "HEADLINES_PRESENT",
+      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
       "policy_headlines": [],
-      "news_headlines": [
-        {
-          "provider": "Newsquawk_public_delayed",
-          "title": "US EIA Crude Oil Imports Change (Oct/09) -0.596M (Prev. -0.053M)",
-          "url": "https://www.newsquawk.com/headlines/us-eia-crude-oil-imports-change-oct09--0596m-prev--0053m",
-          "published_at_utc": "2026-10-15T16:20:00+00:00",
-          "first_seen_at_utc": "2026-10-15T16:34:23.040611+00:00",
-          "publisher_age_minutes": 89.7,
-          "source_latency_to_first_seen_minutes": 14.4,
-          "source_public_delay_minutes_at_least": 20,
-          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
-          "not_pro_feed_or_first_seen_in_real_time": true,
-          "type": "GENERAL",
-          "priority": "CONTEXT",
-          "currencies": [
-            "CAD"
-          ],
-          "affected_pairs": [
-            "EURCAD",
-            "USDCAD"
-          ],
-          "headline_direction": "UNDETERMINED",
-          "market_reaction": "NOT_VERIFIED",
-          "broker_execution_allowed": false
-        }
-      ],
+      "news_headlines": [],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "EURGBP": {
-      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
-      "policy_headlines": [],
-      "news_headlines": [],
+      "status": "POLICY_REACTION_CHECK",
+      "policy_headlines": [
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "Unicredit (UCG IM) receives green light from ECB to acquire control of Commerzbank (CBK GY)",
+          "url": "https://www.newsquawk.com/headlines/unicredit-ucg-im-receives-green-light-from-ecb-to-acquire-control-of-commerzbank-cbk-gy",
+          "published_at_utc": "2026-10-15T18:02:00+00:00",
+          "first_seen_at_utc": "2026-10-15T18:20:45.076966+00:00",
+          "publisher_age_minutes": 18.8,
+          "source_latency_to_first_seen_minutes": 18.8,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "EUR"
+          ],
+          "affected_pairs": [
+            "EURUSD",
+            "EURJPY",
+            "EURCAD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-15T18:00:00+00:00",
+            "pre_event_price": 0.84501,
+            "first_post_event_close_utc": "2026-10-15T18:15:00+00:00",
+            "first_post_event_price": 0.84494,
+            "first_post_event_change_pips": -0.7
+          }
+        }
+      ],
+      "news_headlines": [
+        {
+          "provider": "Newsquawk_public_delayed",
+          "title": "Unicredit (UCG IM) receives green light from ECB to acquire control of Commerzbank (CBK GY)",
+          "url": "https://www.newsquawk.com/headlines/unicredit-ucg-im-receives-green-light-from-ecb-to-acquire-control-of-commerzbank-cbk-gy",
+          "published_at_utc": "2026-10-15T18:02:00+00:00",
+          "first_seen_at_utc": "2026-10-15T18:20:45.076966+00:00",
+          "publisher_age_minutes": 18.8,
+          "source_latency_to_first_seen_minutes": 18.8,
+          "source_public_delay_minutes_at_least": 20,
+          "publication_clock_basis": "PUBLIC_ARTICLE_PUBLICATION_UTC_NOT_PRO_FEED",
+          "not_pro_feed_or_first_seen_in_real_time": true,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "EUR"
+          ],
+          "affected_pairs": [
+            "EURUSD",
+            "EURJPY",
+            "EURCAD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_POST_EVENT_M15_CLOSED_ONLY",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-15T18:00:00+00:00",
+            "pre_event_price": 0.84501,
+            "first_post_event_close_utc": "2026-10-15T18:15:00+00:00",
+            "first_post_event_price": 0.84494,
+            "first_post_event_change_pips": -0.7
+          }
+        }
+      ],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
