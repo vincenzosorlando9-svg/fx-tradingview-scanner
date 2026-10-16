@@ -1,41 +1,44 @@
 # FOREX MAIN SIGNAL — 15-LAYER MACRO-FIRST AUDIT
 
-Thu Oct 15, 2026 11:34:36 PM ET | 11 pairs | Closed 15m/30m candles | No API keys
+Fri Oct 16, 2026 2:03:02 AM ET | 11 pairs | Closed 15m/30m candles | No API keys
 
-**OVERALL STATUS: PARTIAL — VERIFY PUBLISHER AND BROKER SOURCE LIMITATIONS**
+**OVERALL STATUS: PARTIAL — WATCH USDJPY SELL COUNTER-ROTATION WATCH — NOT A RECORDED SELL EPISODE**
 
-Latest separately fetched public technical feed: Thu Oct 15, 2026 11:34:36 PM ET. Authoritative unified rank: Thu Oct 15, 2026 11:34:46 PM ET. Macro fetch: Thu Oct 15, 2026 11:10:56 PM ET. Published scores and newer candle assessments are deliberately distinguished.
+Latest separately fetched public technical feed: Fri Oct 16, 2026 2:03:02 AM ET. Authoritative unified rank: Fri Oct 16, 2026 2:03:11 AM ET. Macro fetch: Fri Oct 16, 2026 1:39:34 AM ET. Published scores and newer candle assessments are deliberately distinguished.
 
 ## 1. BEST 5 TRADING PAIRS — BUY / SHORT
 
 **#   PAIR   SIGNAL   STAGE   SCORE**  
-**1.**&nbsp;**EUR/USD**&nbsp;🟢&nbsp;**BUY**&nbsp;WAIT&nbsp;**0.925**  
-**2.**&nbsp;**AUD/USD**&nbsp;🟢&nbsp;**BUY**&nbsp;WAIT&nbsp;**0.900**  
-**3.**&nbsp;**NZD/USD**&nbsp;🟢&nbsp;**BUY**&nbsp;WAIT&nbsp;**0.900**  
-**4.**&nbsp;**GBP/USD**&nbsp;🟢&nbsp;**BUY**&nbsp;CONT&nbsp;**0.900**  
-**5.**&nbsp;**NZD/JPY**&nbsp;🟢&nbsp;**BUY**&nbsp;WAIT&nbsp;**0.900**  
+**1.**&nbsp;**EUR/JPY**&nbsp;🔴&nbsp;**SHORT**&nbsp;CONT&nbsp;**1.000**  
+**2.**&nbsp;**AUD/JPY**&nbsp;🔴&nbsp;**SHORT**&nbsp;WAIT&nbsp;**0.975**  
+**3.**&nbsp;**NZD/JPY**&nbsp;🔴&nbsp;**SHORT**&nbsp;WATCH&nbsp;**0.975**  
+**4.**&nbsp;**USD/CAD**&nbsp;🟢&nbsp;**BUY**&nbsp;WATCH&nbsp;**0.900**  
+**5.**&nbsp;**NZD/USD**&nbsp;🔴&nbsp;**SHORT**&nbsp;WATCH&nbsp;**0.856**  
 
 Green BUY / red SHORT; compact stage = early, confirming, continuation, wait or chase. Published scores are not probabilities. Detailed assessments appear in the full audit.
 
 ## 2. CURRENCY STRENGTH — TOP 5
 
 **#   CCY   STRENGTH   SCORE**  
-**1.**&nbsp;**AUD**&nbsp;🟢&nbsp;**STRONG**&nbsp;**+2**  
-**2.**&nbsp;**CAD**&nbsp;🟢&nbsp;**STRONG**&nbsp;**+2**  
-**3.**&nbsp;**GBP**&nbsp;🟢&nbsp;**STRONG**&nbsp;**+2**  
-**4.**&nbsp;**NZD**&nbsp;🟢&nbsp;**STRONG**&nbsp;**+2**  
-**5.**&nbsp;**JPY**&nbsp;⚪&nbsp;**NEUTRAL**&nbsp;**0**  
+**1.**&nbsp;**JPY**&nbsp;🟢&nbsp;**STRONG**&nbsp;**+4**  
+**2.**&nbsp;**GBP**&nbsp;🟢&nbsp;**STRONG**&nbsp;**+2**  
+**3.**&nbsp;**AUD**&nbsp;⚪&nbsp;**NEUTRAL**&nbsp;**0**  
+**4.**&nbsp;**EUR**&nbsp;⚪&nbsp;**NEUTRAL**&nbsp;**0**  
+**5.**&nbsp;**NZD**&nbsp;⚪&nbsp;**NEUTRAL**&nbsp;**0**  
 
 **WEAKEST CURRENCIES**  
-**6.**&nbsp;**EUR**&nbsp;🔴&nbsp;**WEAK**&nbsp;**-2**  
-**7.**&nbsp;**USD**&nbsp;🔴&nbsp;**WEAK**&nbsp;**-6**  
+**6.**&nbsp;**CAD**&nbsp;🔴&nbsp;**WEAK**&nbsp;**-2**  
+**7.**&nbsp;**USD**&nbsp;🔴&nbsp;**WEAK**&nbsp;**-4**  
 
-Strongest: AUD, CAD, GBP, NZD | Weakest: USD
+Strongest: JPY | Weakest: USD
 Scores are 11-pair technical breadth, NOT an independently verified real-time currency-strength feed.
 
 ## CRITICAL SETUPS OMITTED FROM TOP FIVE
 
-No verified rows available.
+| pair | published_direction | current_closed_candle_assessment | 15m_change_pips | 30m_change_pips | episode_movement_pips |
+| --- | --- | --- | --- | --- | --- |
+| USDJPY | BUY | SELL COUNTER-ROTATION WATCH — NOT A RECORDED SELL EPISODE | -4.4 | -8.4 | 11.2 |
+| AUDUSD | SELL | SELL EPISODE / OPPOSING PRESSURE — WATCH | 0.2 | 5.4 | 11.6 |
 
 Counter-rotations are new candle evidence, NOT invented historical SELL/BUY episodes.
 
@@ -46,15 +49,12 @@ Counter-rotations are new candle evidence, NOT invented historical SELL/BUY epis
 **Coverage:** PARTIAL_DATED_OR_BLOCKED
 
 **Breaking central-bank policy watch (five-minute target)**
-Fast source collection: Thu Oct 15, 2026 11:34:45 PM ET
+Fast source collection: Fri Oct 16, 2026 2:03:09 AM ET
 Source gaps: FXStreet_RSS:UNAVAILABLE_HTTPERROR, Reuters_currency_page:UNAVAILABLE_HTTPERROR
 A missing approved news story never establishes that no policy headline occurred.
 | published_at_utc | provider | title | affected_pairs | first_seen_at_utc | reaction_review |
 | --- | --- | --- | --- | --- | --- |
-| Thu Oct 15, 2026 11:08:00 PM ET | Newsquawk_public_delayed | [[MARKET ANALYSIS] T-note futures are rangebound as markets await Fed Chair Warsh](https://www.newsquawk.com/headlines/market-analysis-t-note-futures-are-rangebound-as-markets-await-fed-chair-warsh) | AUDUSD, NZDUSD, EURUSD, GBPUSD, USDJPY, USDCAD | Thu Oct 15, 2026 11:19:00 PM ET | USDJPY: TWO_COMPLETED_M15_BARS_OBSERVED (-2.7/3.3p), RETROSPECTIVE |
-| Thu Oct 15, 2026 11:02:00 PM ET | Newsquawk_public_delayed | [Bundesbank/ECB's Nagel says Germany is getting fit for the challenges of the future and a fitness program of reforms is always important](https://www.newsquawk.com/headlines/bundesbankecbs-nagel-says-germany-is-getting-fit-for-the-challenges-of-the-future-and-a-fitness-program-of-reforms-is-always-important) | EURUSD, EURJPY, EURCAD, EURGBP | Thu Oct 15, 2026 11:03:34 PM ET | EURJPY: TWO_COMPLETED_M15_BARS_OBSERVED (-2.3/2.4p), EARLY_CLOCK_CHECK |
-| Thu Oct 15, 2026 10:40:00 PM ET | Newsquawk_public_delayed | [ECB's Rehn says growth outlook is better today than start of the year, adds not seeing second-round effects on inflation](https://www.newsquawk.com/headlines/ecbs-rehn-says-growth-outlook-is-better-today-than-start-of-the-year-adds-not-seeing-second-round-effects-on-inflation) | EURUSD, EURJPY, EURCAD, EURGBP | Thu Oct 15, 2026 11:03:34 PM ET | EURJPY: TWO_COMPLETED_M15_BARS_OBSERVED (-4.8/-2.1p), RETROSPECTIVE |
-| Thu Oct 15, 2026 10:29:00 PM ET | Newsquawk_public_delayed | [BoE Governor Bailey says it's too early to form strong views on strength of second round effects](https://www.newsquawk.com/headlines/boe-governor-bailey-says-its-too-early-to-form-strong-views-on-strength-of-second-round-effects) | GBPUSD, EURGBP | Thu Oct 15, 2026 11:03:34 PM ET | MISSING_VERIFIED_REACTION |
+| Fri Oct 16, 2026 12:20:00 AM ET | Newsquawk_public_delayed | [US Treasury Undersecretary Brown says Japan no longer faces the deflationary environment that existed for more than a decade, and the level of its currency and monetary policy must change accordingly](https://www.newsquawk.com/headlines/us-treasury-undersecretary-brown-says-japan-no-longer-faces-the-deflationary-environment-that-existed-for-more-than-a-decade-and-the-level-of-its-currency-and-monetary-policy-must-change-accordingly) | AUDUSD, NZDUSD, EURUSD, GBPUSD, USDJPY, AUDJPY, NZDJPY, EURJPY, USDCAD | Fri Oct 16, 2026 2:03:09 AM ET | USDJPY: TWO_COMPLETED_M15_BARS_OBSERVED (-6.9/-2.5p), RETROSPECTIVE; AUDJPY: TWO_COMPLETED_M15_BARS_OBSERVED (-0.5/0.6p), RETROSPECTIVE; NZDJPY: TWO_COMPLETED_M15_BARS_OBSERVED (-1.3/0.0p), RETROSPECTIVE; EURJPY: TWO_COMPLETED_M15_BARS_OBSERVED (1.0/-5.7p), RETROSPECTIVE |
 
 Newsquawk public headlines are delayed at least 20 minutes from its professional feed; the public publication clock is NOT the live pro-feed release clock.
 The publisher clock and first-seen time are DIFFERENT; RETROSPECTIVE means this was NOT detected ahead of the initial move.
@@ -73,19 +73,13 @@ Headlines alone do not demonstrate an independently verified immediate FX reacti
 **Coverage:** PARTIAL_PUBLISHER_ACTUAL_TIMES_UNVERIFIED
 
 **Central-bank speech and scheduled macro radar (Eastern Time)**
-Radar compiled: Thu Oct 15, 2026 11:34:46 PM ET
+Radar compiled: Fri Oct 16, 2026 2:03:10 AM ET
 Coverage: FRESH_FF_PLUS_FXBLUE | FX Blue public UTC calendar: DATED_UTC_PUBLIC_EVENTS (66 events) | FXStreet calendar: UNAVAILABLE_OAUTH_REQUIRED_NOT_INGESTED
 Forex Factory and FX Blue are separate best-effort public sources; no calendar feed is assumed exhaustive.
 | event_at_et | currency | title | urgency | event_window | forecast | previous |
 | --- | --- | --- | --- | --- | --- | --- |
-| Thu Oct 15, 2026 11:30:00 PM ET | USD | Fed Chairman Warsh Speaks | HIGH_POLICY_SPEECH_OR_DECISION | POST_EVENT_30_MIN | MISSING | MISSING |
-| Thu Oct 15, 2026 11:30:00 PM ET | USD | Fed's Chair Warsh speech | HIGH_POLICY_SPEECH_OR_DECISION | POST_EVENT_30_MIN | MISSING | MISSING |
-| Fri Oct 16, 2026 12:15:00 AM ET | CAD | BOC Gov Macklem Speaks | HIGH_POLICY_SPEECH_OR_DECISION | PRE_EVENT_120_MIN | MISSING | MISSING |
-| Fri Oct 16, 2026 12:15:00 AM ET | CAD | BoC's Governor Macklem speech | HIGH_POLICY_SPEECH_OR_DECISION | PRE_EVENT_120_MIN | MISSING | MISSING |
-| Thu Oct 15, 2026 10:30:00 PM ET | EUR | German Buba President Nagel Speaks | HIGH_POLICY_SPEECH_OR_DECISION | POST_EVENT_120_MIN | MISSING | MISSING |
-| Thu Oct 15, 2026 10:30:00 PM ET | EUR | ECB's Nagel speech | HIGH_POLICY_SPEECH_OR_DECISION | POST_EVENT_120_MIN | MISSING | MISSING |
-| Thu Oct 15, 2026 10:00:00 PM ET | GBP | BOE Gov Bailey Speaks | HIGH_POLICY_SPEECH_OR_DECISION | POST_EVENT_120_MIN | MISSING | MISSING |
-| Thu Oct 15, 2026 10:00:00 PM ET | GBP | BoE's Governor Bailey speech | HIGH_POLICY_SPEECH_OR_DECISION | POST_EVENT_120_MIN | MISSING | MISSING |
+| Fri Oct 16, 2026 12:15:00 AM ET | CAD | BOC Gov Macklem Speaks | HIGH_POLICY_SPEECH_OR_DECISION | POST_EVENT_120_MIN | MISSING | MISSING |
+| Fri Oct 16, 2026 12:15:00 AM ET | CAD | BoC's Governor Macklem speech | HIGH_POLICY_SPEECH_OR_DECISION | POST_EVENT_120_MIN | MISSING | MISSING |
 | Fri Oct 16, 2026 5:00:00 AM ET | EUR | Final Core CPI y/y | HIGH_MACRO_RELEASE_REVIEW | UPCOMING_48H | 2.5% | 2.5% |
 | Fri Oct 16, 2026 5:00:00 AM ET | EUR | Final CPI y/y | HIGH_MACRO_RELEASE_REVIEW | UPCOMING_48H | 3.8% | 3.8% |
 | Fri Oct 16, 2026 5:00:00 AM ET | EUR | Core Harmonized Index of Consumer Prices (MoM) | HIGH_MACRO_RELEASE_REVIEW | UPCOMING_48H | MISSING | MISSING |
@@ -102,6 +96,12 @@ Forex Factory and FX Blue are separate best-effort public sources; no calendar f
 | Fri Oct 16, 2026 8:15:00 AM ET | CAD | Housing Starts | CALENDAR_CONTEXT | UPCOMING_48H | 234K | 229K |
 | Fri Oct 16, 2026 8:30:00 AM ET | CAD | Foreign Securities Purchases | CALENDAR_CONTEXT | UPCOMING_48H | 23.59B | 20.65B |
 | Fri Oct 16, 2026 8:30:00 AM ET | USD | Import Prices m/m | CALENDAR_CONTEXT | UPCOMING_48H | 0.9% | 0.7% |
+| Fri Oct 16, 2026 9:15:00 AM ET | USD | Capacity Utilization Rate | CALENDAR_CONTEXT | UPCOMING_48H | 76.5% | 76.3% |
+| Fri Oct 16, 2026 9:15:00 AM ET | USD | Industrial Production m/m | CALENDAR_CONTEXT | UPCOMING_48H | 0.4% | 0.0% |
+| Fri Oct 16, 2026 9:15:00 AM ET | USD | Industrial Production (MoM) | MEDIUM_MACRO_REVIEW | UPCOMING_48H | MISSING | MISSING |
+| Fri Oct 16, 2026 2:00:00 PM ET | USD | Federal Budget Balance | CALENDAR_CONTEXT | UPCOMING_48H | -34.7B | -166.8B |
+| Fri Oct 16, 2026 2:00:00 PM ET | USD | Monthly Budget Statement | MEDIUM_MACRO_REVIEW | UPCOMING_48H | MISSING | MISSING |
+| Fri Oct 16, 2026 4:00:00 PM ET | USD | TIC Long-Term Purchases | CALENDAR_CONTEXT | UPCOMING_48H | 75.2B | -27.9B |
 
 The calendar is an advance research watch, not a BUY/SHORT trigger. No event time may be guessed from the device clock.
 
@@ -148,7 +148,6 @@ The calendar is an advance research watch, not a BUY/SHORT trigger. No event tim
 **Upcoming events (next 24h)**
 | event_at_et | currency | title | forecast | previous |
 | --- | --- | --- | --- | --- |
-| Fri Oct 16, 2026 12:15:00 AM ET | CAD | BOC Gov Macklem Speaks | MISSING | MISSING |
 | Fri Oct 16, 2026 5:00:00 AM ET | EUR | Final Core CPI y/y | 2.5% | 2.5% |
 | Fri Oct 16, 2026 5:00:00 AM ET | EUR | Final CPI y/y | 3.8% | 3.8% |
 | Fri Oct 16, 2026 5:00:00 AM ET | EUR | Trade Balance | 4.5B | 5.0B |
@@ -161,6 +160,7 @@ The calendar is an advance research watch, not a BUY/SHORT trigger. No event tim
 | Fri Oct 16, 2026 9:15:00 AM ET | USD | Industrial Production m/m | 0.4% | 0.0% |
 | Fri Oct 16, 2026 2:00:00 PM ET | USD | Federal Budget Balance | -34.7B | -166.8B |
 | Fri Oct 16, 2026 4:00:00 PM ET | USD | TIC Long-Term Purchases | 75.2B | -27.9B |
+| Sat Oct 17, 2026 12:45:00 AM ET | EUR | German Buba President Nagel Speaks | MISSING | MISSING |
 
 Publisher-reported actuals are not equivalent to independently isolated event-price reactions.
 
@@ -190,14 +190,14 @@ OIS status: UNAVAILABLE_NO_VERIFIED_PUBLIC_OIS. Do not substitute sovereign yiel
 
 | country_or_currency | 2Y | 5Y | 10Y | 30Y | market_date | status |
 | --- | --- | --- | --- | --- | --- | --- |
-| USD | 4.77 | 4.90 | 5.08 | 5.41 | 2026-10-16 | DATED_REFERENCE |
+| USD | 4.76 | 4.90 | 5.09 | 5.43 | 2026-10-16 | DATED_REFERENCE |
 | EUR | 3.08 | 3.19 | 3.41 | 3.77 | 2026-10-15 | DATED_REFERENCE |
-| GBP | 4.76 | 4.97 | 5.38 | 5.85 | 2026-10-15 | DATED_REFERENCE |
-| JPY | 1.92 | 2.34 | 2.95 | 4.00 | 2026-10-16 | DATED_REFERENCE |
+| GBP | 4.76 | 4.97 | 5.36 | 5.85 | 2026-10-16 | DATED_REFERENCE |
+| JPY | 1.92 | 2.34 | 2.94 | 4.00 | 2026-10-16 | DATED_REFERENCE |
 | CAD | 3.20 | 3.53 | 3.83 | 4.18 | 2026-10-15 | DATED_REFERENCE |
-| AUD | 4.88 | 4.89 | 5.24 | 5.68 | 2026-10-16 | DATED_REFERENCE |
-| NZD | 3.90 | MISSING | 4.99 | MISSING | 2026-10-16 | DATED_REFERENCE |
-| FR | 3.57 | 4.16 | 4.79 | 5.35 | 2026-10-15 | DATED_REFERENCE |
+| AUD | 4.88 | 4.89 | 5.24 | 5.69 | 2026-10-16 | DATED_REFERENCE |
+| NZD | 3.92 | MISSING | 5.01 | MISSING | 2026-10-16 | DATED_REFERENCE |
+| FR | 3.58 | 4.16 | 4.79 | 5.35 | 2026-10-15 | DATED_REFERENCE |
 | IT | 3.47 | 3.94 | 4.49 | 5.10 | 2026-10-15 | DATED_REFERENCE |
 
 Same-maturity spread references and independently timed yield changes are preserved in the JSON layer; public-date yield references are not synchronized market ticks.
@@ -211,21 +211,21 @@ Same-maturity spread references and independently timed yield changes are preser
 **Crude: OilPrice.com only**
 | commodity | value_usd_per_barrel | delay_minutes | quote_timestamp_utc |
 | --- | --- | --- | --- |
-| WTI | 97.42 | 12 | MISSING |
-| BRENT | 105.44 | 11 | MISSING |
+| WTI | 97.40 | 11 | MISSING |
+| BRENT | 105.39 | 11 | MISSING |
 
 **Non-crude: ForexCracked indicative**
 | commodity | value | status |
 | --- | --- | --- |
-| GOLD | 4172.91 | INDICATIVE_PUBLIC_SITE_REFERENCE_NOT_BROKER |
-| SILVER | 57.72 | INDICATIVE_PUBLIC_SITE_REFERENCE_NOT_BROKER |
+| GOLD | 4174.67 | INDICATIVE_PUBLIC_SITE_REFERENCE_NOT_BROKER |
+| SILVER | 57.66 | INDICATIVE_PUBLIC_SITE_REFERENCE_NOT_BROKER |
 | COPPER | 6.68 | INDICATIVE_PUBLIC_SITE_REFERENCE_NOT_BROKER |
 | NATURAL_GAS | 3.48 | INDICATIVE_PUBLIC_SITE_REFERENCE_NOT_BROKER |
-| ALUMINIUM | 3001.80 | INDICATIVE_PUBLIC_SITE_REFERENCE_NOT_BROKER |
-| NICKEL | 15205.25 | INDICATIVE_PUBLIC_SITE_REFERENCE_NOT_BROKER |
-| SOYBEANS | 1276.30 | INDICATIVE_PUBLIC_SITE_REFERENCE_NOT_BROKER |
-| WHEAT | 675.60 | INDICATIVE_PUBLIC_SITE_REFERENCE_NOT_BROKER |
-| CORN | 485.30 | INDICATIVE_PUBLIC_SITE_REFERENCE_NOT_BROKER |
+| ALUMINIUM | 2996.80 | INDICATIVE_PUBLIC_SITE_REFERENCE_NOT_BROKER |
+| NICKEL | 15159.50 | INDICATIVE_PUBLIC_SITE_REFERENCE_NOT_BROKER |
+| SOYBEANS | 1274.20 | INDICATIVE_PUBLIC_SITE_REFERENCE_NOT_BROKER |
+| WHEAT | 673.60 | INDICATIVE_PUBLIC_SITE_REFERENCE_NOT_BROKER |
+| CORN | 484.40 | INDICATIVE_PUBLIC_SITE_REFERENCE_NOT_BROKER |
 | COCOA | 5831.70 | INDICATIVE_PUBLIC_SITE_REFERENCE_NOT_BROKER |
 | COFFEE | 291.33 | INDICATIVE_PUBLIC_SITE_REFERENCE_NOT_BROKER |
 
@@ -238,18 +238,18 @@ Same-maturity spread references and independently timed yield changes are preser
 
 | indicator | value | market_date | status |
 | --- | --- | --- | --- |
-| KOSPI | 5554.22 | 2026-10-15 | DATED_REFERENCE |
-| NIKKEI | 65520.00 | 2026-10-16 | DATED_REFERENCE |
-| CHINA_EQUITIES | 3746.32 | 2026-10-16 | DATED_REFERENCE |
-| DXY | 101.99 | 2026-10-16 | DATED_REFERENCE |
+| KOSPI | 5743.71 | 2026-10-16 | DATED_REFERENCE |
+| NIKKEI | 65605.00 | 2026-10-16 | DATED_REFERENCE |
+| CHINA_EQUITIES | 3714.36 | 2026-10-16 | DATED_REFERENCE |
+| DXY | 101.93 | 2026-10-16 | DATED_REFERENCE |
 
 **JPY-cluster check on completed 15m/30m candles:**
 | pair | 15m_change_pips | 30m_change_pips |
 | --- | --- | --- |
-| NZDJPY | -1.4 | 3.0 |
-| AUDJPY | -2.3 | 5.5 |
-| USDJPY | -2.2 | 1.5 |
-| EURJPY | 0.7 | -0.7 |
+| EURJPY | -2.1 | -6.9 |
+| AUDJPY | -2.6 | 3.0 |
+| NZDJPY | 2.2 | 1.5 |
+| USDJPY | -4.4 | -8.4 |
 
 Risk-off context cannot override an unsynchronized FX cluster.
 
@@ -293,16 +293,16 @@ Retail status: UNAVAILABLE. Myfxbook and Forex Factory dynamic positioning must 
 
 **Coverage:** AVAILABLE_INDICATIVE_TECHNICAL_BREADTH
 
-Strongest: AUD, CAD, GBP, NZD | Weakest: USD
+Strongest: JPY | Weakest: USD
 | rank | currency | breadth_score |
 | --- | --- | --- |
-| 1 | AUD | 2 |
-| 2 | CAD | 2 |
-| 3 | GBP | 2 |
-| 4 | NZD | 2 |
-| 5 | JPY | 0 |
-| 6 | EUR | -2 |
-| 7 | USD | -6 |
+| 1 | JPY | 4 |
+| 2 | GBP | 2 |
+| 3 | AUD | 0 |
+| 4 | EUR | 0 |
+| 5 | NZD | 0 |
+| 6 | CAD | -2 |
+| 7 | USD | -4 |
 
 
 ---
@@ -311,33 +311,41 @@ Strongest: AUD, CAD, GBP, NZD | Weakest: USD
 
 **Coverage:** SEPARATELY_OBSERVED_SITE_REPORTED_CLOSED_CANDLES
 
-Public technical feed collected: Thu Oct 15, 2026 11:34:36 PM ET
+Public technical feed collected: Fri Oct 16, 2026 2:03:02 AM ET
 | pair | latest_15m_closed_price | latest_15m_closed_at_utc | 15m_change_pips | 30m_change_pips | original_published_direction | updated_directional_assessment |
 | --- | --- | --- | --- | --- | --- | --- |
-| EURUSD | 1.12114 | 2026-10-16T03:30:00+00:00 | 2.1 | -1.3 | BUY | BUY EPISODE / MIXED CLOSED CANDLES — WAIT |
-| AUDUSD | 0.69209 | 2026-10-16T03:30:00+00:00 | -0.5 | 2.9 | BUY | BUY EPISODE / MIXED CLOSED CANDLES — WAIT |
-| NZDUSD | 0.56218 | 2026-10-16T03:30:00+00:00 | -0.1 | 1.4 | BUY | BUY EPISODE / MIXED CLOSED CANDLES — WAIT |
-| GBPUSD | 1.32716 | 2026-10-16T03:30:00+00:00 | 3.2 | 0.7 | BUY | BUY CONTINUATION — MONITOR |
-| NZDJPY | 88.907 | 2026-10-16T03:30:00+00:00 | -1.4 | 3.0 | BUY | BUY EPISODE / MIXED CLOSED CANDLES — WAIT |
-| USDCAD | 1.41930 | 2026-10-16T03:30:00+00:00 | -1.3 | -1.1 | SELL | SELL CONTINUATION — MONITOR |
-| AUDJPY | 109.453 | 2026-10-16T03:30:00+00:00 | -2.3 | 5.5 | BUY | BUY EPISODE / MIXED CLOSED CANDLES — WAIT |
-| EURCAD | 1.59114 | 2026-10-16T03:30:00+00:00 | 1.7 | -2.8 | SELL | SELL EPISODE / MIXED CLOSED CANDLES — WAIT |
-| EURGBP | 0.84475 | 2026-10-16T03:30:00+00:00 | -0.7 | -1.5 | SELL | SELL CONTINUATION — MONITOR |
-| USDJPY | 158.154 | 2026-10-16T03:30:00+00:00 | -2.2 | 1.5 | SELL | SELL EPISODE / MIXED CLOSED CANDLES — WAIT |
-| EURJPY | 177.306 | 2026-10-16T03:30:00+00:00 | 0.7 | -0.7 | SELL | SELL EPISODE / MIXED CLOSED CANDLES — WAIT |
+| EURJPY | 177.192 | 2026-10-16T06:00:00+00:00 | -2.1 | -6.9 | SELL | SELL CONTINUATION — MONITOR |
+| AUDJPY | 109.470 | 2026-10-16T06:00:00+00:00 | -2.6 | 3.0 | SELL | SELL EPISODE / MIXED CLOSED CANDLES — WAIT |
+| NZDJPY | 89.071 | 2026-10-16T06:00:00+00:00 | 2.2 | 1.5 | SELL | SELL EPISODE / OPPOSING PRESSURE — WATCH |
+| USDCAD | 1.41882 | 2026-10-16T06:00:00+00:00 | -2.1 | -3.1 | BUY | BUY EPISODE / OPPOSING PRESSURE — WATCH |
+| NZDUSD | 0.56391 | 2026-10-16T06:00:00+00:00 | 3.0 | 3.8 | SELL | SELL EPISODE / OPPOSING PRESSURE — WATCH |
+| GBPUSD | 1.32808 | 2026-10-16T06:00:00+00:00 | 2.8 | 3.2 | SELL | SELL EPISODE / OPPOSING PRESSURE — WATCH |
+| EURUSD | 1.12177 | 2026-10-16T06:00:00+00:00 | 1.9 | 1.4 | SELL | SELL EPISODE / OPPOSING PRESSURE — WATCH |
+| USDJPY | 157.958 | 2026-10-16T06:00:00+00:00 | -4.4 | -8.4 | BUY | SELL COUNTER-ROTATION WATCH — NOT A RECORDED SELL EPISODE |
+| AUDUSD | 0.69305 | 2026-10-16T06:00:00+00:00 | 0.2 | 5.4 | SELL | SELL EPISODE / OPPOSING PRESSURE — WATCH |
+| EURCAD | 1.59150 | 2026-10-16T06:00:00+00:00 | 0.2 | -1.2 | BUY | BUY EPISODE / MIXED CLOSED CANDLES — WAIT |
+| EURGBP | 0.84464 | 2026-10-16T06:00:00+00:00 | -0.6 | -1.2 | SELL | SELL CONTINUATION — MONITOR |
 
 ### WHY NOW — MOST IMPORTANT CHANGES
 
-**EURUSD — BUY EPISODE / MIXED CLOSED CANDLES — WAIT**
-Latest completed 15m 2.1 pips; 30m -1.3 pips. Original published direction: BUY. Recorded episode movement: -2.20 pips (not realized P&L).
+**USDJPY — SELL COUNTER-ROTATION WATCH — NOT A RECORDED SELL EPISODE**
+Latest completed 15m -4.4 pips; 30m -8.4 pips. Original published direction: BUY. Recorded episode movement: 11.20 pips (not realized P&L).
+Evidence is public completed-candle structure only. Trigger: Require further closed-candle counter-rotation evidence; no historical SELL/BUY episode assumed. Macro headlines/yields are separate, potentially conflicting context, not confirmed candle causality.
+
+**AUDUSD — SELL EPISODE / OPPOSING PRESSURE — WATCH**
+Latest completed 15m 0.2 pips; 30m 5.4 pips. Original published direction: SELL. Recorded episode movement: 11.60 pips (not realized P&L).
 Evidence is public completed-candle structure only. Trigger: Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation. Macro headlines/yields are separate, potentially conflicting context, not confirmed candle causality.
 
-**AUDUSD — BUY EPISODE / MIXED CLOSED CANDLES — WAIT**
-Latest completed 15m -0.5 pips; 30m 2.9 pips. Original published direction: BUY. Recorded episode movement: -1.70 pips (not realized P&L).
+**EURJPY — SELL CONTINUATION — MONITOR**
+Latest completed 15m -2.1 pips; 30m -6.9 pips. Original published direction: SELL. Recorded episode movement: -0.00 pips (not realized P&L).
 Evidence is public completed-candle structure only. Trigger: Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation. Macro headlines/yields are separate, potentially conflicting context, not confirmed candle causality.
 
-**NZDUSD — BUY EPISODE / MIXED CLOSED CANDLES — WAIT**
-Latest completed 15m -0.1 pips; 30m 1.4 pips. Original published direction: BUY. Recorded episode movement: 1.50 pips (not realized P&L).
+**AUDJPY — SELL EPISODE / MIXED CLOSED CANDLES — WAIT**
+Latest completed 15m -2.6 pips; 30m 3.0 pips. Original published direction: SELL. Recorded episode movement: 10.60 pips (not realized P&L).
+Evidence is public completed-candle structure only. Trigger: Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation. Macro headlines/yields are separate, potentially conflicting context, not confirmed candle causality.
+
+**NZDJPY — SELL EPISODE / OPPOSING PRESSURE — WATCH**
+Latest completed 15m 2.2 pips; 30m 1.5 pips. Original published direction: SELL. Recorded episode movement: 9.50 pips (not realized P&L).
 Evidence is public completed-candle structure only. Trigger: Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation. Macro headlines/yields are separate, potentially conflicting context, not confirmed candle causality.
 
 
@@ -349,17 +357,17 @@ Evidence is public completed-candle structure only. Trigger: Require supporting 
 
 | pair | 1H | 4H | Daily | 1H_EMA20 | 1H_EMA50 | 4H_EMA10 | 4H_EMA20 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| EURUSD | MIXED | MIXED | BEARISH | 1.12108 | 1.12011 | 1.12062 | 1.11994 |
-| AUDUSD | MIXED | BEARISH | MIXED | 0.69260 | 0.69417 | 0.69350 | 0.69474 |
-| NZDUSD | BULLISH | MIXED | BEARISH | 0.56192 | 0.56121 | 0.56167 | 0.56110 |
-| GBPUSD | MIXED | BULLISH | MIXED | 1.32645 | 1.32500 | 1.32578 | 1.32468 |
-| NZDJPY | BULLISH | MIXED | MIXED | 88.797 | 88.727 | 88.759 | 88.717 |
-| USDCAD | MIXED | BEARISH | BULLISH | 1.41960 | 1.42097 | 1.42022 | 1.42157 |
-| AUDJPY | MIXED | BEARISH | MIXED | 109.453 | 109.751 | 109.593 | 109.849 |
-| EURCAD | MIXED | MIXED | BEARISH | 1.59134 | 1.59150 | 1.59145 | 1.59199 |
-| EURGBP | MIXED | MIXED | BEARISH | 0.84511 | 0.84531 | 0.84513 | 0.84532 |
-| USDJPY | MIXED | MIXED | MIXED | 158.029 | 158.103 | 158.030 | 158.116 |
-| EURJPY | MIXED | MIXED | MIXED | 177.165 | 177.094 | 177.088 | 177.077 |
+| EURJPY | MIXED | MIXED | MIXED | 177.183 | 177.110 | 177.094 | 177.080 |
+| AUDJPY | MIXED | BEARISH | MIXED | 109.497 | 109.738 | 109.592 | 109.825 |
+| NZDJPY | BULLISH | MIXED | MIXED | 88.908 | 88.784 | 88.841 | 88.764 |
+| USDCAD | BEARISH | BEARISH | BULLISH | 1.41913 | 1.42060 | 1.41988 | 1.42126 |
+| NZDUSD | BULLISH | BULLISH | MIXED | 0.56283 | 0.56169 | 0.56240 | 0.56154 |
+| GBPUSD | BULLISH | BULLISH | MIXED | 1.32747 | 1.32561 | 1.32670 | 1.32528 |
+| EURUSD | BULLISH | MIXED | BEARISH | 1.12162 | 1.12047 | 1.12107 | 1.12025 |
+| USDJPY | BEARISH | BEARISH | MIXED | 157.971 | 158.069 | 157.974 | 158.077 |
+| AUDUSD | MIXED | BEARISH | MIXED | 0.69315 | 0.69424 | 0.69376 | 0.69477 |
+| EURCAD | MIXED | MIXED | BEARISH | 1.59159 | 1.59160 | 1.59167 | 1.59206 |
+| EURGBP | BEARISH | MIXED | BEARISH | 0.84487 | 0.84518 | 0.84490 | 0.84518 |
 
 These longer timeframes are contextual; they do not veto early completed 15m/30m rotations.
 
@@ -371,17 +379,17 @@ These longer timeframes are contextual; they do not veto early completed 15m/30m
 
 | pair | observed_3h_width_pips | previous_3h_width_pips | ADR20_pips | NY17_used_pips | statistical_ADR_remaining_pips |
 | --- | --- | --- | --- | --- | --- |
-| EURUSD | 9.9 | 17.3 | 66.0 | 12.4 | 53.55000 |
-| AUDUSD | 7.8 | 11.3 | 47.5 | 21.2 | 26.29000 |
-| NZDUSD | 8.8 | 11.0 | 42.5 | 27.8 | 14.71000 |
-| GBPUSD | 14.8 | 18.3 | 73.1 | 25.5 | 47.61000 |
-| NZDJPY | 22.4 | 25.0 | 70.6 | 52.5 | 18.090 |
-| USDCAD | 11.5 | 14.6 | 61.9 | 18.5 | 43.37000 |
-| AUDJPY | 22.5 | 24.8 | 93.9 | 33.6 | 60.290 |
-| EURCAD | 16.2 | 22.7 | 75.9 | 29.5 | 46.40000 |
-| EURGBP | 4.9 | 5.9 | 27.1 | 6.7 | 20.38000 |
-| USDJPY | 23.1 | 30.2 | 104.2 | 30.1 | 74.120 |
-| EURJPY | 20.9 | 21.3 | 130.7 | 26.1 | 104.600 |
+| EURJPY | 22.0 | 22.4 | MISSING | MISSING | MISSING |
+| AUDJPY | 16.9 | 28.3 | MISSING | MISSING | MISSING |
+| NZDJPY | 23.3 | 35.5 | MISSING | MISSING | MISSING |
+| USDCAD | 13.6 | 13.9 | MISSING | MISSING | MISSING |
+| NZDUSD | 21.3 | 11.8 | MISSING | MISSING | MISSING |
+| GBPUSD | 17.0 | 16.9 | MISSING | MISSING | MISSING |
+| EURUSD | 12.4 | 9.8 | MISSING | MISSING | MISSING |
+| USDJPY | 30.1 | 26.9 | MISSING | MISSING | MISSING |
+| AUDUSD | 13.9 | 12.5 | MISSING | MISSING | MISSING |
+| EURCAD | 13.2 | 23.8 | MISSING | MISSING | MISSING |
+| EURGBP | 5.2 | 6.1 | MISSING | MISSING | MISSING |
 
 Range widths are observed windows, not verified consolidation origins. ADR remaining is statistical capacity, not a target.
 
@@ -393,17 +401,17 @@ Range widths are observed windows, not verified consolidation origins. ADR remai
 
 | pair | original_direction | latest_provisional_assessment | conditional_research_trigger | structural_invalidation | entry | stop | tp1 | tp2 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| EURUSD | BUY | BUY EPISODE / MIXED CLOSED CANDLES — WAIT | Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation | Opposing confirmed closed 15m/30m structural rotation; specific level requires verified source | MISSING | MISSING | MISSING | MISSING |
-| AUDUSD | BUY | BUY EPISODE / MIXED CLOSED CANDLES — WAIT | Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation | Opposing confirmed closed 15m/30m structural rotation; specific level requires verified source | MISSING | MISSING | MISSING | MISSING |
-| NZDUSD | BUY | BUY EPISODE / MIXED CLOSED CANDLES — WAIT | Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation | Opposing confirmed closed 15m/30m structural rotation; specific level requires verified source | MISSING | MISSING | MISSING | MISSING |
-| GBPUSD | BUY | BUY CONTINUATION — MONITOR | Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation | Opposing confirmed closed 15m/30m structural rotation; specific level requires verified source | MISSING | MISSING | MISSING | MISSING |
-| NZDJPY | BUY | BUY EPISODE / MIXED CLOSED CANDLES — WAIT | Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation | Opposing confirmed closed 15m/30m structural rotation; specific level requires verified source | MISSING | MISSING | MISSING | MISSING |
-| USDCAD | SELL | SELL CONTINUATION — MONITOR | Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation | Opposing confirmed closed 15m/30m structural rotation; specific level requires verified source | MISSING | MISSING | MISSING | MISSING |
-| AUDJPY | BUY | BUY EPISODE / MIXED CLOSED CANDLES — WAIT | Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation | Opposing confirmed closed 15m/30m structural rotation; specific level requires verified source | MISSING | MISSING | MISSING | MISSING |
-| EURCAD | SELL | SELL EPISODE / MIXED CLOSED CANDLES — WAIT | Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation | Opposing confirmed closed 15m/30m structural rotation; specific level requires verified source | MISSING | MISSING | MISSING | MISSING |
+| EURJPY | SELL | SELL CONTINUATION — MONITOR | Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation | Opposing confirmed closed 15m/30m structural rotation; specific level requires verified source | MISSING | MISSING | MISSING | MISSING |
+| AUDJPY | SELL | SELL EPISODE / MIXED CLOSED CANDLES — WAIT | Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation | Opposing confirmed closed 15m/30m structural rotation; specific level requires verified source | MISSING | MISSING | MISSING | MISSING |
+| NZDJPY | SELL | SELL EPISODE / OPPOSING PRESSURE — WATCH | Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation | Opposing confirmed closed 15m/30m structural rotation; specific level requires verified source | MISSING | MISSING | MISSING | MISSING |
+| USDCAD | BUY | BUY EPISODE / OPPOSING PRESSURE — WATCH | Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation | Opposing confirmed closed 15m/30m structural rotation; specific level requires verified source | MISSING | MISSING | MISSING | MISSING |
+| NZDUSD | SELL | SELL EPISODE / OPPOSING PRESSURE — WATCH | Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation | Opposing confirmed closed 15m/30m structural rotation; specific level requires verified source | MISSING | MISSING | MISSING | MISSING |
+| GBPUSD | SELL | SELL EPISODE / OPPOSING PRESSURE — WATCH | Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation | Opposing confirmed closed 15m/30m structural rotation; specific level requires verified source | MISSING | MISSING | MISSING | MISSING |
+| EURUSD | SELL | SELL EPISODE / OPPOSING PRESSURE — WATCH | Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation | Opposing confirmed closed 15m/30m structural rotation; specific level requires verified source | MISSING | MISSING | MISSING | MISSING |
+| USDJPY | BUY | SELL COUNTER-ROTATION WATCH — NOT A RECORDED SELL EPISODE | Require further closed-candle counter-rotation evidence; no historical SELL/BUY episode assumed | Opposing confirmed closed 15m/30m structural rotation; specific level requires verified source | MISSING | MISSING | MISSING | MISSING |
+| AUDUSD | SELL | SELL EPISODE / OPPOSING PRESSURE — WATCH | Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation | Opposing confirmed closed 15m/30m structural rotation; specific level requires verified source | MISSING | MISSING | MISSING | MISSING |
+| EURCAD | BUY | BUY EPISODE / MIXED CLOSED CANDLES — WAIT | Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation | Opposing confirmed closed 15m/30m structural rotation; specific level requires verified source | MISSING | MISSING | MISSING | MISSING |
 | EURGBP | SELL | SELL CONTINUATION — MONITOR | Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation | Opposing confirmed closed 15m/30m structural rotation; specific level requires verified source | MISSING | MISSING | MISSING | MISSING |
-| USDJPY | SELL | SELL EPISODE / MIXED CLOSED CANDLES — WAIT | Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation | Opposing confirmed closed 15m/30m structural rotation; specific level requires verified source | MISSING | MISSING | MISSING | MISSING |
-| EURJPY | SELL | SELL EPISODE / MIXED CLOSED CANDLES — WAIT | Require supporting fresh closed 15m/30m direction and structure; reject counter-rotation | Opposing confirmed closed 15m/30m structural rotation; specific level requires verified source | MISSING | MISSING | MISSING | MISSING |
 
 No independently broker-verified executable quotes, stops, spreads or targets. Research only.
 
@@ -415,17 +423,17 @@ No independently broker-verified executable quotes, stops, spreads or targets. R
 
 | pair | recorded_episode_direction | first_recorded_at_utc | first_recorded_price | latest_completed_15m_price | pips_favorable_since_first_record |
 | --- | --- | --- | --- | --- | --- |
-| EURUSD | BUY | 2026-10-15T23:48:12.379194+00:00 | 1.12136 | 1.12114 | -2.2 |
-| AUDUSD | BUY | 2026-10-16T01:19:01.723499+00:00 | 0.69226 | 0.69209 | -1.7 |
-| NZDUSD | BUY | 2026-10-15T23:20:51.536708+00:00 | 0.56203 | 0.56218 | 1.5 |
-| GBPUSD | BUY | 2026-10-15T23:20:51.536708+00:00 | 1.32718 | 1.32716 | -0.2 |
-| NZDJPY | BUY | 2026-10-15T22:05:54.557122+00:00 | 88.768 | 88.907 | 13.9 |
-| USDCAD | SELL | 2026-10-16T02:20:19.512435+00:00 | 1.41921 | 1.41930 | -0.9 |
-| AUDJPY | BUY | 2026-10-16T03:03:29.639615+00:00 | 109.470 | 109.453 | -1.7 |
-| EURCAD | SELL | 2026-10-16T03:03:29.639615+00:00 | 1.59150 | 1.59114 | 3.6 |
-| EURGBP | SELL | 2026-10-16T02:20:19.512435+00:00 | 0.84474 | 0.84475 | -0.1 |
-| USDJPY | SELL | 2026-10-16T02:20:19.512435+00:00 | 157.994 | 158.154 | -16.0 |
-| EURJPY | SELL | 2026-10-16T02:20:19.512435+00:00 | 177.192 | 177.306 | -11.4 |
+| EURJPY | SELL | 2026-10-16T02:20:19.512435+00:00 | 177.192 | 177.192 | -0.0 |
+| AUDJPY | SELL | 2026-10-16T06:03:06.135881+00:00 | 109.576 | 109.470 | 10.6 |
+| NZDJPY | SELL | 2026-10-16T06:03:06.135881+00:00 | 89.166 | 89.071 | 9.5 |
+| USDCAD | BUY | 2026-10-16T06:03:06.135881+00:00 | 1.41840 | 1.41882 | 4.2 |
+| NZDUSD | SELL | 2026-10-16T06:03:06.135881+00:00 | 0.56492 | 0.56391 | 10.1 |
+| GBPUSD | SELL | 2026-10-16T06:03:06.135881+00:00 | 1.32968 | 1.32808 | 16.0 |
+| EURUSD | SELL | 2026-10-16T06:03:06.135881+00:00 | 1.12245 | 1.12177 | 6.8 |
+| USDJPY | BUY | 2026-10-16T06:03:06.135881+00:00 | 157.846 | 157.958 | 11.2 |
+| AUDUSD | SELL | 2026-10-16T06:03:06.135881+00:00 | 0.69421 | 0.69305 | 11.6 |
+| EURCAD | BUY | 2026-10-16T06:03:06.135881+00:00 | 1.59199 | 1.59150 | -4.9 |
+| EURGBP | SELL | 2026-10-16T02:20:19.512435+00:00 | 0.84474 | 0.84464 | 1.0 |
 
 Recorded observations do not imply realized P&L. Wrong-way episodes remain visible; counter-rotations are never retroactively invented.
 
@@ -453,13 +461,13 @@ Recorded observations do not imply realized P&L. Wrong-way episodes remain visib
 
 ---
 
-## FINAL FOREX MAIN SIGNAL — Thu Oct 15, 2026 11:34:36 PM ET
+## FINAL FOREX MAIN SIGNAL — Fri Oct 16, 2026 2:03:02 AM ET
 
-Strongest technical breadth: AUD, CAD, GBP, NZD. Weakest: USD.
-Highest published 50/50 research rank: EURUSD (published score; separate from later candles).
-No independently qualifying omitted counter-rotation measured.
+Strongest technical breadth: JPY. Weakest: USD.
+Highest published 50/50 research rank: EURJPY (published score; separate from later candles).
+Important omitted counter-rotations / accelerations: USDJPY, AUDUSD
 Keep conditional BUY/SELL assessments separate from recorded active episodes. Newer candles may weaken or contradict the published board.
-Upcoming calendar risk: Fri Oct 16, 2026 12:15:00 AM ET BOC Gov Macklem Speaks, Fri Oct 16, 2026 5:00:00 AM ET Final Core CPI y/y, Fri Oct 16, 2026 5:00:00 AM ET Final CPI y/y, Fri Oct 16, 2026 5:00:00 AM ET Trade Balance, Fri Oct 16, 2026 6:00:00 AM ET Italian Trade Balance
+Upcoming calendar risk: Fri Oct 16, 2026 5:00:00 AM ET Final Core CPI y/y, Fri Oct 16, 2026 5:00:00 AM ET Final CPI y/y, Fri Oct 16, 2026 5:00:00 AM ET Trade Balance, Fri Oct 16, 2026 6:00:00 AM ET Italian Trade Balance, Fri Oct 16, 2026 8:00:00 AM ET Gov Council Member Alexopoulos Speaks
 
 **EXECUTION STATUS: RESEARCH WATCH ONLY.** Broker entries, stops, profit targets and spreads are not independently verified. No trades executed; no alerts generated.
 
