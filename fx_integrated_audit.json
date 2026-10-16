@@ -1,60 +1,60 @@
 {
-  "generated_at_utc": "2026-10-16T13:12:06.780665+00:00",
+  "generated_at_utc": "2026-10-16T13:47:21.355393+00:00",
   "purpose": "FULL_SOURCE_AUDIT_NOT_EXECUTABLE_TRADE_ORDERS",
   "sources": {
     "technicals": {
-      "status": "FRESH",
-      "age_minutes": 22.5
+      "status": "STALE",
+      "age_minutes": 57.8
     },
     "dashboard": {
-      "status": "FRESH",
-      "age_minutes": 22.5
+      "status": "STALE",
+      "age_minutes": 57.7
     },
     "calendar": {
       "status": "FRESH",
-      "age_minutes": 32.5
+      "age_minutes": 6.3
     },
     "ff_markets": {
-      "status": "FRESH",
-      "age_minutes": 5.7
+      "status": "STALE",
+      "age_minutes": 41.0
     },
     "volatility": {
-      "status": "FRESH",
-      "age_minutes": 22.5
+      "status": "STALE",
+      "age_minutes": 57.8
     },
     "kospi_te_public_page": {
       "status": "DATED_DAILY_CONTEXT",
-      "age_minutes": 4.3,
+      "age_minutes": 0.0,
       "source_url": "https://tradingeconomics.com/south-korea/stock-market",
       "verified_intraday_quote": false
     },
     "macro_snapshot": {
       "status": "FRESH",
-      "age_minutes": 0.0
+      "age_minutes": 35.3
     },
     "macro_raw": {
       "status": "FRESH",
-      "age_minutes": 0.0
+      "age_minutes": 35.3
     },
     "macro_news": {
       "status": "FRESH",
-      "age_minutes": 0.0
+      "age_minutes": 35.3
     },
     "unified_signals": {
-      "status": "FRESH",
-      "age_minutes": 22.4
+      "status": "STALE",
+      "age_minutes": 57.6
     },
     "economic_actuals": {
       "status": "FRESH",
-      "age_minutes": 0.1
+      "age_minutes": 35.3
     },
     "range_context": {
       "status": "FRESH",
-      "age_minutes": 0.0
+      "age_minutes": 35.3
     },
     "retail": {
       "status": "FRESH",
-      "age_minutes": 0.0
+      "age_minutes": 35.3
     }
   },
   "macro_layers": {
@@ -70,7 +70,7 @@
     "cme_volume_open_interest": "PARTIAL_CFTC_WEEKLY_OI_CME_DAILY_DATA_UNVERIFIED",
     "retail_positioning": "UNAVAILABLE_CURRENT",
     "currency_strength_clusters": "DERIVED_FROM_11_FX_PAIRS",
-    "closed_15m30m_direction": "FRESH_TECHNICAL_WATCH_NOT_BROKER_EXECUTION",
+    "closed_15m30m_direction": "STALE_OR_UNAVAILABLE",
     "atr_adr_session_levels": "PARTIAL_OR_COMPLETE_REFERENCE_CONTEXT_NOT_EXECUTION",
     "independent_live_spreads": "UNAVAILABLE_BROKER_EXECUTABLE_QUOTE",
     "signal_history": "VERIFIED_RECORDED_SIGNAL_OBSERVATIONS",
@@ -93,224 +93,23 @@
   "pairs": [
     {
       "pair": "AUDUSD",
-      "technical_direction": "SELL",
-      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "SELL",
-      "macro_alignment": "CONTRADICTORY",
-      "macro_evidence": [
-        {
-          "driver": "YIELD_SPREAD_2Y",
-          "favors": "BUY",
-          "change": 1.0,
-          "unit": "basis_points",
-          "detail": "Relative AUD/USD yield changes over matching observed sample windows",
-          "quality": "INDICATIVE_SAMPLED_NOT_QUOTE_TIMESTAMPED"
-        }
-      ],
-      "publisher_reported_actuals": [
-        {
-          "currency": "USD",
-          "title": "Crude Oil Inventories",
-          "scheduled_at_utc": "2026-10-15T16:00:00+00:00",
-          "reported_actual": "-8.6M",
-          "forecast": "0.2M",
-          "previous": "-3.2M",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Natural Gas Storage",
-          "scheduled_at_utc": "2026-10-15T14:30:00+00:00",
-          "reported_actual": "67B",
-          "forecast": "76B",
-          "previous": "85B",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Business Inventories m/m",
-          "scheduled_at_utc": "2026-10-15T14:00:00+00:00",
-          "reported_actual": "0.4%",
-          "forecast": "0.4%",
-          "previous": "0.8%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Core PPI m/m",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "0.7%",
-          "forecast": "0.3%",
-          "previous": "0.2%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Core Retail Sales m/m",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "0.9%",
-          "forecast": "0.6%",
-          "previous": "1.4%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "PPI m/m",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "1.3%",
-          "forecast": "0.6%",
-          "previous": "0.4%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Retail Sales m/m",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "0.8%",
-          "forecast": "0.3%",
-          "previous": "1.2%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Philly Fed Manufacturing Index",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "20.9",
-          "forecast": "28.2",
-          "previous": "37.8",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Unemployment Claims",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "199K",
-          "forecast": "199K",
-          "previous": "197K",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Empire State Manufacturing Index",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "25.5",
-          "forecast": "12.1",
-          "previous": "7.6",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        }
-      ],
+      "technical_direction": "NO_RANKED_CANDIDATE",
+      "technical_stage": "UNRANKED",
+      "unified_signal_direction": "UNAVAILABLE",
+      "macro_alignment": "UNKNOWN",
+      "macro_evidence": [],
+      "publisher_reported_actuals": [],
       "range_context": {
-        "pair": "AUDUSD",
-        "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
-        "ADR20_pips": 47.49,
-        "ADR20_complete_days": 20,
-        "NY17_day_used_pips": 56.9,
-        "NY17_ADR_percent_used": 119.8,
-        "ADR_remaining_reference_pips": 0,
-        "NY17_rollover_start_utc": "2026-10-15T21:00:00+00:00",
-        "session_ranges": {
-          "TOKYO": {
-            "high": 0.69618,
-            "low": 0.69178,
-            "first_observed_open_utc": "2026-10-16T00:00:00+00:00",
-            "last_observed_open_utc": "2026-10-16T08:45:00+00:00",
-            "closed_15m_bars": 36,
-            "range_pips": 44.0,
-            "session_start_utc": "2026-10-16T00:00:00+00:00",
-            "scheduled_session_end_utc": "2026-10-16T09:00:00+00:00",
-            "session_in_progress": false,
-            "observed_partial": false
-          },
-          "LONDON": {
-            "high": 0.69674,
-            "low": 0.69493,
-            "first_observed_open_utc": "2026-10-16T07:00:00+00:00",
-            "last_observed_open_utc": "2026-10-16T11:45:00+00:00",
-            "closed_15m_bars": 20,
-            "range_pips": 18.1,
-            "session_start_utc": "2026-10-16T07:00:00+00:00",
-            "scheduled_session_end_utc": "2026-10-16T16:00:00+00:00",
-            "session_in_progress": true,
-            "observed_partial": true
-          }
-        },
-        "reference_only": true,
-        "used_for_signal_direction": false,
-        "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
-        "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
-        "D1_current_session_used_for_direction": false,
-        "NY17_day_first_observed_open_utc": "2026-10-15T23:45:00+00:00"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "ABOVE_BOTH",
       "h4_ema20_50": "MIXED",
       "timeframes_present": true,
-      "higher_timeframe_conflict": true,
+      "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
-        {
-          "title": "Capacity Utilization Rate",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-16T09:15:00-04:00",
-          "forecast": "76.5%",
-          "previous": "76.3%",
-          "actual": null,
-          "minutes_until": 3,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Industrial Production m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-16T09:15:00-04:00",
-          "forecast": "0.4%",
-          "previous": "0.0%",
-          "actual": null,
-          "minutes_until": 3,
-          "time_status": "IMMINENT"
-        },
         {
           "title": "Federal Budget Balance",
           "currency": "USD",
@@ -319,7 +118,7 @@
           "forecast": "-34.7B",
           "previous": "-166.8B",
           "actual": null,
-          "minutes_until": 288,
+          "minutes_until": 253,
           "time_status": "UPCOMING"
         },
         {
@@ -330,7 +129,7 @@
           "forecast": "75.2B",
           "previous": "-27.9B",
           "actual": null,
-          "minutes_until": 408,
+          "minutes_until": 373,
           "time_status": "UPCOMING"
         },
         {
@@ -341,33 +140,11 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2088,
+          "minutes_until": 2053,
           "time_status": "UPCOMING"
         }
       ],
       "next_24h_events": [
-        {
-          "title": "Capacity Utilization Rate",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-16T09:15:00-04:00",
-          "forecast": "76.5%",
-          "previous": "76.3%",
-          "actual": null,
-          "minutes_until": 3,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Industrial Production m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-16T09:15:00-04:00",
-          "forecast": "0.4%",
-          "previous": "0.0%",
-          "actual": null,
-          "minutes_until": 3,
-          "time_status": "IMMINENT"
-        },
         {
           "title": "Federal Budget Balance",
           "currency": "USD",
@@ -376,7 +153,7 @@
           "forecast": "-34.7B",
           "previous": "-166.8B",
           "actual": null,
-          "minutes_until": 288,
+          "minutes_until": 253,
           "time_status": "UPCOMING"
         },
         {
@@ -387,46 +164,16 @@
           "forecast": "75.2B",
           "previous": "-27.9B",
           "actual": null,
-          "minutes_until": 408,
+          "minutes_until": 373,
           "time_status": "UPCOMING"
         }
       ],
-      "imminent_events": [
-        {
-          "title": "Capacity Utilization Rate",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-16T09:15:00-04:00",
-          "forecast": "76.5%",
-          "previous": "76.3%",
-          "actual": null,
-          "minutes_until": 3,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Industrial Production m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-16T09:15:00-04:00",
-          "forecast": "0.4%",
-          "previous": "0.0%",
-          "actual": null,
-          "minutes_until": 3,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "event_risk": "IMMINENT_EVENT",
+      "imminent_events": [],
+      "event_risk": "EVENT_WITHIN_24H",
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE_HTTPERROR",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": "2026-10-16T12:11:20.526020+00:00",
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -443,7 +190,7 @@
       },
       "asian_risk_directional_note": "Asian equity risk may affect AUD/NZD, but FX must confirm",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -453,193 +200,14 @@
       "pair": "NZDUSD",
       "technical_direction": "SELL",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "SELL",
-      "macro_alignment": "CONTRADICTORY",
-      "macro_evidence": [
-        {
-          "driver": "YIELD_SPREAD_2Y",
-          "favors": "BUY",
-          "change": 1.0,
-          "unit": "basis_points",
-          "detail": "Relative NZD/USD yield changes over matching observed sample windows",
-          "quality": "INDICATIVE_SAMPLED_NOT_QUOTE_TIMESTAMPED"
-        }
-      ],
-      "publisher_reported_actuals": [
-        {
-          "currency": "NZD",
-          "title": "FPI m/m",
-          "scheduled_at_utc": "2026-10-15T21:45:00+00:00",
-          "reported_actual": "0.0%",
-          "forecast": "",
-          "previous": "0.3%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "NZD",
-          "title": "BusinessNZ Manufacturing Index",
-          "scheduled_at_utc": "2026-10-15T21:30:00+00:00",
-          "reported_actual": "56.5",
-          "forecast": "",
-          "previous": "53.1",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Crude Oil Inventories",
-          "scheduled_at_utc": "2026-10-15T16:00:00+00:00",
-          "reported_actual": "-8.6M",
-          "forecast": "0.2M",
-          "previous": "-3.2M",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Natural Gas Storage",
-          "scheduled_at_utc": "2026-10-15T14:30:00+00:00",
-          "reported_actual": "67B",
-          "forecast": "76B",
-          "previous": "85B",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Business Inventories m/m",
-          "scheduled_at_utc": "2026-10-15T14:00:00+00:00",
-          "reported_actual": "0.4%",
-          "forecast": "0.4%",
-          "previous": "0.8%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Core PPI m/m",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "0.7%",
-          "forecast": "0.3%",
-          "previous": "0.2%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Core Retail Sales m/m",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "0.9%",
-          "forecast": "0.6%",
-          "previous": "1.4%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "PPI m/m",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "1.3%",
-          "forecast": "0.6%",
-          "previous": "0.4%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Retail Sales m/m",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "0.8%",
-          "forecast": "0.3%",
-          "previous": "1.2%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Philly Fed Manufacturing Index",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "20.9",
-          "forecast": "28.2",
-          "previous": "37.8",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        }
-      ],
+      "unified_signal_direction": "UNAVAILABLE",
+      "macro_alignment": "UNKNOWN",
+      "macro_evidence": [],
+      "publisher_reported_actuals": [],
       "range_context": {
-        "pair": "NZDUSD",
-        "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
-        "ADR20_pips": 42.51,
-        "ADR20_complete_days": 20,
-        "NY17_day_used_pips": 63.0,
-        "NY17_ADR_percent_used": 148.2,
-        "ADR_remaining_reference_pips": 0,
-        "NY17_rollover_start_utc": "2026-10-15T21:00:00+00:00",
-        "session_ranges": {
-          "TOKYO": {
-            "high": 0.56716,
-            "low": 0.56188,
-            "first_observed_open_utc": "2026-10-16T00:00:00+00:00",
-            "last_observed_open_utc": "2026-10-16T08:45:00+00:00",
-            "closed_15m_bars": 36,
-            "range_pips": 52.8,
-            "session_start_utc": "2026-10-16T00:00:00+00:00",
-            "scheduled_session_end_utc": "2026-10-16T09:00:00+00:00",
-            "session_in_progress": false,
-            "observed_partial": false
-          },
-          "LONDON": {
-            "high": 0.56753,
-            "low": 0.56519,
-            "first_observed_open_utc": "2026-10-16T07:00:00+00:00",
-            "last_observed_open_utc": "2026-10-16T11:45:00+00:00",
-            "closed_15m_bars": 20,
-            "range_pips": 23.4,
-            "session_start_utc": "2026-10-16T07:00:00+00:00",
-            "scheduled_session_end_utc": "2026-10-16T16:00:00+00:00",
-            "session_in_progress": true,
-            "observed_partial": true
-          }
-        },
-        "reference_only": true,
-        "used_for_signal_direction": false,
-        "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
-        "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
-        "D1_current_session_used_for_direction": false,
-        "NY17_day_first_observed_open_utc": "2026-10-15T23:45:00+00:00"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "ABOVE_BOTH",
@@ -648,28 +216,6 @@
       "higher_timeframe_conflict": true,
       "upcoming_48h_events": [
         {
-          "title": "Capacity Utilization Rate",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-16T09:15:00-04:00",
-          "forecast": "76.5%",
-          "previous": "76.3%",
-          "actual": null,
-          "minutes_until": 3,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Industrial Production m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-16T09:15:00-04:00",
-          "forecast": "0.4%",
-          "previous": "0.0%",
-          "actual": null,
-          "minutes_until": 3,
-          "time_status": "IMMINENT"
-        },
-        {
           "title": "Federal Budget Balance",
           "currency": "USD",
           "impact": "Low",
@@ -677,7 +223,7 @@
           "forecast": "-34.7B",
           "previous": "-166.8B",
           "actual": null,
-          "minutes_until": 288,
+          "minutes_until": 253,
           "time_status": "UPCOMING"
         },
         {
@@ -688,34 +234,12 @@
           "forecast": "75.2B",
           "previous": "-27.9B",
           "actual": null,
-          "minutes_until": 408,
+          "minutes_until": 373,
           "time_status": "UPCOMING"
         }
       ],
       "next_24h_events": [
         {
-          "title": "Capacity Utilization Rate",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-16T09:15:00-04:00",
-          "forecast": "76.5%",
-          "previous": "76.3%",
-          "actual": null,
-          "minutes_until": 3,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Industrial Production m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-16T09:15:00-04:00",
-          "forecast": "0.4%",
-          "previous": "0.0%",
-          "actual": null,
-          "minutes_until": 3,
-          "time_status": "IMMINENT"
-        },
-        {
           "title": "Federal Budget Balance",
           "currency": "USD",
           "impact": "Low",
@@ -723,7 +247,7 @@
           "forecast": "-34.7B",
           "previous": "-166.8B",
           "actual": null,
-          "minutes_until": 288,
+          "minutes_until": 253,
           "time_status": "UPCOMING"
         },
         {
@@ -734,46 +258,16 @@
           "forecast": "75.2B",
           "previous": "-27.9B",
           "actual": null,
-          "minutes_until": 408,
+          "minutes_until": 373,
           "time_status": "UPCOMING"
         }
       ],
-      "imminent_events": [
-        {
-          "title": "Capacity Utilization Rate",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-16T09:15:00-04:00",
-          "forecast": "76.5%",
-          "previous": "76.3%",
-          "actual": null,
-          "minutes_until": 3,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Industrial Production m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-16T09:15:00-04:00",
-          "forecast": "0.4%",
-          "previous": "0.0%",
-          "actual": null,
-          "minutes_until": 3,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "event_risk": "IMMINENT_EVENT",
+      "imminent_events": [],
+      "event_risk": "EVENT_WITHIN_24H",
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE_HTTPERROR",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": "2026-10-16T12:11:20.526945+00:00",
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -790,7 +284,7 @@
       },
       "asian_risk_directional_note": "Asian equity risk may affect AUD/NZD, but FX must confirm",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -800,193 +294,14 @@
       "pair": "EURUSD",
       "technical_direction": "SELL",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "SELL",
-      "macro_alignment": "CONTRADICTORY",
-      "macro_evidence": [
-        {
-          "driver": "YIELD_SPREAD_2Y",
-          "favors": "BUY",
-          "change": 1.0,
-          "unit": "basis_points",
-          "detail": "Relative EUR/USD yield changes over matching observed sample windows",
-          "quality": "INDICATIVE_SAMPLED_NOT_QUOTE_TIMESTAMPED"
-        }
-      ],
-      "publisher_reported_actuals": [
-        {
-          "currency": "EUR",
-          "title": "Italian Trade Balance",
-          "scheduled_at_utc": "2026-10-16T10:00:00+00:00",
-          "reported_actual": "1.77B",
-          "forecast": "7.50B",
-          "previous": "8.24B",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "EUR",
-          "title": "Final Core CPI y/y",
-          "scheduled_at_utc": "2026-10-16T09:00:00+00:00",
-          "reported_actual": "2.5%",
-          "forecast": "2.5%",
-          "previous": "2.5%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "EUR",
-          "title": "Final CPI y/y",
-          "scheduled_at_utc": "2026-10-16T09:00:00+00:00",
-          "reported_actual": "3.8%",
-          "forecast": "3.8%",
-          "previous": "3.8%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "EUR",
-          "title": "Trade Balance",
-          "scheduled_at_utc": "2026-10-16T09:00:00+00:00",
-          "reported_actual": "-6.8B",
-          "forecast": "4.5B",
-          "previous": "5.0B",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Crude Oil Inventories",
-          "scheduled_at_utc": "2026-10-15T16:00:00+00:00",
-          "reported_actual": "-8.6M",
-          "forecast": "0.2M",
-          "previous": "-3.2M",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Natural Gas Storage",
-          "scheduled_at_utc": "2026-10-15T14:30:00+00:00",
-          "reported_actual": "67B",
-          "forecast": "76B",
-          "previous": "85B",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Business Inventories m/m",
-          "scheduled_at_utc": "2026-10-15T14:00:00+00:00",
-          "reported_actual": "0.4%",
-          "forecast": "0.4%",
-          "previous": "0.8%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Core PPI m/m",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "0.7%",
-          "forecast": "0.3%",
-          "previous": "0.2%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Core Retail Sales m/m",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "0.9%",
-          "forecast": "0.6%",
-          "previous": "1.4%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "PPI m/m",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "1.3%",
-          "forecast": "0.6%",
-          "previous": "0.4%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        }
-      ],
+      "unified_signal_direction": "UNAVAILABLE",
+      "macro_alignment": "UNKNOWN",
+      "macro_evidence": [],
+      "publisher_reported_actuals": [],
       "range_context": {
-        "pair": "EURUSD",
-        "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
-        "ADR20_pips": 65.95,
-        "ADR20_complete_days": 20,
-        "NY17_day_used_pips": 61.3,
-        "NY17_ADR_percent_used": 92.9,
-        "ADR_remaining_reference_pips": 4.65,
-        "NY17_rollover_start_utc": "2026-10-15T21:00:00+00:00",
-        "session_ranges": {
-          "TOKYO": {
-            "high": 1.12494,
-            "low": 1.12082,
-            "first_observed_open_utc": "2026-10-16T00:00:00+00:00",
-            "last_observed_open_utc": "2026-10-16T08:45:00+00:00",
-            "closed_15m_bars": 36,
-            "range_pips": 41.2,
-            "session_start_utc": "2026-10-16T00:00:00+00:00",
-            "scheduled_session_end_utc": "2026-10-16T09:00:00+00:00",
-            "session_in_progress": false,
-            "observed_partial": false
-          },
-          "LONDON": {
-            "high": 1.12695,
-            "low": 1.12341,
-            "first_observed_open_utc": "2026-10-16T07:00:00+00:00",
-            "last_observed_open_utc": "2026-10-16T11:45:00+00:00",
-            "closed_15m_bars": 20,
-            "range_pips": 35.4,
-            "session_start_utc": "2026-10-16T07:00:00+00:00",
-            "scheduled_session_end_utc": "2026-10-16T16:00:00+00:00",
-            "session_in_progress": true,
-            "observed_partial": true
-          }
-        },
-        "reference_only": true,
-        "used_for_signal_direction": false,
-        "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
-        "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
-        "D1_current_session_used_for_direction": false,
-        "NY17_day_first_observed_open_utc": "2026-10-15T23:45:00+00:00"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "ABOVE_BOTH",
@@ -995,28 +310,6 @@
       "higher_timeframe_conflict": true,
       "upcoming_48h_events": [
         {
-          "title": "Capacity Utilization Rate",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-16T09:15:00-04:00",
-          "forecast": "76.5%",
-          "previous": "76.3%",
-          "actual": null,
-          "minutes_until": 3,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Industrial Production m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-16T09:15:00-04:00",
-          "forecast": "0.4%",
-          "previous": "0.0%",
-          "actual": null,
-          "minutes_until": 3,
-          "time_status": "IMMINENT"
-        },
-        {
           "title": "Federal Budget Balance",
           "currency": "USD",
           "impact": "Low",
@@ -1024,7 +317,7 @@
           "forecast": "-34.7B",
           "previous": "-166.8B",
           "actual": null,
-          "minutes_until": 288,
+          "minutes_until": 253,
           "time_status": "UPCOMING"
         },
         {
@@ -1035,7 +328,7 @@
           "forecast": "75.2B",
           "previous": "-27.9B",
           "actual": null,
-          "minutes_until": 408,
+          "minutes_until": 373,
           "time_status": "UPCOMING"
         },
         {
@@ -1046,34 +339,12 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 933,
+          "minutes_until": 898,
           "time_status": "UPCOMING"
         }
       ],
       "next_24h_events": [
         {
-          "title": "Capacity Utilization Rate",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-16T09:15:00-04:00",
-          "forecast": "76.5%",
-          "previous": "76.3%",
-          "actual": null,
-          "minutes_until": 3,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Industrial Production m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-16T09:15:00-04:00",
-          "forecast": "0.4%",
-          "previous": "0.0%",
-          "actual": null,
-          "minutes_until": 3,
-          "time_status": "IMMINENT"
-        },
-        {
           "title": "Federal Budget Balance",
           "currency": "USD",
           "impact": "Low",
@@ -1081,7 +352,7 @@
           "forecast": "-34.7B",
           "previous": "-166.8B",
           "actual": null,
-          "minutes_until": 288,
+          "minutes_until": 253,
           "time_status": "UPCOMING"
         },
         {
@@ -1092,7 +363,7 @@
           "forecast": "75.2B",
           "previous": "-27.9B",
           "actual": null,
-          "minutes_until": 408,
+          "minutes_until": 373,
           "time_status": "UPCOMING"
         },
         {
@@ -1103,46 +374,16 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 933,
+          "minutes_until": 898,
           "time_status": "UPCOMING"
         }
       ],
-      "imminent_events": [
-        {
-          "title": "Capacity Utilization Rate",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-16T09:15:00-04:00",
-          "forecast": "76.5%",
-          "previous": "76.3%",
-          "actual": null,
-          "minutes_until": 3,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Industrial Production m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-16T09:15:00-04:00",
-          "forecast": "0.4%",
-          "previous": "0.0%",
-          "actual": null,
-          "minutes_until": 3,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "event_risk": "IMMINENT_EVENT",
+      "imminent_events": [],
+      "event_risk": "EVENT_WITHIN_24H",
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE_HTTPERROR",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": "2026-10-16T12:11:20.527513+00:00",
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -1150,7 +391,7 @@
       },
       "asian_risk_directional_note": "Not a direct directional driver",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -1158,224 +399,23 @@
     },
     {
       "pair": "GBPUSD",
-      "technical_direction": "SELL",
-      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "SELL",
-      "macro_alignment": "CONTRADICTORY",
-      "macro_evidence": [
-        {
-          "driver": "YIELD_SPREAD_2Y",
-          "favors": "BUY",
-          "change": 1.0,
-          "unit": "basis_points",
-          "detail": "Relative GBP/USD yield changes over matching observed sample windows",
-          "quality": "INDICATIVE_SAMPLED_NOT_QUOTE_TIMESTAMPED"
-        }
-      ],
-      "publisher_reported_actuals": [
-        {
-          "currency": "USD",
-          "title": "Crude Oil Inventories",
-          "scheduled_at_utc": "2026-10-15T16:00:00+00:00",
-          "reported_actual": "-8.6M",
-          "forecast": "0.2M",
-          "previous": "-3.2M",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Natural Gas Storage",
-          "scheduled_at_utc": "2026-10-15T14:30:00+00:00",
-          "reported_actual": "67B",
-          "forecast": "76B",
-          "previous": "85B",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Business Inventories m/m",
-          "scheduled_at_utc": "2026-10-15T14:00:00+00:00",
-          "reported_actual": "0.4%",
-          "forecast": "0.4%",
-          "previous": "0.8%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Core PPI m/m",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "0.7%",
-          "forecast": "0.3%",
-          "previous": "0.2%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Core Retail Sales m/m",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "0.9%",
-          "forecast": "0.6%",
-          "previous": "1.4%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "PPI m/m",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "1.3%",
-          "forecast": "0.6%",
-          "previous": "0.4%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Retail Sales m/m",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "0.8%",
-          "forecast": "0.3%",
-          "previous": "1.2%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Philly Fed Manufacturing Index",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "20.9",
-          "forecast": "28.2",
-          "previous": "37.8",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Unemployment Claims",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "199K",
-          "forecast": "199K",
-          "previous": "197K",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Empire State Manufacturing Index",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "25.5",
-          "forecast": "12.1",
-          "previous": "7.6",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        }
-      ],
+      "technical_direction": "NO_RANKED_CANDIDATE",
+      "technical_stage": "UNRANKED",
+      "unified_signal_direction": "UNAVAILABLE",
+      "macro_alignment": "UNKNOWN",
+      "macro_evidence": [],
+      "publisher_reported_actuals": [],
       "range_context": {
-        "pair": "GBPUSD",
-        "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
-        "ADR20_pips": 73.11,
-        "ADR20_complete_days": 20,
-        "NY17_day_used_pips": 89.8,
-        "NY17_ADR_percent_used": 122.8,
-        "ADR_remaining_reference_pips": 0,
-        "NY17_rollover_start_utc": "2026-10-15T21:00:00+00:00",
-        "session_ranges": {
-          "TOKYO": {
-            "high": 1.33291,
-            "low": 1.32681,
-            "first_observed_open_utc": "2026-10-16T00:00:00+00:00",
-            "last_observed_open_utc": "2026-10-16T08:45:00+00:00",
-            "closed_15m_bars": 36,
-            "range_pips": 61.0,
-            "session_start_utc": "2026-10-16T00:00:00+00:00",
-            "scheduled_session_end_utc": "2026-10-16T09:00:00+00:00",
-            "session_in_progress": false,
-            "observed_partial": false
-          },
-          "LONDON": {
-            "high": 1.33494,
-            "low": 1.33089,
-            "first_observed_open_utc": "2026-10-16T07:00:00+00:00",
-            "last_observed_open_utc": "2026-10-16T11:45:00+00:00",
-            "closed_15m_bars": 20,
-            "range_pips": 40.5,
-            "session_start_utc": "2026-10-16T07:00:00+00:00",
-            "scheduled_session_end_utc": "2026-10-16T16:00:00+00:00",
-            "session_in_progress": true,
-            "observed_partial": true
-          }
-        },
-        "reference_only": true,
-        "used_for_signal_direction": false,
-        "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
-        "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
-        "D1_current_session_used_for_direction": false,
-        "NY17_day_first_observed_open_utc": "2026-10-15T23:45:00+00:00"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "ABOVE_BOTH",
       "h4_ema20_50": "ABOVE_BOTH",
       "timeframes_present": true,
-      "higher_timeframe_conflict": true,
+      "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
-        {
-          "title": "Capacity Utilization Rate",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-16T09:15:00-04:00",
-          "forecast": "76.5%",
-          "previous": "76.3%",
-          "actual": null,
-          "minutes_until": 3,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Industrial Production m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-16T09:15:00-04:00",
-          "forecast": "0.4%",
-          "previous": "0.0%",
-          "actual": null,
-          "minutes_until": 3,
-          "time_status": "IMMINENT"
-        },
         {
           "title": "Federal Budget Balance",
           "currency": "USD",
@@ -1384,7 +424,7 @@
           "forecast": "-34.7B",
           "previous": "-166.8B",
           "actual": null,
-          "minutes_until": 288,
+          "minutes_until": 253,
           "time_status": "UPCOMING"
         },
         {
@@ -1395,7 +435,7 @@
           "forecast": "75.2B",
           "previous": "-27.9B",
           "actual": null,
-          "minutes_until": 408,
+          "minutes_until": 373,
           "time_status": "UPCOMING"
         },
         {
@@ -1406,34 +446,12 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1053,
+          "minutes_until": 1018,
           "time_status": "UPCOMING"
         }
       ],
       "next_24h_events": [
         {
-          "title": "Capacity Utilization Rate",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-16T09:15:00-04:00",
-          "forecast": "76.5%",
-          "previous": "76.3%",
-          "actual": null,
-          "minutes_until": 3,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Industrial Production m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-16T09:15:00-04:00",
-          "forecast": "0.4%",
-          "previous": "0.0%",
-          "actual": null,
-          "minutes_until": 3,
-          "time_status": "IMMINENT"
-        },
-        {
           "title": "Federal Budget Balance",
           "currency": "USD",
           "impact": "Low",
@@ -1441,7 +459,7 @@
           "forecast": "-34.7B",
           "previous": "-166.8B",
           "actual": null,
-          "minutes_until": 288,
+          "minutes_until": 253,
           "time_status": "UPCOMING"
         },
         {
@@ -1452,7 +470,7 @@
           "forecast": "75.2B",
           "previous": "-27.9B",
           "actual": null,
-          "minutes_until": 408,
+          "minutes_until": 373,
           "time_status": "UPCOMING"
         },
         {
@@ -1463,46 +481,16 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1053,
+          "minutes_until": 1018,
           "time_status": "UPCOMING"
         }
       ],
-      "imminent_events": [
-        {
-          "title": "Capacity Utilization Rate",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-16T09:15:00-04:00",
-          "forecast": "76.5%",
-          "previous": "76.3%",
-          "actual": null,
-          "minutes_until": 3,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Industrial Production m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-16T09:15:00-04:00",
-          "forecast": "0.4%",
-          "previous": "0.0%",
-          "actual": null,
-          "minutes_until": 3,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "event_risk": "IMMINENT_EVENT",
+      "imminent_events": [],
+      "event_risk": "EVENT_WITHIN_24H",
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE_HTTPERROR",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": "2026-10-16T12:11:20.528386+00:00",
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -1510,7 +498,7 @@
       },
       "asian_risk_directional_note": "Not a direct directional driver",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -1518,195 +506,16 @@
     },
     {
       "pair": "USDJPY",
-      "technical_direction": "SELL",
-      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "SELL",
-      "macro_alignment": "SUPPORTIVE",
-      "macro_evidence": [
-        {
-          "driver": "YIELD_SPREAD_2Y",
-          "favors": "SELL",
-          "change": -1.0,
-          "unit": "basis_points",
-          "detail": "Relative USD/JPY yield changes over matching observed sample windows",
-          "quality": "INDICATIVE_SAMPLED_NOT_QUOTE_TIMESTAMPED"
-        }
-      ],
-      "publisher_reported_actuals": [
-        {
-          "currency": "USD",
-          "title": "Crude Oil Inventories",
-          "scheduled_at_utc": "2026-10-15T16:00:00+00:00",
-          "reported_actual": "-8.6M",
-          "forecast": "0.2M",
-          "previous": "-3.2M",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Natural Gas Storage",
-          "scheduled_at_utc": "2026-10-15T14:30:00+00:00",
-          "reported_actual": "67B",
-          "forecast": "76B",
-          "previous": "85B",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Business Inventories m/m",
-          "scheduled_at_utc": "2026-10-15T14:00:00+00:00",
-          "reported_actual": "0.4%",
-          "forecast": "0.4%",
-          "previous": "0.8%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Core PPI m/m",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "0.7%",
-          "forecast": "0.3%",
-          "previous": "0.2%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Core Retail Sales m/m",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "0.9%",
-          "forecast": "0.6%",
-          "previous": "1.4%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "PPI m/m",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "1.3%",
-          "forecast": "0.6%",
-          "previous": "0.4%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Retail Sales m/m",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "0.8%",
-          "forecast": "0.3%",
-          "previous": "1.2%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Philly Fed Manufacturing Index",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "20.9",
-          "forecast": "28.2",
-          "previous": "37.8",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Unemployment Claims",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "199K",
-          "forecast": "199K",
-          "previous": "197K",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Empire State Manufacturing Index",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "25.5",
-          "forecast": "12.1",
-          "previous": "7.6",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        }
-      ],
+      "technical_direction": "NO_RANKED_CANDIDATE",
+      "technical_stage": "UNRANKED",
+      "unified_signal_direction": "UNAVAILABLE",
+      "macro_alignment": "UNKNOWN",
+      "macro_evidence": [],
+      "publisher_reported_actuals": [],
       "range_context": {
-        "pair": "USDJPY",
-        "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
-        "ADR20_pips": 104.22,
-        "ADR20_complete_days": 20,
-        "NY17_day_used_pips": 38.6,
-        "NY17_ADR_percent_used": 37.0,
-        "ADR_remaining_reference_pips": 65.62,
-        "NY17_rollover_start_utc": "2026-10-15T21:00:00+00:00",
-        "session_ranges": {
-          "TOKYO": {
-            "high": 158.185,
-            "low": 157.799,
-            "first_observed_open_utc": "2026-10-16T00:00:00+00:00",
-            "last_observed_open_utc": "2026-10-16T08:45:00+00:00",
-            "closed_15m_bars": 36,
-            "range_pips": 38.6,
-            "session_start_utc": "2026-10-16T00:00:00+00:00",
-            "scheduled_session_end_utc": "2026-10-16T09:00:00+00:00",
-            "session_in_progress": false,
-            "observed_partial": false
-          },
-          "LONDON": {
-            "high": 158.092,
-            "low": 157.823,
-            "first_observed_open_utc": "2026-10-16T07:00:00+00:00",
-            "last_observed_open_utc": "2026-10-16T11:45:00+00:00",
-            "closed_15m_bars": 20,
-            "range_pips": 26.9,
-            "session_start_utc": "2026-10-16T07:00:00+00:00",
-            "scheduled_session_end_utc": "2026-10-16T16:00:00+00:00",
-            "session_in_progress": true,
-            "observed_partial": true
-          }
-        },
-        "reference_only": true,
-        "used_for_signal_direction": false,
-        "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
-        "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
-        "D1_current_session_used_for_direction": false,
-        "NY17_day_first_observed_open_utc": "2026-10-15T23:45:00+00:00"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "MIXED",
@@ -1715,28 +524,6 @@
       "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
         {
-          "title": "Capacity Utilization Rate",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-16T09:15:00-04:00",
-          "forecast": "76.5%",
-          "previous": "76.3%",
-          "actual": null,
-          "minutes_until": 3,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Industrial Production m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-16T09:15:00-04:00",
-          "forecast": "0.4%",
-          "previous": "0.0%",
-          "actual": null,
-          "minutes_until": 3,
-          "time_status": "IMMINENT"
-        },
-        {
           "title": "Federal Budget Balance",
           "currency": "USD",
           "impact": "Low",
@@ -1744,7 +531,7 @@
           "forecast": "-34.7B",
           "previous": "-166.8B",
           "actual": null,
-          "minutes_until": 288,
+          "minutes_until": 253,
           "time_status": "UPCOMING"
         },
         {
@@ -1755,34 +542,12 @@
           "forecast": "75.2B",
           "previous": "-27.9B",
           "actual": null,
-          "minutes_until": 408,
+          "minutes_until": 373,
           "time_status": "UPCOMING"
         }
       ],
       "next_24h_events": [
         {
-          "title": "Capacity Utilization Rate",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-16T09:15:00-04:00",
-          "forecast": "76.5%",
-          "previous": "76.3%",
-          "actual": null,
-          "minutes_until": 3,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Industrial Production m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-16T09:15:00-04:00",
-          "forecast": "0.4%",
-          "previous": "0.0%",
-          "actual": null,
-          "minutes_until": 3,
-          "time_status": "IMMINENT"
-        },
-        {
           "title": "Federal Budget Balance",
           "currency": "USD",
           "impact": "Low",
@@ -1790,7 +555,7 @@
           "forecast": "-34.7B",
           "previous": "-166.8B",
           "actual": null,
-          "minutes_until": 288,
+          "minutes_until": 253,
           "time_status": "UPCOMING"
         },
         {
@@ -1801,46 +566,16 @@
           "forecast": "75.2B",
           "previous": "-27.9B",
           "actual": null,
-          "minutes_until": 408,
+          "minutes_until": 373,
           "time_status": "UPCOMING"
         }
       ],
-      "imminent_events": [
-        {
-          "title": "Capacity Utilization Rate",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-16T09:15:00-04:00",
-          "forecast": "76.5%",
-          "previous": "76.3%",
-          "actual": null,
-          "minutes_until": 3,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Industrial Production m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-16T09:15:00-04:00",
-          "forecast": "0.4%",
-          "previous": "0.0%",
-          "actual": null,
-          "minutes_until": 3,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "event_risk": "IMMINENT_EVENT",
+      "imminent_events": [],
+      "event_risk": "EVENT_WITHIN_24H",
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE_HTTPERROR",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": "2026-10-16T12:11:20.531603+00:00",
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -1857,7 +592,7 @@
       },
       "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -1865,114 +600,22 @@
     },
     {
       "pair": "AUDJPY",
-      "technical_direction": "SELL",
-      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "SELL",
+      "technical_direction": "NO_RANKED_CANDIDATE",
+      "technical_stage": "UNRANKED",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
-      "publisher_reported_actuals": [
-        {
-          "currency": "JPY",
-          "title": "Revised Industrial Production m/m",
-          "scheduled_at_utc": "2026-10-15T04:30:00+00:00",
-          "reported_actual": "-2.4%",
-          "forecast": "-1.7%",
-          "previous": "-1.7%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "AUD",
-          "title": "Employment Change",
-          "scheduled_at_utc": "2026-10-15T00:30:00+00:00",
-          "reported_actual": "-39.3K",
-          "forecast": "19.6K",
-          "previous": "39.5K",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "AUD",
-          "title": "Unemployment Rate",
-          "scheduled_at_utc": "2026-10-15T00:30:00+00:00",
-          "reported_actual": "4.7%",
-          "forecast": "4.6%",
-          "previous": "4.6%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "JPY",
-          "title": "Core Machinery Orders m/m",
-          "scheduled_at_utc": "2026-10-14T23:50:00+00:00",
-          "reported_actual": "5.2%",
-          "forecast": "2.2%",
-          "previous": "-3.7%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        }
-      ],
+      "publisher_reported_actuals": [],
       "range_context": {
-        "pair": "AUDJPY",
-        "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
-        "ADR20_pips": 93.89,
-        "ADR20_complete_days": 20,
-        "NY17_day_used_pips": 86.5,
-        "NY17_ADR_percent_used": 92.1,
-        "ADR_remaining_reference_pips": 7.39,
-        "NY17_rollover_start_utc": "2026-10-15T21:00:00+00:00",
-        "session_ranges": {
-          "TOKYO": {
-            "high": 110.024,
-            "low": 109.359,
-            "first_observed_open_utc": "2026-10-16T00:00:00+00:00",
-            "last_observed_open_utc": "2026-10-16T08:45:00+00:00",
-            "closed_15m_bars": 36,
-            "range_pips": 66.5,
-            "session_start_utc": "2026-10-16T00:00:00+00:00",
-            "scheduled_session_end_utc": "2026-10-16T09:00:00+00:00",
-            "session_in_progress": false,
-            "observed_partial": false
-          },
-          "LONDON": {
-            "high": 110.057,
-            "low": 109.744,
-            "first_observed_open_utc": "2026-10-16T07:00:00+00:00",
-            "last_observed_open_utc": "2026-10-16T11:45:00+00:00",
-            "closed_15m_bars": 20,
-            "range_pips": 31.3,
-            "session_start_utc": "2026-10-16T07:00:00+00:00",
-            "scheduled_session_end_utc": "2026-10-16T16:00:00+00:00",
-            "session_in_progress": true,
-            "observed_partial": true
-          }
-        },
-        "reference_only": true,
-        "used_for_signal_direction": false,
-        "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
-        "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
-        "D1_current_session_used_for_direction": false,
-        "NY17_day_first_observed_open_utc": "2026-10-15T23:45:00+00:00"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "ABOVE_BOTH",
       "h4_ema20_50": "MIXED",
       "timeframes_present": true,
-      "higher_timeframe_conflict": true,
+      "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
         {
           "title": "RBA Assist Gov Kent Speaks",
@@ -1982,7 +625,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2088,
+          "minutes_until": 2053,
           "time_status": "UPCOMING"
         }
       ],
@@ -1992,14 +635,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE_HTTPERROR",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": "2026-10-16T12:11:20.668688+00:00",
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -2016,7 +652,7 @@
       },
       "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -2026,106 +662,14 @@
       "pair": "NZDJPY",
       "technical_direction": "SELL",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "SELL",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
-      "publisher_reported_actuals": [
-        {
-          "currency": "NZD",
-          "title": "FPI m/m",
-          "scheduled_at_utc": "2026-10-15T21:45:00+00:00",
-          "reported_actual": "0.0%",
-          "forecast": "",
-          "previous": "0.3%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "NZD",
-          "title": "BusinessNZ Manufacturing Index",
-          "scheduled_at_utc": "2026-10-15T21:30:00+00:00",
-          "reported_actual": "56.5",
-          "forecast": "",
-          "previous": "53.1",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "JPY",
-          "title": "Revised Industrial Production m/m",
-          "scheduled_at_utc": "2026-10-15T04:30:00+00:00",
-          "reported_actual": "-2.4%",
-          "forecast": "-1.7%",
-          "previous": "-1.7%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "JPY",
-          "title": "Core Machinery Orders m/m",
-          "scheduled_at_utc": "2026-10-14T23:50:00+00:00",
-          "reported_actual": "5.2%",
-          "forecast": "2.2%",
-          "previous": "-3.7%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        }
-      ],
+      "publisher_reported_actuals": [],
       "range_context": {
-        "pair": "NZDJPY",
-        "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
-        "ADR20_pips": 70.59,
-        "ADR20_complete_days": 20,
-        "NY17_day_used_pips": 105.5,
-        "NY17_ADR_percent_used": 149.5,
-        "ADR_remaining_reference_pips": 0,
-        "NY17_rollover_start_utc": "2026-10-15T21:00:00+00:00",
-        "session_ranges": {
-          "TOKYO": {
-            "high": 89.596,
-            "low": 88.851,
-            "first_observed_open_utc": "2026-10-16T00:00:00+00:00",
-            "last_observed_open_utc": "2026-10-16T08:45:00+00:00",
-            "closed_15m_bars": 36,
-            "range_pips": 74.5,
-            "session_start_utc": "2026-10-16T00:00:00+00:00",
-            "scheduled_session_end_utc": "2026-10-16T09:00:00+00:00",
-            "session_in_progress": false,
-            "observed_partial": false
-          },
-          "LONDON": {
-            "high": 89.614,
-            "low": 89.258,
-            "first_observed_open_utc": "2026-10-16T07:00:00+00:00",
-            "last_observed_open_utc": "2026-10-16T11:45:00+00:00",
-            "closed_15m_bars": 20,
-            "range_pips": 35.6,
-            "session_start_utc": "2026-10-16T07:00:00+00:00",
-            "scheduled_session_end_utc": "2026-10-16T16:00:00+00:00",
-            "session_in_progress": true,
-            "observed_partial": true
-          }
-        },
-        "reference_only": true,
-        "used_for_signal_direction": false,
-        "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
-        "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
-        "D1_current_session_used_for_direction": false,
-        "NY17_day_first_observed_open_utc": "2026-10-15T23:45:00+00:00"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "ABOVE_BOTH",
@@ -2139,14 +683,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE_HTTPERROR",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": "2026-10-16T12:11:20.674302+00:00",
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -2163,7 +700,7 @@
       },
       "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -2173,158 +710,14 @@
       "pair": "EURJPY",
       "technical_direction": "SELL",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "SELL",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
-      "publisher_reported_actuals": [
-        {
-          "currency": "EUR",
-          "title": "Italian Trade Balance",
-          "scheduled_at_utc": "2026-10-16T10:00:00+00:00",
-          "reported_actual": "1.77B",
-          "forecast": "7.50B",
-          "previous": "8.24B",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "EUR",
-          "title": "Final Core CPI y/y",
-          "scheduled_at_utc": "2026-10-16T09:00:00+00:00",
-          "reported_actual": "2.5%",
-          "forecast": "2.5%",
-          "previous": "2.5%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "EUR",
-          "title": "Final CPI y/y",
-          "scheduled_at_utc": "2026-10-16T09:00:00+00:00",
-          "reported_actual": "3.8%",
-          "forecast": "3.8%",
-          "previous": "3.8%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "EUR",
-          "title": "Trade Balance",
-          "scheduled_at_utc": "2026-10-16T09:00:00+00:00",
-          "reported_actual": "-6.8B",
-          "forecast": "4.5B",
-          "previous": "5.0B",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "EUR",
-          "title": "Industrial Production m/m",
-          "scheduled_at_utc": "2026-10-15T09:00:00+00:00",
-          "reported_actual": "-0.5%",
-          "forecast": "0.0%",
-          "previous": "-0.1%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "EUR",
-          "title": "French Final CPI m/m",
-          "scheduled_at_utc": "2026-10-15T06:45:00+00:00",
-          "reported_actual": "-0.3%",
-          "forecast": "-0.3%",
-          "previous": "-0.3%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "JPY",
-          "title": "Revised Industrial Production m/m",
-          "scheduled_at_utc": "2026-10-15T04:30:00+00:00",
-          "reported_actual": "-2.4%",
-          "forecast": "-1.7%",
-          "previous": "-1.7%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "JPY",
-          "title": "Core Machinery Orders m/m",
-          "scheduled_at_utc": "2026-10-14T23:50:00+00:00",
-          "reported_actual": "5.2%",
-          "forecast": "2.2%",
-          "previous": "-3.7%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        }
-      ],
+      "publisher_reported_actuals": [],
       "range_context": {
-        "pair": "EURJPY",
-        "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
-        "ADR20_pips": 130.7,
-        "ADR20_complete_days": 20,
-        "NY17_day_used_pips": 85.1,
-        "NY17_ADR_percent_used": 65.1,
-        "ADR_remaining_reference_pips": 45.6,
-        "NY17_rollover_start_utc": "2026-10-15T21:00:00+00:00",
-        "session_ranges": {
-          "TOKYO": {
-            "high": 177.696,
-            "low": 177.147,
-            "first_observed_open_utc": "2026-10-16T00:00:00+00:00",
-            "last_observed_open_utc": "2026-10-16T08:45:00+00:00",
-            "closed_15m_bars": 36,
-            "range_pips": 54.9,
-            "session_start_utc": "2026-10-16T00:00:00+00:00",
-            "scheduled_session_end_utc": "2026-10-16T09:00:00+00:00",
-            "session_in_progress": false,
-            "observed_partial": false
-          },
-          "LONDON": {
-            "high": 177.964,
-            "low": 177.424,
-            "first_observed_open_utc": "2026-10-16T07:00:00+00:00",
-            "last_observed_open_utc": "2026-10-16T11:45:00+00:00",
-            "closed_15m_bars": 20,
-            "range_pips": 54.0,
-            "session_start_utc": "2026-10-16T07:00:00+00:00",
-            "scheduled_session_end_utc": "2026-10-16T16:00:00+00:00",
-            "session_in_progress": true,
-            "observed_partial": true
-          }
-        },
-        "reference_only": true,
-        "used_for_signal_direction": false,
-        "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
-        "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
-        "D1_current_session_used_for_direction": false,
-        "NY17_day_first_observed_open_utc": "2026-10-15T23:45:00+00:00"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "ABOVE_BOTH",
@@ -2340,7 +733,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 933,
+          "minutes_until": 898,
           "time_status": "UPCOMING"
         }
       ],
@@ -2353,7 +746,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 933,
+          "minutes_until": 898,
           "time_status": "UPCOMING"
         }
       ],
@@ -2362,14 +755,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE_HTTPERROR",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": "2026-10-16T12:11:20.675910+00:00",
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -2386,7 +772,7 @@
       },
       "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -2394,182 +780,16 @@
     },
     {
       "pair": "EURCAD",
-      "technical_direction": "BUY",
-      "technical_stage": "WAIT",
-      "unified_signal_direction": "BUY",
-      "macro_alignment": "SUPPORTIVE",
-      "macro_evidence": [
-        {
-          "driver": "YIELD_SPREAD_2Y",
-          "favors": "BUY",
-          "change": 1.0,
-          "unit": "basis_points",
-          "detail": "Relative EUR/CAD yield changes over matching observed sample windows",
-          "quality": "INDICATIVE_SAMPLED_NOT_QUOTE_TIMESTAMPED"
-        }
-      ],
-      "publisher_reported_actuals": [
-        {
-          "currency": "EUR",
-          "title": "Italian Trade Balance",
-          "scheduled_at_utc": "2026-10-16T10:00:00+00:00",
-          "reported_actual": "1.77B",
-          "forecast": "7.50B",
-          "previous": "8.24B",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "EUR",
-          "title": "Final Core CPI y/y",
-          "scheduled_at_utc": "2026-10-16T09:00:00+00:00",
-          "reported_actual": "2.5%",
-          "forecast": "2.5%",
-          "previous": "2.5%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "EUR",
-          "title": "Final CPI y/y",
-          "scheduled_at_utc": "2026-10-16T09:00:00+00:00",
-          "reported_actual": "3.8%",
-          "forecast": "3.8%",
-          "previous": "3.8%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "EUR",
-          "title": "Trade Balance",
-          "scheduled_at_utc": "2026-10-16T09:00:00+00:00",
-          "reported_actual": "-6.8B",
-          "forecast": "4.5B",
-          "previous": "5.0B",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "CAD",
-          "title": "Manufacturing Sales m/m",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "1.5%",
-          "forecast": "1.1%",
-          "previous": "-0.4%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "CAD",
-          "title": "Wholesale Sales m/m",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "-1.6%",
-          "forecast": "-1.5%",
-          "previous": "0.3%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "EUR",
-          "title": "Industrial Production m/m",
-          "scheduled_at_utc": "2026-10-15T09:00:00+00:00",
-          "reported_actual": "-0.5%",
-          "forecast": "0.0%",
-          "previous": "-0.1%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "EUR",
-          "title": "French Final CPI m/m",
-          "scheduled_at_utc": "2026-10-15T06:45:00+00:00",
-          "reported_actual": "-0.3%",
-          "forecast": "-0.3%",
-          "previous": "-0.3%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "CAD",
-          "title": "Building Permits m/m",
-          "scheduled_at_utc": "2026-10-14T12:30:00+00:00",
-          "reported_actual": "8.8%",
-          "forecast": "2.9%",
-          "previous": "-17.3%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        }
-      ],
+      "technical_direction": "NO_RANKED_CANDIDATE",
+      "technical_stage": "UNRANKED",
+      "unified_signal_direction": "UNAVAILABLE",
+      "macro_alignment": "UNKNOWN",
+      "macro_evidence": [],
+      "publisher_reported_actuals": [],
       "range_context": {
-        "pair": "EURCAD",
-        "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
-        "ADR20_pips": 75.9,
-        "ADR20_complete_days": 20,
-        "NY17_day_used_pips": 53.3,
-        "NY17_ADR_percent_used": 70.2,
-        "ADR_remaining_reference_pips": 22.6,
-        "NY17_rollover_start_utc": "2026-10-15T21:00:00+00:00",
-        "session_ranges": {
-          "TOKYO": {
-            "high": 1.59323,
-            "low": 1.59063,
-            "first_observed_open_utc": "2026-10-16T00:00:00+00:00",
-            "last_observed_open_utc": "2026-10-16T08:45:00+00:00",
-            "closed_15m_bars": 36,
-            "range_pips": 26.0,
-            "session_start_utc": "2026-10-16T00:00:00+00:00",
-            "scheduled_session_end_utc": "2026-10-16T09:00:00+00:00",
-            "session_in_progress": false,
-            "observed_partial": false
-          },
-          "LONDON": {
-            "high": 1.5946,
-            "low": 1.59173,
-            "first_observed_open_utc": "2026-10-16T07:00:00+00:00",
-            "last_observed_open_utc": "2026-10-16T11:45:00+00:00",
-            "closed_15m_bars": 20,
-            "range_pips": 28.7,
-            "session_start_utc": "2026-10-16T07:00:00+00:00",
-            "scheduled_session_end_utc": "2026-10-16T16:00:00+00:00",
-            "session_in_progress": true,
-            "observed_partial": true
-          }
-        },
-        "reference_only": true,
-        "used_for_signal_direction": false,
-        "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
-        "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
-        "D1_current_session_used_for_direction": false,
-        "NY17_day_first_observed_open_utc": "2026-10-15T23:45:00+00:00"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "ABOVE_BOTH",
@@ -2585,7 +805,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 933,
+          "minutes_until": 898,
           "time_status": "UPCOMING"
         }
       ],
@@ -2598,7 +818,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 933,
+          "minutes_until": 898,
           "time_status": "UPCOMING"
         }
       ],
@@ -2607,14 +827,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE_HTTPERROR",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": "2026-10-16T12:11:20.678488+00:00",
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -2630,215 +843,23 @@
     },
     {
       "pair": "USDCAD",
-      "technical_direction": "BUY",
-      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "BUY",
+      "technical_direction": "NO_RANKED_CANDIDATE",
+      "technical_stage": "UNRANKED",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
-      "publisher_reported_actuals": [
-        {
-          "currency": "USD",
-          "title": "Crude Oil Inventories",
-          "scheduled_at_utc": "2026-10-15T16:00:00+00:00",
-          "reported_actual": "-8.6M",
-          "forecast": "0.2M",
-          "previous": "-3.2M",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Natural Gas Storage",
-          "scheduled_at_utc": "2026-10-15T14:30:00+00:00",
-          "reported_actual": "67B",
-          "forecast": "76B",
-          "previous": "85B",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Business Inventories m/m",
-          "scheduled_at_utc": "2026-10-15T14:00:00+00:00",
-          "reported_actual": "0.4%",
-          "forecast": "0.4%",
-          "previous": "0.8%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "CAD",
-          "title": "Manufacturing Sales m/m",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "1.5%",
-          "forecast": "1.1%",
-          "previous": "-0.4%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "CAD",
-          "title": "Wholesale Sales m/m",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "-1.6%",
-          "forecast": "-1.5%",
-          "previous": "0.3%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Core PPI m/m",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "0.7%",
-          "forecast": "0.3%",
-          "previous": "0.2%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Core Retail Sales m/m",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "0.9%",
-          "forecast": "0.6%",
-          "previous": "1.4%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "PPI m/m",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "1.3%",
-          "forecast": "0.6%",
-          "previous": "0.4%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Retail Sales m/m",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "0.8%",
-          "forecast": "0.3%",
-          "previous": "1.2%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "USD",
-          "title": "Philly Fed Manufacturing Index",
-          "scheduled_at_utc": "2026-10-15T12:30:00+00:00",
-          "reported_actual": "20.9",
-          "forecast": "28.2",
-          "previous": "37.8",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        }
-      ],
+      "publisher_reported_actuals": [],
       "range_context": {
-        "pair": "USDCAD",
-        "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
-        "ADR20_pips": 61.87,
-        "ADR20_complete_days": 20,
-        "NY17_day_used_pips": 53.1,
-        "NY17_ADR_percent_used": 85.8,
-        "ADR_remaining_reference_pips": 8.77,
-        "NY17_rollover_start_utc": "2026-10-15T21:00:00+00:00",
-        "session_ranges": {
-          "TOKYO": {
-            "high": 1.41989,
-            "low": 1.41624,
-            "first_observed_open_utc": "2026-10-16T00:00:00+00:00",
-            "last_observed_open_utc": "2026-10-16T08:45:00+00:00",
-            "closed_15m_bars": 36,
-            "range_pips": 36.5,
-            "session_start_utc": "2026-10-16T00:00:00+00:00",
-            "scheduled_session_end_utc": "2026-10-16T09:00:00+00:00",
-            "session_in_progress": false,
-            "observed_partial": false
-          },
-          "LONDON": {
-            "high": 1.41755,
-            "low": 1.41458,
-            "first_observed_open_utc": "2026-10-16T07:00:00+00:00",
-            "last_observed_open_utc": "2026-10-16T11:45:00+00:00",
-            "closed_15m_bars": 20,
-            "range_pips": 29.7,
-            "session_start_utc": "2026-10-16T07:00:00+00:00",
-            "scheduled_session_end_utc": "2026-10-16T16:00:00+00:00",
-            "session_in_progress": true,
-            "observed_partial": true
-          }
-        },
-        "reference_only": true,
-        "used_for_signal_direction": false,
-        "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
-        "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
-        "D1_current_session_used_for_direction": false,
-        "NY17_day_first_observed_open_utc": "2026-10-15T23:45:00+00:00"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
       "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
-      "higher_timeframe_conflict": true,
+      "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
-        {
-          "title": "Capacity Utilization Rate",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-16T09:15:00-04:00",
-          "forecast": "76.5%",
-          "previous": "76.3%",
-          "actual": null,
-          "minutes_until": 3,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Industrial Production m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-16T09:15:00-04:00",
-          "forecast": "0.4%",
-          "previous": "0.0%",
-          "actual": null,
-          "minutes_until": 3,
-          "time_status": "IMMINENT"
-        },
         {
           "title": "Federal Budget Balance",
           "currency": "USD",
@@ -2847,7 +868,7 @@
           "forecast": "-34.7B",
           "previous": "-166.8B",
           "actual": null,
-          "minutes_until": 288,
+          "minutes_until": 253,
           "time_status": "UPCOMING"
         },
         {
@@ -2858,34 +879,12 @@
           "forecast": "75.2B",
           "previous": "-27.9B",
           "actual": null,
-          "minutes_until": 408,
+          "minutes_until": 373,
           "time_status": "UPCOMING"
         }
       ],
       "next_24h_events": [
         {
-          "title": "Capacity Utilization Rate",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-16T09:15:00-04:00",
-          "forecast": "76.5%",
-          "previous": "76.3%",
-          "actual": null,
-          "minutes_until": 3,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Industrial Production m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-16T09:15:00-04:00",
-          "forecast": "0.4%",
-          "previous": "0.0%",
-          "actual": null,
-          "minutes_until": 3,
-          "time_status": "IMMINENT"
-        },
-        {
           "title": "Federal Budget Balance",
           "currency": "USD",
           "impact": "Low",
@@ -2893,7 +892,7 @@
           "forecast": "-34.7B",
           "previous": "-166.8B",
           "actual": null,
-          "minutes_until": 288,
+          "minutes_until": 253,
           "time_status": "UPCOMING"
         },
         {
@@ -2904,46 +903,16 @@
           "forecast": "75.2B",
           "previous": "-27.9B",
           "actual": null,
-          "minutes_until": 408,
+          "minutes_until": 373,
           "time_status": "UPCOMING"
         }
       ],
-      "imminent_events": [
-        {
-          "title": "Capacity Utilization Rate",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-16T09:15:00-04:00",
-          "forecast": "76.5%",
-          "previous": "76.3%",
-          "actual": null,
-          "minutes_until": 3,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Industrial Production m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-16T09:15:00-04:00",
-          "forecast": "0.4%",
-          "previous": "0.0%",
-          "actual": null,
-          "minutes_until": 3,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "event_risk": "IMMINENT_EVENT",
+      "imminent_events": [],
+      "event_risk": "EVENT_WITHIN_24H",
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE_HTTPERROR",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": "2026-10-16T12:11:20.682759+00:00",
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -2951,7 +920,7 @@
       },
       "asian_risk_directional_note": "Not a direct directional driver",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -2961,184 +930,14 @@
       "pair": "EURGBP",
       "technical_direction": "SELL",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "SELL",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
-      "publisher_reported_actuals": [
-        {
-          "currency": "EUR",
-          "title": "Italian Trade Balance",
-          "scheduled_at_utc": "2026-10-16T10:00:00+00:00",
-          "reported_actual": "1.77B",
-          "forecast": "7.50B",
-          "previous": "8.24B",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "EUR",
-          "title": "Final Core CPI y/y",
-          "scheduled_at_utc": "2026-10-16T09:00:00+00:00",
-          "reported_actual": "2.5%",
-          "forecast": "2.5%",
-          "previous": "2.5%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "EUR",
-          "title": "Final CPI y/y",
-          "scheduled_at_utc": "2026-10-16T09:00:00+00:00",
-          "reported_actual": "3.8%",
-          "forecast": "3.8%",
-          "previous": "3.8%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "EUR",
-          "title": "Trade Balance",
-          "scheduled_at_utc": "2026-10-16T09:00:00+00:00",
-          "reported_actual": "-6.8B",
-          "forecast": "4.5B",
-          "previous": "5.0B",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "EUR",
-          "title": "Industrial Production m/m",
-          "scheduled_at_utc": "2026-10-15T09:00:00+00:00",
-          "reported_actual": "-0.5%",
-          "forecast": "0.0%",
-          "previous": "-0.1%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "EUR",
-          "title": "French Final CPI m/m",
-          "scheduled_at_utc": "2026-10-15T06:45:00+00:00",
-          "reported_actual": "-0.3%",
-          "forecast": "-0.3%",
-          "previous": "-0.3%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "GBP",
-          "title": "GDP m/m",
-          "scheduled_at_utc": "2026-10-15T06:00:00+00:00",
-          "reported_actual": "0.1%",
-          "forecast": "-0.1%",
-          "previous": "0.4%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "GBP",
-          "title": "Construction Output m/m",
-          "scheduled_at_utc": "2026-10-15T06:00:00+00:00",
-          "reported_actual": "-0.2%",
-          "forecast": "0.0%",
-          "previous": "0.1%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "GBP",
-          "title": "Goods Trade Balance",
-          "scheduled_at_utc": "2026-10-15T06:00:00+00:00",
-          "reported_actual": "-18.0B",
-          "forecast": "-21.9B",
-          "previous": "-21.0B",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        },
-        {
-          "currency": "GBP",
-          "title": "Index of Services 3m/3m",
-          "scheduled_at_utc": "2026-10-15T06:00:00+00:00",
-          "reported_actual": "0.9%",
-          "forecast": "0.8%",
-          "previous": "0.6%",
-          "source": "https://www.forexfactory.com/calendar?week=this",
-          "verified_at_utc": "2026-10-16T12:11:14.542932+00:00",
-          "released_at_utc": null,
-          "status": "PUBLIC_PAGE_REPORTED_ACTUAL_RELEASE_TIME_UNVERIFIED",
-          "match_method": "UNIQUE_EXACT_TITLE_CURRENCY_WITH_PAST_WEEKLY_EVENT"
-        }
-      ],
+      "publisher_reported_actuals": [],
       "range_context": {
-        "pair": "EURGBP",
-        "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
-        "ADR20_pips": 27.08,
-        "ADR20_complete_days": 20,
-        "NY17_day_used_pips": 15.2,
-        "NY17_ADR_percent_used": 56.1,
-        "ADR_remaining_reference_pips": 11.88,
-        "NY17_rollover_start_utc": "2026-10-15T21:00:00+00:00",
-        "session_ranges": {
-          "TOKYO": {
-            "high": 0.84506,
-            "low": 0.8437,
-            "first_observed_open_utc": "2026-10-16T00:00:00+00:00",
-            "last_observed_open_utc": "2026-10-16T08:45:00+00:00",
-            "closed_15m_bars": 36,
-            "range_pips": 13.6,
-            "session_start_utc": "2026-10-16T00:00:00+00:00",
-            "scheduled_session_end_utc": "2026-10-16T09:00:00+00:00",
-            "session_in_progress": false,
-            "observed_partial": false
-          },
-          "LONDON": {
-            "high": 0.84448,
-            "low": 0.84369,
-            "first_observed_open_utc": "2026-10-16T07:00:00+00:00",
-            "last_observed_open_utc": "2026-10-16T11:45:00+00:00",
-            "closed_15m_bars": 20,
-            "range_pips": 7.9,
-            "session_start_utc": "2026-10-16T07:00:00+00:00",
-            "scheduled_session_end_utc": "2026-10-16T16:00:00+00:00",
-            "session_in_progress": true,
-            "observed_partial": true
-          }
-        },
-        "reference_only": true,
-        "used_for_signal_direction": false,
-        "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
-        "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
-        "D1_current_session_used_for_direction": false,
-        "NY17_day_first_observed_open_utc": "2026-10-15T23:45:00+00:00"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
@@ -3154,7 +953,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 933,
+          "minutes_until": 898,
           "time_status": "UPCOMING"
         },
         {
@@ -3165,7 +964,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1053,
+          "minutes_until": 1018,
           "time_status": "UPCOMING"
         }
       ],
@@ -3178,7 +977,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 933,
+          "minutes_until": 898,
           "time_status": "UPCOMING"
         },
         {
@@ -3189,7 +988,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1053,
+          "minutes_until": 1018,
           "time_status": "UPCOMING"
         }
       ],
@@ -3198,14 +997,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE_HTTPERROR",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": "2026-10-16T12:11:20.711902+00:00",
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -3213,7 +1005,7 @@
       },
       "asian_risk_directional_note": "Not a direct directional driver",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -3234,6 +1026,7 @@
     "dxy_equities_sentiment",
     "cme_volume_open_interest",
     "retail_positioning",
+    "closed_15m30m_direction",
     "atr_adr_session_levels",
     "independent_live_spreads"
   ],
