@@ -1,469 +1,73 @@
 {
-  "generated_at_utc": "2026-10-16T10:14:32.850907+00:00",
-  "source_collected_at_utc": "2026-10-16T09:33:03.931220+00:00",
-  "status": "OBSERVED_REFERENCE_CONTEXT",
+  "generated_at_utc": "2026-10-16T10:58:12.639004+00:00",
+  "source_collected_at_utc": null,
+  "status": "UNAVAILABLE_UPSTREAM_VOLATILITY",
   "pairs": {
     "AUDUSD": {
       "pair": "AUDUSD",
-      "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
-      "ADR20_pips": 47.49,
-      "ADR20_complete_days": 20,
-      "NY17_day_used_pips": 52.0,
-      "NY17_ADR_percent_used": 109.5,
-      "ADR_remaining_reference_pips": 0,
-      "NY17_rollover_start_utc": "2026-10-15T21:00:00+00:00",
-      "session_ranges": {
-        "TOKYO": {
-          "high": 0.69618,
-          "low": 0.69178,
-          "first_observed_open_utc": "2026-10-16T00:00:00+00:00",
-          "last_observed_open_utc": "2026-10-16T08:45:00+00:00",
-          "closed_15m_bars": 36,
-          "range_pips": 44.0,
-          "session_start_utc": "2026-10-16T00:00:00+00:00",
-          "scheduled_session_end_utc": "2026-10-16T09:00:00+00:00",
-          "session_in_progress": false,
-          "observed_partial": false
-        },
-        "LONDON": {
-          "high": 0.69625,
-          "low": 0.69493,
-          "first_observed_open_utc": "2026-10-16T07:00:00+00:00",
-          "last_observed_open_utc": "2026-10-16T09:30:00+00:00",
-          "closed_15m_bars": 11,
-          "range_pips": 13.2,
-          "session_start_utc": "2026-10-16T07:00:00+00:00",
-          "scheduled_session_end_utc": "2026-10-16T16:00:00+00:00",
-          "session_in_progress": true,
-          "observed_partial": true
-        }
-      },
-      "reference_only": true,
-      "used_for_signal_direction": false,
-      "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
-      "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
-      "D1_current_session_used_for_direction": false,
-      "NY17_day_first_observed_open_utc": "2026-10-15T21:15:00+00:00"
+      "status": "UNAVAILABLE",
+      "reason": "upstream_volatility_feed_stale",
+      "used_for_signal_direction": false
     },
     "NZDUSD": {
       "pair": "NZDUSD",
-      "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
-      "ADR20_pips": 42.51,
-      "ADR20_complete_days": 20,
-      "NY17_day_used_pips": 60.7,
-      "NY17_ADR_percent_used": 142.8,
-      "ADR_remaining_reference_pips": 0,
-      "NY17_rollover_start_utc": "2026-10-15T21:00:00+00:00",
-      "session_ranges": {
-        "TOKYO": {
-          "high": 0.56716,
-          "low": 0.56188,
-          "first_observed_open_utc": "2026-10-16T00:00:00+00:00",
-          "last_observed_open_utc": "2026-10-16T08:45:00+00:00",
-          "closed_15m_bars": 36,
-          "range_pips": 52.8,
-          "session_start_utc": "2026-10-16T00:00:00+00:00",
-          "scheduled_session_end_utc": "2026-10-16T09:00:00+00:00",
-          "session_in_progress": false,
-          "observed_partial": false
-        },
-        "LONDON": {
-          "high": 0.5673,
-          "low": 0.56519,
-          "first_observed_open_utc": "2026-10-16T07:00:00+00:00",
-          "last_observed_open_utc": "2026-10-16T09:30:00+00:00",
-          "closed_15m_bars": 11,
-          "range_pips": 21.1,
-          "session_start_utc": "2026-10-16T07:00:00+00:00",
-          "scheduled_session_end_utc": "2026-10-16T16:00:00+00:00",
-          "session_in_progress": true,
-          "observed_partial": true
-        }
-      },
-      "reference_only": true,
-      "used_for_signal_direction": false,
-      "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
-      "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
-      "D1_current_session_used_for_direction": false,
-      "NY17_day_first_observed_open_utc": "2026-10-15T21:15:00+00:00"
+      "status": "UNAVAILABLE",
+      "reason": "upstream_volatility_feed_stale",
+      "used_for_signal_direction": false
     },
     "EURUSD": {
       "pair": "EURUSD",
-      "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
-      "ADR20_pips": 65.95,
-      "ADR20_complete_days": 20,
-      "NY17_day_used_pips": 49.2,
-      "NY17_ADR_percent_used": 74.6,
-      "ADR_remaining_reference_pips": 16.75,
-      "NY17_rollover_start_utc": "2026-10-15T21:00:00+00:00",
-      "session_ranges": {
-        "TOKYO": {
-          "high": 1.12494,
-          "low": 1.12082,
-          "first_observed_open_utc": "2026-10-16T00:00:00+00:00",
-          "last_observed_open_utc": "2026-10-16T08:45:00+00:00",
-          "closed_15m_bars": 36,
-          "range_pips": 41.2,
-          "session_start_utc": "2026-10-16T00:00:00+00:00",
-          "scheduled_session_end_utc": "2026-10-16T09:00:00+00:00",
-          "session_in_progress": false,
-          "observed_partial": false
-        },
-        "LONDON": {
-          "high": 1.12574,
-          "low": 1.12341,
-          "first_observed_open_utc": "2026-10-16T07:00:00+00:00",
-          "last_observed_open_utc": "2026-10-16T09:30:00+00:00",
-          "closed_15m_bars": 11,
-          "range_pips": 23.3,
-          "session_start_utc": "2026-10-16T07:00:00+00:00",
-          "scheduled_session_end_utc": "2026-10-16T16:00:00+00:00",
-          "session_in_progress": true,
-          "observed_partial": true
-        }
-      },
-      "reference_only": true,
-      "used_for_signal_direction": false,
-      "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
-      "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
-      "D1_current_session_used_for_direction": false,
-      "NY17_day_first_observed_open_utc": "2026-10-15T21:15:00+00:00"
+      "status": "UNAVAILABLE",
+      "reason": "upstream_volatility_feed_stale",
+      "used_for_signal_direction": false
     },
     "GBPUSD": {
       "pair": "GBPUSD",
-      "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
-      "ADR20_pips": 73.11,
-      "ADR20_complete_days": 20,
-      "NY17_day_used_pips": 80.6,
-      "NY17_ADR_percent_used": 110.2,
-      "ADR_remaining_reference_pips": 0,
-      "NY17_rollover_start_utc": "2026-10-15T21:00:00+00:00",
-      "session_ranges": {
-        "TOKYO": {
-          "high": 1.33291,
-          "low": 1.32681,
-          "first_observed_open_utc": "2026-10-16T00:00:00+00:00",
-          "last_observed_open_utc": "2026-10-16T08:45:00+00:00",
-          "closed_15m_bars": 36,
-          "range_pips": 61.0,
-          "session_start_utc": "2026-10-16T00:00:00+00:00",
-          "scheduled_session_end_utc": "2026-10-16T09:00:00+00:00",
-          "session_in_progress": false,
-          "observed_partial": false
-        },
-        "LONDON": {
-          "high": 1.33402,
-          "low": 1.33089,
-          "first_observed_open_utc": "2026-10-16T07:00:00+00:00",
-          "last_observed_open_utc": "2026-10-16T09:30:00+00:00",
-          "closed_15m_bars": 11,
-          "range_pips": 31.3,
-          "session_start_utc": "2026-10-16T07:00:00+00:00",
-          "scheduled_session_end_utc": "2026-10-16T16:00:00+00:00",
-          "session_in_progress": true,
-          "observed_partial": true
-        }
-      },
-      "reference_only": true,
-      "used_for_signal_direction": false,
-      "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
-      "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
-      "D1_current_session_used_for_direction": false,
-      "NY17_day_first_observed_open_utc": "2026-10-15T21:15:00+00:00"
+      "status": "UNAVAILABLE",
+      "reason": "upstream_volatility_feed_stale",
+      "used_for_signal_direction": false
     },
     "USDJPY": {
       "pair": "USDJPY",
-      "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
-      "ADR20_pips": 104.22,
-      "ADR20_complete_days": 20,
-      "NY17_day_used_pips": 38.6,
-      "NY17_ADR_percent_used": 37.0,
-      "ADR_remaining_reference_pips": 65.62,
-      "NY17_rollover_start_utc": "2026-10-15T21:00:00+00:00",
-      "session_ranges": {
-        "TOKYO": {
-          "high": 158.185,
-          "low": 157.799,
-          "first_observed_open_utc": "2026-10-16T00:00:00+00:00",
-          "last_observed_open_utc": "2026-10-16T08:45:00+00:00",
-          "closed_15m_bars": 36,
-          "range_pips": 38.6,
-          "session_start_utc": "2026-10-16T00:00:00+00:00",
-          "scheduled_session_end_utc": "2026-10-16T09:00:00+00:00",
-          "session_in_progress": false,
-          "observed_partial": false
-        },
-        "LONDON": {
-          "high": 158.08,
-          "low": 157.84,
-          "first_observed_open_utc": "2026-10-16T07:00:00+00:00",
-          "last_observed_open_utc": "2026-10-16T09:30:00+00:00",
-          "closed_15m_bars": 11,
-          "range_pips": 24.0,
-          "session_start_utc": "2026-10-16T07:00:00+00:00",
-          "scheduled_session_end_utc": "2026-10-16T16:00:00+00:00",
-          "session_in_progress": true,
-          "observed_partial": true
-        }
-      },
-      "reference_only": true,
-      "used_for_signal_direction": false,
-      "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
-      "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
-      "D1_current_session_used_for_direction": false,
-      "NY17_day_first_observed_open_utc": "2026-10-15T21:15:00+00:00"
+      "status": "UNAVAILABLE",
+      "reason": "upstream_volatility_feed_stale",
+      "used_for_signal_direction": false
     },
     "AUDJPY": {
       "pair": "AUDJPY",
-      "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
-      "ADR20_pips": 93.89,
-      "ADR20_complete_days": 20,
-      "NY17_day_used_pips": 83.2,
-      "NY17_ADR_percent_used": 88.6,
-      "ADR_remaining_reference_pips": 10.69,
-      "NY17_rollover_start_utc": "2026-10-15T21:00:00+00:00",
-      "session_ranges": {
-        "TOKYO": {
-          "high": 110.024,
-          "low": 109.359,
-          "first_observed_open_utc": "2026-10-16T00:00:00+00:00",
-          "last_observed_open_utc": "2026-10-16T08:45:00+00:00",
-          "closed_15m_bars": 36,
-          "range_pips": 66.5,
-          "session_start_utc": "2026-10-16T00:00:00+00:00",
-          "scheduled_session_end_utc": "2026-10-16T09:00:00+00:00",
-          "session_in_progress": false,
-          "observed_partial": false
-        },
-        "LONDON": {
-          "high": 110.024,
-          "low": 109.744,
-          "first_observed_open_utc": "2026-10-16T07:00:00+00:00",
-          "last_observed_open_utc": "2026-10-16T09:30:00+00:00",
-          "closed_15m_bars": 11,
-          "range_pips": 28.0,
-          "session_start_utc": "2026-10-16T07:00:00+00:00",
-          "scheduled_session_end_utc": "2026-10-16T16:00:00+00:00",
-          "session_in_progress": true,
-          "observed_partial": true
-        }
-      },
-      "reference_only": true,
-      "used_for_signal_direction": false,
-      "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
-      "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
-      "D1_current_session_used_for_direction": false,
-      "NY17_day_first_observed_open_utc": "2026-10-15T21:15:00+00:00"
+      "status": "UNAVAILABLE",
+      "reason": "upstream_volatility_feed_stale",
+      "used_for_signal_direction": false
     },
     "NZDJPY": {
       "pair": "NZDJPY",
-      "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
-      "ADR20_pips": 70.59,
-      "ADR20_complete_days": 20,
-      "NY17_day_used_pips": 105.5,
-      "NY17_ADR_percent_used": 149.5,
-      "ADR_remaining_reference_pips": 0,
-      "NY17_rollover_start_utc": "2026-10-15T21:00:00+00:00",
-      "session_ranges": {
-        "TOKYO": {
-          "high": 89.596,
-          "low": 88.851,
-          "first_observed_open_utc": "2026-10-16T00:00:00+00:00",
-          "last_observed_open_utc": "2026-10-16T08:45:00+00:00",
-          "closed_15m_bars": 36,
-          "range_pips": 74.5,
-          "session_start_utc": "2026-10-16T00:00:00+00:00",
-          "scheduled_session_end_utc": "2026-10-16T09:00:00+00:00",
-          "session_in_progress": false,
-          "observed_partial": false
-        },
-        "LONDON": {
-          "high": 89.614,
-          "low": 89.258,
-          "first_observed_open_utc": "2026-10-16T07:00:00+00:00",
-          "last_observed_open_utc": "2026-10-16T09:30:00+00:00",
-          "closed_15m_bars": 11,
-          "range_pips": 35.6,
-          "session_start_utc": "2026-10-16T07:00:00+00:00",
-          "scheduled_session_end_utc": "2026-10-16T16:00:00+00:00",
-          "session_in_progress": true,
-          "observed_partial": true
-        }
-      },
-      "reference_only": true,
-      "used_for_signal_direction": false,
-      "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
-      "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
-      "D1_current_session_used_for_direction": false,
-      "NY17_day_first_observed_open_utc": "2026-10-15T21:15:00+00:00"
+      "status": "UNAVAILABLE",
+      "reason": "upstream_volatility_feed_stale",
+      "used_for_signal_direction": false
     },
     "EURJPY": {
       "pair": "EURJPY",
-      "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
-      "ADR20_pips": 130.7,
-      "ADR20_complete_days": 20,
-      "NY17_day_used_pips": 68.0,
-      "NY17_ADR_percent_used": 52.0,
-      "ADR_remaining_reference_pips": 62.7,
-      "NY17_rollover_start_utc": "2026-10-15T21:00:00+00:00",
-      "session_ranges": {
-        "TOKYO": {
-          "high": 177.696,
-          "low": 177.147,
-          "first_observed_open_utc": "2026-10-16T00:00:00+00:00",
-          "last_observed_open_utc": "2026-10-16T08:45:00+00:00",
-          "closed_15m_bars": 36,
-          "range_pips": 54.9,
-          "session_start_utc": "2026-10-16T00:00:00+00:00",
-          "scheduled_session_end_utc": "2026-10-16T09:00:00+00:00",
-          "session_in_progress": false,
-          "observed_partial": false
-        },
-        "LONDON": {
-          "high": 177.793,
-          "low": 177.424,
-          "first_observed_open_utc": "2026-10-16T07:00:00+00:00",
-          "last_observed_open_utc": "2026-10-16T09:30:00+00:00",
-          "closed_15m_bars": 11,
-          "range_pips": 36.9,
-          "session_start_utc": "2026-10-16T07:00:00+00:00",
-          "scheduled_session_end_utc": "2026-10-16T16:00:00+00:00",
-          "session_in_progress": true,
-          "observed_partial": true
-        }
-      },
-      "reference_only": true,
-      "used_for_signal_direction": false,
-      "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
-      "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
-      "D1_current_session_used_for_direction": false,
-      "NY17_day_first_observed_open_utc": "2026-10-15T21:15:00+00:00"
+      "status": "UNAVAILABLE",
+      "reason": "upstream_volatility_feed_stale",
+      "used_for_signal_direction": false
     },
     "EURCAD": {
       "pair": "EURCAD",
-      "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
-      "ADR20_pips": 75.9,
-      "ADR20_complete_days": 20,
-      "NY17_day_used_pips": 43.0,
-      "NY17_ADR_percent_used": 56.7,
-      "ADR_remaining_reference_pips": 32.9,
-      "NY17_rollover_start_utc": "2026-10-15T21:00:00+00:00",
-      "session_ranges": {
-        "TOKYO": {
-          "high": 1.59323,
-          "low": 1.59063,
-          "first_observed_open_utc": "2026-10-16T00:00:00+00:00",
-          "last_observed_open_utc": "2026-10-16T08:45:00+00:00",
-          "closed_15m_bars": 36,
-          "range_pips": 26.0,
-          "session_start_utc": "2026-10-16T00:00:00+00:00",
-          "scheduled_session_end_utc": "2026-10-16T09:00:00+00:00",
-          "session_in_progress": false,
-          "observed_partial": false
-        },
-        "LONDON": {
-          "high": 1.59357,
-          "low": 1.59173,
-          "first_observed_open_utc": "2026-10-16T07:00:00+00:00",
-          "last_observed_open_utc": "2026-10-16T09:30:00+00:00",
-          "closed_15m_bars": 11,
-          "range_pips": 18.4,
-          "session_start_utc": "2026-10-16T07:00:00+00:00",
-          "scheduled_session_end_utc": "2026-10-16T16:00:00+00:00",
-          "session_in_progress": true,
-          "observed_partial": true
-        }
-      },
-      "reference_only": true,
-      "used_for_signal_direction": false,
-      "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
-      "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
-      "D1_current_session_used_for_direction": false,
-      "NY17_day_first_observed_open_utc": "2026-10-15T21:15:00+00:00"
+      "status": "UNAVAILABLE",
+      "reason": "upstream_volatility_feed_stale",
+      "used_for_signal_direction": false
     },
     "USDCAD": {
       "pair": "USDCAD",
-      "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
-      "ADR20_pips": 61.87,
-      "ADR20_complete_days": 20,
-      "NY17_day_used_pips": 42.9,
-      "NY17_ADR_percent_used": 69.3,
-      "ADR_remaining_reference_pips": 18.97,
-      "NY17_rollover_start_utc": "2026-10-15T21:00:00+00:00",
-      "session_ranges": {
-        "TOKYO": {
-          "high": 1.41989,
-          "low": 1.41624,
-          "first_observed_open_utc": "2026-10-16T00:00:00+00:00",
-          "last_observed_open_utc": "2026-10-16T08:45:00+00:00",
-          "closed_15m_bars": 36,
-          "range_pips": 36.5,
-          "session_start_utc": "2026-10-16T00:00:00+00:00",
-          "scheduled_session_end_utc": "2026-10-16T09:00:00+00:00",
-          "session_in_progress": false,
-          "observed_partial": false
-        },
-        "LONDON": {
-          "high": 1.41755,
-          "low": 1.4156,
-          "first_observed_open_utc": "2026-10-16T07:00:00+00:00",
-          "last_observed_open_utc": "2026-10-16T09:30:00+00:00",
-          "closed_15m_bars": 11,
-          "range_pips": 19.5,
-          "session_start_utc": "2026-10-16T07:00:00+00:00",
-          "scheduled_session_end_utc": "2026-10-16T16:00:00+00:00",
-          "session_in_progress": true,
-          "observed_partial": true
-        }
-      },
-      "reference_only": true,
-      "used_for_signal_direction": false,
-      "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
-      "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
-      "D1_current_session_used_for_direction": false,
-      "NY17_day_first_observed_open_utc": "2026-10-15T21:15:00+00:00"
+      "status": "UNAVAILABLE",
+      "reason": "upstream_volatility_feed_stale",
+      "used_for_signal_direction": false
     },
     "EURGBP": {
       "pair": "EURGBP",
-      "status": "COMPLETE_ADR_WITH_PARTIAL_INTRADAY_WINDOW",
-      "ADR20_pips": 27.08,
-      "ADR20_complete_days": 20,
-      "NY17_day_used_pips": 15.2,
-      "NY17_ADR_percent_used": 56.1,
-      "ADR_remaining_reference_pips": 11.88,
-      "NY17_rollover_start_utc": "2026-10-15T21:00:00+00:00",
-      "session_ranges": {
-        "TOKYO": {
-          "high": 0.84506,
-          "low": 0.8437,
-          "first_observed_open_utc": "2026-10-16T00:00:00+00:00",
-          "last_observed_open_utc": "2026-10-16T08:45:00+00:00",
-          "closed_15m_bars": 36,
-          "range_pips": 13.6,
-          "session_start_utc": "2026-10-16T00:00:00+00:00",
-          "scheduled_session_end_utc": "2026-10-16T09:00:00+00:00",
-          "session_in_progress": false,
-          "observed_partial": false
-        },
-        "LONDON": {
-          "high": 0.84448,
-          "low": 0.84369,
-          "first_observed_open_utc": "2026-10-16T07:00:00+00:00",
-          "last_observed_open_utc": "2026-10-16T09:30:00+00:00",
-          "closed_15m_bars": 11,
-          "range_pips": 7.9,
-          "session_start_utc": "2026-10-16T07:00:00+00:00",
-          "scheduled_session_end_utc": "2026-10-16T16:00:00+00:00",
-          "session_in_progress": true,
-          "observed_partial": true
-        }
-      },
-      "reference_only": true,
-      "used_for_signal_direction": false,
-      "note": "Ranges are context only, not trade targets or closed-15m/30m direction",
-      "day_range_completeness": "RUNNING_D1_REFERENCE_NY17_ALIGNED",
-      "D1_current_session_used_for_direction": false,
-      "NY17_day_first_observed_open_utc": "2026-10-15T21:15:00+00:00"
+      "status": "UNAVAILABLE",
+      "reason": "upstream_volatility_feed_stale",
+      "used_for_signal_direction": false
     }
   },
   "timeframe_contract": "D1_CONTEXT_AND_COMPLETED_M15_RANGES_ONLY_NEVER_SIGNAL",
