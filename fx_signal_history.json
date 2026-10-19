@@ -21,16 +21,21 @@
           "method": "contiguous_closed_15m_directional_closes_proxy"
         },
         "first_observed_closed_15m_price": 0.69803,
-        "observation_count": 2,
+        "observation_count": 3,
         "last_observation_status": "ACTIVE",
-        "last_observed_at_utc": "2026-10-19T23:03:42.079349+00:00",
-        "last_observed_closed_15m_price": 0.69795,
-        "pips_since_first_observation": -0.8,
-        "max_favorable_observed_pips": 0.0,
+        "last_observed_at_utc": "2026-10-19T23:34:55.398038+00:00",
+        "last_observed_closed_15m_price": 0.69809,
+        "pips_since_first_observation": 0.6,
+        "max_favorable_observed_pips": 0.6,
         "max_adverse_observed_pips": -0.8,
         "last_observed_stage": "EARLY_DIRECTIONAL_ROTATION",
-        "last_observed_move_maturity": null,
-        "elapsed_since_first_observed_minutes": 29.1
+        "last_observed_move_maturity": {
+          "15m_excursion_20_pips": 3.6,
+          "15m_net_displacement_20_pips": 2.1,
+          "30m_net_displacement_20_pips": -6.1,
+          "latest_15m_leg_pips": 1.0
+        },
+        "elapsed_since_first_observed_minutes": 60.3
       },
       "history": [
         {
@@ -1732,39 +1737,23 @@
     },
     "NZDUSD": {
       "active": {
-        "direction": "BUY",
-        "first_observed_at_utc": "2026-10-19T22:34:35.820191+00:00",
-        "first_observed_stage": "EARLY_DIRECTIONAL_ROTATION",
+        "direction": "SELL",
+        "first_observed_at_utc": "2026-10-19T23:34:55.398038+00:00",
+        "first_observed_stage": "EARLY_M15_M30_MOMENTUM",
         "first_observed_source_valid": true,
-        "first_observed_move_maturity": {
-          "15m_excursion_20_pips": 3.0,
-          "15m_net_displacement_20_pips": 0.7,
-          "30m_net_displacement_20_pips": -9.8,
-          "latest_15m_leg_pips": 2.5
-        },
-        "first_observed_origin_proxy": {
-          "utc": "2026-10-19T21:45:00+00:00",
-          "price": 0.56605,
-          "moved_pips": 2.5,
-          "bars": 3,
-          "method": "contiguous_closed_15m_directional_closes_proxy"
-        },
-        "first_observed_closed_15m_price": 0.5663,
-        "observation_count": 2,
+        "first_observed_move_maturity": null,
+        "first_observed_origin_proxy": null,
+        "first_observed_closed_15m_price": 0.56619,
+        "observation_count": 1,
         "last_observation_status": "ACTIVE",
-        "last_observed_at_utc": "2026-10-19T23:03:42.079349+00:00",
-        "last_observed_closed_15m_price": 0.56629,
-        "pips_since_first_observation": -0.1,
-        "max_favorable_observed_pips": 0.0,
-        "max_adverse_observed_pips": -0.1,
-        "last_observed_stage": "EARLY_DIRECTIONAL_ROTATION",
-        "last_observed_move_maturity": {
-          "15m_excursion_20_pips": 1.9,
-          "15m_net_displacement_20_pips": -0.5,
-          "30m_net_displacement_20_pips": -7.5,
-          "latest_15m_leg_pips": 0.7
-        },
-        "elapsed_since_first_observed_minutes": 29.1
+        "last_observed_at_utc": "2026-10-19T23:34:55.398038+00:00",
+        "last_observed_closed_15m_price": 0.56619,
+        "pips_since_first_observation": -0.0,
+        "max_favorable_observed_pips": -0.0,
+        "max_adverse_observed_pips": -0.0,
+        "last_observed_stage": "EARLY_M15_M30_MOMENTUM",
+        "last_observed_move_maturity": null,
+        "elapsed_since_first_observed_minutes": 0.0
       },
       "history": [
         {
@@ -3395,6 +3384,43 @@
           "elapsed_since_first_observed_minutes": 0.0,
           "ended_at_utc": "2026-10-19T22:03:45.004428+00:00",
           "end_reason": "DIRECTION_NO_LONGER_DETECTED"
+        },
+        {
+          "direction": "BUY",
+          "first_observed_at_utc": "2026-10-19T22:34:35.820191+00:00",
+          "first_observed_stage": "EARLY_DIRECTIONAL_ROTATION",
+          "first_observed_source_valid": true,
+          "first_observed_move_maturity": {
+            "15m_excursion_20_pips": 3.0,
+            "15m_net_displacement_20_pips": 0.7,
+            "30m_net_displacement_20_pips": -9.8,
+            "latest_15m_leg_pips": 2.5
+          },
+          "first_observed_origin_proxy": {
+            "utc": "2026-10-19T21:45:00+00:00",
+            "price": 0.56605,
+            "moved_pips": 2.5,
+            "bars": 3,
+            "method": "contiguous_closed_15m_directional_closes_proxy"
+          },
+          "first_observed_closed_15m_price": 0.5663,
+          "observation_count": 2,
+          "last_observation_status": "ACTIVE",
+          "last_observed_at_utc": "2026-10-19T23:03:42.079349+00:00",
+          "last_observed_closed_15m_price": 0.56629,
+          "pips_since_first_observation": -0.1,
+          "max_favorable_observed_pips": 0.0,
+          "max_adverse_observed_pips": -0.1,
+          "last_observed_stage": "EARLY_DIRECTIONAL_ROTATION",
+          "last_observed_move_maturity": {
+            "15m_excursion_20_pips": 1.9,
+            "15m_net_displacement_20_pips": -0.5,
+            "30m_net_displacement_20_pips": -7.5,
+            "latest_15m_leg_pips": 0.7
+          },
+          "elapsed_since_first_observed_minutes": 29.1,
+          "ended_at_utc": "2026-10-19T23:34:55.398038+00:00",
+          "end_reason": "DIRECTION_REVERSED"
         }
       ]
     },
@@ -3418,21 +3444,21 @@
           "method": "contiguous_closed_15m_directional_closes_proxy"
         },
         "first_observed_closed_15m_price": 1.1212,
-        "observation_count": 1,
+        "observation_count": 2,
         "last_observation_status": "ACTIVE",
-        "last_observed_at_utc": "2026-10-19T23:03:42.079349+00:00",
-        "last_observed_closed_15m_price": 1.1212,
-        "pips_since_first_observation": -0.0,
-        "max_favorable_observed_pips": -0.0,
+        "last_observed_at_utc": "2026-10-19T23:34:55.398038+00:00",
+        "last_observed_closed_15m_price": 1.12118,
+        "pips_since_first_observation": 0.2,
+        "max_favorable_observed_pips": 0.2,
         "max_adverse_observed_pips": -0.0,
-        "last_observed_stage": "EARLY_M15_M30_MOMENTUM",
+        "last_observed_stage": "EARLY",
         "last_observed_move_maturity": {
-          "15m_excursion_20_pips": 9.0,
-          "15m_net_displacement_20_pips": 4.3,
-          "30m_net_displacement_20_pips": 11.8,
-          "latest_15m_leg_pips": 1.4
+          "15m_excursion_20_pips": 7.2,
+          "15m_net_displacement_20_pips": 2.7,
+          "30m_net_displacement_20_pips": 12.7,
+          "latest_15m_leg_pips": 1.2
         },
-        "elapsed_since_first_observed_minutes": 0.0
+        "elapsed_since_first_observed_minutes": 31.2
       },
       "history": [
         {
@@ -5210,21 +5236,16 @@
         "first_observed_move_maturity": null,
         "first_observed_origin_proxy": null,
         "first_observed_closed_15m_price": 1.33089,
-        "observation_count": 4,
+        "observation_count": 5,
         "last_observation_status": "ACTIVE",
-        "last_observed_at_utc": "2026-10-19T23:03:42.079349+00:00",
-        "last_observed_closed_15m_price": 1.33052,
-        "pips_since_first_observation": -3.7,
+        "last_observed_at_utc": "2026-10-19T23:34:55.398038+00:00",
+        "last_observed_closed_15m_price": 1.33063,
+        "pips_since_first_observation": -2.6,
         "max_favorable_observed_pips": 0.0,
         "max_adverse_observed_pips": -5.1,
-        "last_observed_stage": "EARLY_DIRECTIONAL_ROTATION",
-        "last_observed_move_maturity": {
-          "15m_excursion_20_pips": 14.7,
-          "15m_net_displacement_20_pips": 3.9,
-          "30m_net_displacement_20_pips": 20.0,
-          "latest_15m_leg_pips": 1.9
-        },
-        "elapsed_since_first_observed_minutes": 283.2
+        "last_observed_stage": "EARLY_M15_M30_MOMENTUM",
+        "last_observed_move_maturity": null,
+        "elapsed_since_first_observed_minutes": 314.4
       },
       "history": [
         {
@@ -6810,16 +6831,21 @@
           "method": "contiguous_closed_15m_directional_closes_proxy"
         },
         "first_observed_closed_15m_price": 158.54,
-        "observation_count": 2,
+        "observation_count": 3,
         "last_observation_status": "ACTIVE",
-        "last_observed_at_utc": "2026-10-19T23:03:42.079349+00:00",
-        "last_observed_closed_15m_price": 158.512,
-        "pips_since_first_observation": -2.8,
-        "max_favorable_observed_pips": 0.0,
+        "last_observed_at_utc": "2026-10-19T23:34:55.398038+00:00",
+        "last_observed_closed_15m_price": 158.595,
+        "pips_since_first_observation": 5.5,
+        "max_favorable_observed_pips": 5.5,
         "max_adverse_observed_pips": -2.8,
         "last_observed_stage": "EARLY_DIRECTIONAL_ROTATION",
-        "last_observed_move_maturity": null,
-        "elapsed_since_first_observed_minutes": 29.1
+        "last_observed_move_maturity": {
+          "15m_excursion_20_pips": 10.3,
+          "15m_net_displacement_20_pips": 9.9,
+          "30m_net_displacement_20_pips": 30.3,
+          "latest_15m_leg_pips": 8.3
+        },
+        "elapsed_since_first_observed_minutes": 60.3
       },
       "history": [
         {
@@ -8461,16 +8487,21 @@
           "method": "contiguous_closed_15m_directional_closes_proxy"
         },
         "first_observed_closed_15m_price": 110.667,
-        "observation_count": 2,
+        "observation_count": 3,
         "last_observation_status": "ACTIVE",
-        "last_observed_at_utc": "2026-10-19T23:03:42.079349+00:00",
-        "last_observed_closed_15m_price": 110.634,
-        "pips_since_first_observation": -3.3,
-        "max_favorable_observed_pips": 0.0,
+        "last_observed_at_utc": "2026-10-19T23:34:55.398038+00:00",
+        "last_observed_closed_15m_price": 110.713,
+        "pips_since_first_observation": 4.6,
+        "max_favorable_observed_pips": 4.6,
         "max_adverse_observed_pips": -3.3,
         "last_observed_stage": "EARLY_DIRECTIONAL_ROTATION",
-        "last_observed_move_maturity": null,
-        "elapsed_since_first_observed_minutes": 29.1
+        "last_observed_move_maturity": {
+          "15m_excursion_20_pips": 12.1,
+          "15m_net_displacement_20_pips": 10.9,
+          "30m_net_displacement_20_pips": 11.7,
+          "latest_15m_leg_pips": 6.2
+        },
+        "elapsed_since_first_observed_minutes": 60.3
       },
       "history": [
         {
@@ -10033,16 +10064,21 @@
           "method": "contiguous_closed_15m_directional_closes_proxy"
         },
         "first_observed_closed_15m_price": 89.78,
-        "observation_count": 2,
+        "observation_count": 3,
         "last_observation_status": "ACTIVE",
-        "last_observed_at_utc": "2026-10-19T23:03:42.079349+00:00",
-        "last_observed_closed_15m_price": 89.763,
-        "pips_since_first_observation": -1.7,
-        "max_favorable_observed_pips": 0.0,
+        "last_observed_at_utc": "2026-10-19T23:34:55.398038+00:00",
+        "last_observed_closed_15m_price": 89.795,
+        "pips_since_first_observation": 1.5,
+        "max_favorable_observed_pips": 1.5,
         "max_adverse_observed_pips": -1.7,
         "last_observed_stage": "EARLY_DIRECTIONAL_ROTATION",
-        "last_observed_move_maturity": null,
-        "elapsed_since_first_observed_minutes": 29.1
+        "last_observed_move_maturity": {
+          "15m_excursion_20_pips": 6.4,
+          "15m_net_displacement_20_pips": 5.8,
+          "30m_net_displacement_20_pips": 1.9,
+          "latest_15m_leg_pips": 2.6
+        },
+        "elapsed_since_first_observed_minutes": 60.3
       },
       "history": [
         {
@@ -11800,16 +11836,21 @@
           "method": "contiguous_closed_15m_directional_closes_proxy"
         },
         "first_observed_closed_15m_price": 177.782,
-        "observation_count": 2,
+        "observation_count": 3,
         "last_observation_status": "ACTIVE",
-        "last_observed_at_utc": "2026-10-19T23:03:42.079349+00:00",
-        "last_observed_closed_15m_price": 177.729,
-        "pips_since_first_observation": -5.3,
-        "max_favorable_observed_pips": 0.0,
+        "last_observed_at_utc": "2026-10-19T23:34:55.398038+00:00",
+        "last_observed_closed_15m_price": 177.811,
+        "pips_since_first_observation": 2.9,
+        "max_favorable_observed_pips": 2.9,
         "max_adverse_observed_pips": -5.3,
         "last_observed_stage": "EARLY_DIRECTIONAL_ROTATION",
-        "last_observed_move_maturity": null,
-        "elapsed_since_first_observed_minutes": 29.1
+        "last_observed_move_maturity": {
+          "15m_excursion_20_pips": 7.4,
+          "15m_net_displacement_20_pips": 7.0,
+          "30m_net_displacement_20_pips": 13.8,
+          "latest_15m_leg_pips": 8.2
+        },
+        "elapsed_since_first_observed_minutes": 60.3
       },
       "history": [
         {
@@ -13479,7 +13520,41 @@
       ]
     },
     "EURCAD": {
-      "active": null,
+      "active": {
+        "direction": "SELL",
+        "first_observed_at_utc": "2026-10-19T23:34:55.398038+00:00",
+        "first_observed_stage": "EARLY_DIRECTIONAL_ROTATION",
+        "first_observed_source_valid": true,
+        "first_observed_move_maturity": {
+          "15m_excursion_20_pips": 18.8,
+          "15m_net_displacement_20_pips": 1.0,
+          "30m_net_displacement_20_pips": 3.9,
+          "latest_15m_leg_pips": 1.1
+        },
+        "first_observed_origin_proxy": {
+          "utc": "2026-10-19T23:15:00+00:00",
+          "price": 1.58142,
+          "moved_pips": 1.1,
+          "bars": 1,
+          "method": "contiguous_closed_15m_directional_closes_proxy"
+        },
+        "first_observed_closed_15m_price": 1.58153,
+        "observation_count": 1,
+        "last_observation_status": "ACTIVE",
+        "last_observed_at_utc": "2026-10-19T23:34:55.398038+00:00",
+        "last_observed_closed_15m_price": 1.58153,
+        "pips_since_first_observation": -0.0,
+        "max_favorable_observed_pips": -0.0,
+        "max_adverse_observed_pips": -0.0,
+        "last_observed_stage": "EARLY_DIRECTIONAL_ROTATION",
+        "last_observed_move_maturity": {
+          "15m_excursion_20_pips": 18.8,
+          "15m_net_displacement_20_pips": 1.0,
+          "30m_net_displacement_20_pips": 3.9,
+          "latest_15m_leg_pips": 1.1
+        },
+        "elapsed_since_first_observed_minutes": 0.0
+      },
       "history": [
         {
           "direction": "SELL",
@@ -15142,21 +15217,21 @@
           "method": "contiguous_closed_15m_directional_closes_proxy"
         },
         "first_observed_closed_15m_price": 1.41079,
-        "observation_count": 1,
+        "observation_count": 2,
         "last_observation_status": "ACTIVE",
-        "last_observed_at_utc": "2026-10-19T23:03:42.079349+00:00",
-        "last_observed_closed_15m_price": 1.41079,
-        "pips_since_first_observation": 0.0,
+        "last_observed_at_utc": "2026-10-19T23:34:55.398038+00:00",
+        "last_observed_closed_15m_price": 1.41065,
+        "pips_since_first_observation": -1.4,
         "max_favorable_observed_pips": 0.0,
-        "max_adverse_observed_pips": 0.0,
-        "last_observed_stage": "EARLY_DIRECTIONAL_ROTATION",
+        "max_adverse_observed_pips": -1.4,
+        "last_observed_stage": "EARLY",
         "last_observed_move_maturity": {
-          "15m_excursion_20_pips": 14.2,
-          "15m_net_displacement_20_pips": 9.7,
-          "30m_net_displacement_20_pips": 9.6,
-          "latest_15m_leg_pips": 2.4
+          "15m_excursion_20_pips": 8.0,
+          "15m_net_displacement_20_pips": 2.1,
+          "30m_net_displacement_20_pips": 11.9,
+          "latest_15m_leg_pips": 1.0
         },
-        "elapsed_since_first_observed_minutes": 0.0
+        "elapsed_since_first_observed_minutes": 31.2
       },
       "history": [
         {
@@ -16899,34 +16974,39 @@
     },
     "EURGBP": {
       "active": {
-        "direction": "BUY",
-        "first_observed_at_utc": "2026-10-19T22:34:35.820191+00:00",
-        "first_observed_stage": "EARLY_DIRECTIONAL_ROTATION",
+        "direction": "SELL",
+        "first_observed_at_utc": "2026-10-19T23:34:55.398038+00:00",
+        "first_observed_stage": "EARLY_M15_M30_MOMENTUM",
         "first_observed_source_valid": true,
         "first_observed_move_maturity": {
-          "15m_excursion_20_pips": 2.4,
-          "15m_net_displacement_20_pips": 0.0,
-          "30m_net_displacement_20_pips": 5.5,
-          "latest_15m_leg_pips": 1.3
+          "15m_excursion_20_pips": 10.7,
+          "15m_net_displacement_20_pips": 2.8,
+          "30m_net_displacement_20_pips": -4.1,
+          "latest_15m_leg_pips": 1.0
         },
         "first_observed_origin_proxy": {
-          "utc": "2026-10-19T22:15:00+00:00",
-          "price": 0.84267,
-          "moved_pips": -0.2,
-          "bars": 1,
+          "utc": "2026-10-19T23:00:00+00:00",
+          "price": 0.84266,
+          "moved_pips": -1.0,
+          "bars": 2,
           "method": "contiguous_closed_15m_directional_closes_proxy"
         },
-        "first_observed_closed_15m_price": 0.84265,
-        "observation_count": 2,
+        "first_observed_closed_15m_price": 0.84256,
+        "observation_count": 1,
         "last_observation_status": "ACTIVE",
-        "last_observed_at_utc": "2026-10-19T23:03:42.079349+00:00",
-        "last_observed_closed_15m_price": 0.84266,
-        "pips_since_first_observation": 0.1,
-        "max_favorable_observed_pips": 0.1,
-        "max_adverse_observed_pips": 0.0,
-        "last_observed_stage": "EARLY_DIRECTIONAL_ROTATION",
-        "last_observed_move_maturity": null,
-        "elapsed_since_first_observed_minutes": 29.1
+        "last_observed_at_utc": "2026-10-19T23:34:55.398038+00:00",
+        "last_observed_closed_15m_price": 0.84256,
+        "pips_since_first_observation": -0.0,
+        "max_favorable_observed_pips": -0.0,
+        "max_adverse_observed_pips": -0.0,
+        "last_observed_stage": "EARLY_M15_M30_MOMENTUM",
+        "last_observed_move_maturity": {
+          "15m_excursion_20_pips": 10.7,
+          "15m_net_displacement_20_pips": 2.8,
+          "30m_net_displacement_20_pips": -4.1,
+          "latest_15m_leg_pips": 1.0
+        },
+        "elapsed_since_first_observed_minutes": 0.0
       },
       "history": [
         {
@@ -18651,10 +18731,42 @@
           "elapsed_since_first_observed_minutes": 0.0,
           "ended_at_utc": "2026-10-19T22:34:35.820191+00:00",
           "end_reason": "DIRECTION_REVERSED"
+        },
+        {
+          "direction": "BUY",
+          "first_observed_at_utc": "2026-10-19T22:34:35.820191+00:00",
+          "first_observed_stage": "EARLY_DIRECTIONAL_ROTATION",
+          "first_observed_source_valid": true,
+          "first_observed_move_maturity": {
+            "15m_excursion_20_pips": 2.4,
+            "15m_net_displacement_20_pips": 0.0,
+            "30m_net_displacement_20_pips": 5.5,
+            "latest_15m_leg_pips": 1.3
+          },
+          "first_observed_origin_proxy": {
+            "utc": "2026-10-19T22:15:00+00:00",
+            "price": 0.84267,
+            "moved_pips": -0.2,
+            "bars": 1,
+            "method": "contiguous_closed_15m_directional_closes_proxy"
+          },
+          "first_observed_closed_15m_price": 0.84265,
+          "observation_count": 2,
+          "last_observation_status": "ACTIVE",
+          "last_observed_at_utc": "2026-10-19T23:03:42.079349+00:00",
+          "last_observed_closed_15m_price": 0.84266,
+          "pips_since_first_observation": 0.1,
+          "max_favorable_observed_pips": 0.1,
+          "max_adverse_observed_pips": 0.0,
+          "last_observed_stage": "EARLY_DIRECTIONAL_ROTATION",
+          "last_observed_move_maturity": null,
+          "elapsed_since_first_observed_minutes": 29.1,
+          "ended_at_utc": "2026-10-19T23:34:55.398038+00:00",
+          "end_reason": "DIRECTION_REVERSED"
         }
       ]
     }
   },
   "initialized_at_utc": "2026-10-12T09:57:27.235711+00:00",
-  "last_updated_at_utc": "2026-10-19T23:03:42.079349+00:00"
+  "last_updated_at_utc": "2026-10-19T23:34:55.398038+00:00"
 }
