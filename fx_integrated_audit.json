@@ -1,26 +1,26 @@
 {
-  "generated_at_utc": "2026-10-20T08:58:24.481260+00:00",
+  "generated_at_utc": "2026-10-20T09:37:18.168503+00:00",
   "purpose": "FULL_SOURCE_AUDIT_NOT_EXECUTABLE_TRADE_ORDERS",
   "sources": {
     "technicals": {
-      "status": "STALE",
-      "age_minutes": 69.6
+      "status": "FRESH",
+      "age_minutes": 3.6
     },
     "dashboard": {
-      "status": "STALE",
-      "age_minutes": 69.5
+      "status": "FRESH",
+      "age_minutes": 3.5
     },
     "calendar": {
       "status": "FRESH",
-      "age_minutes": 23.0
+      "age_minutes": 3.5
     },
     "ff_markets": {
       "status": "FRESH",
-      "age_minutes": 21.5
+      "age_minutes": 18.9
     },
     "volatility": {
-      "status": "STALE",
-      "age_minutes": 69.6
+      "status": "FRESH",
+      "age_minutes": 3.6
     },
     "kospi_te_public_page": {
       "status": "DATED_DAILY_CONTEXT",
@@ -30,31 +30,31 @@
     },
     "macro_snapshot": {
       "status": "STALE",
-      "age_minutes": 4859.6
+      "age_minutes": 4898.5
     },
     "macro_raw": {
       "status": "STALE",
-      "age_minutes": 4859.6
+      "age_minutes": 4898.5
     },
     "macro_news": {
       "status": "STALE",
-      "age_minutes": 4859.6
+      "age_minutes": 4898.5
     },
     "unified_signals": {
-      "status": "STALE",
-      "age_minutes": 69.4
+      "status": "FRESH",
+      "age_minutes": 3.4
     },
     "economic_actuals": {
       "status": "STALE",
-      "age_minutes": 4859.7
+      "age_minutes": 4898.6
     },
     "range_context": {
       "status": "STALE",
-      "age_minutes": 4859.6
+      "age_minutes": 4898.5
     },
     "retail": {
       "status": "STALE",
-      "age_minutes": 4859.6
+      "age_minutes": 4898.5
     }
   },
   "macro_layers": {
@@ -70,7 +70,7 @@
     "cme_volume_open_interest": "PARTIAL_CFTC_WEEKLY_OI_CME_DAILY_DATA_UNVERIFIED",
     "retail_positioning": "UNAVAILABLE_CURRENT",
     "currency_strength_clusters": "DERIVED_FROM_11_FX_PAIRS",
-    "closed_15m30m_direction": "STALE_OR_UNAVAILABLE",
+    "closed_15m30m_direction": "FRESH_TECHNICAL_WATCH_NOT_BROKER_EXECUTION",
     "atr_adr_session_levels": "PARTIAL_LEGACY_ATR_LEVELS",
     "independent_live_spreads": "UNAVAILABLE_BROKER_EXECUTABLE_QUOTE",
     "signal_history": "VERIFIED_RECORDED_SIGNAL_OBSERVATIONS",
@@ -93,34 +93,23 @@
   "pairs": [
     {
       "pair": "AUDUSD",
-      "technical_direction": "NO_RANKED_CANDIDATE",
-      "technical_stage": "UNRANKED",
-      "unified_signal_direction": "UNAVAILABLE",
+      "technical_direction": "SELL",
+      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "ABOVE_BOTH",
       "h4_ema20_50": "ABOVE_BOTH",
       "timeframes_present": true,
-      "higher_timeframe_conflict": false,
+      "higher_timeframe_conflict": true,
       "upcoming_48h_events": [
-        {
-          "title": "Foreign Direct Investment ytd/y",
-          "currency": "CNY",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:10:00-04:00",
-          "forecast": "",
-          "previous": "-5.3%",
-          "actual": null,
-          "minutes_until": 12,
-          "time_status": "IMMINENT"
-        },
         {
           "title": "ADP Weekly Employment Change",
           "currency": "USD",
@@ -129,7 +118,7 @@
           "forecast": "",
           "previous": "24.8K",
           "actual": null,
-          "minutes_until": 197,
+          "minutes_until": 158,
           "time_status": "UPCOMING"
         },
         {
@@ -140,7 +129,7 @@
           "forecast": "1.39M",
           "previous": "1.39M",
           "actual": null,
-          "minutes_until": 212,
+          "minutes_until": 173,
           "time_status": "UPCOMING"
         },
         {
@@ -151,7 +140,7 @@
           "forecast": "1.30M",
           "previous": "1.28M",
           "actual": null,
-          "minutes_until": 212,
+          "minutes_until": 173,
           "time_status": "UPCOMING"
         },
         {
@@ -162,7 +151,7 @@
           "forecast": "-0.6%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 302,
+          "minutes_until": 263,
           "time_status": "UPCOMING"
         },
         {
@@ -173,7 +162,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 692,
+          "minutes_until": 653,
           "time_status": "UPCOMING"
         },
         {
@@ -184,7 +173,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 812,
+          "minutes_until": 773,
           "time_status": "UPCOMING"
         },
         {
@@ -195,22 +184,11 @@
           "forecast": "-0.3M",
           "previous": "-8.6M",
           "actual": null,
-          "minutes_until": 1772,
+          "minutes_until": 1733,
           "time_status": "UPCOMING"
         }
       ],
       "next_24h_events": [
-        {
-          "title": "Foreign Direct Investment ytd/y",
-          "currency": "CNY",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:10:00-04:00",
-          "forecast": "",
-          "previous": "-5.3%",
-          "actual": null,
-          "minutes_until": 12,
-          "time_status": "IMMINENT"
-        },
         {
           "title": "ADP Weekly Employment Change",
           "currency": "USD",
@@ -219,7 +197,7 @@
           "forecast": "",
           "previous": "24.8K",
           "actual": null,
-          "minutes_until": 197,
+          "minutes_until": 158,
           "time_status": "UPCOMING"
         },
         {
@@ -230,7 +208,7 @@
           "forecast": "1.39M",
           "previous": "1.39M",
           "actual": null,
-          "minutes_until": 212,
+          "minutes_until": 173,
           "time_status": "UPCOMING"
         },
         {
@@ -241,7 +219,7 @@
           "forecast": "1.30M",
           "previous": "1.28M",
           "actual": null,
-          "minutes_until": 212,
+          "minutes_until": 173,
           "time_status": "UPCOMING"
         },
         {
@@ -252,7 +230,7 @@
           "forecast": "-0.6%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 302,
+          "minutes_until": 263,
           "time_status": "UPCOMING"
         },
         {
@@ -263,7 +241,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 692,
+          "minutes_until": 653,
           "time_status": "UPCOMING"
         },
         {
@@ -274,28 +252,23 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 812,
+          "minutes_until": 773,
           "time_status": "UPCOMING"
         }
       ],
-      "imminent_events": [
-        {
-          "title": "Foreign Direct Investment ytd/y",
-          "currency": "CNY",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:10:00-04:00",
-          "forecast": "",
-          "previous": "-5.3%",
-          "actual": null,
-          "minutes_until": 12,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "event_risk": "IMMINENT_EVENT",
+      "imminent_events": [],
+      "event_risk": "EVENT_WITHIN_24H",
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -312,7 +285,7 @@
       },
       "asian_risk_directional_note": "Asian equity risk may affect AUD/NZD, but FX must confirm",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -320,34 +293,23 @@
     },
     {
       "pair": "NZDUSD",
-      "technical_direction": "BUY",
+      "technical_direction": "SELL",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "UNAVAILABLE",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "ABOVE_BOTH",
       "h4_ema20_50": "ABOVE_BOTH",
       "timeframes_present": true,
-      "higher_timeframe_conflict": false,
+      "higher_timeframe_conflict": true,
       "upcoming_48h_events": [
-        {
-          "title": "Foreign Direct Investment ytd/y",
-          "currency": "CNY",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:10:00-04:00",
-          "forecast": "",
-          "previous": "-5.3%",
-          "actual": null,
-          "minutes_until": 12,
-          "time_status": "IMMINENT"
-        },
         {
           "title": "ADP Weekly Employment Change",
           "currency": "USD",
@@ -356,7 +318,7 @@
           "forecast": "",
           "previous": "24.8K",
           "actual": null,
-          "minutes_until": 197,
+          "minutes_until": 158,
           "time_status": "UPCOMING"
         },
         {
@@ -367,7 +329,7 @@
           "forecast": "1.39M",
           "previous": "1.39M",
           "actual": null,
-          "minutes_until": 212,
+          "minutes_until": 173,
           "time_status": "UPCOMING"
         },
         {
@@ -378,7 +340,7 @@
           "forecast": "1.30M",
           "previous": "1.28M",
           "actual": null,
-          "minutes_until": 212,
+          "minutes_until": 173,
           "time_status": "UPCOMING"
         },
         {
@@ -389,7 +351,7 @@
           "forecast": "-0.6%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 302,
+          "minutes_until": 263,
           "time_status": "UPCOMING"
         },
         {
@@ -400,7 +362,7 @@
           "forecast": "",
           "previous": "1.2%",
           "actual": null,
-          "minutes_until": 352,
+          "minutes_until": 313,
           "time_status": "UPCOMING"
         },
         {
@@ -411,7 +373,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 692,
+          "minutes_until": 653,
           "time_status": "UPCOMING"
         },
         {
@@ -422,7 +384,7 @@
           "forecast": "",
           "previous": "3.5%",
           "actual": null,
-          "minutes_until": 1022,
+          "minutes_until": 983,
           "time_status": "UPCOMING"
         },
         {
@@ -433,7 +395,7 @@
           "forecast": "-0.3M",
           "previous": "-8.6M",
           "actual": null,
-          "minutes_until": 1772,
+          "minutes_until": 1733,
           "time_status": "UPCOMING"
         },
         {
@@ -444,22 +406,11 @@
           "forecast": "0.8%",
           "previous": "1.5%",
           "actual": null,
-          "minutes_until": 2207,
+          "minutes_until": 2168,
           "time_status": "UPCOMING"
         }
       ],
       "next_24h_events": [
-        {
-          "title": "Foreign Direct Investment ytd/y",
-          "currency": "CNY",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:10:00-04:00",
-          "forecast": "",
-          "previous": "-5.3%",
-          "actual": null,
-          "minutes_until": 12,
-          "time_status": "IMMINENT"
-        },
         {
           "title": "ADP Weekly Employment Change",
           "currency": "USD",
@@ -468,7 +419,7 @@
           "forecast": "",
           "previous": "24.8K",
           "actual": null,
-          "minutes_until": 197,
+          "minutes_until": 158,
           "time_status": "UPCOMING"
         },
         {
@@ -479,7 +430,7 @@
           "forecast": "1.39M",
           "previous": "1.39M",
           "actual": null,
-          "minutes_until": 212,
+          "minutes_until": 173,
           "time_status": "UPCOMING"
         },
         {
@@ -490,7 +441,7 @@
           "forecast": "1.30M",
           "previous": "1.28M",
           "actual": null,
-          "minutes_until": 212,
+          "minutes_until": 173,
           "time_status": "UPCOMING"
         },
         {
@@ -501,7 +452,7 @@
           "forecast": "-0.6%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 302,
+          "minutes_until": 263,
           "time_status": "UPCOMING"
         },
         {
@@ -512,7 +463,7 @@
           "forecast": "",
           "previous": "1.2%",
           "actual": null,
-          "minutes_until": 352,
+          "minutes_until": 313,
           "time_status": "UPCOMING"
         },
         {
@@ -523,7 +474,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 692,
+          "minutes_until": 653,
           "time_status": "UPCOMING"
         },
         {
@@ -534,28 +485,23 @@
           "forecast": "",
           "previous": "3.5%",
           "actual": null,
-          "minutes_until": 1022,
+          "minutes_until": 983,
           "time_status": "UPCOMING"
         }
       ],
-      "imminent_events": [
-        {
-          "title": "Foreign Direct Investment ytd/y",
-          "currency": "CNY",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:10:00-04:00",
-          "forecast": "",
-          "previous": "-5.3%",
-          "actual": null,
-          "minutes_until": 12,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "event_risk": "IMMINENT_EVENT",
+      "imminent_events": [],
+      "event_risk": "EVENT_WITHIN_24H",
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -572,7 +518,7 @@
       },
       "asian_risk_directional_note": "Asian equity risk may affect AUD/NZD, but FX must confirm",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -580,45 +526,23 @@
     },
     {
       "pair": "EURUSD",
-      "technical_direction": "NO_RANKED_CANDIDATE",
-      "technical_stage": "UNRANKED",
-      "unified_signal_direction": "UNAVAILABLE",
+      "technical_direction": "SELL",
+      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
-      "h1_ema20_50": "ABOVE_BOTH",
+      "h1_ema20_50": "MIXED",
       "h4_ema20_50": "ABOVE_BOTH",
       "timeframes_present": true,
       "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
-        {
-          "title": "German ZEW Economic Sentiment",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:00:00-04:00",
-          "forecast": "30.2",
-          "previous": "34.7",
-          "actual": null,
-          "minutes_until": 2,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "ZEW Economic Sentiment",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:00:00-04:00",
-          "forecast": "23.6",
-          "previous": "25.8",
-          "actual": null,
-          "minutes_until": 2,
-          "time_status": "IMMINENT"
-        },
         {
           "title": "ADP Weekly Employment Change",
           "currency": "USD",
@@ -627,7 +551,7 @@
           "forecast": "",
           "previous": "24.8K",
           "actual": null,
-          "minutes_until": 197,
+          "minutes_until": 158,
           "time_status": "UPCOMING"
         },
         {
@@ -638,7 +562,7 @@
           "forecast": "1.39M",
           "previous": "1.39M",
           "actual": null,
-          "minutes_until": 212,
+          "minutes_until": 173,
           "time_status": "UPCOMING"
         },
         {
@@ -649,7 +573,7 @@
           "forecast": "1.30M",
           "previous": "1.28M",
           "actual": null,
-          "minutes_until": 212,
+          "minutes_until": 173,
           "time_status": "UPCOMING"
         },
         {
@@ -660,7 +584,7 @@
           "forecast": "-0.6%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 302,
+          "minutes_until": 263,
           "time_status": "UPCOMING"
         },
         {
@@ -671,7 +595,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 692,
+          "minutes_until": 653,
           "time_status": "UPCOMING"
         },
         {
@@ -682,7 +606,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1337,
+          "minutes_until": 1298,
           "time_status": "UPCOMING"
         },
         {
@@ -693,7 +617,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1502,
+          "minutes_until": 1463,
           "time_status": "UPCOMING"
         },
         {
@@ -704,33 +628,11 @@
           "forecast": "-0.3M",
           "previous": "-8.6M",
           "actual": null,
-          "minutes_until": 1772,
+          "minutes_until": 1733,
           "time_status": "UPCOMING"
         }
       ],
       "next_24h_events": [
-        {
-          "title": "German ZEW Economic Sentiment",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:00:00-04:00",
-          "forecast": "30.2",
-          "previous": "34.7",
-          "actual": null,
-          "minutes_until": 2,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "ZEW Economic Sentiment",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:00:00-04:00",
-          "forecast": "23.6",
-          "previous": "25.8",
-          "actual": null,
-          "minutes_until": 2,
-          "time_status": "IMMINENT"
-        },
         {
           "title": "ADP Weekly Employment Change",
           "currency": "USD",
@@ -739,7 +641,7 @@
           "forecast": "",
           "previous": "24.8K",
           "actual": null,
-          "minutes_until": 197,
+          "minutes_until": 158,
           "time_status": "UPCOMING"
         },
         {
@@ -750,7 +652,7 @@
           "forecast": "1.39M",
           "previous": "1.39M",
           "actual": null,
-          "minutes_until": 212,
+          "minutes_until": 173,
           "time_status": "UPCOMING"
         },
         {
@@ -761,7 +663,7 @@
           "forecast": "1.30M",
           "previous": "1.28M",
           "actual": null,
-          "minutes_until": 212,
+          "minutes_until": 173,
           "time_status": "UPCOMING"
         },
         {
@@ -772,7 +674,7 @@
           "forecast": "-0.6%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 302,
+          "minutes_until": 263,
           "time_status": "UPCOMING"
         },
         {
@@ -783,7 +685,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 692,
+          "minutes_until": 653,
           "time_status": "UPCOMING"
         },
         {
@@ -794,39 +696,23 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1337,
+          "minutes_until": 1298,
           "time_status": "UPCOMING"
         }
       ],
-      "imminent_events": [
-        {
-          "title": "German ZEW Economic Sentiment",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:00:00-04:00",
-          "forecast": "30.2",
-          "previous": "34.7",
-          "actual": null,
-          "minutes_until": 2,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "ZEW Economic Sentiment",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:00:00-04:00",
-          "forecast": "23.6",
-          "previous": "25.8",
-          "actual": null,
-          "minutes_until": 2,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "event_risk": "IMMINENT_EVENT",
+      "imminent_events": [],
+      "event_risk": "EVENT_WITHIN_24H",
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -834,7 +720,7 @@
       },
       "asian_risk_directional_note": "Not a direct directional driver",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -844,14 +730,14 @@
       "pair": "GBPUSD",
       "technical_direction": "SELL",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "UNAVAILABLE",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "ABOVE_BOTH",
@@ -867,7 +753,7 @@
           "forecast": "",
           "previous": "5.38|3.3",
           "actual": null,
-          "minutes_until": 35,
+          "minutes_until": -4,
           "time_status": "IMMINENT"
         },
         {
@@ -878,7 +764,7 @@
           "forecast": "",
           "previous": "24.8K",
           "actual": null,
-          "minutes_until": 197,
+          "minutes_until": 158,
           "time_status": "UPCOMING"
         },
         {
@@ -889,7 +775,7 @@
           "forecast": "1.39M",
           "previous": "1.39M",
           "actual": null,
-          "minutes_until": 212,
+          "minutes_until": 173,
           "time_status": "UPCOMING"
         },
         {
@@ -900,7 +786,7 @@
           "forecast": "1.30M",
           "previous": "1.28M",
           "actual": null,
-          "minutes_until": 212,
+          "minutes_until": 173,
           "time_status": "UPCOMING"
         },
         {
@@ -911,7 +797,7 @@
           "forecast": "-0.6%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 302,
+          "minutes_until": 263,
           "time_status": "UPCOMING"
         },
         {
@@ -922,7 +808,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 482,
+          "minutes_until": 443,
           "time_status": "UPCOMING"
         },
         {
@@ -933,7 +819,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 692,
+          "minutes_until": 653,
           "time_status": "UPCOMING"
         },
         {
@@ -944,7 +830,7 @@
           "forecast": "3.4%",
           "previous": "3.1%",
           "actual": null,
-          "minutes_until": 1262,
+          "minutes_until": 1223,
           "time_status": "UPCOMING"
         },
         {
@@ -955,7 +841,7 @@
           "forecast": "2.8%",
           "previous": "2.6%",
           "actual": null,
-          "minutes_until": 1262,
+          "minutes_until": 1223,
           "time_status": "UPCOMING"
         },
         {
@@ -966,7 +852,7 @@
           "forecast": "1.4%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 1262,
+          "minutes_until": 1223,
           "time_status": "UPCOMING"
         },
         {
@@ -977,7 +863,7 @@
           "forecast": "0.7%",
           "previous": "0.7%",
           "actual": null,
-          "minutes_until": 1262,
+          "minutes_until": 1223,
           "time_status": "UPCOMING"
         },
         {
@@ -988,7 +874,7 @@
           "forecast": "23.8B",
           "previous": "18.3B",
           "actual": null,
-          "minutes_until": 1262,
+          "minutes_until": 1223,
           "time_status": "UPCOMING"
         },
         {
@@ -999,7 +885,7 @@
           "forecast": "3.9%",
           "previous": "3.4%",
           "actual": null,
-          "minutes_until": 1262,
+          "minutes_until": 1223,
           "time_status": "UPCOMING"
         },
         {
@@ -1010,7 +896,7 @@
           "forecast": "1.2%",
           "previous": "1.4%",
           "actual": null,
-          "minutes_until": 1412,
+          "minutes_until": 1373,
           "time_status": "UPCOMING"
         },
         {
@@ -1021,7 +907,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1682,
+          "minutes_until": 1643,
           "time_status": "UPCOMING"
         },
         {
@@ -1032,22 +918,11 @@
           "forecast": "-0.3M",
           "previous": "-8.6M",
           "actual": null,
-          "minutes_until": 1772,
+          "minutes_until": 1733,
           "time_status": "UPCOMING"
         }
       ],
       "next_24h_events": [
-        {
-          "title": "10-y Bond Auction",
-          "currency": "GBP",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:33:00-04:00",
-          "forecast": "",
-          "previous": "5.38|3.3",
-          "actual": null,
-          "minutes_until": 35,
-          "time_status": "IMMINENT"
-        },
         {
           "title": "ADP Weekly Employment Change",
           "currency": "USD",
@@ -1056,7 +931,7 @@
           "forecast": "",
           "previous": "24.8K",
           "actual": null,
-          "minutes_until": 197,
+          "minutes_until": 158,
           "time_status": "UPCOMING"
         },
         {
@@ -1067,7 +942,7 @@
           "forecast": "1.39M",
           "previous": "1.39M",
           "actual": null,
-          "minutes_until": 212,
+          "minutes_until": 173,
           "time_status": "UPCOMING"
         },
         {
@@ -1078,7 +953,7 @@
           "forecast": "1.30M",
           "previous": "1.28M",
           "actual": null,
-          "minutes_until": 212,
+          "minutes_until": 173,
           "time_status": "UPCOMING"
         },
         {
@@ -1089,7 +964,7 @@
           "forecast": "-0.6%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 302,
+          "minutes_until": 263,
           "time_status": "UPCOMING"
         },
         {
@@ -1100,7 +975,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 482,
+          "minutes_until": 443,
           "time_status": "UPCOMING"
         },
         {
@@ -1111,7 +986,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 692,
+          "minutes_until": 653,
           "time_status": "UPCOMING"
         },
         {
@@ -1122,7 +997,7 @@
           "forecast": "3.4%",
           "previous": "3.1%",
           "actual": null,
-          "minutes_until": 1262,
+          "minutes_until": 1223,
           "time_status": "UPCOMING"
         },
         {
@@ -1133,7 +1008,7 @@
           "forecast": "2.8%",
           "previous": "2.6%",
           "actual": null,
-          "minutes_until": 1262,
+          "minutes_until": 1223,
           "time_status": "UPCOMING"
         },
         {
@@ -1144,7 +1019,7 @@
           "forecast": "1.4%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 1262,
+          "minutes_until": 1223,
           "time_status": "UPCOMING"
         },
         {
@@ -1155,7 +1030,7 @@
           "forecast": "0.7%",
           "previous": "0.7%",
           "actual": null,
-          "minutes_until": 1262,
+          "minutes_until": 1223,
           "time_status": "UPCOMING"
         },
         {
@@ -1166,7 +1041,7 @@
           "forecast": "23.8B",
           "previous": "18.3B",
           "actual": null,
-          "minutes_until": 1262,
+          "minutes_until": 1223,
           "time_status": "UPCOMING"
         },
         {
@@ -1177,7 +1052,7 @@
           "forecast": "3.9%",
           "previous": "3.4%",
           "actual": null,
-          "minutes_until": 1262,
+          "minutes_until": 1223,
           "time_status": "UPCOMING"
         },
         {
@@ -1188,7 +1063,7 @@
           "forecast": "1.2%",
           "previous": "1.4%",
           "actual": null,
-          "minutes_until": 1412,
+          "minutes_until": 1373,
           "time_status": "UPCOMING"
         }
       ],
@@ -1201,7 +1076,7 @@
           "forecast": "",
           "previous": "5.38|3.3",
           "actual": null,
-          "minutes_until": 35,
+          "minutes_until": -4,
           "time_status": "IMMINENT"
         }
       ],
@@ -1209,7 +1084,14 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -1217,7 +1099,7 @@
       },
       "asian_risk_directional_note": "Not a direct directional driver",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -1225,16 +1107,16 @@
     },
     {
       "pair": "USDJPY",
-      "technical_direction": "NO_RANKED_CANDIDATE",
-      "technical_stage": "UNRANKED",
-      "unified_signal_direction": "UNAVAILABLE",
+      "technical_direction": "SELL",
+      "technical_stage": "EARLY_M15_M30_MOMENTUM",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
@@ -1250,7 +1132,7 @@
           "forecast": "",
           "previous": "24.8K",
           "actual": null,
-          "minutes_until": 197,
+          "minutes_until": 158,
           "time_status": "UPCOMING"
         },
         {
@@ -1261,7 +1143,7 @@
           "forecast": "1.39M",
           "previous": "1.39M",
           "actual": null,
-          "minutes_until": 212,
+          "minutes_until": 173,
           "time_status": "UPCOMING"
         },
         {
@@ -1272,7 +1154,7 @@
           "forecast": "1.30M",
           "previous": "1.28M",
           "actual": null,
-          "minutes_until": 212,
+          "minutes_until": 173,
           "time_status": "UPCOMING"
         },
         {
@@ -1283,7 +1165,7 @@
           "forecast": "-0.6%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 302,
+          "minutes_until": 263,
           "time_status": "UPCOMING"
         },
         {
@@ -1294,7 +1176,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 692,
+          "minutes_until": 653,
           "time_status": "UPCOMING"
         },
         {
@@ -1305,7 +1187,7 @@
           "forecast": "-0.26T",
           "previous": "-0.84T",
           "actual": null,
-          "minutes_until": 892,
+          "minutes_until": 853,
           "time_status": "UPCOMING"
         },
         {
@@ -1316,7 +1198,7 @@
           "forecast": "-0.3M",
           "previous": "-8.6M",
           "actual": null,
-          "minutes_until": 1772,
+          "minutes_until": 1733,
           "time_status": "UPCOMING"
         }
       ],
@@ -1329,7 +1211,7 @@
           "forecast": "",
           "previous": "24.8K",
           "actual": null,
-          "minutes_until": 197,
+          "minutes_until": 158,
           "time_status": "UPCOMING"
         },
         {
@@ -1340,7 +1222,7 @@
           "forecast": "1.39M",
           "previous": "1.39M",
           "actual": null,
-          "minutes_until": 212,
+          "minutes_until": 173,
           "time_status": "UPCOMING"
         },
         {
@@ -1351,7 +1233,7 @@
           "forecast": "1.30M",
           "previous": "1.28M",
           "actual": null,
-          "minutes_until": 212,
+          "minutes_until": 173,
           "time_status": "UPCOMING"
         },
         {
@@ -1362,7 +1244,7 @@
           "forecast": "-0.6%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 302,
+          "minutes_until": 263,
           "time_status": "UPCOMING"
         },
         {
@@ -1373,7 +1255,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 692,
+          "minutes_until": 653,
           "time_status": "UPCOMING"
         },
         {
@@ -1384,7 +1266,7 @@
           "forecast": "-0.26T",
           "previous": "-0.84T",
           "actual": null,
-          "minutes_until": 892,
+          "minutes_until": 853,
           "time_status": "UPCOMING"
         }
       ],
@@ -1393,7 +1275,14 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -1410,7 +1299,7 @@
       },
       "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -1418,35 +1307,24 @@
     },
     {
       "pair": "AUDJPY",
-      "technical_direction": "NO_RANKED_CANDIDATE",
-      "technical_stage": "UNRANKED",
-      "unified_signal_direction": "UNAVAILABLE",
+      "technical_direction": "SELL",
+      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
-      "h1_ema20_50": "ABOVE_BOTH",
+      "h1_ema20_50": "MIXED",
       "h4_ema20_50": "ABOVE_BOTH",
       "timeframes_present": true,
       "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
         {
-          "title": "Foreign Direct Investment ytd/y",
-          "currency": "CNY",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:10:00-04:00",
-          "forecast": "",
-          "previous": "-5.3%",
-          "actual": null,
-          "minutes_until": 12,
-          "time_status": "IMMINENT"
-        },
-        {
           "title": "RBA Deputy Gov Hauser Speaks",
           "currency": "AUD",
           "impact": "Low",
@@ -1454,7 +1332,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 812,
+          "minutes_until": 773,
           "time_status": "UPCOMING"
         },
         {
@@ -1465,23 +1343,12 @@
           "forecast": "-0.26T",
           "previous": "-0.84T",
           "actual": null,
-          "minutes_until": 892,
+          "minutes_until": 853,
           "time_status": "UPCOMING"
         }
       ],
       "next_24h_events": [
         {
-          "title": "Foreign Direct Investment ytd/y",
-          "currency": "CNY",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:10:00-04:00",
-          "forecast": "",
-          "previous": "-5.3%",
-          "actual": null,
-          "minutes_until": 12,
-          "time_status": "IMMINENT"
-        },
-        {
           "title": "RBA Deputy Gov Hauser Speaks",
           "currency": "AUD",
           "impact": "Low",
@@ -1489,7 +1356,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 812,
+          "minutes_until": 773,
           "time_status": "UPCOMING"
         },
         {
@@ -1500,28 +1367,23 @@
           "forecast": "-0.26T",
           "previous": "-0.84T",
           "actual": null,
-          "minutes_until": 892,
+          "minutes_until": 853,
           "time_status": "UPCOMING"
         }
       ],
-      "imminent_events": [
-        {
-          "title": "Foreign Direct Investment ytd/y",
-          "currency": "CNY",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:10:00-04:00",
-          "forecast": "",
-          "previous": "-5.3%",
-          "actual": null,
-          "minutes_until": 12,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "event_risk": "IMMINENT_EVENT",
+      "imminent_events": [],
+      "event_risk": "EVENT_WITHIN_24H",
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -1538,7 +1400,7 @@
       },
       "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -1546,34 +1408,23 @@
     },
     {
       "pair": "NZDJPY",
-      "technical_direction": "BUY",
+      "technical_direction": "SELL",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "UNAVAILABLE",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "ABOVE_BOTH",
       "h4_ema20_50": "ABOVE_BOTH",
       "timeframes_present": true,
-      "higher_timeframe_conflict": false,
+      "higher_timeframe_conflict": true,
       "upcoming_48h_events": [
-        {
-          "title": "Foreign Direct Investment ytd/y",
-          "currency": "CNY",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:10:00-04:00",
-          "forecast": "",
-          "previous": "-5.3%",
-          "actual": null,
-          "minutes_until": 12,
-          "time_status": "IMMINENT"
-        },
         {
           "title": "GDT Price Index",
           "currency": "NZD",
@@ -1582,7 +1433,7 @@
           "forecast": "",
           "previous": "1.2%",
           "actual": null,
-          "minutes_until": 352,
+          "minutes_until": 313,
           "time_status": "UPCOMING"
         },
         {
@@ -1593,7 +1444,7 @@
           "forecast": "-0.26T",
           "previous": "-0.84T",
           "actual": null,
-          "minutes_until": 892,
+          "minutes_until": 853,
           "time_status": "UPCOMING"
         },
         {
@@ -1604,7 +1455,7 @@
           "forecast": "",
           "previous": "3.5%",
           "actual": null,
-          "minutes_until": 1022,
+          "minutes_until": 983,
           "time_status": "UPCOMING"
         },
         {
@@ -1615,22 +1466,11 @@
           "forecast": "0.8%",
           "previous": "1.5%",
           "actual": null,
-          "minutes_until": 2207,
+          "minutes_until": 2168,
           "time_status": "UPCOMING"
         }
       ],
       "next_24h_events": [
-        {
-          "title": "Foreign Direct Investment ytd/y",
-          "currency": "CNY",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:10:00-04:00",
-          "forecast": "",
-          "previous": "-5.3%",
-          "actual": null,
-          "minutes_until": 12,
-          "time_status": "IMMINENT"
-        },
         {
           "title": "GDT Price Index",
           "currency": "NZD",
@@ -1639,7 +1479,7 @@
           "forecast": "",
           "previous": "1.2%",
           "actual": null,
-          "minutes_until": 352,
+          "minutes_until": 313,
           "time_status": "UPCOMING"
         },
         {
@@ -1650,7 +1490,7 @@
           "forecast": "-0.26T",
           "previous": "-0.84T",
           "actual": null,
-          "minutes_until": 892,
+          "minutes_until": 853,
           "time_status": "UPCOMING"
         },
         {
@@ -1661,28 +1501,23 @@
           "forecast": "",
           "previous": "3.5%",
           "actual": null,
-          "minutes_until": 1022,
+          "minutes_until": 983,
           "time_status": "UPCOMING"
         }
       ],
-      "imminent_events": [
-        {
-          "title": "Foreign Direct Investment ytd/y",
-          "currency": "CNY",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:10:00-04:00",
-          "forecast": "",
-          "previous": "-5.3%",
-          "actual": null,
-          "minutes_until": 12,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "event_risk": "IMMINENT_EVENT",
+      "imminent_events": [],
+      "event_risk": "EVENT_WITHIN_24H",
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -1699,7 +1534,7 @@
       },
       "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -1707,45 +1542,23 @@
     },
     {
       "pair": "EURJPY",
-      "technical_direction": "NO_RANKED_CANDIDATE",
-      "technical_stage": "UNRANKED",
-      "unified_signal_direction": "UNAVAILABLE",
+      "technical_direction": "SELL",
+      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
-      "h4_ema20_50": "ABOVE_BOTH",
+      "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
       "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
-        {
-          "title": "German ZEW Economic Sentiment",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:00:00-04:00",
-          "forecast": "30.2",
-          "previous": "34.7",
-          "actual": null,
-          "minutes_until": 2,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "ZEW Economic Sentiment",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:00:00-04:00",
-          "forecast": "23.6",
-          "previous": "25.8",
-          "actual": null,
-          "minutes_until": 2,
-          "time_status": "IMMINENT"
-        },
         {
           "title": "Trade Balance",
           "currency": "JPY",
@@ -1754,7 +1567,7 @@
           "forecast": "-0.26T",
           "previous": "-0.84T",
           "actual": null,
-          "minutes_until": 892,
+          "minutes_until": 853,
           "time_status": "UPCOMING"
         },
         {
@@ -1765,7 +1578,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1337,
+          "minutes_until": 1298,
           "time_status": "UPCOMING"
         },
         {
@@ -1776,33 +1589,11 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1502,
+          "minutes_until": 1463,
           "time_status": "UPCOMING"
         }
       ],
       "next_24h_events": [
-        {
-          "title": "German ZEW Economic Sentiment",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:00:00-04:00",
-          "forecast": "30.2",
-          "previous": "34.7",
-          "actual": null,
-          "minutes_until": 2,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "ZEW Economic Sentiment",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:00:00-04:00",
-          "forecast": "23.6",
-          "previous": "25.8",
-          "actual": null,
-          "minutes_until": 2,
-          "time_status": "IMMINENT"
-        },
         {
           "title": "Trade Balance",
           "currency": "JPY",
@@ -1811,7 +1602,7 @@
           "forecast": "-0.26T",
           "previous": "-0.84T",
           "actual": null,
-          "minutes_until": 892,
+          "minutes_until": 853,
           "time_status": "UPCOMING"
         },
         {
@@ -1822,39 +1613,23 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1337,
+          "minutes_until": 1298,
           "time_status": "UPCOMING"
         }
       ],
-      "imminent_events": [
-        {
-          "title": "German ZEW Economic Sentiment",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:00:00-04:00",
-          "forecast": "30.2",
-          "previous": "34.7",
-          "actual": null,
-          "minutes_until": 2,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "ZEW Economic Sentiment",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:00:00-04:00",
-          "forecast": "23.6",
-          "previous": "25.8",
-          "actual": null,
-          "minutes_until": 2,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "event_risk": "IMMINENT_EVENT",
+      "imminent_events": [],
+      "event_risk": "EVENT_WITHIN_24H",
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -1871,7 +1646,7 @@
       },
       "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -1881,14 +1656,14 @@
       "pair": "EURCAD",
       "technical_direction": "SELL",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "UNAVAILABLE",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
@@ -1897,28 +1672,6 @@
       "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
         {
-          "title": "German ZEW Economic Sentiment",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:00:00-04:00",
-          "forecast": "30.2",
-          "previous": "34.7",
-          "actual": null,
-          "minutes_until": 2,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "ZEW Economic Sentiment",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:00:00-04:00",
-          "forecast": "23.6",
-          "previous": "25.8",
-          "actual": null,
-          "minutes_until": 2,
-          "time_status": "IMMINENT"
-        },
-        {
           "title": "German Buba President Nagel Speaks",
           "currency": "EUR",
           "impact": "Low",
@@ -1926,7 +1679,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1337,
+          "minutes_until": 1298,
           "time_status": "UPCOMING"
         },
         {
@@ -1937,33 +1690,11 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1502,
+          "minutes_until": 1463,
           "time_status": "UPCOMING"
         }
       ],
       "next_24h_events": [
-        {
-          "title": "German ZEW Economic Sentiment",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:00:00-04:00",
-          "forecast": "30.2",
-          "previous": "34.7",
-          "actual": null,
-          "minutes_until": 2,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "ZEW Economic Sentiment",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:00:00-04:00",
-          "forecast": "23.6",
-          "previous": "25.8",
-          "actual": null,
-          "minutes_until": 2,
-          "time_status": "IMMINENT"
-        },
         {
           "title": "German Buba President Nagel Speaks",
           "currency": "EUR",
@@ -1972,39 +1703,23 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1337,
+          "minutes_until": 1298,
           "time_status": "UPCOMING"
         }
       ],
-      "imminent_events": [
-        {
-          "title": "German ZEW Economic Sentiment",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:00:00-04:00",
-          "forecast": "30.2",
-          "previous": "34.7",
-          "actual": null,
-          "minutes_until": 2,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "ZEW Economic Sentiment",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:00:00-04:00",
-          "forecast": "23.6",
-          "previous": "25.8",
-          "actual": null,
-          "minutes_until": 2,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "event_risk": "IMMINENT_EVENT",
+      "imminent_events": [],
+      "event_risk": "EVENT_WITHIN_24H",
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -2012,7 +1727,7 @@
       },
       "asian_risk_directional_note": "Not a direct directional driver",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -2020,16 +1735,16 @@
     },
     {
       "pair": "USDCAD",
-      "technical_direction": "NO_RANKED_CANDIDATE",
-      "technical_stage": "UNRANKED",
-      "unified_signal_direction": "UNAVAILABLE",
+      "technical_direction": "SELL",
+      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
@@ -2045,7 +1760,7 @@
           "forecast": "",
           "previous": "24.8K",
           "actual": null,
-          "minutes_until": 197,
+          "minutes_until": 158,
           "time_status": "UPCOMING"
         },
         {
@@ -2056,7 +1771,7 @@
           "forecast": "1.39M",
           "previous": "1.39M",
           "actual": null,
-          "minutes_until": 212,
+          "minutes_until": 173,
           "time_status": "UPCOMING"
         },
         {
@@ -2067,7 +1782,7 @@
           "forecast": "1.30M",
           "previous": "1.28M",
           "actual": null,
-          "minutes_until": 212,
+          "minutes_until": 173,
           "time_status": "UPCOMING"
         },
         {
@@ -2078,7 +1793,7 @@
           "forecast": "-0.6%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 302,
+          "minutes_until": 263,
           "time_status": "UPCOMING"
         },
         {
@@ -2089,7 +1804,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 692,
+          "minutes_until": 653,
           "time_status": "UPCOMING"
         },
         {
@@ -2100,7 +1815,7 @@
           "forecast": "-0.3M",
           "previous": "-8.6M",
           "actual": null,
-          "minutes_until": 1772,
+          "minutes_until": 1733,
           "time_status": "UPCOMING"
         }
       ],
@@ -2113,7 +1828,7 @@
           "forecast": "",
           "previous": "24.8K",
           "actual": null,
-          "minutes_until": 197,
+          "minutes_until": 158,
           "time_status": "UPCOMING"
         },
         {
@@ -2124,7 +1839,7 @@
           "forecast": "1.39M",
           "previous": "1.39M",
           "actual": null,
-          "minutes_until": 212,
+          "minutes_until": 173,
           "time_status": "UPCOMING"
         },
         {
@@ -2135,7 +1850,7 @@
           "forecast": "1.30M",
           "previous": "1.28M",
           "actual": null,
-          "minutes_until": 212,
+          "minutes_until": 173,
           "time_status": "UPCOMING"
         },
         {
@@ -2146,7 +1861,7 @@
           "forecast": "-0.6%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 302,
+          "minutes_until": 263,
           "time_status": "UPCOMING"
         },
         {
@@ -2157,7 +1872,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 692,
+          "minutes_until": 653,
           "time_status": "UPCOMING"
         }
       ],
@@ -2166,7 +1881,14 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -2174,7 +1896,7 @@
       },
       "asian_risk_directional_note": "Not a direct directional driver",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -2182,45 +1904,23 @@
     },
     {
       "pair": "EURGBP",
-      "technical_direction": "BUY",
+      "technical_direction": "SELL",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "UNAVAILABLE",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
       "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
-      "higher_timeframe_conflict": true,
+      "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
-        {
-          "title": "German ZEW Economic Sentiment",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:00:00-04:00",
-          "forecast": "30.2",
-          "previous": "34.7",
-          "actual": null,
-          "minutes_until": 2,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "ZEW Economic Sentiment",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:00:00-04:00",
-          "forecast": "23.6",
-          "previous": "25.8",
-          "actual": null,
-          "minutes_until": 2,
-          "time_status": "IMMINENT"
-        },
         {
           "title": "10-y Bond Auction",
           "currency": "GBP",
@@ -2229,7 +1929,7 @@
           "forecast": "",
           "previous": "5.38|3.3",
           "actual": null,
-          "minutes_until": 35,
+          "minutes_until": -4,
           "time_status": "IMMINENT"
         },
         {
@@ -2240,7 +1940,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 482,
+          "minutes_until": 443,
           "time_status": "UPCOMING"
         },
         {
@@ -2251,7 +1951,7 @@
           "forecast": "3.4%",
           "previous": "3.1%",
           "actual": null,
-          "minutes_until": 1262,
+          "minutes_until": 1223,
           "time_status": "UPCOMING"
         },
         {
@@ -2262,7 +1962,7 @@
           "forecast": "2.8%",
           "previous": "2.6%",
           "actual": null,
-          "minutes_until": 1262,
+          "minutes_until": 1223,
           "time_status": "UPCOMING"
         },
         {
@@ -2273,7 +1973,7 @@
           "forecast": "1.4%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 1262,
+          "minutes_until": 1223,
           "time_status": "UPCOMING"
         },
         {
@@ -2284,7 +1984,7 @@
           "forecast": "0.7%",
           "previous": "0.7%",
           "actual": null,
-          "minutes_until": 1262,
+          "minutes_until": 1223,
           "time_status": "UPCOMING"
         },
         {
@@ -2295,7 +1995,7 @@
           "forecast": "23.8B",
           "previous": "18.3B",
           "actual": null,
-          "minutes_until": 1262,
+          "minutes_until": 1223,
           "time_status": "UPCOMING"
         },
         {
@@ -2306,7 +2006,7 @@
           "forecast": "3.9%",
           "previous": "3.4%",
           "actual": null,
-          "minutes_until": 1262,
+          "minutes_until": 1223,
           "time_status": "UPCOMING"
         },
         {
@@ -2317,7 +2017,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1337,
+          "minutes_until": 1298,
           "time_status": "UPCOMING"
         },
         {
@@ -2328,7 +2028,7 @@
           "forecast": "1.2%",
           "previous": "1.4%",
           "actual": null,
-          "minutes_until": 1412,
+          "minutes_until": 1373,
           "time_status": "UPCOMING"
         },
         {
@@ -2339,7 +2039,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1502,
+          "minutes_until": 1463,
           "time_status": "UPCOMING"
         },
         {
@@ -2350,44 +2050,11 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1682,
+          "minutes_until": 1643,
           "time_status": "UPCOMING"
         }
       ],
       "next_24h_events": [
-        {
-          "title": "German ZEW Economic Sentiment",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:00:00-04:00",
-          "forecast": "30.2",
-          "previous": "34.7",
-          "actual": null,
-          "minutes_until": 2,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "ZEW Economic Sentiment",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:00:00-04:00",
-          "forecast": "23.6",
-          "previous": "25.8",
-          "actual": null,
-          "minutes_until": 2,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "10-y Bond Auction",
-          "currency": "GBP",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:33:00-04:00",
-          "forecast": "",
-          "previous": "5.38|3.3",
-          "actual": null,
-          "minutes_until": 35,
-          "time_status": "IMMINENT"
-        },
         {
           "title": "MPC Member Greene Speaks",
           "currency": "GBP",
@@ -2396,7 +2063,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 482,
+          "minutes_until": 443,
           "time_status": "UPCOMING"
         },
         {
@@ -2407,7 +2074,7 @@
           "forecast": "3.4%",
           "previous": "3.1%",
           "actual": null,
-          "minutes_until": 1262,
+          "minutes_until": 1223,
           "time_status": "UPCOMING"
         },
         {
@@ -2418,7 +2085,7 @@
           "forecast": "2.8%",
           "previous": "2.6%",
           "actual": null,
-          "minutes_until": 1262,
+          "minutes_until": 1223,
           "time_status": "UPCOMING"
         },
         {
@@ -2429,7 +2096,7 @@
           "forecast": "1.4%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 1262,
+          "minutes_until": 1223,
           "time_status": "UPCOMING"
         },
         {
@@ -2440,7 +2107,7 @@
           "forecast": "0.7%",
           "previous": "0.7%",
           "actual": null,
-          "minutes_until": 1262,
+          "minutes_until": 1223,
           "time_status": "UPCOMING"
         },
         {
@@ -2451,7 +2118,7 @@
           "forecast": "23.8B",
           "previous": "18.3B",
           "actual": null,
-          "minutes_until": 1262,
+          "minutes_until": 1223,
           "time_status": "UPCOMING"
         },
         {
@@ -2462,7 +2129,7 @@
           "forecast": "3.9%",
           "previous": "3.4%",
           "actual": null,
-          "minutes_until": 1262,
+          "minutes_until": 1223,
           "time_status": "UPCOMING"
         },
         {
@@ -2473,7 +2140,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1337,
+          "minutes_until": 1298,
           "time_status": "UPCOMING"
         },
         {
@@ -2484,33 +2151,11 @@
           "forecast": "1.2%",
           "previous": "1.4%",
           "actual": null,
-          "minutes_until": 1412,
+          "minutes_until": 1373,
           "time_status": "UPCOMING"
         }
       ],
       "imminent_events": [
-        {
-          "title": "German ZEW Economic Sentiment",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:00:00-04:00",
-          "forecast": "30.2",
-          "previous": "34.7",
-          "actual": null,
-          "minutes_until": 2,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "ZEW Economic Sentiment",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T05:00:00-04:00",
-          "forecast": "23.6",
-          "previous": "25.8",
-          "actual": null,
-          "minutes_until": 2,
-          "time_status": "IMMINENT"
-        },
         {
           "title": "10-y Bond Auction",
           "currency": "GBP",
@@ -2519,7 +2164,7 @@
           "forecast": "",
           "previous": "5.38|3.3",
           "actual": null,
-          "minutes_until": 35,
+          "minutes_until": -4,
           "time_status": "IMMINENT"
         }
       ],
@@ -2527,7 +2172,14 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -2535,7 +2187,7 @@
       },
       "asian_risk_directional_note": "Not a direct directional driver",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -2543,7 +2195,7 @@
     }
   ],
   "fully_macro_verified": false,
-  "unified_signal_generated_at_utc": "2026-10-20T07:49:01.425436+00:00",
+  "unified_signal_generated_at_utc": "2026-10-20T09:33:53.010455+00:00",
   "no_mobile_alerts": true,
   "options_layer": "REMOVED_AT_USER_REQUEST",
   "calendar_first_rule": "Every pair MUST display all upcoming events for both currencies in next 24 hours, regardless of impact. IMMINENT within 120 minutes prevents a normal entry signal; include forecasts and previous values. Do not infer releases from missing actuals.",
@@ -2557,7 +2209,6 @@
     "dxy_equities_sentiment",
     "cme_volume_open_interest",
     "retail_positioning",
-    "closed_15m30m_direction",
     "atr_adr_session_levels",
     "independent_live_spreads"
   ],
