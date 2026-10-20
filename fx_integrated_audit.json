@@ -1,26 +1,26 @@
 {
-  "generated_at_utc": "2026-10-20T11:57:37.617523+00:00",
+  "generated_at_utc": "2026-10-20T12:45:15.867608+00:00",
   "purpose": "FULL_SOURCE_AUDIT_NOT_EXECUTABLE_TRADE_ORDERS",
   "sources": {
     "technicals": {
-      "status": "FRESH",
-      "age_minutes": 25.0
+      "status": "STALE",
+      "age_minutes": 40.2
     },
     "dashboard": {
-      "status": "FRESH",
-      "age_minutes": 24.9
+      "status": "STALE",
+      "age_minutes": 40.1
     },
     "calendar": {
       "status": "FRESH",
-      "age_minutes": 24.7
+      "age_minutes": 5.0
     },
     "ff_markets": {
       "status": "FRESH",
-      "age_minutes": 5.2
+      "age_minutes": 4.0
     },
     "volatility": {
-      "status": "FRESH",
-      "age_minutes": 25.0
+      "status": "STALE",
+      "age_minutes": 40.2
     },
     "kospi_te_public_page": {
       "status": "DATED_DAILY_CONTEXT",
@@ -30,31 +30,31 @@
     },
     "macro_snapshot": {
       "status": "STALE",
-      "age_minutes": 5038.8
+      "age_minutes": 5086.5
     },
     "macro_raw": {
       "status": "STALE",
-      "age_minutes": 5038.8
+      "age_minutes": 5086.5
     },
     "macro_news": {
       "status": "STALE",
-      "age_minutes": 5038.8
+      "age_minutes": 5086.5
     },
     "unified_signals": {
       "status": "FRESH",
-      "age_minutes": 24.8
+      "age_minutes": 40.0
     },
     "economic_actuals": {
       "status": "STALE",
-      "age_minutes": 5038.9
+      "age_minutes": 5086.6
     },
     "range_context": {
       "status": "STALE",
-      "age_minutes": 5038.8
+      "age_minutes": 5086.5
     },
     "retail": {
       "status": "STALE",
-      "age_minutes": 5038.8
+      "age_minutes": 5086.5
     }
   },
   "macro_layers": {
@@ -70,7 +70,7 @@
     "cme_volume_open_interest": "PARTIAL_CFTC_WEEKLY_OI_CME_DAILY_DATA_UNVERIFIED",
     "retail_positioning": "UNAVAILABLE_CURRENT",
     "currency_strength_clusters": "DERIVED_FROM_11_FX_PAIRS",
-    "closed_15m30m_direction": "FRESH_TECHNICAL_WATCH_NOT_BROKER_EXECUTION",
+    "closed_15m30m_direction": "STALE_OR_UNAVAILABLE",
     "atr_adr_session_levels": "PARTIAL_LEGACY_ATR_LEVELS",
     "independent_live_spreads": "UNAVAILABLE_BROKER_EXECUTABLE_QUOTE",
     "signal_history": "VERIFIED_RECORDED_SIGNAL_OBSERVATIONS",
@@ -111,39 +111,6 @@
       "higher_timeframe_conflict": true,
       "upcoming_48h_events": [
         {
-          "title": "ADP Weekly Employment Change",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:15:00-04:00",
-          "forecast": "",
-          "previous": "24.8K",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Building Permits",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:30:00-04:00",
-          "forecast": "1.39M",
-          "previous": "1.39M",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Housing Starts",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:30:00-04:00",
-          "forecast": "1.30M",
-          "previous": "1.28M",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
           "title": "Pending Home Sales m/m",
           "currency": "USD",
           "impact": "Low",
@@ -151,8 +118,8 @@
           "forecast": "-0.6%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 122,
-          "time_status": "UPCOMING"
+          "minutes_until": 75,
+          "time_status": "IMMINENT"
         },
         {
           "title": "API Weekly Statistical Bulletin",
@@ -162,7 +129,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 512,
+          "minutes_until": 465,
           "time_status": "UPCOMING"
         },
         {
@@ -173,7 +140,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 632,
+          "minutes_until": 585,
           "time_status": "UPCOMING"
         },
         {
@@ -184,7 +151,7 @@
           "forecast": "",
           "previous": "-5.3%",
           "actual": null,
-          "minutes_until": 1272,
+          "minutes_until": 1225,
           "time_status": "UPCOMING"
         },
         {
@@ -192,47 +159,25 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-21T10:30:00-04:00",
-          "forecast": "-0.3M",
+          "forecast": "-0.1M",
           "previous": "-8.6M",
           "actual": null,
-          "minutes_until": 1592,
+          "minutes_until": 1545,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Unemployment Claims",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-10-22T08:30:00-04:00",
+          "forecast": "200K",
+          "previous": "199K",
+          "actual": null,
+          "minutes_until": 2865,
           "time_status": "UPCOMING"
         }
       ],
       "next_24h_events": [
-        {
-          "title": "ADP Weekly Employment Change",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:15:00-04:00",
-          "forecast": "",
-          "previous": "24.8K",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Building Permits",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:30:00-04:00",
-          "forecast": "1.39M",
-          "previous": "1.39M",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Housing Starts",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:30:00-04:00",
-          "forecast": "1.30M",
-          "previous": "1.28M",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
         {
           "title": "Pending Home Sales m/m",
           "currency": "USD",
@@ -241,8 +186,8 @@
           "forecast": "-0.6%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 122,
-          "time_status": "UPCOMING"
+          "minutes_until": 75,
+          "time_status": "IMMINENT"
         },
         {
           "title": "API Weekly Statistical Bulletin",
@@ -252,7 +197,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 512,
+          "minutes_until": 465,
           "time_status": "UPCOMING"
         },
         {
@@ -263,7 +208,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 632,
+          "minutes_until": 585,
           "time_status": "UPCOMING"
         },
         {
@@ -274,42 +219,20 @@
           "forecast": "",
           "previous": "-5.3%",
           "actual": null,
-          "minutes_until": 1272,
+          "minutes_until": 1225,
           "time_status": "UPCOMING"
         }
       ],
       "imminent_events": [
         {
-          "title": "ADP Weekly Employment Change",
+          "title": "Pending Home Sales m/m",
           "currency": "USD",
           "impact": "Low",
-          "event_at_et": "2026-10-20T08:15:00-04:00",
-          "forecast": "",
-          "previous": "24.8K",
+          "event_at_et": "2026-10-20T10:00:00-04:00",
+          "forecast": "-0.6%",
+          "previous": "0.3%",
           "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Building Permits",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:30:00-04:00",
-          "forecast": "1.39M",
-          "previous": "1.39M",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Housing Starts",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:30:00-04:00",
-          "forecast": "1.30M",
-          "previous": "1.28M",
-          "actual": null,
-          "minutes_until": 32,
+          "minutes_until": 75,
           "time_status": "IMMINENT"
         }
       ],
@@ -367,39 +290,6 @@
       "higher_timeframe_conflict": true,
       "upcoming_48h_events": [
         {
-          "title": "ADP Weekly Employment Change",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:15:00-04:00",
-          "forecast": "",
-          "previous": "24.8K",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Building Permits",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:30:00-04:00",
-          "forecast": "1.39M",
-          "previous": "1.39M",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Housing Starts",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:30:00-04:00",
-          "forecast": "1.30M",
-          "previous": "1.28M",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
           "title": "Pending Home Sales m/m",
           "currency": "USD",
           "impact": "Low",
@@ -407,8 +297,8 @@
           "forecast": "-0.6%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 122,
-          "time_status": "UPCOMING"
+          "minutes_until": 75,
+          "time_status": "IMMINENT"
         },
         {
           "title": "GDT Price Index",
@@ -418,7 +308,7 @@
           "forecast": "",
           "previous": "1.2%",
           "actual": null,
-          "minutes_until": 172,
+          "minutes_until": 125,
           "time_status": "UPCOMING"
         },
         {
@@ -429,7 +319,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 512,
+          "minutes_until": 465,
           "time_status": "UPCOMING"
         },
         {
@@ -440,7 +330,7 @@
           "forecast": "",
           "previous": "3.5%",
           "actual": null,
-          "minutes_until": 842,
+          "minutes_until": 795,
           "time_status": "UPCOMING"
         },
         {
@@ -451,7 +341,7 @@
           "forecast": "",
           "previous": "-5.3%",
           "actual": null,
-          "minutes_until": 1272,
+          "minutes_until": 1225,
           "time_status": "UPCOMING"
         },
         {
@@ -459,10 +349,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-21T10:30:00-04:00",
-          "forecast": "-0.3M",
+          "forecast": "-0.1M",
           "previous": "-8.6M",
           "actual": null,
-          "minutes_until": 1592,
+          "minutes_until": 1545,
           "time_status": "UPCOMING"
         },
         {
@@ -473,44 +363,22 @@
           "forecast": "0.8%",
           "previous": "1.5%",
           "actual": null,
-          "minutes_until": 2027,
+          "minutes_until": 1980,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Unemployment Claims",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-10-22T08:30:00-04:00",
+          "forecast": "200K",
+          "previous": "199K",
+          "actual": null,
+          "minutes_until": 2865,
           "time_status": "UPCOMING"
         }
       ],
       "next_24h_events": [
-        {
-          "title": "ADP Weekly Employment Change",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:15:00-04:00",
-          "forecast": "",
-          "previous": "24.8K",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Building Permits",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:30:00-04:00",
-          "forecast": "1.39M",
-          "previous": "1.39M",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Housing Starts",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:30:00-04:00",
-          "forecast": "1.30M",
-          "previous": "1.28M",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
         {
           "title": "Pending Home Sales m/m",
           "currency": "USD",
@@ -519,8 +387,8 @@
           "forecast": "-0.6%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 122,
-          "time_status": "UPCOMING"
+          "minutes_until": 75,
+          "time_status": "IMMINENT"
         },
         {
           "title": "GDT Price Index",
@@ -530,7 +398,7 @@
           "forecast": "",
           "previous": "1.2%",
           "actual": null,
-          "minutes_until": 172,
+          "minutes_until": 125,
           "time_status": "UPCOMING"
         },
         {
@@ -541,7 +409,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 512,
+          "minutes_until": 465,
           "time_status": "UPCOMING"
         },
         {
@@ -552,7 +420,7 @@
           "forecast": "",
           "previous": "3.5%",
           "actual": null,
-          "minutes_until": 842,
+          "minutes_until": 795,
           "time_status": "UPCOMING"
         },
         {
@@ -563,42 +431,20 @@
           "forecast": "",
           "previous": "-5.3%",
           "actual": null,
-          "minutes_until": 1272,
+          "minutes_until": 1225,
           "time_status": "UPCOMING"
         }
       ],
       "imminent_events": [
         {
-          "title": "ADP Weekly Employment Change",
+          "title": "Pending Home Sales m/m",
           "currency": "USD",
           "impact": "Low",
-          "event_at_et": "2026-10-20T08:15:00-04:00",
-          "forecast": "",
-          "previous": "24.8K",
+          "event_at_et": "2026-10-20T10:00:00-04:00",
+          "forecast": "-0.6%",
+          "previous": "0.3%",
           "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Building Permits",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:30:00-04:00",
-          "forecast": "1.39M",
-          "previous": "1.39M",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Housing Starts",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:30:00-04:00",
-          "forecast": "1.30M",
-          "previous": "1.28M",
-          "actual": null,
-          "minutes_until": 32,
+          "minutes_until": 75,
           "time_status": "IMMINENT"
         }
       ],
@@ -638,9 +484,9 @@
     },
     {
       "pair": "EURUSD",
-      "technical_direction": "SELL",
-      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "SELL",
+      "technical_direction": "BUY",
+      "technical_stage": "EARLY_M15_M30_MOMENTUM",
+      "unified_signal_direction": "BUY",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
@@ -653,41 +499,8 @@
       "h1_ema20_50": "BELOW_BOTH",
       "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
-      "higher_timeframe_conflict": false,
+      "higher_timeframe_conflict": true,
       "upcoming_48h_events": [
-        {
-          "title": "ADP Weekly Employment Change",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:15:00-04:00",
-          "forecast": "",
-          "previous": "24.8K",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Building Permits",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:30:00-04:00",
-          "forecast": "1.39M",
-          "previous": "1.39M",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Housing Starts",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:30:00-04:00",
-          "forecast": "1.30M",
-          "previous": "1.28M",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
         {
           "title": "Pending Home Sales m/m",
           "currency": "USD",
@@ -696,8 +509,8 @@
           "forecast": "-0.6%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 122,
-          "time_status": "UPCOMING"
+          "minutes_until": 75,
+          "time_status": "IMMINENT"
         },
         {
           "title": "API Weekly Statistical Bulletin",
@@ -707,7 +520,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 512,
+          "minutes_until": 465,
           "time_status": "UPCOMING"
         },
         {
@@ -718,7 +531,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1157,
+          "minutes_until": 1110,
           "time_status": "UPCOMING"
         },
         {
@@ -729,7 +542,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1322,
+          "minutes_until": 1275,
           "time_status": "UPCOMING"
         },
         {
@@ -737,47 +550,25 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-21T10:30:00-04:00",
-          "forecast": "-0.3M",
+          "forecast": "-0.1M",
           "previous": "-8.6M",
           "actual": null,
-          "minutes_until": 1592,
+          "minutes_until": 1545,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Unemployment Claims",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-10-22T08:30:00-04:00",
+          "forecast": "200K",
+          "previous": "199K",
+          "actual": null,
+          "minutes_until": 2865,
           "time_status": "UPCOMING"
         }
       ],
       "next_24h_events": [
-        {
-          "title": "ADP Weekly Employment Change",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:15:00-04:00",
-          "forecast": "",
-          "previous": "24.8K",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Building Permits",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:30:00-04:00",
-          "forecast": "1.39M",
-          "previous": "1.39M",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Housing Starts",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:30:00-04:00",
-          "forecast": "1.30M",
-          "previous": "1.28M",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
         {
           "title": "Pending Home Sales m/m",
           "currency": "USD",
@@ -786,8 +577,8 @@
           "forecast": "-0.6%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 122,
-          "time_status": "UPCOMING"
+          "minutes_until": 75,
+          "time_status": "IMMINENT"
         },
         {
           "title": "API Weekly Statistical Bulletin",
@@ -797,7 +588,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 512,
+          "minutes_until": 465,
           "time_status": "UPCOMING"
         },
         {
@@ -808,7 +599,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1157,
+          "minutes_until": 1110,
           "time_status": "UPCOMING"
         },
         {
@@ -819,42 +610,20 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1322,
+          "minutes_until": 1275,
           "time_status": "UPCOMING"
         }
       ],
       "imminent_events": [
         {
-          "title": "ADP Weekly Employment Change",
+          "title": "Pending Home Sales m/m",
           "currency": "USD",
           "impact": "Low",
-          "event_at_et": "2026-10-20T08:15:00-04:00",
-          "forecast": "",
-          "previous": "24.8K",
+          "event_at_et": "2026-10-20T10:00:00-04:00",
+          "forecast": "-0.6%",
+          "previous": "0.3%",
           "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Building Permits",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:30:00-04:00",
-          "forecast": "1.39M",
-          "previous": "1.39M",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Housing Starts",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:30:00-04:00",
-          "forecast": "1.30M",
-          "previous": "1.28M",
-          "actual": null,
-          "minutes_until": 32,
+          "minutes_until": 75,
           "time_status": "IMMINENT"
         }
       ],
@@ -885,9 +654,9 @@
     },
     {
       "pair": "GBPUSD",
-      "technical_direction": "SELL",
-      "technical_stage": "WAIT",
-      "unified_signal_direction": "SELL",
+      "technical_direction": "BUY",
+      "technical_stage": "EARLY_M15_M30_MOMENTUM",
+      "unified_signal_direction": "BUY",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
@@ -900,41 +669,8 @@
       "h1_ema20_50": "ABOVE_BOTH",
       "h4_ema20_50": "ABOVE_BOTH",
       "timeframes_present": true,
-      "higher_timeframe_conflict": true,
+      "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
-        {
-          "title": "ADP Weekly Employment Change",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:15:00-04:00",
-          "forecast": "",
-          "previous": "24.8K",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Building Permits",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:30:00-04:00",
-          "forecast": "1.39M",
-          "previous": "1.39M",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Housing Starts",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:30:00-04:00",
-          "forecast": "1.30M",
-          "previous": "1.28M",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
         {
           "title": "Pending Home Sales m/m",
           "currency": "USD",
@@ -943,8 +679,8 @@
           "forecast": "-0.6%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 122,
-          "time_status": "UPCOMING"
+          "minutes_until": 75,
+          "time_status": "IMMINENT"
         },
         {
           "title": "MPC Member Greene Speaks",
@@ -954,7 +690,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 302,
+          "minutes_until": 255,
           "time_status": "UPCOMING"
         },
         {
@@ -965,7 +701,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 512,
+          "minutes_until": 465,
           "time_status": "UPCOMING"
         },
         {
@@ -976,7 +712,7 @@
           "forecast": "3.4%",
           "previous": "3.1%",
           "actual": null,
-          "minutes_until": 1082,
+          "minutes_until": 1035,
           "time_status": "UPCOMING"
         },
         {
@@ -987,7 +723,7 @@
           "forecast": "2.8%",
           "previous": "2.6%",
           "actual": null,
-          "minutes_until": 1082,
+          "minutes_until": 1035,
           "time_status": "UPCOMING"
         },
         {
@@ -995,10 +731,10 @@
           "currency": "GBP",
           "impact": "Low",
           "event_at_et": "2026-10-21T02:00:00-04:00",
-          "forecast": "1.4%",
+          "forecast": "1.3%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 1082,
+          "minutes_until": 1035,
           "time_status": "UPCOMING"
         },
         {
@@ -1009,7 +745,7 @@
           "forecast": "0.7%",
           "previous": "0.7%",
           "actual": null,
-          "minutes_until": 1082,
+          "minutes_until": 1035,
           "time_status": "UPCOMING"
         },
         {
@@ -1020,7 +756,7 @@
           "forecast": "23.8B",
           "previous": "18.3B",
           "actual": null,
-          "minutes_until": 1082,
+          "minutes_until": 1035,
           "time_status": "UPCOMING"
         },
         {
@@ -1031,7 +767,7 @@
           "forecast": "3.9%",
           "previous": "3.4%",
           "actual": null,
-          "minutes_until": 1082,
+          "minutes_until": 1035,
           "time_status": "UPCOMING"
         },
         {
@@ -1042,7 +778,7 @@
           "forecast": "1.2%",
           "previous": "1.4%",
           "actual": null,
-          "minutes_until": 1232,
+          "minutes_until": 1185,
           "time_status": "UPCOMING"
         },
         {
@@ -1053,7 +789,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1502,
+          "minutes_until": 1455,
           "time_status": "UPCOMING"
         },
         {
@@ -1061,10 +797,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-21T10:30:00-04:00",
-          "forecast": "-0.3M",
+          "forecast": "-0.1M",
           "previous": "-8.6M",
           "actual": null,
-          "minutes_until": 1592,
+          "minutes_until": 1545,
           "time_status": "UPCOMING"
         },
         {
@@ -1075,44 +811,22 @@
           "forecast": "-20",
           "previous": "-9",
           "actual": null,
-          "minutes_until": 2762,
+          "minutes_until": 2715,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Unemployment Claims",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-10-22T08:30:00-04:00",
+          "forecast": "200K",
+          "previous": "199K",
+          "actual": null,
+          "minutes_until": 2865,
           "time_status": "UPCOMING"
         }
       ],
       "next_24h_events": [
-        {
-          "title": "ADP Weekly Employment Change",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:15:00-04:00",
-          "forecast": "",
-          "previous": "24.8K",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Building Permits",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:30:00-04:00",
-          "forecast": "1.39M",
-          "previous": "1.39M",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Housing Starts",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:30:00-04:00",
-          "forecast": "1.30M",
-          "previous": "1.28M",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
         {
           "title": "Pending Home Sales m/m",
           "currency": "USD",
@@ -1121,8 +835,8 @@
           "forecast": "-0.6%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 122,
-          "time_status": "UPCOMING"
+          "minutes_until": 75,
+          "time_status": "IMMINENT"
         },
         {
           "title": "MPC Member Greene Speaks",
@@ -1132,7 +846,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 302,
+          "minutes_until": 255,
           "time_status": "UPCOMING"
         },
         {
@@ -1143,7 +857,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 512,
+          "minutes_until": 465,
           "time_status": "UPCOMING"
         },
         {
@@ -1154,7 +868,7 @@
           "forecast": "3.4%",
           "previous": "3.1%",
           "actual": null,
-          "minutes_until": 1082,
+          "minutes_until": 1035,
           "time_status": "UPCOMING"
         },
         {
@@ -1165,7 +879,7 @@
           "forecast": "2.8%",
           "previous": "2.6%",
           "actual": null,
-          "minutes_until": 1082,
+          "minutes_until": 1035,
           "time_status": "UPCOMING"
         },
         {
@@ -1173,10 +887,10 @@
           "currency": "GBP",
           "impact": "Low",
           "event_at_et": "2026-10-21T02:00:00-04:00",
-          "forecast": "1.4%",
+          "forecast": "1.3%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 1082,
+          "minutes_until": 1035,
           "time_status": "UPCOMING"
         },
         {
@@ -1187,7 +901,7 @@
           "forecast": "0.7%",
           "previous": "0.7%",
           "actual": null,
-          "minutes_until": 1082,
+          "minutes_until": 1035,
           "time_status": "UPCOMING"
         },
         {
@@ -1198,7 +912,7 @@
           "forecast": "23.8B",
           "previous": "18.3B",
           "actual": null,
-          "minutes_until": 1082,
+          "minutes_until": 1035,
           "time_status": "UPCOMING"
         },
         {
@@ -1209,7 +923,7 @@
           "forecast": "3.9%",
           "previous": "3.4%",
           "actual": null,
-          "minutes_until": 1082,
+          "minutes_until": 1035,
           "time_status": "UPCOMING"
         },
         {
@@ -1220,42 +934,20 @@
           "forecast": "1.2%",
           "previous": "1.4%",
           "actual": null,
-          "minutes_until": 1232,
+          "minutes_until": 1185,
           "time_status": "UPCOMING"
         }
       ],
       "imminent_events": [
         {
-          "title": "ADP Weekly Employment Change",
+          "title": "Pending Home Sales m/m",
           "currency": "USD",
           "impact": "Low",
-          "event_at_et": "2026-10-20T08:15:00-04:00",
-          "forecast": "",
-          "previous": "24.8K",
+          "event_at_et": "2026-10-20T10:00:00-04:00",
+          "forecast": "-0.6%",
+          "previous": "0.3%",
           "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Building Permits",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:30:00-04:00",
-          "forecast": "1.39M",
-          "previous": "1.39M",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Housing Starts",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:30:00-04:00",
-          "forecast": "1.30M",
-          "previous": "1.28M",
-          "actual": null,
-          "minutes_until": 32,
+          "minutes_until": 75,
           "time_status": "IMMINENT"
         }
       ],
@@ -1278,7 +970,7 @@
       },
       "asian_risk_directional_note": "Not a direct directional driver",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -1286,9 +978,9 @@
     },
     {
       "pair": "USDJPY",
-      "technical_direction": "BUY",
-      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "BUY",
+      "technical_direction": "SELL",
+      "technical_stage": "EARLY_M15_M30_MOMENTUM",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
@@ -1299,43 +991,10 @@
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
-      "h4_ema20_50": "ABOVE_BOTH",
+      "h4_ema20_50": "MIXED",
       "timeframes_present": true,
-      "higher_timeframe_conflict": true,
+      "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
-        {
-          "title": "ADP Weekly Employment Change",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:15:00-04:00",
-          "forecast": "",
-          "previous": "24.8K",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Building Permits",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:30:00-04:00",
-          "forecast": "1.39M",
-          "previous": "1.39M",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Housing Starts",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:30:00-04:00",
-          "forecast": "1.30M",
-          "previous": "1.28M",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
         {
           "title": "Pending Home Sales m/m",
           "currency": "USD",
@@ -1344,8 +1003,8 @@
           "forecast": "-0.6%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 122,
-          "time_status": "UPCOMING"
+          "minutes_until": 75,
+          "time_status": "IMMINENT"
         },
         {
           "title": "API Weekly Statistical Bulletin",
@@ -1355,7 +1014,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 512,
+          "minutes_until": 465,
           "time_status": "UPCOMING"
         },
         {
@@ -1366,7 +1025,7 @@
           "forecast": "-0.26T",
           "previous": "-0.84T",
           "actual": null,
-          "minutes_until": 712,
+          "minutes_until": 665,
           "time_status": "UPCOMING"
         },
         {
@@ -1374,47 +1033,25 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-21T10:30:00-04:00",
-          "forecast": "-0.3M",
+          "forecast": "-0.1M",
           "previous": "-8.6M",
           "actual": null,
-          "minutes_until": 1592,
+          "minutes_until": 1545,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Unemployment Claims",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-10-22T08:30:00-04:00",
+          "forecast": "200K",
+          "previous": "199K",
+          "actual": null,
+          "minutes_until": 2865,
           "time_status": "UPCOMING"
         }
       ],
       "next_24h_events": [
-        {
-          "title": "ADP Weekly Employment Change",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:15:00-04:00",
-          "forecast": "",
-          "previous": "24.8K",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Building Permits",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:30:00-04:00",
-          "forecast": "1.39M",
-          "previous": "1.39M",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Housing Starts",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:30:00-04:00",
-          "forecast": "1.30M",
-          "previous": "1.28M",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
         {
           "title": "Pending Home Sales m/m",
           "currency": "USD",
@@ -1423,8 +1060,8 @@
           "forecast": "-0.6%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 122,
-          "time_status": "UPCOMING"
+          "minutes_until": 75,
+          "time_status": "IMMINENT"
         },
         {
           "title": "API Weekly Statistical Bulletin",
@@ -1434,7 +1071,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 512,
+          "minutes_until": 465,
           "time_status": "UPCOMING"
         },
         {
@@ -1445,42 +1082,20 @@
           "forecast": "-0.26T",
           "previous": "-0.84T",
           "actual": null,
-          "minutes_until": 712,
+          "minutes_until": 665,
           "time_status": "UPCOMING"
         }
       ],
       "imminent_events": [
         {
-          "title": "ADP Weekly Employment Change",
+          "title": "Pending Home Sales m/m",
           "currency": "USD",
           "impact": "Low",
-          "event_at_et": "2026-10-20T08:15:00-04:00",
-          "forecast": "",
-          "previous": "24.8K",
+          "event_at_et": "2026-10-20T10:00:00-04:00",
+          "forecast": "-0.6%",
+          "previous": "0.3%",
           "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Building Permits",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:30:00-04:00",
-          "forecast": "1.39M",
-          "previous": "1.39M",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Housing Starts",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:30:00-04:00",
-          "forecast": "1.30M",
-          "previous": "1.28M",
-          "actual": null,
-          "minutes_until": 32,
+          "minutes_until": 75,
           "time_status": "IMMINENT"
         }
       ],
@@ -1520,9 +1135,9 @@
     },
     {
       "pair": "AUDJPY",
-      "technical_direction": "BUY",
-      "technical_stage": "EARLY_M15_M30_MOMENTUM",
-      "unified_signal_direction": "BUY",
+      "technical_direction": "SELL",
+      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
@@ -1532,7 +1147,7 @@
       "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
-      "h1_ema20_50": "ABOVE_BOTH",
+      "h1_ema20_50": "MIXED",
       "h4_ema20_50": "ABOVE_BOTH",
       "timeframes_present": true,
       "higher_timeframe_conflict": false,
@@ -1545,7 +1160,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 632,
+          "minutes_until": 585,
           "time_status": "UPCOMING"
         },
         {
@@ -1556,7 +1171,7 @@
           "forecast": "-0.26T",
           "previous": "-0.84T",
           "actual": null,
-          "minutes_until": 712,
+          "minutes_until": 665,
           "time_status": "UPCOMING"
         },
         {
@@ -1567,7 +1182,7 @@
           "forecast": "",
           "previous": "-5.3%",
           "actual": null,
-          "minutes_until": 1272,
+          "minutes_until": 1225,
           "time_status": "UPCOMING"
         }
       ],
@@ -1580,7 +1195,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 632,
+          "minutes_until": 585,
           "time_status": "UPCOMING"
         },
         {
@@ -1591,7 +1206,7 @@
           "forecast": "-0.26T",
           "previous": "-0.84T",
           "actual": null,
-          "minutes_until": 712,
+          "minutes_until": 665,
           "time_status": "UPCOMING"
         },
         {
@@ -1602,7 +1217,7 @@
           "forecast": "",
           "previous": "-5.3%",
           "actual": null,
-          "minutes_until": 1272,
+          "minutes_until": 1225,
           "time_status": "UPCOMING"
         }
       ],
@@ -1643,9 +1258,9 @@
     },
     {
       "pair": "NZDJPY",
-      "technical_direction": "BUY",
-      "technical_stage": "WAIT",
-      "unified_signal_direction": "BUY",
+      "technical_direction": "SELL",
+      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
@@ -1658,7 +1273,7 @@
       "h1_ema20_50": "ABOVE_BOTH",
       "h4_ema20_50": "ABOVE_BOTH",
       "timeframes_present": true,
-      "higher_timeframe_conflict": false,
+      "higher_timeframe_conflict": true,
       "upcoming_48h_events": [
         {
           "title": "GDT Price Index",
@@ -1668,7 +1283,7 @@
           "forecast": "",
           "previous": "1.2%",
           "actual": null,
-          "minutes_until": 172,
+          "minutes_until": 125,
           "time_status": "UPCOMING"
         },
         {
@@ -1679,7 +1294,7 @@
           "forecast": "-0.26T",
           "previous": "-0.84T",
           "actual": null,
-          "minutes_until": 712,
+          "minutes_until": 665,
           "time_status": "UPCOMING"
         },
         {
@@ -1690,7 +1305,7 @@
           "forecast": "",
           "previous": "3.5%",
           "actual": null,
-          "minutes_until": 842,
+          "minutes_until": 795,
           "time_status": "UPCOMING"
         },
         {
@@ -1701,7 +1316,7 @@
           "forecast": "",
           "previous": "-5.3%",
           "actual": null,
-          "minutes_until": 1272,
+          "minutes_until": 1225,
           "time_status": "UPCOMING"
         },
         {
@@ -1712,7 +1327,7 @@
           "forecast": "0.8%",
           "previous": "1.5%",
           "actual": null,
-          "minutes_until": 2027,
+          "minutes_until": 1980,
           "time_status": "UPCOMING"
         }
       ],
@@ -1725,7 +1340,7 @@
           "forecast": "",
           "previous": "1.2%",
           "actual": null,
-          "minutes_until": 172,
+          "minutes_until": 125,
           "time_status": "UPCOMING"
         },
         {
@@ -1736,7 +1351,7 @@
           "forecast": "-0.26T",
           "previous": "-0.84T",
           "actual": null,
-          "minutes_until": 712,
+          "minutes_until": 665,
           "time_status": "UPCOMING"
         },
         {
@@ -1747,7 +1362,7 @@
           "forecast": "",
           "previous": "3.5%",
           "actual": null,
-          "minutes_until": 842,
+          "minutes_until": 795,
           "time_status": "UPCOMING"
         },
         {
@@ -1758,7 +1373,7 @@
           "forecast": "",
           "previous": "-5.3%",
           "actual": null,
-          "minutes_until": 1272,
+          "minutes_until": 1225,
           "time_status": "UPCOMING"
         }
       ],
@@ -1791,7 +1406,7 @@
       },
       "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -1800,7 +1415,7 @@
     {
       "pair": "EURJPY",
       "technical_direction": "BUY",
-      "technical_stage": "EARLY_M15_M30_MOMENTUM",
+      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
       "unified_signal_direction": "BUY",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
@@ -1824,7 +1439,7 @@
           "forecast": "-0.26T",
           "previous": "-0.84T",
           "actual": null,
-          "minutes_until": 712,
+          "minutes_until": 665,
           "time_status": "UPCOMING"
         },
         {
@@ -1835,7 +1450,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1157,
+          "minutes_until": 1110,
           "time_status": "UPCOMING"
         },
         {
@@ -1846,7 +1461,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1322,
+          "minutes_until": 1275,
           "time_status": "UPCOMING"
         }
       ],
@@ -1859,7 +1474,7 @@
           "forecast": "-0.26T",
           "previous": "-0.84T",
           "actual": null,
-          "minutes_until": 712,
+          "minutes_until": 665,
           "time_status": "UPCOMING"
         },
         {
@@ -1870,7 +1485,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1157,
+          "minutes_until": 1110,
           "time_status": "UPCOMING"
         },
         {
@@ -1881,7 +1496,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1322,
+          "minutes_until": 1275,
           "time_status": "UPCOMING"
         }
       ],
@@ -1922,9 +1537,9 @@
     },
     {
       "pair": "EURCAD",
-      "technical_direction": "SELL",
-      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "SELL",
+      "technical_direction": "BUY",
+      "technical_stage": "EARLY_M15_M30_MOMENTUM",
+      "unified_signal_direction": "BUY",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
@@ -1937,7 +1552,7 @@
       "h1_ema20_50": "BELOW_BOTH",
       "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
-      "higher_timeframe_conflict": false,
+      "higher_timeframe_conflict": true,
       "upcoming_48h_events": [
         {
           "title": "German Buba President Nagel Speaks",
@@ -1947,7 +1562,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1157,
+          "minutes_until": 1110,
           "time_status": "UPCOMING"
         },
         {
@@ -1958,7 +1573,40 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1322,
+          "minutes_until": 1275,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "IPPI m/m",
+          "currency": "CAD",
+          "impact": "Low",
+          "event_at_et": "2026-10-22T08:30:00-04:00",
+          "forecast": "0.9%",
+          "previous": "1.3%",
+          "actual": null,
+          "minutes_until": 2865,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "NHPI m/m",
+          "currency": "CAD",
+          "impact": "Low",
+          "event_at_et": "2026-10-22T08:30:00-04:00",
+          "forecast": "-0.1%",
+          "previous": "-0.1%",
+          "actual": null,
+          "minutes_until": 2865,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "RMPI m/m",
+          "currency": "CAD",
+          "impact": "Low",
+          "event_at_et": "2026-10-22T08:30:00-04:00",
+          "forecast": "3.1%",
+          "previous": "3.1%",
+          "actual": null,
+          "minutes_until": 2865,
           "time_status": "UPCOMING"
         }
       ],
@@ -1971,7 +1619,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1157,
+          "minutes_until": 1110,
           "time_status": "UPCOMING"
         },
         {
@@ -1982,7 +1630,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1322,
+          "minutes_until": 1275,
           "time_status": "UPCOMING"
         }
       ],
@@ -2014,9 +1662,9 @@
     },
     {
       "pair": "USDCAD",
-      "technical_direction": "SELL",
-      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "SELL",
+      "technical_direction": "BUY",
+      "technical_stage": "EARLY_M15_M30_MOMENTUM",
+      "unified_signal_direction": "BUY",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
@@ -2029,41 +1677,8 @@
       "h1_ema20_50": "BELOW_BOTH",
       "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
-      "higher_timeframe_conflict": false,
+      "higher_timeframe_conflict": true,
       "upcoming_48h_events": [
-        {
-          "title": "ADP Weekly Employment Change",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:15:00-04:00",
-          "forecast": "",
-          "previous": "24.8K",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Building Permits",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:30:00-04:00",
-          "forecast": "1.39M",
-          "previous": "1.39M",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Housing Starts",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:30:00-04:00",
-          "forecast": "1.30M",
-          "previous": "1.28M",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
         {
           "title": "Pending Home Sales m/m",
           "currency": "USD",
@@ -2072,8 +1687,8 @@
           "forecast": "-0.6%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 122,
-          "time_status": "UPCOMING"
+          "minutes_until": 75,
+          "time_status": "IMMINENT"
         },
         {
           "title": "API Weekly Statistical Bulletin",
@@ -2083,7 +1698,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 512,
+          "minutes_until": 465,
           "time_status": "UPCOMING"
         },
         {
@@ -2091,47 +1706,58 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-21T10:30:00-04:00",
-          "forecast": "-0.3M",
+          "forecast": "-0.1M",
           "previous": "-8.6M",
           "actual": null,
-          "minutes_until": 1592,
+          "minutes_until": 1545,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "IPPI m/m",
+          "currency": "CAD",
+          "impact": "Low",
+          "event_at_et": "2026-10-22T08:30:00-04:00",
+          "forecast": "0.9%",
+          "previous": "1.3%",
+          "actual": null,
+          "minutes_until": 2865,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "NHPI m/m",
+          "currency": "CAD",
+          "impact": "Low",
+          "event_at_et": "2026-10-22T08:30:00-04:00",
+          "forecast": "-0.1%",
+          "previous": "-0.1%",
+          "actual": null,
+          "minutes_until": 2865,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "RMPI m/m",
+          "currency": "CAD",
+          "impact": "Low",
+          "event_at_et": "2026-10-22T08:30:00-04:00",
+          "forecast": "3.1%",
+          "previous": "3.1%",
+          "actual": null,
+          "minutes_until": 2865,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Unemployment Claims",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-10-22T08:30:00-04:00",
+          "forecast": "200K",
+          "previous": "199K",
+          "actual": null,
+          "minutes_until": 2865,
           "time_status": "UPCOMING"
         }
       ],
       "next_24h_events": [
-        {
-          "title": "ADP Weekly Employment Change",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:15:00-04:00",
-          "forecast": "",
-          "previous": "24.8K",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Building Permits",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:30:00-04:00",
-          "forecast": "1.39M",
-          "previous": "1.39M",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Housing Starts",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:30:00-04:00",
-          "forecast": "1.30M",
-          "previous": "1.28M",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
         {
           "title": "Pending Home Sales m/m",
           "currency": "USD",
@@ -2140,8 +1766,8 @@
           "forecast": "-0.6%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 122,
-          "time_status": "UPCOMING"
+          "minutes_until": 75,
+          "time_status": "IMMINENT"
         },
         {
           "title": "API Weekly Statistical Bulletin",
@@ -2151,42 +1777,20 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 512,
+          "minutes_until": 465,
           "time_status": "UPCOMING"
         }
       ],
       "imminent_events": [
         {
-          "title": "ADP Weekly Employment Change",
+          "title": "Pending Home Sales m/m",
           "currency": "USD",
           "impact": "Low",
-          "event_at_et": "2026-10-20T08:15:00-04:00",
-          "forecast": "",
-          "previous": "24.8K",
+          "event_at_et": "2026-10-20T10:00:00-04:00",
+          "forecast": "-0.6%",
+          "previous": "0.3%",
           "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Building Permits",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:30:00-04:00",
-          "forecast": "1.39M",
-          "previous": "1.39M",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Housing Starts",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-20T08:30:00-04:00",
-          "forecast": "1.30M",
-          "previous": "1.28M",
-          "actual": null,
-          "minutes_until": 32,
+          "minutes_until": 75,
           "time_status": "IMMINENT"
         }
       ],
@@ -2218,7 +1822,7 @@
     {
       "pair": "EURGBP",
       "technical_direction": "SELL",
-      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
+      "technical_stage": "WAIT",
       "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
@@ -2242,7 +1846,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 302,
+          "minutes_until": 255,
           "time_status": "UPCOMING"
         },
         {
@@ -2253,7 +1857,7 @@
           "forecast": "3.4%",
           "previous": "3.1%",
           "actual": null,
-          "minutes_until": 1082,
+          "minutes_until": 1035,
           "time_status": "UPCOMING"
         },
         {
@@ -2264,7 +1868,7 @@
           "forecast": "2.8%",
           "previous": "2.6%",
           "actual": null,
-          "minutes_until": 1082,
+          "minutes_until": 1035,
           "time_status": "UPCOMING"
         },
         {
@@ -2272,10 +1876,10 @@
           "currency": "GBP",
           "impact": "Low",
           "event_at_et": "2026-10-21T02:00:00-04:00",
-          "forecast": "1.4%",
+          "forecast": "1.3%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 1082,
+          "minutes_until": 1035,
           "time_status": "UPCOMING"
         },
         {
@@ -2286,7 +1890,7 @@
           "forecast": "0.7%",
           "previous": "0.7%",
           "actual": null,
-          "minutes_until": 1082,
+          "minutes_until": 1035,
           "time_status": "UPCOMING"
         },
         {
@@ -2297,7 +1901,7 @@
           "forecast": "23.8B",
           "previous": "18.3B",
           "actual": null,
-          "minutes_until": 1082,
+          "minutes_until": 1035,
           "time_status": "UPCOMING"
         },
         {
@@ -2308,7 +1912,7 @@
           "forecast": "3.9%",
           "previous": "3.4%",
           "actual": null,
-          "minutes_until": 1082,
+          "minutes_until": 1035,
           "time_status": "UPCOMING"
         },
         {
@@ -2319,7 +1923,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1157,
+          "minutes_until": 1110,
           "time_status": "UPCOMING"
         },
         {
@@ -2330,7 +1934,7 @@
           "forecast": "1.2%",
           "previous": "1.4%",
           "actual": null,
-          "minutes_until": 1232,
+          "minutes_until": 1185,
           "time_status": "UPCOMING"
         },
         {
@@ -2341,7 +1945,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1322,
+          "minutes_until": 1275,
           "time_status": "UPCOMING"
         },
         {
@@ -2352,7 +1956,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1502,
+          "minutes_until": 1455,
           "time_status": "UPCOMING"
         },
         {
@@ -2363,7 +1967,7 @@
           "forecast": "-20",
           "previous": "-9",
           "actual": null,
-          "minutes_until": 2762,
+          "minutes_until": 2715,
           "time_status": "UPCOMING"
         }
       ],
@@ -2376,7 +1980,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 302,
+          "minutes_until": 255,
           "time_status": "UPCOMING"
         },
         {
@@ -2387,7 +1991,7 @@
           "forecast": "3.4%",
           "previous": "3.1%",
           "actual": null,
-          "minutes_until": 1082,
+          "minutes_until": 1035,
           "time_status": "UPCOMING"
         },
         {
@@ -2398,7 +2002,7 @@
           "forecast": "2.8%",
           "previous": "2.6%",
           "actual": null,
-          "minutes_until": 1082,
+          "minutes_until": 1035,
           "time_status": "UPCOMING"
         },
         {
@@ -2406,10 +2010,10 @@
           "currency": "GBP",
           "impact": "Low",
           "event_at_et": "2026-10-21T02:00:00-04:00",
-          "forecast": "1.4%",
+          "forecast": "1.3%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 1082,
+          "minutes_until": 1035,
           "time_status": "UPCOMING"
         },
         {
@@ -2420,7 +2024,7 @@
           "forecast": "0.7%",
           "previous": "0.7%",
           "actual": null,
-          "minutes_until": 1082,
+          "minutes_until": 1035,
           "time_status": "UPCOMING"
         },
         {
@@ -2431,7 +2035,7 @@
           "forecast": "23.8B",
           "previous": "18.3B",
           "actual": null,
-          "minutes_until": 1082,
+          "minutes_until": 1035,
           "time_status": "UPCOMING"
         },
         {
@@ -2442,7 +2046,7 @@
           "forecast": "3.9%",
           "previous": "3.4%",
           "actual": null,
-          "minutes_until": 1082,
+          "minutes_until": 1035,
           "time_status": "UPCOMING"
         },
         {
@@ -2453,7 +2057,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1157,
+          "minutes_until": 1110,
           "time_status": "UPCOMING"
         },
         {
@@ -2464,7 +2068,7 @@
           "forecast": "1.2%",
           "previous": "1.4%",
           "actual": null,
-          "minutes_until": 1232,
+          "minutes_until": 1185,
           "time_status": "UPCOMING"
         },
         {
@@ -2475,7 +2079,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1322,
+          "minutes_until": 1275,
           "time_status": "UPCOMING"
         }
       ],
@@ -2499,7 +2103,7 @@
       },
       "asian_risk_directional_note": "Not a direct directional driver",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -2507,7 +2111,7 @@
     }
   ],
   "fully_macro_verified": false,
-  "unified_signal_generated_at_utc": "2026-10-20T11:32:47.905722+00:00",
+  "unified_signal_generated_at_utc": "2026-10-20T12:05:15.880504+00:00",
   "no_mobile_alerts": true,
   "options_layer": "REMOVED_AT_USER_REQUEST",
   "calendar_first_rule": "Every pair MUST display all upcoming events for both currencies in next 24 hours, regardless of impact. IMMINENT within 120 minutes prevents a normal entry signal; include forecasts and previous values. Do not infer releases from missing actuals.",
@@ -2521,6 +2125,7 @@
     "dxy_equities_sentiment",
     "cme_volume_open_interest",
     "retail_positioning",
+    "closed_15m30m_direction",
     "atr_adr_session_levels",
     "independent_live_spreads"
   ],
