@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-20T09:33:51.776993+00:00",
+  "generated_at_utc": "2026-10-20T11:21:10.202944+00:00",
   "target_refresh_minutes": 5,
   "actual_actions_schedule_not_guaranteed": true,
   "approved_source_names": [
@@ -12,16 +12,81 @@
   "Newsquawk_is_not_realtime_professional_feed": true,
   "source_statuses": {
     "FXStreet_RSS": "UNAVAILABLE_HTTPERROR",
-    "Reuters_currency_page": "UNAVAILABLE_HTTPERROR",
+    "Reuters_currency_page": "DATED_HEADLINES",
     "Newsquawk_public_delayed": "UNAVAILABLE_NO_PUBLIC_DATED_CURRENCY_ARTICLES"
   },
   "source_coverage_gaps": [
     "FXStreet_RSS:UNAVAILABLE_HTTPERROR",
-    "Reuters_currency_page:UNAVAILABLE_HTTPERROR",
     "Newsquawk_public_delayed:UNAVAILABLE_NO_PUBLIC_DATED_CURRENCY_ARTICLES"
   ],
   "any_provider_unavailable": true,
-  "recent_headlines": [],
+  "recent_headlines": [
+    {
+      "provider": "Reuters_currency_page",
+      "title": "Sterling rises as strong labour market data reinforces rate hike bets",
+      "url": "https://www.reuters.com/world/uk/sterling-rises-strong-labour-market-data-reinforces-rate-hike-bets-2026-10-20/",
+      "published_at_utc": "2026-10-20T10:31:31.202000+00:00",
+      "first_seen_at_utc": "2026-10-20T11:21:10.202944+00:00",
+      "publisher_age_minutes": 49.7,
+      "source_latency_to_first_seen_minutes": 49.7,
+      "source_public_delay_minutes_at_least": null,
+      "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+      "not_pro_feed_or_first_seen_in_real_time": false,
+      "type": "CENTRAL_BANK_POLICY",
+      "priority": "HIGH_POLICY_REACTION_CHECK",
+      "currencies": [
+        "GBP"
+      ],
+      "affected_pairs": [
+        "GBPUSD",
+        "EURGBP"
+      ],
+      "headline_direction": "UNDETERMINED",
+      "market_reaction": "NOT_VERIFIED",
+      "broker_execution_allowed": false,
+      "price_reactions": {
+        "GBPUSD": {
+          "status": "FIRST_MOVE_REVERSED_ON_SECOND_M15",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false,
+          "pre_event_close_utc": "2026-10-20T10:30:00+00:00",
+          "pre_event_price": 1.33396,
+          "first_post_event_close_utc": "2026-10-20T10:45:00+00:00",
+          "first_post_event_price": 1.33426,
+          "first_post_event_change_pips": 3.0,
+          "second_post_event_close_utc": "2026-10-20T11:00:00+00:00",
+          "second_post_event_price": 1.33396,
+          "second_post_event_change_pips": -3.0,
+          "net_two_bar_event_window_pips": 0.0,
+          "early_initial_direction": "UP",
+          "second_bar_direction": "DOWN",
+          "retrospective_if_first_seen_after_first_candle": true
+        },
+        "EURGBP": {
+          "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+          "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+          "no_intrabar_assumptions": true,
+          "causal_link_verified": false,
+          "first_seen_before_market_reaction": false,
+          "pre_event_close_utc": "2026-10-20T10:30:00+00:00",
+          "pre_event_price": 0.84049,
+          "first_post_event_close_utc": "2026-10-20T10:45:00+00:00",
+          "first_post_event_price": 0.84025,
+          "first_post_event_change_pips": -2.4,
+          "second_post_event_close_utc": "2026-10-20T11:00:00+00:00",
+          "second_post_event_price": 0.84017,
+          "second_post_event_change_pips": -0.8,
+          "net_two_bar_event_window_pips": -3.2,
+          "early_initial_direction": "DOWN",
+          "second_bar_direction": "DOWN",
+          "retrospective_if_first_seen_after_first_candle": true
+        }
+      },
+      "all_price_reactions_are_noncausal_observations": true
+    }
+  ],
   "pairs": {
     "AUDUSD": {
       "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
@@ -51,9 +116,97 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "GBPUSD": {
-      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
-      "policy_headlines": [],
-      "news_headlines": [],
+      "status": "POLICY_REACTION_CHECK",
+      "policy_headlines": [
+        {
+          "provider": "Reuters_currency_page",
+          "title": "Sterling rises as strong labour market data reinforces rate hike bets",
+          "url": "https://www.reuters.com/world/uk/sterling-rises-strong-labour-market-data-reinforces-rate-hike-bets-2026-10-20/",
+          "published_at_utc": "2026-10-20T10:31:31.202000+00:00",
+          "first_seen_at_utc": "2026-10-20T11:21:10.202944+00:00",
+          "publisher_age_minutes": 49.7,
+          "source_latency_to_first_seen_minutes": 49.7,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "GBP"
+          ],
+          "affected_pairs": [
+            "GBPUSD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_MOVE_REVERSED_ON_SECOND_M15",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-20T10:30:00+00:00",
+            "pre_event_price": 1.33396,
+            "first_post_event_close_utc": "2026-10-20T10:45:00+00:00",
+            "first_post_event_price": 1.33426,
+            "first_post_event_change_pips": 3.0,
+            "second_post_event_close_utc": "2026-10-20T11:00:00+00:00",
+            "second_post_event_price": 1.33396,
+            "second_post_event_change_pips": -3.0,
+            "net_two_bar_event_window_pips": 0.0,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": true
+          }
+        }
+      ],
+      "news_headlines": [
+        {
+          "provider": "Reuters_currency_page",
+          "title": "Sterling rises as strong labour market data reinforces rate hike bets",
+          "url": "https://www.reuters.com/world/uk/sterling-rises-strong-labour-market-data-reinforces-rate-hike-bets-2026-10-20/",
+          "published_at_utc": "2026-10-20T10:31:31.202000+00:00",
+          "first_seen_at_utc": "2026-10-20T11:21:10.202944+00:00",
+          "publisher_age_minutes": 49.7,
+          "source_latency_to_first_seen_minutes": 49.7,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "GBP"
+          ],
+          "affected_pairs": [
+            "GBPUSD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "FIRST_MOVE_REVERSED_ON_SECOND_M15",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-20T10:30:00+00:00",
+            "pre_event_price": 1.33396,
+            "first_post_event_close_utc": "2026-10-20T10:45:00+00:00",
+            "first_post_event_price": 1.33426,
+            "first_post_event_change_pips": 3.0,
+            "second_post_event_close_utc": "2026-10-20T11:00:00+00:00",
+            "second_post_event_price": 1.33396,
+            "second_post_event_change_pips": -3.0,
+            "net_two_bar_event_window_pips": 0.0,
+            "early_initial_direction": "UP",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": true
+          }
+        }
+      ],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
@@ -114,9 +267,97 @@
       "price_reaction_requires_completed_15m30m_candles": true
     },
     "EURGBP": {
-      "status": "NO_RECENT_RETRIEVABLE_APPROVED_NEWS",
-      "policy_headlines": [],
-      "news_headlines": [],
+      "status": "POLICY_REACTION_CHECK",
+      "policy_headlines": [
+        {
+          "provider": "Reuters_currency_page",
+          "title": "Sterling rises as strong labour market data reinforces rate hike bets",
+          "url": "https://www.reuters.com/world/uk/sterling-rises-strong-labour-market-data-reinforces-rate-hike-bets-2026-10-20/",
+          "published_at_utc": "2026-10-20T10:31:31.202000+00:00",
+          "first_seen_at_utc": "2026-10-20T11:21:10.202944+00:00",
+          "publisher_age_minutes": 49.7,
+          "source_latency_to_first_seen_minutes": 49.7,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "GBP"
+          ],
+          "affected_pairs": [
+            "GBPUSD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-20T10:30:00+00:00",
+            "pre_event_price": 0.84049,
+            "first_post_event_close_utc": "2026-10-20T10:45:00+00:00",
+            "first_post_event_price": 0.84025,
+            "first_post_event_change_pips": -2.4,
+            "second_post_event_close_utc": "2026-10-20T11:00:00+00:00",
+            "second_post_event_price": 0.84017,
+            "second_post_event_change_pips": -0.8,
+            "net_two_bar_event_window_pips": -3.2,
+            "early_initial_direction": "DOWN",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": true
+          }
+        }
+      ],
+      "news_headlines": [
+        {
+          "provider": "Reuters_currency_page",
+          "title": "Sterling rises as strong labour market data reinforces rate hike bets",
+          "url": "https://www.reuters.com/world/uk/sterling-rises-strong-labour-market-data-reinforces-rate-hike-bets-2026-10-20/",
+          "published_at_utc": "2026-10-20T10:31:31.202000+00:00",
+          "first_seen_at_utc": "2026-10-20T11:21:10.202944+00:00",
+          "publisher_age_minutes": 49.7,
+          "source_latency_to_first_seen_minutes": 49.7,
+          "source_public_delay_minutes_at_least": null,
+          "publication_clock_basis": "SOURCE_PUBLISHED_AT_UNVERIFIED_AS_EXCHANGE_TIME",
+          "not_pro_feed_or_first_seen_in_real_time": false,
+          "type": "CENTRAL_BANK_POLICY",
+          "priority": "HIGH_POLICY_REACTION_CHECK",
+          "currencies": [
+            "GBP"
+          ],
+          "affected_pairs": [
+            "GBPUSD",
+            "EURGBP"
+          ],
+          "headline_direction": "UNDETERMINED",
+          "market_reaction": "NOT_VERIFIED",
+          "broker_execution_allowed": false,
+          "price_reaction_observation": {
+            "status": "TWO_COMPLETED_M15_BARS_OBSERVED",
+            "price_source": "FOREXTOOLKITS_PUBLIC_CLOSED_M15_ONLY",
+            "no_intrabar_assumptions": true,
+            "causal_link_verified": false,
+            "first_seen_before_market_reaction": false,
+            "pre_event_close_utc": "2026-10-20T10:30:00+00:00",
+            "pre_event_price": 0.84049,
+            "first_post_event_close_utc": "2026-10-20T10:45:00+00:00",
+            "first_post_event_price": 0.84025,
+            "first_post_event_change_pips": -2.4,
+            "second_post_event_close_utc": "2026-10-20T11:00:00+00:00",
+            "second_post_event_price": 0.84017,
+            "second_post_event_change_pips": -0.8,
+            "net_two_bar_event_window_pips": -3.2,
+            "early_initial_direction": "DOWN",
+            "second_bar_direction": "DOWN",
+            "retrospective_if_first_seen_after_first_candle": true
+          }
+        }
+      ],
       "source_coverage_incomplete": true,
       "no_news_is_not_proof_of_no_catalyst": true,
       "directional_vote": "NONE",
