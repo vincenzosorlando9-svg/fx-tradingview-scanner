@@ -1,27 +1,6 @@
 {
-  "generated_at_utc": "2026-10-21T13:27:00.182098+00:00",
+  "generated_at_utc": "2026-10-21T13:32:17.006022+00:00",
   "slots": [
-    {
-      "schema_version": 1,
-      "scheduled_for_utc": "2026-10-17T04:47:00+00:00",
-      "expected_candle_close_utc": "2026-10-17T04:45:00+00:00",
-      "started_at_utc": "2026-10-17T05:00:39.728677+00:00",
-      "status": "MARKET_CLOSED",
-      "attempts": 0,
-      "observations": [],
-      "expected_closes": {},
-      "observed_closes": {},
-      "validated_pairs": 0,
-      "signal_publication_allowed": false,
-      "no_trades": true,
-      "timing_basis": "EXACT_UTC_15M_SLOT",
-      "trigger_event": "schedule",
-      "is_scheduled_trigger": true,
-      "scan_trigger_type": "backup",
-      "actual_start_delay_seconds": 819.729,
-      "recorded_at_utc": "2026-10-17T05:00:39.803944+00:00",
-      "commit_at_utc": "NOT_YET_VERIFIED_AT_RECORD_TIME"
-    },
     {
       "schema_version": 1,
       "scheduled_for_utc": "2026-10-17T05:02:00+00:00",
@@ -12568,6 +12547,97 @@
       "scan_trigger_type": "backup",
       "actual_start_delay_seconds": 600.12,
       "recorded_at_utc": "2026-10-21T13:27:00.179265+00:00",
+      "commit_at_utc": "NOT_YET_VERIFIED_AT_RECORD_TIME"
+    },
+    {
+      "schema_version": 1,
+      "scheduled_for_utc": "2026-10-21T13:32:00+00:00",
+      "expected_candle_close_utc": "2026-10-21T13:30:00+00:00",
+      "started_at_utc": "2026-10-21T13:32:06.014535+00:00",
+      "status": "FULL_REPORT_EXACT_CANDLES_VERIFIED",
+      "attempts": 1,
+      "observations": [
+        {
+          "checked_at_utc": "2026-10-21T13:32:07.147207+00:00",
+          "status": "PASS_EXACT_CLOSED_M15_M30_H1",
+          "first_missing": []
+        }
+      ],
+      "expected_closes": {
+        "M15": "2026-10-21T13:30:00+00:00",
+        "M30": "2026-10-21T13:30:00+00:00",
+        "H1": "2026-10-21T13:00:00+00:00"
+      },
+      "observed_closes": {
+        "AUDUSD": {
+          "M15": "2026-10-21T13:30:00+00:00",
+          "M30": "2026-10-21T13:30:00+00:00",
+          "H1": "2026-10-21T13:00:00+00:00"
+        },
+        "NZDUSD": {
+          "M15": "2026-10-21T13:30:00+00:00",
+          "M30": "2026-10-21T13:30:00+00:00",
+          "H1": "2026-10-21T13:00:00+00:00"
+        },
+        "EURUSD": {
+          "M15": "2026-10-21T13:30:00+00:00",
+          "M30": "2026-10-21T13:30:00+00:00",
+          "H1": "2026-10-21T13:00:00+00:00"
+        },
+        "GBPUSD": {
+          "M15": "2026-10-21T13:30:00+00:00",
+          "M30": "2026-10-21T13:30:00+00:00",
+          "H1": "2026-10-21T13:00:00+00:00"
+        },
+        "USDJPY": {
+          "M15": "2026-10-21T13:30:00+00:00",
+          "M30": "2026-10-21T13:30:00+00:00",
+          "H1": "2026-10-21T13:00:00+00:00"
+        },
+        "AUDJPY": {
+          "M15": "2026-10-21T13:30:00+00:00",
+          "M30": "2026-10-21T13:30:00+00:00",
+          "H1": "2026-10-21T13:00:00+00:00"
+        },
+        "NZDJPY": {
+          "M15": "2026-10-21T13:30:00+00:00",
+          "M30": "2026-10-21T13:30:00+00:00",
+          "H1": "2026-10-21T13:00:00+00:00"
+        },
+        "EURJPY": {
+          "M15": "2026-10-21T13:30:00+00:00",
+          "M30": "2026-10-21T13:30:00+00:00",
+          "H1": "2026-10-21T13:00:00+00:00"
+        },
+        "EURCAD": {
+          "M15": "2026-10-21T13:30:00+00:00",
+          "M30": "2026-10-21T13:30:00+00:00",
+          "H1": "2026-10-21T13:00:00+00:00"
+        },
+        "USDCAD": {
+          "M15": "2026-10-21T13:30:00+00:00",
+          "M30": "2026-10-21T13:30:00+00:00",
+          "H1": "2026-10-21T13:00:00+00:00"
+        },
+        "EURGBP": {
+          "M15": "2026-10-21T13:30:00+00:00",
+          "M30": "2026-10-21T13:30:00+00:00",
+          "H1": "2026-10-21T13:00:00+00:00"
+        }
+      },
+      "validated_pairs": 11,
+      "signal_publication_allowed": true,
+      "no_trades": true,
+      "timing_basis": "EXACT_UTC_15M_SLOT",
+      "trigger_event": "schedule",
+      "is_scheduled_trigger": true,
+      "scan_trigger_type": "primary_or_manual",
+      "actual_start_delay_seconds": 6.015,
+      "source_collected_at_utc": "2026-10-21T13:32:07.103747+00:00",
+      "server_offset_seconds": 10800,
+      "full_report_verified_at_utc": "2026-10-21T13:32:16.946907+00:00",
+      "unified_generated_at_utc": "2026-10-21T13:32:16.454901+00:00",
+      "recorded_at_utc": "2026-10-21T13:32:17.002372+00:00",
       "commit_at_utc": "NOT_YET_VERIFIED_AT_RECORD_TIME"
     }
   ],
