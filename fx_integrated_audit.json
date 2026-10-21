@@ -1,26 +1,26 @@
 {
-  "generated_at_utc": "2026-10-21T09:58:43.224215+00:00",
+  "generated_at_utc": "2026-10-21T10:38:09.151292+00:00",
   "purpose": "FULL_SOURCE_AUDIT_NOT_EXECUTABLE_TRADE_ORDERS",
   "sources": {
     "technicals": {
-      "status": "STALE",
-      "age_minutes": 38.9
+      "status": "FRESH",
+      "age_minutes": 3.2
     },
     "dashboard": {
-      "status": "STALE",
-      "age_minutes": 38.8
+      "status": "FRESH",
+      "age_minutes": 3.1
     },
     "calendar": {
       "status": "FRESH",
-      "age_minutes": 24.8
+      "age_minutes": 3.3
     },
     "ff_markets": {
-      "status": "STALE",
-      "age_minutes": 38.7
+      "status": "FRESH",
+      "age_minutes": 29.2
     },
     "volatility": {
-      "status": "STALE",
-      "age_minutes": 38.9
+      "status": "FRESH",
+      "age_minutes": 3.2
     },
     "kospi_te_public_page": {
       "status": "DATED_DAILY_CONTEXT",
@@ -30,31 +30,31 @@
     },
     "macro_snapshot": {
       "status": "STALE",
-      "age_minutes": 6359.9
+      "age_minutes": 6399.3
     },
     "macro_raw": {
       "status": "STALE",
-      "age_minutes": 6359.9
+      "age_minutes": 6399.4
     },
     "macro_news": {
       "status": "STALE",
-      "age_minutes": 6359.9
+      "age_minutes": 6399.3
     },
     "unified_signals": {
       "status": "FRESH",
-      "age_minutes": 38.7
+      "age_minutes": 3.0
     },
     "economic_actuals": {
       "status": "STALE",
-      "age_minutes": 6360.0
+      "age_minutes": 6399.5
     },
     "range_context": {
       "status": "STALE",
-      "age_minutes": 6359.9
+      "age_minutes": 6399.3
     },
     "retail": {
       "status": "STALE",
-      "age_minutes": 6359.9
+      "age_minutes": 6399.4
     }
   },
   "macro_layers": {
@@ -70,7 +70,7 @@
     "cme_volume_open_interest": "PARTIAL_CFTC_WEEKLY_OI_CME_DAILY_DATA_UNVERIFIED",
     "retail_positioning": "UNAVAILABLE_CURRENT",
     "currency_strength_clusters": "DERIVED_FROM_11_FX_PAIRS",
-    "closed_15m30m_direction": "STALE_OR_UNAVAILABLE",
+    "closed_15m30m_direction": "FRESH_TECHNICAL_WATCH_NOT_BROKER_EXECUTION",
     "atr_adr_session_levels": "PARTIAL_LEGACY_ATR_LEVELS",
     "independent_live_spreads": "UNAVAILABLE_BROKER_EXECUTABLE_QUOTE",
     "signal_history": "VERIFIED_RECORDED_SIGNAL_OBSERVATIONS",
@@ -93,9 +93,9 @@
   "pairs": [
     {
       "pair": "AUDUSD",
-      "technical_direction": "BUY",
+      "technical_direction": "SELL",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "BUY",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
@@ -108,7 +108,7 @@
       "h1_ema20_50": "ABOVE_BOTH",
       "h4_ema20_50": "ABOVE_BOTH",
       "timeframes_present": true,
-      "higher_timeframe_conflict": false,
+      "higher_timeframe_conflict": true,
       "upcoming_48h_events": [
         {
           "title": "Crude Oil Inventories",
@@ -118,7 +118,18 @@
           "forecast": "-0.1M",
           "previous": "-8.6M",
           "actual": null,
-          "minutes_until": 271,
+          "minutes_until": 232,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Foreign Direct Investment ytd/y",
+          "currency": "CNY",
+          "impact": "Low",
+          "event_at_et": "2026-10-22T05:10:00-04:00",
+          "forecast": "",
+          "previous": "-5.3%",
+          "actual": null,
+          "minutes_until": 1352,
           "time_status": "UPCOMING"
         },
         {
@@ -129,7 +140,7 @@
           "forecast": "200K",
           "previous": "199K",
           "actual": null,
-          "minutes_until": 1591,
+          "minutes_until": 1552,
           "time_status": "UPCOMING"
         },
         {
@@ -140,7 +151,7 @@
           "forecast": "-0.1%",
           "previous": "-0.1%",
           "actual": null,
-          "minutes_until": 1681,
+          "minutes_until": 1642,
           "time_status": "UPCOMING"
         },
         {
@@ -151,7 +162,7 @@
           "forecast": "83B",
           "previous": "67B",
           "actual": null,
-          "minutes_until": 1711,
+          "minutes_until": 1672,
           "time_status": "UPCOMING"
         },
         {
@@ -162,7 +173,7 @@
           "forecast": "",
           "previous": "49.3",
           "actual": null,
-          "minutes_until": 2161,
+          "minutes_until": 2122,
           "time_status": "UPCOMING"
         },
         {
@@ -173,7 +184,7 @@
           "forecast": "",
           "previous": "51.4",
           "actual": null,
-          "minutes_until": 2161,
+          "minutes_until": 2122,
           "time_status": "UPCOMING"
         }
       ],
@@ -186,7 +197,18 @@
           "forecast": "-0.1M",
           "previous": "-8.6M",
           "actual": null,
-          "minutes_until": 271,
+          "minutes_until": 232,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Foreign Direct Investment ytd/y",
+          "currency": "CNY",
+          "impact": "Low",
+          "event_at_et": "2026-10-22T05:10:00-04:00",
+          "forecast": "",
+          "previous": "-5.3%",
+          "actual": null,
+          "minutes_until": 1352,
           "time_status": "UPCOMING"
         }
       ],
@@ -227,9 +249,9 @@
     },
     {
       "pair": "NZDUSD",
-      "technical_direction": "SELL",
-      "technical_stage": "EARLY_M15_M30_MOMENTUM",
-      "unified_signal_direction": "SELL",
+      "technical_direction": "BUY",
+      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
+      "unified_signal_direction": "BUY",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
@@ -242,7 +264,7 @@
       "h1_ema20_50": "ABOVE_BOTH",
       "h4_ema20_50": "ABOVE_BOTH",
       "timeframes_present": true,
-      "higher_timeframe_conflict": true,
+      "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
         {
           "title": "Crude Oil Inventories",
@@ -252,7 +274,7 @@
           "forecast": "-0.1M",
           "previous": "-8.6M",
           "actual": null,
-          "minutes_until": 271,
+          "minutes_until": 232,
           "time_status": "UPCOMING"
         },
         {
@@ -263,7 +285,18 @@
           "forecast": "0.8%",
           "previous": "1.5%",
           "actual": null,
-          "minutes_until": 706,
+          "minutes_until": 667,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Foreign Direct Investment ytd/y",
+          "currency": "CNY",
+          "impact": "Low",
+          "event_at_et": "2026-10-22T05:10:00-04:00",
+          "forecast": "",
+          "previous": "-5.3%",
+          "actual": null,
+          "minutes_until": 1352,
           "time_status": "UPCOMING"
         },
         {
@@ -274,7 +307,7 @@
           "forecast": "200K",
           "previous": "199K",
           "actual": null,
-          "minutes_until": 1591,
+          "minutes_until": 1552,
           "time_status": "UPCOMING"
         },
         {
@@ -285,7 +318,7 @@
           "forecast": "-0.1%",
           "previous": "-0.1%",
           "actual": null,
-          "minutes_until": 1681,
+          "minutes_until": 1642,
           "time_status": "UPCOMING"
         },
         {
@@ -296,7 +329,7 @@
           "forecast": "83B",
           "previous": "67B",
           "actual": null,
-          "minutes_until": 1711,
+          "minutes_until": 1672,
           "time_status": "UPCOMING"
         }
       ],
@@ -309,7 +342,7 @@
           "forecast": "-0.1M",
           "previous": "-8.6M",
           "actual": null,
-          "minutes_until": 271,
+          "minutes_until": 232,
           "time_status": "UPCOMING"
         },
         {
@@ -320,7 +353,18 @@
           "forecast": "0.8%",
           "previous": "1.5%",
           "actual": null,
-          "minutes_until": 706,
+          "minutes_until": 667,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Foreign Direct Investment ytd/y",
+          "currency": "CNY",
+          "impact": "Low",
+          "event_at_et": "2026-10-22T05:10:00-04:00",
+          "forecast": "",
+          "previous": "-5.3%",
+          "actual": null,
+          "minutes_until": 1352,
           "time_status": "UPCOMING"
         }
       ],
@@ -361,9 +405,9 @@
     },
     {
       "pair": "EURUSD",
-      "technical_direction": "SELL",
+      "technical_direction": "BUY",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "SELL",
+      "unified_signal_direction": "BUY",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
@@ -373,22 +417,11 @@
       "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
-      "h1_ema20_50": "BELOW_BOTH",
-      "h4_ema20_50": "BELOW_BOTH",
+      "h1_ema20_50": "ABOVE_BOTH",
+      "h4_ema20_50": "ABOVE_BOTH",
       "timeframes_present": true,
       "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
-        {
-          "title": "German Buba Monthly Report",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-21T06:00:00-04:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 1,
-          "time_status": "IMMINENT"
-        },
         {
           "title": "Crude Oil Inventories",
           "currency": "USD",
@@ -397,7 +430,7 @@
           "forecast": "-0.1M",
           "previous": "-8.6M",
           "actual": null,
-          "minutes_until": 271,
+          "minutes_until": 232,
           "time_status": "UPCOMING"
         },
         {
@@ -408,7 +441,7 @@
           "forecast": "200K",
           "previous": "199K",
           "actual": null,
-          "minutes_until": 1591,
+          "minutes_until": 1552,
           "time_status": "UPCOMING"
         },
         {
@@ -419,7 +452,7 @@
           "forecast": "-17",
           "previous": "-17",
           "actual": null,
-          "minutes_until": 1681,
+          "minutes_until": 1642,
           "time_status": "UPCOMING"
         },
         {
@@ -430,7 +463,7 @@
           "forecast": "-0.1%",
           "previous": "-0.1%",
           "actual": null,
-          "minutes_until": 1681,
+          "minutes_until": 1642,
           "time_status": "UPCOMING"
         },
         {
@@ -441,7 +474,7 @@
           "forecast": "83B",
           "previous": "67B",
           "actual": null,
-          "minutes_until": 1711,
+          "minutes_until": 1672,
           "time_status": "UPCOMING"
         },
         {
@@ -452,7 +485,7 @@
           "forecast": "50.5",
           "previous": "50.3",
           "actual": null,
-          "minutes_until": 2716,
+          "minutes_until": 2677,
           "time_status": "UPCOMING"
         },
         {
@@ -463,7 +496,7 @@
           "forecast": "50.7",
           "previous": "51.4",
           "actual": null,
-          "minutes_until": 2716,
+          "minutes_until": 2677,
           "time_status": "UPCOMING"
         },
         {
@@ -474,7 +507,7 @@
           "forecast": "53.5",
           "previous": "53.8",
           "actual": null,
-          "minutes_until": 2731,
+          "minutes_until": 2692,
           "time_status": "UPCOMING"
         },
         {
@@ -485,7 +518,7 @@
           "forecast": "52.5",
           "previous": "52.9",
           "actual": null,
-          "minutes_until": 2731,
+          "minutes_until": 2692,
           "time_status": "UPCOMING"
         },
         {
@@ -496,7 +529,7 @@
           "forecast": "52.7",
           "previous": "52.7",
           "actual": null,
-          "minutes_until": 2761,
+          "minutes_until": 2722,
           "time_status": "UPCOMING"
         },
         {
@@ -507,22 +540,11 @@
           "forecast": "52.6",
           "previous": "53.0",
           "actual": null,
-          "minutes_until": 2761,
+          "minutes_until": 2722,
           "time_status": "UPCOMING"
         }
       ],
       "next_24h_events": [
-        {
-          "title": "German Buba Monthly Report",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-21T06:00:00-04:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 1,
-          "time_status": "IMMINENT"
-        },
         {
           "title": "Crude Oil Inventories",
           "currency": "USD",
@@ -531,24 +553,12 @@
           "forecast": "-0.1M",
           "previous": "-8.6M",
           "actual": null,
-          "minutes_until": 271,
+          "minutes_until": 232,
           "time_status": "UPCOMING"
         }
       ],
-      "imminent_events": [
-        {
-          "title": "German Buba Monthly Report",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-21T06:00:00-04:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 1,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "event_risk": "IMMINENT_EVENT",
+      "imminent_events": [],
+      "event_risk": "EVENT_WITHIN_24H",
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
@@ -600,7 +610,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 181,
+          "minutes_until": 142,
           "time_status": "UPCOMING"
         },
         {
@@ -611,7 +621,7 @@
           "forecast": "-0.1M",
           "previous": "-8.6M",
           "actual": null,
-          "minutes_until": 271,
+          "minutes_until": 232,
           "time_status": "UPCOMING"
         },
         {
@@ -622,7 +632,7 @@
           "forecast": "-20",
           "previous": "-9",
           "actual": null,
-          "minutes_until": 1441,
+          "minutes_until": 1402,
           "time_status": "UPCOMING"
         },
         {
@@ -633,7 +643,7 @@
           "forecast": "200K",
           "previous": "199K",
           "actual": null,
-          "minutes_until": 1591,
+          "minutes_until": 1552,
           "time_status": "UPCOMING"
         },
         {
@@ -644,7 +654,7 @@
           "forecast": "-0.1%",
           "previous": "-0.1%",
           "actual": null,
-          "minutes_until": 1681,
+          "minutes_until": 1642,
           "time_status": "UPCOMING"
         },
         {
@@ -655,7 +665,7 @@
           "forecast": "83B",
           "previous": "67B",
           "actual": null,
-          "minutes_until": 1711,
+          "minutes_until": 1672,
           "time_status": "UPCOMING"
         },
         {
@@ -666,7 +676,7 @@
           "forecast": "-14",
           "previous": "-13",
           "actual": null,
-          "minutes_until": 2222,
+          "minutes_until": 2183,
           "time_status": "UPCOMING"
         },
         {
@@ -677,7 +687,7 @@
           "forecast": "-0.1%",
           "previous": "0.5%",
           "actual": null,
-          "minutes_until": 2641,
+          "minutes_until": 2602,
           "time_status": "UPCOMING"
         },
         {
@@ -688,7 +698,7 @@
           "forecast": "51.8",
           "previous": "52.0",
           "actual": null,
-          "minutes_until": 2791,
+          "minutes_until": 2752,
           "time_status": "UPCOMING"
         },
         {
@@ -699,7 +709,7 @@
           "forecast": "51.8",
           "previous": "51.7",
           "actual": null,
-          "minutes_until": 2791,
+          "minutes_until": 2752,
           "time_status": "UPCOMING"
         }
       ],
@@ -712,7 +722,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 181,
+          "minutes_until": 142,
           "time_status": "UPCOMING"
         },
         {
@@ -723,7 +733,18 @@
           "forecast": "-0.1M",
           "previous": "-8.6M",
           "actual": null,
-          "minutes_until": 271,
+          "minutes_until": 232,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "CBI Industrial Order Expectations",
+          "currency": "GBP",
+          "impact": "Low",
+          "event_at_et": "2026-10-22T06:00:00-04:00",
+          "forecast": "-20",
+          "previous": "-9",
+          "actual": null,
+          "minutes_until": 1402,
           "time_status": "UPCOMING"
         }
       ],
@@ -756,7 +777,7 @@
     {
       "pair": "USDJPY",
       "technical_direction": "SELL",
-      "technical_stage": "EARLY_JPY_CLUSTER_ROTATION",
+      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
       "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
@@ -780,7 +801,7 @@
           "forecast": "-0.1M",
           "previous": "-8.6M",
           "actual": null,
-          "minutes_until": 271,
+          "minutes_until": 232,
           "time_status": "UPCOMING"
         },
         {
@@ -791,7 +812,7 @@
           "forecast": "200K",
           "previous": "199K",
           "actual": null,
-          "minutes_until": 1591,
+          "minutes_until": 1552,
           "time_status": "UPCOMING"
         },
         {
@@ -802,7 +823,7 @@
           "forecast": "-0.1%",
           "previous": "-0.1%",
           "actual": null,
-          "minutes_until": 1681,
+          "minutes_until": 1642,
           "time_status": "UPCOMING"
         },
         {
@@ -813,7 +834,7 @@
           "forecast": "83B",
           "previous": "67B",
           "actual": null,
-          "minutes_until": 1711,
+          "minutes_until": 1672,
           "time_status": "UPCOMING"
         },
         {
@@ -824,7 +845,7 @@
           "forecast": "2.1%",
           "previous": "1.7%",
           "actual": null,
-          "minutes_until": 2251,
+          "minutes_until": 2212,
           "time_status": "UPCOMING"
         },
         {
@@ -835,7 +856,7 @@
           "forecast": "54.5",
           "previous": "54.1",
           "actual": null,
-          "minutes_until": 2311,
+          "minutes_until": 2272,
           "time_status": "UPCOMING"
         }
       ],
@@ -848,7 +869,7 @@
           "forecast": "-0.1M",
           "previous": "-8.6M",
           "actual": null,
-          "minutes_until": 271,
+          "minutes_until": 232,
           "time_status": "UPCOMING"
         }
       ],
@@ -889,108 +910,8 @@
     },
     {
       "pair": "AUDJPY",
-      "technical_direction": "BUY",
-      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "BUY",
-      "macro_alignment": "UNKNOWN",
-      "macro_evidence": [],
-      "publisher_reported_actuals": [],
-      "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
-      },
-      "technical_15m30m_fresh": true,
-      "early_watches_permitted_with_unknown_macro": true,
-      "reference_level_not_live": null,
-      "h1_ema20_50": "ABOVE_BOTH",
-      "h4_ema20_50": "ABOVE_BOTH",
-      "timeframes_present": true,
-      "higher_timeframe_conflict": false,
-      "upcoming_48h_events": [
-        {
-          "title": "Flash Manufacturing PMI",
-          "currency": "AUD",
-          "impact": "Low",
-          "event_at_et": "2026-10-22T18:00:00-04:00",
-          "forecast": "",
-          "previous": "49.3",
-          "actual": null,
-          "minutes_until": 2161,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Flash Services PMI",
-          "currency": "AUD",
-          "impact": "Low",
-          "event_at_et": "2026-10-22T18:00:00-04:00",
-          "forecast": "",
-          "previous": "51.4",
-          "actual": null,
-          "minutes_until": 2161,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "National Core CPI y/y",
-          "currency": "JPY",
-          "impact": "Low",
-          "event_at_et": "2026-10-22T19:30:00-04:00",
-          "forecast": "2.1%",
-          "previous": "1.7%",
-          "actual": null,
-          "minutes_until": 2251,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Flash Manufacturing PMI",
-          "currency": "JPY",
-          "impact": "Low",
-          "event_at_et": "2026-10-22T20:30:00-04:00",
-          "forecast": "54.5",
-          "previous": "54.1",
-          "actual": null,
-          "minutes_until": 2311,
-          "time_status": "UPCOMING"
-        }
-      ],
-      "next_24h_events": [],
-      "imminent_events": [],
-      "event_risk": "NO_SCHEDULED_EVENT_24H",
-      "calendar_coverage": "VERIFIED",
-      "forexfactory_positioning": null,
-      "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
-      },
-      "asian_risk_context": {
-        "source": "Trading Economics public KOSPI page (no key)",
-        "status": "DATED_DAILY_CONTEXT",
-        "daily_reference_change_pct": 3.29,
-        "daily_reference_level": 5736.0,
-        "reference_date_kst": "2026-10-21",
-        "risk_tier": "POSITIVE_DAILY_BACKGROUND",
-        "dated_news_headline": "South Korean Shares Rebound on Chip Rally",
-        "dated_news_day": "2026-10-21",
-        "interpretation": "Risk-off corroboration only; no verified intraday quote or automatic FX direction changes",
-        "verified_intraday_quote": false,
-        "execution_allowed": false
-      },
-      "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
-      "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
-      "entry": null,
-      "stop": null,
-      "tp1": null,
-      "tp2": null
-    },
-    {
-      "pair": "NZDJPY",
       "technical_direction": "SELL",
-      "technical_stage": "EARLY_M15_M30_MOMENTUM",
+      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
       "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
@@ -1007,14 +928,36 @@
       "higher_timeframe_conflict": true,
       "upcoming_48h_events": [
         {
-          "title": "CPI q/q",
-          "currency": "NZD",
-          "impact": "High",
-          "event_at_et": "2026-10-21T17:45:00-04:00",
-          "forecast": "0.8%",
-          "previous": "1.5%",
+          "title": "Foreign Direct Investment ytd/y",
+          "currency": "CNY",
+          "impact": "Low",
+          "event_at_et": "2026-10-22T05:10:00-04:00",
+          "forecast": "",
+          "previous": "-5.3%",
           "actual": null,
-          "minutes_until": 706,
+          "minutes_until": 1352,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Flash Manufacturing PMI",
+          "currency": "AUD",
+          "impact": "Low",
+          "event_at_et": "2026-10-22T18:00:00-04:00",
+          "forecast": "",
+          "previous": "49.3",
+          "actual": null,
+          "minutes_until": 2122,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Flash Services PMI",
+          "currency": "AUD",
+          "impact": "Low",
+          "event_at_et": "2026-10-22T18:00:00-04:00",
+          "forecast": "",
+          "previous": "51.4",
+          "actual": null,
+          "minutes_until": 2122,
           "time_status": "UPCOMING"
         },
         {
@@ -1025,7 +968,7 @@
           "forecast": "2.1%",
           "previous": "1.7%",
           "actual": null,
-          "minutes_until": 2251,
+          "minutes_until": 2212,
           "time_status": "UPCOMING"
         },
         {
@@ -1036,20 +979,20 @@
           "forecast": "54.5",
           "previous": "54.1",
           "actual": null,
-          "minutes_until": 2311,
+          "minutes_until": 2272,
           "time_status": "UPCOMING"
         }
       ],
       "next_24h_events": [
         {
-          "title": "CPI q/q",
-          "currency": "NZD",
-          "impact": "High",
-          "event_at_et": "2026-10-21T17:45:00-04:00",
-          "forecast": "0.8%",
-          "previous": "1.5%",
+          "title": "Foreign Direct Investment ytd/y",
+          "currency": "CNY",
+          "impact": "Low",
+          "event_at_et": "2026-10-22T05:10:00-04:00",
+          "forecast": "",
+          "previous": "-5.3%",
           "actual": null,
-          "minutes_until": 706,
+          "minutes_until": 1352,
           "time_status": "UPCOMING"
         }
       ],
@@ -1089,6 +1032,129 @@
       "tp2": null
     },
     {
+      "pair": "NZDJPY",
+      "technical_direction": "BUY",
+      "technical_stage": "WAIT",
+      "unified_signal_direction": "BUY",
+      "macro_alignment": "UNKNOWN",
+      "macro_evidence": [],
+      "publisher_reported_actuals": [],
+      "range_context": {
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+      },
+      "technical_15m30m_fresh": true,
+      "early_watches_permitted_with_unknown_macro": true,
+      "reference_level_not_live": null,
+      "h1_ema20_50": "ABOVE_BOTH",
+      "h4_ema20_50": "ABOVE_BOTH",
+      "timeframes_present": true,
+      "higher_timeframe_conflict": false,
+      "upcoming_48h_events": [
+        {
+          "title": "CPI q/q",
+          "currency": "NZD",
+          "impact": "High",
+          "event_at_et": "2026-10-21T17:45:00-04:00",
+          "forecast": "0.8%",
+          "previous": "1.5%",
+          "actual": null,
+          "minutes_until": 667,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Foreign Direct Investment ytd/y",
+          "currency": "CNY",
+          "impact": "Low",
+          "event_at_et": "2026-10-22T05:10:00-04:00",
+          "forecast": "",
+          "previous": "-5.3%",
+          "actual": null,
+          "minutes_until": 1352,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "National Core CPI y/y",
+          "currency": "JPY",
+          "impact": "Low",
+          "event_at_et": "2026-10-22T19:30:00-04:00",
+          "forecast": "2.1%",
+          "previous": "1.7%",
+          "actual": null,
+          "minutes_until": 2212,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Flash Manufacturing PMI",
+          "currency": "JPY",
+          "impact": "Low",
+          "event_at_et": "2026-10-22T20:30:00-04:00",
+          "forecast": "54.5",
+          "previous": "54.1",
+          "actual": null,
+          "minutes_until": 2272,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "next_24h_events": [
+        {
+          "title": "CPI q/q",
+          "currency": "NZD",
+          "impact": "High",
+          "event_at_et": "2026-10-21T17:45:00-04:00",
+          "forecast": "0.8%",
+          "previous": "1.5%",
+          "actual": null,
+          "minutes_until": 667,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Foreign Direct Investment ytd/y",
+          "currency": "CNY",
+          "impact": "Low",
+          "event_at_et": "2026-10-22T05:10:00-04:00",
+          "forecast": "",
+          "previous": "-5.3%",
+          "actual": null,
+          "minutes_until": 1352,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "imminent_events": [],
+      "event_risk": "EVENT_WITHIN_24H",
+      "calendar_coverage": "VERIFIED",
+      "forexfactory_positioning": null,
+      "myfxbook_positioning": {
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
+      },
+      "asian_risk_context": {
+        "source": "Trading Economics public KOSPI page (no key)",
+        "status": "DATED_DAILY_CONTEXT",
+        "daily_reference_change_pct": 3.29,
+        "daily_reference_level": 5736.0,
+        "reference_date_kst": "2026-10-21",
+        "risk_tier": "POSITIVE_DAILY_BACKGROUND",
+        "dated_news_headline": "South Korean Shares Rebound on Chip Rally",
+        "dated_news_day": "2026-10-21",
+        "interpretation": "Risk-off corroboration only; no verified intraday quote or automatic FX direction changes",
+        "verified_intraday_quote": false,
+        "execution_allowed": false
+      },
+      "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
+      "macro_confirmed": false,
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "entry": null,
+      "stop": null,
+      "tp1": null,
+      "tp2": null
+    },
+    {
       "pair": "EURJPY",
       "technical_direction": "SELL",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
@@ -1108,17 +1174,6 @@
       "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
         {
-          "title": "German Buba Monthly Report",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-21T06:00:00-04:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 1,
-          "time_status": "IMMINENT"
-        },
-        {
           "title": "Consumer Confidence",
           "currency": "EUR",
           "impact": "Low",
@@ -1126,7 +1181,7 @@
           "forecast": "-17",
           "previous": "-17",
           "actual": null,
-          "minutes_until": 1681,
+          "minutes_until": 1642,
           "time_status": "UPCOMING"
         },
         {
@@ -1137,7 +1192,7 @@
           "forecast": "2.1%",
           "previous": "1.7%",
           "actual": null,
-          "minutes_until": 2251,
+          "minutes_until": 2212,
           "time_status": "UPCOMING"
         },
         {
@@ -1148,7 +1203,7 @@
           "forecast": "54.5",
           "previous": "54.1",
           "actual": null,
-          "minutes_until": 2311,
+          "minutes_until": 2272,
           "time_status": "UPCOMING"
         },
         {
@@ -1159,7 +1214,7 @@
           "forecast": "50.5",
           "previous": "50.3",
           "actual": null,
-          "minutes_until": 2716,
+          "minutes_until": 2677,
           "time_status": "UPCOMING"
         },
         {
@@ -1170,7 +1225,7 @@
           "forecast": "50.7",
           "previous": "51.4",
           "actual": null,
-          "minutes_until": 2716,
+          "minutes_until": 2677,
           "time_status": "UPCOMING"
         },
         {
@@ -1181,7 +1236,7 @@
           "forecast": "53.5",
           "previous": "53.8",
           "actual": null,
-          "minutes_until": 2731,
+          "minutes_until": 2692,
           "time_status": "UPCOMING"
         },
         {
@@ -1192,7 +1247,7 @@
           "forecast": "52.5",
           "previous": "52.9",
           "actual": null,
-          "minutes_until": 2731,
+          "minutes_until": 2692,
           "time_status": "UPCOMING"
         },
         {
@@ -1203,7 +1258,7 @@
           "forecast": "52.7",
           "previous": "52.7",
           "actual": null,
-          "minutes_until": 2761,
+          "minutes_until": 2722,
           "time_status": "UPCOMING"
         },
         {
@@ -1214,37 +1269,13 @@
           "forecast": "52.6",
           "previous": "53.0",
           "actual": null,
-          "minutes_until": 2761,
+          "minutes_until": 2722,
           "time_status": "UPCOMING"
         }
       ],
-      "next_24h_events": [
-        {
-          "title": "German Buba Monthly Report",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-21T06:00:00-04:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 1,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "imminent_events": [
-        {
-          "title": "German Buba Monthly Report",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-21T06:00:00-04:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 1,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "event_risk": "IMMINENT_EVENT",
+      "next_24h_events": [],
+      "imminent_events": [],
+      "event_risk": "NO_SCHEDULED_EVENT_24H",
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
@@ -1298,17 +1329,6 @@
       "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
         {
-          "title": "German Buba Monthly Report",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-21T06:00:00-04:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 1,
-          "time_status": "IMMINENT"
-        },
-        {
           "title": "IPPI m/m",
           "currency": "CAD",
           "impact": "Low",
@@ -1316,7 +1336,7 @@
           "forecast": "0.9%",
           "previous": "1.3%",
           "actual": null,
-          "minutes_until": 1591,
+          "minutes_until": 1552,
           "time_status": "UPCOMING"
         },
         {
@@ -1327,7 +1347,7 @@
           "forecast": "-0.1%",
           "previous": "-0.1%",
           "actual": null,
-          "minutes_until": 1591,
+          "minutes_until": 1552,
           "time_status": "UPCOMING"
         },
         {
@@ -1338,7 +1358,7 @@
           "forecast": "3.1%",
           "previous": "3.1%",
           "actual": null,
-          "minutes_until": 1591,
+          "minutes_until": 1552,
           "time_status": "UPCOMING"
         },
         {
@@ -1349,7 +1369,7 @@
           "forecast": "-17",
           "previous": "-17",
           "actual": null,
-          "minutes_until": 1681,
+          "minutes_until": 1642,
           "time_status": "UPCOMING"
         },
         {
@@ -1360,7 +1380,7 @@
           "forecast": "50.5",
           "previous": "50.3",
           "actual": null,
-          "minutes_until": 2716,
+          "minutes_until": 2677,
           "time_status": "UPCOMING"
         },
         {
@@ -1371,7 +1391,7 @@
           "forecast": "50.7",
           "previous": "51.4",
           "actual": null,
-          "minutes_until": 2716,
+          "minutes_until": 2677,
           "time_status": "UPCOMING"
         },
         {
@@ -1382,7 +1402,7 @@
           "forecast": "53.5",
           "previous": "53.8",
           "actual": null,
-          "minutes_until": 2731,
+          "minutes_until": 2692,
           "time_status": "UPCOMING"
         },
         {
@@ -1393,7 +1413,7 @@
           "forecast": "52.5",
           "previous": "52.9",
           "actual": null,
-          "minutes_until": 2731,
+          "minutes_until": 2692,
           "time_status": "UPCOMING"
         },
         {
@@ -1404,7 +1424,7 @@
           "forecast": "52.7",
           "previous": "52.7",
           "actual": null,
-          "minutes_until": 2761,
+          "minutes_until": 2722,
           "time_status": "UPCOMING"
         },
         {
@@ -1415,37 +1435,13 @@
           "forecast": "52.6",
           "previous": "53.0",
           "actual": null,
-          "minutes_until": 2761,
+          "minutes_until": 2722,
           "time_status": "UPCOMING"
         }
       ],
-      "next_24h_events": [
-        {
-          "title": "German Buba Monthly Report",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-21T06:00:00-04:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 1,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "imminent_events": [
-        {
-          "title": "German Buba Monthly Report",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-21T06:00:00-04:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 1,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "event_risk": "IMMINENT_EVENT",
+      "next_24h_events": [],
+      "imminent_events": [],
+      "event_risk": "NO_SCHEDULED_EVENT_24H",
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
@@ -1497,7 +1493,7 @@
           "forecast": "-0.1M",
           "previous": "-8.6M",
           "actual": null,
-          "minutes_until": 271,
+          "minutes_until": 232,
           "time_status": "UPCOMING"
         },
         {
@@ -1508,7 +1504,7 @@
           "forecast": "0.9%",
           "previous": "1.3%",
           "actual": null,
-          "minutes_until": 1591,
+          "minutes_until": 1552,
           "time_status": "UPCOMING"
         },
         {
@@ -1519,7 +1515,7 @@
           "forecast": "-0.1%",
           "previous": "-0.1%",
           "actual": null,
-          "minutes_until": 1591,
+          "minutes_until": 1552,
           "time_status": "UPCOMING"
         },
         {
@@ -1530,7 +1526,7 @@
           "forecast": "3.1%",
           "previous": "3.1%",
           "actual": null,
-          "minutes_until": 1591,
+          "minutes_until": 1552,
           "time_status": "UPCOMING"
         },
         {
@@ -1541,7 +1537,7 @@
           "forecast": "200K",
           "previous": "199K",
           "actual": null,
-          "minutes_until": 1591,
+          "minutes_until": 1552,
           "time_status": "UPCOMING"
         },
         {
@@ -1552,7 +1548,7 @@
           "forecast": "-0.1%",
           "previous": "-0.1%",
           "actual": null,
-          "minutes_until": 1681,
+          "minutes_until": 1642,
           "time_status": "UPCOMING"
         },
         {
@@ -1563,7 +1559,7 @@
           "forecast": "83B",
           "previous": "67B",
           "actual": null,
-          "minutes_until": 1711,
+          "minutes_until": 1672,
           "time_status": "UPCOMING"
         }
       ],
@@ -1576,7 +1572,7 @@
           "forecast": "-0.1M",
           "previous": "-8.6M",
           "actual": null,
-          "minutes_until": 271,
+          "minutes_until": 232,
           "time_status": "UPCOMING"
         }
       ],
@@ -1608,9 +1604,9 @@
     },
     {
       "pair": "EURGBP",
-      "technical_direction": "SELL",
+      "technical_direction": "BUY",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "SELL",
+      "unified_signal_direction": "BUY",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
@@ -1623,19 +1619,8 @@
       "h1_ema20_50": "BELOW_BOTH",
       "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
-      "higher_timeframe_conflict": false,
+      "higher_timeframe_conflict": true,
       "upcoming_48h_events": [
-        {
-          "title": "German Buba Monthly Report",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-21T06:00:00-04:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 1,
-          "time_status": "IMMINENT"
-        },
         {
           "title": "BOE Gov Bailey Speaks",
           "currency": "GBP",
@@ -1644,7 +1629,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 181,
+          "minutes_until": 142,
           "time_status": "UPCOMING"
         },
         {
@@ -1655,7 +1640,7 @@
           "forecast": "-20",
           "previous": "-9",
           "actual": null,
-          "minutes_until": 1441,
+          "minutes_until": 1402,
           "time_status": "UPCOMING"
         },
         {
@@ -1666,7 +1651,7 @@
           "forecast": "-17",
           "previous": "-17",
           "actual": null,
-          "minutes_until": 1681,
+          "minutes_until": 1642,
           "time_status": "UPCOMING"
         },
         {
@@ -1677,7 +1662,7 @@
           "forecast": "-14",
           "previous": "-13",
           "actual": null,
-          "minutes_until": 2222,
+          "minutes_until": 2183,
           "time_status": "UPCOMING"
         },
         {
@@ -1688,7 +1673,7 @@
           "forecast": "-0.1%",
           "previous": "0.5%",
           "actual": null,
-          "minutes_until": 2641,
+          "minutes_until": 2602,
           "time_status": "UPCOMING"
         },
         {
@@ -1699,7 +1684,7 @@
           "forecast": "50.5",
           "previous": "50.3",
           "actual": null,
-          "minutes_until": 2716,
+          "minutes_until": 2677,
           "time_status": "UPCOMING"
         },
         {
@@ -1710,7 +1695,7 @@
           "forecast": "50.7",
           "previous": "51.4",
           "actual": null,
-          "minutes_until": 2716,
+          "minutes_until": 2677,
           "time_status": "UPCOMING"
         },
         {
@@ -1721,7 +1706,7 @@
           "forecast": "53.5",
           "previous": "53.8",
           "actual": null,
-          "minutes_until": 2731,
+          "minutes_until": 2692,
           "time_status": "UPCOMING"
         },
         {
@@ -1732,7 +1717,7 @@
           "forecast": "52.5",
           "previous": "52.9",
           "actual": null,
-          "minutes_until": 2731,
+          "minutes_until": 2692,
           "time_status": "UPCOMING"
         },
         {
@@ -1743,7 +1728,7 @@
           "forecast": "52.7",
           "previous": "52.7",
           "actual": null,
-          "minutes_until": 2761,
+          "minutes_until": 2722,
           "time_status": "UPCOMING"
         },
         {
@@ -1754,7 +1739,7 @@
           "forecast": "52.6",
           "previous": "53.0",
           "actual": null,
-          "minutes_until": 2761,
+          "minutes_until": 2722,
           "time_status": "UPCOMING"
         },
         {
@@ -1765,7 +1750,7 @@
           "forecast": "51.8",
           "previous": "52.0",
           "actual": null,
-          "minutes_until": 2791,
+          "minutes_until": 2752,
           "time_status": "UPCOMING"
         },
         {
@@ -1776,22 +1761,11 @@
           "forecast": "51.8",
           "previous": "51.7",
           "actual": null,
-          "minutes_until": 2791,
+          "minutes_until": 2752,
           "time_status": "UPCOMING"
         }
       ],
       "next_24h_events": [
-        {
-          "title": "German Buba Monthly Report",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-21T06:00:00-04:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 1,
-          "time_status": "IMMINENT"
-        },
         {
           "title": "BOE Gov Bailey Speaks",
           "currency": "GBP",
@@ -1800,24 +1774,23 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 181,
+          "minutes_until": 142,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "CBI Industrial Order Expectations",
+          "currency": "GBP",
+          "impact": "Low",
+          "event_at_et": "2026-10-22T06:00:00-04:00",
+          "forecast": "-20",
+          "previous": "-9",
+          "actual": null,
+          "minutes_until": 1402,
           "time_status": "UPCOMING"
         }
       ],
-      "imminent_events": [
-        {
-          "title": "German Buba Monthly Report",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-10-21T06:00:00-04:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 1,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "event_risk": "IMMINENT_EVENT",
+      "imminent_events": [],
+      "event_risk": "EVENT_WITHIN_24H",
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
@@ -1844,7 +1817,7 @@
     }
   ],
   "fully_macro_verified": false,
-  "unified_signal_generated_at_utc": "2026-10-21T09:19:59.680523+00:00",
+  "unified_signal_generated_at_utc": "2026-10-21T10:35:07.899818+00:00",
   "no_mobile_alerts": true,
   "options_layer": "REMOVED_AT_USER_REQUEST",
   "calendar_first_rule": "Every pair MUST display all upcoming events for both currencies in next 24 hours, regardless of impact. IMMINENT within 120 minutes prevents a normal entry signal; include forecasts and previous values. Do not infer releases from missing actuals.",
@@ -1858,7 +1831,6 @@
     "dxy_equities_sentiment",
     "cme_volume_open_interest",
     "retail_positioning",
-    "closed_15m30m_direction",
     "atr_adr_session_levels",
     "independent_live_spreads"
   ],
