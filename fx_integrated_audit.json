@@ -1,26 +1,26 @@
 {
-  "generated_at_utc": "2026-10-23T13:27:37.431893+00:00",
+  "generated_at_utc": "2026-10-23T14:17:09.829189+00:00",
   "purpose": "FULL_SOURCE_AUDIT_NOT_EXECUTABLE_TRADE_ORDERS",
   "sources": {
     "technicals": {
-      "status": "STALE",
-      "age_minutes": 67.5
+      "status": "FRESH",
+      "age_minutes": 29.4
     },
     "dashboard": {
-      "status": "STALE",
-      "age_minutes": 67.5
+      "status": "FRESH",
+      "age_minutes": 29.3
     },
     "calendar": {
       "status": "FRESH",
-      "age_minutes": 50.4
+      "age_minutes": 36.5
     },
     "ff_markets": {
       "status": "FRESH",
-      "age_minutes": 1.2
+      "age_minutes": 1.5
     },
     "volatility": {
-      "status": "STALE",
-      "age_minutes": 67.5
+      "status": "FRESH",
+      "age_minutes": 29.4
     },
     "kospi_te_public_page": {
       "status": "DATED_DAILY_CONTEXT",
@@ -30,31 +30,31 @@
     },
     "macro_snapshot": {
       "status": "STALE",
-      "age_minutes": 9448.8
+      "age_minutes": 9498.4
     },
     "macro_raw": {
       "status": "STALE",
-      "age_minutes": 9448.8
+      "age_minutes": 9498.4
     },
     "macro_news": {
       "status": "STALE",
-      "age_minutes": 9448.8
+      "age_minutes": 9498.4
     },
     "unified_signals": {
-      "status": "STALE",
-      "age_minutes": 67.4
+      "status": "FRESH",
+      "age_minutes": 29.2
     },
     "economic_actuals": {
       "status": "STALE",
-      "age_minutes": 9448.9
+      "age_minutes": 9498.5
     },
     "range_context": {
       "status": "STALE",
-      "age_minutes": 9448.8
+      "age_minutes": 9498.4
     },
     "retail": {
       "status": "STALE",
-      "age_minutes": 9448.8
+      "age_minutes": 9498.4
     }
   },
   "macro_layers": {
@@ -70,7 +70,7 @@
     "cme_volume_open_interest": "PARTIAL_CFTC_WEEKLY_OI_CME_DAILY_DATA_UNVERIFIED",
     "retail_positioning": "UNAVAILABLE_CURRENT",
     "currency_strength_clusters": "DERIVED_FROM_11_FX_PAIRS",
-    "closed_15m30m_direction": "STALE_OR_UNAVAILABLE",
+    "closed_15m30m_direction": "FRESH_TECHNICAL_WATCH_NOT_BROKER_EXECUTION",
     "atr_adr_session_levels": "PARTIAL_LEGACY_ATR_LEVELS",
     "independent_live_spreads": "UNAVAILABLE_BROKER_EXECUTABLE_QUOTE",
     "signal_history": "VERIFIED_RECORDED_SIGNAL_OBSERVATIONS",
@@ -95,163 +95,35 @@
       "pair": "AUDUSD",
       "technical_direction": "BUY",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "UNAVAILABLE",
+      "unified_signal_direction": "BUY",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "ABOVE_BOTH",
       "h4_ema20_50": "ABOVE_BOTH",
       "timeframes_present": true,
       "higher_timeframe_conflict": false,
-      "upcoming_48h_events": [
-        {
-          "title": "Flash Manufacturing PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T09:45:00-04:00",
-          "forecast": "55.4",
-          "previous": "57.0",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Flash Services PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T09:45:00-04:00",
-          "forecast": "57.9",
-          "previous": "58.7",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Revised UoM Consumer Sentiment",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T10:00:00-04:00",
-          "forecast": "46.3",
-          "previous": "46.3",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Revised UoM Inflation Expectations",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T10:00:00-04:00",
-          "forecast": "",
-          "previous": "4.7%",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "next_24h_events": [
-        {
-          "title": "Flash Manufacturing PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T09:45:00-04:00",
-          "forecast": "55.4",
-          "previous": "57.0",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Flash Services PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T09:45:00-04:00",
-          "forecast": "57.9",
-          "previous": "58.7",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Revised UoM Consumer Sentiment",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T10:00:00-04:00",
-          "forecast": "46.3",
-          "previous": "46.3",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Revised UoM Inflation Expectations",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T10:00:00-04:00",
-          "forecast": "",
-          "previous": "4.7%",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "imminent_events": [
-        {
-          "title": "Flash Manufacturing PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T09:45:00-04:00",
-          "forecast": "55.4",
-          "previous": "57.0",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Flash Services PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T09:45:00-04:00",
-          "forecast": "57.9",
-          "previous": "58.7",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Revised UoM Consumer Sentiment",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T10:00:00-04:00",
-          "forecast": "46.3",
-          "previous": "46.3",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Revised UoM Inflation Expectations",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T10:00:00-04:00",
-          "forecast": "",
-          "previous": "4.7%",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "event_risk": "IMMINENT_EVENT",
+      "upcoming_48h_events": [],
+      "next_24h_events": [],
+      "imminent_events": [],
+      "event_risk": "NO_SCHEDULED_EVENT_24H",
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -268,7 +140,7 @@
       },
       "asian_risk_directional_note": "Asian equity risk may affect AUD/NZD, but FX must confirm",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -276,165 +148,37 @@
     },
     {
       "pair": "NZDUSD",
-      "technical_direction": "NO_RANKED_CANDIDATE",
-      "technical_stage": "UNRANKED",
-      "unified_signal_direction": "UNAVAILABLE",
+      "technical_direction": "BUY",
+      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
+      "unified_signal_direction": "BUY",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "ABOVE_BOTH",
       "h4_ema20_50": "ABOVE_BOTH",
       "timeframes_present": true,
       "higher_timeframe_conflict": false,
-      "upcoming_48h_events": [
-        {
-          "title": "Flash Manufacturing PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T09:45:00-04:00",
-          "forecast": "55.4",
-          "previous": "57.0",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Flash Services PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T09:45:00-04:00",
-          "forecast": "57.9",
-          "previous": "58.7",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Revised UoM Consumer Sentiment",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T10:00:00-04:00",
-          "forecast": "46.3",
-          "previous": "46.3",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Revised UoM Inflation Expectations",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T10:00:00-04:00",
-          "forecast": "",
-          "previous": "4.7%",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "next_24h_events": [
-        {
-          "title": "Flash Manufacturing PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T09:45:00-04:00",
-          "forecast": "55.4",
-          "previous": "57.0",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Flash Services PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T09:45:00-04:00",
-          "forecast": "57.9",
-          "previous": "58.7",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Revised UoM Consumer Sentiment",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T10:00:00-04:00",
-          "forecast": "46.3",
-          "previous": "46.3",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Revised UoM Inflation Expectations",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T10:00:00-04:00",
-          "forecast": "",
-          "previous": "4.7%",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "imminent_events": [
-        {
-          "title": "Flash Manufacturing PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T09:45:00-04:00",
-          "forecast": "55.4",
-          "previous": "57.0",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Flash Services PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T09:45:00-04:00",
-          "forecast": "57.9",
-          "previous": "58.7",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Revised UoM Consumer Sentiment",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T10:00:00-04:00",
-          "forecast": "46.3",
-          "previous": "46.3",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Revised UoM Inflation Expectations",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T10:00:00-04:00",
-          "forecast": "",
-          "previous": "4.7%",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "event_risk": "IMMINENT_EVENT",
+      "upcoming_48h_events": [],
+      "next_24h_events": [],
+      "imminent_events": [],
+      "event_risk": "NO_SCHEDULED_EVENT_24H",
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -451,7 +195,7 @@
       },
       "asian_risk_directional_note": "Asian equity risk may affect AUD/NZD, but FX must confirm",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -460,15 +204,15 @@
     {
       "pair": "EURUSD",
       "technical_direction": "SELL",
-      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "UNAVAILABLE",
+      "technical_stage": "WAIT",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
@@ -477,50 +221,6 @@
       "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
         {
-          "title": "Flash Manufacturing PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T09:45:00-04:00",
-          "forecast": "55.4",
-          "previous": "57.0",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Flash Services PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T09:45:00-04:00",
-          "forecast": "57.9",
-          "previous": "58.7",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Revised UoM Consumer Sentiment",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T10:00:00-04:00",
-          "forecast": "46.3",
-          "previous": "46.3",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Revised UoM Inflation Expectations",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T10:00:00-04:00",
-          "forecast": "",
-          "previous": "4.7%",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
           "title": "Daylight Saving Time Shift",
           "currency": "EUR",
           "impact": "Holiday",
@@ -528,107 +228,24 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2132,
+          "minutes_until": 2083,
           "time_status": "UPCOMING"
         }
       ],
-      "next_24h_events": [
-        {
-          "title": "Flash Manufacturing PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T09:45:00-04:00",
-          "forecast": "55.4",
-          "previous": "57.0",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Flash Services PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T09:45:00-04:00",
-          "forecast": "57.9",
-          "previous": "58.7",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Revised UoM Consumer Sentiment",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T10:00:00-04:00",
-          "forecast": "46.3",
-          "previous": "46.3",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Revised UoM Inflation Expectations",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T10:00:00-04:00",
-          "forecast": "",
-          "previous": "4.7%",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "imminent_events": [
-        {
-          "title": "Flash Manufacturing PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T09:45:00-04:00",
-          "forecast": "55.4",
-          "previous": "57.0",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Flash Services PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T09:45:00-04:00",
-          "forecast": "57.9",
-          "previous": "58.7",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Revised UoM Consumer Sentiment",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T10:00:00-04:00",
-          "forecast": "46.3",
-          "previous": "46.3",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Revised UoM Inflation Expectations",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T10:00:00-04:00",
-          "forecast": "",
-          "previous": "4.7%",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "event_risk": "IMMINENT_EVENT",
+      "next_24h_events": [],
+      "imminent_events": [],
+      "event_risk": "NO_SCHEDULED_EVENT_24H",
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -645,15 +262,15 @@
     {
       "pair": "GBPUSD",
       "technical_direction": "SELL",
-      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "UNAVAILABLE",
+      "technical_stage": "WAIT",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
@@ -662,50 +279,6 @@
       "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
         {
-          "title": "Flash Manufacturing PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T09:45:00-04:00",
-          "forecast": "55.4",
-          "previous": "57.0",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Flash Services PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T09:45:00-04:00",
-          "forecast": "57.9",
-          "previous": "58.7",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Revised UoM Consumer Sentiment",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T10:00:00-04:00",
-          "forecast": "46.3",
-          "previous": "46.3",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Revised UoM Inflation Expectations",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T10:00:00-04:00",
-          "forecast": "",
-          "previous": "4.7%",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
           "title": "Daylight Saving Time Shift",
           "currency": "GBP",
           "impact": "Holiday",
@@ -713,107 +286,24 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2132,
+          "minutes_until": 2083,
           "time_status": "UPCOMING"
         }
       ],
-      "next_24h_events": [
-        {
-          "title": "Flash Manufacturing PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T09:45:00-04:00",
-          "forecast": "55.4",
-          "previous": "57.0",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Flash Services PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T09:45:00-04:00",
-          "forecast": "57.9",
-          "previous": "58.7",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Revised UoM Consumer Sentiment",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T10:00:00-04:00",
-          "forecast": "46.3",
-          "previous": "46.3",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Revised UoM Inflation Expectations",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T10:00:00-04:00",
-          "forecast": "",
-          "previous": "4.7%",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "imminent_events": [
-        {
-          "title": "Flash Manufacturing PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T09:45:00-04:00",
-          "forecast": "55.4",
-          "previous": "57.0",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Flash Services PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T09:45:00-04:00",
-          "forecast": "57.9",
-          "previous": "58.7",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Revised UoM Consumer Sentiment",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T10:00:00-04:00",
-          "forecast": "46.3",
-          "previous": "46.3",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Revised UoM Inflation Expectations",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T10:00:00-04:00",
-          "forecast": "",
-          "previous": "4.7%",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "event_risk": "IMMINENT_EVENT",
+      "next_24h_events": [],
+      "imminent_events": [],
+      "event_risk": "NO_SCHEDULED_EVENT_24H",
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -829,165 +319,37 @@
     },
     {
       "pair": "USDJPY",
-      "technical_direction": "NO_RANKED_CANDIDATE",
-      "technical_stage": "UNRANKED",
-      "unified_signal_direction": "UNAVAILABLE",
+      "technical_direction": "SELL",
+      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
       "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
       "higher_timeframe_conflict": false,
-      "upcoming_48h_events": [
-        {
-          "title": "Flash Manufacturing PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T09:45:00-04:00",
-          "forecast": "55.4",
-          "previous": "57.0",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Flash Services PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T09:45:00-04:00",
-          "forecast": "57.9",
-          "previous": "58.7",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Revised UoM Consumer Sentiment",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T10:00:00-04:00",
-          "forecast": "46.3",
-          "previous": "46.3",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Revised UoM Inflation Expectations",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T10:00:00-04:00",
-          "forecast": "",
-          "previous": "4.7%",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "next_24h_events": [
-        {
-          "title": "Flash Manufacturing PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T09:45:00-04:00",
-          "forecast": "55.4",
-          "previous": "57.0",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Flash Services PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T09:45:00-04:00",
-          "forecast": "57.9",
-          "previous": "58.7",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Revised UoM Consumer Sentiment",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T10:00:00-04:00",
-          "forecast": "46.3",
-          "previous": "46.3",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Revised UoM Inflation Expectations",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T10:00:00-04:00",
-          "forecast": "",
-          "previous": "4.7%",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "imminent_events": [
-        {
-          "title": "Flash Manufacturing PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T09:45:00-04:00",
-          "forecast": "55.4",
-          "previous": "57.0",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Flash Services PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T09:45:00-04:00",
-          "forecast": "57.9",
-          "previous": "58.7",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Revised UoM Consumer Sentiment",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T10:00:00-04:00",
-          "forecast": "46.3",
-          "previous": "46.3",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Revised UoM Inflation Expectations",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T10:00:00-04:00",
-          "forecast": "",
-          "previous": "4.7%",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "event_risk": "IMMINENT_EVENT",
+      "upcoming_48h_events": [],
+      "next_24h_events": [],
+      "imminent_events": [],
+      "event_risk": "NO_SCHEDULED_EVENT_24H",
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -1004,7 +366,7 @@
       },
       "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -1012,64 +374,16 @@
     },
     {
       "pair": "AUDJPY",
-      "technical_direction": "BUY",
+      "technical_direction": "SELL",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "UNAVAILABLE",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
-      "early_watches_permitted_with_unknown_macro": true,
-      "reference_level_not_live": null,
-      "h1_ema20_50": "BELOW_BOTH",
-      "h4_ema20_50": "BELOW_BOTH",
-      "timeframes_present": true,
-      "higher_timeframe_conflict": true,
-      "upcoming_48h_events": [],
-      "next_24h_events": [],
-      "imminent_events": [],
-      "event_risk": "NO_SCHEDULED_EVENT_24H",
-      "calendar_coverage": "VERIFIED",
-      "forexfactory_positioning": null,
-      "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
-      },
-      "asian_risk_context": {
-        "source": "Trading Economics public KOSPI page (no key)",
-        "status": "DATED_DAILY_CONTEXT",
-        "daily_reference_change_pct": 0.3,
-        "daily_reference_level": 5550.0,
-        "reference_date_kst": "2026-10-23",
-        "risk_tier": "NEUTRAL_DAILY_BACKGROUND",
-        "dated_news_headline": "South Korean Shares Close Higher",
-        "dated_news_day": "2026-10-23",
-        "interpretation": "Risk-off corroboration only; no verified intraday quote or automatic FX direction changes",
-        "verified_intraday_quote": false,
-        "execution_allowed": false
-      },
-      "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
-      "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
-      "entry": null,
-      "stop": null,
-      "tp1": null,
-      "tp2": null
-    },
-    {
-      "pair": "NZDJPY",
-      "technical_direction": "NO_RANKED_CANDIDATE",
-      "technical_stage": "UNRANKED",
-      "unified_signal_direction": "UNAVAILABLE",
-      "macro_alignment": "UNKNOWN",
-      "macro_evidence": [],
-      "publisher_reported_actuals": [],
-      "range_context": {
-        "status": "UNAVAILABLE"
-      },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
@@ -1083,7 +397,14 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -1100,7 +421,62 @@
       },
       "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "entry": null,
+      "stop": null,
+      "tp1": null,
+      "tp2": null
+    },
+    {
+      "pair": "NZDJPY",
+      "technical_direction": "SELL",
+      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
+      "unified_signal_direction": "SELL",
+      "macro_alignment": "UNKNOWN",
+      "macro_evidence": [],
+      "publisher_reported_actuals": [],
+      "range_context": {
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+      },
+      "technical_15m30m_fresh": true,
+      "early_watches_permitted_with_unknown_macro": true,
+      "reference_level_not_live": null,
+      "h1_ema20_50": "BELOW_BOTH",
+      "h4_ema20_50": "BELOW_BOTH",
+      "timeframes_present": true,
+      "higher_timeframe_conflict": false,
+      "upcoming_48h_events": [],
+      "next_24h_events": [],
+      "imminent_events": [],
+      "event_risk": "NO_SCHEDULED_EVENT_24H",
+      "calendar_coverage": "VERIFIED",
+      "forexfactory_positioning": null,
+      "myfxbook_positioning": {
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
+      },
+      "asian_risk_context": {
+        "source": "Trading Economics public KOSPI page (no key)",
+        "status": "DATED_DAILY_CONTEXT",
+        "daily_reference_change_pct": 0.3,
+        "daily_reference_level": 5550.0,
+        "reference_date_kst": "2026-10-23",
+        "risk_tier": "NEUTRAL_DAILY_BACKGROUND",
+        "dated_news_headline": "South Korean Shares Close Higher",
+        "dated_news_day": "2026-10-23",
+        "interpretation": "Risk-off corroboration only; no verified intraday quote or automatic FX direction changes",
+        "verified_intraday_quote": false,
+        "execution_allowed": false
+      },
+      "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
+      "macro_confirmed": false,
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -1108,16 +484,16 @@
     },
     {
       "pair": "EURJPY",
-      "technical_direction": "NO_RANKED_CANDIDATE",
-      "technical_stage": "UNRANKED",
-      "unified_signal_direction": "UNAVAILABLE",
+      "technical_direction": "SELL",
+      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
@@ -1133,7 +509,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2132,
+          "minutes_until": 2083,
           "time_status": "UPCOMING"
         }
       ],
@@ -1143,7 +519,14 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -1160,7 +543,7 @@
       },
       "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -1170,14 +553,14 @@
       "pair": "EURCAD",
       "technical_direction": "SELL",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "UNAVAILABLE",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
@@ -1193,7 +576,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2132,
+          "minutes_until": 2083,
           "time_status": "UPCOMING"
         }
       ],
@@ -1203,7 +586,14 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -1211,7 +601,7 @@
       },
       "asian_risk_directional_note": "Not a direct directional driver",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -1219,165 +609,37 @@
     },
     {
       "pair": "USDCAD",
-      "technical_direction": "NO_RANKED_CANDIDATE",
-      "technical_stage": "UNRANKED",
-      "unified_signal_direction": "UNAVAILABLE",
+      "technical_direction": "SELL",
+      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
       "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
       "higher_timeframe_conflict": false,
-      "upcoming_48h_events": [
-        {
-          "title": "Flash Manufacturing PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T09:45:00-04:00",
-          "forecast": "55.4",
-          "previous": "57.0",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Flash Services PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T09:45:00-04:00",
-          "forecast": "57.9",
-          "previous": "58.7",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Revised UoM Consumer Sentiment",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T10:00:00-04:00",
-          "forecast": "46.3",
-          "previous": "46.3",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Revised UoM Inflation Expectations",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T10:00:00-04:00",
-          "forecast": "",
-          "previous": "4.7%",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "next_24h_events": [
-        {
-          "title": "Flash Manufacturing PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T09:45:00-04:00",
-          "forecast": "55.4",
-          "previous": "57.0",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Flash Services PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T09:45:00-04:00",
-          "forecast": "57.9",
-          "previous": "58.7",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Revised UoM Consumer Sentiment",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T10:00:00-04:00",
-          "forecast": "46.3",
-          "previous": "46.3",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Revised UoM Inflation Expectations",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T10:00:00-04:00",
-          "forecast": "",
-          "previous": "4.7%",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "imminent_events": [
-        {
-          "title": "Flash Manufacturing PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T09:45:00-04:00",
-          "forecast": "55.4",
-          "previous": "57.0",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Flash Services PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T09:45:00-04:00",
-          "forecast": "57.9",
-          "previous": "58.7",
-          "actual": null,
-          "minutes_until": 17,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Revised UoM Consumer Sentiment",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T10:00:00-04:00",
-          "forecast": "46.3",
-          "previous": "46.3",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "Revised UoM Inflation Expectations",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-23T10:00:00-04:00",
-          "forecast": "",
-          "previous": "4.7%",
-          "actual": null,
-          "minutes_until": 32,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "event_risk": "IMMINENT_EVENT",
+      "upcoming_48h_events": [],
+      "next_24h_events": [],
+      "imminent_events": [],
+      "event_risk": "NO_SCHEDULED_EVENT_24H",
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -1385,7 +647,7 @@
       },
       "asian_risk_directional_note": "Not a direct directional driver",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -1393,16 +655,16 @@
     },
     {
       "pair": "EURGBP",
-      "technical_direction": "NO_RANKED_CANDIDATE",
-      "technical_stage": "UNRANKED",
-      "unified_signal_direction": "UNAVAILABLE",
+      "technical_direction": "BUY",
+      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
+      "unified_signal_direction": "BUY",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "MIXED",
@@ -1418,7 +680,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2132,
+          "minutes_until": 2083,
           "time_status": "UPCOMING"
         },
         {
@@ -1429,7 +691,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2132,
+          "minutes_until": 2083,
           "time_status": "UPCOMING"
         }
       ],
@@ -1439,7 +701,14 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -1447,7 +716,7 @@
       },
       "asian_risk_directional_note": "Not a direct directional driver",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -1455,7 +724,7 @@
     }
   ],
   "fully_macro_verified": false,
-  "unified_signal_generated_at_utc": "2026-10-23T12:20:14.455731+00:00",
+  "unified_signal_generated_at_utc": "2026-10-23T13:47:57.320549+00:00",
   "no_mobile_alerts": true,
   "options_layer": "REMOVED_AT_USER_REQUEST",
   "calendar_first_rule": "Every pair MUST display all upcoming events for both currencies in next 24 hours, regardless of impact. IMMINENT within 120 minutes prevents a normal entry signal; include forecasts and previous values. Do not infer releases from missing actuals.",
@@ -1469,7 +738,6 @@
     "dxy_equities_sentiment",
     "cme_volume_open_interest",
     "retail_positioning",
-    "closed_15m30m_direction",
     "atr_adr_session_levels",
     "independent_live_spreads"
   ],
