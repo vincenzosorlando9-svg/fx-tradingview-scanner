@@ -1,26 +1,26 @@
 {
-  "generated_at_utc": "2026-10-23T19:54:31.945053+00:00",
+  "generated_at_utc": "2026-10-23T20:36:21.241725+00:00",
   "purpose": "FULL_SOURCE_AUDIT_NOT_EXECUTABLE_TRADE_ORDERS",
   "sources": {
     "technicals": {
       "status": "FRESH",
-      "age_minutes": 20.8
+      "age_minutes": 2.0
     },
     "dashboard": {
       "status": "FRESH",
-      "age_minutes": 20.7
+      "age_minutes": 1.9
     },
     "calendar": {
       "status": "FRESH",
-      "age_minutes": 20.8
+      "age_minutes": 4.7
     },
     "ff_markets": {
-      "status": "STALE",
-      "age_minutes": 32.9
+      "status": "FRESH",
+      "age_minutes": 1.8
     },
     "volatility": {
       "status": "FRESH",
-      "age_minutes": 20.8
+      "age_minutes": 2.0
     },
     "kospi_te_public_page": {
       "status": "DATED_DAILY_CONTEXT",
@@ -30,31 +30,31 @@
     },
     "macro_snapshot": {
       "status": "STALE",
-      "age_minutes": 9835.7
+      "age_minutes": 9877.5
     },
     "macro_raw": {
       "status": "STALE",
-      "age_minutes": 9835.7
+      "age_minutes": 9877.6
     },
     "macro_news": {
       "status": "STALE",
-      "age_minutes": 9835.7
+      "age_minutes": 9877.5
     },
     "unified_signals": {
       "status": "FRESH",
-      "age_minutes": 20.6
+      "age_minutes": 1.8
     },
     "economic_actuals": {
       "status": "STALE",
-      "age_minutes": 9835.8
+      "age_minutes": 9877.7
     },
     "range_context": {
       "status": "STALE",
-      "age_minutes": 9835.7
+      "age_minutes": 9877.6
     },
     "retail": {
       "status": "STALE",
-      "age_minutes": 9835.7
+      "age_minutes": 9877.6
     }
   },
   "macro_layers": {
@@ -93,9 +93,9 @@
   "pairs": [
     {
       "pair": "AUDUSD",
-      "technical_direction": "BUY",
+      "technical_direction": "SELL",
       "technical_stage": "QUIET_HOURS",
-      "unified_signal_direction": "BUY",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
@@ -108,7 +108,7 @@
       "h1_ema20_50": "ABOVE_BOTH",
       "h4_ema20_50": "ABOVE_BOTH",
       "timeframes_present": true,
-      "higher_timeframe_conflict": false,
+      "higher_timeframe_conflict": true,
       "upcoming_48h_events": [],
       "next_24h_events": [],
       "imminent_events": [],
@@ -148,9 +148,9 @@
     },
     {
       "pair": "NZDUSD",
-      "technical_direction": "BUY",
+      "technical_direction": "SELL",
       "technical_stage": "QUIET_HOURS",
-      "unified_signal_direction": "BUY",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
@@ -159,11 +159,11 @@
       },
       "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
-      "reference_level_not_live": 0.57024,
+      "reference_level_not_live": null,
       "h1_ema20_50": "ABOVE_BOTH",
       "h4_ema20_50": "ABOVE_BOTH",
       "timeframes_present": true,
-      "higher_timeframe_conflict": false,
+      "higher_timeframe_conflict": true,
       "upcoming_48h_events": [],
       "next_24h_events": [],
       "imminent_events": [],
@@ -203,9 +203,9 @@
     },
     {
       "pair": "EURUSD",
-      "technical_direction": "NONE",
+      "technical_direction": "SELL",
       "technical_stage": "QUIET_HOURS",
-      "unified_signal_direction": "NONE",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
@@ -214,7 +214,7 @@
       },
       "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
-      "reference_level_not_live": null,
+      "reference_level_not_live": 1.11929,
       "h1_ema20_50": "BELOW_BOTH",
       "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
@@ -228,7 +228,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1745,
+          "minutes_until": 1704,
           "time_status": "UPCOMING"
         }
       ],
@@ -261,9 +261,9 @@
     },
     {
       "pair": "GBPUSD",
-      "technical_direction": "BUY",
+      "technical_direction": "SELL",
       "technical_stage": "QUIET_HOURS",
-      "unified_signal_direction": "BUY",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
@@ -272,11 +272,11 @@
       },
       "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
-      "reference_level_not_live": null,
+      "reference_level_not_live": 1.33694,
       "h1_ema20_50": "BELOW_BOTH",
       "h4_ema20_50": "MIXED",
       "timeframes_present": true,
-      "higher_timeframe_conflict": true,
+      "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
         {
           "title": "Daylight Saving Time Shift",
@@ -286,7 +286,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1745,
+          "minutes_until": 1704,
           "time_status": "UPCOMING"
         }
       ],
@@ -319,9 +319,9 @@
     },
     {
       "pair": "USDJPY",
-      "technical_direction": "BUY",
+      "technical_direction": "SELL",
       "technical_stage": "QUIET_HOURS",
-      "unified_signal_direction": "BUY",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
@@ -330,8 +330,8 @@
       },
       "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
-      "reference_level_not_live": null,
-      "h1_ema20_50": "MIXED",
+      "reference_level_not_live": 156.817,
+      "h1_ema20_50": "BELOW_BOTH",
       "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
       "higher_timeframe_conflict": false,
@@ -374,9 +374,9 @@
     },
     {
       "pair": "AUDJPY",
-      "technical_direction": "BUY",
+      "technical_direction": "SELL",
       "technical_stage": "QUIET_HOURS",
-      "unified_signal_direction": "BUY",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
@@ -385,11 +385,11 @@
       },
       "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
-      "reference_level_not_live": 110.408,
+      "reference_level_not_live": null,
       "h1_ema20_50": "ABOVE_BOTH",
-      "h4_ema20_50": "ABOVE_BOTH",
+      "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
-      "higher_timeframe_conflict": false,
+      "higher_timeframe_conflict": true,
       "upcoming_48h_events": [],
       "next_24h_events": [],
       "imminent_events": [],
@@ -429,9 +429,9 @@
     },
     {
       "pair": "NZDJPY",
-      "technical_direction": "BUY",
+      "technical_direction": "SELL",
       "technical_stage": "QUIET_HOURS",
-      "unified_signal_direction": "BUY",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
@@ -441,8 +441,8 @@
       "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
-      "h1_ema20_50": "ABOVE_BOTH",
-      "h4_ema20_50": "ABOVE_BOTH",
+      "h1_ema20_50": "MIXED",
+      "h4_ema20_50": "MIXED",
       "timeframes_present": true,
       "higher_timeframe_conflict": false,
       "upcoming_48h_events": [],
@@ -484,9 +484,9 @@
     },
     {
       "pair": "EURJPY",
-      "technical_direction": "BUY",
+      "technical_direction": "SELL",
       "technical_stage": "QUIET_HOURS",
-      "unified_signal_direction": "BUY",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
@@ -495,11 +495,11 @@
       },
       "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
-      "reference_level_not_live": null,
+      "reference_level_not_live": 175.547,
       "h1_ema20_50": "BELOW_BOTH",
       "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
-      "higher_timeframe_conflict": true,
+      "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
         {
           "title": "Daylight Saving Time Shift",
@@ -509,7 +509,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1745,
+          "minutes_until": 1704,
           "time_status": "UPCOMING"
         }
       ],
@@ -562,7 +562,7 @@
       },
       "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
-      "reference_level_not_live": 1.56818,
+      "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
       "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
@@ -576,7 +576,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1745,
+          "minutes_until": 1704,
           "time_status": "UPCOMING"
         }
       ],
@@ -620,11 +620,11 @@
       },
       "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
-      "reference_level_not_live": 1.40154,
-      "h1_ema20_50": "BELOW_BOTH",
+      "reference_level_not_live": 1.40082,
+      "h1_ema20_50": "MIXED",
       "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
-      "higher_timeframe_conflict": true,
+      "higher_timeframe_conflict": false,
       "upcoming_48h_events": [],
       "next_24h_events": [],
       "imminent_events": [],
@@ -655,9 +655,9 @@
     },
     {
       "pair": "EURGBP",
-      "technical_direction": "SELL",
+      "technical_direction": "BUY",
       "technical_stage": "QUIET_HOURS",
-      "unified_signal_direction": "SELL",
+      "unified_signal_direction": "BUY",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
@@ -666,8 +666,8 @@
       },
       "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
-      "reference_level_not_live": 0.83706,
-      "h1_ema20_50": "BELOW_BOTH",
+      "reference_level_not_live": null,
+      "h1_ema20_50": "MIXED",
       "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
       "higher_timeframe_conflict": false,
@@ -680,7 +680,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1745,
+          "minutes_until": 1704,
           "time_status": "UPCOMING"
         },
         {
@@ -691,7 +691,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1745,
+          "minutes_until": 1704,
           "time_status": "UPCOMING"
         }
       ],
@@ -724,7 +724,7 @@
     }
   ],
   "fully_macro_verified": false,
-  "unified_signal_generated_at_utc": "2026-10-23T19:33:56.892810+00:00",
+  "unified_signal_generated_at_utc": "2026-10-23T20:34:34.987241+00:00",
   "no_mobile_alerts": true,
   "options_layer": "REMOVED_AT_USER_REQUEST",
   "calendar_first_rule": "Every pair MUST display all upcoming events for both currencies in next 24 hours, regardless of impact. IMMINENT within 120 minutes prevents a normal entry signal; include forecasts and previous values. Do not infer releases from missing actuals.",
