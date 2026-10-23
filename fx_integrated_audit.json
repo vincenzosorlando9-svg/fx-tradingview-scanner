@@ -1,26 +1,26 @@
 {
-  "generated_at_utc": "2026-10-23T18:41:55.780754+00:00",
+  "generated_at_utc": "2026-10-23T19:22:31.462701+00:00",
   "purpose": "FULL_SOURCE_AUDIT_NOT_EXECUTABLE_TRADE_ORDERS",
   "sources": {
     "technicals": {
-      "status": "FRESH",
-      "age_minutes": 22.7
+      "status": "STALE",
+      "age_minutes": 63.3
     },
     "dashboard": {
-      "status": "FRESH",
-      "age_minutes": 22.7
+      "status": "STALE",
+      "age_minutes": 63.2
     },
     "calendar": {
       "status": "FRESH",
-      "age_minutes": 5.6
+      "age_minutes": 46.2
     },
     "ff_markets": {
       "status": "FRESH",
-      "age_minutes": 4.4
+      "age_minutes": 0.9
     },
     "volatility": {
-      "status": "FRESH",
-      "age_minutes": 22.7
+      "status": "STALE",
+      "age_minutes": 63.3
     },
     "kospi_te_public_page": {
       "status": "DATED_DAILY_CONTEXT",
@@ -30,31 +30,31 @@
     },
     "macro_snapshot": {
       "status": "STALE",
-      "age_minutes": 9763.1
+      "age_minutes": 9803.7
     },
     "macro_raw": {
       "status": "STALE",
-      "age_minutes": 9763.1
+      "age_minutes": 9803.7
     },
     "macro_news": {
       "status": "STALE",
-      "age_minutes": 9763.1
+      "age_minutes": 9803.7
     },
     "unified_signals": {
-      "status": "FRESH",
-      "age_minutes": 22.5
+      "status": "STALE",
+      "age_minutes": 63.1
     },
     "economic_actuals": {
       "status": "STALE",
-      "age_minutes": 9763.2
+      "age_minutes": 9803.8
     },
     "range_context": {
       "status": "STALE",
-      "age_minutes": 9763.1
+      "age_minutes": 9803.7
     },
     "retail": {
       "status": "STALE",
-      "age_minutes": 9763.1
+      "age_minutes": 9803.7
     }
   },
   "macro_layers": {
@@ -70,7 +70,7 @@
     "cme_volume_open_interest": "PARTIAL_CFTC_WEEKLY_OI_CME_DAILY_DATA_UNVERIFIED",
     "retail_positioning": "UNAVAILABLE_CURRENT",
     "currency_strength_clusters": "DERIVED_FROM_11_FX_PAIRS",
-    "closed_15m30m_direction": "FRESH_TECHNICAL_WATCH_NOT_BROKER_EXECUTION",
+    "closed_15m30m_direction": "STALE_OR_UNAVAILABLE",
     "atr_adr_session_levels": "PARTIAL_LEGACY_ATR_LEVELS",
     "independent_live_spreads": "UNAVAILABLE_BROKER_EXECUTABLE_QUOTE",
     "signal_history": "VERIFIED_RECORDED_SIGNAL_OBSERVATIONS",
@@ -94,15 +94,15 @@
     {
       "pair": "AUDUSD",
       "technical_direction": "BUY",
-      "technical_stage": "QUIET_HOURS",
-      "unified_signal_direction": "BUY",
+      "technical_stage": "EARLY",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": 0.70356,
       "h1_ema20_50": "ABOVE_BOTH",
@@ -116,14 +116,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -149,15 +142,15 @@
     {
       "pair": "NZDUSD",
       "technical_direction": "BUY",
-      "technical_stage": "QUIET_HOURS",
-      "unified_signal_direction": "BUY",
+      "technical_stage": "EARLY",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": 0.57018,
       "h1_ema20_50": "ABOVE_BOTH",
@@ -171,14 +164,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -204,15 +190,15 @@
     {
       "pair": "EURUSD",
       "technical_direction": "SELL",
-      "technical_stage": "QUIET_HOURS",
-      "unified_signal_direction": "SELL",
+      "technical_stage": "EARLY",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": 1.11897,
       "h1_ema20_50": "BELOW_BOTH",
@@ -228,7 +214,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1818,
+          "minutes_until": 1777,
           "time_status": "UPCOMING"
         }
       ],
@@ -238,14 +224,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -261,16 +240,16 @@
     },
     {
       "pair": "GBPUSD",
-      "technical_direction": "SELL",
-      "technical_stage": "QUIET_HOURS",
-      "unified_signal_direction": "SELL",
+      "technical_direction": "NO_RANKED_CANDIDATE",
+      "technical_stage": "UNRANKED",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
@@ -286,7 +265,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1818,
+          "minutes_until": 1777,
           "time_status": "UPCOMING"
         }
       ],
@@ -296,14 +275,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -319,16 +291,16 @@
     },
     {
       "pair": "USDJPY",
-      "technical_direction": "BUY",
-      "technical_stage": "QUIET_HOURS",
-      "unified_signal_direction": "BUY",
+      "technical_direction": "NO_RANKED_CANDIDATE",
+      "technical_stage": "UNRANKED",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "MIXED",
@@ -342,14 +314,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -374,16 +339,16 @@
     },
     {
       "pair": "AUDJPY",
-      "technical_direction": "BUY",
-      "technical_stage": "QUIET_HOURS",
-      "unified_signal_direction": "BUY",
+      "technical_direction": "NO_RANKED_CANDIDATE",
+      "technical_stage": "UNRANKED",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "ABOVE_BOTH",
@@ -397,14 +362,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -429,16 +387,16 @@
     },
     {
       "pair": "NZDJPY",
-      "technical_direction": "BUY",
-      "technical_stage": "QUIET_HOURS",
-      "unified_signal_direction": "BUY",
+      "technical_direction": "NO_RANKED_CANDIDATE",
+      "technical_stage": "UNRANKED",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "ABOVE_BOTH",
@@ -452,14 +410,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -485,15 +436,15 @@
     {
       "pair": "EURJPY",
       "technical_direction": "SELL",
-      "technical_stage": "QUIET_HOURS",
-      "unified_signal_direction": "SELL",
+      "technical_stage": "EARLY",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": 175.525,
       "h1_ema20_50": "BELOW_BOTH",
@@ -509,7 +460,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1818,
+          "minutes_until": 1777,
           "time_status": "UPCOMING"
         }
       ],
@@ -519,14 +470,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -551,16 +495,16 @@
     },
     {
       "pair": "EURCAD",
-      "technical_direction": "SELL",
-      "technical_stage": "QUIET_HOURS",
-      "unified_signal_direction": "SELL",
+      "technical_direction": "NO_RANKED_CANDIDATE",
+      "technical_stage": "UNRANKED",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
@@ -576,7 +520,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1818,
+          "minutes_until": 1777,
           "time_status": "UPCOMING"
         }
       ],
@@ -586,14 +530,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -609,16 +546,16 @@
     },
     {
       "pair": "USDCAD",
-      "technical_direction": "BUY",
-      "technical_stage": "QUIET_HOURS",
-      "unified_signal_direction": "BUY",
+      "technical_direction": "NO_RANKED_CANDIDATE",
+      "technical_stage": "UNRANKED",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "MIXED",
@@ -632,14 +569,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -656,15 +586,15 @@
     {
       "pair": "EURGBP",
       "technical_direction": "SELL",
-      "technical_stage": "QUIET_HOURS",
-      "unified_signal_direction": "SELL",
+      "technical_stage": "EARLY",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": 0.83706,
       "h1_ema20_50": "BELOW_BOTH",
@@ -680,7 +610,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1818,
+          "minutes_until": 1777,
           "time_status": "UPCOMING"
         },
         {
@@ -691,7 +621,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1818,
+          "minutes_until": 1777,
           "time_status": "UPCOMING"
         }
       ],
@@ -701,14 +631,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -738,6 +661,7 @@
     "dxy_equities_sentiment",
     "cme_volume_open_interest",
     "retail_positioning",
+    "closed_15m30m_direction",
     "atr_adr_session_levels",
     "independent_live_spreads"
   ],
