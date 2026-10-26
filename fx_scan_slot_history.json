@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-26T01:40:36.463237+00:00",
+  "generated_at_utc": "2026-10-26T01:45:18.113124+00:00",
   "slots": [
     {
       "scheduled_for_utc": "2026-10-21T15:47:00+00:00",
@@ -10808,7 +10808,7 @@
       "schema_version": 1,
       "scheduled_for_utc": "2026-10-26T01:32:00+00:00",
       "expected_candle_close_utc": "2026-10-26T01:30:00+00:00",
-      "started_at_utc": "2026-10-26T01:40:36.412480+00:00",
+      "started_at_utc": "2026-10-26T01:45:18.036238+00:00",
       "status": "MISSED_SCHEDULED_START_TOO_LATE",
       "attempts": 0,
       "observations": [],
@@ -10820,10 +10820,19 @@
       "timing_basis": "EXACT_UTC_15M_SLOT",
       "trigger_event": "schedule",
       "is_scheduled_trigger": true,
-      "scan_trigger_type": "primary_or_manual",
-      "actual_start_delay_seconds": 516.412,
-      "recorded_at_utc": "2026-10-26T01:40:36.461301+00:00",
-      "commit_at_utc": "NOT_YET_VERIFIED_AT_RECORD_TIME"
+      "scan_trigger_type": "backup",
+      "actual_start_delay_seconds": 798.036,
+      "recorded_at_utc": "2026-10-26T01:45:18.110167+00:00",
+      "commit_at_utc": "NOT_YET_VERIFIED_AT_RECORD_TIME",
+      "previous_attempts_for_slot": [
+        {
+          "started_at_utc": "2026-10-26T01:40:36.412480+00:00",
+          "status": "MISSED_SCHEDULED_START_TOO_LATE",
+          "trigger_event": "schedule",
+          "scan_trigger_type": "primary_or_manual",
+          "missing": []
+        }
+      ]
     }
   ],
   "gap_means_missing_publication_record_not_missing_market_history": true,
