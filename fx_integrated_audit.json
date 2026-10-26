@@ -1,26 +1,26 @@
 {
-  "generated_at_utc": "2026-10-26T20:09:33.727470+00:00",
+  "generated_at_utc": "2026-10-26T20:57:54.279292+00:00",
   "purpose": "FULL_SOURCE_AUDIT_NOT_EXECUTABLE_TRADE_ORDERS",
   "sources": {
     "technicals": {
-      "status": "STALE",
-      "age_minutes": 214.4
+      "status": "FRESH",
+      "age_minutes": 23.9
     },
     "dashboard": {
-      "status": "STALE",
-      "age_minutes": 214.3
+      "status": "FRESH",
+      "age_minutes": 23.8
     },
     "calendar": {
       "status": "FRESH",
-      "age_minutes": 28.2
+      "age_minutes": 23.8
     },
     "ff_markets": {
       "status": "FRESH",
-      "age_minutes": 12.8
+      "age_minutes": 22.8
     },
     "volatility": {
-      "status": "STALE",
-      "age_minutes": 214.4
+      "status": "FRESH",
+      "age_minutes": 23.9
     },
     "kospi_te_public_page": {
       "status": "DATED_DAILY_CONTEXT",
@@ -30,31 +30,31 @@
     },
     "macro_snapshot": {
       "status": "STALE",
-      "age_minutes": 14170.8
+      "age_minutes": 14219.1
     },
     "macro_raw": {
       "status": "STALE",
-      "age_minutes": 14170.8
+      "age_minutes": 14219.1
     },
     "macro_news": {
       "status": "STALE",
-      "age_minutes": 14170.8
+      "age_minutes": 14219.1
     },
     "unified_signals": {
-      "status": "STALE",
-      "age_minutes": 214.2
+      "status": "FRESH",
+      "age_minutes": 23.7
     },
     "economic_actuals": {
       "status": "STALE",
-      "age_minutes": 14170.9
+      "age_minutes": 14219.2
     },
     "range_context": {
       "status": "STALE",
-      "age_minutes": 14170.8
+      "age_minutes": 14219.1
     },
     "retail": {
       "status": "STALE",
-      "age_minutes": 14170.8
+      "age_minutes": 14219.1
     }
   },
   "macro_layers": {
@@ -70,7 +70,7 @@
     "cme_volume_open_interest": "PARTIAL_CFTC_WEEKLY_OI_CME_DAILY_DATA_UNVERIFIED",
     "retail_positioning": "UNAVAILABLE_CURRENT",
     "currency_strength_clusters": "DERIVED_FROM_11_FX_PAIRS",
-    "closed_15m30m_direction": "STALE_OR_UNAVAILABLE",
+    "closed_15m30m_direction": "FRESH_TECHNICAL_WATCH_NOT_BROKER_EXECUTION",
     "atr_adr_session_levels": "PARTIAL_LEGACY_ATR_LEVELS",
     "independent_live_spreads": "UNAVAILABLE_BROKER_EXECUTABLE_QUOTE",
     "signal_history": "VERIFIED_RECORDED_SIGNAL_OBSERVATIONS",
@@ -93,16 +93,16 @@
   "pairs": [
     {
       "pair": "AUDUSD",
-      "technical_direction": "NO_RANKED_CANDIDATE",
-      "technical_stage": "UNRANKED",
-      "unified_signal_direction": "UNAVAILABLE",
+      "technical_direction": "SELL",
+      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
@@ -118,7 +118,7 @@
           "forecast": "",
           "previous": "18.5K",
           "actual": null,
-          "minutes_until": 965,
+          "minutes_until": 917,
           "time_status": "UPCOMING"
         },
         {
@@ -129,7 +129,7 @@
           "forecast": "0.6%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 980,
+          "minutes_until": 932,
           "time_status": "UPCOMING"
         },
         {
@@ -137,10 +137,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T08:30:00-04:00",
-          "forecast": "1.8%",
+          "forecast": "2.0%",
           "previous": "0.0%",
           "actual": null,
-          "minutes_until": 980,
+          "minutes_until": 932,
           "time_status": "UPCOMING"
         },
         {
@@ -148,10 +148,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T09:00:00-04:00",
-          "forecast": "0.1%",
+          "forecast": "0.2%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 1010,
+          "minutes_until": 962,
           "time_status": "UPCOMING"
         },
         {
@@ -159,10 +159,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T09:00:00-04:00",
-          "forecast": "2.7%",
+          "forecast": "2.6%",
           "previous": "2.5%",
           "actual": null,
-          "minutes_until": 1010,
+          "minutes_until": 962,
           "time_status": "UPCOMING"
         },
         {
@@ -170,10 +170,10 @@
           "currency": "USD",
           "impact": "Medium",
           "event_at_et": "2026-10-27T10:00:00-04:00",
-          "forecast": "80.7",
+          "forecast": "81.2",
           "previous": "81.9",
           "actual": null,
-          "minutes_until": 1070,
+          "minutes_until": 1022,
           "time_status": "UPCOMING"
         },
         {
@@ -181,10 +181,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T10:00:00-04:00",
-          "forecast": "649K",
+          "forecast": "651K",
           "previous": "684K",
           "actual": null,
-          "minutes_until": 1070,
+          "minutes_until": 1022,
           "time_status": "UPCOMING"
         },
         {
@@ -192,10 +192,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T10:00:00-04:00",
-          "forecast": "1",
+          "forecast": "0",
           "previous": "-2",
           "actual": null,
-          "minutes_until": 1070,
+          "minutes_until": 1022,
           "time_status": "UPCOMING"
         },
         {
@@ -206,7 +206,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1460,
+          "minutes_until": 1412,
           "time_status": "UPCOMING"
         },
         {
@@ -217,7 +217,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1685,
+          "minutes_until": 1637,
           "time_status": "UPCOMING"
         },
         {
@@ -228,7 +228,7 @@
           "forecast": "0.7%",
           "previous": "0.4%",
           "actual": null,
-          "minutes_until": 1700,
+          "minutes_until": 1652,
           "time_status": "UPCOMING"
         },
         {
@@ -239,7 +239,7 @@
           "forecast": "4.2%",
           "previous": "4.0%",
           "actual": null,
-          "minutes_until": 1700,
+          "minutes_until": 1652,
           "time_status": "UPCOMING"
         },
         {
@@ -250,7 +250,7 @@
           "forecast": "0.3%",
           "previous": "0.2%",
           "actual": null,
-          "minutes_until": 1700,
+          "minutes_until": 1652,
           "time_status": "UPCOMING"
         },
         {
@@ -261,7 +261,7 @@
           "forecast": "-130.8B",
           "previous": "-132.6B",
           "actual": null,
-          "minutes_until": 2420,
+          "minutes_until": 2372,
           "time_status": "UPCOMING"
         },
         {
@@ -272,7 +272,7 @@
           "forecast": "0.4%",
           "previous": "0.7%",
           "actual": null,
-          "minutes_until": 2420,
+          "minutes_until": 2372,
           "time_status": "UPCOMING"
         },
         {
@@ -283,7 +283,7 @@
           "forecast": "",
           "previous": "-0.2%",
           "actual": null,
-          "minutes_until": 2450,
+          "minutes_until": 2402,
           "time_status": "UPCOMING"
         },
         {
@@ -294,7 +294,7 @@
           "forecast": "-0.3M",
           "previous": "-3.1M",
           "actual": null,
-          "minutes_until": 2540,
+          "minutes_until": 2492,
           "time_status": "UPCOMING"
         },
         {
@@ -305,7 +305,7 @@
           "forecast": "4.00%",
           "previous": "4.00%",
           "actual": null,
-          "minutes_until": 2750,
+          "minutes_until": 2702,
           "time_status": "UPCOMING"
         },
         {
@@ -316,7 +316,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2750,
+          "minutes_until": 2702,
           "time_status": "UPCOMING"
         },
         {
@@ -327,7 +327,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2780,
+          "minutes_until": 2732,
           "time_status": "UPCOMING"
         }
       ],
@@ -340,7 +340,7 @@
           "forecast": "",
           "previous": "18.5K",
           "actual": null,
-          "minutes_until": 965,
+          "minutes_until": 917,
           "time_status": "UPCOMING"
         },
         {
@@ -351,7 +351,7 @@
           "forecast": "0.6%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 980,
+          "minutes_until": 932,
           "time_status": "UPCOMING"
         },
         {
@@ -359,10 +359,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T08:30:00-04:00",
-          "forecast": "1.8%",
+          "forecast": "2.0%",
           "previous": "0.0%",
           "actual": null,
-          "minutes_until": 980,
+          "minutes_until": 932,
           "time_status": "UPCOMING"
         },
         {
@@ -370,10 +370,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T09:00:00-04:00",
-          "forecast": "0.1%",
+          "forecast": "0.2%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 1010,
+          "minutes_until": 962,
           "time_status": "UPCOMING"
         },
         {
@@ -381,10 +381,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T09:00:00-04:00",
-          "forecast": "2.7%",
+          "forecast": "2.6%",
           "previous": "2.5%",
           "actual": null,
-          "minutes_until": 1010,
+          "minutes_until": 962,
           "time_status": "UPCOMING"
         },
         {
@@ -392,10 +392,10 @@
           "currency": "USD",
           "impact": "Medium",
           "event_at_et": "2026-10-27T10:00:00-04:00",
-          "forecast": "80.7",
+          "forecast": "81.2",
           "previous": "81.9",
           "actual": null,
-          "minutes_until": 1070,
+          "minutes_until": 1022,
           "time_status": "UPCOMING"
         },
         {
@@ -403,10 +403,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T10:00:00-04:00",
-          "forecast": "649K",
+          "forecast": "651K",
           "previous": "684K",
           "actual": null,
-          "minutes_until": 1070,
+          "minutes_until": 1022,
           "time_status": "UPCOMING"
         },
         {
@@ -414,146 +414,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T10:00:00-04:00",
-          "forecast": "1",
+          "forecast": "0",
           "previous": "-2",
           "actual": null,
-          "minutes_until": 1070,
-          "time_status": "UPCOMING"
-        }
-      ],
-      "imminent_events": [],
-      "event_risk": "EVENT_WITHIN_24H",
-      "calendar_coverage": "VERIFIED",
-      "forexfactory_positioning": null,
-      "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
-      },
-      "asian_risk_context": {
-        "source": "Trading Economics public KOSPI page (no key)",
-        "status": "DATED_DAILY_CONTEXT",
-        "daily_reference_change_pct": -1.46,
-        "daily_reference_level": 5469.0,
-        "reference_date_kst": "2026-10-26",
-        "risk_tier": "NEUTRAL_DAILY_BACKGROUND",
-        "dated_news_headline": "South Korean Shares Fall Ahead of Key Earnings",
-        "dated_news_day": "2026-10-26",
-        "interpretation": "Risk-off corroboration only; no verified intraday quote or automatic FX direction changes",
-        "verified_intraday_quote": false,
-        "execution_allowed": false
-      },
-      "asian_risk_directional_note": "Asian equity risk may affect AUD/NZD, but FX must confirm",
-      "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
-      "entry": null,
-      "stop": null,
-      "tp1": null,
-      "tp2": null
-    },
-    {
-      "pair": "NZDUSD",
-      "technical_direction": "BUY",
-      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "UNAVAILABLE",
-      "macro_alignment": "UNKNOWN",
-      "macro_evidence": [],
-      "publisher_reported_actuals": [],
-      "range_context": {
-        "status": "UNAVAILABLE"
-      },
-      "technical_15m30m_fresh": false,
-      "early_watches_permitted_with_unknown_macro": true,
-      "reference_level_not_live": null,
-      "h1_ema20_50": "BELOW_BOTH",
-      "h4_ema20_50": "MIXED",
-      "timeframes_present": true,
-      "higher_timeframe_conflict": true,
-      "upcoming_48h_events": [
-        {
-          "title": "ADP Weekly Employment Change",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-27T08:15:00-04:00",
-          "forecast": "",
-          "previous": "18.5K",
-          "actual": null,
-          "minutes_until": 965,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Core Durable Goods Orders m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-27T08:30:00-04:00",
-          "forecast": "0.6%",
-          "previous": "0.3%",
-          "actual": null,
-          "minutes_until": 980,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Durable Goods Orders m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-27T08:30:00-04:00",
-          "forecast": "1.8%",
-          "previous": "0.0%",
-          "actual": null,
-          "minutes_until": 980,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "HPI m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-27T09:00:00-04:00",
-          "forecast": "0.1%",
-          "previous": "0.3%",
-          "actual": null,
-          "minutes_until": 1010,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "S&P/CS Composite-20 HPI y/y",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-27T09:00:00-04:00",
-          "forecast": "2.7%",
-          "previous": "2.5%",
-          "actual": null,
-          "minutes_until": 1010,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "CB Consumer Confidence",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-27T10:00:00-04:00",
-          "forecast": "80.7",
-          "previous": "81.9",
-          "actual": null,
-          "minutes_until": 1070,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "New Home Sales",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-27T10:00:00-04:00",
-          "forecast": "649K",
-          "previous": "684K",
-          "actual": null,
-          "minutes_until": 1070,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Richmond Manufacturing Index",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-27T10:00:00-04:00",
-          "forecast": "1",
-          "previous": "-2",
-          "actual": null,
-          "minutes_until": 1070,
+          "minutes_until": 1022,
           "time_status": "UPCOMING"
         },
         {
@@ -564,207 +428,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1460,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Official Cash Rate",
-          "currency": "NZD",
-          "impact": "High",
-          "event_at_et": "2026-10-27T21:00:00-04:00",
-          "forecast": "3.00%",
-          "previous": "2.75%",
-          "actual": null,
-          "minutes_until": 1730,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "RBNZ Rate Statement",
-          "currency": "NZD",
-          "impact": "High",
-          "event_at_et": "2026-10-27T21:00:00-04:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 1730,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "RBNZ Press Conference",
-          "currency": "NZD",
-          "impact": "High",
-          "event_at_et": "2026-10-27T22:00:00-04:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 1790,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Goods Trade Balance",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-28T08:30:00-04:00",
-          "forecast": "-130.8B",
-          "previous": "-132.6B",
-          "actual": null,
-          "minutes_until": 2420,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Prelim Wholesale Inventories m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-28T08:30:00-04:00",
-          "forecast": "0.4%",
-          "previous": "0.7%",
-          "actual": null,
-          "minutes_until": 2420,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "CB Leading Index m/m",
-          "currency": "CNY",
-          "impact": "Low",
-          "event_at_et": "2026-10-28T09:00:00-04:00",
-          "forecast": "",
-          "previous": "-0.2%",
-          "actual": null,
-          "minutes_until": 2450,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Crude Oil Inventories",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-28T10:30:00-04:00",
-          "forecast": "-0.3M",
-          "previous": "-3.1M",
-          "actual": null,
-          "minutes_until": 2540,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Federal Funds Rate",
-          "currency": "USD",
-          "impact": "High",
-          "event_at_et": "2026-10-28T14:00:00-04:00",
-          "forecast": "4.00%",
-          "previous": "4.00%",
-          "actual": null,
-          "minutes_until": 2750,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "FOMC Statement",
-          "currency": "USD",
-          "impact": "High",
-          "event_at_et": "2026-10-28T14:00:00-04:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 2750,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "FOMC Press Conference",
-          "currency": "USD",
-          "impact": "High",
-          "event_at_et": "2026-10-28T14:30:00-04:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 2780,
-          "time_status": "UPCOMING"
-        }
-      ],
-      "next_24h_events": [
-        {
-          "title": "ADP Weekly Employment Change",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-27T08:15:00-04:00",
-          "forecast": "",
-          "previous": "18.5K",
-          "actual": null,
-          "minutes_until": 965,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Core Durable Goods Orders m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-27T08:30:00-04:00",
-          "forecast": "0.6%",
-          "previous": "0.3%",
-          "actual": null,
-          "minutes_until": 980,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Durable Goods Orders m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-27T08:30:00-04:00",
-          "forecast": "1.8%",
-          "previous": "0.0%",
-          "actual": null,
-          "minutes_until": 980,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "HPI m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-27T09:00:00-04:00",
-          "forecast": "0.1%",
-          "previous": "0.3%",
-          "actual": null,
-          "minutes_until": 1010,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "S&P/CS Composite-20 HPI y/y",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-27T09:00:00-04:00",
-          "forecast": "2.7%",
-          "previous": "2.5%",
-          "actual": null,
-          "minutes_until": 1010,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "CB Consumer Confidence",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-27T10:00:00-04:00",
-          "forecast": "80.7",
-          "previous": "81.9",
-          "actual": null,
-          "minutes_until": 1070,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "New Home Sales",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-27T10:00:00-04:00",
-          "forecast": "649K",
-          "previous": "684K",
-          "actual": null,
-          "minutes_until": 1070,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Richmond Manufacturing Index",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-27T10:00:00-04:00",
-          "forecast": "1",
-          "previous": "-2",
-          "actual": null,
-          "minutes_until": 1070,
+          "minutes_until": 1412,
           "time_status": "UPCOMING"
         }
       ],
@@ -773,7 +437,14 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -790,7 +461,372 @@
       },
       "asian_risk_directional_note": "Asian equity risk may affect AUD/NZD, but FX must confirm",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "entry": null,
+      "stop": null,
+      "tp1": null,
+      "tp2": null
+    },
+    {
+      "pair": "NZDUSD",
+      "technical_direction": "SELL",
+      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
+      "unified_signal_direction": "SELL",
+      "macro_alignment": "UNKNOWN",
+      "macro_evidence": [],
+      "publisher_reported_actuals": [],
+      "range_context": {
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+      },
+      "technical_15m30m_fresh": true,
+      "early_watches_permitted_with_unknown_macro": true,
+      "reference_level_not_live": null,
+      "h1_ema20_50": "BELOW_BOTH",
+      "h4_ema20_50": "MIXED",
+      "timeframes_present": true,
+      "higher_timeframe_conflict": false,
+      "upcoming_48h_events": [
+        {
+          "title": "ADP Weekly Employment Change",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-10-27T08:15:00-04:00",
+          "forecast": "",
+          "previous": "18.5K",
+          "actual": null,
+          "minutes_until": 917,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Core Durable Goods Orders m/m",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-10-27T08:30:00-04:00",
+          "forecast": "0.6%",
+          "previous": "0.3%",
+          "actual": null,
+          "minutes_until": 932,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Durable Goods Orders m/m",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-10-27T08:30:00-04:00",
+          "forecast": "2.0%",
+          "previous": "0.0%",
+          "actual": null,
+          "minutes_until": 932,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "HPI m/m",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-10-27T09:00:00-04:00",
+          "forecast": "0.2%",
+          "previous": "0.3%",
+          "actual": null,
+          "minutes_until": 962,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "S&P/CS Composite-20 HPI y/y",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-10-27T09:00:00-04:00",
+          "forecast": "2.6%",
+          "previous": "2.5%",
+          "actual": null,
+          "minutes_until": 962,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "CB Consumer Confidence",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-10-27T10:00:00-04:00",
+          "forecast": "81.2",
+          "previous": "81.9",
+          "actual": null,
+          "minutes_until": 1022,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "New Home Sales",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-10-27T10:00:00-04:00",
+          "forecast": "651K",
+          "previous": "684K",
+          "actual": null,
+          "minutes_until": 1022,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Richmond Manufacturing Index",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-10-27T10:00:00-04:00",
+          "forecast": "0",
+          "previous": "-2",
+          "actual": null,
+          "minutes_until": 1022,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "API Weekly Statistical Bulletin",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-10-27T16:30:00-04:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1412,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Official Cash Rate",
+          "currency": "NZD",
+          "impact": "High",
+          "event_at_et": "2026-10-27T21:00:00-04:00",
+          "forecast": "3.00%",
+          "previous": "2.75%",
+          "actual": null,
+          "minutes_until": 1682,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "RBNZ Rate Statement",
+          "currency": "NZD",
+          "impact": "High",
+          "event_at_et": "2026-10-27T21:00:00-04:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1682,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "RBNZ Press Conference",
+          "currency": "NZD",
+          "impact": "High",
+          "event_at_et": "2026-10-27T22:00:00-04:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1742,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Goods Trade Balance",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-10-28T08:30:00-04:00",
+          "forecast": "-130.8B",
+          "previous": "-132.6B",
+          "actual": null,
+          "minutes_until": 2372,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Prelim Wholesale Inventories m/m",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-10-28T08:30:00-04:00",
+          "forecast": "0.4%",
+          "previous": "0.7%",
+          "actual": null,
+          "minutes_until": 2372,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "CB Leading Index m/m",
+          "currency": "CNY",
+          "impact": "Low",
+          "event_at_et": "2026-10-28T09:00:00-04:00",
+          "forecast": "",
+          "previous": "-0.2%",
+          "actual": null,
+          "minutes_until": 2402,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Crude Oil Inventories",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-10-28T10:30:00-04:00",
+          "forecast": "-0.3M",
+          "previous": "-3.1M",
+          "actual": null,
+          "minutes_until": 2492,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Federal Funds Rate",
+          "currency": "USD",
+          "impact": "High",
+          "event_at_et": "2026-10-28T14:00:00-04:00",
+          "forecast": "4.00%",
+          "previous": "4.00%",
+          "actual": null,
+          "minutes_until": 2702,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Statement",
+          "currency": "USD",
+          "impact": "High",
+          "event_at_et": "2026-10-28T14:00:00-04:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 2702,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Press Conference",
+          "currency": "USD",
+          "impact": "High",
+          "event_at_et": "2026-10-28T14:30:00-04:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 2732,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "next_24h_events": [
+        {
+          "title": "ADP Weekly Employment Change",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-10-27T08:15:00-04:00",
+          "forecast": "",
+          "previous": "18.5K",
+          "actual": null,
+          "minutes_until": 917,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Core Durable Goods Orders m/m",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-10-27T08:30:00-04:00",
+          "forecast": "0.6%",
+          "previous": "0.3%",
+          "actual": null,
+          "minutes_until": 932,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Durable Goods Orders m/m",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-10-27T08:30:00-04:00",
+          "forecast": "2.0%",
+          "previous": "0.0%",
+          "actual": null,
+          "minutes_until": 932,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "HPI m/m",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-10-27T09:00:00-04:00",
+          "forecast": "0.2%",
+          "previous": "0.3%",
+          "actual": null,
+          "minutes_until": 962,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "S&P/CS Composite-20 HPI y/y",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-10-27T09:00:00-04:00",
+          "forecast": "2.6%",
+          "previous": "2.5%",
+          "actual": null,
+          "minutes_until": 962,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "CB Consumer Confidence",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-10-27T10:00:00-04:00",
+          "forecast": "81.2",
+          "previous": "81.9",
+          "actual": null,
+          "minutes_until": 1022,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "New Home Sales",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-10-27T10:00:00-04:00",
+          "forecast": "651K",
+          "previous": "684K",
+          "actual": null,
+          "minutes_until": 1022,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Richmond Manufacturing Index",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-10-27T10:00:00-04:00",
+          "forecast": "0",
+          "previous": "-2",
+          "actual": null,
+          "minutes_until": 1022,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "API Weekly Statistical Bulletin",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-10-27T16:30:00-04:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1412,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "imminent_events": [],
+      "event_risk": "EVENT_WITHIN_24H",
+      "calendar_coverage": "VERIFIED",
+      "forexfactory_positioning": null,
+      "myfxbook_positioning": {
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
+      },
+      "asian_risk_context": {
+        "source": "Trading Economics public KOSPI page (no key)",
+        "status": "DATED_DAILY_CONTEXT",
+        "daily_reference_change_pct": -1.46,
+        "daily_reference_level": 5469.0,
+        "reference_date_kst": "2026-10-26",
+        "risk_tier": "NEUTRAL_DAILY_BACKGROUND",
+        "dated_news_headline": "South Korean Shares Fall Ahead of Key Earnings",
+        "dated_news_day": "2026-10-26",
+        "interpretation": "Risk-off corroboration only; no verified intraday quote or automatic FX direction changes",
+        "verified_intraday_quote": false,
+        "execution_allowed": false
+      },
+      "asian_risk_directional_note": "Asian equity risk may affect AUD/NZD, but FX must confirm",
+      "macro_confirmed": false,
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -798,16 +834,16 @@
     },
     {
       "pair": "EURUSD",
-      "technical_direction": "NO_RANKED_CANDIDATE",
-      "technical_stage": "UNRANKED",
-      "unified_signal_direction": "UNAVAILABLE",
+      "technical_direction": "SELL",
+      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
@@ -820,10 +856,10 @@
           "currency": "EUR",
           "impact": "Low",
           "event_at_et": "2026-10-27T04:00:00-04:00",
-          "forecast": "9.8%",
+          "forecast": "9.9%",
           "previous": "9.9%",
           "actual": null,
-          "minutes_until": 710,
+          "minutes_until": 662,
           "time_status": "UPCOMING"
         },
         {
@@ -831,10 +867,10 @@
           "currency": "EUR",
           "impact": "Low",
           "event_at_et": "2026-10-27T05:00:00-04:00",
-          "forecast": "3.6%",
+          "forecast": "3.5%",
           "previous": "3.5%",
           "actual": null,
-          "minutes_until": 770,
+          "minutes_until": 722,
           "time_status": "UPCOMING"
         },
         {
@@ -845,7 +881,7 @@
           "forecast": "3.1%",
           "previous": "3.1%",
           "actual": null,
-          "minutes_until": 770,
+          "minutes_until": 722,
           "time_status": "UPCOMING"
         },
         {
@@ -856,7 +892,7 @@
           "forecast": "",
           "previous": "18.5K",
           "actual": null,
-          "minutes_until": 965,
+          "minutes_until": 917,
           "time_status": "UPCOMING"
         },
         {
@@ -867,7 +903,7 @@
           "forecast": "0.6%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 980,
+          "minutes_until": 932,
           "time_status": "UPCOMING"
         },
         {
@@ -875,10 +911,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T08:30:00-04:00",
-          "forecast": "1.8%",
+          "forecast": "2.0%",
           "previous": "0.0%",
           "actual": null,
-          "minutes_until": 980,
+          "minutes_until": 932,
           "time_status": "UPCOMING"
         },
         {
@@ -886,10 +922,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T09:00:00-04:00",
-          "forecast": "0.1%",
+          "forecast": "0.2%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 1010,
+          "minutes_until": 962,
           "time_status": "UPCOMING"
         },
         {
@@ -897,10 +933,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T09:00:00-04:00",
-          "forecast": "2.7%",
+          "forecast": "2.6%",
           "previous": "2.5%",
           "actual": null,
-          "minutes_until": 1010,
+          "minutes_until": 962,
           "time_status": "UPCOMING"
         },
         {
@@ -908,10 +944,10 @@
           "currency": "USD",
           "impact": "Medium",
           "event_at_et": "2026-10-27T10:00:00-04:00",
-          "forecast": "80.7",
+          "forecast": "81.2",
           "previous": "81.9",
           "actual": null,
-          "minutes_until": 1070,
+          "minutes_until": 1022,
           "time_status": "UPCOMING"
         },
         {
@@ -919,10 +955,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T10:00:00-04:00",
-          "forecast": "649K",
+          "forecast": "651K",
           "previous": "684K",
           "actual": null,
-          "minutes_until": 1070,
+          "minutes_until": 1022,
           "time_status": "UPCOMING"
         },
         {
@@ -930,10 +966,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T10:00:00-04:00",
-          "forecast": "1",
+          "forecast": "0",
           "previous": "-2",
           "actual": null,
-          "minutes_until": 1070,
+          "minutes_until": 1022,
           "time_status": "UPCOMING"
         },
         {
@@ -944,7 +980,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1460,
+          "minutes_until": 1412,
           "time_status": "UPCOMING"
         },
         {
@@ -955,7 +991,7 @@
           "forecast": "-30.0",
           "previous": "-30.6",
           "actual": null,
-          "minutes_until": 2090,
+          "minutes_until": 2042,
           "time_status": "UPCOMING"
         },
         {
@@ -966,7 +1002,7 @@
           "forecast": "",
           "previous": "3.58|1.2",
           "actual": null,
-          "minutes_until": 2252,
+          "minutes_until": 2204,
           "time_status": "UPCOMING"
         },
         {
@@ -977,7 +1013,7 @@
           "forecast": "-130.8B",
           "previous": "-132.6B",
           "actual": null,
-          "minutes_until": 2420,
+          "minutes_until": 2372,
           "time_status": "UPCOMING"
         },
         {
@@ -988,7 +1024,7 @@
           "forecast": "0.4%",
           "previous": "0.7%",
           "actual": null,
-          "minutes_until": 2420,
+          "minutes_until": 2372,
           "time_status": "UPCOMING"
         },
         {
@@ -999,7 +1035,7 @@
           "forecast": "-0.3M",
           "previous": "-3.1M",
           "actual": null,
-          "minutes_until": 2540,
+          "minutes_until": 2492,
           "time_status": "UPCOMING"
         },
         {
@@ -1010,7 +1046,7 @@
           "forecast": "4.00%",
           "previous": "4.00%",
           "actual": null,
-          "minutes_until": 2750,
+          "minutes_until": 2702,
           "time_status": "UPCOMING"
         },
         {
@@ -1021,7 +1057,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2750,
+          "minutes_until": 2702,
           "time_status": "UPCOMING"
         },
         {
@@ -1032,7 +1068,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2780,
+          "minutes_until": 2732,
           "time_status": "UPCOMING"
         }
       ],
@@ -1042,10 +1078,10 @@
           "currency": "EUR",
           "impact": "Low",
           "event_at_et": "2026-10-27T04:00:00-04:00",
-          "forecast": "9.8%",
+          "forecast": "9.9%",
           "previous": "9.9%",
           "actual": null,
-          "minutes_until": 710,
+          "minutes_until": 662,
           "time_status": "UPCOMING"
         },
         {
@@ -1053,10 +1089,10 @@
           "currency": "EUR",
           "impact": "Low",
           "event_at_et": "2026-10-27T05:00:00-04:00",
-          "forecast": "3.6%",
+          "forecast": "3.5%",
           "previous": "3.5%",
           "actual": null,
-          "minutes_until": 770,
+          "minutes_until": 722,
           "time_status": "UPCOMING"
         },
         {
@@ -1067,7 +1103,7 @@
           "forecast": "3.1%",
           "previous": "3.1%",
           "actual": null,
-          "minutes_until": 770,
+          "minutes_until": 722,
           "time_status": "UPCOMING"
         },
         {
@@ -1078,7 +1114,7 @@
           "forecast": "",
           "previous": "18.5K",
           "actual": null,
-          "minutes_until": 965,
+          "minutes_until": 917,
           "time_status": "UPCOMING"
         },
         {
@@ -1089,7 +1125,7 @@
           "forecast": "0.6%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 980,
+          "minutes_until": 932,
           "time_status": "UPCOMING"
         },
         {
@@ -1097,10 +1133,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T08:30:00-04:00",
-          "forecast": "1.8%",
+          "forecast": "2.0%",
           "previous": "0.0%",
           "actual": null,
-          "minutes_until": 980,
+          "minutes_until": 932,
           "time_status": "UPCOMING"
         },
         {
@@ -1108,10 +1144,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T09:00:00-04:00",
-          "forecast": "0.1%",
+          "forecast": "0.2%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 1010,
+          "minutes_until": 962,
           "time_status": "UPCOMING"
         },
         {
@@ -1119,10 +1155,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T09:00:00-04:00",
-          "forecast": "2.7%",
+          "forecast": "2.6%",
           "previous": "2.5%",
           "actual": null,
-          "minutes_until": 1010,
+          "minutes_until": 962,
           "time_status": "UPCOMING"
         },
         {
@@ -1130,10 +1166,10 @@
           "currency": "USD",
           "impact": "Medium",
           "event_at_et": "2026-10-27T10:00:00-04:00",
-          "forecast": "80.7",
+          "forecast": "81.2",
           "previous": "81.9",
           "actual": null,
-          "minutes_until": 1070,
+          "minutes_until": 1022,
           "time_status": "UPCOMING"
         },
         {
@@ -1141,10 +1177,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T10:00:00-04:00",
-          "forecast": "649K",
+          "forecast": "651K",
           "previous": "684K",
           "actual": null,
-          "minutes_until": 1070,
+          "minutes_until": 1022,
           "time_status": "UPCOMING"
         },
         {
@@ -1152,148 +1188,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T10:00:00-04:00",
-          "forecast": "1",
+          "forecast": "0",
           "previous": "-2",
           "actual": null,
-          "minutes_until": 1070,
-          "time_status": "UPCOMING"
-        }
-      ],
-      "imminent_events": [],
-      "event_risk": "EVENT_WITHIN_24H",
-      "calendar_coverage": "VERIFIED",
-      "forexfactory_positioning": null,
-      "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
-      },
-      "asian_risk_context": {
-        "status": "DATED_DAILY_CONTEXT",
-        "note": "General risk backdrop; not an FX trade signal"
-      },
-      "asian_risk_directional_note": "Not a direct directional driver",
-      "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
-      "entry": null,
-      "stop": null,
-      "tp1": null,
-      "tp2": null
-    },
-    {
-      "pair": "GBPUSD",
-      "technical_direction": "BUY",
-      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "UNAVAILABLE",
-      "macro_alignment": "UNKNOWN",
-      "macro_evidence": [],
-      "publisher_reported_actuals": [],
-      "range_context": {
-        "status": "UNAVAILABLE"
-      },
-      "technical_15m30m_fresh": false,
-      "early_watches_permitted_with_unknown_macro": true,
-      "reference_level_not_live": null,
-      "h1_ema20_50": "BELOW_BOTH",
-      "h4_ema20_50": "MIXED",
-      "timeframes_present": true,
-      "higher_timeframe_conflict": true,
-      "upcoming_48h_events": [
-        {
-          "title": "BRC Shop Price Index y/y",
-          "currency": "GBP",
-          "impact": "Low",
-          "event_at_et": "2026-10-26T20:01:00-04:00",
-          "forecast": "1.6%",
-          "previous": "1.4%",
-          "actual": null,
-          "minutes_until": 231,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "ADP Weekly Employment Change",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-27T08:15:00-04:00",
-          "forecast": "",
-          "previous": "18.5K",
-          "actual": null,
-          "minutes_until": 965,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Core Durable Goods Orders m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-27T08:30:00-04:00",
-          "forecast": "0.6%",
-          "previous": "0.3%",
-          "actual": null,
-          "minutes_until": 980,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Durable Goods Orders m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-27T08:30:00-04:00",
-          "forecast": "1.8%",
-          "previous": "0.0%",
-          "actual": null,
-          "minutes_until": 980,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "HPI m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-27T09:00:00-04:00",
-          "forecast": "0.1%",
-          "previous": "0.3%",
-          "actual": null,
-          "minutes_until": 1010,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "S&P/CS Composite-20 HPI y/y",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-27T09:00:00-04:00",
-          "forecast": "2.7%",
-          "previous": "2.5%",
-          "actual": null,
-          "minutes_until": 1010,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "CB Consumer Confidence",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-10-27T10:00:00-04:00",
-          "forecast": "80.7",
-          "previous": "81.9",
-          "actual": null,
-          "minutes_until": 1070,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "New Home Sales",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-27T10:00:00-04:00",
-          "forecast": "649K",
-          "previous": "684K",
-          "actual": null,
-          "minutes_until": 1070,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Richmond Manufacturing Index",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-10-27T10:00:00-04:00",
-          "forecast": "1",
-          "previous": "-2",
-          "actual": null,
-          "minutes_until": 1070,
+          "minutes_until": 1022,
           "time_status": "UPCOMING"
         },
         {
@@ -1304,7 +1202,163 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1460,
+          "minutes_until": 1412,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "imminent_events": [],
+      "event_risk": "EVENT_WITHIN_24H",
+      "calendar_coverage": "VERIFIED",
+      "forexfactory_positioning": null,
+      "myfxbook_positioning": {
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
+      },
+      "asian_risk_context": {
+        "status": "DATED_DAILY_CONTEXT",
+        "note": "General risk backdrop; not an FX trade signal"
+      },
+      "asian_risk_directional_note": "Not a direct directional driver",
+      "macro_confirmed": false,
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "entry": null,
+      "stop": null,
+      "tp1": null,
+      "tp2": null
+    },
+    {
+      "pair": "GBPUSD",
+      "technical_direction": "SELL",
+      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
+      "unified_signal_direction": "SELL",
+      "macro_alignment": "UNKNOWN",
+      "macro_evidence": [],
+      "publisher_reported_actuals": [],
+      "range_context": {
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+      },
+      "technical_15m30m_fresh": true,
+      "early_watches_permitted_with_unknown_macro": true,
+      "reference_level_not_live": null,
+      "h1_ema20_50": "BELOW_BOTH",
+      "h4_ema20_50": "BELOW_BOTH",
+      "timeframes_present": true,
+      "higher_timeframe_conflict": false,
+      "upcoming_48h_events": [
+        {
+          "title": "BRC Shop Price Index y/y",
+          "currency": "GBP",
+          "impact": "Low",
+          "event_at_et": "2026-10-26T20:01:00-04:00",
+          "forecast": "1.6%",
+          "previous": "1.4%",
+          "actual": null,
+          "minutes_until": 183,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "ADP Weekly Employment Change",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-10-27T08:15:00-04:00",
+          "forecast": "",
+          "previous": "18.5K",
+          "actual": null,
+          "minutes_until": 917,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Core Durable Goods Orders m/m",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-10-27T08:30:00-04:00",
+          "forecast": "0.6%",
+          "previous": "0.3%",
+          "actual": null,
+          "minutes_until": 932,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Durable Goods Orders m/m",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-10-27T08:30:00-04:00",
+          "forecast": "2.0%",
+          "previous": "0.0%",
+          "actual": null,
+          "minutes_until": 932,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "HPI m/m",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-10-27T09:00:00-04:00",
+          "forecast": "0.2%",
+          "previous": "0.3%",
+          "actual": null,
+          "minutes_until": 962,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "S&P/CS Composite-20 HPI y/y",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-10-27T09:00:00-04:00",
+          "forecast": "2.6%",
+          "previous": "2.5%",
+          "actual": null,
+          "minutes_until": 962,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "CB Consumer Confidence",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-10-27T10:00:00-04:00",
+          "forecast": "81.2",
+          "previous": "81.9",
+          "actual": null,
+          "minutes_until": 1022,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "New Home Sales",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-10-27T10:00:00-04:00",
+          "forecast": "651K",
+          "previous": "684K",
+          "actual": null,
+          "minutes_until": 1022,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Richmond Manufacturing Index",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-10-27T10:00:00-04:00",
+          "forecast": "0",
+          "previous": "-2",
+          "actual": null,
+          "minutes_until": 1022,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "API Weekly Statistical Bulletin",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-10-27T16:30:00-04:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1412,
           "time_status": "UPCOMING"
         },
         {
@@ -1315,7 +1369,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2420,
+          "minutes_until": 2372,
           "time_status": "UPCOMING"
         },
         {
@@ -1326,7 +1380,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2420,
+          "minutes_until": 2372,
           "time_status": "UPCOMING"
         },
         {
@@ -1337,7 +1391,7 @@
           "forecast": "-130.8B",
           "previous": "-132.6B",
           "actual": null,
-          "minutes_until": 2420,
+          "minutes_until": 2372,
           "time_status": "UPCOMING"
         },
         {
@@ -1348,7 +1402,7 @@
           "forecast": "0.4%",
           "previous": "0.7%",
           "actual": null,
-          "minutes_until": 2420,
+          "minutes_until": 2372,
           "time_status": "UPCOMING"
         },
         {
@@ -1359,7 +1413,7 @@
           "forecast": "-0.3M",
           "previous": "-3.1M",
           "actual": null,
-          "minutes_until": 2540,
+          "minutes_until": 2492,
           "time_status": "UPCOMING"
         },
         {
@@ -1370,7 +1424,7 @@
           "forecast": "4.00%",
           "previous": "4.00%",
           "actual": null,
-          "minutes_until": 2750,
+          "minutes_until": 2702,
           "time_status": "UPCOMING"
         },
         {
@@ -1381,7 +1435,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2750,
+          "minutes_until": 2702,
           "time_status": "UPCOMING"
         },
         {
@@ -1392,7 +1446,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2780,
+          "minutes_until": 2732,
           "time_status": "UPCOMING"
         }
       ],
@@ -1405,7 +1459,7 @@
           "forecast": "1.6%",
           "previous": "1.4%",
           "actual": null,
-          "minutes_until": 231,
+          "minutes_until": 183,
           "time_status": "UPCOMING"
         },
         {
@@ -1416,7 +1470,7 @@
           "forecast": "",
           "previous": "18.5K",
           "actual": null,
-          "minutes_until": 965,
+          "minutes_until": 917,
           "time_status": "UPCOMING"
         },
         {
@@ -1427,7 +1481,7 @@
           "forecast": "0.6%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 980,
+          "minutes_until": 932,
           "time_status": "UPCOMING"
         },
         {
@@ -1435,10 +1489,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T08:30:00-04:00",
-          "forecast": "1.8%",
+          "forecast": "2.0%",
           "previous": "0.0%",
           "actual": null,
-          "minutes_until": 980,
+          "minutes_until": 932,
           "time_status": "UPCOMING"
         },
         {
@@ -1446,10 +1500,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T09:00:00-04:00",
-          "forecast": "0.1%",
+          "forecast": "0.2%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 1010,
+          "minutes_until": 962,
           "time_status": "UPCOMING"
         },
         {
@@ -1457,10 +1511,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T09:00:00-04:00",
-          "forecast": "2.7%",
+          "forecast": "2.6%",
           "previous": "2.5%",
           "actual": null,
-          "minutes_until": 1010,
+          "minutes_until": 962,
           "time_status": "UPCOMING"
         },
         {
@@ -1468,10 +1522,10 @@
           "currency": "USD",
           "impact": "Medium",
           "event_at_et": "2026-10-27T10:00:00-04:00",
-          "forecast": "80.7",
+          "forecast": "81.2",
           "previous": "81.9",
           "actual": null,
-          "minutes_until": 1070,
+          "minutes_until": 1022,
           "time_status": "UPCOMING"
         },
         {
@@ -1479,10 +1533,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T10:00:00-04:00",
-          "forecast": "649K",
+          "forecast": "651K",
           "previous": "684K",
           "actual": null,
-          "minutes_until": 1070,
+          "minutes_until": 1022,
           "time_status": "UPCOMING"
         },
         {
@@ -1490,10 +1544,21 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T10:00:00-04:00",
-          "forecast": "1",
+          "forecast": "0",
           "previous": "-2",
           "actual": null,
-          "minutes_until": 1070,
+          "minutes_until": 1022,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "API Weekly Statistical Bulletin",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-10-27T16:30:00-04:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1412,
           "time_status": "UPCOMING"
         }
       ],
@@ -1502,7 +1567,14 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -1510,7 +1582,7 @@
       },
       "asian_risk_directional_note": "Not a direct directional driver",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -1518,16 +1590,16 @@
     },
     {
       "pair": "USDJPY",
-      "technical_direction": "NO_RANKED_CANDIDATE",
-      "technical_stage": "UNRANKED",
-      "unified_signal_direction": "UNAVAILABLE",
+      "technical_direction": "BUY",
+      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
+      "unified_signal_direction": "BUY",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "ABOVE_BOTH",
@@ -1543,7 +1615,7 @@
           "forecast": "3.7%",
           "previous": "3.7%",
           "actual": null,
-          "minutes_until": 220,
+          "minutes_until": 172,
           "time_status": "UPCOMING"
         },
         {
@@ -1554,7 +1626,7 @@
           "forecast": "1.9%",
           "previous": "1.8%",
           "actual": null,
-          "minutes_until": 530,
+          "minutes_until": 482,
           "time_status": "UPCOMING"
         },
         {
@@ -1565,7 +1637,7 @@
           "forecast": "",
           "previous": "18.5K",
           "actual": null,
-          "minutes_until": 965,
+          "minutes_until": 917,
           "time_status": "UPCOMING"
         },
         {
@@ -1576,7 +1648,7 @@
           "forecast": "0.6%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 980,
+          "minutes_until": 932,
           "time_status": "UPCOMING"
         },
         {
@@ -1584,10 +1656,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T08:30:00-04:00",
-          "forecast": "1.8%",
+          "forecast": "2.0%",
           "previous": "0.0%",
           "actual": null,
-          "minutes_until": 980,
+          "minutes_until": 932,
           "time_status": "UPCOMING"
         },
         {
@@ -1595,10 +1667,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T09:00:00-04:00",
-          "forecast": "0.1%",
+          "forecast": "0.2%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 1010,
+          "minutes_until": 962,
           "time_status": "UPCOMING"
         },
         {
@@ -1606,10 +1678,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T09:00:00-04:00",
-          "forecast": "2.7%",
+          "forecast": "2.6%",
           "previous": "2.5%",
           "actual": null,
-          "minutes_until": 1010,
+          "minutes_until": 962,
           "time_status": "UPCOMING"
         },
         {
@@ -1617,10 +1689,10 @@
           "currency": "USD",
           "impact": "Medium",
           "event_at_et": "2026-10-27T10:00:00-04:00",
-          "forecast": "80.7",
+          "forecast": "81.2",
           "previous": "81.9",
           "actual": null,
-          "minutes_until": 1070,
+          "minutes_until": 1022,
           "time_status": "UPCOMING"
         },
         {
@@ -1628,10 +1700,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T10:00:00-04:00",
-          "forecast": "649K",
+          "forecast": "651K",
           "previous": "684K",
           "actual": null,
-          "minutes_until": 1070,
+          "minutes_until": 1022,
           "time_status": "UPCOMING"
         },
         {
@@ -1639,10 +1711,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T10:00:00-04:00",
-          "forecast": "1",
+          "forecast": "0",
           "previous": "-2",
           "actual": null,
-          "minutes_until": 1070,
+          "minutes_until": 1022,
           "time_status": "UPCOMING"
         },
         {
@@ -1653,7 +1725,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1460,
+          "minutes_until": 1412,
           "time_status": "UPCOMING"
         },
         {
@@ -1664,7 +1736,7 @@
           "forecast": "-130.8B",
           "previous": "-132.6B",
           "actual": null,
-          "minutes_until": 2420,
+          "minutes_until": 2372,
           "time_status": "UPCOMING"
         },
         {
@@ -1675,7 +1747,7 @@
           "forecast": "0.4%",
           "previous": "0.7%",
           "actual": null,
-          "minutes_until": 2420,
+          "minutes_until": 2372,
           "time_status": "UPCOMING"
         },
         {
@@ -1686,7 +1758,7 @@
           "forecast": "-0.3M",
           "previous": "-3.1M",
           "actual": null,
-          "minutes_until": 2540,
+          "minutes_until": 2492,
           "time_status": "UPCOMING"
         },
         {
@@ -1697,7 +1769,7 @@
           "forecast": "4.00%",
           "previous": "4.00%",
           "actual": null,
-          "minutes_until": 2750,
+          "minutes_until": 2702,
           "time_status": "UPCOMING"
         },
         {
@@ -1708,7 +1780,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2750,
+          "minutes_until": 2702,
           "time_status": "UPCOMING"
         },
         {
@@ -1719,7 +1791,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2780,
+          "minutes_until": 2732,
           "time_status": "UPCOMING"
         }
       ],
@@ -1732,7 +1804,7 @@
           "forecast": "3.7%",
           "previous": "3.7%",
           "actual": null,
-          "minutes_until": 220,
+          "minutes_until": 172,
           "time_status": "UPCOMING"
         },
         {
@@ -1743,7 +1815,7 @@
           "forecast": "1.9%",
           "previous": "1.8%",
           "actual": null,
-          "minutes_until": 530,
+          "minutes_until": 482,
           "time_status": "UPCOMING"
         },
         {
@@ -1754,7 +1826,7 @@
           "forecast": "",
           "previous": "18.5K",
           "actual": null,
-          "minutes_until": 965,
+          "minutes_until": 917,
           "time_status": "UPCOMING"
         },
         {
@@ -1765,7 +1837,7 @@
           "forecast": "0.6%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 980,
+          "minutes_until": 932,
           "time_status": "UPCOMING"
         },
         {
@@ -1773,10 +1845,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T08:30:00-04:00",
-          "forecast": "1.8%",
+          "forecast": "2.0%",
           "previous": "0.0%",
           "actual": null,
-          "minutes_until": 980,
+          "minutes_until": 932,
           "time_status": "UPCOMING"
         },
         {
@@ -1784,10 +1856,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T09:00:00-04:00",
-          "forecast": "0.1%",
+          "forecast": "0.2%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 1010,
+          "minutes_until": 962,
           "time_status": "UPCOMING"
         },
         {
@@ -1795,10 +1867,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T09:00:00-04:00",
-          "forecast": "2.7%",
+          "forecast": "2.6%",
           "previous": "2.5%",
           "actual": null,
-          "minutes_until": 1010,
+          "minutes_until": 962,
           "time_status": "UPCOMING"
         },
         {
@@ -1806,10 +1878,10 @@
           "currency": "USD",
           "impact": "Medium",
           "event_at_et": "2026-10-27T10:00:00-04:00",
-          "forecast": "80.7",
+          "forecast": "81.2",
           "previous": "81.9",
           "actual": null,
-          "minutes_until": 1070,
+          "minutes_until": 1022,
           "time_status": "UPCOMING"
         },
         {
@@ -1817,10 +1889,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T10:00:00-04:00",
-          "forecast": "649K",
+          "forecast": "651K",
           "previous": "684K",
           "actual": null,
-          "minutes_until": 1070,
+          "minutes_until": 1022,
           "time_status": "UPCOMING"
         },
         {
@@ -1828,10 +1900,21 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T10:00:00-04:00",
-          "forecast": "1",
+          "forecast": "0",
           "previous": "-2",
           "actual": null,
-          "minutes_until": 1070,
+          "minutes_until": 1022,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "API Weekly Statistical Bulletin",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-10-27T16:30:00-04:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1412,
           "time_status": "UPCOMING"
         }
       ],
@@ -1840,7 +1923,14 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -1857,7 +1947,7 @@
       },
       "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -1865,22 +1955,22 @@
     },
     {
       "pair": "AUDJPY",
-      "technical_direction": "NO_RANKED_CANDIDATE",
-      "technical_stage": "UNRANKED",
-      "unified_signal_direction": "UNAVAILABLE",
+      "technical_direction": "SELL",
+      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "ABOVE_BOTH",
       "h4_ema20_50": "ABOVE_BOTH",
       "timeframes_present": true,
-      "higher_timeframe_conflict": false,
+      "higher_timeframe_conflict": true,
       "upcoming_48h_events": [
         {
           "title": "SPPI y/y",
@@ -1890,7 +1980,7 @@
           "forecast": "3.7%",
           "previous": "3.7%",
           "actual": null,
-          "minutes_until": 220,
+          "minutes_until": 172,
           "time_status": "UPCOMING"
         },
         {
@@ -1901,7 +1991,7 @@
           "forecast": "1.9%",
           "previous": "1.8%",
           "actual": null,
-          "minutes_until": 530,
+          "minutes_until": 482,
           "time_status": "UPCOMING"
         },
         {
@@ -1912,7 +2002,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1685,
+          "minutes_until": 1637,
           "time_status": "UPCOMING"
         },
         {
@@ -1923,7 +2013,7 @@
           "forecast": "0.7%",
           "previous": "0.4%",
           "actual": null,
-          "minutes_until": 1700,
+          "minutes_until": 1652,
           "time_status": "UPCOMING"
         },
         {
@@ -1934,7 +2024,7 @@
           "forecast": "4.2%",
           "previous": "4.0%",
           "actual": null,
-          "minutes_until": 1700,
+          "minutes_until": 1652,
           "time_status": "UPCOMING"
         },
         {
@@ -1945,7 +2035,7 @@
           "forecast": "0.3%",
           "previous": "0.2%",
           "actual": null,
-          "minutes_until": 1700,
+          "minutes_until": 1652,
           "time_status": "UPCOMING"
         },
         {
@@ -1956,7 +2046,7 @@
           "forecast": "",
           "previous": "-0.2%",
           "actual": null,
-          "minutes_until": 2450,
+          "minutes_until": 2402,
           "time_status": "UPCOMING"
         }
       ],
@@ -1969,7 +2059,7 @@
           "forecast": "3.7%",
           "previous": "3.7%",
           "actual": null,
-          "minutes_until": 220,
+          "minutes_until": 172,
           "time_status": "UPCOMING"
         },
         {
@@ -1980,7 +2070,7 @@
           "forecast": "1.9%",
           "previous": "1.8%",
           "actual": null,
-          "minutes_until": 530,
+          "minutes_until": 482,
           "time_status": "UPCOMING"
         }
       ],
@@ -1989,7 +2079,14 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -2006,7 +2103,7 @@
       },
       "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -2014,22 +2111,22 @@
     },
     {
       "pair": "NZDJPY",
-      "technical_direction": "BUY",
+      "technical_direction": "SELL",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "UNAVAILABLE",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "ABOVE_BOTH",
       "h4_ema20_50": "ABOVE_BOTH",
       "timeframes_present": true,
-      "higher_timeframe_conflict": false,
+      "higher_timeframe_conflict": true,
       "upcoming_48h_events": [
         {
           "title": "SPPI y/y",
@@ -2039,7 +2136,7 @@
           "forecast": "3.7%",
           "previous": "3.7%",
           "actual": null,
-          "minutes_until": 220,
+          "minutes_until": 172,
           "time_status": "UPCOMING"
         },
         {
@@ -2050,7 +2147,7 @@
           "forecast": "1.9%",
           "previous": "1.8%",
           "actual": null,
-          "minutes_until": 530,
+          "minutes_until": 482,
           "time_status": "UPCOMING"
         },
         {
@@ -2061,7 +2158,7 @@
           "forecast": "3.00%",
           "previous": "2.75%",
           "actual": null,
-          "minutes_until": 1730,
+          "minutes_until": 1682,
           "time_status": "UPCOMING"
         },
         {
@@ -2072,7 +2169,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1730,
+          "minutes_until": 1682,
           "time_status": "UPCOMING"
         },
         {
@@ -2083,7 +2180,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1790,
+          "minutes_until": 1742,
           "time_status": "UPCOMING"
         },
         {
@@ -2094,7 +2191,7 @@
           "forecast": "",
           "previous": "-0.2%",
           "actual": null,
-          "minutes_until": 2450,
+          "minutes_until": 2402,
           "time_status": "UPCOMING"
         }
       ],
@@ -2107,7 +2204,7 @@
           "forecast": "3.7%",
           "previous": "3.7%",
           "actual": null,
-          "minutes_until": 220,
+          "minutes_until": 172,
           "time_status": "UPCOMING"
         },
         {
@@ -2118,7 +2215,7 @@
           "forecast": "1.9%",
           "previous": "1.8%",
           "actual": null,
-          "minutes_until": 530,
+          "minutes_until": 482,
           "time_status": "UPCOMING"
         }
       ],
@@ -2127,7 +2224,14 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -2144,7 +2248,7 @@
       },
       "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -2152,19 +2256,19 @@
     },
     {
       "pair": "EURJPY",
-      "technical_direction": "NO_RANKED_CANDIDATE",
-      "technical_stage": "UNRANKED",
-      "unified_signal_direction": "UNAVAILABLE",
+      "technical_direction": "SELL",
+      "technical_stage": "EARLY_M15_M30_MOMENTUM",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
-      "h1_ema20_50": "ABOVE_BOTH",
+      "h1_ema20_50": "BELOW_BOTH",
       "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
       "higher_timeframe_conflict": false,
@@ -2177,7 +2281,7 @@
           "forecast": "3.7%",
           "previous": "3.7%",
           "actual": null,
-          "minutes_until": 220,
+          "minutes_until": 172,
           "time_status": "UPCOMING"
         },
         {
@@ -2188,7 +2292,7 @@
           "forecast": "1.9%",
           "previous": "1.8%",
           "actual": null,
-          "minutes_until": 530,
+          "minutes_until": 482,
           "time_status": "UPCOMING"
         },
         {
@@ -2196,10 +2300,10 @@
           "currency": "EUR",
           "impact": "Low",
           "event_at_et": "2026-10-27T04:00:00-04:00",
-          "forecast": "9.8%",
+          "forecast": "9.9%",
           "previous": "9.9%",
           "actual": null,
-          "minutes_until": 710,
+          "minutes_until": 662,
           "time_status": "UPCOMING"
         },
         {
@@ -2207,10 +2311,10 @@
           "currency": "EUR",
           "impact": "Low",
           "event_at_et": "2026-10-27T05:00:00-04:00",
-          "forecast": "3.6%",
+          "forecast": "3.5%",
           "previous": "3.5%",
           "actual": null,
-          "minutes_until": 770,
+          "minutes_until": 722,
           "time_status": "UPCOMING"
         },
         {
@@ -2221,7 +2325,7 @@
           "forecast": "3.1%",
           "previous": "3.1%",
           "actual": null,
-          "minutes_until": 770,
+          "minutes_until": 722,
           "time_status": "UPCOMING"
         },
         {
@@ -2232,7 +2336,7 @@
           "forecast": "-30.0",
           "previous": "-30.6",
           "actual": null,
-          "minutes_until": 2090,
+          "minutes_until": 2042,
           "time_status": "UPCOMING"
         },
         {
@@ -2243,7 +2347,7 @@
           "forecast": "",
           "previous": "3.58|1.2",
           "actual": null,
-          "minutes_until": 2252,
+          "minutes_until": 2204,
           "time_status": "UPCOMING"
         }
       ],
@@ -2256,7 +2360,7 @@
           "forecast": "3.7%",
           "previous": "3.7%",
           "actual": null,
-          "minutes_until": 220,
+          "minutes_until": 172,
           "time_status": "UPCOMING"
         },
         {
@@ -2267,7 +2371,7 @@
           "forecast": "1.9%",
           "previous": "1.8%",
           "actual": null,
-          "minutes_until": 530,
+          "minutes_until": 482,
           "time_status": "UPCOMING"
         },
         {
@@ -2275,10 +2379,10 @@
           "currency": "EUR",
           "impact": "Low",
           "event_at_et": "2026-10-27T04:00:00-04:00",
-          "forecast": "9.8%",
+          "forecast": "9.9%",
           "previous": "9.9%",
           "actual": null,
-          "minutes_until": 710,
+          "minutes_until": 662,
           "time_status": "UPCOMING"
         },
         {
@@ -2286,10 +2390,10 @@
           "currency": "EUR",
           "impact": "Low",
           "event_at_et": "2026-10-27T05:00:00-04:00",
-          "forecast": "3.6%",
+          "forecast": "3.5%",
           "previous": "3.5%",
           "actual": null,
-          "minutes_until": 770,
+          "minutes_until": 722,
           "time_status": "UPCOMING"
         },
         {
@@ -2300,7 +2404,7 @@
           "forecast": "3.1%",
           "previous": "3.1%",
           "actual": null,
-          "minutes_until": 770,
+          "minutes_until": 722,
           "time_status": "UPCOMING"
         }
       ],
@@ -2309,7 +2413,14 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -2326,7 +2437,7 @@
       },
       "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -2336,14 +2447,14 @@
       "pair": "EURCAD",
       "technical_direction": "SELL",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "UNAVAILABLE",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
@@ -2356,10 +2467,10 @@
           "currency": "EUR",
           "impact": "Low",
           "event_at_et": "2026-10-27T04:00:00-04:00",
-          "forecast": "9.8%",
+          "forecast": "9.9%",
           "previous": "9.9%",
           "actual": null,
-          "minutes_until": 710,
+          "minutes_until": 662,
           "time_status": "UPCOMING"
         },
         {
@@ -2367,10 +2478,10 @@
           "currency": "EUR",
           "impact": "Low",
           "event_at_et": "2026-10-27T05:00:00-04:00",
-          "forecast": "3.6%",
+          "forecast": "3.5%",
           "previous": "3.5%",
           "actual": null,
-          "minutes_until": 770,
+          "minutes_until": 722,
           "time_status": "UPCOMING"
         },
         {
@@ -2381,7 +2492,7 @@
           "forecast": "3.1%",
           "previous": "3.1%",
           "actual": null,
-          "minutes_until": 770,
+          "minutes_until": 722,
           "time_status": "UPCOMING"
         },
         {
@@ -2392,7 +2503,7 @@
           "forecast": "-30.0",
           "previous": "-30.6",
           "actual": null,
-          "minutes_until": 2090,
+          "minutes_until": 2042,
           "time_status": "UPCOMING"
         },
         {
@@ -2403,7 +2514,7 @@
           "forecast": "",
           "previous": "3.58|1.2",
           "actual": null,
-          "minutes_until": 2252,
+          "minutes_until": 2204,
           "time_status": "UPCOMING"
         },
         {
@@ -2414,7 +2525,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2495,
+          "minutes_until": 2447,
           "time_status": "UPCOMING"
         },
         {
@@ -2425,7 +2536,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2495,
+          "minutes_until": 2447,
           "time_status": "UPCOMING"
         },
         {
@@ -2436,7 +2547,7 @@
           "forecast": "2.50%",
           "previous": "2.25%",
           "actual": null,
-          "minutes_until": 2495,
+          "minutes_until": 2447,
           "time_status": "UPCOMING"
         },
         {
@@ -2447,7 +2558,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2540,
+          "minutes_until": 2492,
           "time_status": "UPCOMING"
         }
       ],
@@ -2457,10 +2568,10 @@
           "currency": "EUR",
           "impact": "Low",
           "event_at_et": "2026-10-27T04:00:00-04:00",
-          "forecast": "9.8%",
+          "forecast": "9.9%",
           "previous": "9.9%",
           "actual": null,
-          "minutes_until": 710,
+          "minutes_until": 662,
           "time_status": "UPCOMING"
         },
         {
@@ -2468,10 +2579,10 @@
           "currency": "EUR",
           "impact": "Low",
           "event_at_et": "2026-10-27T05:00:00-04:00",
-          "forecast": "3.6%",
+          "forecast": "3.5%",
           "previous": "3.5%",
           "actual": null,
-          "minutes_until": 770,
+          "minutes_until": 722,
           "time_status": "UPCOMING"
         },
         {
@@ -2482,7 +2593,7 @@
           "forecast": "3.1%",
           "previous": "3.1%",
           "actual": null,
-          "minutes_until": 770,
+          "minutes_until": 722,
           "time_status": "UPCOMING"
         }
       ],
@@ -2491,7 +2602,14 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -2499,7 +2617,7 @@
       },
       "asian_risk_directional_note": "Not a direct directional driver",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -2507,22 +2625,22 @@
     },
     {
       "pair": "USDCAD",
-      "technical_direction": "SELL",
+      "technical_direction": "BUY",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "UNAVAILABLE",
+      "unified_signal_direction": "BUY",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "ABOVE_BOTH",
       "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
-      "higher_timeframe_conflict": true,
+      "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
         {
           "title": "ADP Weekly Employment Change",
@@ -2532,7 +2650,7 @@
           "forecast": "",
           "previous": "18.5K",
           "actual": null,
-          "minutes_until": 965,
+          "minutes_until": 917,
           "time_status": "UPCOMING"
         },
         {
@@ -2543,7 +2661,7 @@
           "forecast": "0.6%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 980,
+          "minutes_until": 932,
           "time_status": "UPCOMING"
         },
         {
@@ -2551,10 +2669,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T08:30:00-04:00",
-          "forecast": "1.8%",
+          "forecast": "2.0%",
           "previous": "0.0%",
           "actual": null,
-          "minutes_until": 980,
+          "minutes_until": 932,
           "time_status": "UPCOMING"
         },
         {
@@ -2562,10 +2680,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T09:00:00-04:00",
-          "forecast": "0.1%",
+          "forecast": "0.2%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 1010,
+          "minutes_until": 962,
           "time_status": "UPCOMING"
         },
         {
@@ -2573,10 +2691,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T09:00:00-04:00",
-          "forecast": "2.7%",
+          "forecast": "2.6%",
           "previous": "2.5%",
           "actual": null,
-          "minutes_until": 1010,
+          "minutes_until": 962,
           "time_status": "UPCOMING"
         },
         {
@@ -2584,10 +2702,10 @@
           "currency": "USD",
           "impact": "Medium",
           "event_at_et": "2026-10-27T10:00:00-04:00",
-          "forecast": "80.7",
+          "forecast": "81.2",
           "previous": "81.9",
           "actual": null,
-          "minutes_until": 1070,
+          "minutes_until": 1022,
           "time_status": "UPCOMING"
         },
         {
@@ -2595,10 +2713,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T10:00:00-04:00",
-          "forecast": "649K",
+          "forecast": "651K",
           "previous": "684K",
           "actual": null,
-          "minutes_until": 1070,
+          "minutes_until": 1022,
           "time_status": "UPCOMING"
         },
         {
@@ -2606,10 +2724,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T10:00:00-04:00",
-          "forecast": "1",
+          "forecast": "0",
           "previous": "-2",
           "actual": null,
-          "minutes_until": 1070,
+          "minutes_until": 1022,
           "time_status": "UPCOMING"
         },
         {
@@ -2620,7 +2738,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1460,
+          "minutes_until": 1412,
           "time_status": "UPCOMING"
         },
         {
@@ -2631,7 +2749,7 @@
           "forecast": "-130.8B",
           "previous": "-132.6B",
           "actual": null,
-          "minutes_until": 2420,
+          "minutes_until": 2372,
           "time_status": "UPCOMING"
         },
         {
@@ -2642,7 +2760,7 @@
           "forecast": "0.4%",
           "previous": "0.7%",
           "actual": null,
-          "minutes_until": 2420,
+          "minutes_until": 2372,
           "time_status": "UPCOMING"
         },
         {
@@ -2653,7 +2771,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2495,
+          "minutes_until": 2447,
           "time_status": "UPCOMING"
         },
         {
@@ -2664,7 +2782,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2495,
+          "minutes_until": 2447,
           "time_status": "UPCOMING"
         },
         {
@@ -2675,7 +2793,7 @@
           "forecast": "2.50%",
           "previous": "2.25%",
           "actual": null,
-          "minutes_until": 2495,
+          "minutes_until": 2447,
           "time_status": "UPCOMING"
         },
         {
@@ -2686,7 +2804,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2540,
+          "minutes_until": 2492,
           "time_status": "UPCOMING"
         },
         {
@@ -2697,7 +2815,7 @@
           "forecast": "-0.3M",
           "previous": "-3.1M",
           "actual": null,
-          "minutes_until": 2540,
+          "minutes_until": 2492,
           "time_status": "UPCOMING"
         },
         {
@@ -2708,7 +2826,7 @@
           "forecast": "4.00%",
           "previous": "4.00%",
           "actual": null,
-          "minutes_until": 2750,
+          "minutes_until": 2702,
           "time_status": "UPCOMING"
         },
         {
@@ -2719,7 +2837,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2750,
+          "minutes_until": 2702,
           "time_status": "UPCOMING"
         },
         {
@@ -2730,7 +2848,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2780,
+          "minutes_until": 2732,
           "time_status": "UPCOMING"
         }
       ],
@@ -2743,7 +2861,7 @@
           "forecast": "",
           "previous": "18.5K",
           "actual": null,
-          "minutes_until": 965,
+          "minutes_until": 917,
           "time_status": "UPCOMING"
         },
         {
@@ -2754,7 +2872,7 @@
           "forecast": "0.6%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 980,
+          "minutes_until": 932,
           "time_status": "UPCOMING"
         },
         {
@@ -2762,10 +2880,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T08:30:00-04:00",
-          "forecast": "1.8%",
+          "forecast": "2.0%",
           "previous": "0.0%",
           "actual": null,
-          "minutes_until": 980,
+          "minutes_until": 932,
           "time_status": "UPCOMING"
         },
         {
@@ -2773,10 +2891,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T09:00:00-04:00",
-          "forecast": "0.1%",
+          "forecast": "0.2%",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 1010,
+          "minutes_until": 962,
           "time_status": "UPCOMING"
         },
         {
@@ -2784,10 +2902,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T09:00:00-04:00",
-          "forecast": "2.7%",
+          "forecast": "2.6%",
           "previous": "2.5%",
           "actual": null,
-          "minutes_until": 1010,
+          "minutes_until": 962,
           "time_status": "UPCOMING"
         },
         {
@@ -2795,10 +2913,10 @@
           "currency": "USD",
           "impact": "Medium",
           "event_at_et": "2026-10-27T10:00:00-04:00",
-          "forecast": "80.7",
+          "forecast": "81.2",
           "previous": "81.9",
           "actual": null,
-          "minutes_until": 1070,
+          "minutes_until": 1022,
           "time_status": "UPCOMING"
         },
         {
@@ -2806,10 +2924,10 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T10:00:00-04:00",
-          "forecast": "649K",
+          "forecast": "651K",
           "previous": "684K",
           "actual": null,
-          "minutes_until": 1070,
+          "minutes_until": 1022,
           "time_status": "UPCOMING"
         },
         {
@@ -2817,10 +2935,21 @@
           "currency": "USD",
           "impact": "Low",
           "event_at_et": "2026-10-27T10:00:00-04:00",
-          "forecast": "1",
+          "forecast": "0",
           "previous": "-2",
           "actual": null,
-          "minutes_until": 1070,
+          "minutes_until": 1022,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "API Weekly Statistical Bulletin",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-10-27T16:30:00-04:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1412,
           "time_status": "UPCOMING"
         }
       ],
@@ -2829,7 +2958,14 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -2837,7 +2973,7 @@
       },
       "asian_risk_directional_note": "Not a direct directional driver",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -2845,16 +2981,16 @@
     },
     {
       "pair": "EURGBP",
-      "technical_direction": "NO_RANKED_CANDIDATE",
-      "technical_stage": "UNRANKED",
-      "unified_signal_direction": "UNAVAILABLE",
+      "technical_direction": "SELL",
+      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
@@ -2870,7 +3006,7 @@
           "forecast": "1.6%",
           "previous": "1.4%",
           "actual": null,
-          "minutes_until": 231,
+          "minutes_until": 183,
           "time_status": "UPCOMING"
         },
         {
@@ -2878,10 +3014,10 @@
           "currency": "EUR",
           "impact": "Low",
           "event_at_et": "2026-10-27T04:00:00-04:00",
-          "forecast": "9.8%",
+          "forecast": "9.9%",
           "previous": "9.9%",
           "actual": null,
-          "minutes_until": 710,
+          "minutes_until": 662,
           "time_status": "UPCOMING"
         },
         {
@@ -2889,10 +3025,10 @@
           "currency": "EUR",
           "impact": "Low",
           "event_at_et": "2026-10-27T05:00:00-04:00",
-          "forecast": "3.6%",
+          "forecast": "3.5%",
           "previous": "3.5%",
           "actual": null,
-          "minutes_until": 770,
+          "minutes_until": 722,
           "time_status": "UPCOMING"
         },
         {
@@ -2903,7 +3039,7 @@
           "forecast": "3.1%",
           "previous": "3.1%",
           "actual": null,
-          "minutes_until": 770,
+          "minutes_until": 722,
           "time_status": "UPCOMING"
         },
         {
@@ -2914,7 +3050,7 @@
           "forecast": "-30.0",
           "previous": "-30.6",
           "actual": null,
-          "minutes_until": 2090,
+          "minutes_until": 2042,
           "time_status": "UPCOMING"
         },
         {
@@ -2925,7 +3061,7 @@
           "forecast": "",
           "previous": "3.58|1.2",
           "actual": null,
-          "minutes_until": 2252,
+          "minutes_until": 2204,
           "time_status": "UPCOMING"
         },
         {
@@ -2936,7 +3072,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2420,
+          "minutes_until": 2372,
           "time_status": "UPCOMING"
         },
         {
@@ -2947,7 +3083,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2420,
+          "minutes_until": 2372,
           "time_status": "UPCOMING"
         }
       ],
@@ -2960,7 +3096,7 @@
           "forecast": "1.6%",
           "previous": "1.4%",
           "actual": null,
-          "minutes_until": 231,
+          "minutes_until": 183,
           "time_status": "UPCOMING"
         },
         {
@@ -2968,10 +3104,10 @@
           "currency": "EUR",
           "impact": "Low",
           "event_at_et": "2026-10-27T04:00:00-04:00",
-          "forecast": "9.8%",
+          "forecast": "9.9%",
           "previous": "9.9%",
           "actual": null,
-          "minutes_until": 710,
+          "minutes_until": 662,
           "time_status": "UPCOMING"
         },
         {
@@ -2979,10 +3115,10 @@
           "currency": "EUR",
           "impact": "Low",
           "event_at_et": "2026-10-27T05:00:00-04:00",
-          "forecast": "3.6%",
+          "forecast": "3.5%",
           "previous": "3.5%",
           "actual": null,
-          "minutes_until": 770,
+          "minutes_until": 722,
           "time_status": "UPCOMING"
         },
         {
@@ -2993,7 +3129,7 @@
           "forecast": "3.1%",
           "previous": "3.1%",
           "actual": null,
-          "minutes_until": 770,
+          "minutes_until": 722,
           "time_status": "UPCOMING"
         }
       ],
@@ -3002,7 +3138,14 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -3010,7 +3153,7 @@
       },
       "asian_risk_directional_note": "Not a direct directional driver",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -3018,7 +3161,7 @@
     }
   ],
   "fully_macro_verified": false,
-  "unified_signal_generated_at_utc": "2026-10-26T16:35:20.216428+00:00",
+  "unified_signal_generated_at_utc": "2026-10-26T20:34:11.697581+00:00",
   "no_mobile_alerts": true,
   "options_layer": "REMOVED_AT_USER_REQUEST",
   "calendar_first_rule": "Every pair MUST display all upcoming events for both currencies in next 24 hours, regardless of impact. IMMINENT within 120 minutes prevents a normal entry signal; include forecasts and previous values. Do not infer releases from missing actuals.",
@@ -3032,7 +3175,6 @@
     "dxy_equities_sentiment",
     "cme_volume_open_interest",
     "retail_positioning",
-    "closed_15m30m_direction",
     "atr_adr_session_levels",
     "independent_live_spreads"
   ],
