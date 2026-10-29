@@ -1,78 +1,6 @@
 {
-  "generated_at_utc": "2026-10-29T13:59:35.665711+00:00",
+  "generated_at_utc": "2026-10-29T14:32:15.224947+00:00",
   "slots": [
-    {
-      "schema_version": 1,
-      "scheduled_for_utc": "2026-10-25T12:02:00+00:00",
-      "expected_candle_close_utc": "2026-10-25T12:00:00+00:00",
-      "started_at_utc": "2026-10-25T12:04:17.204604+00:00",
-      "status": "MARKET_CLOSED",
-      "attempts": 0,
-      "observations": [],
-      "expected_closes": {},
-      "observed_closes": {},
-      "validated_pairs": 0,
-      "signal_publication_allowed": false,
-      "no_trades": true,
-      "timing_basis": "EXACT_UTC_15M_SLOT",
-      "trigger_event": "schedule",
-      "is_scheduled_trigger": true,
-      "scan_trigger_type": "primary_or_manual",
-      "actual_start_delay_seconds": 137.205,
-      "recorded_at_utc": "2026-10-25T12:04:17.262399+00:00",
-      "commit_at_utc": "NOT_YET_VERIFIED_AT_RECORD_TIME"
-    },
-    {
-      "schema_version": 1,
-      "scheduled_for_utc": "2026-10-25T12:32:00+00:00",
-      "expected_candle_close_utc": "2026-10-25T12:30:00+00:00",
-      "started_at_utc": "2026-10-25T12:44:08.787508+00:00",
-      "status": "MARKET_CLOSED",
-      "attempts": 0,
-      "observations": [],
-      "expected_closes": {},
-      "observed_closes": {},
-      "validated_pairs": 0,
-      "signal_publication_allowed": false,
-      "no_trades": true,
-      "timing_basis": "EXACT_UTC_15M_SLOT",
-      "trigger_event": "schedule",
-      "is_scheduled_trigger": true,
-      "scan_trigger_type": "primary_or_manual",
-      "actual_start_delay_seconds": 728.788,
-      "recorded_at_utc": "2026-10-25T12:44:08.848915+00:00",
-      "commit_at_utc": "NOT_YET_VERIFIED_AT_RECORD_TIME",
-      "previous_attempts_for_slot": [
-        {
-          "started_at_utc": "2026-10-25T12:34:15.074510+00:00",
-          "status": "MARKET_CLOSED",
-          "trigger_event": "schedule",
-          "scan_trigger_type": "backup",
-          "missing": []
-        }
-      ]
-    },
-    {
-      "schema_version": 1,
-      "scheduled_for_utc": "2026-10-25T13:02:00+00:00",
-      "expected_candle_close_utc": "2026-10-25T13:00:00+00:00",
-      "started_at_utc": "2026-10-25T13:13:32.142792+00:00",
-      "status": "MARKET_CLOSED",
-      "attempts": 0,
-      "observations": [],
-      "expected_closes": {},
-      "observed_closes": {},
-      "validated_pairs": 0,
-      "signal_publication_allowed": false,
-      "no_trades": true,
-      "timing_basis": "EXACT_UTC_15M_SLOT",
-      "trigger_event": "schedule",
-      "is_scheduled_trigger": true,
-      "scan_trigger_type": "backup",
-      "actual_start_delay_seconds": 692.143,
-      "recorded_at_utc": "2026-10-25T13:13:32.213734+00:00",
-      "commit_at_utc": "NOT_YET_VERIFIED_AT_RECORD_TIME"
-    },
     {
       "schema_version": 1,
       "scheduled_for_utc": "2026-10-25T13:17:00+00:00",
@@ -10188,6 +10116,109 @@
       "scan_trigger_type": "backup",
       "actual_start_delay_seconds": 755.591,
       "recorded_at_utc": "2026-10-29T13:59:35.663149+00:00",
+      "commit_at_utc": "NOT_YET_VERIFIED_AT_RECORD_TIME"
+    },
+    {
+      "scheduled_for_utc": "2026-10-29T14:02:00+00:00",
+      "status": "NO_SUCCESSFUL_OR_FAILED_SLOT_RECORD_FOUND",
+      "signal_publication_allowed": false,
+      "not_a_replayed_or_backfilled_signal": true
+    },
+    {
+      "scheduled_for_utc": "2026-10-29T14:17:00+00:00",
+      "status": "NO_SUCCESSFUL_OR_FAILED_SLOT_RECORD_FOUND",
+      "signal_publication_allowed": false,
+      "not_a_replayed_or_backfilled_signal": true
+    },
+    {
+      "schema_version": 1,
+      "scheduled_for_utc": "2026-10-29T14:32:00+00:00",
+      "expected_candle_close_utc": "2026-10-29T14:30:00+00:00",
+      "started_at_utc": "2026-10-29T14:32:01.439666+00:00",
+      "status": "FULL_REPORT_EXACT_CANDLES_VERIFIED",
+      "attempts": 1,
+      "observations": [
+        {
+          "checked_at_utc": "2026-10-29T14:32:01.872739+00:00",
+          "status": "PASS_EXACT_CLOSED_M15_M30_H1",
+          "first_missing": []
+        }
+      ],
+      "expected_closes": {
+        "M15": "2026-10-29T14:30:00+00:00",
+        "M30": "2026-10-29T14:30:00+00:00",
+        "H1": "2026-10-29T14:00:00+00:00"
+      },
+      "observed_closes": {
+        "AUDUSD": {
+          "M15": "2026-10-29T14:30:00+00:00",
+          "M30": "2026-10-29T14:30:00+00:00",
+          "H1": "2026-10-29T14:00:00+00:00"
+        },
+        "NZDUSD": {
+          "M15": "2026-10-29T14:30:00+00:00",
+          "M30": "2026-10-29T14:30:00+00:00",
+          "H1": "2026-10-29T14:00:00+00:00"
+        },
+        "EURUSD": {
+          "M15": "2026-10-29T14:30:00+00:00",
+          "M30": "2026-10-29T14:30:00+00:00",
+          "H1": "2026-10-29T14:00:00+00:00"
+        },
+        "GBPUSD": {
+          "M15": "2026-10-29T14:30:00+00:00",
+          "M30": "2026-10-29T14:30:00+00:00",
+          "H1": "2026-10-29T14:00:00+00:00"
+        },
+        "USDJPY": {
+          "M15": "2026-10-29T14:30:00+00:00",
+          "M30": "2026-10-29T14:30:00+00:00",
+          "H1": "2026-10-29T14:00:00+00:00"
+        },
+        "AUDJPY": {
+          "M15": "2026-10-29T14:30:00+00:00",
+          "M30": "2026-10-29T14:30:00+00:00",
+          "H1": "2026-10-29T14:00:00+00:00"
+        },
+        "NZDJPY": {
+          "M15": "2026-10-29T14:30:00+00:00",
+          "M30": "2026-10-29T14:30:00+00:00",
+          "H1": "2026-10-29T14:00:00+00:00"
+        },
+        "EURJPY": {
+          "M15": "2026-10-29T14:30:00+00:00",
+          "M30": "2026-10-29T14:30:00+00:00",
+          "H1": "2026-10-29T14:00:00+00:00"
+        },
+        "EURCAD": {
+          "M15": "2026-10-29T14:30:00+00:00",
+          "M30": "2026-10-29T14:30:00+00:00",
+          "H1": "2026-10-29T14:00:00+00:00"
+        },
+        "USDCAD": {
+          "M15": "2026-10-29T14:30:00+00:00",
+          "M30": "2026-10-29T14:30:00+00:00",
+          "H1": "2026-10-29T14:00:00+00:00"
+        },
+        "EURGBP": {
+          "M15": "2026-10-29T14:30:00+00:00",
+          "M30": "2026-10-29T14:30:00+00:00",
+          "H1": "2026-10-29T14:00:00+00:00"
+        }
+      },
+      "validated_pairs": 11,
+      "signal_publication_allowed": true,
+      "no_trades": true,
+      "timing_basis": "EXACT_UTC_15M_SLOT",
+      "trigger_event": "schedule",
+      "is_scheduled_trigger": true,
+      "scan_trigger_type": "primary_or_manual",
+      "actual_start_delay_seconds": 1.44,
+      "source_collected_at_utc": "2026-10-29T14:32:01.800638+00:00",
+      "server_offset_seconds": 10800,
+      "full_report_verified_at_utc": "2026-10-29T14:32:15.173364+00:00",
+      "unified_generated_at_utc": "2026-10-29T14:32:14.570010+00:00",
+      "recorded_at_utc": "2026-10-29T14:32:15.222445+00:00",
       "commit_at_utc": "NOT_YET_VERIFIED_AT_RECORD_TIME"
     }
   ],
