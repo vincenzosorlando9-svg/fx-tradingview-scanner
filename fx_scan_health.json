@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-30T01:55:49.602318+00:00",
+  "generated_at_utc": "2026-10-30T02:01:35.477623+00:00",
   "schedule_utc_minutes": [
     2,
     17,
@@ -17,7 +17,7 @@
     "schema_version": 1,
     "scheduled_for_utc": "2026-10-30T01:47:00+00:00",
     "expected_candle_close_utc": "2026-10-30T01:45:00+00:00",
-    "started_at_utc": "2026-10-30T01:55:49.411692+00:00",
+    "started_at_utc": "2026-10-30T02:01:35.396473+00:00",
     "status": "MISSED_SCHEDULED_START_TOO_LATE",
     "attempts": 0,
     "observations": [],
@@ -29,12 +29,21 @@
     "timing_basis": "EXACT_UTC_15M_SLOT",
     "trigger_event": "schedule",
     "is_scheduled_trigger": true,
-    "scan_trigger_type": "backup",
-    "actual_start_delay_seconds": 529.412,
-    "recorded_at_utc": "2026-10-30T01:55:49.595120+00:00",
-    "commit_at_utc": "NOT_YET_VERIFIED_AT_RECORD_TIME"
+    "scan_trigger_type": "primary_or_manual",
+    "actual_start_delay_seconds": 875.396,
+    "recorded_at_utc": "2026-10-30T02:01:35.466002+00:00",
+    "commit_at_utc": "NOT_YET_VERIFIED_AT_RECORD_TIME",
+    "previous_attempts_for_slot": [
+      {
+        "started_at_utc": "2026-10-30T01:55:49.411692+00:00",
+        "status": "MISSED_SCHEDULED_START_TOO_LATE",
+        "trigger_event": "schedule",
+        "scan_trigger_type": "backup",
+        "missing": []
+      }
+    ]
   },
-  "unrecorded_slots_discovered": 2,
+  "unrecorded_slots_discovered": 0,
   "last_successful_slot_utc": "2026-10-29T23:02:00+00:00",
   "last_successful_scheduled_slot_utc": "2026-10-29T23:02:00+00:00",
   "publishes_only_with_exact_m15_m30_h1": true,
