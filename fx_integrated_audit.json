@@ -1,26 +1,26 @@
 {
-  "generated_at_utc": "2026-11-01T23:20:03.766770+00:00",
+  "generated_at_utc": "2026-11-01T23:53:35.038440+00:00",
   "purpose": "FULL_SOURCE_AUDIT_NOT_EXECUTABLE_TRADE_ORDERS",
   "sources": {
     "technicals": {
-      "status": "STALE",
-      "age_minutes": 3062.9
+      "status": "FRESH",
+      "age_minutes": 17.9
     },
     "dashboard": {
-      "status": "STALE",
-      "age_minutes": 3062.9
+      "status": "FRESH",
+      "age_minutes": 17.8
     },
     "calendar": {
       "status": "FRESH",
-      "age_minutes": 43.6
+      "age_minutes": 17.8
     },
     "ff_markets": {
       "status": "FRESH",
-      "age_minutes": 22.7
+      "age_minutes": 18.0
     },
     "volatility": {
-      "status": "STALE",
-      "age_minutes": 3062.9
+      "status": "FRESH",
+      "age_minutes": 17.9
     },
     "kospi_te_public_page": {
       "status": "DATED_DAILY_CONTEXT",
@@ -30,31 +30,31 @@
     },
     "macro_snapshot": {
       "status": "STALE",
-      "age_minutes": 23001.3
+      "age_minutes": 23034.8
     },
     "macro_raw": {
       "status": "STALE",
-      "age_minutes": 23001.3
+      "age_minutes": 23034.8
     },
     "macro_news": {
       "status": "STALE",
-      "age_minutes": 23001.3
+      "age_minutes": 23034.8
     },
     "unified_signals": {
-      "status": "STALE",
-      "age_minutes": 3062.8
+      "status": "FRESH",
+      "age_minutes": 17.7
     },
     "economic_actuals": {
       "status": "STALE",
-      "age_minutes": 23001.4
+      "age_minutes": 23034.9
     },
     "range_context": {
       "status": "STALE",
-      "age_minutes": 23001.3
+      "age_minutes": 23034.8
     },
     "retail": {
       "status": "STALE",
-      "age_minutes": 23001.3
+      "age_minutes": 23034.8
     }
   },
   "macro_layers": {
@@ -70,7 +70,7 @@
     "cme_volume_open_interest": "PARTIAL_CFTC_WEEKLY_OI_CME_DAILY_DATA_UNVERIFIED",
     "retail_positioning": "UNAVAILABLE_CURRENT",
     "currency_strength_clusters": "DERIVED_FROM_11_FX_PAIRS",
-    "closed_15m30m_direction": "STALE_OR_UNAVAILABLE",
+    "closed_15m30m_direction": "FRESH_TECHNICAL_WATCH_NOT_BROKER_EXECUTION",
     "atr_adr_session_levels": "PARTIAL_LEGACY_ATR_LEVELS",
     "independent_live_spreads": "UNAVAILABLE_BROKER_EXECUTABLE_QUOTE",
     "signal_history": "VERIFIED_RECORDED_SIGNAL_OBSERVATIONS",
@@ -93,20 +93,20 @@
   "pairs": [
     {
       "pair": "AUDUSD",
-      "technical_direction": "BUY",
-      "technical_stage": "CONFIRMING",
-      "unified_signal_direction": "UNAVAILABLE",
+      "technical_direction": "NONE",
+      "technical_stage": "WAIT",
+      "unified_signal_direction": "NONE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
-      "reference_level_not_live": 0.70342,
-      "h1_ema20_50": "ABOVE_BOTH",
-      "h4_ema20_50": "ABOVE_BOTH",
+      "reference_level_not_live": null,
+      "h1_ema20_50": "BELOW_BOTH",
+      "h4_ema20_50": "MIXED",
       "timeframes_present": true,
       "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
@@ -118,7 +118,7 @@
           "forecast": "",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 40,
+          "minutes_until": 6,
           "time_status": "IMMINENT"
         },
         {
@@ -129,7 +129,7 @@
           "forecast": "1.8%",
           "previous": "-6.1%",
           "actual": null,
-          "minutes_until": 70,
+          "minutes_until": 36,
           "time_status": "IMMINENT"
         },
         {
@@ -140,7 +140,7 @@
           "forecast": "",
           "previous": "2.2%",
           "actual": null,
-          "minutes_until": 85,
+          "minutes_until": 51,
           "time_status": "IMMINENT"
         },
         {
@@ -151,8 +151,8 @@
           "forecast": "52.0",
           "previous": "52.1",
           "actual": null,
-          "minutes_until": 145,
-          "time_status": "UPCOMING"
+          "minutes_until": 111,
+          "time_status": "IMMINENT"
         },
         {
           "title": "Commodity Prices y/y",
@@ -162,7 +162,7 @@
           "forecast": "",
           "previous": "15.5%",
           "actual": null,
-          "minutes_until": 370,
+          "minutes_until": 336,
           "time_status": "UPCOMING"
         },
         {
@@ -173,7 +173,7 @@
           "forecast": "56.0",
           "previous": "56.0",
           "actual": null,
-          "minutes_until": 925,
+          "minutes_until": 891,
           "time_status": "UPCOMING"
         },
         {
@@ -184,7 +184,7 @@
           "forecast": "54.7",
           "previous": "54.5",
           "actual": null,
-          "minutes_until": 940,
+          "minutes_until": 906,
           "time_status": "UPCOMING"
         },
         {
@@ -195,7 +195,7 @@
           "forecast": "0.3%",
           "previous": "0.9%",
           "actual": null,
-          "minutes_until": 940,
+          "minutes_until": 906,
           "time_status": "UPCOMING"
         },
         {
@@ -206,7 +206,7 @@
           "forecast": "77.2",
           "previous": "77.9",
           "actual": null,
-          "minutes_until": 940,
+          "minutes_until": 906,
           "time_status": "UPCOMING"
         },
         {
@@ -217,7 +217,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1183,
+          "minutes_until": 1149,
           "time_status": "UPCOMING"
         },
         {
@@ -228,7 +228,7 @@
           "forecast": "4.85%",
           "previous": "4.60%",
           "actual": null,
-          "minutes_until": 1690,
+          "minutes_until": 1656,
           "time_status": "UPCOMING"
         },
         {
@@ -239,7 +239,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1690,
+          "minutes_until": 1656,
           "time_status": "UPCOMING"
         },
         {
@@ -250,7 +250,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1690,
+          "minutes_until": 1656,
           "time_status": "UPCOMING"
         },
         {
@@ -261,7 +261,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1750,
+          "minutes_until": 1716,
           "time_status": "UPCOMING"
         },
         {
@@ -272,7 +272,7 @@
           "forecast": "7.11M",
           "previous": "7.08M",
           "actual": null,
-          "minutes_until": 2380,
+          "minutes_until": 2346,
           "time_status": "UPCOMING"
         },
         {
@@ -283,7 +283,7 @@
           "forecast": "1.2%",
           "previous": "0.1%",
           "actual": null,
-          "minutes_until": 2380,
+          "minutes_until": 2346,
           "time_status": "UPCOMING"
         },
         {
@@ -294,7 +294,7 @@
           "forecast": "46.2",
           "previous": "46.8",
           "actual": null,
-          "minutes_until": 2390,
+          "minutes_until": 2356,
           "time_status": "UPCOMING"
         },
         {
@@ -305,7 +305,7 @@
           "forecast": "15.9M",
           "previous": "16.0M",
           "actual": null,
-          "minutes_until": 2395,
+          "minutes_until": 2361,
           "time_status": "UPCOMING"
         },
         {
@@ -316,7 +316,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2396,
+          "minutes_until": 2362,
           "time_status": "UPCOMING"
         },
         {
@@ -327,7 +327,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2770,
+          "minutes_until": 2736,
           "time_status": "UPCOMING"
         }
       ],
@@ -340,7 +340,7 @@
           "forecast": "",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 40,
+          "minutes_until": 6,
           "time_status": "IMMINENT"
         },
         {
@@ -351,7 +351,7 @@
           "forecast": "1.8%",
           "previous": "-6.1%",
           "actual": null,
-          "minutes_until": 70,
+          "minutes_until": 36,
           "time_status": "IMMINENT"
         },
         {
@@ -362,7 +362,7 @@
           "forecast": "",
           "previous": "2.2%",
           "actual": null,
-          "minutes_until": 85,
+          "minutes_until": 51,
           "time_status": "IMMINENT"
         },
         {
@@ -373,8 +373,8 @@
           "forecast": "52.0",
           "previous": "52.1",
           "actual": null,
-          "minutes_until": 145,
-          "time_status": "UPCOMING"
+          "minutes_until": 111,
+          "time_status": "IMMINENT"
         },
         {
           "title": "Commodity Prices y/y",
@@ -384,7 +384,7 @@
           "forecast": "",
           "previous": "15.5%",
           "actual": null,
-          "minutes_until": 370,
+          "minutes_until": 336,
           "time_status": "UPCOMING"
         },
         {
@@ -395,7 +395,7 @@
           "forecast": "56.0",
           "previous": "56.0",
           "actual": null,
-          "minutes_until": 925,
+          "minutes_until": 891,
           "time_status": "UPCOMING"
         },
         {
@@ -406,7 +406,7 @@
           "forecast": "54.7",
           "previous": "54.5",
           "actual": null,
-          "minutes_until": 940,
+          "minutes_until": 906,
           "time_status": "UPCOMING"
         },
         {
@@ -417,7 +417,7 @@
           "forecast": "0.3%",
           "previous": "0.9%",
           "actual": null,
-          "minutes_until": 940,
+          "minutes_until": 906,
           "time_status": "UPCOMING"
         },
         {
@@ -428,7 +428,7 @@
           "forecast": "77.2",
           "previous": "77.9",
           "actual": null,
-          "minutes_until": 940,
+          "minutes_until": 906,
           "time_status": "UPCOMING"
         },
         {
@@ -439,7 +439,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1183,
+          "minutes_until": 1149,
           "time_status": "UPCOMING"
         }
       ],
@@ -452,7 +452,7 @@
           "forecast": "",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 40,
+          "minutes_until": 6,
           "time_status": "IMMINENT"
         },
         {
@@ -463,7 +463,7 @@
           "forecast": "1.8%",
           "previous": "-6.1%",
           "actual": null,
-          "minutes_until": 70,
+          "minutes_until": 36,
           "time_status": "IMMINENT"
         },
         {
@@ -474,7 +474,18 @@
           "forecast": "",
           "previous": "2.2%",
           "actual": null,
-          "minutes_until": 85,
+          "minutes_until": 51,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "RatingDog Manufacturing PMI",
+          "currency": "CNY",
+          "impact": "Low",
+          "event_at_et": "2026-11-01T20:45:00-05:00",
+          "forecast": "52.0",
+          "previous": "52.1",
+          "actual": null,
+          "minutes_until": 111,
           "time_status": "IMMINENT"
         }
       ],
@@ -482,7 +493,14 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -507,22 +525,22 @@
     },
     {
       "pair": "NZDUSD",
-      "technical_direction": "NO_RANKED_CANDIDATE",
-      "technical_stage": "UNRANKED",
-      "unified_signal_direction": "UNAVAILABLE",
+      "technical_direction": "BUY",
+      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
+      "unified_signal_direction": "BUY",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
       "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
-      "higher_timeframe_conflict": false,
+      "higher_timeframe_conflict": true,
       "upcoming_48h_events": [
         {
           "title": "RatingDog Manufacturing PMI",
@@ -532,8 +550,8 @@
           "forecast": "52.0",
           "previous": "52.1",
           "actual": null,
-          "minutes_until": 145,
-          "time_status": "UPCOMING"
+          "minutes_until": 111,
+          "time_status": "IMMINENT"
         },
         {
           "title": "Final Manufacturing PMI",
@@ -543,7 +561,7 @@
           "forecast": "56.0",
           "previous": "56.0",
           "actual": null,
-          "minutes_until": 925,
+          "minutes_until": 891,
           "time_status": "UPCOMING"
         },
         {
@@ -554,7 +572,7 @@
           "forecast": "54.7",
           "previous": "54.5",
           "actual": null,
-          "minutes_until": 940,
+          "minutes_until": 906,
           "time_status": "UPCOMING"
         },
         {
@@ -565,7 +583,7 @@
           "forecast": "0.3%",
           "previous": "0.9%",
           "actual": null,
-          "minutes_until": 940,
+          "minutes_until": 906,
           "time_status": "UPCOMING"
         },
         {
@@ -576,7 +594,7 @@
           "forecast": "77.2",
           "previous": "77.9",
           "actual": null,
-          "minutes_until": 940,
+          "minutes_until": 906,
           "time_status": "UPCOMING"
         },
         {
@@ -587,7 +605,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1183,
+          "minutes_until": 1149,
           "time_status": "UPCOMING"
         },
         {
@@ -598,7 +616,7 @@
           "forecast": "",
           "previous": "5.6%",
           "actual": null,
-          "minutes_until": 1345,
+          "minutes_until": 1311,
           "time_status": "UPCOMING"
         },
         {
@@ -609,7 +627,7 @@
           "forecast": "7.11M",
           "previous": "7.08M",
           "actual": null,
-          "minutes_until": 2380,
+          "minutes_until": 2346,
           "time_status": "UPCOMING"
         },
         {
@@ -620,7 +638,7 @@
           "forecast": "1.2%",
           "previous": "0.1%",
           "actual": null,
-          "minutes_until": 2380,
+          "minutes_until": 2346,
           "time_status": "UPCOMING"
         },
         {
@@ -631,7 +649,7 @@
           "forecast": "46.2",
           "previous": "46.8",
           "actual": null,
-          "minutes_until": 2390,
+          "minutes_until": 2356,
           "time_status": "UPCOMING"
         },
         {
@@ -642,7 +660,7 @@
           "forecast": "15.9M",
           "previous": "16.0M",
           "actual": null,
-          "minutes_until": 2395,
+          "minutes_until": 2361,
           "time_status": "UPCOMING"
         },
         {
@@ -653,7 +671,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2396,
+          "minutes_until": 2362,
           "time_status": "UPCOMING"
         },
         {
@@ -664,7 +682,7 @@
           "forecast": "",
           "previous": "2.5%",
           "actual": null,
-          "minutes_until": 2430,
+          "minutes_until": 2396,
           "time_status": "UPCOMING"
         },
         {
@@ -675,7 +693,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2770,
+          "minutes_until": 2736,
           "time_status": "UPCOMING"
         },
         {
@@ -686,7 +704,7 @@
           "forecast": "0.4%",
           "previous": "0.5%",
           "actual": null,
-          "minutes_until": 2785,
+          "minutes_until": 2751,
           "time_status": "UPCOMING"
         },
         {
@@ -697,7 +715,7 @@
           "forecast": "5.5%",
           "previous": "5.6%",
           "actual": null,
-          "minutes_until": 2785,
+          "minutes_until": 2751,
           "time_status": "UPCOMING"
         },
         {
@@ -708,7 +726,7 @@
           "forecast": "0.5%",
           "previous": "0.7%",
           "actual": null,
-          "minutes_until": 2785,
+          "minutes_until": 2751,
           "time_status": "UPCOMING"
         }
       ],
@@ -721,8 +739,8 @@
           "forecast": "52.0",
           "previous": "52.1",
           "actual": null,
-          "minutes_until": 145,
-          "time_status": "UPCOMING"
+          "minutes_until": 111,
+          "time_status": "IMMINENT"
         },
         {
           "title": "Final Manufacturing PMI",
@@ -732,7 +750,7 @@
           "forecast": "56.0",
           "previous": "56.0",
           "actual": null,
-          "minutes_until": 925,
+          "minutes_until": 891,
           "time_status": "UPCOMING"
         },
         {
@@ -743,7 +761,7 @@
           "forecast": "54.7",
           "previous": "54.5",
           "actual": null,
-          "minutes_until": 940,
+          "minutes_until": 906,
           "time_status": "UPCOMING"
         },
         {
@@ -754,7 +772,7 @@
           "forecast": "0.3%",
           "previous": "0.9%",
           "actual": null,
-          "minutes_until": 940,
+          "minutes_until": 906,
           "time_status": "UPCOMING"
         },
         {
@@ -765,7 +783,7 @@
           "forecast": "77.2",
           "previous": "77.9",
           "actual": null,
-          "minutes_until": 940,
+          "minutes_until": 906,
           "time_status": "UPCOMING"
         },
         {
@@ -776,7 +794,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1183,
+          "minutes_until": 1149,
           "time_status": "UPCOMING"
         },
         {
@@ -787,16 +805,35 @@
           "forecast": "",
           "previous": "5.6%",
           "actual": null,
-          "minutes_until": 1345,
+          "minutes_until": 1311,
           "time_status": "UPCOMING"
         }
       ],
-      "imminent_events": [],
-      "event_risk": "EVENT_WITHIN_24H",
+      "imminent_events": [
+        {
+          "title": "RatingDog Manufacturing PMI",
+          "currency": "CNY",
+          "impact": "Low",
+          "event_at_et": "2026-11-01T20:45:00-05:00",
+          "forecast": "52.0",
+          "previous": "52.1",
+          "actual": null,
+          "minutes_until": 111,
+          "time_status": "IMMINENT"
+        }
+      ],
+      "event_risk": "IMMINENT_EVENT",
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -813,7 +850,7 @@
       },
       "asian_risk_directional_note": "Asian equity risk may affect AUD/NZD, but FX must confirm",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -821,22 +858,22 @@
     },
     {
       "pair": "EURUSD",
-      "technical_direction": "NO_RANKED_CANDIDATE",
-      "technical_stage": "UNRANKED",
-      "unified_signal_direction": "UNAVAILABLE",
+      "technical_direction": "BUY",
+      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
+      "unified_signal_direction": "BUY",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
-      "h1_ema20_50": "MIXED",
-      "h4_ema20_50": "MIXED",
+      "h1_ema20_50": "BELOW_BOTH",
+      "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
-      "higher_timeframe_conflict": false,
+      "higher_timeframe_conflict": true,
       "upcoming_48h_events": [
         {
           "title": "German Retail Sales m/m",
@@ -846,7 +883,7 @@
           "forecast": "0.4%",
           "previous": "1.3%",
           "actual": null,
-          "minutes_until": 460,
+          "minutes_until": 426,
           "time_status": "UPCOMING"
         },
         {
@@ -857,7 +894,7 @@
           "forecast": "50.4",
           "previous": "51.0",
           "actual": null,
-          "minutes_until": 535,
+          "minutes_until": 501,
           "time_status": "UPCOMING"
         },
         {
@@ -868,7 +905,7 @@
           "forecast": "49.9",
           "previous": "50.4",
           "actual": null,
-          "minutes_until": 565,
+          "minutes_until": 531,
           "time_status": "UPCOMING"
         },
         {
@@ -879,7 +916,7 @@
           "forecast": "49.3",
           "previous": "49.3",
           "actual": null,
-          "minutes_until": 570,
+          "minutes_until": 536,
           "time_status": "UPCOMING"
         },
         {
@@ -890,7 +927,7 @@
           "forecast": "54.2",
           "previous": "54.2",
           "actual": null,
-          "minutes_until": 575,
+          "minutes_until": 541,
           "time_status": "UPCOMING"
         },
         {
@@ -901,7 +938,7 @@
           "forecast": "52.4",
           "previous": "52.4",
           "actual": null,
-          "minutes_until": 580,
+          "minutes_until": 546,
           "time_status": "UPCOMING"
         },
         {
@@ -912,7 +949,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 760,
+          "minutes_until": 726,
           "time_status": "UPCOMING"
         },
         {
@@ -923,7 +960,7 @@
           "forecast": "56.0",
           "previous": "56.0",
           "actual": null,
-          "minutes_until": 925,
+          "minutes_until": 891,
           "time_status": "UPCOMING"
         },
         {
@@ -934,7 +971,7 @@
           "forecast": "54.7",
           "previous": "54.5",
           "actual": null,
-          "minutes_until": 940,
+          "minutes_until": 906,
           "time_status": "UPCOMING"
         },
         {
@@ -945,7 +982,7 @@
           "forecast": "0.3%",
           "previous": "0.9%",
           "actual": null,
-          "minutes_until": 940,
+          "minutes_until": 906,
           "time_status": "UPCOMING"
         },
         {
@@ -956,7 +993,7 @@
           "forecast": "77.2",
           "previous": "77.9",
           "actual": null,
-          "minutes_until": 940,
+          "minutes_until": 906,
           "time_status": "UPCOMING"
         },
         {
@@ -967,7 +1004,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1183,
+          "minutes_until": 1149,
           "time_status": "UPCOMING"
         },
         {
@@ -978,7 +1015,7 @@
           "forecast": "",
           "previous": "-159.6B",
           "actual": null,
-          "minutes_until": 1945,
+          "minutes_until": 1911,
           "time_status": "UPCOMING"
         },
         {
@@ -989,7 +1026,7 @@
           "forecast": "7.11M",
           "previous": "7.08M",
           "actual": null,
-          "minutes_until": 2380,
+          "minutes_until": 2346,
           "time_status": "UPCOMING"
         },
         {
@@ -1000,7 +1037,7 @@
           "forecast": "1.2%",
           "previous": "0.1%",
           "actual": null,
-          "minutes_until": 2380,
+          "minutes_until": 2346,
           "time_status": "UPCOMING"
         },
         {
@@ -1011,7 +1048,7 @@
           "forecast": "46.2",
           "previous": "46.8",
           "actual": null,
-          "minutes_until": 2390,
+          "minutes_until": 2356,
           "time_status": "UPCOMING"
         },
         {
@@ -1022,7 +1059,7 @@
           "forecast": "15.9M",
           "previous": "16.0M",
           "actual": null,
-          "minutes_until": 2395,
+          "minutes_until": 2361,
           "time_status": "UPCOMING"
         },
         {
@@ -1033,7 +1070,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2396,
+          "minutes_until": 2362,
           "time_status": "UPCOMING"
         },
         {
@@ -1044,7 +1081,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2500,
+          "minutes_until": 2466,
           "time_status": "UPCOMING"
         },
         {
@@ -1055,7 +1092,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2770,
+          "minutes_until": 2736,
           "time_status": "UPCOMING"
         }
       ],
@@ -1068,7 +1105,7 @@
           "forecast": "0.4%",
           "previous": "1.3%",
           "actual": null,
-          "minutes_until": 460,
+          "minutes_until": 426,
           "time_status": "UPCOMING"
         },
         {
@@ -1079,7 +1116,7 @@
           "forecast": "50.4",
           "previous": "51.0",
           "actual": null,
-          "minutes_until": 535,
+          "minutes_until": 501,
           "time_status": "UPCOMING"
         },
         {
@@ -1090,7 +1127,7 @@
           "forecast": "49.9",
           "previous": "50.4",
           "actual": null,
-          "minutes_until": 565,
+          "minutes_until": 531,
           "time_status": "UPCOMING"
         },
         {
@@ -1101,7 +1138,7 @@
           "forecast": "49.3",
           "previous": "49.3",
           "actual": null,
-          "minutes_until": 570,
+          "minutes_until": 536,
           "time_status": "UPCOMING"
         },
         {
@@ -1112,7 +1149,7 @@
           "forecast": "54.2",
           "previous": "54.2",
           "actual": null,
-          "minutes_until": 575,
+          "minutes_until": 541,
           "time_status": "UPCOMING"
         },
         {
@@ -1123,7 +1160,7 @@
           "forecast": "52.4",
           "previous": "52.4",
           "actual": null,
-          "minutes_until": 580,
+          "minutes_until": 546,
           "time_status": "UPCOMING"
         },
         {
@@ -1134,7 +1171,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 760,
+          "minutes_until": 726,
           "time_status": "UPCOMING"
         },
         {
@@ -1145,7 +1182,7 @@
           "forecast": "56.0",
           "previous": "56.0",
           "actual": null,
-          "minutes_until": 925,
+          "minutes_until": 891,
           "time_status": "UPCOMING"
         },
         {
@@ -1156,7 +1193,7 @@
           "forecast": "54.7",
           "previous": "54.5",
           "actual": null,
-          "minutes_until": 940,
+          "minutes_until": 906,
           "time_status": "UPCOMING"
         },
         {
@@ -1167,7 +1204,7 @@
           "forecast": "0.3%",
           "previous": "0.9%",
           "actual": null,
-          "minutes_until": 940,
+          "minutes_until": 906,
           "time_status": "UPCOMING"
         },
         {
@@ -1178,7 +1215,7 @@
           "forecast": "77.2",
           "previous": "77.9",
           "actual": null,
-          "minutes_until": 940,
+          "minutes_until": 906,
           "time_status": "UPCOMING"
         },
         {
@@ -1189,7 +1226,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1183,
+          "minutes_until": 1149,
           "time_status": "UPCOMING"
         }
       ],
@@ -1198,7 +1235,14 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -1206,7 +1250,7 @@
       },
       "asian_risk_directional_note": "Not a direct directional driver",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -1214,19 +1258,19 @@
     },
     {
       "pair": "GBPUSD",
-      "technical_direction": "BUY",
-      "technical_stage": "EARLY",
-      "unified_signal_direction": "UNAVAILABLE",
+      "technical_direction": "SELL",
+      "technical_stage": "WAIT",
+      "unified_signal_direction": "SELL",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
-      "reference_level_not_live": 1.33977,
-      "h1_ema20_50": "ABOVE_BOTH",
+      "reference_level_not_live": null,
+      "h1_ema20_50": "MIXED",
       "h4_ema20_50": "ABOVE_BOTH",
       "timeframes_present": true,
       "higher_timeframe_conflict": false,
@@ -1239,7 +1283,7 @@
           "forecast": "52.8",
           "previous": "52.8",
           "actual": null,
-          "minutes_until": 610,
+          "minutes_until": 576,
           "time_status": "UPCOMING"
         },
         {
@@ -1250,7 +1294,7 @@
           "forecast": "56.0",
           "previous": "56.0",
           "actual": null,
-          "minutes_until": 925,
+          "minutes_until": 891,
           "time_status": "UPCOMING"
         },
         {
@@ -1261,7 +1305,7 @@
           "forecast": "54.7",
           "previous": "54.5",
           "actual": null,
-          "minutes_until": 940,
+          "minutes_until": 906,
           "time_status": "UPCOMING"
         },
         {
@@ -1272,7 +1316,7 @@
           "forecast": "0.3%",
           "previous": "0.9%",
           "actual": null,
-          "minutes_until": 940,
+          "minutes_until": 906,
           "time_status": "UPCOMING"
         },
         {
@@ -1283,7 +1327,7 @@
           "forecast": "77.2",
           "previous": "77.9",
           "actual": null,
-          "minutes_until": 940,
+          "minutes_until": 906,
           "time_status": "UPCOMING"
         },
         {
@@ -1294,7 +1338,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1183,
+          "minutes_until": 1149,
           "time_status": "UPCOMING"
         },
         {
@@ -1305,7 +1349,7 @@
           "forecast": "",
           "previous": "5.42|3.6",
           "actual": null,
-          "minutes_until": 2113,
+          "minutes_until": 2079,
           "time_status": "UPCOMING"
         },
         {
@@ -1316,7 +1360,7 @@
           "forecast": "7.11M",
           "previous": "7.08M",
           "actual": null,
-          "minutes_until": 2380,
+          "minutes_until": 2346,
           "time_status": "UPCOMING"
         },
         {
@@ -1327,7 +1371,7 @@
           "forecast": "1.2%",
           "previous": "0.1%",
           "actual": null,
-          "minutes_until": 2380,
+          "minutes_until": 2346,
           "time_status": "UPCOMING"
         },
         {
@@ -1338,7 +1382,7 @@
           "forecast": "46.2",
           "previous": "46.8",
           "actual": null,
-          "minutes_until": 2390,
+          "minutes_until": 2356,
           "time_status": "UPCOMING"
         },
         {
@@ -1349,7 +1393,7 @@
           "forecast": "15.9M",
           "previous": "16.0M",
           "actual": null,
-          "minutes_until": 2395,
+          "minutes_until": 2361,
           "time_status": "UPCOMING"
         },
         {
@@ -1360,7 +1404,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2396,
+          "minutes_until": 2362,
           "time_status": "UPCOMING"
         },
         {
@@ -1371,7 +1415,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2770,
+          "minutes_until": 2736,
           "time_status": "UPCOMING"
         }
       ],
@@ -1384,7 +1428,7 @@
           "forecast": "52.8",
           "previous": "52.8",
           "actual": null,
-          "minutes_until": 610,
+          "minutes_until": 576,
           "time_status": "UPCOMING"
         },
         {
@@ -1395,7 +1439,7 @@
           "forecast": "56.0",
           "previous": "56.0",
           "actual": null,
-          "minutes_until": 925,
+          "minutes_until": 891,
           "time_status": "UPCOMING"
         },
         {
@@ -1406,7 +1450,7 @@
           "forecast": "54.7",
           "previous": "54.5",
           "actual": null,
-          "minutes_until": 940,
+          "minutes_until": 906,
           "time_status": "UPCOMING"
         },
         {
@@ -1417,7 +1461,7 @@
           "forecast": "0.3%",
           "previous": "0.9%",
           "actual": null,
-          "minutes_until": 940,
+          "minutes_until": 906,
           "time_status": "UPCOMING"
         },
         {
@@ -1428,7 +1472,7 @@
           "forecast": "77.2",
           "previous": "77.9",
           "actual": null,
-          "minutes_until": 940,
+          "minutes_until": 906,
           "time_status": "UPCOMING"
         },
         {
@@ -1439,7 +1483,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1183,
+          "minutes_until": 1149,
           "time_status": "UPCOMING"
         }
       ],
@@ -1448,7 +1492,14 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -1464,20 +1515,20 @@
     },
     {
       "pair": "USDJPY",
-      "technical_direction": "NO_RANKED_CANDIDATE",
-      "technical_stage": "UNRANKED",
-      "unified_signal_direction": "UNAVAILABLE",
+      "technical_direction": "BUY",
+      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
+      "unified_signal_direction": "BUY",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
-      "h1_ema20_50": "MIXED",
-      "h4_ema20_50": "BELOW_BOTH",
+      "h1_ema20_50": "ABOVE_BOTH",
+      "h4_ema20_50": "MIXED",
       "timeframes_present": true,
       "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
@@ -1489,7 +1540,7 @@
           "forecast": "53.3",
           "previous": "53.3",
           "actual": null,
-          "minutes_until": 70,
+          "minutes_until": 36,
           "time_status": "IMMINENT"
         },
         {
@@ -1500,7 +1551,7 @@
           "forecast": "56.0",
           "previous": "56.0",
           "actual": null,
-          "minutes_until": 925,
+          "minutes_until": 891,
           "time_status": "UPCOMING"
         },
         {
@@ -1511,7 +1562,7 @@
           "forecast": "54.7",
           "previous": "54.5",
           "actual": null,
-          "minutes_until": 940,
+          "minutes_until": 906,
           "time_status": "UPCOMING"
         },
         {
@@ -1522,7 +1573,7 @@
           "forecast": "0.3%",
           "previous": "0.9%",
           "actual": null,
-          "minutes_until": 940,
+          "minutes_until": 906,
           "time_status": "UPCOMING"
         },
         {
@@ -1533,7 +1584,7 @@
           "forecast": "77.2",
           "previous": "77.9",
           "actual": null,
-          "minutes_until": 940,
+          "minutes_until": 906,
           "time_status": "UPCOMING"
         },
         {
@@ -1544,7 +1595,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1183,
+          "minutes_until": 1149,
           "time_status": "UPCOMING"
         },
         {
@@ -1555,7 +1606,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1480,
+          "minutes_until": 1446,
           "time_status": "UPCOMING"
         },
         {
@@ -1566,7 +1617,7 @@
           "forecast": "7.11M",
           "previous": "7.08M",
           "actual": null,
-          "minutes_until": 2380,
+          "minutes_until": 2346,
           "time_status": "UPCOMING"
         },
         {
@@ -1577,7 +1628,7 @@
           "forecast": "1.2%",
           "previous": "0.1%",
           "actual": null,
-          "minutes_until": 2380,
+          "minutes_until": 2346,
           "time_status": "UPCOMING"
         },
         {
@@ -1588,7 +1639,7 @@
           "forecast": "46.2",
           "previous": "46.8",
           "actual": null,
-          "minutes_until": 2390,
+          "minutes_until": 2356,
           "time_status": "UPCOMING"
         },
         {
@@ -1599,7 +1650,7 @@
           "forecast": "15.9M",
           "previous": "16.0M",
           "actual": null,
-          "minutes_until": 2395,
+          "minutes_until": 2361,
           "time_status": "UPCOMING"
         },
         {
@@ -1610,7 +1661,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2396,
+          "minutes_until": 2362,
           "time_status": "UPCOMING"
         },
         {
@@ -1621,7 +1672,18 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2770,
+          "minutes_until": 2736,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Monetary Base y/y",
+          "currency": "JPY",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T18:50:00-05:00",
+          "forecast": "-14.0%",
+          "previous": "-15.2%",
+          "actual": null,
+          "minutes_until": 2876,
           "time_status": "UPCOMING"
         }
       ],
@@ -1634,7 +1696,7 @@
           "forecast": "53.3",
           "previous": "53.3",
           "actual": null,
-          "minutes_until": 70,
+          "minutes_until": 36,
           "time_status": "IMMINENT"
         },
         {
@@ -1645,7 +1707,7 @@
           "forecast": "56.0",
           "previous": "56.0",
           "actual": null,
-          "minutes_until": 925,
+          "minutes_until": 891,
           "time_status": "UPCOMING"
         },
         {
@@ -1656,7 +1718,7 @@
           "forecast": "54.7",
           "previous": "54.5",
           "actual": null,
-          "minutes_until": 940,
+          "minutes_until": 906,
           "time_status": "UPCOMING"
         },
         {
@@ -1667,7 +1729,7 @@
           "forecast": "0.3%",
           "previous": "0.9%",
           "actual": null,
-          "minutes_until": 940,
+          "minutes_until": 906,
           "time_status": "UPCOMING"
         },
         {
@@ -1678,7 +1740,7 @@
           "forecast": "77.2",
           "previous": "77.9",
           "actual": null,
-          "minutes_until": 940,
+          "minutes_until": 906,
           "time_status": "UPCOMING"
         },
         {
@@ -1689,7 +1751,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1183,
+          "minutes_until": 1149,
           "time_status": "UPCOMING"
         }
       ],
@@ -1702,7 +1764,7 @@
           "forecast": "53.3",
           "previous": "53.3",
           "actual": null,
-          "minutes_until": 70,
+          "minutes_until": 36,
           "time_status": "IMMINENT"
         }
       ],
@@ -1710,7 +1772,14 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -1727,7 +1796,7 @@
       },
       "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -1736,17 +1805,17 @@
     {
       "pair": "AUDJPY",
       "technical_direction": "BUY",
-      "technical_stage": "CONTINUATION",
-      "unified_signal_direction": "UNAVAILABLE",
+      "technical_stage": "WAIT",
+      "unified_signal_direction": "BUY",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
-      "reference_level_not_live": 110.813,
+      "reference_level_not_live": null,
       "h1_ema20_50": "MIXED",
       "h4_ema20_50": "MIXED",
       "timeframes_present": true,
@@ -1760,7 +1829,7 @@
           "forecast": "",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 40,
+          "minutes_until": 6,
           "time_status": "IMMINENT"
         },
         {
@@ -1771,7 +1840,7 @@
           "forecast": "1.8%",
           "previous": "-6.1%",
           "actual": null,
-          "minutes_until": 70,
+          "minutes_until": 36,
           "time_status": "IMMINENT"
         },
         {
@@ -1782,7 +1851,7 @@
           "forecast": "53.3",
           "previous": "53.3",
           "actual": null,
-          "minutes_until": 70,
+          "minutes_until": 36,
           "time_status": "IMMINENT"
         },
         {
@@ -1793,7 +1862,7 @@
           "forecast": "",
           "previous": "2.2%",
           "actual": null,
-          "minutes_until": 85,
+          "minutes_until": 51,
           "time_status": "IMMINENT"
         },
         {
@@ -1804,8 +1873,8 @@
           "forecast": "52.0",
           "previous": "52.1",
           "actual": null,
-          "minutes_until": 145,
-          "time_status": "UPCOMING"
+          "minutes_until": 111,
+          "time_status": "IMMINENT"
         },
         {
           "title": "Commodity Prices y/y",
@@ -1815,7 +1884,7 @@
           "forecast": "",
           "previous": "15.5%",
           "actual": null,
-          "minutes_until": 370,
+          "minutes_until": 336,
           "time_status": "UPCOMING"
         },
         {
@@ -1826,7 +1895,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1480,
+          "minutes_until": 1446,
           "time_status": "UPCOMING"
         },
         {
@@ -1837,7 +1906,7 @@
           "forecast": "4.85%",
           "previous": "4.60%",
           "actual": null,
-          "minutes_until": 1690,
+          "minutes_until": 1656,
           "time_status": "UPCOMING"
         },
         {
@@ -1848,7 +1917,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1690,
+          "minutes_until": 1656,
           "time_status": "UPCOMING"
         },
         {
@@ -1859,7 +1928,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1690,
+          "minutes_until": 1656,
           "time_status": "UPCOMING"
         },
         {
@@ -1870,7 +1939,18 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1750,
+          "minutes_until": 1716,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Monetary Base y/y",
+          "currency": "JPY",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T18:50:00-05:00",
+          "forecast": "-14.0%",
+          "previous": "-15.2%",
+          "actual": null,
+          "minutes_until": 2876,
           "time_status": "UPCOMING"
         }
       ],
@@ -1883,7 +1963,7 @@
           "forecast": "",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 40,
+          "minutes_until": 6,
           "time_status": "IMMINENT"
         },
         {
@@ -1894,7 +1974,7 @@
           "forecast": "1.8%",
           "previous": "-6.1%",
           "actual": null,
-          "minutes_until": 70,
+          "minutes_until": 36,
           "time_status": "IMMINENT"
         },
         {
@@ -1905,7 +1985,7 @@
           "forecast": "53.3",
           "previous": "53.3",
           "actual": null,
-          "minutes_until": 70,
+          "minutes_until": 36,
           "time_status": "IMMINENT"
         },
         {
@@ -1916,7 +1996,7 @@
           "forecast": "",
           "previous": "2.2%",
           "actual": null,
-          "minutes_until": 85,
+          "minutes_until": 51,
           "time_status": "IMMINENT"
         },
         {
@@ -1927,8 +2007,8 @@
           "forecast": "52.0",
           "previous": "52.1",
           "actual": null,
-          "minutes_until": 145,
-          "time_status": "UPCOMING"
+          "minutes_until": 111,
+          "time_status": "IMMINENT"
         },
         {
           "title": "Commodity Prices y/y",
@@ -1938,7 +2018,7 @@
           "forecast": "",
           "previous": "15.5%",
           "actual": null,
-          "minutes_until": 370,
+          "minutes_until": 336,
           "time_status": "UPCOMING"
         }
       ],
@@ -1951,7 +2031,7 @@
           "forecast": "",
           "previous": "0.3%",
           "actual": null,
-          "minutes_until": 40,
+          "minutes_until": 6,
           "time_status": "IMMINENT"
         },
         {
@@ -1962,7 +2042,7 @@
           "forecast": "1.8%",
           "previous": "-6.1%",
           "actual": null,
-          "minutes_until": 70,
+          "minutes_until": 36,
           "time_status": "IMMINENT"
         },
         {
@@ -1973,7 +2053,7 @@
           "forecast": "53.3",
           "previous": "53.3",
           "actual": null,
-          "minutes_until": 70,
+          "minutes_until": 36,
           "time_status": "IMMINENT"
         },
         {
@@ -1984,7 +2064,18 @@
           "forecast": "",
           "previous": "2.2%",
           "actual": null,
-          "minutes_until": 85,
+          "minutes_until": 51,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "RatingDog Manufacturing PMI",
+          "currency": "CNY",
+          "impact": "Low",
+          "event_at_et": "2026-11-01T20:45:00-05:00",
+          "forecast": "52.0",
+          "previous": "52.1",
+          "actual": null,
+          "minutes_until": 111,
           "time_status": "IMMINENT"
         }
       ],
@@ -1992,7 +2083,14 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -2018,21 +2116,21 @@
     {
       "pair": "NZDJPY",
       "technical_direction": "BUY",
-      "technical_stage": "CONFIRMING",
-      "unified_signal_direction": "UNAVAILABLE",
+      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
+      "unified_signal_direction": "BUY",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
-      "reference_level_not_live": 88.754,
-      "h1_ema20_50": "MIXED",
+      "reference_level_not_live": null,
+      "h1_ema20_50": "BELOW_BOTH",
       "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
-      "higher_timeframe_conflict": false,
+      "higher_timeframe_conflict": true,
       "upcoming_48h_events": [
         {
           "title": "Final Manufacturing PMI",
@@ -2042,7 +2140,7 @@
           "forecast": "53.3",
           "previous": "53.3",
           "actual": null,
-          "minutes_until": 70,
+          "minutes_until": 36,
           "time_status": "IMMINENT"
         },
         {
@@ -2053,8 +2151,8 @@
           "forecast": "52.0",
           "previous": "52.1",
           "actual": null,
-          "minutes_until": 145,
-          "time_status": "UPCOMING"
+          "minutes_until": 111,
+          "time_status": "IMMINENT"
         },
         {
           "title": "Building Consents m/m",
@@ -2064,7 +2162,7 @@
           "forecast": "",
           "previous": "5.6%",
           "actual": null,
-          "minutes_until": 1345,
+          "minutes_until": 1311,
           "time_status": "UPCOMING"
         },
         {
@@ -2075,7 +2173,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1480,
+          "minutes_until": 1446,
           "time_status": "UPCOMING"
         },
         {
@@ -2086,7 +2184,7 @@
           "forecast": "",
           "previous": "2.5%",
           "actual": null,
-          "minutes_until": 2430,
+          "minutes_until": 2396,
           "time_status": "UPCOMING"
         },
         {
@@ -2097,7 +2195,7 @@
           "forecast": "0.4%",
           "previous": "0.5%",
           "actual": null,
-          "minutes_until": 2785,
+          "minutes_until": 2751,
           "time_status": "UPCOMING"
         },
         {
@@ -2108,7 +2206,7 @@
           "forecast": "5.5%",
           "previous": "5.6%",
           "actual": null,
-          "minutes_until": 2785,
+          "minutes_until": 2751,
           "time_status": "UPCOMING"
         },
         {
@@ -2119,7 +2217,18 @@
           "forecast": "0.5%",
           "previous": "0.7%",
           "actual": null,
-          "minutes_until": 2785,
+          "minutes_until": 2751,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Monetary Base y/y",
+          "currency": "JPY",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T18:50:00-05:00",
+          "forecast": "-14.0%",
+          "previous": "-15.2%",
+          "actual": null,
+          "minutes_until": 2876,
           "time_status": "UPCOMING"
         }
       ],
@@ -2132,7 +2241,7 @@
           "forecast": "53.3",
           "previous": "53.3",
           "actual": null,
-          "minutes_until": 70,
+          "minutes_until": 36,
           "time_status": "IMMINENT"
         },
         {
@@ -2143,8 +2252,8 @@
           "forecast": "52.0",
           "previous": "52.1",
           "actual": null,
-          "minutes_until": 145,
-          "time_status": "UPCOMING"
+          "minutes_until": 111,
+          "time_status": "IMMINENT"
         },
         {
           "title": "Building Consents m/m",
@@ -2154,7 +2263,7 @@
           "forecast": "",
           "previous": "5.6%",
           "actual": null,
-          "minutes_until": 1345,
+          "minutes_until": 1311,
           "time_status": "UPCOMING"
         }
       ],
@@ -2167,7 +2276,18 @@
           "forecast": "53.3",
           "previous": "53.3",
           "actual": null,
-          "minutes_until": 70,
+          "minutes_until": 36,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "RatingDog Manufacturing PMI",
+          "currency": "CNY",
+          "impact": "Low",
+          "event_at_et": "2026-11-01T20:45:00-05:00",
+          "forecast": "52.0",
+          "previous": "52.1",
+          "actual": null,
+          "minutes_until": 111,
           "time_status": "IMMINENT"
         }
       ],
@@ -2175,7 +2295,14 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -2192,7 +2319,7 @@
       },
       "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -2200,16 +2327,16 @@
     },
     {
       "pair": "EURJPY",
-      "technical_direction": "NO_RANKED_CANDIDATE",
-      "technical_stage": "UNRANKED",
-      "unified_signal_direction": "UNAVAILABLE",
+      "technical_direction": "BUY",
+      "technical_stage": "WAIT",
+      "unified_signal_direction": "BUY",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "MIXED",
@@ -2225,7 +2352,7 @@
           "forecast": "53.3",
           "previous": "53.3",
           "actual": null,
-          "minutes_until": 70,
+          "minutes_until": 36,
           "time_status": "IMMINENT"
         },
         {
@@ -2236,7 +2363,7 @@
           "forecast": "0.4%",
           "previous": "1.3%",
           "actual": null,
-          "minutes_until": 460,
+          "minutes_until": 426,
           "time_status": "UPCOMING"
         },
         {
@@ -2247,7 +2374,7 @@
           "forecast": "50.4",
           "previous": "51.0",
           "actual": null,
-          "minutes_until": 535,
+          "minutes_until": 501,
           "time_status": "UPCOMING"
         },
         {
@@ -2258,7 +2385,7 @@
           "forecast": "49.9",
           "previous": "50.4",
           "actual": null,
-          "minutes_until": 565,
+          "minutes_until": 531,
           "time_status": "UPCOMING"
         },
         {
@@ -2269,7 +2396,7 @@
           "forecast": "49.3",
           "previous": "49.3",
           "actual": null,
-          "minutes_until": 570,
+          "minutes_until": 536,
           "time_status": "UPCOMING"
         },
         {
@@ -2280,7 +2407,7 @@
           "forecast": "54.2",
           "previous": "54.2",
           "actual": null,
-          "minutes_until": 575,
+          "minutes_until": 541,
           "time_status": "UPCOMING"
         },
         {
@@ -2291,7 +2418,7 @@
           "forecast": "52.4",
           "previous": "52.4",
           "actual": null,
-          "minutes_until": 580,
+          "minutes_until": 546,
           "time_status": "UPCOMING"
         },
         {
@@ -2302,7 +2429,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 760,
+          "minutes_until": 726,
           "time_status": "UPCOMING"
         },
         {
@@ -2313,7 +2440,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 1480,
+          "minutes_until": 1446,
           "time_status": "UPCOMING"
         },
         {
@@ -2324,7 +2451,7 @@
           "forecast": "",
           "previous": "-159.6B",
           "actual": null,
-          "minutes_until": 1945,
+          "minutes_until": 1911,
           "time_status": "UPCOMING"
         },
         {
@@ -2335,7 +2462,18 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2500,
+          "minutes_until": 2466,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Monetary Base y/y",
+          "currency": "JPY",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T18:50:00-05:00",
+          "forecast": "-14.0%",
+          "previous": "-15.2%",
+          "actual": null,
+          "minutes_until": 2876,
           "time_status": "UPCOMING"
         }
       ],
@@ -2348,7 +2486,7 @@
           "forecast": "53.3",
           "previous": "53.3",
           "actual": null,
-          "minutes_until": 70,
+          "minutes_until": 36,
           "time_status": "IMMINENT"
         },
         {
@@ -2359,7 +2497,7 @@
           "forecast": "0.4%",
           "previous": "1.3%",
           "actual": null,
-          "minutes_until": 460,
+          "minutes_until": 426,
           "time_status": "UPCOMING"
         },
         {
@@ -2370,7 +2508,7 @@
           "forecast": "50.4",
           "previous": "51.0",
           "actual": null,
-          "minutes_until": 535,
+          "minutes_until": 501,
           "time_status": "UPCOMING"
         },
         {
@@ -2381,7 +2519,7 @@
           "forecast": "49.9",
           "previous": "50.4",
           "actual": null,
-          "minutes_until": 565,
+          "minutes_until": 531,
           "time_status": "UPCOMING"
         },
         {
@@ -2392,7 +2530,7 @@
           "forecast": "49.3",
           "previous": "49.3",
           "actual": null,
-          "minutes_until": 570,
+          "minutes_until": 536,
           "time_status": "UPCOMING"
         },
         {
@@ -2403,7 +2541,7 @@
           "forecast": "54.2",
           "previous": "54.2",
           "actual": null,
-          "minutes_until": 575,
+          "minutes_until": 541,
           "time_status": "UPCOMING"
         },
         {
@@ -2414,7 +2552,7 @@
           "forecast": "52.4",
           "previous": "52.4",
           "actual": null,
-          "minutes_until": 580,
+          "minutes_until": 546,
           "time_status": "UPCOMING"
         },
         {
@@ -2425,7 +2563,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 760,
+          "minutes_until": 726,
           "time_status": "UPCOMING"
         }
       ],
@@ -2438,7 +2576,7 @@
           "forecast": "53.3",
           "previous": "53.3",
           "actual": null,
-          "minutes_until": 70,
+          "minutes_until": 36,
           "time_status": "IMMINENT"
         }
       ],
@@ -2446,7 +2584,14 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -2471,518 +2616,18 @@
     },
     {
       "pair": "EURCAD",
-      "technical_direction": "NO_RANKED_CANDIDATE",
-      "technical_stage": "UNRANKED",
-      "unified_signal_direction": "UNAVAILABLE",
-      "macro_alignment": "UNKNOWN",
-      "macro_evidence": [],
-      "publisher_reported_actuals": [],
-      "range_context": {
-        "status": "UNAVAILABLE"
-      },
-      "technical_15m30m_fresh": false,
-      "early_watches_permitted_with_unknown_macro": true,
-      "reference_level_not_live": null,
-      "h1_ema20_50": "BELOW_BOTH",
-      "h4_ema20_50": "BELOW_BOTH",
-      "timeframes_present": true,
-      "higher_timeframe_conflict": false,
-      "upcoming_48h_events": [
-        {
-          "title": "German Retail Sales m/m",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-02T02:00:00-05:00",
-          "forecast": "0.4%",
-          "previous": "1.3%",
-          "actual": null,
-          "minutes_until": 460,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Spanish Manufacturing PMI",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-02T03:15:00-05:00",
-          "forecast": "50.4",
-          "previous": "51.0",
-          "actual": null,
-          "minutes_until": 535,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Italian Manufacturing PMI",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-02T03:45:00-05:00",
-          "forecast": "49.9",
-          "previous": "50.4",
-          "actual": null,
-          "minutes_until": 565,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "French Final Manufacturing PMI",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-02T03:50:00-05:00",
-          "forecast": "49.3",
-          "previous": "49.3",
-          "actual": null,
-          "minutes_until": 570,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "German Final Manufacturing PMI",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-02T03:55:00-05:00",
-          "forecast": "54.2",
-          "previous": "54.2",
-          "actual": null,
-          "minutes_until": 575,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Final Manufacturing PMI",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-02T04:00:00-05:00",
-          "forecast": "52.4",
-          "previous": "52.4",
-          "actual": null,
-          "minutes_until": 580,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "German Buba President Nagel Speaks",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-02T07:00:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 760,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Manufacturing PMI",
-          "currency": "CAD",
-          "impact": "Low",
-          "event_at_et": "2026-11-02T09:30:00-05:00",
-          "forecast": "",
-          "previous": "51.5",
-          "actual": null,
-          "minutes_until": 910,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "French Gov Budget Balance",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T02:45:00-05:00",
-          "forecast": "",
-          "previous": "-159.6B",
-          "actual": null,
-          "minutes_until": 1945,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "BOC Gov Macklem Speaks",
-          "currency": "CAD",
-          "impact": "Medium",
-          "event_at_et": "2026-11-03T11:00:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 2440,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "German Buba President Nagel Speaks",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T12:00:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 2500,
-          "time_status": "UPCOMING"
-        }
-      ],
-      "next_24h_events": [
-        {
-          "title": "German Retail Sales m/m",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-02T02:00:00-05:00",
-          "forecast": "0.4%",
-          "previous": "1.3%",
-          "actual": null,
-          "minutes_until": 460,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Spanish Manufacturing PMI",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-02T03:15:00-05:00",
-          "forecast": "50.4",
-          "previous": "51.0",
-          "actual": null,
-          "minutes_until": 535,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Italian Manufacturing PMI",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-02T03:45:00-05:00",
-          "forecast": "49.9",
-          "previous": "50.4",
-          "actual": null,
-          "minutes_until": 565,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "French Final Manufacturing PMI",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-02T03:50:00-05:00",
-          "forecast": "49.3",
-          "previous": "49.3",
-          "actual": null,
-          "minutes_until": 570,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "German Final Manufacturing PMI",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-02T03:55:00-05:00",
-          "forecast": "54.2",
-          "previous": "54.2",
-          "actual": null,
-          "minutes_until": 575,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Final Manufacturing PMI",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-02T04:00:00-05:00",
-          "forecast": "52.4",
-          "previous": "52.4",
-          "actual": null,
-          "minutes_until": 580,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "German Buba President Nagel Speaks",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-02T07:00:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 760,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Manufacturing PMI",
-          "currency": "CAD",
-          "impact": "Low",
-          "event_at_et": "2026-11-02T09:30:00-05:00",
-          "forecast": "",
-          "previous": "51.5",
-          "actual": null,
-          "minutes_until": 910,
-          "time_status": "UPCOMING"
-        }
-      ],
-      "imminent_events": [],
-      "event_risk": "EVENT_WITHIN_24H",
-      "calendar_coverage": "VERIFIED",
-      "forexfactory_positioning": null,
-      "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
-      },
-      "asian_risk_context": {
-        "status": "DATED_DAILY_CONTEXT",
-        "note": "General risk backdrop; not an FX trade signal"
-      },
-      "asian_risk_directional_note": "Not a direct directional driver",
-      "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
-      "entry": null,
-      "stop": null,
-      "tp1": null,
-      "tp2": null
-    },
-    {
-      "pair": "USDCAD",
-      "technical_direction": "NO_RANKED_CANDIDATE",
-      "technical_stage": "UNRANKED",
-      "unified_signal_direction": "UNAVAILABLE",
-      "macro_alignment": "UNKNOWN",
-      "macro_evidence": [],
-      "publisher_reported_actuals": [],
-      "range_context": {
-        "status": "UNAVAILABLE"
-      },
-      "technical_15m30m_fresh": false,
-      "early_watches_permitted_with_unknown_macro": true,
-      "reference_level_not_live": null,
-      "h1_ema20_50": "BELOW_BOTH",
-      "h4_ema20_50": "BELOW_BOTH",
-      "timeframes_present": true,
-      "higher_timeframe_conflict": false,
-      "upcoming_48h_events": [
-        {
-          "title": "Manufacturing PMI",
-          "currency": "CAD",
-          "impact": "Low",
-          "event_at_et": "2026-11-02T09:30:00-05:00",
-          "forecast": "",
-          "previous": "51.5",
-          "actual": null,
-          "minutes_until": 910,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Final Manufacturing PMI",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-02T09:45:00-05:00",
-          "forecast": "56.0",
-          "previous": "56.0",
-          "actual": null,
-          "minutes_until": 925,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "ISM Manufacturing PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-11-02T10:00:00-05:00",
-          "forecast": "54.7",
-          "previous": "54.5",
-          "actual": null,
-          "minutes_until": 940,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Construction Spending m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-02T10:00:00-05:00",
-          "forecast": "0.3%",
-          "previous": "0.9%",
-          "actual": null,
-          "minutes_until": 940,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "ISM Manufacturing Prices",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-02T10:00:00-05:00",
-          "forecast": "77.2",
-          "previous": "77.9",
-          "actual": null,
-          "minutes_until": 940,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Loan Officer Survey",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-02T14:03:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 1183,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "JOLTS Job Openings",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-11-03T10:00:00-05:00",
-          "forecast": "7.11M",
-          "previous": "7.08M",
-          "actual": null,
-          "minutes_until": 2380,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Factory Orders m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T10:00:00-05:00",
-          "forecast": "1.2%",
-          "previous": "0.1%",
-          "actual": null,
-          "minutes_until": 2380,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "RCM/TIPP Economic Optimism",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T10:10:00-05:00",
-          "forecast": "46.2",
-          "previous": "46.8",
-          "actual": null,
-          "minutes_until": 2390,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Omdia Total Vehicle Sales",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T10:15:00-05:00",
-          "forecast": "15.9M",
-          "previous": "16.0M",
-          "actual": null,
-          "minutes_until": 2395,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Congressional Elections",
-          "currency": "USD",
-          "impact": "High",
-          "event_at_et": "2026-11-03T10:16:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 2396,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "BOC Gov Macklem Speaks",
-          "currency": "CAD",
-          "impact": "Medium",
-          "event_at_et": "2026-11-03T11:00:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 2440,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "API Weekly Statistical Bulletin",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T16:30:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 2770,
-          "time_status": "UPCOMING"
-        }
-      ],
-      "next_24h_events": [
-        {
-          "title": "Manufacturing PMI",
-          "currency": "CAD",
-          "impact": "Low",
-          "event_at_et": "2026-11-02T09:30:00-05:00",
-          "forecast": "",
-          "previous": "51.5",
-          "actual": null,
-          "minutes_until": 910,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Final Manufacturing PMI",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-02T09:45:00-05:00",
-          "forecast": "56.0",
-          "previous": "56.0",
-          "actual": null,
-          "minutes_until": 925,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "ISM Manufacturing PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-11-02T10:00:00-05:00",
-          "forecast": "54.7",
-          "previous": "54.5",
-          "actual": null,
-          "minutes_until": 940,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Construction Spending m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-02T10:00:00-05:00",
-          "forecast": "0.3%",
-          "previous": "0.9%",
-          "actual": null,
-          "minutes_until": 940,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "ISM Manufacturing Prices",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-02T10:00:00-05:00",
-          "forecast": "77.2",
-          "previous": "77.9",
-          "actual": null,
-          "minutes_until": 940,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Loan Officer Survey",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-02T14:03:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 1183,
-          "time_status": "UPCOMING"
-        }
-      ],
-      "imminent_events": [],
-      "event_risk": "EVENT_WITHIN_24H",
-      "calendar_coverage": "VERIFIED",
-      "forexfactory_positioning": null,
-      "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
-      },
-      "asian_risk_context": {
-        "status": "DATED_DAILY_CONTEXT",
-        "note": "General risk backdrop; not an FX trade signal"
-      },
-      "asian_risk_directional_note": "Not a direct directional driver",
-      "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
-      "entry": null,
-      "stop": null,
-      "tp1": null,
-      "tp2": null
-    },
-    {
-      "pair": "EURGBP",
       "technical_direction": "BUY",
-      "technical_stage": "EARLY",
-      "unified_signal_direction": "UNAVAILABLE",
+      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
+      "unified_signal_direction": "BUY",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE"
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
       },
-      "technical_15m30m_fresh": false,
+      "technical_15m30m_fresh": true,
       "early_watches_permitted_with_unknown_macro": true,
-      "reference_level_not_live": 0.8339,
+      "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
       "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
@@ -2996,7 +2641,7 @@
           "forecast": "0.4%",
           "previous": "1.3%",
           "actual": null,
-          "minutes_until": 460,
+          "minutes_until": 426,
           "time_status": "UPCOMING"
         },
         {
@@ -3007,7 +2652,7 @@
           "forecast": "50.4",
           "previous": "51.0",
           "actual": null,
-          "minutes_until": 535,
+          "minutes_until": 501,
           "time_status": "UPCOMING"
         },
         {
@@ -3018,7 +2663,7 @@
           "forecast": "49.9",
           "previous": "50.4",
           "actual": null,
-          "minutes_until": 565,
+          "minutes_until": 531,
           "time_status": "UPCOMING"
         },
         {
@@ -3029,7 +2674,7 @@
           "forecast": "49.3",
           "previous": "49.3",
           "actual": null,
-          "minutes_until": 570,
+          "minutes_until": 536,
           "time_status": "UPCOMING"
         },
         {
@@ -3040,7 +2685,7 @@
           "forecast": "54.2",
           "previous": "54.2",
           "actual": null,
-          "minutes_until": 575,
+          "minutes_until": 541,
           "time_status": "UPCOMING"
         },
         {
@@ -3051,18 +2696,7 @@
           "forecast": "52.4",
           "previous": "52.4",
           "actual": null,
-          "minutes_until": 580,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Final Manufacturing PMI",
-          "currency": "GBP",
-          "impact": "Low",
-          "event_at_et": "2026-11-02T04:30:00-05:00",
-          "forecast": "52.8",
-          "previous": "52.8",
-          "actual": null,
-          "minutes_until": 610,
+          "minutes_until": 546,
           "time_status": "UPCOMING"
         },
         {
@@ -3073,7 +2707,18 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 760,
+          "minutes_until": 726,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Manufacturing PMI",
+          "currency": "CAD",
+          "impact": "Low",
+          "event_at_et": "2026-11-02T09:30:00-05:00",
+          "forecast": "",
+          "previous": "51.5",
+          "actual": null,
+          "minutes_until": 876,
           "time_status": "UPCOMING"
         },
         {
@@ -3084,18 +2729,18 @@
           "forecast": "",
           "previous": "-159.6B",
           "actual": null,
-          "minutes_until": 1945,
+          "minutes_until": 1911,
           "time_status": "UPCOMING"
         },
         {
-          "title": "10-y Bond Auction",
-          "currency": "GBP",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T05:33:00-05:00",
+          "title": "BOC Gov Macklem Speaks",
+          "currency": "CAD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-03T11:00:00-05:00",
           "forecast": "",
-          "previous": "5.42|3.6",
+          "previous": "",
           "actual": null,
-          "minutes_until": 2113,
+          "minutes_until": 2406,
           "time_status": "UPCOMING"
         },
         {
@@ -3106,7 +2751,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 2500,
+          "minutes_until": 2466,
           "time_status": "UPCOMING"
         }
       ],
@@ -3119,7 +2764,7 @@
           "forecast": "0.4%",
           "previous": "1.3%",
           "actual": null,
-          "minutes_until": 460,
+          "minutes_until": 426,
           "time_status": "UPCOMING"
         },
         {
@@ -3130,7 +2775,7 @@
           "forecast": "50.4",
           "previous": "51.0",
           "actual": null,
-          "minutes_until": 535,
+          "minutes_until": 501,
           "time_status": "UPCOMING"
         },
         {
@@ -3141,7 +2786,7 @@
           "forecast": "49.9",
           "previous": "50.4",
           "actual": null,
-          "minutes_until": 565,
+          "minutes_until": 531,
           "time_status": "UPCOMING"
         },
         {
@@ -3152,7 +2797,7 @@
           "forecast": "49.3",
           "previous": "49.3",
           "actual": null,
-          "minutes_until": 570,
+          "minutes_until": 536,
           "time_status": "UPCOMING"
         },
         {
@@ -3163,7 +2808,7 @@
           "forecast": "54.2",
           "previous": "54.2",
           "actual": null,
-          "minutes_until": 575,
+          "minutes_until": 541,
           "time_status": "UPCOMING"
         },
         {
@@ -3174,18 +2819,7 @@
           "forecast": "52.4",
           "previous": "52.4",
           "actual": null,
-          "minutes_until": 580,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Final Manufacturing PMI",
-          "currency": "GBP",
-          "impact": "Low",
-          "event_at_et": "2026-11-02T04:30:00-05:00",
-          "forecast": "52.8",
-          "previous": "52.8",
-          "actual": null,
-          "minutes_until": 610,
+          "minutes_until": 546,
           "time_status": "UPCOMING"
         },
         {
@@ -3196,7 +2830,18 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 760,
+          "minutes_until": 726,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Manufacturing PMI",
+          "currency": "CAD",
+          "impact": "Low",
+          "event_at_et": "2026-11-02T09:30:00-05:00",
+          "forecast": "",
+          "previous": "51.5",
+          "actual": null,
+          "minutes_until": 876,
           "time_status": "UPCOMING"
         }
       ],
@@ -3205,7 +2850,14 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "status": "UNAVAILABLE"
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -3213,7 +2865,521 @@
       },
       "asian_risk_directional_note": "Not a direct directional driver",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "entry": null,
+      "stop": null,
+      "tp1": null,
+      "tp2": null
+    },
+    {
+      "pair": "USDCAD",
+      "technical_direction": "BUY",
+      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
+      "unified_signal_direction": "BUY",
+      "macro_alignment": "UNKNOWN",
+      "macro_evidence": [],
+      "publisher_reported_actuals": [],
+      "range_context": {
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+      },
+      "technical_15m30m_fresh": true,
+      "early_watches_permitted_with_unknown_macro": true,
+      "reference_level_not_live": null,
+      "h1_ema20_50": "MIXED",
+      "h4_ema20_50": "BELOW_BOTH",
+      "timeframes_present": true,
+      "higher_timeframe_conflict": false,
+      "upcoming_48h_events": [
+        {
+          "title": "Manufacturing PMI",
+          "currency": "CAD",
+          "impact": "Low",
+          "event_at_et": "2026-11-02T09:30:00-05:00",
+          "forecast": "",
+          "previous": "51.5",
+          "actual": null,
+          "minutes_until": 876,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Final Manufacturing PMI",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-02T09:45:00-05:00",
+          "forecast": "56.0",
+          "previous": "56.0",
+          "actual": null,
+          "minutes_until": 891,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "ISM Manufacturing PMI",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-02T10:00:00-05:00",
+          "forecast": "54.7",
+          "previous": "54.5",
+          "actual": null,
+          "minutes_until": 906,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Construction Spending m/m",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-02T10:00:00-05:00",
+          "forecast": "0.3%",
+          "previous": "0.9%",
+          "actual": null,
+          "minutes_until": 906,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "ISM Manufacturing Prices",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-02T10:00:00-05:00",
+          "forecast": "77.2",
+          "previous": "77.9",
+          "actual": null,
+          "minutes_until": 906,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Loan Officer Survey",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-02T14:03:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1149,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "JOLTS Job Openings",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-03T10:00:00-05:00",
+          "forecast": "7.11M",
+          "previous": "7.08M",
+          "actual": null,
+          "minutes_until": 2346,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Factory Orders m/m",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T10:00:00-05:00",
+          "forecast": "1.2%",
+          "previous": "0.1%",
+          "actual": null,
+          "minutes_until": 2346,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "RCM/TIPP Economic Optimism",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T10:10:00-05:00",
+          "forecast": "46.2",
+          "previous": "46.8",
+          "actual": null,
+          "minutes_until": 2356,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Omdia Total Vehicle Sales",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T10:15:00-05:00",
+          "forecast": "15.9M",
+          "previous": "16.0M",
+          "actual": null,
+          "minutes_until": 2361,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Congressional Elections",
+          "currency": "USD",
+          "impact": "High",
+          "event_at_et": "2026-11-03T10:16:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 2362,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "BOC Gov Macklem Speaks",
+          "currency": "CAD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-03T11:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 2406,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "API Weekly Statistical Bulletin",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T16:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 2736,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "next_24h_events": [
+        {
+          "title": "Manufacturing PMI",
+          "currency": "CAD",
+          "impact": "Low",
+          "event_at_et": "2026-11-02T09:30:00-05:00",
+          "forecast": "",
+          "previous": "51.5",
+          "actual": null,
+          "minutes_until": 876,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Final Manufacturing PMI",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-02T09:45:00-05:00",
+          "forecast": "56.0",
+          "previous": "56.0",
+          "actual": null,
+          "minutes_until": 891,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "ISM Manufacturing PMI",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-02T10:00:00-05:00",
+          "forecast": "54.7",
+          "previous": "54.5",
+          "actual": null,
+          "minutes_until": 906,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Construction Spending m/m",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-02T10:00:00-05:00",
+          "forecast": "0.3%",
+          "previous": "0.9%",
+          "actual": null,
+          "minutes_until": 906,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "ISM Manufacturing Prices",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-02T10:00:00-05:00",
+          "forecast": "77.2",
+          "previous": "77.9",
+          "actual": null,
+          "minutes_until": 906,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Loan Officer Survey",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-02T14:03:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1149,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "imminent_events": [],
+      "event_risk": "EVENT_WITHIN_24H",
+      "calendar_coverage": "VERIFIED",
+      "forexfactory_positioning": null,
+      "myfxbook_positioning": {
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
+      },
+      "asian_risk_context": {
+        "status": "DATED_DAILY_CONTEXT",
+        "note": "General risk backdrop; not an FX trade signal"
+      },
+      "asian_risk_directional_note": "Not a direct directional driver",
+      "macro_confirmed": false,
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "entry": null,
+      "stop": null,
+      "tp1": null,
+      "tp2": null
+    },
+    {
+      "pair": "EURGBP",
+      "technical_direction": "BUY",
+      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
+      "unified_signal_direction": "BUY",
+      "macro_alignment": "UNKNOWN",
+      "macro_evidence": [],
+      "publisher_reported_actuals": [],
+      "range_context": {
+        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+      },
+      "technical_15m30m_fresh": true,
+      "early_watches_permitted_with_unknown_macro": true,
+      "reference_level_not_live": null,
+      "h1_ema20_50": "BELOW_BOTH",
+      "h4_ema20_50": "BELOW_BOTH",
+      "timeframes_present": true,
+      "higher_timeframe_conflict": true,
+      "upcoming_48h_events": [
+        {
+          "title": "German Retail Sales m/m",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-02T02:00:00-05:00",
+          "forecast": "0.4%",
+          "previous": "1.3%",
+          "actual": null,
+          "minutes_until": 426,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Spanish Manufacturing PMI",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-02T03:15:00-05:00",
+          "forecast": "50.4",
+          "previous": "51.0",
+          "actual": null,
+          "minutes_until": 501,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Italian Manufacturing PMI",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-02T03:45:00-05:00",
+          "forecast": "49.9",
+          "previous": "50.4",
+          "actual": null,
+          "minutes_until": 531,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "French Final Manufacturing PMI",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-02T03:50:00-05:00",
+          "forecast": "49.3",
+          "previous": "49.3",
+          "actual": null,
+          "minutes_until": 536,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "German Final Manufacturing PMI",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-02T03:55:00-05:00",
+          "forecast": "54.2",
+          "previous": "54.2",
+          "actual": null,
+          "minutes_until": 541,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Final Manufacturing PMI",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-02T04:00:00-05:00",
+          "forecast": "52.4",
+          "previous": "52.4",
+          "actual": null,
+          "minutes_until": 546,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Final Manufacturing PMI",
+          "currency": "GBP",
+          "impact": "Low",
+          "event_at_et": "2026-11-02T04:30:00-05:00",
+          "forecast": "52.8",
+          "previous": "52.8",
+          "actual": null,
+          "minutes_until": 576,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "German Buba President Nagel Speaks",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-02T07:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 726,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "French Gov Budget Balance",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T02:45:00-05:00",
+          "forecast": "",
+          "previous": "-159.6B",
+          "actual": null,
+          "minutes_until": 1911,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "10-y Bond Auction",
+          "currency": "GBP",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T05:33:00-05:00",
+          "forecast": "",
+          "previous": "5.42|3.6",
+          "actual": null,
+          "minutes_until": 2079,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "German Buba President Nagel Speaks",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T12:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 2466,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "next_24h_events": [
+        {
+          "title": "German Retail Sales m/m",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-02T02:00:00-05:00",
+          "forecast": "0.4%",
+          "previous": "1.3%",
+          "actual": null,
+          "minutes_until": 426,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Spanish Manufacturing PMI",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-02T03:15:00-05:00",
+          "forecast": "50.4",
+          "previous": "51.0",
+          "actual": null,
+          "minutes_until": 501,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Italian Manufacturing PMI",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-02T03:45:00-05:00",
+          "forecast": "49.9",
+          "previous": "50.4",
+          "actual": null,
+          "minutes_until": 531,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "French Final Manufacturing PMI",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-02T03:50:00-05:00",
+          "forecast": "49.3",
+          "previous": "49.3",
+          "actual": null,
+          "minutes_until": 536,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "German Final Manufacturing PMI",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-02T03:55:00-05:00",
+          "forecast": "54.2",
+          "previous": "54.2",
+          "actual": null,
+          "minutes_until": 541,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Final Manufacturing PMI",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-02T04:00:00-05:00",
+          "forecast": "52.4",
+          "previous": "52.4",
+          "actual": null,
+          "minutes_until": 546,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Final Manufacturing PMI",
+          "currency": "GBP",
+          "impact": "Low",
+          "event_at_et": "2026-11-02T04:30:00-05:00",
+          "forecast": "52.8",
+          "previous": "52.8",
+          "actual": null,
+          "minutes_until": 576,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "German Buba President Nagel Speaks",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-02T07:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 726,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "imminent_events": [],
+      "event_risk": "EVENT_WITHIN_24H",
+      "calendar_coverage": "VERIFIED",
+      "forexfactory_positioning": null,
+      "myfxbook_positioning": {
+        "source": "Myfxbook public community outlook",
+        "status": "UNAVAILABLE",
+        "long_pct": null,
+        "short_pct": null,
+        "retrieved_at_utc": null,
+        "publisher_delay_min": 60,
+        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
+        "directional_vote": false
+      },
+      "asian_risk_context": {
+        "status": "DATED_DAILY_CONTEXT",
+        "note": "General risk backdrop; not an FX trade signal"
+      },
+      "asian_risk_directional_note": "Not a direct directional driver",
+      "macro_confirmed": false,
+      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -3221,7 +3387,7 @@
     }
   ],
   "fully_macro_verified": false,
-  "unified_signal_generated_at_utc": "2026-10-30T20:17:16.138667+00:00",
+  "unified_signal_generated_at_utc": "2026-11-01T23:35:52.954507+00:00",
   "no_mobile_alerts": true,
   "options_layer": "REMOVED_AT_USER_REQUEST",
   "calendar_first_rule": "Every pair MUST display all upcoming events for both currencies in next 24 hours, regardless of impact. IMMINENT within 120 minutes prevents a normal entry signal; include forecasts and previous values. Do not infer releases from missing actuals.",
@@ -3235,7 +3401,6 @@
     "dxy_equities_sentiment",
     "cme_volume_open_interest",
     "retail_positioning",
-    "closed_15m30m_direction",
     "atr_adr_session_levels",
     "independent_live_spreads"
   ],
