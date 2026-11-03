@@ -1,26 +1,26 @@
 {
-  "generated_at_utc": "2026-11-03T06:31:39.261333+00:00",
+  "generated_at_utc": "2026-11-03T07:50:04.146879+00:00",
   "purpose": "FULL_SOURCE_AUDIT_NOT_EXECUTABLE_TRADE_ORDERS",
   "sources": {
     "technicals": {
-      "status": "FRESH",
-      "age_minutes": 12.5
+      "status": "STALE",
+      "age_minutes": 46.1
     },
     "dashboard": {
-      "status": "FRESH",
-      "age_minutes": 12.4
+      "status": "STALE",
+      "age_minutes": 46.1
     },
     "calendar": {
       "status": "FRESH",
-      "age_minutes": 38.1
+      "age_minutes": 46.0
     },
     "ff_markets": {
       "status": "FRESH",
-      "age_minutes": 3.1
+      "age_minutes": 2.6
     },
     "volatility": {
-      "status": "FRESH",
-      "age_minutes": 12.5
+      "status": "STALE",
+      "age_minutes": 46.1
     },
     "kospi_te_public_page": {
       "status": "DATED_DAILY_CONTEXT",
@@ -30,31 +30,31 @@
     },
     "macro_snapshot": {
       "status": "STALE",
-      "age_minutes": 24872.8
+      "age_minutes": 24951.3
     },
     "macro_raw": {
       "status": "STALE",
-      "age_minutes": 24872.9
+      "age_minutes": 24951.3
     },
     "macro_news": {
       "status": "STALE",
-      "age_minutes": 24872.8
+      "age_minutes": 24951.3
     },
     "unified_signals": {
-      "status": "FRESH",
-      "age_minutes": 12.3
+      "status": "STALE",
+      "age_minutes": 46.0
     },
     "economic_actuals": {
       "status": "STALE",
-      "age_minutes": 24873.0
+      "age_minutes": 24951.4
     },
     "range_context": {
       "status": "STALE",
-      "age_minutes": 24872.9
+      "age_minutes": 24951.3
     },
     "retail": {
       "status": "STALE",
-      "age_minutes": 24872.9
+      "age_minutes": 24951.3
     }
   },
   "macro_layers": {
@@ -70,7 +70,7 @@
     "cme_volume_open_interest": "PARTIAL_CFTC_WEEKLY_OI_CME_DAILY_DATA_UNVERIFIED",
     "retail_positioning": "UNAVAILABLE_CURRENT",
     "currency_strength_clusters": "DERIVED_FROM_11_FX_PAIRS",
-    "closed_15m30m_direction": "FRESH_TECHNICAL_WATCH_NOT_BROKER_EXECUTION",
+    "closed_15m30m_direction": "STALE_OR_UNAVAILABLE",
     "atr_adr_session_levels": "PARTIAL_LEGACY_ATR_LEVELS",
     "independent_live_spreads": "UNAVAILABLE_BROKER_EXECUTABLE_QUOTE",
     "signal_history": "VERIFIED_RECORDED_SIGNAL_OBSERVATIONS",
@@ -93,16 +93,16 @@
   "pairs": [
     {
       "pair": "AUDUSD",
-      "technical_direction": "SELL",
-      "technical_stage": "WAIT",
-      "unified_signal_direction": "SELL",
+      "technical_direction": "NO_RANKED_CANDIDATE",
+      "technical_stage": "UNRANKED",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
@@ -118,7 +118,7 @@
           "forecast": "7.15M",
           "previous": "7.08M",
           "actual": null,
-          "minutes_until": 508,
+          "minutes_until": 430,
           "time_status": "UPCOMING"
         },
         {
@@ -129,7 +129,7 @@
           "forecast": "1.2%",
           "previous": "0.1%",
           "actual": null,
-          "minutes_until": 508,
+          "minutes_until": 430,
           "time_status": "UPCOMING"
         },
         {
@@ -140,7 +140,7 @@
           "forecast": "46.2",
           "previous": "46.8",
           "actual": null,
-          "minutes_until": 518,
+          "minutes_until": 440,
           "time_status": "UPCOMING"
         },
         {
@@ -151,7 +151,7 @@
           "forecast": "15.8M",
           "previous": "16.0M",
           "actual": null,
-          "minutes_until": 523,
+          "minutes_until": 445,
           "time_status": "UPCOMING"
         },
         {
@@ -162,7 +162,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 524,
+          "minutes_until": 446,
           "time_status": "UPCOMING"
         },
         {
@@ -173,7 +173,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 898,
+          "minutes_until": 820,
           "time_status": "UPCOMING"
         },
         {
@@ -184,7 +184,7 @@
           "forecast": "0.2%",
           "previous": "0.0%",
           "actual": null,
-          "minutes_until": 1078,
+          "minutes_until": 1000,
           "time_status": "UPCOMING"
         },
         {
@@ -195,7 +195,7 @@
           "forecast": "51.7",
           "previous": "51.6",
           "actual": null,
-          "minutes_until": 1153,
+          "minutes_until": 1075,
           "time_status": "UPCOMING"
         },
         {
@@ -206,7 +206,7 @@
           "forecast": "67K",
           "previous": "90K",
           "actual": null,
-          "minutes_until": 1843,
+          "minutes_until": 1765,
           "time_status": "UPCOMING"
         },
         {
@@ -217,7 +217,7 @@
           "forecast": "-107.9B",
           "previous": "-105.6B",
           "actual": null,
-          "minutes_until": 1858,
+          "minutes_until": 1780,
           "time_status": "UPCOMING"
         },
         {
@@ -228,7 +228,7 @@
           "forecast": "57.9",
           "previous": "57.9",
           "actual": null,
-          "minutes_until": 1933,
+          "minutes_until": 1855,
           "time_status": "UPCOMING"
         },
         {
@@ -239,7 +239,7 @@
           "forecast": "54.8",
           "previous": "54.9",
           "actual": null,
-          "minutes_until": 1948,
+          "minutes_until": 1870,
           "time_status": "UPCOMING"
         },
         {
@@ -250,7 +250,7 @@
           "forecast": "",
           "previous": "-1.9M",
           "actual": null,
-          "minutes_until": 1978,
+          "minutes_until": 1900,
           "time_status": "UPCOMING"
         },
         {
@@ -261,7 +261,18 @@
           "forecast": "0.94B",
           "previous": "0.50B",
           "actual": null,
-          "minutes_until": 2518,
+          "minutes_until": 2440,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "RBA Deputy Gov Hauser Speaks",
+          "currency": "AUD",
+          "impact": "Low",
+          "event_at_et": "2026-11-05T01:45:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 2815,
           "time_status": "UPCOMING"
         }
       ],
@@ -274,7 +285,7 @@
           "forecast": "7.15M",
           "previous": "7.08M",
           "actual": null,
-          "minutes_until": 508,
+          "minutes_until": 430,
           "time_status": "UPCOMING"
         },
         {
@@ -285,7 +296,7 @@
           "forecast": "1.2%",
           "previous": "0.1%",
           "actual": null,
-          "minutes_until": 508,
+          "minutes_until": 430,
           "time_status": "UPCOMING"
         },
         {
@@ -296,7 +307,7 @@
           "forecast": "46.2",
           "previous": "46.8",
           "actual": null,
-          "minutes_until": 518,
+          "minutes_until": 440,
           "time_status": "UPCOMING"
         },
         {
@@ -307,7 +318,7 @@
           "forecast": "15.8M",
           "previous": "16.0M",
           "actual": null,
-          "minutes_until": 523,
+          "minutes_until": 445,
           "time_status": "UPCOMING"
         },
         {
@@ -318,7 +329,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 524,
+          "minutes_until": 446,
           "time_status": "UPCOMING"
         },
         {
@@ -329,7 +340,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 898,
+          "minutes_until": 820,
           "time_status": "UPCOMING"
         },
         {
@@ -340,7 +351,7 @@
           "forecast": "0.2%",
           "previous": "0.0%",
           "actual": null,
-          "minutes_until": 1078,
+          "minutes_until": 1000,
           "time_status": "UPCOMING"
         },
         {
@@ -351,7 +362,7 @@
           "forecast": "51.7",
           "previous": "51.6",
           "actual": null,
-          "minutes_until": 1153,
+          "minutes_until": 1075,
           "time_status": "UPCOMING"
         }
       ],
@@ -360,14 +371,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -394,18 +398,18 @@
       "pair": "NZDUSD",
       "technical_direction": "BUY",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "BUY",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "ABOVE_BOTH",
-      "h4_ema20_50": "MIXED",
+      "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
       "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
@@ -417,7 +421,7 @@
           "forecast": "7.15M",
           "previous": "7.08M",
           "actual": null,
-          "minutes_until": 508,
+          "minutes_until": 430,
           "time_status": "UPCOMING"
         },
         {
@@ -428,7 +432,7 @@
           "forecast": "1.2%",
           "previous": "0.1%",
           "actual": null,
-          "minutes_until": 508,
+          "minutes_until": 430,
           "time_status": "UPCOMING"
         },
         {
@@ -439,7 +443,7 @@
           "forecast": "46.2",
           "previous": "46.8",
           "actual": null,
-          "minutes_until": 518,
+          "minutes_until": 440,
           "time_status": "UPCOMING"
         },
         {
@@ -450,7 +454,7 @@
           "forecast": "15.8M",
           "previous": "16.0M",
           "actual": null,
-          "minutes_until": 523,
+          "minutes_until": 445,
           "time_status": "UPCOMING"
         },
         {
@@ -461,7 +465,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 524,
+          "minutes_until": 446,
           "time_status": "UPCOMING"
         },
         {
@@ -472,7 +476,7 @@
           "forecast": "",
           "previous": "2.5%",
           "actual": null,
-          "minutes_until": 558,
+          "minutes_until": 480,
           "time_status": "UPCOMING"
         },
         {
@@ -483,7 +487,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 898,
+          "minutes_until": 820,
           "time_status": "UPCOMING"
         },
         {
@@ -494,7 +498,7 @@
           "forecast": "0.4%",
           "previous": "0.5%",
           "actual": null,
-          "minutes_until": 913,
+          "minutes_until": 835,
           "time_status": "UPCOMING"
         },
         {
@@ -505,7 +509,7 @@
           "forecast": "5.5%",
           "previous": "5.6%",
           "actual": null,
-          "minutes_until": 913,
+          "minutes_until": 835,
           "time_status": "UPCOMING"
         },
         {
@@ -516,7 +520,7 @@
           "forecast": "0.5%",
           "previous": "0.7%",
           "actual": null,
-          "minutes_until": 913,
+          "minutes_until": 835,
           "time_status": "UPCOMING"
         },
         {
@@ -527,7 +531,7 @@
           "forecast": "",
           "previous": "0.6%",
           "actual": null,
-          "minutes_until": 1048,
+          "minutes_until": 970,
           "time_status": "UPCOMING"
         },
         {
@@ -538,7 +542,7 @@
           "forecast": "51.7",
           "previous": "51.6",
           "actual": null,
-          "minutes_until": 1153,
+          "minutes_until": 1075,
           "time_status": "UPCOMING"
         },
         {
@@ -549,7 +553,7 @@
           "forecast": "67K",
           "previous": "90K",
           "actual": null,
-          "minutes_until": 1843,
+          "minutes_until": 1765,
           "time_status": "UPCOMING"
         },
         {
@@ -560,7 +564,7 @@
           "forecast": "-107.9B",
           "previous": "-105.6B",
           "actual": null,
-          "minutes_until": 1858,
+          "minutes_until": 1780,
           "time_status": "UPCOMING"
         },
         {
@@ -571,7 +575,7 @@
           "forecast": "57.9",
           "previous": "57.9",
           "actual": null,
-          "minutes_until": 1933,
+          "minutes_until": 1855,
           "time_status": "UPCOMING"
         },
         {
@@ -582,7 +586,7 @@
           "forecast": "54.8",
           "previous": "54.9",
           "actual": null,
-          "minutes_until": 1948,
+          "minutes_until": 1870,
           "time_status": "UPCOMING"
         },
         {
@@ -593,7 +597,7 @@
           "forecast": "",
           "previous": "-1.9M",
           "actual": null,
-          "minutes_until": 1978,
+          "minutes_until": 1900,
           "time_status": "UPCOMING"
         }
       ],
@@ -606,7 +610,7 @@
           "forecast": "7.15M",
           "previous": "7.08M",
           "actual": null,
-          "minutes_until": 508,
+          "minutes_until": 430,
           "time_status": "UPCOMING"
         },
         {
@@ -617,7 +621,7 @@
           "forecast": "1.2%",
           "previous": "0.1%",
           "actual": null,
-          "minutes_until": 508,
+          "minutes_until": 430,
           "time_status": "UPCOMING"
         },
         {
@@ -628,7 +632,7 @@
           "forecast": "46.2",
           "previous": "46.8",
           "actual": null,
-          "minutes_until": 518,
+          "minutes_until": 440,
           "time_status": "UPCOMING"
         },
         {
@@ -639,7 +643,7 @@
           "forecast": "15.8M",
           "previous": "16.0M",
           "actual": null,
-          "minutes_until": 523,
+          "minutes_until": 445,
           "time_status": "UPCOMING"
         },
         {
@@ -650,7 +654,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 524,
+          "minutes_until": 446,
           "time_status": "UPCOMING"
         },
         {
@@ -661,7 +665,7 @@
           "forecast": "",
           "previous": "2.5%",
           "actual": null,
-          "minutes_until": 558,
+          "minutes_until": 480,
           "time_status": "UPCOMING"
         },
         {
@@ -672,7 +676,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 898,
+          "minutes_until": 820,
           "time_status": "UPCOMING"
         },
         {
@@ -683,7 +687,7 @@
           "forecast": "0.4%",
           "previous": "0.5%",
           "actual": null,
-          "minutes_until": 913,
+          "minutes_until": 835,
           "time_status": "UPCOMING"
         },
         {
@@ -694,7 +698,7 @@
           "forecast": "5.5%",
           "previous": "5.6%",
           "actual": null,
-          "minutes_until": 913,
+          "minutes_until": 835,
           "time_status": "UPCOMING"
         },
         {
@@ -705,7 +709,7 @@
           "forecast": "0.5%",
           "previous": "0.7%",
           "actual": null,
-          "minutes_until": 913,
+          "minutes_until": 835,
           "time_status": "UPCOMING"
         },
         {
@@ -716,7 +720,7 @@
           "forecast": "",
           "previous": "0.6%",
           "actual": null,
-          "minutes_until": 1048,
+          "minutes_until": 970,
           "time_status": "UPCOMING"
         },
         {
@@ -727,7 +731,7 @@
           "forecast": "51.7",
           "previous": "51.6",
           "actual": null,
-          "minutes_until": 1153,
+          "minutes_until": 1075,
           "time_status": "UPCOMING"
         }
       ],
@@ -736,14 +740,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -760,7 +757,7 @@
       },
       "asian_risk_directional_note": "Asian equity risk may affect AUD/NZD, but FX must confirm",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -768,2082 +765,20 @@
     },
     {
       "pair": "EURUSD",
-      "technical_direction": "BUY",
+      "technical_direction": "SELL",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "BUY",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "ABOVE_BOTH",
       "h4_ema20_50": "ABOVE_BOTH",
-      "timeframes_present": true,
-      "higher_timeframe_conflict": false,
-      "upcoming_48h_events": [
-        {
-          "title": "French Gov Budget Balance",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T02:45:00-05:00",
-          "forecast": "",
-          "previous": "-159.6B",
-          "actual": null,
-          "minutes_until": 73,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "JOLTS Job Openings",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-11-03T10:00:00-05:00",
-          "forecast": "7.15M",
-          "previous": "7.08M",
-          "actual": null,
-          "minutes_until": 508,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Factory Orders m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T10:00:00-05:00",
-          "forecast": "1.2%",
-          "previous": "0.1%",
-          "actual": null,
-          "minutes_until": 508,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "RCM/TIPP Economic Optimism",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T10:10:00-05:00",
-          "forecast": "46.2",
-          "previous": "46.8",
-          "actual": null,
-          "minutes_until": 518,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Omdia Total Vehicle Sales",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T10:15:00-05:00",
-          "forecast": "15.8M",
-          "previous": "16.0M",
-          "actual": null,
-          "minutes_until": 523,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Congressional Elections",
-          "currency": "USD",
-          "impact": "High",
-          "event_at_et": "2026-11-03T10:16:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 524,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "German Buba President Nagel Speaks",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T12:00:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 628,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "API Weekly Statistical Bulletin",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T16:30:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 898,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Spanish Unemployment Change",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T03:00:00-05:00",
-          "forecast": "18.7K",
-          "previous": "23.6K",
-          "actual": null,
-          "minutes_until": 1528,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Spanish Services PMI",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T03:15:00-05:00",
-          "forecast": "57.6",
-          "previous": "58.3",
-          "actual": null,
-          "minutes_until": 1543,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Italian Services PMI",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T03:45:00-05:00",
-          "forecast": "51.4",
-          "previous": "51.7",
-          "actual": null,
-          "minutes_until": 1573,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "French Final Services PMI",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T03:50:00-05:00",
-          "forecast": "48.4",
-          "previous": "48.4",
-          "actual": null,
-          "minutes_until": 1578,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "German Final Services PMI",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T03:55:00-05:00",
-          "forecast": "51.7",
-          "previous": "51.7",
-          "actual": null,
-          "minutes_until": 1583,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Final Services PMI",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T04:00:00-05:00",
-          "forecast": "51.7",
-          "previous": "51.7",
-          "actual": null,
-          "minutes_until": 1588,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Core CPI Flash Estimate y/y",
-          "currency": "EUR",
-          "impact": "Medium",
-          "event_at_et": "2026-11-04T05:00:00-05:00",
-          "forecast": "2.5%",
-          "previous": "2.5%",
-          "actual": null,
-          "minutes_until": 1648,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "CPI Flash Estimate y/y",
-          "currency": "EUR",
-          "impact": "Medium",
-          "event_at_et": "2026-11-04T05:00:00-05:00",
-          "forecast": "4.0%",
-          "previous": "3.8%",
-          "actual": null,
-          "minutes_until": 1648,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "ADP Non-Farm Employment Change",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T08:15:00-05:00",
-          "forecast": "67K",
-          "previous": "90K",
-          "actual": null,
-          "minutes_until": 1843,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Trade Balance",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T08:30:00-05:00",
-          "forecast": "-107.9B",
-          "previous": "-105.6B",
-          "actual": null,
-          "minutes_until": 1858,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Final Services PMI",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T09:45:00-05:00",
-          "forecast": "57.9",
-          "previous": "57.9",
-          "actual": null,
-          "minutes_until": 1933,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "ISM Services PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-11-04T10:00:00-05:00",
-          "forecast": "54.8",
-          "previous": "54.9",
-          "actual": null,
-          "minutes_until": 1948,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Crude Oil Inventories",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T10:30:00-05:00",
-          "forecast": "",
-          "previous": "-1.9M",
-          "actual": null,
-          "minutes_until": 1978,
-          "time_status": "UPCOMING"
-        }
-      ],
-      "next_24h_events": [
-        {
-          "title": "French Gov Budget Balance",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T02:45:00-05:00",
-          "forecast": "",
-          "previous": "-159.6B",
-          "actual": null,
-          "minutes_until": 73,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "JOLTS Job Openings",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-11-03T10:00:00-05:00",
-          "forecast": "7.15M",
-          "previous": "7.08M",
-          "actual": null,
-          "minutes_until": 508,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Factory Orders m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T10:00:00-05:00",
-          "forecast": "1.2%",
-          "previous": "0.1%",
-          "actual": null,
-          "minutes_until": 508,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "RCM/TIPP Economic Optimism",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T10:10:00-05:00",
-          "forecast": "46.2",
-          "previous": "46.8",
-          "actual": null,
-          "minutes_until": 518,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Omdia Total Vehicle Sales",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T10:15:00-05:00",
-          "forecast": "15.8M",
-          "previous": "16.0M",
-          "actual": null,
-          "minutes_until": 523,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Congressional Elections",
-          "currency": "USD",
-          "impact": "High",
-          "event_at_et": "2026-11-03T10:16:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 524,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "German Buba President Nagel Speaks",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T12:00:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 628,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "API Weekly Statistical Bulletin",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T16:30:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 898,
-          "time_status": "UPCOMING"
-        }
-      ],
-      "imminent_events": [
-        {
-          "title": "French Gov Budget Balance",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T02:45:00-05:00",
-          "forecast": "",
-          "previous": "-159.6B",
-          "actual": null,
-          "minutes_until": 73,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "event_risk": "IMMINENT_EVENT",
-      "calendar_coverage": "VERIFIED",
-      "forexfactory_positioning": null,
-      "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
-      },
-      "asian_risk_context": {
-        "status": "DATED_DAILY_CONTEXT",
-        "note": "General risk backdrop; not an FX trade signal"
-      },
-      "asian_risk_directional_note": "Not a direct directional driver",
-      "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
-      "entry": null,
-      "stop": null,
-      "tp1": null,
-      "tp2": null
-    },
-    {
-      "pair": "GBPUSD",
-      "technical_direction": "BUY",
-      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "BUY",
-      "macro_alignment": "UNKNOWN",
-      "macro_evidence": [],
-      "publisher_reported_actuals": [],
-      "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
-      },
-      "technical_15m30m_fresh": true,
-      "early_watches_permitted_with_unknown_macro": true,
-      "reference_level_not_live": null,
-      "h1_ema20_50": "ABOVE_BOTH",
-      "h4_ema20_50": "ABOVE_BOTH",
-      "timeframes_present": true,
-      "higher_timeframe_conflict": false,
-      "upcoming_48h_events": [
-        {
-          "title": "10-y Bond Auction",
-          "currency": "GBP",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T05:33:00-05:00",
-          "forecast": "",
-          "previous": "5.42|3.6",
-          "actual": null,
-          "minutes_until": 241,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "JOLTS Job Openings",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-11-03T10:00:00-05:00",
-          "forecast": "7.15M",
-          "previous": "7.08M",
-          "actual": null,
-          "minutes_until": 508,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Factory Orders m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T10:00:00-05:00",
-          "forecast": "1.2%",
-          "previous": "0.1%",
-          "actual": null,
-          "minutes_until": 508,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "RCM/TIPP Economic Optimism",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T10:10:00-05:00",
-          "forecast": "46.2",
-          "previous": "46.8",
-          "actual": null,
-          "minutes_until": 518,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Omdia Total Vehicle Sales",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T10:15:00-05:00",
-          "forecast": "15.8M",
-          "previous": "16.0M",
-          "actual": null,
-          "minutes_until": 523,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Congressional Elections",
-          "currency": "USD",
-          "impact": "High",
-          "event_at_et": "2026-11-03T10:16:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 524,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "API Weekly Statistical Bulletin",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T16:30:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 898,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Final Services PMI",
-          "currency": "GBP",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T04:30:00-05:00",
-          "forecast": "53.1",
-          "previous": "53.1",
-          "actual": null,
-          "minutes_until": 1618,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "ADP Non-Farm Employment Change",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T08:15:00-05:00",
-          "forecast": "67K",
-          "previous": "90K",
-          "actual": null,
-          "minutes_until": 1843,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Trade Balance",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T08:30:00-05:00",
-          "forecast": "-107.9B",
-          "previous": "-105.6B",
-          "actual": null,
-          "minutes_until": 1858,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Final Services PMI",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T09:45:00-05:00",
-          "forecast": "57.9",
-          "previous": "57.9",
-          "actual": null,
-          "minutes_until": 1933,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "ISM Services PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-11-04T10:00:00-05:00",
-          "forecast": "54.8",
-          "previous": "54.9",
-          "actual": null,
-          "minutes_until": 1948,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Crude Oil Inventories",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T10:30:00-05:00",
-          "forecast": "",
-          "previous": "-1.9M",
-          "actual": null,
-          "minutes_until": 1978,
-          "time_status": "UPCOMING"
-        }
-      ],
-      "next_24h_events": [
-        {
-          "title": "10-y Bond Auction",
-          "currency": "GBP",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T05:33:00-05:00",
-          "forecast": "",
-          "previous": "5.42|3.6",
-          "actual": null,
-          "minutes_until": 241,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "JOLTS Job Openings",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-11-03T10:00:00-05:00",
-          "forecast": "7.15M",
-          "previous": "7.08M",
-          "actual": null,
-          "minutes_until": 508,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Factory Orders m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T10:00:00-05:00",
-          "forecast": "1.2%",
-          "previous": "0.1%",
-          "actual": null,
-          "minutes_until": 508,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "RCM/TIPP Economic Optimism",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T10:10:00-05:00",
-          "forecast": "46.2",
-          "previous": "46.8",
-          "actual": null,
-          "minutes_until": 518,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Omdia Total Vehicle Sales",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T10:15:00-05:00",
-          "forecast": "15.8M",
-          "previous": "16.0M",
-          "actual": null,
-          "minutes_until": 523,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Congressional Elections",
-          "currency": "USD",
-          "impact": "High",
-          "event_at_et": "2026-11-03T10:16:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 524,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "API Weekly Statistical Bulletin",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T16:30:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 898,
-          "time_status": "UPCOMING"
-        }
-      ],
-      "imminent_events": [],
-      "event_risk": "EVENT_WITHIN_24H",
-      "calendar_coverage": "VERIFIED",
-      "forexfactory_positioning": null,
-      "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
-      },
-      "asian_risk_context": {
-        "status": "DATED_DAILY_CONTEXT",
-        "note": "General risk backdrop; not an FX trade signal"
-      },
-      "asian_risk_directional_note": "Not a direct directional driver",
-      "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
-      "entry": null,
-      "stop": null,
-      "tp1": null,
-      "tp2": null
-    },
-    {
-      "pair": "USDJPY",
-      "technical_direction": "SELL",
-      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "SELL",
-      "macro_alignment": "UNKNOWN",
-      "macro_evidence": [],
-      "publisher_reported_actuals": [],
-      "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
-      },
-      "technical_15m30m_fresh": true,
-      "early_watches_permitted_with_unknown_macro": true,
-      "reference_level_not_live": null,
-      "h1_ema20_50": "MIXED",
-      "h4_ema20_50": "ABOVE_BOTH",
-      "timeframes_present": true,
-      "higher_timeframe_conflict": false,
-      "upcoming_48h_events": [
-        {
-          "title": "JOLTS Job Openings",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-11-03T10:00:00-05:00",
-          "forecast": "7.15M",
-          "previous": "7.08M",
-          "actual": null,
-          "minutes_until": 508,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Factory Orders m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T10:00:00-05:00",
-          "forecast": "1.2%",
-          "previous": "0.1%",
-          "actual": null,
-          "minutes_until": 508,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "RCM/TIPP Economic Optimism",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T10:10:00-05:00",
-          "forecast": "46.2",
-          "previous": "46.8",
-          "actual": null,
-          "minutes_until": 518,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Omdia Total Vehicle Sales",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T10:15:00-05:00",
-          "forecast": "15.8M",
-          "previous": "16.0M",
-          "actual": null,
-          "minutes_until": 523,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Congressional Elections",
-          "currency": "USD",
-          "impact": "High",
-          "event_at_et": "2026-11-03T10:16:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 524,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "API Weekly Statistical Bulletin",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T16:30:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 898,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Monetary Base y/y",
-          "currency": "JPY",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T18:50:00-05:00",
-          "forecast": "-14.0%",
-          "previous": "-15.2%",
-          "actual": null,
-          "minutes_until": 1038,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "ADP Non-Farm Employment Change",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T08:15:00-05:00",
-          "forecast": "67K",
-          "previous": "90K",
-          "actual": null,
-          "minutes_until": 1843,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Trade Balance",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T08:30:00-05:00",
-          "forecast": "-107.9B",
-          "previous": "-105.6B",
-          "actual": null,
-          "minutes_until": 1858,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Final Services PMI",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T09:45:00-05:00",
-          "forecast": "57.9",
-          "previous": "57.9",
-          "actual": null,
-          "minutes_until": 1933,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "ISM Services PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-11-04T10:00:00-05:00",
-          "forecast": "54.8",
-          "previous": "54.9",
-          "actual": null,
-          "minutes_until": 1948,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Crude Oil Inventories",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T10:30:00-05:00",
-          "forecast": "",
-          "previous": "-1.9M",
-          "actual": null,
-          "minutes_until": 1978,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Monetary Policy Meeting Minutes",
-          "currency": "JPY",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T18:50:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 2478,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "10-y Bond Auction",
-          "currency": "JPY",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T22:35:00-05:00",
-          "forecast": "",
-          "previous": "3.10|3.8",
-          "actual": null,
-          "minutes_until": 2703,
-          "time_status": "UPCOMING"
-        }
-      ],
-      "next_24h_events": [
-        {
-          "title": "JOLTS Job Openings",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-11-03T10:00:00-05:00",
-          "forecast": "7.15M",
-          "previous": "7.08M",
-          "actual": null,
-          "minutes_until": 508,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Factory Orders m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T10:00:00-05:00",
-          "forecast": "1.2%",
-          "previous": "0.1%",
-          "actual": null,
-          "minutes_until": 508,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "RCM/TIPP Economic Optimism",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T10:10:00-05:00",
-          "forecast": "46.2",
-          "previous": "46.8",
-          "actual": null,
-          "minutes_until": 518,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Omdia Total Vehicle Sales",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T10:15:00-05:00",
-          "forecast": "15.8M",
-          "previous": "16.0M",
-          "actual": null,
-          "minutes_until": 523,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Congressional Elections",
-          "currency": "USD",
-          "impact": "High",
-          "event_at_et": "2026-11-03T10:16:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 524,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "API Weekly Statistical Bulletin",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T16:30:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 898,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Monetary Base y/y",
-          "currency": "JPY",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T18:50:00-05:00",
-          "forecast": "-14.0%",
-          "previous": "-15.2%",
-          "actual": null,
-          "minutes_until": 1038,
-          "time_status": "UPCOMING"
-        }
-      ],
-      "imminent_events": [],
-      "event_risk": "EVENT_WITHIN_24H",
-      "calendar_coverage": "VERIFIED",
-      "forexfactory_positioning": null,
-      "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
-      },
-      "asian_risk_context": {
-        "source": "Trading Economics public KOSPI page (no key)",
-        "status": "DATED_DAILY_CONTEXT",
-        "daily_reference_change_pct": -3.2,
-        "daily_reference_level": 5671.0,
-        "reference_date_kst": "2026-11-03",
-        "risk_tier": "SEVERE_DAILY_RISK_OFF",
-        "dated_news_headline": "South Korean Shares Rebound on Semiconductor Strength",
-        "dated_news_day": "2026-11-03",
-        "interpretation": "Risk-off corroboration only; no verified intraday quote or automatic FX direction changes",
-        "verified_intraday_quote": false,
-        "execution_allowed": false
-      },
-      "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
-      "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
-      "entry": null,
-      "stop": null,
-      "tp1": null,
-      "tp2": null
-    },
-    {
-      "pair": "AUDJPY",
-      "technical_direction": "SELL",
-      "technical_stage": "EARLY_JPY_CLUSTER_ROTATION",
-      "unified_signal_direction": "SELL",
-      "macro_alignment": "UNKNOWN",
-      "macro_evidence": [],
-      "publisher_reported_actuals": [],
-      "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
-      },
-      "technical_15m30m_fresh": true,
-      "early_watches_permitted_with_unknown_macro": true,
-      "reference_level_not_live": null,
-      "h1_ema20_50": "BELOW_BOTH",
-      "h4_ema20_50": "BELOW_BOTH",
-      "timeframes_present": true,
-      "higher_timeframe_conflict": false,
-      "upcoming_48h_events": [
-        {
-          "title": "Monetary Base y/y",
-          "currency": "JPY",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T18:50:00-05:00",
-          "forecast": "-14.0%",
-          "previous": "-15.2%",
-          "actual": null,
-          "minutes_until": 1038,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Household Spending m/m",
-          "currency": "AUD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T19:30:00-05:00",
-          "forecast": "0.2%",
-          "previous": "0.0%",
-          "actual": null,
-          "minutes_until": 1078,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "RatingDog Services PMI",
-          "currency": "CNY",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T20:45:00-05:00",
-          "forecast": "51.7",
-          "previous": "51.6",
-          "actual": null,
-          "minutes_until": 1153,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Monetary Policy Meeting Minutes",
-          "currency": "JPY",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T18:50:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 2478,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Goods Trade Balance",
-          "currency": "AUD",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T19:30:00-05:00",
-          "forecast": "0.94B",
-          "previous": "0.50B",
-          "actual": null,
-          "minutes_until": 2518,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "10-y Bond Auction",
-          "currency": "JPY",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T22:35:00-05:00",
-          "forecast": "",
-          "previous": "3.10|3.8",
-          "actual": null,
-          "minutes_until": 2703,
-          "time_status": "UPCOMING"
-        }
-      ],
-      "next_24h_events": [
-        {
-          "title": "Monetary Base y/y",
-          "currency": "JPY",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T18:50:00-05:00",
-          "forecast": "-14.0%",
-          "previous": "-15.2%",
-          "actual": null,
-          "minutes_until": 1038,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Household Spending m/m",
-          "currency": "AUD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T19:30:00-05:00",
-          "forecast": "0.2%",
-          "previous": "0.0%",
-          "actual": null,
-          "minutes_until": 1078,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "RatingDog Services PMI",
-          "currency": "CNY",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T20:45:00-05:00",
-          "forecast": "51.7",
-          "previous": "51.6",
-          "actual": null,
-          "minutes_until": 1153,
-          "time_status": "UPCOMING"
-        }
-      ],
-      "imminent_events": [],
-      "event_risk": "EVENT_WITHIN_24H",
-      "calendar_coverage": "VERIFIED",
-      "forexfactory_positioning": null,
-      "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
-      },
-      "asian_risk_context": {
-        "source": "Trading Economics public KOSPI page (no key)",
-        "status": "DATED_DAILY_CONTEXT",
-        "daily_reference_change_pct": -3.2,
-        "daily_reference_level": 5671.0,
-        "reference_date_kst": "2026-11-03",
-        "risk_tier": "SEVERE_DAILY_RISK_OFF",
-        "dated_news_headline": "South Korean Shares Rebound on Semiconductor Strength",
-        "dated_news_day": "2026-11-03",
-        "interpretation": "Risk-off corroboration only; no verified intraday quote or automatic FX direction changes",
-        "verified_intraday_quote": false,
-        "execution_allowed": false
-      },
-      "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
-      "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
-      "entry": null,
-      "stop": null,
-      "tp1": null,
-      "tp2": null
-    },
-    {
-      "pair": "NZDJPY",
-      "technical_direction": "BUY",
-      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "BUY",
-      "macro_alignment": "UNKNOWN",
-      "macro_evidence": [],
-      "publisher_reported_actuals": [],
-      "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
-      },
-      "technical_15m30m_fresh": true,
-      "early_watches_permitted_with_unknown_macro": true,
-      "reference_level_not_live": null,
-      "h1_ema20_50": "ABOVE_BOTH",
-      "h4_ema20_50": "MIXED",
-      "timeframes_present": true,
-      "higher_timeframe_conflict": false,
-      "upcoming_48h_events": [
-        {
-          "title": "GDT Price Index",
-          "currency": "NZD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T10:50:00-05:00",
-          "forecast": "",
-          "previous": "2.5%",
-          "actual": null,
-          "minutes_until": 558,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Employment Change q/q",
-          "currency": "NZD",
-          "impact": "High",
-          "event_at_et": "2026-11-03T16:45:00-05:00",
-          "forecast": "0.4%",
-          "previous": "0.5%",
-          "actual": null,
-          "minutes_until": 913,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Unemployment Rate",
-          "currency": "NZD",
-          "impact": "High",
-          "event_at_et": "2026-11-03T16:45:00-05:00",
-          "forecast": "5.5%",
-          "previous": "5.6%",
-          "actual": null,
-          "minutes_until": 913,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Labor Cost Index q/q",
-          "currency": "NZD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T16:45:00-05:00",
-          "forecast": "0.5%",
-          "previous": "0.7%",
-          "actual": null,
-          "minutes_until": 913,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Monetary Base y/y",
-          "currency": "JPY",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T18:50:00-05:00",
-          "forecast": "-14.0%",
-          "previous": "-15.2%",
-          "actual": null,
-          "minutes_until": 1038,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "ANZ Commodity Prices m/m",
-          "currency": "NZD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T19:00:00-05:00",
-          "forecast": "",
-          "previous": "0.6%",
-          "actual": null,
-          "minutes_until": 1048,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "RatingDog Services PMI",
-          "currency": "CNY",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T20:45:00-05:00",
-          "forecast": "51.7",
-          "previous": "51.6",
-          "actual": null,
-          "minutes_until": 1153,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Monetary Policy Meeting Minutes",
-          "currency": "JPY",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T18:50:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 2478,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "10-y Bond Auction",
-          "currency": "JPY",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T22:35:00-05:00",
-          "forecast": "",
-          "previous": "3.10|3.8",
-          "actual": null,
-          "minutes_until": 2703,
-          "time_status": "UPCOMING"
-        }
-      ],
-      "next_24h_events": [
-        {
-          "title": "GDT Price Index",
-          "currency": "NZD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T10:50:00-05:00",
-          "forecast": "",
-          "previous": "2.5%",
-          "actual": null,
-          "minutes_until": 558,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Employment Change q/q",
-          "currency": "NZD",
-          "impact": "High",
-          "event_at_et": "2026-11-03T16:45:00-05:00",
-          "forecast": "0.4%",
-          "previous": "0.5%",
-          "actual": null,
-          "minutes_until": 913,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Unemployment Rate",
-          "currency": "NZD",
-          "impact": "High",
-          "event_at_et": "2026-11-03T16:45:00-05:00",
-          "forecast": "5.5%",
-          "previous": "5.6%",
-          "actual": null,
-          "minutes_until": 913,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Labor Cost Index q/q",
-          "currency": "NZD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T16:45:00-05:00",
-          "forecast": "0.5%",
-          "previous": "0.7%",
-          "actual": null,
-          "minutes_until": 913,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Monetary Base y/y",
-          "currency": "JPY",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T18:50:00-05:00",
-          "forecast": "-14.0%",
-          "previous": "-15.2%",
-          "actual": null,
-          "minutes_until": 1038,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "ANZ Commodity Prices m/m",
-          "currency": "NZD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T19:00:00-05:00",
-          "forecast": "",
-          "previous": "0.6%",
-          "actual": null,
-          "minutes_until": 1048,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "RatingDog Services PMI",
-          "currency": "CNY",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T20:45:00-05:00",
-          "forecast": "51.7",
-          "previous": "51.6",
-          "actual": null,
-          "minutes_until": 1153,
-          "time_status": "UPCOMING"
-        }
-      ],
-      "imminent_events": [],
-      "event_risk": "EVENT_WITHIN_24H",
-      "calendar_coverage": "VERIFIED",
-      "forexfactory_positioning": null,
-      "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
-      },
-      "asian_risk_context": {
-        "source": "Trading Economics public KOSPI page (no key)",
-        "status": "DATED_DAILY_CONTEXT",
-        "daily_reference_change_pct": -3.2,
-        "daily_reference_level": 5671.0,
-        "reference_date_kst": "2026-11-03",
-        "risk_tier": "SEVERE_DAILY_RISK_OFF",
-        "dated_news_headline": "South Korean Shares Rebound on Semiconductor Strength",
-        "dated_news_day": "2026-11-03",
-        "interpretation": "Risk-off corroboration only; no verified intraday quote or automatic FX direction changes",
-        "verified_intraday_quote": false,
-        "execution_allowed": false
-      },
-      "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
-      "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
-      "entry": null,
-      "stop": null,
-      "tp1": null,
-      "tp2": null
-    },
-    {
-      "pair": "EURJPY",
-      "technical_direction": "BUY",
-      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "BUY",
-      "macro_alignment": "UNKNOWN",
-      "macro_evidence": [],
-      "publisher_reported_actuals": [],
-      "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
-      },
-      "technical_15m30m_fresh": true,
-      "early_watches_permitted_with_unknown_macro": true,
-      "reference_level_not_live": null,
-      "h1_ema20_50": "ABOVE_BOTH",
-      "h4_ema20_50": "ABOVE_BOTH",
-      "timeframes_present": true,
-      "higher_timeframe_conflict": false,
-      "upcoming_48h_events": [
-        {
-          "title": "French Gov Budget Balance",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T02:45:00-05:00",
-          "forecast": "",
-          "previous": "-159.6B",
-          "actual": null,
-          "minutes_until": 73,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "German Buba President Nagel Speaks",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T12:00:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 628,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Monetary Base y/y",
-          "currency": "JPY",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T18:50:00-05:00",
-          "forecast": "-14.0%",
-          "previous": "-15.2%",
-          "actual": null,
-          "minutes_until": 1038,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Spanish Unemployment Change",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T03:00:00-05:00",
-          "forecast": "18.7K",
-          "previous": "23.6K",
-          "actual": null,
-          "minutes_until": 1528,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Spanish Services PMI",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T03:15:00-05:00",
-          "forecast": "57.6",
-          "previous": "58.3",
-          "actual": null,
-          "minutes_until": 1543,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Italian Services PMI",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T03:45:00-05:00",
-          "forecast": "51.4",
-          "previous": "51.7",
-          "actual": null,
-          "minutes_until": 1573,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "French Final Services PMI",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T03:50:00-05:00",
-          "forecast": "48.4",
-          "previous": "48.4",
-          "actual": null,
-          "minutes_until": 1578,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "German Final Services PMI",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T03:55:00-05:00",
-          "forecast": "51.7",
-          "previous": "51.7",
-          "actual": null,
-          "minutes_until": 1583,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Final Services PMI",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T04:00:00-05:00",
-          "forecast": "51.7",
-          "previous": "51.7",
-          "actual": null,
-          "minutes_until": 1588,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Core CPI Flash Estimate y/y",
-          "currency": "EUR",
-          "impact": "Medium",
-          "event_at_et": "2026-11-04T05:00:00-05:00",
-          "forecast": "2.5%",
-          "previous": "2.5%",
-          "actual": null,
-          "minutes_until": 1648,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "CPI Flash Estimate y/y",
-          "currency": "EUR",
-          "impact": "Medium",
-          "event_at_et": "2026-11-04T05:00:00-05:00",
-          "forecast": "4.0%",
-          "previous": "3.8%",
-          "actual": null,
-          "minutes_until": 1648,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Monetary Policy Meeting Minutes",
-          "currency": "JPY",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T18:50:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 2478,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "10-y Bond Auction",
-          "currency": "JPY",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T22:35:00-05:00",
-          "forecast": "",
-          "previous": "3.10|3.8",
-          "actual": null,
-          "minutes_until": 2703,
-          "time_status": "UPCOMING"
-        }
-      ],
-      "next_24h_events": [
-        {
-          "title": "French Gov Budget Balance",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T02:45:00-05:00",
-          "forecast": "",
-          "previous": "-159.6B",
-          "actual": null,
-          "minutes_until": 73,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "German Buba President Nagel Speaks",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T12:00:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 628,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Monetary Base y/y",
-          "currency": "JPY",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T18:50:00-05:00",
-          "forecast": "-14.0%",
-          "previous": "-15.2%",
-          "actual": null,
-          "minutes_until": 1038,
-          "time_status": "UPCOMING"
-        }
-      ],
-      "imminent_events": [
-        {
-          "title": "French Gov Budget Balance",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T02:45:00-05:00",
-          "forecast": "",
-          "previous": "-159.6B",
-          "actual": null,
-          "minutes_until": 73,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "event_risk": "IMMINENT_EVENT",
-      "calendar_coverage": "VERIFIED",
-      "forexfactory_positioning": null,
-      "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
-      },
-      "asian_risk_context": {
-        "source": "Trading Economics public KOSPI page (no key)",
-        "status": "DATED_DAILY_CONTEXT",
-        "daily_reference_change_pct": -3.2,
-        "daily_reference_level": 5671.0,
-        "reference_date_kst": "2026-11-03",
-        "risk_tier": "SEVERE_DAILY_RISK_OFF",
-        "dated_news_headline": "South Korean Shares Rebound on Semiconductor Strength",
-        "dated_news_day": "2026-11-03",
-        "interpretation": "Risk-off corroboration only; no verified intraday quote or automatic FX direction changes",
-        "verified_intraday_quote": false,
-        "execution_allowed": false
-      },
-      "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
-      "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
-      "entry": null,
-      "stop": null,
-      "tp1": null,
-      "tp2": null
-    },
-    {
-      "pair": "EURCAD",
-      "technical_direction": "SELL",
-      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "SELL",
-      "macro_alignment": "UNKNOWN",
-      "macro_evidence": [],
-      "publisher_reported_actuals": [],
-      "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
-      },
-      "technical_15m30m_fresh": true,
-      "early_watches_permitted_with_unknown_macro": true,
-      "reference_level_not_live": null,
-      "h1_ema20_50": "MIXED",
-      "h4_ema20_50": "MIXED",
-      "timeframes_present": true,
-      "higher_timeframe_conflict": false,
-      "upcoming_48h_events": [
-        {
-          "title": "French Gov Budget Balance",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T02:45:00-05:00",
-          "forecast": "",
-          "previous": "-159.6B",
-          "actual": null,
-          "minutes_until": 73,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "BOC Gov Macklem Speaks",
-          "currency": "CAD",
-          "impact": "Medium",
-          "event_at_et": "2026-11-03T11:00:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 568,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "German Buba President Nagel Speaks",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T12:00:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 628,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Spanish Unemployment Change",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T03:00:00-05:00",
-          "forecast": "18.7K",
-          "previous": "23.6K",
-          "actual": null,
-          "minutes_until": 1528,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Spanish Services PMI",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T03:15:00-05:00",
-          "forecast": "57.6",
-          "previous": "58.3",
-          "actual": null,
-          "minutes_until": 1543,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Italian Services PMI",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T03:45:00-05:00",
-          "forecast": "51.4",
-          "previous": "51.7",
-          "actual": null,
-          "minutes_until": 1573,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "French Final Services PMI",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T03:50:00-05:00",
-          "forecast": "48.4",
-          "previous": "48.4",
-          "actual": null,
-          "minutes_until": 1578,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "German Final Services PMI",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T03:55:00-05:00",
-          "forecast": "51.7",
-          "previous": "51.7",
-          "actual": null,
-          "minutes_until": 1583,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Final Services PMI",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T04:00:00-05:00",
-          "forecast": "51.7",
-          "previous": "51.7",
-          "actual": null,
-          "minutes_until": 1588,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Core CPI Flash Estimate y/y",
-          "currency": "EUR",
-          "impact": "Medium",
-          "event_at_et": "2026-11-04T05:00:00-05:00",
-          "forecast": "2.5%",
-          "previous": "2.5%",
-          "actual": null,
-          "minutes_until": 1648,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "CPI Flash Estimate y/y",
-          "currency": "EUR",
-          "impact": "Medium",
-          "event_at_et": "2026-11-04T05:00:00-05:00",
-          "forecast": "4.0%",
-          "previous": "3.8%",
-          "actual": null,
-          "minutes_until": 1648,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Trade Balance",
-          "currency": "CAD",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T08:30:00-05:00",
-          "forecast": "4.8B",
-          "previous": "4.2B",
-          "actual": null,
-          "minutes_until": 1858,
-          "time_status": "UPCOMING"
-        }
-      ],
-      "next_24h_events": [
-        {
-          "title": "French Gov Budget Balance",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T02:45:00-05:00",
-          "forecast": "",
-          "previous": "-159.6B",
-          "actual": null,
-          "minutes_until": 73,
-          "time_status": "IMMINENT"
-        },
-        {
-          "title": "BOC Gov Macklem Speaks",
-          "currency": "CAD",
-          "impact": "Medium",
-          "event_at_et": "2026-11-03T11:00:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 568,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "German Buba President Nagel Speaks",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T12:00:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 628,
-          "time_status": "UPCOMING"
-        }
-      ],
-      "imminent_events": [
-        {
-          "title": "French Gov Budget Balance",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T02:45:00-05:00",
-          "forecast": "",
-          "previous": "-159.6B",
-          "actual": null,
-          "minutes_until": 73,
-          "time_status": "IMMINENT"
-        }
-      ],
-      "event_risk": "IMMINENT_EVENT",
-      "calendar_coverage": "VERIFIED",
-      "forexfactory_positioning": null,
-      "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
-      },
-      "asian_risk_context": {
-        "status": "DATED_DAILY_CONTEXT",
-        "note": "General risk backdrop; not an FX trade signal"
-      },
-      "asian_risk_directional_note": "Not a direct directional driver",
-      "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
-      "entry": null,
-      "stop": null,
-      "tp1": null,
-      "tp2": null
-    },
-    {
-      "pair": "USDCAD",
-      "technical_direction": "SELL",
-      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "SELL",
-      "macro_alignment": "UNKNOWN",
-      "macro_evidence": [],
-      "publisher_reported_actuals": [],
-      "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
-      },
-      "technical_15m30m_fresh": true,
-      "early_watches_permitted_with_unknown_macro": true,
-      "reference_level_not_live": null,
-      "h1_ema20_50": "BELOW_BOTH",
-      "h4_ema20_50": "BELOW_BOTH",
-      "timeframes_present": true,
-      "higher_timeframe_conflict": false,
-      "upcoming_48h_events": [
-        {
-          "title": "JOLTS Job Openings",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-11-03T10:00:00-05:00",
-          "forecast": "7.15M",
-          "previous": "7.08M",
-          "actual": null,
-          "minutes_until": 508,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Factory Orders m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T10:00:00-05:00",
-          "forecast": "1.2%",
-          "previous": "0.1%",
-          "actual": null,
-          "minutes_until": 508,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "RCM/TIPP Economic Optimism",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T10:10:00-05:00",
-          "forecast": "46.2",
-          "previous": "46.8",
-          "actual": null,
-          "minutes_until": 518,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Omdia Total Vehicle Sales",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T10:15:00-05:00",
-          "forecast": "15.8M",
-          "previous": "16.0M",
-          "actual": null,
-          "minutes_until": 523,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Congressional Elections",
-          "currency": "USD",
-          "impact": "High",
-          "event_at_et": "2026-11-03T10:16:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 524,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "BOC Gov Macklem Speaks",
-          "currency": "CAD",
-          "impact": "Medium",
-          "event_at_et": "2026-11-03T11:00:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 568,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "API Weekly Statistical Bulletin",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T16:30:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 898,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "ADP Non-Farm Employment Change",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T08:15:00-05:00",
-          "forecast": "67K",
-          "previous": "90K",
-          "actual": null,
-          "minutes_until": 1843,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Trade Balance",
-          "currency": "CAD",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T08:30:00-05:00",
-          "forecast": "4.8B",
-          "previous": "4.2B",
-          "actual": null,
-          "minutes_until": 1858,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Trade Balance",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T08:30:00-05:00",
-          "forecast": "-107.9B",
-          "previous": "-105.6B",
-          "actual": null,
-          "minutes_until": 1858,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Final Services PMI",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T09:45:00-05:00",
-          "forecast": "57.9",
-          "previous": "57.9",
-          "actual": null,
-          "minutes_until": 1933,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "ISM Services PMI",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-11-04T10:00:00-05:00",
-          "forecast": "54.8",
-          "previous": "54.9",
-          "actual": null,
-          "minutes_until": 1948,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Crude Oil Inventories",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T10:30:00-05:00",
-          "forecast": "",
-          "previous": "-1.9M",
-          "actual": null,
-          "minutes_until": 1978,
-          "time_status": "UPCOMING"
-        }
-      ],
-      "next_24h_events": [
-        {
-          "title": "JOLTS Job Openings",
-          "currency": "USD",
-          "impact": "Medium",
-          "event_at_et": "2026-11-03T10:00:00-05:00",
-          "forecast": "7.15M",
-          "previous": "7.08M",
-          "actual": null,
-          "minutes_until": 508,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Factory Orders m/m",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T10:00:00-05:00",
-          "forecast": "1.2%",
-          "previous": "0.1%",
-          "actual": null,
-          "minutes_until": 508,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "RCM/TIPP Economic Optimism",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T10:10:00-05:00",
-          "forecast": "46.2",
-          "previous": "46.8",
-          "actual": null,
-          "minutes_until": 518,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Omdia Total Vehicle Sales",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T10:15:00-05:00",
-          "forecast": "15.8M",
-          "previous": "16.0M",
-          "actual": null,
-          "minutes_until": 523,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Congressional Elections",
-          "currency": "USD",
-          "impact": "High",
-          "event_at_et": "2026-11-03T10:16:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 524,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "BOC Gov Macklem Speaks",
-          "currency": "CAD",
-          "impact": "Medium",
-          "event_at_et": "2026-11-03T11:00:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 568,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "API Weekly Statistical Bulletin",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T16:30:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 898,
-          "time_status": "UPCOMING"
-        }
-      ],
-      "imminent_events": [],
-      "event_risk": "EVENT_WITHIN_24H",
-      "calendar_coverage": "VERIFIED",
-      "forexfactory_positioning": null,
-      "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
-      },
-      "asian_risk_context": {
-        "status": "DATED_DAILY_CONTEXT",
-        "note": "General risk backdrop; not an FX trade signal"
-      },
-      "asian_risk_directional_note": "Not a direct directional driver",
-      "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
-      "entry": null,
-      "stop": null,
-      "tp1": null,
-      "tp2": null
-    },
-    {
-      "pair": "EURGBP",
-      "technical_direction": "BUY",
-      "technical_stage": "EARLY_M15_M30_MOMENTUM",
-      "unified_signal_direction": "BUY",
-      "macro_alignment": "UNKNOWN",
-      "macro_evidence": [],
-      "publisher_reported_actuals": [],
-      "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
-      },
-      "technical_15m30m_fresh": true,
-      "early_watches_permitted_with_unknown_macro": true,
-      "reference_level_not_live": null,
-      "h1_ema20_50": "BELOW_BOTH",
-      "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
       "higher_timeframe_conflict": true,
       "upcoming_48h_events": [
@@ -2855,18 +790,62 @@
           "forecast": "",
           "previous": "-159.6B",
           "actual": null,
-          "minutes_until": 73,
+          "minutes_until": -5,
           "time_status": "IMMINENT"
         },
         {
-          "title": "10-y Bond Auction",
-          "currency": "GBP",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T05:33:00-05:00",
-          "forecast": "",
-          "previous": "5.42|3.6",
+          "title": "JOLTS Job Openings",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-03T10:00:00-05:00",
+          "forecast": "7.15M",
+          "previous": "7.08M",
           "actual": null,
-          "minutes_until": 241,
+          "minutes_until": 430,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Factory Orders m/m",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T10:00:00-05:00",
+          "forecast": "1.2%",
+          "previous": "0.1%",
+          "actual": null,
+          "minutes_until": 430,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "RCM/TIPP Economic Optimism",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T10:10:00-05:00",
+          "forecast": "46.2",
+          "previous": "46.8",
+          "actual": null,
+          "minutes_until": 440,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Omdia Total Vehicle Sales",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T10:15:00-05:00",
+          "forecast": "15.8M",
+          "previous": "16.0M",
+          "actual": null,
+          "minutes_until": 445,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Congressional Elections",
+          "currency": "USD",
+          "impact": "High",
+          "event_at_et": "2026-11-03T10:16:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 446,
           "time_status": "UPCOMING"
         },
         {
@@ -2877,7 +856,18 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 628,
+          "minutes_until": 550,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "API Weekly Statistical Bulletin",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T16:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 820,
           "time_status": "UPCOMING"
         },
         {
@@ -2888,7 +878,7 @@
           "forecast": "18.7K",
           "previous": "23.6K",
           "actual": null,
-          "minutes_until": 1528,
+          "minutes_until": 1450,
           "time_status": "UPCOMING"
         },
         {
@@ -2899,7 +889,7 @@
           "forecast": "57.6",
           "previous": "58.3",
           "actual": null,
-          "minutes_until": 1543,
+          "minutes_until": 1465,
           "time_status": "UPCOMING"
         },
         {
@@ -2910,7 +900,7 @@
           "forecast": "51.4",
           "previous": "51.7",
           "actual": null,
-          "minutes_until": 1573,
+          "minutes_until": 1495,
           "time_status": "UPCOMING"
         },
         {
@@ -2921,7 +911,7 @@
           "forecast": "48.4",
           "previous": "48.4",
           "actual": null,
-          "minutes_until": 1578,
+          "minutes_until": 1500,
           "time_status": "UPCOMING"
         },
         {
@@ -2932,7 +922,7 @@
           "forecast": "51.7",
           "previous": "51.7",
           "actual": null,
-          "minutes_until": 1583,
+          "minutes_until": 1505,
           "time_status": "UPCOMING"
         },
         {
@@ -2943,18 +933,7 @@
           "forecast": "51.7",
           "previous": "51.7",
           "actual": null,
-          "minutes_until": 1588,
-          "time_status": "UPCOMING"
-        },
-        {
-          "title": "Final Services PMI",
-          "currency": "GBP",
-          "impact": "Low",
-          "event_at_et": "2026-11-04T04:30:00-05:00",
-          "forecast": "53.1",
-          "previous": "53.1",
-          "actual": null,
-          "minutes_until": 1618,
+          "minutes_until": 1510,
           "time_status": "UPCOMING"
         },
         {
@@ -2965,7 +944,7 @@
           "forecast": "2.5%",
           "previous": "2.5%",
           "actual": null,
-          "minutes_until": 1648,
+          "minutes_until": 1570,
           "time_status": "UPCOMING"
         },
         {
@@ -2976,31 +955,141 @@
           "forecast": "4.0%",
           "previous": "3.8%",
           "actual": null,
-          "minutes_until": 1648,
+          "minutes_until": 1570,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "ADP Non-Farm Employment Change",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T08:15:00-05:00",
+          "forecast": "67K",
+          "previous": "90K",
+          "actual": null,
+          "minutes_until": 1765,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Trade Balance",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T08:30:00-05:00",
+          "forecast": "-107.9B",
+          "previous": "-105.6B",
+          "actual": null,
+          "minutes_until": 1780,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Final Services PMI",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T09:45:00-05:00",
+          "forecast": "57.9",
+          "previous": "57.9",
+          "actual": null,
+          "minutes_until": 1855,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "ISM Services PMI",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-04T10:00:00-05:00",
+          "forecast": "54.8",
+          "previous": "54.9",
+          "actual": null,
+          "minutes_until": 1870,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Crude Oil Inventories",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T10:30:00-05:00",
+          "forecast": "",
+          "previous": "-1.9M",
+          "actual": null,
+          "minutes_until": 1900,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "German Factory Orders m/m",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-05T02:00:00-05:00",
+          "forecast": "4.6%",
+          "previous": "-10.6%",
+          "actual": null,
+          "minutes_until": 2830,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "French Industrial Production m/m",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-05T02:45:00-05:00",
+          "forecast": "0.3%",
+          "previous": "-0.3%",
+          "actual": null,
+          "minutes_until": 2875,
           "time_status": "UPCOMING"
         }
       ],
       "next_24h_events": [
         {
-          "title": "French Gov Budget Balance",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-03T02:45:00-05:00",
-          "forecast": "",
-          "previous": "-159.6B",
+          "title": "JOLTS Job Openings",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-03T10:00:00-05:00",
+          "forecast": "7.15M",
+          "previous": "7.08M",
           "actual": null,
-          "minutes_until": 73,
-          "time_status": "IMMINENT"
+          "minutes_until": 430,
+          "time_status": "UPCOMING"
         },
         {
-          "title": "10-y Bond Auction",
-          "currency": "GBP",
+          "title": "Factory Orders m/m",
+          "currency": "USD",
           "impact": "Low",
-          "event_at_et": "2026-11-03T05:33:00-05:00",
-          "forecast": "",
-          "previous": "5.42|3.6",
+          "event_at_et": "2026-11-03T10:00:00-05:00",
+          "forecast": "1.2%",
+          "previous": "0.1%",
           "actual": null,
-          "minutes_until": 241,
+          "minutes_until": 430,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "RCM/TIPP Economic Optimism",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T10:10:00-05:00",
+          "forecast": "46.2",
+          "previous": "46.8",
+          "actual": null,
+          "minutes_until": 440,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Omdia Total Vehicle Sales",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T10:15:00-05:00",
+          "forecast": "15.8M",
+          "previous": "16.0M",
+          "actual": null,
+          "minutes_until": 445,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Congressional Elections",
+          "currency": "USD",
+          "impact": "High",
+          "event_at_et": "2026-11-03T10:16:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 446,
           "time_status": "UPCOMING"
         },
         {
@@ -3011,7 +1100,18 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 628,
+          "minutes_until": 550,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "API Weekly Statistical Bulletin",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T16:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 820,
           "time_status": "UPCOMING"
         }
       ],
@@ -3024,7 +1124,7 @@
           "forecast": "",
           "previous": "-159.6B",
           "actual": null,
-          "minutes_until": 73,
+          "minutes_until": -5,
           "time_status": "IMMINENT"
         }
       ],
@@ -3032,14 +1132,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -3047,7 +1140,1903 @@
       },
       "asian_risk_directional_note": "Not a direct directional driver",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "entry": null,
+      "stop": null,
+      "tp1": null,
+      "tp2": null
+    },
+    {
+      "pair": "GBPUSD",
+      "technical_direction": "NO_RANKED_CANDIDATE",
+      "technical_stage": "UNRANKED",
+      "unified_signal_direction": "UNAVAILABLE",
+      "macro_alignment": "UNKNOWN",
+      "macro_evidence": [],
+      "publisher_reported_actuals": [],
+      "range_context": {
+        "status": "UNAVAILABLE"
+      },
+      "technical_15m30m_fresh": false,
+      "early_watches_permitted_with_unknown_macro": true,
+      "reference_level_not_live": null,
+      "h1_ema20_50": "ABOVE_BOTH",
+      "h4_ema20_50": "ABOVE_BOTH",
+      "timeframes_present": true,
+      "higher_timeframe_conflict": false,
+      "upcoming_48h_events": [
+        {
+          "title": "10-y Bond Auction",
+          "currency": "GBP",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T05:33:00-05:00",
+          "forecast": "",
+          "previous": "5.42|3.6",
+          "actual": null,
+          "minutes_until": 163,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "JOLTS Job Openings",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-03T10:00:00-05:00",
+          "forecast": "7.15M",
+          "previous": "7.08M",
+          "actual": null,
+          "minutes_until": 430,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Factory Orders m/m",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T10:00:00-05:00",
+          "forecast": "1.2%",
+          "previous": "0.1%",
+          "actual": null,
+          "minutes_until": 430,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "RCM/TIPP Economic Optimism",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T10:10:00-05:00",
+          "forecast": "46.2",
+          "previous": "46.8",
+          "actual": null,
+          "minutes_until": 440,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Omdia Total Vehicle Sales",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T10:15:00-05:00",
+          "forecast": "15.8M",
+          "previous": "16.0M",
+          "actual": null,
+          "minutes_until": 445,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Congressional Elections",
+          "currency": "USD",
+          "impact": "High",
+          "event_at_et": "2026-11-03T10:16:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 446,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "API Weekly Statistical Bulletin",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T16:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 820,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Final Services PMI",
+          "currency": "GBP",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T04:30:00-05:00",
+          "forecast": "53.1",
+          "previous": "53.1",
+          "actual": null,
+          "minutes_until": 1540,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "ADP Non-Farm Employment Change",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T08:15:00-05:00",
+          "forecast": "67K",
+          "previous": "90K",
+          "actual": null,
+          "minutes_until": 1765,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Trade Balance",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T08:30:00-05:00",
+          "forecast": "-107.9B",
+          "previous": "-105.6B",
+          "actual": null,
+          "minutes_until": 1780,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Final Services PMI",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T09:45:00-05:00",
+          "forecast": "57.9",
+          "previous": "57.9",
+          "actual": null,
+          "minutes_until": 1855,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "ISM Services PMI",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-04T10:00:00-05:00",
+          "forecast": "54.8",
+          "previous": "54.9",
+          "actual": null,
+          "minutes_until": 1870,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Crude Oil Inventories",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T10:30:00-05:00",
+          "forecast": "",
+          "previous": "-1.9M",
+          "actual": null,
+          "minutes_until": 1900,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "next_24h_events": [
+        {
+          "title": "10-y Bond Auction",
+          "currency": "GBP",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T05:33:00-05:00",
+          "forecast": "",
+          "previous": "5.42|3.6",
+          "actual": null,
+          "minutes_until": 163,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "JOLTS Job Openings",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-03T10:00:00-05:00",
+          "forecast": "7.15M",
+          "previous": "7.08M",
+          "actual": null,
+          "minutes_until": 430,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Factory Orders m/m",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T10:00:00-05:00",
+          "forecast": "1.2%",
+          "previous": "0.1%",
+          "actual": null,
+          "minutes_until": 430,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "RCM/TIPP Economic Optimism",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T10:10:00-05:00",
+          "forecast": "46.2",
+          "previous": "46.8",
+          "actual": null,
+          "minutes_until": 440,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Omdia Total Vehicle Sales",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T10:15:00-05:00",
+          "forecast": "15.8M",
+          "previous": "16.0M",
+          "actual": null,
+          "minutes_until": 445,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Congressional Elections",
+          "currency": "USD",
+          "impact": "High",
+          "event_at_et": "2026-11-03T10:16:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 446,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "API Weekly Statistical Bulletin",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T16:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 820,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "imminent_events": [],
+      "event_risk": "EVENT_WITHIN_24H",
+      "calendar_coverage": "VERIFIED",
+      "forexfactory_positioning": null,
+      "myfxbook_positioning": {
+        "status": "UNAVAILABLE"
+      },
+      "asian_risk_context": {
+        "status": "DATED_DAILY_CONTEXT",
+        "note": "General risk backdrop; not an FX trade signal"
+      },
+      "asian_risk_directional_note": "Not a direct directional driver",
+      "macro_confirmed": false,
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "entry": null,
+      "stop": null,
+      "tp1": null,
+      "tp2": null
+    },
+    {
+      "pair": "USDJPY",
+      "technical_direction": "SELL",
+      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
+      "unified_signal_direction": "UNAVAILABLE",
+      "macro_alignment": "UNKNOWN",
+      "macro_evidence": [],
+      "publisher_reported_actuals": [],
+      "range_context": {
+        "status": "UNAVAILABLE"
+      },
+      "technical_15m30m_fresh": false,
+      "early_watches_permitted_with_unknown_macro": true,
+      "reference_level_not_live": null,
+      "h1_ema20_50": "MIXED",
+      "h4_ema20_50": "ABOVE_BOTH",
+      "timeframes_present": true,
+      "higher_timeframe_conflict": false,
+      "upcoming_48h_events": [
+        {
+          "title": "JOLTS Job Openings",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-03T10:00:00-05:00",
+          "forecast": "7.15M",
+          "previous": "7.08M",
+          "actual": null,
+          "minutes_until": 430,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Factory Orders m/m",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T10:00:00-05:00",
+          "forecast": "1.2%",
+          "previous": "0.1%",
+          "actual": null,
+          "minutes_until": 430,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "RCM/TIPP Economic Optimism",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T10:10:00-05:00",
+          "forecast": "46.2",
+          "previous": "46.8",
+          "actual": null,
+          "minutes_until": 440,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Omdia Total Vehicle Sales",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T10:15:00-05:00",
+          "forecast": "15.8M",
+          "previous": "16.0M",
+          "actual": null,
+          "minutes_until": 445,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Congressional Elections",
+          "currency": "USD",
+          "impact": "High",
+          "event_at_et": "2026-11-03T10:16:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 446,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "API Weekly Statistical Bulletin",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T16:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 820,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Monetary Base y/y",
+          "currency": "JPY",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T18:50:00-05:00",
+          "forecast": "-14.0%",
+          "previous": "-15.2%",
+          "actual": null,
+          "minutes_until": 960,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "ADP Non-Farm Employment Change",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T08:15:00-05:00",
+          "forecast": "67K",
+          "previous": "90K",
+          "actual": null,
+          "minutes_until": 1765,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Trade Balance",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T08:30:00-05:00",
+          "forecast": "-107.9B",
+          "previous": "-105.6B",
+          "actual": null,
+          "minutes_until": 1780,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Final Services PMI",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T09:45:00-05:00",
+          "forecast": "57.9",
+          "previous": "57.9",
+          "actual": null,
+          "minutes_until": 1855,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "ISM Services PMI",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-04T10:00:00-05:00",
+          "forecast": "54.8",
+          "previous": "54.9",
+          "actual": null,
+          "minutes_until": 1870,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Crude Oil Inventories",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T10:30:00-05:00",
+          "forecast": "",
+          "previous": "-1.9M",
+          "actual": null,
+          "minutes_until": 1900,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Monetary Policy Meeting Minutes",
+          "currency": "JPY",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T18:50:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 2400,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "10-y Bond Auction",
+          "currency": "JPY",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T22:35:00-05:00",
+          "forecast": "",
+          "previous": "3.10|3.8",
+          "actual": null,
+          "minutes_until": 2625,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "next_24h_events": [
+        {
+          "title": "JOLTS Job Openings",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-03T10:00:00-05:00",
+          "forecast": "7.15M",
+          "previous": "7.08M",
+          "actual": null,
+          "minutes_until": 430,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Factory Orders m/m",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T10:00:00-05:00",
+          "forecast": "1.2%",
+          "previous": "0.1%",
+          "actual": null,
+          "minutes_until": 430,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "RCM/TIPP Economic Optimism",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T10:10:00-05:00",
+          "forecast": "46.2",
+          "previous": "46.8",
+          "actual": null,
+          "minutes_until": 440,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Omdia Total Vehicle Sales",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T10:15:00-05:00",
+          "forecast": "15.8M",
+          "previous": "16.0M",
+          "actual": null,
+          "minutes_until": 445,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Congressional Elections",
+          "currency": "USD",
+          "impact": "High",
+          "event_at_et": "2026-11-03T10:16:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 446,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "API Weekly Statistical Bulletin",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T16:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 820,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Monetary Base y/y",
+          "currency": "JPY",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T18:50:00-05:00",
+          "forecast": "-14.0%",
+          "previous": "-15.2%",
+          "actual": null,
+          "minutes_until": 960,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "imminent_events": [],
+      "event_risk": "EVENT_WITHIN_24H",
+      "calendar_coverage": "VERIFIED",
+      "forexfactory_positioning": null,
+      "myfxbook_positioning": {
+        "status": "UNAVAILABLE"
+      },
+      "asian_risk_context": {
+        "source": "Trading Economics public KOSPI page (no key)",
+        "status": "DATED_DAILY_CONTEXT",
+        "daily_reference_change_pct": -3.2,
+        "daily_reference_level": 5671.0,
+        "reference_date_kst": "2026-11-03",
+        "risk_tier": "SEVERE_DAILY_RISK_OFF",
+        "dated_news_headline": "South Korean Shares Rebound on Semiconductor Strength",
+        "dated_news_day": "2026-11-03",
+        "interpretation": "Risk-off corroboration only; no verified intraday quote or automatic FX direction changes",
+        "verified_intraday_quote": false,
+        "execution_allowed": false
+      },
+      "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
+      "macro_confirmed": false,
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "entry": null,
+      "stop": null,
+      "tp1": null,
+      "tp2": null
+    },
+    {
+      "pair": "AUDJPY",
+      "technical_direction": "NO_RANKED_CANDIDATE",
+      "technical_stage": "UNRANKED",
+      "unified_signal_direction": "UNAVAILABLE",
+      "macro_alignment": "UNKNOWN",
+      "macro_evidence": [],
+      "publisher_reported_actuals": [],
+      "range_context": {
+        "status": "UNAVAILABLE"
+      },
+      "technical_15m30m_fresh": false,
+      "early_watches_permitted_with_unknown_macro": true,
+      "reference_level_not_live": null,
+      "h1_ema20_50": "BELOW_BOTH",
+      "h4_ema20_50": "BELOW_BOTH",
+      "timeframes_present": true,
+      "higher_timeframe_conflict": false,
+      "upcoming_48h_events": [
+        {
+          "title": "Monetary Base y/y",
+          "currency": "JPY",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T18:50:00-05:00",
+          "forecast": "-14.0%",
+          "previous": "-15.2%",
+          "actual": null,
+          "minutes_until": 960,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Household Spending m/m",
+          "currency": "AUD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T19:30:00-05:00",
+          "forecast": "0.2%",
+          "previous": "0.0%",
+          "actual": null,
+          "minutes_until": 1000,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "RatingDog Services PMI",
+          "currency": "CNY",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T20:45:00-05:00",
+          "forecast": "51.7",
+          "previous": "51.6",
+          "actual": null,
+          "minutes_until": 1075,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Monetary Policy Meeting Minutes",
+          "currency": "JPY",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T18:50:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 2400,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Goods Trade Balance",
+          "currency": "AUD",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T19:30:00-05:00",
+          "forecast": "0.94B",
+          "previous": "0.50B",
+          "actual": null,
+          "minutes_until": 2440,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "10-y Bond Auction",
+          "currency": "JPY",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T22:35:00-05:00",
+          "forecast": "",
+          "previous": "3.10|3.8",
+          "actual": null,
+          "minutes_until": 2625,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "RBA Deputy Gov Hauser Speaks",
+          "currency": "AUD",
+          "impact": "Low",
+          "event_at_et": "2026-11-05T01:45:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 2815,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "next_24h_events": [
+        {
+          "title": "Monetary Base y/y",
+          "currency": "JPY",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T18:50:00-05:00",
+          "forecast": "-14.0%",
+          "previous": "-15.2%",
+          "actual": null,
+          "minutes_until": 960,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Household Spending m/m",
+          "currency": "AUD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T19:30:00-05:00",
+          "forecast": "0.2%",
+          "previous": "0.0%",
+          "actual": null,
+          "minutes_until": 1000,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "RatingDog Services PMI",
+          "currency": "CNY",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T20:45:00-05:00",
+          "forecast": "51.7",
+          "previous": "51.6",
+          "actual": null,
+          "minutes_until": 1075,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "imminent_events": [],
+      "event_risk": "EVENT_WITHIN_24H",
+      "calendar_coverage": "VERIFIED",
+      "forexfactory_positioning": null,
+      "myfxbook_positioning": {
+        "status": "UNAVAILABLE"
+      },
+      "asian_risk_context": {
+        "source": "Trading Economics public KOSPI page (no key)",
+        "status": "DATED_DAILY_CONTEXT",
+        "daily_reference_change_pct": -3.2,
+        "daily_reference_level": 5671.0,
+        "reference_date_kst": "2026-11-03",
+        "risk_tier": "SEVERE_DAILY_RISK_OFF",
+        "dated_news_headline": "South Korean Shares Rebound on Semiconductor Strength",
+        "dated_news_day": "2026-11-03",
+        "interpretation": "Risk-off corroboration only; no verified intraday quote or automatic FX direction changes",
+        "verified_intraday_quote": false,
+        "execution_allowed": false
+      },
+      "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
+      "macro_confirmed": false,
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "entry": null,
+      "stop": null,
+      "tp1": null,
+      "tp2": null
+    },
+    {
+      "pair": "NZDJPY",
+      "technical_direction": "NO_RANKED_CANDIDATE",
+      "technical_stage": "UNRANKED",
+      "unified_signal_direction": "UNAVAILABLE",
+      "macro_alignment": "UNKNOWN",
+      "macro_evidence": [],
+      "publisher_reported_actuals": [],
+      "range_context": {
+        "status": "UNAVAILABLE"
+      },
+      "technical_15m30m_fresh": false,
+      "early_watches_permitted_with_unknown_macro": true,
+      "reference_level_not_live": null,
+      "h1_ema20_50": "ABOVE_BOTH",
+      "h4_ema20_50": "MIXED",
+      "timeframes_present": true,
+      "higher_timeframe_conflict": false,
+      "upcoming_48h_events": [
+        {
+          "title": "GDT Price Index",
+          "currency": "NZD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T10:50:00-05:00",
+          "forecast": "",
+          "previous": "2.5%",
+          "actual": null,
+          "minutes_until": 480,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Employment Change q/q",
+          "currency": "NZD",
+          "impact": "High",
+          "event_at_et": "2026-11-03T16:45:00-05:00",
+          "forecast": "0.4%",
+          "previous": "0.5%",
+          "actual": null,
+          "minutes_until": 835,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Unemployment Rate",
+          "currency": "NZD",
+          "impact": "High",
+          "event_at_et": "2026-11-03T16:45:00-05:00",
+          "forecast": "5.5%",
+          "previous": "5.6%",
+          "actual": null,
+          "minutes_until": 835,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Labor Cost Index q/q",
+          "currency": "NZD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T16:45:00-05:00",
+          "forecast": "0.5%",
+          "previous": "0.7%",
+          "actual": null,
+          "minutes_until": 835,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Monetary Base y/y",
+          "currency": "JPY",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T18:50:00-05:00",
+          "forecast": "-14.0%",
+          "previous": "-15.2%",
+          "actual": null,
+          "minutes_until": 960,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "ANZ Commodity Prices m/m",
+          "currency": "NZD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T19:00:00-05:00",
+          "forecast": "",
+          "previous": "0.6%",
+          "actual": null,
+          "minutes_until": 970,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "RatingDog Services PMI",
+          "currency": "CNY",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T20:45:00-05:00",
+          "forecast": "51.7",
+          "previous": "51.6",
+          "actual": null,
+          "minutes_until": 1075,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Monetary Policy Meeting Minutes",
+          "currency": "JPY",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T18:50:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 2400,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "10-y Bond Auction",
+          "currency": "JPY",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T22:35:00-05:00",
+          "forecast": "",
+          "previous": "3.10|3.8",
+          "actual": null,
+          "minutes_until": 2625,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "next_24h_events": [
+        {
+          "title": "GDT Price Index",
+          "currency": "NZD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T10:50:00-05:00",
+          "forecast": "",
+          "previous": "2.5%",
+          "actual": null,
+          "minutes_until": 480,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Employment Change q/q",
+          "currency": "NZD",
+          "impact": "High",
+          "event_at_et": "2026-11-03T16:45:00-05:00",
+          "forecast": "0.4%",
+          "previous": "0.5%",
+          "actual": null,
+          "minutes_until": 835,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Unemployment Rate",
+          "currency": "NZD",
+          "impact": "High",
+          "event_at_et": "2026-11-03T16:45:00-05:00",
+          "forecast": "5.5%",
+          "previous": "5.6%",
+          "actual": null,
+          "minutes_until": 835,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Labor Cost Index q/q",
+          "currency": "NZD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T16:45:00-05:00",
+          "forecast": "0.5%",
+          "previous": "0.7%",
+          "actual": null,
+          "minutes_until": 835,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Monetary Base y/y",
+          "currency": "JPY",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T18:50:00-05:00",
+          "forecast": "-14.0%",
+          "previous": "-15.2%",
+          "actual": null,
+          "minutes_until": 960,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "ANZ Commodity Prices m/m",
+          "currency": "NZD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T19:00:00-05:00",
+          "forecast": "",
+          "previous": "0.6%",
+          "actual": null,
+          "minutes_until": 970,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "RatingDog Services PMI",
+          "currency": "CNY",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T20:45:00-05:00",
+          "forecast": "51.7",
+          "previous": "51.6",
+          "actual": null,
+          "minutes_until": 1075,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "imminent_events": [],
+      "event_risk": "EVENT_WITHIN_24H",
+      "calendar_coverage": "VERIFIED",
+      "forexfactory_positioning": null,
+      "myfxbook_positioning": {
+        "status": "UNAVAILABLE"
+      },
+      "asian_risk_context": {
+        "source": "Trading Economics public KOSPI page (no key)",
+        "status": "DATED_DAILY_CONTEXT",
+        "daily_reference_change_pct": -3.2,
+        "daily_reference_level": 5671.0,
+        "reference_date_kst": "2026-11-03",
+        "risk_tier": "SEVERE_DAILY_RISK_OFF",
+        "dated_news_headline": "South Korean Shares Rebound on Semiconductor Strength",
+        "dated_news_day": "2026-11-03",
+        "interpretation": "Risk-off corroboration only; no verified intraday quote or automatic FX direction changes",
+        "verified_intraday_quote": false,
+        "execution_allowed": false
+      },
+      "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
+      "macro_confirmed": false,
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "entry": null,
+      "stop": null,
+      "tp1": null,
+      "tp2": null
+    },
+    {
+      "pair": "EURJPY",
+      "technical_direction": "SELL",
+      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
+      "unified_signal_direction": "UNAVAILABLE",
+      "macro_alignment": "UNKNOWN",
+      "macro_evidence": [],
+      "publisher_reported_actuals": [],
+      "range_context": {
+        "status": "UNAVAILABLE"
+      },
+      "technical_15m30m_fresh": false,
+      "early_watches_permitted_with_unknown_macro": true,
+      "reference_level_not_live": null,
+      "h1_ema20_50": "MIXED",
+      "h4_ema20_50": "ABOVE_BOTH",
+      "timeframes_present": true,
+      "higher_timeframe_conflict": false,
+      "upcoming_48h_events": [
+        {
+          "title": "French Gov Budget Balance",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T02:45:00-05:00",
+          "forecast": "",
+          "previous": "-159.6B",
+          "actual": null,
+          "minutes_until": -5,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "German Buba President Nagel Speaks",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T12:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 550,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Monetary Base y/y",
+          "currency": "JPY",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T18:50:00-05:00",
+          "forecast": "-14.0%",
+          "previous": "-15.2%",
+          "actual": null,
+          "minutes_until": 960,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Spanish Unemployment Change",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T03:00:00-05:00",
+          "forecast": "18.7K",
+          "previous": "23.6K",
+          "actual": null,
+          "minutes_until": 1450,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Spanish Services PMI",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T03:15:00-05:00",
+          "forecast": "57.6",
+          "previous": "58.3",
+          "actual": null,
+          "minutes_until": 1465,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Italian Services PMI",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T03:45:00-05:00",
+          "forecast": "51.4",
+          "previous": "51.7",
+          "actual": null,
+          "minutes_until": 1495,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "French Final Services PMI",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T03:50:00-05:00",
+          "forecast": "48.4",
+          "previous": "48.4",
+          "actual": null,
+          "minutes_until": 1500,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "German Final Services PMI",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T03:55:00-05:00",
+          "forecast": "51.7",
+          "previous": "51.7",
+          "actual": null,
+          "minutes_until": 1505,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Final Services PMI",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T04:00:00-05:00",
+          "forecast": "51.7",
+          "previous": "51.7",
+          "actual": null,
+          "minutes_until": 1510,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Core CPI Flash Estimate y/y",
+          "currency": "EUR",
+          "impact": "Medium",
+          "event_at_et": "2026-11-04T05:00:00-05:00",
+          "forecast": "2.5%",
+          "previous": "2.5%",
+          "actual": null,
+          "minutes_until": 1570,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "CPI Flash Estimate y/y",
+          "currency": "EUR",
+          "impact": "Medium",
+          "event_at_et": "2026-11-04T05:00:00-05:00",
+          "forecast": "4.0%",
+          "previous": "3.8%",
+          "actual": null,
+          "minutes_until": 1570,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Monetary Policy Meeting Minutes",
+          "currency": "JPY",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T18:50:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 2400,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "10-y Bond Auction",
+          "currency": "JPY",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T22:35:00-05:00",
+          "forecast": "",
+          "previous": "3.10|3.8",
+          "actual": null,
+          "minutes_until": 2625,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "German Factory Orders m/m",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-05T02:00:00-05:00",
+          "forecast": "4.6%",
+          "previous": "-10.6%",
+          "actual": null,
+          "minutes_until": 2830,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "French Industrial Production m/m",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-05T02:45:00-05:00",
+          "forecast": "0.3%",
+          "previous": "-0.3%",
+          "actual": null,
+          "minutes_until": 2875,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "next_24h_events": [
+        {
+          "title": "German Buba President Nagel Speaks",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T12:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 550,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Monetary Base y/y",
+          "currency": "JPY",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T18:50:00-05:00",
+          "forecast": "-14.0%",
+          "previous": "-15.2%",
+          "actual": null,
+          "minutes_until": 960,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "imminent_events": [
+        {
+          "title": "French Gov Budget Balance",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T02:45:00-05:00",
+          "forecast": "",
+          "previous": "-159.6B",
+          "actual": null,
+          "minutes_until": -5,
+          "time_status": "IMMINENT"
+        }
+      ],
+      "event_risk": "IMMINENT_EVENT",
+      "calendar_coverage": "VERIFIED",
+      "forexfactory_positioning": null,
+      "myfxbook_positioning": {
+        "status": "UNAVAILABLE"
+      },
+      "asian_risk_context": {
+        "source": "Trading Economics public KOSPI page (no key)",
+        "status": "DATED_DAILY_CONTEXT",
+        "daily_reference_change_pct": -3.2,
+        "daily_reference_level": 5671.0,
+        "reference_date_kst": "2026-11-03",
+        "risk_tier": "SEVERE_DAILY_RISK_OFF",
+        "dated_news_headline": "South Korean Shares Rebound on Semiconductor Strength",
+        "dated_news_day": "2026-11-03",
+        "interpretation": "Risk-off corroboration only; no verified intraday quote or automatic FX direction changes",
+        "verified_intraday_quote": false,
+        "execution_allowed": false
+      },
+      "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
+      "macro_confirmed": false,
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "entry": null,
+      "stop": null,
+      "tp1": null,
+      "tp2": null
+    },
+    {
+      "pair": "EURCAD",
+      "technical_direction": "SELL",
+      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
+      "unified_signal_direction": "UNAVAILABLE",
+      "macro_alignment": "UNKNOWN",
+      "macro_evidence": [],
+      "publisher_reported_actuals": [],
+      "range_context": {
+        "status": "UNAVAILABLE"
+      },
+      "technical_15m30m_fresh": false,
+      "early_watches_permitted_with_unknown_macro": true,
+      "reference_level_not_live": null,
+      "h1_ema20_50": "BELOW_BOTH",
+      "h4_ema20_50": "BELOW_BOTH",
+      "timeframes_present": true,
+      "higher_timeframe_conflict": false,
+      "upcoming_48h_events": [
+        {
+          "title": "French Gov Budget Balance",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T02:45:00-05:00",
+          "forecast": "",
+          "previous": "-159.6B",
+          "actual": null,
+          "minutes_until": -5,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "BOC Gov Macklem Speaks",
+          "currency": "CAD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-03T11:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 490,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "German Buba President Nagel Speaks",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T12:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 550,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Spanish Unemployment Change",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T03:00:00-05:00",
+          "forecast": "18.7K",
+          "previous": "23.6K",
+          "actual": null,
+          "minutes_until": 1450,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Spanish Services PMI",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T03:15:00-05:00",
+          "forecast": "57.6",
+          "previous": "58.3",
+          "actual": null,
+          "minutes_until": 1465,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Italian Services PMI",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T03:45:00-05:00",
+          "forecast": "51.4",
+          "previous": "51.7",
+          "actual": null,
+          "minutes_until": 1495,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "French Final Services PMI",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T03:50:00-05:00",
+          "forecast": "48.4",
+          "previous": "48.4",
+          "actual": null,
+          "minutes_until": 1500,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "German Final Services PMI",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T03:55:00-05:00",
+          "forecast": "51.7",
+          "previous": "51.7",
+          "actual": null,
+          "minutes_until": 1505,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Final Services PMI",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T04:00:00-05:00",
+          "forecast": "51.7",
+          "previous": "51.7",
+          "actual": null,
+          "minutes_until": 1510,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Core CPI Flash Estimate y/y",
+          "currency": "EUR",
+          "impact": "Medium",
+          "event_at_et": "2026-11-04T05:00:00-05:00",
+          "forecast": "2.5%",
+          "previous": "2.5%",
+          "actual": null,
+          "minutes_until": 1570,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "CPI Flash Estimate y/y",
+          "currency": "EUR",
+          "impact": "Medium",
+          "event_at_et": "2026-11-04T05:00:00-05:00",
+          "forecast": "4.0%",
+          "previous": "3.8%",
+          "actual": null,
+          "minutes_until": 1570,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Trade Balance",
+          "currency": "CAD",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T08:30:00-05:00",
+          "forecast": "4.8B",
+          "previous": "4.2B",
+          "actual": null,
+          "minutes_until": 1780,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "German Factory Orders m/m",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-05T02:00:00-05:00",
+          "forecast": "4.6%",
+          "previous": "-10.6%",
+          "actual": null,
+          "minutes_until": 2830,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "French Industrial Production m/m",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-05T02:45:00-05:00",
+          "forecast": "0.3%",
+          "previous": "-0.3%",
+          "actual": null,
+          "minutes_until": 2875,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "next_24h_events": [
+        {
+          "title": "BOC Gov Macklem Speaks",
+          "currency": "CAD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-03T11:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 490,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "German Buba President Nagel Speaks",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T12:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 550,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "imminent_events": [
+        {
+          "title": "French Gov Budget Balance",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T02:45:00-05:00",
+          "forecast": "",
+          "previous": "-159.6B",
+          "actual": null,
+          "minutes_until": -5,
+          "time_status": "IMMINENT"
+        }
+      ],
+      "event_risk": "IMMINENT_EVENT",
+      "calendar_coverage": "VERIFIED",
+      "forexfactory_positioning": null,
+      "myfxbook_positioning": {
+        "status": "UNAVAILABLE"
+      },
+      "asian_risk_context": {
+        "status": "DATED_DAILY_CONTEXT",
+        "note": "General risk backdrop; not an FX trade signal"
+      },
+      "asian_risk_directional_note": "Not a direct directional driver",
+      "macro_confirmed": false,
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "entry": null,
+      "stop": null,
+      "tp1": null,
+      "tp2": null
+    },
+    {
+      "pair": "USDCAD",
+      "technical_direction": "NO_RANKED_CANDIDATE",
+      "technical_stage": "UNRANKED",
+      "unified_signal_direction": "UNAVAILABLE",
+      "macro_alignment": "UNKNOWN",
+      "macro_evidence": [],
+      "publisher_reported_actuals": [],
+      "range_context": {
+        "status": "UNAVAILABLE"
+      },
+      "technical_15m30m_fresh": false,
+      "early_watches_permitted_with_unknown_macro": true,
+      "reference_level_not_live": null,
+      "h1_ema20_50": "BELOW_BOTH",
+      "h4_ema20_50": "BELOW_BOTH",
+      "timeframes_present": true,
+      "higher_timeframe_conflict": false,
+      "upcoming_48h_events": [
+        {
+          "title": "JOLTS Job Openings",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-03T10:00:00-05:00",
+          "forecast": "7.15M",
+          "previous": "7.08M",
+          "actual": null,
+          "minutes_until": 430,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Factory Orders m/m",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T10:00:00-05:00",
+          "forecast": "1.2%",
+          "previous": "0.1%",
+          "actual": null,
+          "minutes_until": 430,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "RCM/TIPP Economic Optimism",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T10:10:00-05:00",
+          "forecast": "46.2",
+          "previous": "46.8",
+          "actual": null,
+          "minutes_until": 440,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Omdia Total Vehicle Sales",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T10:15:00-05:00",
+          "forecast": "15.8M",
+          "previous": "16.0M",
+          "actual": null,
+          "minutes_until": 445,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Congressional Elections",
+          "currency": "USD",
+          "impact": "High",
+          "event_at_et": "2026-11-03T10:16:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 446,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "BOC Gov Macklem Speaks",
+          "currency": "CAD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-03T11:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 490,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "API Weekly Statistical Bulletin",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T16:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 820,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "ADP Non-Farm Employment Change",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T08:15:00-05:00",
+          "forecast": "67K",
+          "previous": "90K",
+          "actual": null,
+          "minutes_until": 1765,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Trade Balance",
+          "currency": "CAD",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T08:30:00-05:00",
+          "forecast": "4.8B",
+          "previous": "4.2B",
+          "actual": null,
+          "minutes_until": 1780,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Trade Balance",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T08:30:00-05:00",
+          "forecast": "-107.9B",
+          "previous": "-105.6B",
+          "actual": null,
+          "minutes_until": 1780,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Final Services PMI",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T09:45:00-05:00",
+          "forecast": "57.9",
+          "previous": "57.9",
+          "actual": null,
+          "minutes_until": 1855,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "ISM Services PMI",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-04T10:00:00-05:00",
+          "forecast": "54.8",
+          "previous": "54.9",
+          "actual": null,
+          "minutes_until": 1870,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Crude Oil Inventories",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T10:30:00-05:00",
+          "forecast": "",
+          "previous": "-1.9M",
+          "actual": null,
+          "minutes_until": 1900,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "next_24h_events": [
+        {
+          "title": "JOLTS Job Openings",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-03T10:00:00-05:00",
+          "forecast": "7.15M",
+          "previous": "7.08M",
+          "actual": null,
+          "minutes_until": 430,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Factory Orders m/m",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T10:00:00-05:00",
+          "forecast": "1.2%",
+          "previous": "0.1%",
+          "actual": null,
+          "minutes_until": 430,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "RCM/TIPP Economic Optimism",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T10:10:00-05:00",
+          "forecast": "46.2",
+          "previous": "46.8",
+          "actual": null,
+          "minutes_until": 440,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Omdia Total Vehicle Sales",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T10:15:00-05:00",
+          "forecast": "15.8M",
+          "previous": "16.0M",
+          "actual": null,
+          "minutes_until": 445,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Congressional Elections",
+          "currency": "USD",
+          "impact": "High",
+          "event_at_et": "2026-11-03T10:16:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 446,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "BOC Gov Macklem Speaks",
+          "currency": "CAD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-03T11:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 490,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "API Weekly Statistical Bulletin",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T16:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 820,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "imminent_events": [],
+      "event_risk": "EVENT_WITHIN_24H",
+      "calendar_coverage": "VERIFIED",
+      "forexfactory_positioning": null,
+      "myfxbook_positioning": {
+        "status": "UNAVAILABLE"
+      },
+      "asian_risk_context": {
+        "status": "DATED_DAILY_CONTEXT",
+        "note": "General risk backdrop; not an FX trade signal"
+      },
+      "asian_risk_directional_note": "Not a direct directional driver",
+      "macro_confirmed": false,
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
+      "entry": null,
+      "stop": null,
+      "tp1": null,
+      "tp2": null
+    },
+    {
+      "pair": "EURGBP",
+      "technical_direction": "NO_RANKED_CANDIDATE",
+      "technical_stage": "UNRANKED",
+      "unified_signal_direction": "UNAVAILABLE",
+      "macro_alignment": "UNKNOWN",
+      "macro_evidence": [],
+      "publisher_reported_actuals": [],
+      "range_context": {
+        "status": "UNAVAILABLE"
+      },
+      "technical_15m30m_fresh": false,
+      "early_watches_permitted_with_unknown_macro": true,
+      "reference_level_not_live": null,
+      "h1_ema20_50": "BELOW_BOTH",
+      "h4_ema20_50": "BELOW_BOTH",
+      "timeframes_present": true,
+      "higher_timeframe_conflict": false,
+      "upcoming_48h_events": [
+        {
+          "title": "French Gov Budget Balance",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T02:45:00-05:00",
+          "forecast": "",
+          "previous": "-159.6B",
+          "actual": null,
+          "minutes_until": -5,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "10-y Bond Auction",
+          "currency": "GBP",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T05:33:00-05:00",
+          "forecast": "",
+          "previous": "5.42|3.6",
+          "actual": null,
+          "minutes_until": 163,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "German Buba President Nagel Speaks",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T12:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 550,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Spanish Unemployment Change",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T03:00:00-05:00",
+          "forecast": "18.7K",
+          "previous": "23.6K",
+          "actual": null,
+          "minutes_until": 1450,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Spanish Services PMI",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T03:15:00-05:00",
+          "forecast": "57.6",
+          "previous": "58.3",
+          "actual": null,
+          "minutes_until": 1465,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Italian Services PMI",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T03:45:00-05:00",
+          "forecast": "51.4",
+          "previous": "51.7",
+          "actual": null,
+          "minutes_until": 1495,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "French Final Services PMI",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T03:50:00-05:00",
+          "forecast": "48.4",
+          "previous": "48.4",
+          "actual": null,
+          "minutes_until": 1500,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "German Final Services PMI",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T03:55:00-05:00",
+          "forecast": "51.7",
+          "previous": "51.7",
+          "actual": null,
+          "minutes_until": 1505,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Final Services PMI",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T04:00:00-05:00",
+          "forecast": "51.7",
+          "previous": "51.7",
+          "actual": null,
+          "minutes_until": 1510,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Final Services PMI",
+          "currency": "GBP",
+          "impact": "Low",
+          "event_at_et": "2026-11-04T04:30:00-05:00",
+          "forecast": "53.1",
+          "previous": "53.1",
+          "actual": null,
+          "minutes_until": 1540,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Core CPI Flash Estimate y/y",
+          "currency": "EUR",
+          "impact": "Medium",
+          "event_at_et": "2026-11-04T05:00:00-05:00",
+          "forecast": "2.5%",
+          "previous": "2.5%",
+          "actual": null,
+          "minutes_until": 1570,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "CPI Flash Estimate y/y",
+          "currency": "EUR",
+          "impact": "Medium",
+          "event_at_et": "2026-11-04T05:00:00-05:00",
+          "forecast": "4.0%",
+          "previous": "3.8%",
+          "actual": null,
+          "minutes_until": 1570,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "German Factory Orders m/m",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-05T02:00:00-05:00",
+          "forecast": "4.6%",
+          "previous": "-10.6%",
+          "actual": null,
+          "minutes_until": 2830,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "French Industrial Production m/m",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-05T02:45:00-05:00",
+          "forecast": "0.3%",
+          "previous": "-0.3%",
+          "actual": null,
+          "minutes_until": 2875,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "next_24h_events": [
+        {
+          "title": "10-y Bond Auction",
+          "currency": "GBP",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T05:33:00-05:00",
+          "forecast": "",
+          "previous": "5.42|3.6",
+          "actual": null,
+          "minutes_until": 163,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "German Buba President Nagel Speaks",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T12:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 550,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "imminent_events": [
+        {
+          "title": "French Gov Budget Balance",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-03T02:45:00-05:00",
+          "forecast": "",
+          "previous": "-159.6B",
+          "actual": null,
+          "minutes_until": -5,
+          "time_status": "IMMINENT"
+        }
+      ],
+      "event_risk": "IMMINENT_EVENT",
+      "calendar_coverage": "VERIFIED",
+      "forexfactory_positioning": null,
+      "myfxbook_positioning": {
+        "status": "UNAVAILABLE"
+      },
+      "asian_risk_context": {
+        "status": "DATED_DAILY_CONTEXT",
+        "note": "General risk backdrop; not an FX trade signal"
+      },
+      "asian_risk_directional_note": "Not a direct directional driver",
+      "macro_confirmed": false,
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -3055,7 +3044,7 @@
     }
   ],
   "fully_macro_verified": false,
-  "unified_signal_generated_at_utc": "2026-11-03T06:19:18.933558+00:00",
+  "unified_signal_generated_at_utc": "2026-11-03T07:04:04.598629+00:00",
   "no_mobile_alerts": true,
   "options_layer": "REMOVED_AT_USER_REQUEST",
   "calendar_first_rule": "Every pair MUST display all upcoming events for both currencies in next 24 hours, regardless of impact. IMMINENT within 120 minutes prevents a normal entry signal; include forecasts and previous values. Do not infer releases from missing actuals.",
@@ -3069,6 +3058,7 @@
     "dxy_equities_sentiment",
     "cme_volume_open_interest",
     "retail_positioning",
+    "closed_15m30m_direction",
     "atr_adr_session_levels",
     "independent_live_spreads"
   ],
