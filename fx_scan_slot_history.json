@@ -1,36 +1,6 @@
 {
-  "generated_at_utc": "2026-11-05T16:37:28.059549+00:00",
+  "generated_at_utc": "2026-11-05T16:47:42.453249+00:00",
   "slots": [
-    {
-      "schema_version": 1,
-      "scheduled_for_utc": "2026-11-01T13:32:00+00:00",
-      "expected_candle_close_utc": "2026-11-01T13:30:00+00:00",
-      "started_at_utc": "2026-11-01T13:37:52.263878+00:00",
-      "status": "MARKET_CLOSED",
-      "attempts": 0,
-      "observations": [],
-      "expected_closes": {},
-      "observed_closes": {},
-      "validated_pairs": 0,
-      "signal_publication_allowed": false,
-      "no_trades": true,
-      "timing_basis": "EXACT_UTC_15M_SLOT",
-      "trigger_event": "schedule",
-      "is_scheduled_trigger": true,
-      "scan_trigger_type": "primary_or_manual",
-      "actual_start_delay_seconds": 352.264,
-      "recorded_at_utc": "2026-11-01T13:37:52.327349+00:00",
-      "commit_at_utc": "NOT_YET_VERIFIED_AT_RECORD_TIME",
-      "previous_attempts_for_slot": [
-        {
-          "started_at_utc": "2026-11-01T13:33:50.701827+00:00",
-          "status": "MARKET_CLOSED",
-          "trigger_event": "schedule",
-          "scan_trigger_type": "backup",
-          "missing": []
-        }
-      ]
-    },
     {
       "schema_version": 1,
       "scheduled_for_utc": "2026-11-01T14:02:00+00:00",
@@ -9051,6 +9021,97 @@
       "scan_trigger_type": "backup",
       "actual_start_delay_seconds": 328.012,
       "recorded_at_utc": "2026-11-05T16:37:28.058179+00:00",
+      "commit_at_utc": "NOT_YET_VERIFIED_AT_RECORD_TIME"
+    },
+    {
+      "schema_version": 1,
+      "scheduled_for_utc": "2026-11-05T16:47:00+00:00",
+      "expected_candle_close_utc": "2026-11-05T16:45:00+00:00",
+      "started_at_utc": "2026-11-05T16:47:29.367642+00:00",
+      "status": "FULL_REPORT_EXACT_CANDLES_VERIFIED",
+      "attempts": 1,
+      "observations": [
+        {
+          "checked_at_utc": "2026-11-05T16:47:30.448744+00:00",
+          "status": "PASS_EXACT_CLOSED_M15_M30_H1",
+          "first_missing": []
+        }
+      ],
+      "expected_closes": {
+        "M15": "2026-11-05T16:45:00+00:00",
+        "M30": "2026-11-05T16:30:00+00:00",
+        "H1": "2026-11-05T16:00:00+00:00"
+      },
+      "observed_closes": {
+        "AUDUSD": {
+          "M15": "2026-11-05T16:45:00+00:00",
+          "M30": "2026-11-05T16:30:00+00:00",
+          "H1": "2026-11-05T16:00:00+00:00"
+        },
+        "NZDUSD": {
+          "M15": "2026-11-05T16:45:00+00:00",
+          "M30": "2026-11-05T16:30:00+00:00",
+          "H1": "2026-11-05T16:00:00+00:00"
+        },
+        "EURUSD": {
+          "M15": "2026-11-05T16:45:00+00:00",
+          "M30": "2026-11-05T16:30:00+00:00",
+          "H1": "2026-11-05T16:00:00+00:00"
+        },
+        "GBPUSD": {
+          "M15": "2026-11-05T16:45:00+00:00",
+          "M30": "2026-11-05T16:30:00+00:00",
+          "H1": "2026-11-05T16:00:00+00:00"
+        },
+        "USDJPY": {
+          "M15": "2026-11-05T16:45:00+00:00",
+          "M30": "2026-11-05T16:30:00+00:00",
+          "H1": "2026-11-05T16:00:00+00:00"
+        },
+        "AUDJPY": {
+          "M15": "2026-11-05T16:45:00+00:00",
+          "M30": "2026-11-05T16:30:00+00:00",
+          "H1": "2026-11-05T16:00:00+00:00"
+        },
+        "NZDJPY": {
+          "M15": "2026-11-05T16:45:00+00:00",
+          "M30": "2026-11-05T16:30:00+00:00",
+          "H1": "2026-11-05T16:00:00+00:00"
+        },
+        "EURJPY": {
+          "M15": "2026-11-05T16:45:00+00:00",
+          "M30": "2026-11-05T16:30:00+00:00",
+          "H1": "2026-11-05T16:00:00+00:00"
+        },
+        "EURCAD": {
+          "M15": "2026-11-05T16:45:00+00:00",
+          "M30": "2026-11-05T16:30:00+00:00",
+          "H1": "2026-11-05T16:00:00+00:00"
+        },
+        "USDCAD": {
+          "M15": "2026-11-05T16:45:00+00:00",
+          "M30": "2026-11-05T16:30:00+00:00",
+          "H1": "2026-11-05T16:00:00+00:00"
+        },
+        "EURGBP": {
+          "M15": "2026-11-05T16:45:00+00:00",
+          "M30": "2026-11-05T16:30:00+00:00",
+          "H1": "2026-11-05T16:00:00+00:00"
+        }
+      },
+      "validated_pairs": 11,
+      "signal_publication_allowed": true,
+      "no_trades": true,
+      "timing_basis": "EXACT_UTC_15M_SLOT",
+      "trigger_event": "schedule",
+      "is_scheduled_trigger": true,
+      "scan_trigger_type": "primary_or_manual",
+      "actual_start_delay_seconds": 29.368,
+      "source_collected_at_utc": "2026-11-05T16:47:30.384528+00:00",
+      "server_offset_seconds": 7200,
+      "full_report_verified_at_utc": "2026-11-05T16:47:42.407991+00:00",
+      "unified_generated_at_utc": "2026-11-05T16:47:41.933264+00:00",
+      "recorded_at_utc": "2026-11-05T16:47:42.451422+00:00",
       "commit_at_utc": "NOT_YET_VERIFIED_AT_RECORD_TIME"
     }
   ],
