@@ -1,26 +1,26 @@
 {
-  "generated_at_utc": "2026-11-06T07:50:49.921838+00:00",
+  "generated_at_utc": "2026-11-06T08:42:21.655944+00:00",
   "purpose": "FULL_SOURCE_AUDIT_NOT_EXECUTABLE_TRADE_ORDERS",
   "sources": {
     "technicals": {
-      "status": "FRESH",
-      "age_minutes": 2.7
+      "status": "STALE",
+      "age_minutes": 54.2
     },
     "dashboard": {
-      "status": "FRESH",
-      "age_minutes": 2.6
+      "status": "STALE",
+      "age_minutes": 54.1
     },
     "calendar": {
       "status": "FRESH",
-      "age_minutes": 38.5
+      "age_minutes": 90.1
     },
     "ff_markets": {
       "status": "STALE",
-      "age_minutes": 72.2
+      "age_minutes": 44.2
     },
     "volatility": {
-      "status": "FRESH",
-      "age_minutes": 2.7
+      "status": "STALE",
+      "age_minutes": 54.2
     },
     "kospi_te_public_page": {
       "status": "DATED_DAILY_CONTEXT",
@@ -30,31 +30,31 @@
     },
     "macro_snapshot": {
       "status": "STALE",
-      "age_minutes": 29272.0
+      "age_minutes": 29323.6
     },
     "macro_raw": {
       "status": "STALE",
-      "age_minutes": 29272.0
+      "age_minutes": 29323.6
     },
     "macro_news": {
       "status": "STALE",
-      "age_minutes": 29272.0
+      "age_minutes": 29323.6
     },
     "unified_signals": {
-      "status": "FRESH",
-      "age_minutes": 2.5
+      "status": "STALE",
+      "age_minutes": 54.0
     },
     "economic_actuals": {
       "status": "STALE",
-      "age_minutes": 29272.1
+      "age_minutes": 29323.7
     },
     "range_context": {
       "status": "STALE",
-      "age_minutes": 29272.0
+      "age_minutes": 29323.6
     },
     "retail": {
       "status": "STALE",
-      "age_minutes": 29272.0
+      "age_minutes": 29323.6
     }
   },
   "macro_layers": {
@@ -70,7 +70,7 @@
     "cme_volume_open_interest": "PARTIAL_CFTC_WEEKLY_OI_CME_DAILY_DATA_UNVERIFIED",
     "retail_positioning": "UNAVAILABLE_CURRENT",
     "currency_strength_clusters": "DERIVED_FROM_11_FX_PAIRS",
-    "closed_15m30m_direction": "FRESH_TECHNICAL_WATCH_NOT_BROKER_EXECUTION",
+    "closed_15m30m_direction": "STALE_OR_UNAVAILABLE",
     "atr_adr_session_levels": "PARTIAL_LEGACY_ATR_LEVELS",
     "independent_live_spreads": "UNAVAILABLE_BROKER_EXECUTABLE_QUOTE",
     "signal_history": "VERIFIED_RECORDED_SIGNAL_OBSERVATIONS",
@@ -79,8 +79,8 @@
   "asian_risk_context": {
     "source": "Trading Economics public KOSPI page (no key)",
     "status": "DATED_DAILY_CONTEXT",
-    "daily_reference_change_pct": -5.26,
-    "daily_reference_level": 5101.0,
+    "daily_reference_change_pct": -6.02,
+    "daily_reference_level": 5060.0,
     "reference_date_kst": "2026-11-06",
     "risk_tier": "SEVERE_DAILY_RISK_OFF",
     "dated_news_headline": "South Korean Shares Tumbles as AI Fears Trigger Trading Halt",
@@ -93,16 +93,16 @@
   "pairs": [
     {
       "pair": "AUDUSD",
-      "technical_direction": "SELL",
-      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "SELL",
+      "technical_direction": "NO_RANKED_CANDIDATE",
+      "technical_stage": "UNRANKED",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
@@ -118,7 +118,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 99,
+          "minutes_until": 48,
           "time_status": "IMMINENT"
         },
         {
@@ -129,7 +129,7 @@
           "forecast": "0.3%",
           "previous": "0.1%",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -140,7 +140,7 @@
           "forecast": "65K",
           "previous": "29K",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -151,7 +151,7 @@
           "forecast": "4.2%",
           "previous": "4.2%",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -162,7 +162,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 379,
+          "minutes_until": 328,
           "time_status": "UPCOMING"
         },
         {
@@ -173,7 +173,7 @@
           "forecast": "48.1",
           "previous": "46.3",
           "actual": null,
-          "minutes_until": 429,
+          "minutes_until": 378,
           "time_status": "UPCOMING"
         },
         {
@@ -184,7 +184,7 @@
           "forecast": "",
           "previous": "4.7%",
           "actual": null,
-          "minutes_until": 429,
+          "minutes_until": 378,
           "time_status": "UPCOMING"
         },
         {
@@ -195,7 +195,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 564,
+          "minutes_until": 513,
           "time_status": "UPCOMING"
         },
         {
@@ -206,7 +206,7 @@
           "forecast": "13.4B",
           "previous": "8.3B",
           "actual": null,
-          "minutes_until": 729,
+          "minutes_until": 678,
           "time_status": "UPCOMING"
         }
       ],
@@ -219,7 +219,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 99,
+          "minutes_until": 48,
           "time_status": "IMMINENT"
         },
         {
@@ -230,7 +230,7 @@
           "forecast": "0.3%",
           "previous": "0.1%",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -241,7 +241,7 @@
           "forecast": "65K",
           "previous": "29K",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -252,7 +252,7 @@
           "forecast": "4.2%",
           "previous": "4.2%",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -263,7 +263,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 379,
+          "minutes_until": 328,
           "time_status": "UPCOMING"
         },
         {
@@ -274,7 +274,7 @@
           "forecast": "48.1",
           "previous": "46.3",
           "actual": null,
-          "minutes_until": 429,
+          "minutes_until": 378,
           "time_status": "UPCOMING"
         },
         {
@@ -285,7 +285,7 @@
           "forecast": "",
           "previous": "4.7%",
           "actual": null,
-          "minutes_until": 429,
+          "minutes_until": 378,
           "time_status": "UPCOMING"
         },
         {
@@ -296,7 +296,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 564,
+          "minutes_until": 513,
           "time_status": "UPCOMING"
         },
         {
@@ -307,7 +307,7 @@
           "forecast": "13.4B",
           "previous": "8.3B",
           "actual": null,
-          "minutes_until": 729,
+          "minutes_until": 678,
           "time_status": "UPCOMING"
         }
       ],
@@ -320,7 +320,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 99,
+          "minutes_until": 48,
           "time_status": "IMMINENT"
         }
       ],
@@ -328,20 +328,13 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
         "status": "DATED_DAILY_CONTEXT",
-        "daily_reference_change_pct": -5.26,
-        "daily_reference_level": 5101.0,
+        "daily_reference_change_pct": -6.02,
+        "daily_reference_level": 5060.0,
         "reference_date_kst": "2026-11-06",
         "risk_tier": "SEVERE_DAILY_RISK_OFF",
         "dated_news_headline": "South Korean Shares Tumbles as AI Fears Trigger Trading Halt",
@@ -352,7 +345,7 @@
       },
       "asian_risk_directional_note": "Asian equity risk may affect AUD/NZD, but FX must confirm",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -362,14 +355,14 @@
       "pair": "NZDUSD",
       "technical_direction": "SELL",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "SELL",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
@@ -385,7 +378,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 99,
+          "minutes_until": 48,
           "time_status": "IMMINENT"
         },
         {
@@ -396,7 +389,7 @@
           "forecast": "0.3%",
           "previous": "0.1%",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -407,7 +400,7 @@
           "forecast": "65K",
           "previous": "29K",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -418,7 +411,7 @@
           "forecast": "4.2%",
           "previous": "4.2%",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -429,7 +422,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 379,
+          "minutes_until": 328,
           "time_status": "UPCOMING"
         },
         {
@@ -440,7 +433,7 @@
           "forecast": "48.1",
           "previous": "46.3",
           "actual": null,
-          "minutes_until": 429,
+          "minutes_until": 378,
           "time_status": "UPCOMING"
         },
         {
@@ -451,7 +444,7 @@
           "forecast": "",
           "previous": "4.7%",
           "actual": null,
-          "minutes_until": 429,
+          "minutes_until": 378,
           "time_status": "UPCOMING"
         },
         {
@@ -462,7 +455,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 564,
+          "minutes_until": 513,
           "time_status": "UPCOMING"
         },
         {
@@ -473,7 +466,7 @@
           "forecast": "13.4B",
           "previous": "8.3B",
           "actual": null,
-          "minutes_until": 729,
+          "minutes_until": 678,
           "time_status": "UPCOMING"
         },
         {
@@ -484,7 +477,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 834,
+          "minutes_until": 783,
           "time_status": "UPCOMING"
         }
       ],
@@ -497,7 +490,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 99,
+          "minutes_until": 48,
           "time_status": "IMMINENT"
         },
         {
@@ -508,7 +501,7 @@
           "forecast": "0.3%",
           "previous": "0.1%",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -519,7 +512,7 @@
           "forecast": "65K",
           "previous": "29K",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -530,7 +523,7 @@
           "forecast": "4.2%",
           "previous": "4.2%",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -541,7 +534,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 379,
+          "minutes_until": 328,
           "time_status": "UPCOMING"
         },
         {
@@ -552,7 +545,7 @@
           "forecast": "48.1",
           "previous": "46.3",
           "actual": null,
-          "minutes_until": 429,
+          "minutes_until": 378,
           "time_status": "UPCOMING"
         },
         {
@@ -563,7 +556,7 @@
           "forecast": "",
           "previous": "4.7%",
           "actual": null,
-          "minutes_until": 429,
+          "minutes_until": 378,
           "time_status": "UPCOMING"
         },
         {
@@ -574,7 +567,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 564,
+          "minutes_until": 513,
           "time_status": "UPCOMING"
         },
         {
@@ -585,7 +578,7 @@
           "forecast": "13.4B",
           "previous": "8.3B",
           "actual": null,
-          "minutes_until": 729,
+          "minutes_until": 678,
           "time_status": "UPCOMING"
         },
         {
@@ -596,7 +589,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 834,
+          "minutes_until": 783,
           "time_status": "UPCOMING"
         }
       ],
@@ -609,7 +602,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 99,
+          "minutes_until": 48,
           "time_status": "IMMINENT"
         }
       ],
@@ -617,20 +610,13 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
         "status": "DATED_DAILY_CONTEXT",
-        "daily_reference_change_pct": -5.26,
-        "daily_reference_level": 5101.0,
+        "daily_reference_change_pct": -6.02,
+        "daily_reference_level": 5060.0,
         "reference_date_kst": "2026-11-06",
         "risk_tier": "SEVERE_DAILY_RISK_OFF",
         "dated_news_headline": "South Korean Shares Tumbles as AI Fears Trigger Trading Halt",
@@ -641,7 +627,7 @@
       },
       "asian_risk_directional_note": "Asian equity risk may affect AUD/NZD, but FX must confirm",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -651,14 +637,14 @@
       "pair": "EURUSD",
       "technical_direction": "SELL",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "SELL",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
@@ -667,17 +653,6 @@
       "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
         {
-          "title": "French Trade Balance",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-06T02:45:00-05:00",
-          "forecast": "-5.8B",
-          "previous": "-6.1B",
-          "actual": null,
-          "minutes_until": -6,
-          "time_status": "IMMINENT"
-        },
-        {
           "title": "FOMC Member Williams Speaks",
           "currency": "USD",
           "impact": "Low",
@@ -685,7 +660,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 99,
+          "minutes_until": 48,
           "time_status": "IMMINENT"
         },
         {
@@ -696,8 +671,8 @@
           "forecast": "-0.1%",
           "previous": "0.1%",
           "actual": null,
-          "minutes_until": 129,
-          "time_status": "UPCOMING"
+          "minutes_until": 78,
+          "time_status": "IMMINENT"
         },
         {
           "title": "Average Hourly Earnings m/m",
@@ -707,7 +682,7 @@
           "forecast": "0.3%",
           "previous": "0.1%",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -718,7 +693,7 @@
           "forecast": "65K",
           "previous": "29K",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -729,7 +704,7 @@
           "forecast": "4.2%",
           "previous": "4.2%",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -740,7 +715,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 379,
+          "minutes_until": 328,
           "time_status": "UPCOMING"
         },
         {
@@ -751,7 +726,7 @@
           "forecast": "48.1",
           "previous": "46.3",
           "actual": null,
-          "minutes_until": 429,
+          "minutes_until": 378,
           "time_status": "UPCOMING"
         },
         {
@@ -762,7 +737,7 @@
           "forecast": "",
           "previous": "4.7%",
           "actual": null,
-          "minutes_until": 429,
+          "minutes_until": 378,
           "time_status": "UPCOMING"
         },
         {
@@ -773,7 +748,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 564,
+          "minutes_until": 513,
           "time_status": "UPCOMING"
         },
         {
@@ -784,7 +759,7 @@
           "forecast": "13.4B",
           "previous": "8.3B",
           "actual": null,
-          "minutes_until": 729,
+          "minutes_until": 678,
           "time_status": "UPCOMING"
         }
       ],
@@ -797,7 +772,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 99,
+          "minutes_until": 48,
           "time_status": "IMMINENT"
         },
         {
@@ -808,8 +783,8 @@
           "forecast": "-0.1%",
           "previous": "0.1%",
           "actual": null,
-          "minutes_until": 129,
-          "time_status": "UPCOMING"
+          "minutes_until": 78,
+          "time_status": "IMMINENT"
         },
         {
           "title": "Average Hourly Earnings m/m",
@@ -819,7 +794,7 @@
           "forecast": "0.3%",
           "previous": "0.1%",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -830,7 +805,7 @@
           "forecast": "65K",
           "previous": "29K",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -841,7 +816,7 @@
           "forecast": "4.2%",
           "previous": "4.2%",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -852,7 +827,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 379,
+          "minutes_until": 328,
           "time_status": "UPCOMING"
         },
         {
@@ -863,7 +838,7 @@
           "forecast": "48.1",
           "previous": "46.3",
           "actual": null,
-          "minutes_until": 429,
+          "minutes_until": 378,
           "time_status": "UPCOMING"
         },
         {
@@ -874,7 +849,7 @@
           "forecast": "",
           "previous": "4.7%",
           "actual": null,
-          "minutes_until": 429,
+          "minutes_until": 378,
           "time_status": "UPCOMING"
         },
         {
@@ -885,7 +860,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 564,
+          "minutes_until": 513,
           "time_status": "UPCOMING"
         },
         {
@@ -896,22 +871,11 @@
           "forecast": "13.4B",
           "previous": "8.3B",
           "actual": null,
-          "minutes_until": 729,
+          "minutes_until": 678,
           "time_status": "UPCOMING"
         }
       ],
       "imminent_events": [
-        {
-          "title": "French Trade Balance",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-06T02:45:00-05:00",
-          "forecast": "-5.8B",
-          "previous": "-6.1B",
-          "actual": null,
-          "minutes_until": -6,
-          "time_status": "IMMINENT"
-        },
         {
           "title": "FOMC Member Williams Speaks",
           "currency": "USD",
@@ -920,7 +884,18 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 99,
+          "minutes_until": 48,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "Retail Sales m/m",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-06T05:00:00-05:00",
+          "forecast": "-0.1%",
+          "previous": "0.1%",
+          "actual": null,
+          "minutes_until": 78,
           "time_status": "IMMINENT"
         }
       ],
@@ -928,14 +903,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -943,7 +911,7 @@
       },
       "asian_risk_directional_note": "Not a direct directional driver",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -953,14 +921,14 @@
       "pair": "GBPUSD",
       "technical_direction": "SELL",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "SELL",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
@@ -976,7 +944,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 99,
+          "minutes_until": 48,
           "time_status": "IMMINENT"
         },
         {
@@ -987,7 +955,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 264,
+          "minutes_until": 213,
           "time_status": "UPCOMING"
         },
         {
@@ -998,7 +966,7 @@
           "forecast": "0.3%",
           "previous": "0.1%",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -1009,7 +977,7 @@
           "forecast": "65K",
           "previous": "29K",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -1020,7 +988,7 @@
           "forecast": "4.2%",
           "previous": "4.2%",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -1031,7 +999,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 379,
+          "minutes_until": 328,
           "time_status": "UPCOMING"
         },
         {
@@ -1042,7 +1010,7 @@
           "forecast": "48.1",
           "previous": "46.3",
           "actual": null,
-          "minutes_until": 429,
+          "minutes_until": 378,
           "time_status": "UPCOMING"
         },
         {
@@ -1053,7 +1021,7 @@
           "forecast": "",
           "previous": "4.7%",
           "actual": null,
-          "minutes_until": 429,
+          "minutes_until": 378,
           "time_status": "UPCOMING"
         },
         {
@@ -1064,7 +1032,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 564,
+          "minutes_until": 513,
           "time_status": "UPCOMING"
         },
         {
@@ -1075,7 +1043,7 @@
           "forecast": "13.4B",
           "previous": "8.3B",
           "actual": null,
-          "minutes_until": 729,
+          "minutes_until": 678,
           "time_status": "UPCOMING"
         }
       ],
@@ -1088,7 +1056,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 99,
+          "minutes_until": 48,
           "time_status": "IMMINENT"
         },
         {
@@ -1099,7 +1067,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 264,
+          "minutes_until": 213,
           "time_status": "UPCOMING"
         },
         {
@@ -1110,7 +1078,7 @@
           "forecast": "0.3%",
           "previous": "0.1%",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -1121,7 +1089,7 @@
           "forecast": "65K",
           "previous": "29K",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -1132,7 +1100,7 @@
           "forecast": "4.2%",
           "previous": "4.2%",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -1143,7 +1111,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 379,
+          "minutes_until": 328,
           "time_status": "UPCOMING"
         },
         {
@@ -1154,7 +1122,7 @@
           "forecast": "48.1",
           "previous": "46.3",
           "actual": null,
-          "minutes_until": 429,
+          "minutes_until": 378,
           "time_status": "UPCOMING"
         },
         {
@@ -1165,7 +1133,7 @@
           "forecast": "",
           "previous": "4.7%",
           "actual": null,
-          "minutes_until": 429,
+          "minutes_until": 378,
           "time_status": "UPCOMING"
         },
         {
@@ -1176,7 +1144,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 564,
+          "minutes_until": 513,
           "time_status": "UPCOMING"
         },
         {
@@ -1187,7 +1155,7 @@
           "forecast": "13.4B",
           "previous": "8.3B",
           "actual": null,
-          "minutes_until": 729,
+          "minutes_until": 678,
           "time_status": "UPCOMING"
         }
       ],
@@ -1200,7 +1168,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 99,
+          "minutes_until": 48,
           "time_status": "IMMINENT"
         }
       ],
@@ -1208,14 +1176,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -1223,7 +1184,7 @@
       },
       "asian_risk_directional_note": "Not a direct directional driver",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -1231,16 +1192,16 @@
     },
     {
       "pair": "USDJPY",
-      "technical_direction": "SELL",
-      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "SELL",
+      "technical_direction": "NO_RANKED_CANDIDATE",
+      "technical_stage": "UNRANKED",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
@@ -1256,7 +1217,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 99,
+          "minutes_until": 48,
           "time_status": "IMMINENT"
         },
         {
@@ -1267,7 +1228,7 @@
           "forecast": "0.3%",
           "previous": "0.1%",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -1278,7 +1239,7 @@
           "forecast": "65K",
           "previous": "29K",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -1289,7 +1250,7 @@
           "forecast": "4.2%",
           "previous": "4.2%",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -1300,7 +1261,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 379,
+          "minutes_until": 328,
           "time_status": "UPCOMING"
         },
         {
@@ -1311,7 +1272,7 @@
           "forecast": "48.1",
           "previous": "46.3",
           "actual": null,
-          "minutes_until": 429,
+          "minutes_until": 378,
           "time_status": "UPCOMING"
         },
         {
@@ -1322,7 +1283,7 @@
           "forecast": "",
           "previous": "4.7%",
           "actual": null,
-          "minutes_until": 429,
+          "minutes_until": 378,
           "time_status": "UPCOMING"
         },
         {
@@ -1333,7 +1294,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 489,
+          "minutes_until": 438,
           "time_status": "UPCOMING"
         },
         {
@@ -1344,7 +1305,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 564,
+          "minutes_until": 513,
           "time_status": "UPCOMING"
         },
         {
@@ -1355,7 +1316,7 @@
           "forecast": "13.4B",
           "previous": "8.3B",
           "actual": null,
-          "minutes_until": 729,
+          "minutes_until": 678,
           "time_status": "UPCOMING"
         }
       ],
@@ -1368,7 +1329,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 99,
+          "minutes_until": 48,
           "time_status": "IMMINENT"
         },
         {
@@ -1379,7 +1340,7 @@
           "forecast": "0.3%",
           "previous": "0.1%",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -1390,7 +1351,7 @@
           "forecast": "65K",
           "previous": "29K",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -1401,7 +1362,7 @@
           "forecast": "4.2%",
           "previous": "4.2%",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -1412,7 +1373,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 379,
+          "minutes_until": 328,
           "time_status": "UPCOMING"
         },
         {
@@ -1423,7 +1384,7 @@
           "forecast": "48.1",
           "previous": "46.3",
           "actual": null,
-          "minutes_until": 429,
+          "minutes_until": 378,
           "time_status": "UPCOMING"
         },
         {
@@ -1434,7 +1395,7 @@
           "forecast": "",
           "previous": "4.7%",
           "actual": null,
-          "minutes_until": 429,
+          "minutes_until": 378,
           "time_status": "UPCOMING"
         },
         {
@@ -1445,7 +1406,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 489,
+          "minutes_until": 438,
           "time_status": "UPCOMING"
         },
         {
@@ -1456,7 +1417,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 564,
+          "minutes_until": 513,
           "time_status": "UPCOMING"
         },
         {
@@ -1467,7 +1428,7 @@
           "forecast": "13.4B",
           "previous": "8.3B",
           "actual": null,
-          "minutes_until": 729,
+          "minutes_until": 678,
           "time_status": "UPCOMING"
         }
       ],
@@ -1480,7 +1441,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 99,
+          "minutes_until": 48,
           "time_status": "IMMINENT"
         }
       ],
@@ -1488,20 +1449,13 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
         "status": "DATED_DAILY_CONTEXT",
-        "daily_reference_change_pct": -5.26,
-        "daily_reference_level": 5101.0,
+        "daily_reference_change_pct": -6.02,
+        "daily_reference_level": 5060.0,
         "reference_date_kst": "2026-11-06",
         "risk_tier": "SEVERE_DAILY_RISK_OFF",
         "dated_news_headline": "South Korean Shares Tumbles as AI Fears Trigger Trading Halt",
@@ -1512,7 +1466,7 @@
       },
       "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -1520,16 +1474,16 @@
     },
     {
       "pair": "AUDJPY",
-      "technical_direction": "SELL",
-      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "SELL",
+      "technical_direction": "NO_RANKED_CANDIDATE",
+      "technical_stage": "UNRANKED",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
@@ -1545,7 +1499,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 489,
+          "minutes_until": 438,
           "time_status": "UPCOMING"
         }
       ],
@@ -1558,7 +1512,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 489,
+          "minutes_until": 438,
           "time_status": "UPCOMING"
         }
       ],
@@ -1567,20 +1521,13 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
         "status": "DATED_DAILY_CONTEXT",
-        "daily_reference_change_pct": -5.26,
-        "daily_reference_level": 5101.0,
+        "daily_reference_change_pct": -6.02,
+        "daily_reference_level": 5060.0,
         "reference_date_kst": "2026-11-06",
         "risk_tier": "SEVERE_DAILY_RISK_OFF",
         "dated_news_headline": "South Korean Shares Tumbles as AI Fears Trigger Trading Halt",
@@ -1591,7 +1538,7 @@
       },
       "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -1599,16 +1546,16 @@
     },
     {
       "pair": "NZDJPY",
-      "technical_direction": "SELL",
-      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "SELL",
+      "technical_direction": "NO_RANKED_CANDIDATE",
+      "technical_stage": "UNRANKED",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
@@ -1624,7 +1571,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 489,
+          "minutes_until": 438,
           "time_status": "UPCOMING"
         },
         {
@@ -1635,7 +1582,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 834,
+          "minutes_until": 783,
           "time_status": "UPCOMING"
         }
       ],
@@ -1648,7 +1595,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 489,
+          "minutes_until": 438,
           "time_status": "UPCOMING"
         },
         {
@@ -1659,7 +1606,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 834,
+          "minutes_until": 783,
           "time_status": "UPCOMING"
         }
       ],
@@ -1668,20 +1615,13 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
         "status": "DATED_DAILY_CONTEXT",
-        "daily_reference_change_pct": -5.26,
-        "daily_reference_level": 5101.0,
+        "daily_reference_change_pct": -6.02,
+        "daily_reference_level": 5060.0,
         "reference_date_kst": "2026-11-06",
         "risk_tier": "SEVERE_DAILY_RISK_OFF",
         "dated_news_headline": "South Korean Shares Tumbles as AI Fears Trigger Trading Halt",
@@ -1692,7 +1632,7 @@
       },
       "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -1700,16 +1640,16 @@
     },
     {
       "pair": "EURJPY",
-      "technical_direction": "SELL",
-      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "SELL",
+      "technical_direction": "NO_RANKED_CANDIDATE",
+      "technical_stage": "UNRANKED",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
@@ -1718,17 +1658,6 @@
       "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
         {
-          "title": "French Trade Balance",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-06T02:45:00-05:00",
-          "forecast": "-5.8B",
-          "previous": "-6.1B",
-          "actual": null,
-          "minutes_until": -6,
-          "time_status": "IMMINENT"
-        },
-        {
           "title": "Retail Sales m/m",
           "currency": "EUR",
           "impact": "Low",
@@ -1736,8 +1665,8 @@
           "forecast": "-0.1%",
           "previous": "0.1%",
           "actual": null,
-          "minutes_until": 129,
-          "time_status": "UPCOMING"
+          "minutes_until": 78,
+          "time_status": "IMMINENT"
         },
         {
           "title": "BOJ Gov Ueda Speaks",
@@ -1747,7 +1676,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 489,
+          "minutes_until": 438,
           "time_status": "UPCOMING"
         }
       ],
@@ -1760,8 +1689,8 @@
           "forecast": "-0.1%",
           "previous": "0.1%",
           "actual": null,
-          "minutes_until": 129,
-          "time_status": "UPCOMING"
+          "minutes_until": 78,
+          "time_status": "IMMINENT"
         },
         {
           "title": "BOJ Gov Ueda Speaks",
@@ -1771,20 +1700,20 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 489,
+          "minutes_until": 438,
           "time_status": "UPCOMING"
         }
       ],
       "imminent_events": [
         {
-          "title": "French Trade Balance",
+          "title": "Retail Sales m/m",
           "currency": "EUR",
           "impact": "Low",
-          "event_at_et": "2026-11-06T02:45:00-05:00",
-          "forecast": "-5.8B",
-          "previous": "-6.1B",
+          "event_at_et": "2026-11-06T05:00:00-05:00",
+          "forecast": "-0.1%",
+          "previous": "0.1%",
           "actual": null,
-          "minutes_until": -6,
+          "minutes_until": 78,
           "time_status": "IMMINENT"
         }
       ],
@@ -1792,20 +1721,13 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
         "status": "DATED_DAILY_CONTEXT",
-        "daily_reference_change_pct": -5.26,
-        "daily_reference_level": 5101.0,
+        "daily_reference_change_pct": -6.02,
+        "daily_reference_level": 5060.0,
         "reference_date_kst": "2026-11-06",
         "risk_tier": "SEVERE_DAILY_RISK_OFF",
         "dated_news_headline": "South Korean Shares Tumbles as AI Fears Trigger Trading Halt",
@@ -1816,7 +1738,7 @@
       },
       "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -1826,14 +1748,14 @@
       "pair": "EURCAD",
       "technical_direction": "SELL",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "SELL",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "MIXED",
@@ -1842,17 +1764,6 @@
       "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
         {
-          "title": "French Trade Balance",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-06T02:45:00-05:00",
-          "forecast": "-5.8B",
-          "previous": "-6.1B",
-          "actual": null,
-          "minutes_until": -6,
-          "time_status": "IMMINENT"
-        },
-        {
           "title": "Retail Sales m/m",
           "currency": "EUR",
           "impact": "Low",
@@ -1860,8 +1771,8 @@
           "forecast": "-0.1%",
           "previous": "0.1%",
           "actual": null,
-          "minutes_until": 129,
-          "time_status": "UPCOMING"
+          "minutes_until": 78,
+          "time_status": "IMMINENT"
         },
         {
           "title": "Employment Change",
@@ -1871,7 +1782,7 @@
           "forecast": "14.6K",
           "previous": "-68.3K",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -1882,7 +1793,7 @@
           "forecast": "6.5%",
           "previous": "6.5%",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -1893,7 +1804,7 @@
           "forecast": "57.7",
           "previous": "58.2",
           "actual": null,
-          "minutes_until": 429,
+          "minutes_until": 378,
           "time_status": "UPCOMING"
         }
       ],
@@ -1906,8 +1817,8 @@
           "forecast": "-0.1%",
           "previous": "0.1%",
           "actual": null,
-          "minutes_until": 129,
-          "time_status": "UPCOMING"
+          "minutes_until": 78,
+          "time_status": "IMMINENT"
         },
         {
           "title": "Employment Change",
@@ -1917,7 +1828,7 @@
           "forecast": "14.6K",
           "previous": "-68.3K",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -1928,7 +1839,7 @@
           "forecast": "6.5%",
           "previous": "6.5%",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -1939,20 +1850,20 @@
           "forecast": "57.7",
           "previous": "58.2",
           "actual": null,
-          "minutes_until": 429,
+          "minutes_until": 378,
           "time_status": "UPCOMING"
         }
       ],
       "imminent_events": [
         {
-          "title": "French Trade Balance",
+          "title": "Retail Sales m/m",
           "currency": "EUR",
           "impact": "Low",
-          "event_at_et": "2026-11-06T02:45:00-05:00",
-          "forecast": "-5.8B",
-          "previous": "-6.1B",
+          "event_at_et": "2026-11-06T05:00:00-05:00",
+          "forecast": "-0.1%",
+          "previous": "0.1%",
           "actual": null,
-          "minutes_until": -6,
+          "minutes_until": 78,
           "time_status": "IMMINENT"
         }
       ],
@@ -1960,14 +1871,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -1975,7 +1879,7 @@
       },
       "asian_risk_directional_note": "Not a direct directional driver",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -1985,14 +1889,14 @@
       "pair": "USDCAD",
       "technical_direction": "BUY",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "BUY",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "ABOVE_BOTH",
@@ -2008,7 +1912,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 99,
+          "minutes_until": 48,
           "time_status": "IMMINENT"
         },
         {
@@ -2019,7 +1923,7 @@
           "forecast": "14.6K",
           "previous": "-68.3K",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -2030,7 +1934,7 @@
           "forecast": "6.5%",
           "previous": "6.5%",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -2041,7 +1945,7 @@
           "forecast": "0.3%",
           "previous": "0.1%",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -2052,7 +1956,7 @@
           "forecast": "65K",
           "previous": "29K",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -2063,7 +1967,7 @@
           "forecast": "4.2%",
           "previous": "4.2%",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -2074,7 +1978,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 379,
+          "minutes_until": 328,
           "time_status": "UPCOMING"
         },
         {
@@ -2085,7 +1989,7 @@
           "forecast": "57.7",
           "previous": "58.2",
           "actual": null,
-          "minutes_until": 429,
+          "minutes_until": 378,
           "time_status": "UPCOMING"
         },
         {
@@ -2096,7 +2000,7 @@
           "forecast": "48.1",
           "previous": "46.3",
           "actual": null,
-          "minutes_until": 429,
+          "minutes_until": 378,
           "time_status": "UPCOMING"
         },
         {
@@ -2107,7 +2011,7 @@
           "forecast": "",
           "previous": "4.7%",
           "actual": null,
-          "minutes_until": 429,
+          "minutes_until": 378,
           "time_status": "UPCOMING"
         },
         {
@@ -2118,7 +2022,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 564,
+          "minutes_until": 513,
           "time_status": "UPCOMING"
         },
         {
@@ -2129,7 +2033,7 @@
           "forecast": "13.4B",
           "previous": "8.3B",
           "actual": null,
-          "minutes_until": 729,
+          "minutes_until": 678,
           "time_status": "UPCOMING"
         }
       ],
@@ -2142,7 +2046,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 99,
+          "minutes_until": 48,
           "time_status": "IMMINENT"
         },
         {
@@ -2153,7 +2057,7 @@
           "forecast": "14.6K",
           "previous": "-68.3K",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -2164,7 +2068,7 @@
           "forecast": "6.5%",
           "previous": "6.5%",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -2175,7 +2079,7 @@
           "forecast": "0.3%",
           "previous": "0.1%",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -2186,7 +2090,7 @@
           "forecast": "65K",
           "previous": "29K",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -2197,7 +2101,7 @@
           "forecast": "4.2%",
           "previous": "4.2%",
           "actual": null,
-          "minutes_until": 339,
+          "minutes_until": 288,
           "time_status": "UPCOMING"
         },
         {
@@ -2208,7 +2112,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 379,
+          "minutes_until": 328,
           "time_status": "UPCOMING"
         },
         {
@@ -2219,7 +2123,7 @@
           "forecast": "57.7",
           "previous": "58.2",
           "actual": null,
-          "minutes_until": 429,
+          "minutes_until": 378,
           "time_status": "UPCOMING"
         },
         {
@@ -2230,7 +2134,7 @@
           "forecast": "48.1",
           "previous": "46.3",
           "actual": null,
-          "minutes_until": 429,
+          "minutes_until": 378,
           "time_status": "UPCOMING"
         },
         {
@@ -2241,7 +2145,7 @@
           "forecast": "",
           "previous": "4.7%",
           "actual": null,
-          "minutes_until": 429,
+          "minutes_until": 378,
           "time_status": "UPCOMING"
         },
         {
@@ -2252,7 +2156,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 564,
+          "minutes_until": 513,
           "time_status": "UPCOMING"
         },
         {
@@ -2263,7 +2167,7 @@
           "forecast": "13.4B",
           "previous": "8.3B",
           "actual": null,
-          "minutes_until": 729,
+          "minutes_until": 678,
           "time_status": "UPCOMING"
         }
       ],
@@ -2276,7 +2180,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 99,
+          "minutes_until": 48,
           "time_status": "IMMINENT"
         }
       ],
@@ -2284,14 +2188,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -2299,7 +2196,7 @@
       },
       "asian_risk_directional_note": "Not a direct directional driver",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -2307,34 +2204,23 @@
     },
     {
       "pair": "EURGBP",
-      "technical_direction": "BUY",
-      "technical_stage": "WAIT",
-      "unified_signal_direction": "BUY",
+      "technical_direction": "NO_RANKED_CANDIDATE",
+      "technical_stage": "UNRANKED",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
       "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
-      "higher_timeframe_conflict": true,
+      "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
-        {
-          "title": "French Trade Balance",
-          "currency": "EUR",
-          "impact": "Low",
-          "event_at_et": "2026-11-06T02:45:00-05:00",
-          "forecast": "-5.8B",
-          "previous": "-6.1B",
-          "actual": null,
-          "minutes_until": -6,
-          "time_status": "IMMINENT"
-        },
         {
           "title": "Retail Sales m/m",
           "currency": "EUR",
@@ -2343,8 +2229,8 @@
           "forecast": "-0.1%",
           "previous": "0.1%",
           "actual": null,
-          "minutes_until": 129,
-          "time_status": "UPCOMING"
+          "minutes_until": 78,
+          "time_status": "IMMINENT"
         },
         {
           "title": "MPC Member Pill Speaks",
@@ -2354,7 +2240,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 264,
+          "minutes_until": 213,
           "time_status": "UPCOMING"
         }
       ],
@@ -2367,8 +2253,8 @@
           "forecast": "-0.1%",
           "previous": "0.1%",
           "actual": null,
-          "minutes_until": 129,
-          "time_status": "UPCOMING"
+          "minutes_until": 78,
+          "time_status": "IMMINENT"
         },
         {
           "title": "MPC Member Pill Speaks",
@@ -2378,20 +2264,20 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 264,
+          "minutes_until": 213,
           "time_status": "UPCOMING"
         }
       ],
       "imminent_events": [
         {
-          "title": "French Trade Balance",
+          "title": "Retail Sales m/m",
           "currency": "EUR",
           "impact": "Low",
-          "event_at_et": "2026-11-06T02:45:00-05:00",
-          "forecast": "-5.8B",
-          "previous": "-6.1B",
+          "event_at_et": "2026-11-06T05:00:00-05:00",
+          "forecast": "-0.1%",
+          "previous": "0.1%",
           "actual": null,
-          "minutes_until": -6,
+          "minutes_until": 78,
           "time_status": "IMMINENT"
         }
       ],
@@ -2399,14 +2285,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -2436,6 +2315,7 @@
     "dxy_equities_sentiment",
     "cme_volume_open_interest",
     "retail_positioning",
+    "closed_15m30m_direction",
     "atr_adr_session_levels",
     "independent_live_spreads"
   ],
