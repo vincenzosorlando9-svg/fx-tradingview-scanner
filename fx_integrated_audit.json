@@ -1,26 +1,26 @@
 {
-  "generated_at_utc": "2026-11-06T16:28:08.483120+00:00",
+  "generated_at_utc": "2026-11-06T17:27:58.465944+00:00",
   "purpose": "FULL_SOURCE_AUDIT_NOT_EXECUTABLE_TRADE_ORDERS",
   "sources": {
     "technicals": {
       "status": "STALE",
-      "age_minutes": 39.2
+      "age_minutes": 52.8
     },
     "dashboard": {
       "status": "STALE",
-      "age_minutes": 39.1
+      "age_minutes": 52.6
     },
     "calendar": {
       "status": "FRESH",
-      "age_minutes": 38.6
+      "age_minutes": 36.8
     },
     "ff_markets": {
       "status": "FRESH",
-      "age_minutes": 20.7
+      "age_minutes": 15.6
     },
     "volatility": {
       "status": "STALE",
-      "age_minutes": 39.2
+      "age_minutes": 52.8
     },
     "kospi_te_public_page": {
       "status": "DATED_DAILY_CONTEXT",
@@ -30,31 +30,31 @@
     },
     "macro_snapshot": {
       "status": "STALE",
-      "age_minutes": 29789.3
+      "age_minutes": 29849.2
     },
     "macro_raw": {
       "status": "STALE",
-      "age_minutes": 29789.4
+      "age_minutes": 29849.2
     },
     "macro_news": {
       "status": "STALE",
-      "age_minutes": 29789.3
+      "age_minutes": 29849.2
     },
     "unified_signals": {
-      "status": "FRESH",
-      "age_minutes": 39.0
+      "status": "STALE",
+      "age_minutes": 52.5
     },
     "economic_actuals": {
       "status": "STALE",
-      "age_minutes": 29789.4
+      "age_minutes": 29849.3
     },
     "range_context": {
       "status": "STALE",
-      "age_minutes": 29789.3
+      "age_minutes": 29849.2
     },
     "retail": {
       "status": "STALE",
-      "age_minutes": 29789.3
+      "age_minutes": 29849.2
     }
   },
   "macro_layers": {
@@ -93,22 +93,22 @@
   "pairs": [
     {
       "pair": "AUDUSD",
-      "technical_direction": "BUY",
+      "technical_direction": "SELL",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "BUY",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
       "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
-      "higher_timeframe_conflict": true,
+      "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
         {
           "title": "FOMC Member Bowman Speaks",
@@ -118,7 +118,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 47,
+          "minutes_until": -13,
           "time_status": "IMMINENT"
         },
         {
@@ -129,7 +129,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 92,
+          "minutes_until": 32,
           "time_status": "IMMINENT"
         },
         {
@@ -140,23 +140,12 @@
           "forecast": "13.4B",
           "previous": "8.3B",
           "actual": null,
-          "minutes_until": 212,
+          "minutes_until": 152,
           "time_status": "UPCOMING"
         }
       ],
       "next_24h_events": [
         {
-          "title": "FOMC Member Bowman Speaks",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-06T12:15:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 47,
-          "time_status": "IMMINENT"
-        },
-        {
           "title": "FOMC Member Daly Speaks",
           "currency": "USD",
           "impact": "Low",
@@ -164,7 +153,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 92,
+          "minutes_until": 32,
           "time_status": "IMMINENT"
         },
         {
@@ -175,7 +164,7 @@
           "forecast": "13.4B",
           "previous": "8.3B",
           "actual": null,
-          "minutes_until": 212,
+          "minutes_until": 152,
           "time_status": "UPCOMING"
         }
       ],
@@ -188,7 +177,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 47,
+          "minutes_until": -13,
           "time_status": "IMMINENT"
         },
         {
@@ -199,7 +188,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 92,
+          "minutes_until": 32,
           "time_status": "IMMINENT"
         }
       ],
@@ -207,14 +196,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -231,7 +213,7 @@
       },
       "asian_risk_directional_note": "Asian equity risk may affect AUD/NZD, but FX must confirm",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -239,22 +221,22 @@
     },
     {
       "pair": "NZDUSD",
-      "technical_direction": "BUY",
+      "technical_direction": "SELL",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "BUY",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
       "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
-      "higher_timeframe_conflict": true,
+      "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
         {
           "title": "FOMC Member Bowman Speaks",
@@ -264,7 +246,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 47,
+          "minutes_until": -13,
           "time_status": "IMMINENT"
         },
         {
@@ -275,7 +257,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 92,
+          "minutes_until": 32,
           "time_status": "IMMINENT"
         },
         {
@@ -286,7 +268,7 @@
           "forecast": "13.4B",
           "previous": "8.3B",
           "actual": null,
-          "minutes_until": 212,
+          "minutes_until": 152,
           "time_status": "UPCOMING"
         },
         {
@@ -297,23 +279,12 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 317,
+          "minutes_until": 257,
           "time_status": "UPCOMING"
         }
       ],
       "next_24h_events": [
         {
-          "title": "FOMC Member Bowman Speaks",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-06T12:15:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 47,
-          "time_status": "IMMINENT"
-        },
-        {
           "title": "FOMC Member Daly Speaks",
           "currency": "USD",
           "impact": "Low",
@@ -321,7 +292,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 92,
+          "minutes_until": 32,
           "time_status": "IMMINENT"
         },
         {
@@ -332,7 +303,7 @@
           "forecast": "13.4B",
           "previous": "8.3B",
           "actual": null,
-          "minutes_until": 212,
+          "minutes_until": 152,
           "time_status": "UPCOMING"
         },
         {
@@ -343,7 +314,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 317,
+          "minutes_until": 257,
           "time_status": "UPCOMING"
         }
       ],
@@ -356,7 +327,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 47,
+          "minutes_until": -13,
           "time_status": "IMMINENT"
         },
         {
@@ -367,7 +338,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 92,
+          "minutes_until": 32,
           "time_status": "IMMINENT"
         }
       ],
@@ -375,14 +346,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -399,7 +363,7 @@
       },
       "asian_risk_directional_note": "Asian equity risk may affect AUD/NZD, but FX must confirm",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -407,22 +371,22 @@
     },
     {
       "pair": "EURUSD",
-      "technical_direction": "BUY",
-      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "BUY",
+      "technical_direction": "NO_RANKED_CANDIDATE",
+      "technical_stage": "UNRANKED",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
       "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
-      "higher_timeframe_conflict": true,
+      "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
         {
           "title": "FOMC Member Bowman Speaks",
@@ -432,7 +396,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 47,
+          "minutes_until": -13,
           "time_status": "IMMINENT"
         },
         {
@@ -443,7 +407,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 92,
+          "minutes_until": 32,
           "time_status": "IMMINENT"
         },
         {
@@ -454,23 +418,12 @@
           "forecast": "13.4B",
           "previous": "8.3B",
           "actual": null,
-          "minutes_until": 212,
+          "minutes_until": 152,
           "time_status": "UPCOMING"
         }
       ],
       "next_24h_events": [
         {
-          "title": "FOMC Member Bowman Speaks",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-06T12:15:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 47,
-          "time_status": "IMMINENT"
-        },
-        {
           "title": "FOMC Member Daly Speaks",
           "currency": "USD",
           "impact": "Low",
@@ -478,7 +431,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 92,
+          "minutes_until": 32,
           "time_status": "IMMINENT"
         },
         {
@@ -489,7 +442,7 @@
           "forecast": "13.4B",
           "previous": "8.3B",
           "actual": null,
-          "minutes_until": 212,
+          "minutes_until": 152,
           "time_status": "UPCOMING"
         }
       ],
@@ -502,7 +455,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 47,
+          "minutes_until": -13,
           "time_status": "IMMINENT"
         },
         {
@@ -513,7 +466,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 92,
+          "minutes_until": 32,
           "time_status": "IMMINENT"
         }
       ],
@@ -521,14 +474,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -536,7 +482,7 @@
       },
       "asian_risk_directional_note": "Not a direct directional driver",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -544,22 +490,22 @@
     },
     {
       "pair": "GBPUSD",
-      "technical_direction": "BUY",
-      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "BUY",
+      "technical_direction": "NO_RANKED_CANDIDATE",
+      "technical_stage": "UNRANKED",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
       "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
-      "higher_timeframe_conflict": true,
+      "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
         {
           "title": "FOMC Member Bowman Speaks",
@@ -569,7 +515,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 47,
+          "minutes_until": -13,
           "time_status": "IMMINENT"
         },
         {
@@ -580,7 +526,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 92,
+          "minutes_until": 32,
           "time_status": "IMMINENT"
         },
         {
@@ -591,23 +537,12 @@
           "forecast": "13.4B",
           "previous": "8.3B",
           "actual": null,
-          "minutes_until": 212,
+          "minutes_until": 152,
           "time_status": "UPCOMING"
         }
       ],
       "next_24h_events": [
         {
-          "title": "FOMC Member Bowman Speaks",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-06T12:15:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 47,
-          "time_status": "IMMINENT"
-        },
-        {
           "title": "FOMC Member Daly Speaks",
           "currency": "USD",
           "impact": "Low",
@@ -615,7 +550,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 92,
+          "minutes_until": 32,
           "time_status": "IMMINENT"
         },
         {
@@ -626,7 +561,7 @@
           "forecast": "13.4B",
           "previous": "8.3B",
           "actual": null,
-          "minutes_until": 212,
+          "minutes_until": 152,
           "time_status": "UPCOMING"
         }
       ],
@@ -639,7 +574,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 47,
+          "minutes_until": -13,
           "time_status": "IMMINENT"
         },
         {
@@ -650,7 +585,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 92,
+          "minutes_until": 32,
           "time_status": "IMMINENT"
         }
       ],
@@ -658,14 +593,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -673,7 +601,7 @@
       },
       "asian_risk_directional_note": "Not a direct directional driver",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -681,22 +609,22 @@
     },
     {
       "pair": "USDJPY",
-      "technical_direction": "SELL",
-      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "SELL",
+      "technical_direction": "NO_RANKED_CANDIDATE",
+      "technical_stage": "UNRANKED",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "ABOVE_BOTH",
       "h4_ema20_50": "ABOVE_BOTH",
       "timeframes_present": true,
-      "higher_timeframe_conflict": true,
+      "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
         {
           "title": "FOMC Member Bowman Speaks",
@@ -706,7 +634,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 47,
+          "minutes_until": -13,
           "time_status": "IMMINENT"
         },
         {
@@ -717,7 +645,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 92,
+          "minutes_until": 32,
           "time_status": "IMMINENT"
         },
         {
@@ -728,23 +656,12 @@
           "forecast": "13.4B",
           "previous": "8.3B",
           "actual": null,
-          "minutes_until": 212,
+          "minutes_until": 152,
           "time_status": "UPCOMING"
         }
       ],
       "next_24h_events": [
         {
-          "title": "FOMC Member Bowman Speaks",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-06T12:15:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 47,
-          "time_status": "IMMINENT"
-        },
-        {
           "title": "FOMC Member Daly Speaks",
           "currency": "USD",
           "impact": "Low",
@@ -752,7 +669,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 92,
+          "minutes_until": 32,
           "time_status": "IMMINENT"
         },
         {
@@ -763,7 +680,7 @@
           "forecast": "13.4B",
           "previous": "8.3B",
           "actual": null,
-          "minutes_until": 212,
+          "minutes_until": 152,
           "time_status": "UPCOMING"
         }
       ],
@@ -776,7 +693,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 47,
+          "minutes_until": -13,
           "time_status": "IMMINENT"
         },
         {
@@ -787,7 +704,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 92,
+          "minutes_until": 32,
           "time_status": "IMMINENT"
         }
       ],
@@ -795,14 +712,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -819,7 +729,7 @@
       },
       "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -829,14 +739,14 @@
       "pair": "AUDJPY",
       "technical_direction": "BUY",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "BUY",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
@@ -850,14 +760,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -874,7 +777,7 @@
       },
       "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -884,14 +787,14 @@
       "pair": "NZDJPY",
       "technical_direction": "BUY",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "BUY",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
@@ -907,7 +810,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 317,
+          "minutes_until": 257,
           "time_status": "UPCOMING"
         }
       ],
@@ -920,7 +823,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 317,
+          "minutes_until": 257,
           "time_status": "UPCOMING"
         }
       ],
@@ -929,14 +832,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -953,7 +849,7 @@
       },
       "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -961,16 +857,16 @@
     },
     {
       "pair": "EURJPY",
-      "technical_direction": "SELL",
-      "technical_stage": "EARLY_M15_M30_MOMENTUM",
-      "unified_signal_direction": "SELL",
+      "technical_direction": "NO_RANKED_CANDIDATE",
+      "technical_stage": "UNRANKED",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "BELOW_BOTH",
@@ -984,14 +880,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
@@ -1008,7 +897,7 @@
       },
       "asian_risk_directional_note": "KOSPI weakness can corroborate JPY buying if 15m/30m JPY crosses agree",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -1016,16 +905,16 @@
     },
     {
       "pair": "EURCAD",
-      "technical_direction": "BUY",
-      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "BUY",
+      "technical_direction": "NO_RANKED_CANDIDATE",
+      "technical_stage": "UNRANKED",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "ABOVE_BOTH",
@@ -1039,14 +928,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -1054,7 +936,7 @@
       },
       "asian_risk_directional_note": "Not a direct directional driver",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -1062,22 +944,22 @@
     },
     {
       "pair": "USDCAD",
-      "technical_direction": "SELL",
-      "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "SELL",
+      "technical_direction": "NO_RANKED_CANDIDATE",
+      "technical_stage": "UNRANKED",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
       "h1_ema20_50": "ABOVE_BOTH",
       "h4_ema20_50": "ABOVE_BOTH",
       "timeframes_present": true,
-      "higher_timeframe_conflict": true,
+      "higher_timeframe_conflict": false,
       "upcoming_48h_events": [
         {
           "title": "FOMC Member Bowman Speaks",
@@ -1087,7 +969,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 47,
+          "minutes_until": -13,
           "time_status": "IMMINENT"
         },
         {
@@ -1098,7 +980,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 92,
+          "minutes_until": 32,
           "time_status": "IMMINENT"
         },
         {
@@ -1109,23 +991,12 @@
           "forecast": "13.4B",
           "previous": "8.3B",
           "actual": null,
-          "minutes_until": 212,
+          "minutes_until": 152,
           "time_status": "UPCOMING"
         }
       ],
       "next_24h_events": [
         {
-          "title": "FOMC Member Bowman Speaks",
-          "currency": "USD",
-          "impact": "Low",
-          "event_at_et": "2026-11-06T12:15:00-05:00",
-          "forecast": "",
-          "previous": "",
-          "actual": null,
-          "minutes_until": 47,
-          "time_status": "IMMINENT"
-        },
-        {
           "title": "FOMC Member Daly Speaks",
           "currency": "USD",
           "impact": "Low",
@@ -1133,7 +1004,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 92,
+          "minutes_until": 32,
           "time_status": "IMMINENT"
         },
         {
@@ -1144,7 +1015,7 @@
           "forecast": "13.4B",
           "previous": "8.3B",
           "actual": null,
-          "minutes_until": 212,
+          "minutes_until": 152,
           "time_status": "UPCOMING"
         }
       ],
@@ -1157,7 +1028,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 47,
+          "minutes_until": -13,
           "time_status": "IMMINENT"
         },
         {
@@ -1168,7 +1039,7 @@
           "forecast": "",
           "previous": "",
           "actual": null,
-          "minutes_until": 92,
+          "minutes_until": 32,
           "time_status": "IMMINENT"
         }
       ],
@@ -1176,14 +1047,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -1191,7 +1055,7 @@
       },
       "asian_risk_directional_note": "Not a direct directional driver",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -1199,20 +1063,20 @@
     },
     {
       "pair": "EURGBP",
-      "technical_direction": "BUY",
+      "technical_direction": "SELL",
       "technical_stage": "EARLY_DIRECTIONAL_ROTATION",
-      "unified_signal_direction": "BUY",
+      "unified_signal_direction": "UNAVAILABLE",
       "macro_alignment": "UNKNOWN",
       "macro_evidence": [],
       "publisher_reported_actuals": [],
       "range_context": {
-        "status": "UNAVAILABLE_STALE_OR_MISSING_RANGE_REFERENCE"
+        "status": "UNAVAILABLE"
       },
-      "technical_15m30m_fresh": true,
+      "technical_15m30m_fresh": false,
       "early_watches_permitted_with_unknown_macro": true,
       "reference_level_not_live": null,
-      "h1_ema20_50": "ABOVE_BOTH",
-      "h4_ema20_50": "MIXED",
+      "h1_ema20_50": "MIXED",
+      "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
       "higher_timeframe_conflict": false,
       "upcoming_48h_events": [],
@@ -1222,14 +1086,7 @@
       "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
-        "source": "Myfxbook public community outlook",
-        "status": "UNAVAILABLE",
-        "long_pct": null,
-        "short_pct": null,
-        "retrieved_at_utc": null,
-        "publisher_delay_min": 60,
-        "time_reference": "DELAYED_RETAIL_SAMPLE_NO_VERIFIED_TICK_TIME",
-        "directional_vote": false
+        "status": "UNAVAILABLE"
       },
       "asian_risk_context": {
         "status": "DATED_DAILY_CONTEXT",
@@ -1237,7 +1094,7 @@
       },
       "asian_risk_directional_note": "Not a direct directional driver",
       "macro_confirmed": false,
-      "execution_status": "RESEARCH_EARLY_WATCH_NOT_EXECUTABLE",
+      "execution_status": "RESEARCH_DIRECTIONAL_WATCH_NOT_EXECUTABLE",
       "entry": null,
       "stop": null,
       "tp1": null,
@@ -1245,7 +1102,7 @@
     }
   ],
   "fully_macro_verified": false,
-  "unified_signal_generated_at_utc": "2026-11-06T15:49:06.640409+00:00",
+  "unified_signal_generated_at_utc": "2026-11-06T16:35:27.666047+00:00",
   "no_mobile_alerts": true,
   "options_layer": "REMOVED_AT_USER_REQUEST",
   "calendar_first_rule": "Every pair MUST display all upcoming events for both currencies in next 24 hours, regardless of impact. IMMINENT within 120 minutes prevents a normal entry signal; include forecasts and previous values. Do not infer releases from missing actuals.",
