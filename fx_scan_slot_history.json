@@ -1,468 +1,6 @@
 {
-  "generated_at_utc": "2026-11-10T17:40:28.898893+00:00",
+  "generated_at_utc": "2026-11-10T22:10:25.953553+00:00",
   "slots": [
-    {
-      "schema_version": 1,
-      "scheduled_for_utc": "2026-11-05T16:32:00+00:00",
-      "expected_candle_close_utc": "2026-11-05T16:30:00+00:00",
-      "started_at_utc": "2026-11-05T16:37:28.011838+00:00",
-      "status": "MISSED_SCHEDULED_START_TOO_LATE",
-      "attempts": 0,
-      "observations": [],
-      "expected_closes": {},
-      "observed_closes": {},
-      "validated_pairs": 0,
-      "signal_publication_allowed": false,
-      "no_trades": true,
-      "timing_basis": "EXACT_UTC_15M_SLOT",
-      "trigger_event": "schedule",
-      "is_scheduled_trigger": true,
-      "scan_trigger_type": "backup",
-      "actual_start_delay_seconds": 328.012,
-      "recorded_at_utc": "2026-11-05T16:37:28.058179+00:00",
-      "commit_at_utc": "NOT_YET_VERIFIED_AT_RECORD_TIME"
-    },
-    {
-      "schema_version": 1,
-      "scheduled_for_utc": "2026-11-05T16:47:00+00:00",
-      "expected_candle_close_utc": "2026-11-05T16:45:00+00:00",
-      "started_at_utc": "2026-11-05T16:47:29.367642+00:00",
-      "status": "FULL_REPORT_EXACT_CANDLES_VERIFIED",
-      "attempts": 1,
-      "observations": [
-        {
-          "checked_at_utc": "2026-11-05T16:47:30.448744+00:00",
-          "status": "PASS_EXACT_CLOSED_M15_M30_H1",
-          "first_missing": []
-        }
-      ],
-      "expected_closes": {
-        "M15": "2026-11-05T16:45:00+00:00",
-        "M30": "2026-11-05T16:30:00+00:00",
-        "H1": "2026-11-05T16:00:00+00:00"
-      },
-      "observed_closes": {
-        "AUDUSD": {
-          "M15": "2026-11-05T16:45:00+00:00",
-          "M30": "2026-11-05T16:30:00+00:00",
-          "H1": "2026-11-05T16:00:00+00:00"
-        },
-        "NZDUSD": {
-          "M15": "2026-11-05T16:45:00+00:00",
-          "M30": "2026-11-05T16:30:00+00:00",
-          "H1": "2026-11-05T16:00:00+00:00"
-        },
-        "EURUSD": {
-          "M15": "2026-11-05T16:45:00+00:00",
-          "M30": "2026-11-05T16:30:00+00:00",
-          "H1": "2026-11-05T16:00:00+00:00"
-        },
-        "GBPUSD": {
-          "M15": "2026-11-05T16:45:00+00:00",
-          "M30": "2026-11-05T16:30:00+00:00",
-          "H1": "2026-11-05T16:00:00+00:00"
-        },
-        "USDJPY": {
-          "M15": "2026-11-05T16:45:00+00:00",
-          "M30": "2026-11-05T16:30:00+00:00",
-          "H1": "2026-11-05T16:00:00+00:00"
-        },
-        "AUDJPY": {
-          "M15": "2026-11-05T16:45:00+00:00",
-          "M30": "2026-11-05T16:30:00+00:00",
-          "H1": "2026-11-05T16:00:00+00:00"
-        },
-        "NZDJPY": {
-          "M15": "2026-11-05T16:45:00+00:00",
-          "M30": "2026-11-05T16:30:00+00:00",
-          "H1": "2026-11-05T16:00:00+00:00"
-        },
-        "EURJPY": {
-          "M15": "2026-11-05T16:45:00+00:00",
-          "M30": "2026-11-05T16:30:00+00:00",
-          "H1": "2026-11-05T16:00:00+00:00"
-        },
-        "EURCAD": {
-          "M15": "2026-11-05T16:45:00+00:00",
-          "M30": "2026-11-05T16:30:00+00:00",
-          "H1": "2026-11-05T16:00:00+00:00"
-        },
-        "USDCAD": {
-          "M15": "2026-11-05T16:45:00+00:00",
-          "M30": "2026-11-05T16:30:00+00:00",
-          "H1": "2026-11-05T16:00:00+00:00"
-        },
-        "EURGBP": {
-          "M15": "2026-11-05T16:45:00+00:00",
-          "M30": "2026-11-05T16:30:00+00:00",
-          "H1": "2026-11-05T16:00:00+00:00"
-        }
-      },
-      "validated_pairs": 11,
-      "signal_publication_allowed": true,
-      "no_trades": true,
-      "timing_basis": "EXACT_UTC_15M_SLOT",
-      "trigger_event": "schedule",
-      "is_scheduled_trigger": true,
-      "scan_trigger_type": "primary_or_manual",
-      "actual_start_delay_seconds": 29.368,
-      "source_collected_at_utc": "2026-11-05T16:47:30.384528+00:00",
-      "server_offset_seconds": 7200,
-      "full_report_verified_at_utc": "2026-11-05T16:47:42.407991+00:00",
-      "unified_generated_at_utc": "2026-11-05T16:47:41.933264+00:00",
-      "recorded_at_utc": "2026-11-05T16:47:42.451422+00:00",
-      "commit_at_utc": "NOT_YET_VERIFIED_AT_RECORD_TIME"
-    },
-    {
-      "scheduled_for_utc": "2026-11-05T17:02:00+00:00",
-      "status": "NO_SUCCESSFUL_OR_FAILED_SLOT_RECORD_FOUND",
-      "signal_publication_allowed": false,
-      "not_a_replayed_or_backfilled_signal": true
-    },
-    {
-      "scheduled_for_utc": "2026-11-05T17:17:00+00:00",
-      "status": "NO_SUCCESSFUL_OR_FAILED_SLOT_RECORD_FOUND",
-      "signal_publication_allowed": false,
-      "not_a_replayed_or_backfilled_signal": true
-    },
-    {
-      "schema_version": 1,
-      "scheduled_for_utc": "2026-11-05T17:32:00+00:00",
-      "expected_candle_close_utc": "2026-11-05T17:30:00+00:00",
-      "started_at_utc": "2026-11-05T17:42:28.056472+00:00",
-      "status": "MISSED_SCHEDULED_START_TOO_LATE",
-      "attempts": 0,
-      "observations": [],
-      "expected_closes": {},
-      "observed_closes": {},
-      "validated_pairs": 0,
-      "signal_publication_allowed": false,
-      "no_trades": true,
-      "timing_basis": "EXACT_UTC_15M_SLOT",
-      "trigger_event": "schedule",
-      "is_scheduled_trigger": true,
-      "scan_trigger_type": "backup",
-      "actual_start_delay_seconds": 628.056,
-      "recorded_at_utc": "2026-11-05T17:42:28.123307+00:00",
-      "commit_at_utc": "NOT_YET_VERIFIED_AT_RECORD_TIME"
-    },
-    {
-      "schema_version": 1,
-      "scheduled_for_utc": "2026-11-05T17:47:00+00:00",
-      "expected_candle_close_utc": "2026-11-05T17:45:00+00:00",
-      "started_at_utc": "2026-11-05T17:47:53.668861+00:00",
-      "status": "FULL_REPORT_EXACT_CANDLES_VERIFIED",
-      "attempts": 1,
-      "observations": [
-        {
-          "checked_at_utc": "2026-11-05T17:47:54.297735+00:00",
-          "status": "PASS_EXACT_CLOSED_M15_M30_H1",
-          "first_missing": []
-        }
-      ],
-      "expected_closes": {
-        "M15": "2026-11-05T17:45:00+00:00",
-        "M30": "2026-11-05T17:30:00+00:00",
-        "H1": "2026-11-05T17:00:00+00:00"
-      },
-      "observed_closes": {
-        "AUDUSD": {
-          "M15": "2026-11-05T17:45:00+00:00",
-          "M30": "2026-11-05T17:30:00+00:00",
-          "H1": "2026-11-05T17:00:00+00:00"
-        },
-        "NZDUSD": {
-          "M15": "2026-11-05T17:45:00+00:00",
-          "M30": "2026-11-05T17:30:00+00:00",
-          "H1": "2026-11-05T17:00:00+00:00"
-        },
-        "EURUSD": {
-          "M15": "2026-11-05T17:45:00+00:00",
-          "M30": "2026-11-05T17:30:00+00:00",
-          "H1": "2026-11-05T17:00:00+00:00"
-        },
-        "GBPUSD": {
-          "M15": "2026-11-05T17:45:00+00:00",
-          "M30": "2026-11-05T17:30:00+00:00",
-          "H1": "2026-11-05T17:00:00+00:00"
-        },
-        "USDJPY": {
-          "M15": "2026-11-05T17:45:00+00:00",
-          "M30": "2026-11-05T17:30:00+00:00",
-          "H1": "2026-11-05T17:00:00+00:00"
-        },
-        "AUDJPY": {
-          "M15": "2026-11-05T17:45:00+00:00",
-          "M30": "2026-11-05T17:30:00+00:00",
-          "H1": "2026-11-05T17:00:00+00:00"
-        },
-        "NZDJPY": {
-          "M15": "2026-11-05T17:45:00+00:00",
-          "M30": "2026-11-05T17:30:00+00:00",
-          "H1": "2026-11-05T17:00:00+00:00"
-        },
-        "EURJPY": {
-          "M15": "2026-11-05T17:45:00+00:00",
-          "M30": "2026-11-05T17:30:00+00:00",
-          "H1": "2026-11-05T17:00:00+00:00"
-        },
-        "EURCAD": {
-          "M15": "2026-11-05T17:45:00+00:00",
-          "M30": "2026-11-05T17:30:00+00:00",
-          "H1": "2026-11-05T17:00:00+00:00"
-        },
-        "USDCAD": {
-          "M15": "2026-11-05T17:45:00+00:00",
-          "M30": "2026-11-05T17:30:00+00:00",
-          "H1": "2026-11-05T17:00:00+00:00"
-        },
-        "EURGBP": {
-          "M15": "2026-11-05T17:45:00+00:00",
-          "M30": "2026-11-05T17:30:00+00:00",
-          "H1": "2026-11-05T17:00:00+00:00"
-        }
-      },
-      "validated_pairs": 11,
-      "signal_publication_allowed": true,
-      "no_trades": true,
-      "timing_basis": "EXACT_UTC_15M_SLOT",
-      "trigger_event": "schedule",
-      "is_scheduled_trigger": true,
-      "scan_trigger_type": "primary_or_manual",
-      "actual_start_delay_seconds": 53.669,
-      "source_collected_at_utc": "2026-11-05T17:47:54.249902+00:00",
-      "server_offset_seconds": 7200,
-      "full_report_verified_at_utc": "2026-11-05T17:48:05.985434+00:00",
-      "unified_generated_at_utc": "2026-11-05T17:48:05.532612+00:00",
-      "recorded_at_utc": "2026-11-05T17:48:06.026200+00:00",
-      "commit_at_utc": "NOT_YET_VERIFIED_AT_RECORD_TIME"
-    },
-    {
-      "scheduled_for_utc": "2026-11-05T18:02:00+00:00",
-      "status": "NO_SUCCESSFUL_OR_FAILED_SLOT_RECORD_FOUND",
-      "signal_publication_allowed": false,
-      "not_a_replayed_or_backfilled_signal": true
-    },
-    {
-      "schema_version": 1,
-      "scheduled_for_utc": "2026-11-05T18:17:00+00:00",
-      "expected_candle_close_utc": "2026-11-05T18:15:00+00:00",
-      "started_at_utc": "2026-11-05T18:31:55.817787+00:00",
-      "status": "MISSED_SCHEDULED_START_TOO_LATE",
-      "attempts": 0,
-      "observations": [],
-      "expected_closes": {},
-      "observed_closes": {},
-      "validated_pairs": 0,
-      "signal_publication_allowed": false,
-      "no_trades": true,
-      "timing_basis": "EXACT_UTC_15M_SLOT",
-      "trigger_event": "schedule",
-      "is_scheduled_trigger": true,
-      "scan_trigger_type": "backup",
-      "actual_start_delay_seconds": 895.818,
-      "recorded_at_utc": "2026-11-05T18:31:55.888036+00:00",
-      "commit_at_utc": "NOT_YET_VERIFIED_AT_RECORD_TIME"
-    },
-    {
-      "schema_version": 1,
-      "scheduled_for_utc": "2026-11-05T18:32:00+00:00",
-      "expected_candle_close_utc": "2026-11-05T18:30:00+00:00",
-      "started_at_utc": "2026-11-05T18:39:45.852361+00:00",
-      "status": "MISSED_SCHEDULED_START_TOO_LATE",
-      "attempts": 0,
-      "observations": [],
-      "expected_closes": {},
-      "observed_closes": {},
-      "validated_pairs": 0,
-      "signal_publication_allowed": false,
-      "no_trades": true,
-      "timing_basis": "EXACT_UTC_15M_SLOT",
-      "trigger_event": "schedule",
-      "is_scheduled_trigger": true,
-      "scan_trigger_type": "primary_or_manual",
-      "actual_start_delay_seconds": 465.852,
-      "recorded_at_utc": "2026-11-05T18:39:45.907141+00:00",
-      "commit_at_utc": "NOT_YET_VERIFIED_AT_RECORD_TIME"
-    },
-    {
-      "scheduled_for_utc": "2026-11-05T18:47:00+00:00",
-      "status": "NO_SUCCESSFUL_OR_FAILED_SLOT_RECORD_FOUND",
-      "signal_publication_allowed": false,
-      "not_a_replayed_or_backfilled_signal": true
-    },
-    {
-      "scheduled_for_utc": "2026-11-05T19:02:00+00:00",
-      "status": "NO_SUCCESSFUL_OR_FAILED_SLOT_RECORD_FOUND",
-      "signal_publication_allowed": false,
-      "not_a_replayed_or_backfilled_signal": true
-    },
-    {
-      "schema_version": 1,
-      "scheduled_for_utc": "2026-11-05T19:17:00+00:00",
-      "expected_candle_close_utc": "2026-11-05T19:15:00+00:00",
-      "started_at_utc": "2026-11-05T19:29:53.132933+00:00",
-      "status": "MISSED_SCHEDULED_START_TOO_LATE",
-      "attempts": 0,
-      "observations": [],
-      "expected_closes": {},
-      "observed_closes": {},
-      "validated_pairs": 0,
-      "signal_publication_allowed": false,
-      "no_trades": true,
-      "timing_basis": "EXACT_UTC_15M_SLOT",
-      "trigger_event": "schedule",
-      "is_scheduled_trigger": true,
-      "scan_trigger_type": "backup",
-      "actual_start_delay_seconds": 773.133,
-      "recorded_at_utc": "2026-11-05T19:29:53.202846+00:00",
-      "commit_at_utc": "NOT_YET_VERIFIED_AT_RECORD_TIME"
-    },
-    {
-      "schema_version": 1,
-      "scheduled_for_utc": "2026-11-05T19:32:00+00:00",
-      "expected_candle_close_utc": "2026-11-05T19:30:00+00:00",
-      "started_at_utc": "2026-11-05T19:35:29.132194+00:00",
-      "status": "FULL_REPORT_EXACT_CANDLES_VERIFIED",
-      "attempts": 1,
-      "observations": [
-        {
-          "checked_at_utc": "2026-11-05T19:35:29.609004+00:00",
-          "status": "PASS_EXACT_CLOSED_M15_M30_H1",
-          "first_missing": []
-        }
-      ],
-      "expected_closes": {
-        "M15": "2026-11-05T19:30:00+00:00",
-        "M30": "2026-11-05T19:30:00+00:00",
-        "H1": "2026-11-05T19:00:00+00:00"
-      },
-      "observed_closes": {
-        "AUDUSD": {
-          "M15": "2026-11-05T19:30:00+00:00",
-          "M30": "2026-11-05T19:30:00+00:00",
-          "H1": "2026-11-05T19:00:00+00:00"
-        },
-        "NZDUSD": {
-          "M15": "2026-11-05T19:30:00+00:00",
-          "M30": "2026-11-05T19:30:00+00:00",
-          "H1": "2026-11-05T19:00:00+00:00"
-        },
-        "EURUSD": {
-          "M15": "2026-11-05T19:30:00+00:00",
-          "M30": "2026-11-05T19:30:00+00:00",
-          "H1": "2026-11-05T19:00:00+00:00"
-        },
-        "GBPUSD": {
-          "M15": "2026-11-05T19:30:00+00:00",
-          "M30": "2026-11-05T19:30:00+00:00",
-          "H1": "2026-11-05T19:00:00+00:00"
-        },
-        "USDJPY": {
-          "M15": "2026-11-05T19:30:00+00:00",
-          "M30": "2026-11-05T19:30:00+00:00",
-          "H1": "2026-11-05T19:00:00+00:00"
-        },
-        "AUDJPY": {
-          "M15": "2026-11-05T19:30:00+00:00",
-          "M30": "2026-11-05T19:30:00+00:00",
-          "H1": "2026-11-05T19:00:00+00:00"
-        },
-        "NZDJPY": {
-          "M15": "2026-11-05T19:30:00+00:00",
-          "M30": "2026-11-05T19:30:00+00:00",
-          "H1": "2026-11-05T19:00:00+00:00"
-        },
-        "EURJPY": {
-          "M15": "2026-11-05T19:30:00+00:00",
-          "M30": "2026-11-05T19:30:00+00:00",
-          "H1": "2026-11-05T19:00:00+00:00"
-        },
-        "EURCAD": {
-          "M15": "2026-11-05T19:30:00+00:00",
-          "M30": "2026-11-05T19:30:00+00:00",
-          "H1": "2026-11-05T19:00:00+00:00"
-        },
-        "USDCAD": {
-          "M15": "2026-11-05T19:30:00+00:00",
-          "M30": "2026-11-05T19:30:00+00:00",
-          "H1": "2026-11-05T19:00:00+00:00"
-        },
-        "EURGBP": {
-          "M15": "2026-11-05T19:30:00+00:00",
-          "M30": "2026-11-05T19:30:00+00:00",
-          "H1": "2026-11-05T19:00:00+00:00"
-        }
-      },
-      "validated_pairs": 11,
-      "signal_publication_allowed": true,
-      "no_trades": true,
-      "timing_basis": "EXACT_UTC_15M_SLOT",
-      "trigger_event": "schedule",
-      "is_scheduled_trigger": true,
-      "scan_trigger_type": "primary_or_manual",
-      "actual_start_delay_seconds": 209.132,
-      "source_collected_at_utc": "2026-11-05T19:35:29.557983+00:00",
-      "server_offset_seconds": 7200,
-      "full_report_verified_at_utc": "2026-11-05T19:35:44.510013+00:00",
-      "unified_generated_at_utc": "2026-11-05T19:35:44.064826+00:00",
-      "recorded_at_utc": "2026-11-05T19:35:44.578541+00:00",
-      "commit_at_utc": "NOT_YET_VERIFIED_AT_RECORD_TIME"
-    },
-    {
-      "scheduled_for_utc": "2026-11-05T19:47:00+00:00",
-      "status": "NO_SUCCESSFUL_OR_FAILED_SLOT_RECORD_FOUND",
-      "signal_publication_allowed": false,
-      "not_a_replayed_or_backfilled_signal": true
-    },
-    {
-      "scheduled_for_utc": "2026-11-05T20:02:00+00:00",
-      "status": "NO_SUCCESSFUL_OR_FAILED_SLOT_RECORD_FOUND",
-      "signal_publication_allowed": false,
-      "not_a_replayed_or_backfilled_signal": true
-    },
-    {
-      "schema_version": 1,
-      "scheduled_for_utc": "2026-11-05T20:17:00+00:00",
-      "expected_candle_close_utc": "2026-11-05T20:15:00+00:00",
-      "started_at_utc": "2026-11-05T20:27:20.593625+00:00",
-      "status": "MISSED_SCHEDULED_START_TOO_LATE",
-      "attempts": 0,
-      "observations": [],
-      "expected_closes": {},
-      "observed_closes": {},
-      "validated_pairs": 0,
-      "signal_publication_allowed": false,
-      "no_trades": true,
-      "timing_basis": "EXACT_UTC_15M_SLOT",
-      "trigger_event": "schedule",
-      "is_scheduled_trigger": true,
-      "scan_trigger_type": "primary_or_manual",
-      "actual_start_delay_seconds": 620.594,
-      "recorded_at_utc": "2026-11-05T20:27:20.636979+00:00",
-      "commit_at_utc": "NOT_YET_VERIFIED_AT_RECORD_TIME",
-      "previous_attempts_for_slot": [
-        {
-          "started_at_utc": "2026-11-05T20:21:02.924162+00:00",
-          "status": "MISSED_SCHEDULED_START_TOO_LATE",
-          "trigger_event": "schedule",
-          "scan_trigger_type": "backup",
-          "missing": []
-        }
-      ]
-    },
-    {
-      "scheduled_for_utc": "2026-11-05T20:32:00+00:00",
-      "status": "NO_SUCCESSFUL_OR_FAILED_SLOT_RECORD_FOUND",
-      "signal_publication_allowed": false,
-      "not_a_replayed_or_backfilled_signal": true
-    },
-    {
-      "scheduled_for_utc": "2026-11-05T20:47:00+00:00",
-      "status": "NO_SUCCESSFUL_OR_FAILED_SLOT_RECORD_FOUND",
-      "signal_publication_allowed": false,
-      "not_a_replayed_or_backfilled_signal": true
-    },
     {
       "schema_version": 1,
       "scheduled_for_utc": "2026-11-05T21:02:00+00:00",
@@ -6435,6 +5973,129 @@
       "scan_trigger_type": "backup",
       "actual_start_delay_seconds": 508.838,
       "recorded_at_utc": "2026-11-10T17:40:28.897562+00:00",
+      "commit_at_utc": "NOT_YET_VERIFIED_AT_RECORD_TIME"
+    },
+    {
+      "scheduled_for_utc": "2026-11-10T17:47:00+00:00",
+      "status": "NO_SUCCESSFUL_OR_FAILED_SLOT_RECORD_FOUND",
+      "signal_publication_allowed": false,
+      "not_a_replayed_or_backfilled_signal": true
+    },
+    {
+      "scheduled_for_utc": "2026-11-10T18:02:00+00:00",
+      "status": "NO_SUCCESSFUL_OR_FAILED_SLOT_RECORD_FOUND",
+      "signal_publication_allowed": false,
+      "not_a_replayed_or_backfilled_signal": true
+    },
+    {
+      "scheduled_for_utc": "2026-11-10T18:17:00+00:00",
+      "status": "NO_SUCCESSFUL_OR_FAILED_SLOT_RECORD_FOUND",
+      "signal_publication_allowed": false,
+      "not_a_replayed_or_backfilled_signal": true
+    },
+    {
+      "scheduled_for_utc": "2026-11-10T18:32:00+00:00",
+      "status": "NO_SUCCESSFUL_OR_FAILED_SLOT_RECORD_FOUND",
+      "signal_publication_allowed": false,
+      "not_a_replayed_or_backfilled_signal": true
+    },
+    {
+      "scheduled_for_utc": "2026-11-10T18:47:00+00:00",
+      "status": "NO_SUCCESSFUL_OR_FAILED_SLOT_RECORD_FOUND",
+      "signal_publication_allowed": false,
+      "not_a_replayed_or_backfilled_signal": true
+    },
+    {
+      "scheduled_for_utc": "2026-11-10T19:02:00+00:00",
+      "status": "NO_SUCCESSFUL_OR_FAILED_SLOT_RECORD_FOUND",
+      "signal_publication_allowed": false,
+      "not_a_replayed_or_backfilled_signal": true
+    },
+    {
+      "scheduled_for_utc": "2026-11-10T19:17:00+00:00",
+      "status": "NO_SUCCESSFUL_OR_FAILED_SLOT_RECORD_FOUND",
+      "signal_publication_allowed": false,
+      "not_a_replayed_or_backfilled_signal": true
+    },
+    {
+      "scheduled_for_utc": "2026-11-10T19:32:00+00:00",
+      "status": "NO_SUCCESSFUL_OR_FAILED_SLOT_RECORD_FOUND",
+      "signal_publication_allowed": false,
+      "not_a_replayed_or_backfilled_signal": true
+    },
+    {
+      "scheduled_for_utc": "2026-11-10T19:47:00+00:00",
+      "status": "NO_SUCCESSFUL_OR_FAILED_SLOT_RECORD_FOUND",
+      "signal_publication_allowed": false,
+      "not_a_replayed_or_backfilled_signal": true
+    },
+    {
+      "scheduled_for_utc": "2026-11-10T20:02:00+00:00",
+      "status": "NO_SUCCESSFUL_OR_FAILED_SLOT_RECORD_FOUND",
+      "signal_publication_allowed": false,
+      "not_a_replayed_or_backfilled_signal": true
+    },
+    {
+      "scheduled_for_utc": "2026-11-10T20:17:00+00:00",
+      "status": "NO_SUCCESSFUL_OR_FAILED_SLOT_RECORD_FOUND",
+      "signal_publication_allowed": false,
+      "not_a_replayed_or_backfilled_signal": true
+    },
+    {
+      "scheduled_for_utc": "2026-11-10T20:32:00+00:00",
+      "status": "NO_SUCCESSFUL_OR_FAILED_SLOT_RECORD_FOUND",
+      "signal_publication_allowed": false,
+      "not_a_replayed_or_backfilled_signal": true
+    },
+    {
+      "scheduled_for_utc": "2026-11-10T20:47:00+00:00",
+      "status": "NO_SUCCESSFUL_OR_FAILED_SLOT_RECORD_FOUND",
+      "signal_publication_allowed": false,
+      "not_a_replayed_or_backfilled_signal": true
+    },
+    {
+      "scheduled_for_utc": "2026-11-10T21:02:00+00:00",
+      "status": "NO_SUCCESSFUL_OR_FAILED_SLOT_RECORD_FOUND",
+      "signal_publication_allowed": false,
+      "not_a_replayed_or_backfilled_signal": true
+    },
+    {
+      "scheduled_for_utc": "2026-11-10T21:17:00+00:00",
+      "status": "NO_SUCCESSFUL_OR_FAILED_SLOT_RECORD_FOUND",
+      "signal_publication_allowed": false,
+      "not_a_replayed_or_backfilled_signal": true
+    },
+    {
+      "scheduled_for_utc": "2026-11-10T21:32:00+00:00",
+      "status": "NO_SUCCESSFUL_OR_FAILED_SLOT_RECORD_FOUND",
+      "signal_publication_allowed": false,
+      "not_a_replayed_or_backfilled_signal": true
+    },
+    {
+      "scheduled_for_utc": "2026-11-10T21:47:00+00:00",
+      "status": "NO_SUCCESSFUL_OR_FAILED_SLOT_RECORD_FOUND",
+      "signal_publication_allowed": false,
+      "not_a_replayed_or_backfilled_signal": true
+    },
+    {
+      "schema_version": 1,
+      "scheduled_for_utc": "2026-11-10T22:02:00+00:00",
+      "expected_candle_close_utc": "2026-11-10T22:00:00+00:00",
+      "started_at_utc": "2026-11-10T22:10:25.884727+00:00",
+      "status": "MISSED_SCHEDULED_START_TOO_LATE",
+      "attempts": 0,
+      "observations": [],
+      "expected_closes": {},
+      "observed_closes": {},
+      "validated_pairs": 0,
+      "signal_publication_allowed": false,
+      "no_trades": true,
+      "timing_basis": "EXACT_UTC_15M_SLOT",
+      "trigger_event": "schedule",
+      "is_scheduled_trigger": true,
+      "scan_trigger_type": "primary_or_manual",
+      "actual_start_delay_seconds": 505.885,
+      "recorded_at_utc": "2026-11-10T22:10:25.951850+00:00",
       "commit_at_utc": "NOT_YET_VERIFIED_AT_RECORD_TIME"
     }
   ],
