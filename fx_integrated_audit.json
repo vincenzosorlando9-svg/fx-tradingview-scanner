@@ -1,26 +1,26 @@
 {
-  "generated_at_utc": "2026-11-18T07:43:44.628714+00:00",
+  "generated_at_utc": "2026-11-18T16:44:51.638787+00:00",
   "purpose": "FULL_SOURCE_AUDIT_NOT_EXECUTABLE_TRADE_ORDERS",
   "sources": {
     "technicals": {
       "status": "STALE",
-      "age_minutes": 16583.9
+      "age_minutes": 17125.0
     },
     "dashboard": {
       "status": "STALE",
-      "age_minutes": 16583.8
+      "age_minutes": 17124.9
     },
     "calendar": {
-      "status": "STALE",
-      "age_minutes": 214.3
+      "status": "FRESH",
+      "age_minutes": 175.8
     },
     "ff_markets": {
       "status": "FRESH",
-      "age_minutes": 29.3
+      "age_minutes": 11.4
     },
     "volatility": {
       "status": "STALE",
-      "age_minutes": 16583.9
+      "age_minutes": 17125.0
     },
     "kospi_te_public_page": {
       "status": "DATED_DAILY_CONTEXT",
@@ -30,36 +30,36 @@
     },
     "macro_snapshot": {
       "status": "STALE",
-      "age_minutes": 46544.9
+      "age_minutes": 47086.1
     },
     "macro_raw": {
       "status": "STALE",
-      "age_minutes": 46545.0
+      "age_minutes": 47086.1
     },
     "macro_news": {
       "status": "STALE",
-      "age_minutes": 46544.9
+      "age_minutes": 47086.1
     },
     "unified_signals": {
       "status": "STALE",
-      "age_minutes": 16583.6
+      "age_minutes": 17124.8
     },
     "economic_actuals": {
       "status": "STALE",
-      "age_minutes": 46545.0
+      "age_minutes": 47086.2
     },
     "range_context": {
       "status": "STALE",
-      "age_minutes": 46544.9
+      "age_minutes": 47086.1
     },
     "retail": {
       "status": "STALE",
-      "age_minutes": 46544.9
+      "age_minutes": 47086.1
     }
   },
   "macro_layers": {
     "reuters_fxstreet_catalysts": "UNAVAILABLE",
-    "calendar_schedule": "UNAVAILABLE",
+    "calendar_schedule": "VERIFIED_WEEKLY_SCHEDULE_NO_OFFICIAL_ACTUALS",
     "economic_actuals": "UNAVAILABLE",
     "sovereign_yield_differentials": "UNAVAILABLE",
     "policy_rates": "UNAVAILABLE",
@@ -79,10 +79,10 @@
   "asian_risk_context": {
     "source": "Trading Economics public KOSPI page (no key)",
     "status": "DATED_DAILY_CONTEXT",
-    "daily_reference_change_pct": 0.98,
-    "daily_reference_level": 5017.0,
+    "daily_reference_change_pct": 1.99,
+    "daily_reference_level": 5067.0,
     "reference_date_kst": "2026-11-18",
-    "risk_tier": "NEUTRAL_DAILY_BACKGROUND",
+    "risk_tier": "POSITIVE_DAILY_BACKGROUND",
     "dated_news_headline": "South Korean Shares Rebound on Nvidia-Led AI Optimism",
     "dated_news_day": "2026-11-18",
     "interpretation": "Risk-off corroboration only; no verified intraday quote or automatic FX direction changes",
@@ -109,11 +109,487 @@
       "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
       "higher_timeframe_conflict": false,
-      "upcoming_48h_events": [],
-      "next_24h_events": [],
-      "imminent_events": [],
-      "event_risk": "NO_SCHEDULED_EVENT_24H",
-      "calendar_coverage": "UNVERIFIED",
+      "upcoming_48h_events": [
+        {
+          "title": "FOMC Member Daly Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T12:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 30,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "FOMC Member Barr Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T13:35:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 110,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "FOMC Meeting Minutes",
+          "currency": "USD",
+          "impact": "High",
+          "event_at_et": "2026-11-18T14:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 135,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Williams Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T14:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 165,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "TIC Long-Term Purchases",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T16:00:00-05:00",
+          "forecast": "160.7B",
+          "previous": "279.2B",
+          "actual": null,
+          "minutes_until": 255,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Kashkari Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T16:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 270,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Employment Change",
+          "currency": "AUD",
+          "impact": "High",
+          "event_at_et": "2026-11-18T19:30:00-05:00",
+          "forecast": "25.5K",
+          "previous": "-39.3K",
+          "actual": null,
+          "minutes_until": 465,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Unemployment Rate",
+          "currency": "AUD",
+          "impact": "High",
+          "event_at_et": "2026-11-18T19:30:00-05:00",
+          "forecast": "4.7%",
+          "previous": "4.7%",
+          "actual": null,
+          "minutes_until": 465,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Foreign Direct Investment ytd/y",
+          "currency": "CNY",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T02:02:00-05:00",
+          "forecast": "",
+          "previous": "-4.3%",
+          "actual": null,
+          "minutes_until": 857,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Philly Fed Manufacturing Index",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "20.6",
+          "previous": "20.9",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Unemployment Claims",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "198K",
+          "previous": "200K",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Hammack Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T08:50:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1265,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Jefferson Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T09:25:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1300,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "CB Leading Index m/m",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T10:00:00-05:00",
+          "forecast": "0.0%",
+          "previous": "0.0%",
+          "actual": null,
+          "minutes_until": 1335,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Mortgage Delinquencies",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T10:15:00-05:00",
+          "forecast": "",
+          "previous": "4.37%",
+          "actual": null,
+          "minutes_until": 1350,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Natural Gas Storage",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T10:30:00-05:00",
+          "forecast": "25B",
+          "previous": "61B",
+          "actual": null,
+          "minutes_until": 1365,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Goolsbee Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T12:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1485,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Barr Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T14:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1590,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Barkin Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T16:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1695,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Paulson Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T18:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1845,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "1-y Loan Prime Rate",
+          "currency": "CNY",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T20:00:00-05:00",
+          "forecast": "3.00%",
+          "previous": "3.00%",
+          "actual": null,
+          "minutes_until": 1935,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "5-y Loan Prime Rate",
+          "currency": "CNY",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T20:00:00-05:00",
+          "forecast": "3.50%",
+          "previous": "3.50%",
+          "actual": null,
+          "minutes_until": 1935,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Waller Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-20T08:25:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 2680,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Revised UoM Consumer Sentiment",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-20T10:00:00-05:00",
+          "forecast": "51.7",
+          "previous": "51.0",
+          "actual": null,
+          "minutes_until": 2775,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Revised UoM Inflation Expectations",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-20T10:00:00-05:00",
+          "forecast": "",
+          "previous": "4.3%",
+          "actual": null,
+          "minutes_until": 2775,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "next_24h_events": [
+        {
+          "title": "FOMC Member Daly Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T12:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 30,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "FOMC Member Barr Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T13:35:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 110,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "FOMC Meeting Minutes",
+          "currency": "USD",
+          "impact": "High",
+          "event_at_et": "2026-11-18T14:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 135,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Williams Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T14:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 165,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "TIC Long-Term Purchases",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T16:00:00-05:00",
+          "forecast": "160.7B",
+          "previous": "279.2B",
+          "actual": null,
+          "minutes_until": 255,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Kashkari Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T16:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 270,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Employment Change",
+          "currency": "AUD",
+          "impact": "High",
+          "event_at_et": "2026-11-18T19:30:00-05:00",
+          "forecast": "25.5K",
+          "previous": "-39.3K",
+          "actual": null,
+          "minutes_until": 465,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Unemployment Rate",
+          "currency": "AUD",
+          "impact": "High",
+          "event_at_et": "2026-11-18T19:30:00-05:00",
+          "forecast": "4.7%",
+          "previous": "4.7%",
+          "actual": null,
+          "minutes_until": 465,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Foreign Direct Investment ytd/y",
+          "currency": "CNY",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T02:02:00-05:00",
+          "forecast": "",
+          "previous": "-4.3%",
+          "actual": null,
+          "minutes_until": 857,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Philly Fed Manufacturing Index",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "20.6",
+          "previous": "20.9",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Unemployment Claims",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "198K",
+          "previous": "200K",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Hammack Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T08:50:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1265,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Jefferson Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T09:25:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1300,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "CB Leading Index m/m",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T10:00:00-05:00",
+          "forecast": "0.0%",
+          "previous": "0.0%",
+          "actual": null,
+          "minutes_until": 1335,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Mortgage Delinquencies",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T10:15:00-05:00",
+          "forecast": "",
+          "previous": "4.37%",
+          "actual": null,
+          "minutes_until": 1350,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Natural Gas Storage",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T10:30:00-05:00",
+          "forecast": "25B",
+          "previous": "61B",
+          "actual": null,
+          "minutes_until": 1365,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "imminent_events": [
+        {
+          "title": "FOMC Member Daly Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T12:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 30,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "FOMC Member Barr Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T13:35:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 110,
+          "time_status": "IMMINENT"
+        }
+      ],
+      "event_risk": "IMMINENT_EVENT",
+      "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
         "status": "UNAVAILABLE"
@@ -121,10 +597,10 @@
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
         "status": "DATED_DAILY_CONTEXT",
-        "daily_reference_change_pct": 0.98,
-        "daily_reference_level": 5017.0,
+        "daily_reference_change_pct": 1.99,
+        "daily_reference_level": 5067.0,
         "reference_date_kst": "2026-11-18",
-        "risk_tier": "NEUTRAL_DAILY_BACKGROUND",
+        "risk_tier": "POSITIVE_DAILY_BACKGROUND",
         "dated_news_headline": "South Korean Shares Rebound on Nvidia-Led AI Optimism",
         "dated_news_day": "2026-11-18",
         "interpretation": "Risk-off corroboration only; no verified intraday quote or automatic FX direction changes",
@@ -157,11 +633,509 @@
       "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
       "higher_timeframe_conflict": false,
-      "upcoming_48h_events": [],
-      "next_24h_events": [],
-      "imminent_events": [],
-      "event_risk": "NO_SCHEDULED_EVENT_24H",
-      "calendar_coverage": "UNVERIFIED",
+      "upcoming_48h_events": [
+        {
+          "title": "FOMC Member Daly Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T12:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 30,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "RBNZ Gov Breman Speaks",
+          "currency": "NZD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-18T13:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 75,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "FOMC Member Barr Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T13:35:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 110,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "FOMC Meeting Minutes",
+          "currency": "USD",
+          "impact": "High",
+          "event_at_et": "2026-11-18T14:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 135,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Williams Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T14:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 165,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "TIC Long-Term Purchases",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T16:00:00-05:00",
+          "forecast": "160.7B",
+          "previous": "279.2B",
+          "actual": null,
+          "minutes_until": 255,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Kashkari Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T16:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 270,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Trade Balance",
+          "currency": "NZD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T16:45:00-05:00",
+          "forecast": "-1650M",
+          "previous": "-1971M",
+          "actual": null,
+          "minutes_until": 300,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Foreign Direct Investment ytd/y",
+          "currency": "CNY",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T02:02:00-05:00",
+          "forecast": "",
+          "previous": "-4.3%",
+          "actual": null,
+          "minutes_until": 857,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Philly Fed Manufacturing Index",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "20.6",
+          "previous": "20.9",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Unemployment Claims",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "198K",
+          "previous": "200K",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Hammack Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T08:50:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1265,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Jefferson Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T09:25:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1300,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "CB Leading Index m/m",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T10:00:00-05:00",
+          "forecast": "0.0%",
+          "previous": "0.0%",
+          "actual": null,
+          "minutes_until": 1335,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Mortgage Delinquencies",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T10:15:00-05:00",
+          "forecast": "",
+          "previous": "4.37%",
+          "actual": null,
+          "minutes_until": 1350,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Natural Gas Storage",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T10:30:00-05:00",
+          "forecast": "25B",
+          "previous": "61B",
+          "actual": null,
+          "minutes_until": 1365,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Goolsbee Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T12:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1485,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Barr Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T14:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1590,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Barkin Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T16:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1695,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Paulson Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T18:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1845,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "1-y Loan Prime Rate",
+          "currency": "CNY",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T20:00:00-05:00",
+          "forecast": "3.00%",
+          "previous": "3.00%",
+          "actual": null,
+          "minutes_until": 1935,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "5-y Loan Prime Rate",
+          "currency": "CNY",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T20:00:00-05:00",
+          "forecast": "3.50%",
+          "previous": "3.50%",
+          "actual": null,
+          "minutes_until": 1935,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Credit Card Spending y/y",
+          "currency": "NZD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T21:00:00-05:00",
+          "forecast": "",
+          "previous": "6.9%",
+          "actual": null,
+          "minutes_until": 1995,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Waller Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-20T08:25:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 2680,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Revised UoM Consumer Sentiment",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-20T10:00:00-05:00",
+          "forecast": "51.7",
+          "previous": "51.0",
+          "actual": null,
+          "minutes_until": 2775,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Revised UoM Inflation Expectations",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-20T10:00:00-05:00",
+          "forecast": "",
+          "previous": "4.3%",
+          "actual": null,
+          "minutes_until": 2775,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "next_24h_events": [
+        {
+          "title": "FOMC Member Daly Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T12:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 30,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "RBNZ Gov Breman Speaks",
+          "currency": "NZD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-18T13:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 75,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "FOMC Member Barr Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T13:35:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 110,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "FOMC Meeting Minutes",
+          "currency": "USD",
+          "impact": "High",
+          "event_at_et": "2026-11-18T14:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 135,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Williams Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T14:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 165,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "TIC Long-Term Purchases",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T16:00:00-05:00",
+          "forecast": "160.7B",
+          "previous": "279.2B",
+          "actual": null,
+          "minutes_until": 255,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Kashkari Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T16:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 270,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Trade Balance",
+          "currency": "NZD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T16:45:00-05:00",
+          "forecast": "-1650M",
+          "previous": "-1971M",
+          "actual": null,
+          "minutes_until": 300,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Foreign Direct Investment ytd/y",
+          "currency": "CNY",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T02:02:00-05:00",
+          "forecast": "",
+          "previous": "-4.3%",
+          "actual": null,
+          "minutes_until": 857,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Philly Fed Manufacturing Index",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "20.6",
+          "previous": "20.9",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Unemployment Claims",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "198K",
+          "previous": "200K",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Hammack Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T08:50:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1265,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Jefferson Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T09:25:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1300,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "CB Leading Index m/m",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T10:00:00-05:00",
+          "forecast": "0.0%",
+          "previous": "0.0%",
+          "actual": null,
+          "minutes_until": 1335,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Mortgage Delinquencies",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T10:15:00-05:00",
+          "forecast": "",
+          "previous": "4.37%",
+          "actual": null,
+          "minutes_until": 1350,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Natural Gas Storage",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T10:30:00-05:00",
+          "forecast": "25B",
+          "previous": "61B",
+          "actual": null,
+          "minutes_until": 1365,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "imminent_events": [
+        {
+          "title": "FOMC Member Daly Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T12:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 30,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "RBNZ Gov Breman Speaks",
+          "currency": "NZD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-18T13:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 75,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "FOMC Member Barr Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T13:35:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 110,
+          "time_status": "IMMINENT"
+        }
+      ],
+      "event_risk": "IMMINENT_EVENT",
+      "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
         "status": "UNAVAILABLE"
@@ -169,10 +1143,10 @@
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
         "status": "DATED_DAILY_CONTEXT",
-        "daily_reference_change_pct": 0.98,
-        "daily_reference_level": 5017.0,
+        "daily_reference_change_pct": 1.99,
+        "daily_reference_level": 5067.0,
         "reference_date_kst": "2026-11-18",
-        "risk_tier": "NEUTRAL_DAILY_BACKGROUND",
+        "risk_tier": "POSITIVE_DAILY_BACKGROUND",
         "dated_news_headline": "South Korean Shares Rebound on Nvidia-Led AI Optimism",
         "dated_news_day": "2026-11-18",
         "interpretation": "Risk-off corroboration only; no verified intraday quote or automatic FX direction changes",
@@ -205,11 +1179,509 @@
       "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
       "higher_timeframe_conflict": false,
-      "upcoming_48h_events": [],
-      "next_24h_events": [],
-      "imminent_events": [],
-      "event_risk": "NO_SCHEDULED_EVENT_24H",
-      "calendar_coverage": "UNVERIFIED",
+      "upcoming_48h_events": [
+        {
+          "title": "FOMC Member Daly Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T12:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 30,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "FOMC Member Barr Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T13:35:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 110,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "FOMC Meeting Minutes",
+          "currency": "USD",
+          "impact": "High",
+          "event_at_et": "2026-11-18T14:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 135,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Williams Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T14:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 165,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "TIC Long-Term Purchases",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T16:00:00-05:00",
+          "forecast": "160.7B",
+          "previous": "279.2B",
+          "actual": null,
+          "minutes_until": 255,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Kashkari Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T16:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 270,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Current Account",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T04:00:00-05:00",
+          "forecast": "16.6B",
+          "previous": "8.7B",
+          "actual": null,
+          "minutes_until": 975,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "German Buba Monthly Report",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T06:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1095,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "ECB President Lagarde Speaks",
+          "currency": "EUR",
+          "impact": "Medium",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Philly Fed Manufacturing Index",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "20.6",
+          "previous": "20.9",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Unemployment Claims",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "198K",
+          "previous": "200K",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Hammack Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T08:50:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1265,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Jefferson Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T09:25:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1300,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "CB Leading Index m/m",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T10:00:00-05:00",
+          "forecast": "0.0%",
+          "previous": "0.0%",
+          "actual": null,
+          "minutes_until": 1335,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Mortgage Delinquencies",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T10:15:00-05:00",
+          "forecast": "",
+          "previous": "4.37%",
+          "actual": null,
+          "minutes_until": 1350,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Natural Gas Storage",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T10:30:00-05:00",
+          "forecast": "25B",
+          "previous": "61B",
+          "actual": null,
+          "minutes_until": 1365,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Goolsbee Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T12:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1485,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Barr Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T14:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1590,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Barkin Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T16:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1695,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Paulson Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T18:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1845,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "German PPI m/m",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-20T02:00:00-05:00",
+          "forecast": "0.9%",
+          "previous": "1.9%",
+          "actual": null,
+          "minutes_until": 2295,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "ECB President Lagarde Speaks",
+          "currency": "EUR",
+          "impact": "Medium",
+          "event_at_et": "2026-11-20T03:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 2370,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "German Buba President Nagel Speaks",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-20T08:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 2655,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Waller Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-20T08:25:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 2680,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Consumer Confidence",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-20T10:00:00-05:00",
+          "forecast": "-18",
+          "previous": "-18",
+          "actual": null,
+          "minutes_until": 2775,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Revised UoM Consumer Sentiment",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-20T10:00:00-05:00",
+          "forecast": "51.7",
+          "previous": "51.0",
+          "actual": null,
+          "minutes_until": 2775,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Revised UoM Inflation Expectations",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-20T10:00:00-05:00",
+          "forecast": "",
+          "previous": "4.3%",
+          "actual": null,
+          "minutes_until": 2775,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "next_24h_events": [
+        {
+          "title": "FOMC Member Daly Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T12:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 30,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "FOMC Member Barr Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T13:35:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 110,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "FOMC Meeting Minutes",
+          "currency": "USD",
+          "impact": "High",
+          "event_at_et": "2026-11-18T14:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 135,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Williams Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T14:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 165,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "TIC Long-Term Purchases",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T16:00:00-05:00",
+          "forecast": "160.7B",
+          "previous": "279.2B",
+          "actual": null,
+          "minutes_until": 255,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Kashkari Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T16:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 270,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Current Account",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T04:00:00-05:00",
+          "forecast": "16.6B",
+          "previous": "8.7B",
+          "actual": null,
+          "minutes_until": 975,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "German Buba Monthly Report",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T06:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1095,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "ECB President Lagarde Speaks",
+          "currency": "EUR",
+          "impact": "Medium",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Philly Fed Manufacturing Index",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "20.6",
+          "previous": "20.9",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Unemployment Claims",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "198K",
+          "previous": "200K",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Hammack Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T08:50:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1265,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Jefferson Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T09:25:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1300,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "CB Leading Index m/m",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T10:00:00-05:00",
+          "forecast": "0.0%",
+          "previous": "0.0%",
+          "actual": null,
+          "minutes_until": 1335,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Mortgage Delinquencies",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T10:15:00-05:00",
+          "forecast": "",
+          "previous": "4.37%",
+          "actual": null,
+          "minutes_until": 1350,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Natural Gas Storage",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T10:30:00-05:00",
+          "forecast": "25B",
+          "previous": "61B",
+          "actual": null,
+          "minutes_until": 1365,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "imminent_events": [
+        {
+          "title": "FOMC Member Daly Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T12:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 30,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "FOMC Member Barr Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T13:35:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 110,
+          "time_status": "IMMINENT"
+        }
+      ],
+      "event_risk": "IMMINENT_EVENT",
+      "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
         "status": "UNAVAILABLE"
@@ -244,11 +1716,476 @@
       "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
       "higher_timeframe_conflict": false,
-      "upcoming_48h_events": [],
-      "next_24h_events": [],
-      "imminent_events": [],
-      "event_risk": "NO_SCHEDULED_EVENT_24H",
-      "calendar_coverage": "UNVERIFIED",
+      "upcoming_48h_events": [
+        {
+          "title": "FOMC Member Daly Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T12:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 30,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "FOMC Member Barr Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T13:35:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 110,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "FOMC Meeting Minutes",
+          "currency": "USD",
+          "impact": "High",
+          "event_at_et": "2026-11-18T14:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 135,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Williams Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T14:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 165,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "TIC Long-Term Purchases",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T16:00:00-05:00",
+          "forecast": "160.7B",
+          "previous": "279.2B",
+          "actual": null,
+          "minutes_until": 255,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Kashkari Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T16:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 270,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "CBI Industrial Order Expectations",
+          "currency": "GBP",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T06:00:00-05:00",
+          "forecast": "-29",
+          "previous": "-32",
+          "actual": null,
+          "minutes_until": 1095,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "MPC Member Dhingra Speaks",
+          "currency": "GBP",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T07:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1170,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Philly Fed Manufacturing Index",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "20.6",
+          "previous": "20.9",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Unemployment Claims",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "198K",
+          "previous": "200K",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Hammack Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T08:50:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1265,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Jefferson Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T09:25:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1300,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "CB Leading Index m/m",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T10:00:00-05:00",
+          "forecast": "0.0%",
+          "previous": "0.0%",
+          "actual": null,
+          "minutes_until": 1335,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Mortgage Delinquencies",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T10:15:00-05:00",
+          "forecast": "",
+          "previous": "4.37%",
+          "actual": null,
+          "minutes_until": 1350,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Natural Gas Storage",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T10:30:00-05:00",
+          "forecast": "25B",
+          "previous": "61B",
+          "actual": null,
+          "minutes_until": 1365,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Goolsbee Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T12:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1485,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Barr Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T14:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1590,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Barkin Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T16:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1695,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Paulson Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T18:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1845,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "GfK Consumer Confidence",
+          "currency": "GBP",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T19:01:00-05:00",
+          "forecast": "-22",
+          "previous": "-24",
+          "actual": null,
+          "minutes_until": 1876,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Retail Sales m/m",
+          "currency": "GBP",
+          "impact": "Medium",
+          "event_at_et": "2026-11-20T02:00:00-05:00",
+          "forecast": "0.0%",
+          "previous": "-0.4%",
+          "actual": null,
+          "minutes_until": 2295,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Public Sector Net Borrowing",
+          "currency": "GBP",
+          "impact": "Low",
+          "event_at_et": "2026-11-20T02:00:00-05:00",
+          "forecast": "18.0B",
+          "previous": "24.5B",
+          "actual": null,
+          "minutes_until": 2295,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Waller Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-20T08:25:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 2680,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Revised UoM Consumer Sentiment",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-20T10:00:00-05:00",
+          "forecast": "51.7",
+          "previous": "51.0",
+          "actual": null,
+          "minutes_until": 2775,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Revised UoM Inflation Expectations",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-20T10:00:00-05:00",
+          "forecast": "",
+          "previous": "4.3%",
+          "actual": null,
+          "minutes_until": 2775,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "next_24h_events": [
+        {
+          "title": "FOMC Member Daly Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T12:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 30,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "FOMC Member Barr Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T13:35:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 110,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "FOMC Meeting Minutes",
+          "currency": "USD",
+          "impact": "High",
+          "event_at_et": "2026-11-18T14:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 135,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Williams Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T14:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 165,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "TIC Long-Term Purchases",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T16:00:00-05:00",
+          "forecast": "160.7B",
+          "previous": "279.2B",
+          "actual": null,
+          "minutes_until": 255,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Kashkari Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T16:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 270,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "CBI Industrial Order Expectations",
+          "currency": "GBP",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T06:00:00-05:00",
+          "forecast": "-29",
+          "previous": "-32",
+          "actual": null,
+          "minutes_until": 1095,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "MPC Member Dhingra Speaks",
+          "currency": "GBP",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T07:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1170,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Philly Fed Manufacturing Index",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "20.6",
+          "previous": "20.9",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Unemployment Claims",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "198K",
+          "previous": "200K",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Hammack Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T08:50:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1265,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Jefferson Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T09:25:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1300,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "CB Leading Index m/m",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T10:00:00-05:00",
+          "forecast": "0.0%",
+          "previous": "0.0%",
+          "actual": null,
+          "minutes_until": 1335,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Mortgage Delinquencies",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T10:15:00-05:00",
+          "forecast": "",
+          "previous": "4.37%",
+          "actual": null,
+          "minutes_until": 1350,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Natural Gas Storage",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T10:30:00-05:00",
+          "forecast": "25B",
+          "previous": "61B",
+          "actual": null,
+          "minutes_until": 1365,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "imminent_events": [
+        {
+          "title": "FOMC Member Daly Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T12:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 30,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "FOMC Member Barr Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T13:35:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 110,
+          "time_status": "IMMINENT"
+        }
+      ],
+      "event_risk": "IMMINENT_EVENT",
+      "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
         "status": "UNAVAILABLE"
@@ -283,11 +2220,432 @@
       "h4_ema20_50": "ABOVE_BOTH",
       "timeframes_present": true,
       "higher_timeframe_conflict": false,
-      "upcoming_48h_events": [],
-      "next_24h_events": [],
-      "imminent_events": [],
-      "event_risk": "NO_SCHEDULED_EVENT_24H",
-      "calendar_coverage": "UNVERIFIED",
+      "upcoming_48h_events": [
+        {
+          "title": "FOMC Member Daly Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T12:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 30,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "FOMC Member Barr Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T13:35:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 110,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "FOMC Meeting Minutes",
+          "currency": "USD",
+          "impact": "High",
+          "event_at_et": "2026-11-18T14:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 135,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Williams Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T14:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 165,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "TIC Long-Term Purchases",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T16:00:00-05:00",
+          "forecast": "160.7B",
+          "previous": "279.2B",
+          "actual": null,
+          "minutes_until": 255,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Kashkari Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T16:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 270,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Core Machinery Orders m/m",
+          "currency": "JPY",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T18:50:00-05:00",
+          "forecast": "1.3%",
+          "previous": "5.2%",
+          "actual": null,
+          "minutes_until": 425,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Philly Fed Manufacturing Index",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "20.6",
+          "previous": "20.9",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Unemployment Claims",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "198K",
+          "previous": "200K",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Hammack Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T08:50:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1265,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Jefferson Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T09:25:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1300,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "CB Leading Index m/m",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T10:00:00-05:00",
+          "forecast": "0.0%",
+          "previous": "0.0%",
+          "actual": null,
+          "minutes_until": 1335,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Mortgage Delinquencies",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T10:15:00-05:00",
+          "forecast": "",
+          "previous": "4.37%",
+          "actual": null,
+          "minutes_until": 1350,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Natural Gas Storage",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T10:30:00-05:00",
+          "forecast": "25B",
+          "previous": "61B",
+          "actual": null,
+          "minutes_until": 1365,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Goolsbee Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T12:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1485,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Barr Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T14:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1590,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Barkin Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T16:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1695,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "National Core CPI y/y",
+          "currency": "JPY",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T18:30:00-05:00",
+          "forecast": "2.3%",
+          "previous": "2.1%",
+          "actual": null,
+          "minutes_until": 1845,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Paulson Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T18:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1845,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Waller Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-20T08:25:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 2680,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Revised UoM Consumer Sentiment",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-20T10:00:00-05:00",
+          "forecast": "51.7",
+          "previous": "51.0",
+          "actual": null,
+          "minutes_until": 2775,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Revised UoM Inflation Expectations",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-20T10:00:00-05:00",
+          "forecast": "",
+          "previous": "4.3%",
+          "actual": null,
+          "minutes_until": 2775,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "next_24h_events": [
+        {
+          "title": "FOMC Member Daly Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T12:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 30,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "FOMC Member Barr Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T13:35:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 110,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "FOMC Meeting Minutes",
+          "currency": "USD",
+          "impact": "High",
+          "event_at_et": "2026-11-18T14:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 135,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Williams Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T14:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 165,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "TIC Long-Term Purchases",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T16:00:00-05:00",
+          "forecast": "160.7B",
+          "previous": "279.2B",
+          "actual": null,
+          "minutes_until": 255,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Kashkari Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T16:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 270,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Core Machinery Orders m/m",
+          "currency": "JPY",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T18:50:00-05:00",
+          "forecast": "1.3%",
+          "previous": "5.2%",
+          "actual": null,
+          "minutes_until": 425,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Philly Fed Manufacturing Index",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "20.6",
+          "previous": "20.9",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Unemployment Claims",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "198K",
+          "previous": "200K",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Hammack Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T08:50:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1265,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Jefferson Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T09:25:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1300,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "CB Leading Index m/m",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T10:00:00-05:00",
+          "forecast": "0.0%",
+          "previous": "0.0%",
+          "actual": null,
+          "minutes_until": 1335,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Mortgage Delinquencies",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T10:15:00-05:00",
+          "forecast": "",
+          "previous": "4.37%",
+          "actual": null,
+          "minutes_until": 1350,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Natural Gas Storage",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T10:30:00-05:00",
+          "forecast": "25B",
+          "previous": "61B",
+          "actual": null,
+          "minutes_until": 1365,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "imminent_events": [
+        {
+          "title": "FOMC Member Daly Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T12:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 30,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "FOMC Member Barr Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T13:35:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 110,
+          "time_status": "IMMINENT"
+        }
+      ],
+      "event_risk": "IMMINENT_EVENT",
+      "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
         "status": "UNAVAILABLE"
@@ -295,10 +2653,10 @@
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
         "status": "DATED_DAILY_CONTEXT",
-        "daily_reference_change_pct": 0.98,
-        "daily_reference_level": 5017.0,
+        "daily_reference_change_pct": 1.99,
+        "daily_reference_level": 5067.0,
         "reference_date_kst": "2026-11-18",
-        "risk_tier": "NEUTRAL_DAILY_BACKGROUND",
+        "risk_tier": "POSITIVE_DAILY_BACKGROUND",
         "dated_news_headline": "South Korean Shares Rebound on Nvidia-Led AI Optimism",
         "dated_news_day": "2026-11-18",
         "interpretation": "Risk-off corroboration only; no verified intraday quote or automatic FX direction changes",
@@ -331,11 +2689,134 @@
       "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
       "higher_timeframe_conflict": true,
-      "upcoming_48h_events": [],
-      "next_24h_events": [],
+      "upcoming_48h_events": [
+        {
+          "title": "Core Machinery Orders m/m",
+          "currency": "JPY",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T18:50:00-05:00",
+          "forecast": "1.3%",
+          "previous": "5.2%",
+          "actual": null,
+          "minutes_until": 425,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Employment Change",
+          "currency": "AUD",
+          "impact": "High",
+          "event_at_et": "2026-11-18T19:30:00-05:00",
+          "forecast": "25.5K",
+          "previous": "-39.3K",
+          "actual": null,
+          "minutes_until": 465,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Unemployment Rate",
+          "currency": "AUD",
+          "impact": "High",
+          "event_at_et": "2026-11-18T19:30:00-05:00",
+          "forecast": "4.7%",
+          "previous": "4.7%",
+          "actual": null,
+          "minutes_until": 465,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Foreign Direct Investment ytd/y",
+          "currency": "CNY",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T02:02:00-05:00",
+          "forecast": "",
+          "previous": "-4.3%",
+          "actual": null,
+          "minutes_until": 857,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "National Core CPI y/y",
+          "currency": "JPY",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T18:30:00-05:00",
+          "forecast": "2.3%",
+          "previous": "2.1%",
+          "actual": null,
+          "minutes_until": 1845,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "1-y Loan Prime Rate",
+          "currency": "CNY",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T20:00:00-05:00",
+          "forecast": "3.00%",
+          "previous": "3.00%",
+          "actual": null,
+          "minutes_until": 1935,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "5-y Loan Prime Rate",
+          "currency": "CNY",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T20:00:00-05:00",
+          "forecast": "3.50%",
+          "previous": "3.50%",
+          "actual": null,
+          "minutes_until": 1935,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "next_24h_events": [
+        {
+          "title": "Core Machinery Orders m/m",
+          "currency": "JPY",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T18:50:00-05:00",
+          "forecast": "1.3%",
+          "previous": "5.2%",
+          "actual": null,
+          "minutes_until": 425,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Employment Change",
+          "currency": "AUD",
+          "impact": "High",
+          "event_at_et": "2026-11-18T19:30:00-05:00",
+          "forecast": "25.5K",
+          "previous": "-39.3K",
+          "actual": null,
+          "minutes_until": 465,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Unemployment Rate",
+          "currency": "AUD",
+          "impact": "High",
+          "event_at_et": "2026-11-18T19:30:00-05:00",
+          "forecast": "4.7%",
+          "previous": "4.7%",
+          "actual": null,
+          "minutes_until": 465,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Foreign Direct Investment ytd/y",
+          "currency": "CNY",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T02:02:00-05:00",
+          "forecast": "",
+          "previous": "-4.3%",
+          "actual": null,
+          "minutes_until": 857,
+          "time_status": "UPCOMING"
+        }
+      ],
       "imminent_events": [],
-      "event_risk": "NO_SCHEDULED_EVENT_24H",
-      "calendar_coverage": "UNVERIFIED",
+      "event_risk": "EVENT_WITHIN_24H",
+      "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
         "status": "UNAVAILABLE"
@@ -343,10 +2824,10 @@
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
         "status": "DATED_DAILY_CONTEXT",
-        "daily_reference_change_pct": 0.98,
-        "daily_reference_level": 5017.0,
+        "daily_reference_change_pct": 1.99,
+        "daily_reference_level": 5067.0,
         "reference_date_kst": "2026-11-18",
-        "risk_tier": "NEUTRAL_DAILY_BACKGROUND",
+        "risk_tier": "POSITIVE_DAILY_BACKGROUND",
         "dated_news_headline": "South Korean Shares Rebound on Nvidia-Led AI Optimism",
         "dated_news_day": "2026-11-18",
         "interpretation": "Risk-off corroboration only; no verified intraday quote or automatic FX direction changes",
@@ -379,11 +2860,157 @@
       "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
       "higher_timeframe_conflict": true,
-      "upcoming_48h_events": [],
-      "next_24h_events": [],
-      "imminent_events": [],
-      "event_risk": "NO_SCHEDULED_EVENT_24H",
-      "calendar_coverage": "UNVERIFIED",
+      "upcoming_48h_events": [
+        {
+          "title": "RBNZ Gov Breman Speaks",
+          "currency": "NZD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-18T13:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 75,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "Trade Balance",
+          "currency": "NZD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T16:45:00-05:00",
+          "forecast": "-1650M",
+          "previous": "-1971M",
+          "actual": null,
+          "minutes_until": 300,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Core Machinery Orders m/m",
+          "currency": "JPY",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T18:50:00-05:00",
+          "forecast": "1.3%",
+          "previous": "5.2%",
+          "actual": null,
+          "minutes_until": 425,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Foreign Direct Investment ytd/y",
+          "currency": "CNY",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T02:02:00-05:00",
+          "forecast": "",
+          "previous": "-4.3%",
+          "actual": null,
+          "minutes_until": 857,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "National Core CPI y/y",
+          "currency": "JPY",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T18:30:00-05:00",
+          "forecast": "2.3%",
+          "previous": "2.1%",
+          "actual": null,
+          "minutes_until": 1845,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "1-y Loan Prime Rate",
+          "currency": "CNY",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T20:00:00-05:00",
+          "forecast": "3.00%",
+          "previous": "3.00%",
+          "actual": null,
+          "minutes_until": 1935,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "5-y Loan Prime Rate",
+          "currency": "CNY",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T20:00:00-05:00",
+          "forecast": "3.50%",
+          "previous": "3.50%",
+          "actual": null,
+          "minutes_until": 1935,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Credit Card Spending y/y",
+          "currency": "NZD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T21:00:00-05:00",
+          "forecast": "",
+          "previous": "6.9%",
+          "actual": null,
+          "minutes_until": 1995,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "next_24h_events": [
+        {
+          "title": "RBNZ Gov Breman Speaks",
+          "currency": "NZD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-18T13:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 75,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "Trade Balance",
+          "currency": "NZD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T16:45:00-05:00",
+          "forecast": "-1650M",
+          "previous": "-1971M",
+          "actual": null,
+          "minutes_until": 300,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Core Machinery Orders m/m",
+          "currency": "JPY",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T18:50:00-05:00",
+          "forecast": "1.3%",
+          "previous": "5.2%",
+          "actual": null,
+          "minutes_until": 425,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Foreign Direct Investment ytd/y",
+          "currency": "CNY",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T02:02:00-05:00",
+          "forecast": "",
+          "previous": "-4.3%",
+          "actual": null,
+          "minutes_until": 857,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "imminent_events": [
+        {
+          "title": "RBNZ Gov Breman Speaks",
+          "currency": "NZD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-18T13:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 75,
+          "time_status": "IMMINENT"
+        }
+      ],
+      "event_risk": "IMMINENT_EVENT",
+      "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
         "status": "UNAVAILABLE"
@@ -391,10 +3018,10 @@
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
         "status": "DATED_DAILY_CONTEXT",
-        "daily_reference_change_pct": 0.98,
-        "daily_reference_level": 5017.0,
+        "daily_reference_change_pct": 1.99,
+        "daily_reference_level": 5067.0,
         "reference_date_kst": "2026-11-18",
-        "risk_tier": "NEUTRAL_DAILY_BACKGROUND",
+        "risk_tier": "POSITIVE_DAILY_BACKGROUND",
         "dated_news_headline": "South Korean Shares Rebound on Nvidia-Led AI Optimism",
         "dated_news_day": "2026-11-18",
         "interpretation": "Risk-off corroboration only; no verified intraday quote or automatic FX direction changes",
@@ -427,11 +3054,156 @@
       "h4_ema20_50": "BELOW_BOTH",
       "timeframes_present": true,
       "higher_timeframe_conflict": true,
-      "upcoming_48h_events": [],
-      "next_24h_events": [],
+      "upcoming_48h_events": [
+        {
+          "title": "Core Machinery Orders m/m",
+          "currency": "JPY",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T18:50:00-05:00",
+          "forecast": "1.3%",
+          "previous": "5.2%",
+          "actual": null,
+          "minutes_until": 425,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Current Account",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T04:00:00-05:00",
+          "forecast": "16.6B",
+          "previous": "8.7B",
+          "actual": null,
+          "minutes_until": 975,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "German Buba Monthly Report",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T06:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1095,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "ECB President Lagarde Speaks",
+          "currency": "EUR",
+          "impact": "Medium",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "National Core CPI y/y",
+          "currency": "JPY",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T18:30:00-05:00",
+          "forecast": "2.3%",
+          "previous": "2.1%",
+          "actual": null,
+          "minutes_until": 1845,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "German PPI m/m",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-20T02:00:00-05:00",
+          "forecast": "0.9%",
+          "previous": "1.9%",
+          "actual": null,
+          "minutes_until": 2295,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "ECB President Lagarde Speaks",
+          "currency": "EUR",
+          "impact": "Medium",
+          "event_at_et": "2026-11-20T03:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 2370,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "German Buba President Nagel Speaks",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-20T08:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 2655,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Consumer Confidence",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-20T10:00:00-05:00",
+          "forecast": "-18",
+          "previous": "-18",
+          "actual": null,
+          "minutes_until": 2775,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "next_24h_events": [
+        {
+          "title": "Core Machinery Orders m/m",
+          "currency": "JPY",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T18:50:00-05:00",
+          "forecast": "1.3%",
+          "previous": "5.2%",
+          "actual": null,
+          "minutes_until": 425,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Current Account",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T04:00:00-05:00",
+          "forecast": "16.6B",
+          "previous": "8.7B",
+          "actual": null,
+          "minutes_until": 975,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "German Buba Monthly Report",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T06:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1095,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "ECB President Lagarde Speaks",
+          "currency": "EUR",
+          "impact": "Medium",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        }
+      ],
       "imminent_events": [],
-      "event_risk": "NO_SCHEDULED_EVENT_24H",
-      "calendar_coverage": "UNVERIFIED",
+      "event_risk": "EVENT_WITHIN_24H",
+      "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
         "status": "UNAVAILABLE"
@@ -439,10 +3211,10 @@
       "asian_risk_context": {
         "source": "Trading Economics public KOSPI page (no key)",
         "status": "DATED_DAILY_CONTEXT",
-        "daily_reference_change_pct": 0.98,
-        "daily_reference_level": 5017.0,
+        "daily_reference_change_pct": 1.99,
+        "daily_reference_level": 5067.0,
         "reference_date_kst": "2026-11-18",
-        "risk_tier": "NEUTRAL_DAILY_BACKGROUND",
+        "risk_tier": "POSITIVE_DAILY_BACKGROUND",
         "dated_news_headline": "South Korean Shares Rebound on Nvidia-Led AI Optimism",
         "dated_news_day": "2026-11-18",
         "interpretation": "Risk-off corroboration only; no verified intraday quote or automatic FX direction changes",
@@ -475,11 +3247,223 @@
       "h4_ema20_50": "ABOVE_BOTH",
       "timeframes_present": true,
       "higher_timeframe_conflict": false,
-      "upcoming_48h_events": [],
-      "next_24h_events": [],
-      "imminent_events": [],
-      "event_risk": "NO_SCHEDULED_EVENT_24H",
-      "calendar_coverage": "UNVERIFIED",
+      "upcoming_48h_events": [
+        {
+          "title": "Gov Council Member Gravelle Speaks",
+          "currency": "CAD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T12:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 45,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "Current Account",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T04:00:00-05:00",
+          "forecast": "16.6B",
+          "previous": "8.7B",
+          "actual": null,
+          "minutes_until": 975,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "German Buba Monthly Report",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T06:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1095,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "IPPI m/m",
+          "currency": "CAD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "0.4%",
+          "previous": "2.0%",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "RMPI m/m",
+          "currency": "CAD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "0.9%",
+          "previous": "4.8%",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "ECB President Lagarde Speaks",
+          "currency": "EUR",
+          "impact": "Medium",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "German PPI m/m",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-20T02:00:00-05:00",
+          "forecast": "0.9%",
+          "previous": "1.9%",
+          "actual": null,
+          "minutes_until": 2295,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "ECB President Lagarde Speaks",
+          "currency": "EUR",
+          "impact": "Medium",
+          "event_at_et": "2026-11-20T03:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 2370,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "German Buba President Nagel Speaks",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-20T08:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 2655,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Core Retail Sales m/m",
+          "currency": "CAD",
+          "impact": "Low",
+          "event_at_et": "2026-11-20T08:30:00-05:00",
+          "forecast": "0.7%",
+          "previous": "1.2%",
+          "actual": null,
+          "minutes_until": 2685,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Retail Sales m/m",
+          "currency": "CAD",
+          "impact": "Low",
+          "event_at_et": "2026-11-20T08:30:00-05:00",
+          "forecast": "0.7%",
+          "previous": "1.2%",
+          "actual": null,
+          "minutes_until": 2685,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Consumer Confidence",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-20T10:00:00-05:00",
+          "forecast": "-18",
+          "previous": "-18",
+          "actual": null,
+          "minutes_until": 2775,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "next_24h_events": [
+        {
+          "title": "Gov Council Member Gravelle Speaks",
+          "currency": "CAD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T12:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 45,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "Current Account",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T04:00:00-05:00",
+          "forecast": "16.6B",
+          "previous": "8.7B",
+          "actual": null,
+          "minutes_until": 975,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "German Buba Monthly Report",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T06:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1095,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "IPPI m/m",
+          "currency": "CAD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "0.4%",
+          "previous": "2.0%",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "RMPI m/m",
+          "currency": "CAD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "0.9%",
+          "previous": "4.8%",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "ECB President Lagarde Speaks",
+          "currency": "EUR",
+          "impact": "Medium",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "imminent_events": [
+        {
+          "title": "Gov Council Member Gravelle Speaks",
+          "currency": "CAD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T12:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 45,
+          "time_status": "IMMINENT"
+        }
+      ],
+      "event_risk": "IMMINENT_EVENT",
+      "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
         "status": "UNAVAILABLE"
@@ -514,11 +3498,498 @@
       "h4_ema20_50": "ABOVE_BOTH",
       "timeframes_present": true,
       "higher_timeframe_conflict": false,
-      "upcoming_48h_events": [],
-      "next_24h_events": [],
-      "imminent_events": [],
-      "event_risk": "NO_SCHEDULED_EVENT_24H",
-      "calendar_coverage": "UNVERIFIED",
+      "upcoming_48h_events": [
+        {
+          "title": "FOMC Member Daly Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T12:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 30,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "Gov Council Member Gravelle Speaks",
+          "currency": "CAD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T12:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 45,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "FOMC Member Barr Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T13:35:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 110,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "FOMC Meeting Minutes",
+          "currency": "USD",
+          "impact": "High",
+          "event_at_et": "2026-11-18T14:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 135,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Williams Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T14:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 165,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "TIC Long-Term Purchases",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T16:00:00-05:00",
+          "forecast": "160.7B",
+          "previous": "279.2B",
+          "actual": null,
+          "minutes_until": 255,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Kashkari Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T16:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 270,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "IPPI m/m",
+          "currency": "CAD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "0.4%",
+          "previous": "2.0%",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "RMPI m/m",
+          "currency": "CAD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "0.9%",
+          "previous": "4.8%",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Philly Fed Manufacturing Index",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "20.6",
+          "previous": "20.9",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Unemployment Claims",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "198K",
+          "previous": "200K",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Hammack Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T08:50:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1265,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Jefferson Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T09:25:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1300,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "CB Leading Index m/m",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T10:00:00-05:00",
+          "forecast": "0.0%",
+          "previous": "0.0%",
+          "actual": null,
+          "minutes_until": 1335,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Mortgage Delinquencies",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T10:15:00-05:00",
+          "forecast": "",
+          "previous": "4.37%",
+          "actual": null,
+          "minutes_until": 1350,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Natural Gas Storage",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T10:30:00-05:00",
+          "forecast": "25B",
+          "previous": "61B",
+          "actual": null,
+          "minutes_until": 1365,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Goolsbee Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T12:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1485,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Barr Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T14:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1590,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Barkin Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T16:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1695,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Paulson Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T18:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1845,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Waller Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-20T08:25:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 2680,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Core Retail Sales m/m",
+          "currency": "CAD",
+          "impact": "Low",
+          "event_at_et": "2026-11-20T08:30:00-05:00",
+          "forecast": "0.7%",
+          "previous": "1.2%",
+          "actual": null,
+          "minutes_until": 2685,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Retail Sales m/m",
+          "currency": "CAD",
+          "impact": "Low",
+          "event_at_et": "2026-11-20T08:30:00-05:00",
+          "forecast": "0.7%",
+          "previous": "1.2%",
+          "actual": null,
+          "minutes_until": 2685,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Revised UoM Consumer Sentiment",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-20T10:00:00-05:00",
+          "forecast": "51.7",
+          "previous": "51.0",
+          "actual": null,
+          "minutes_until": 2775,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Revised UoM Inflation Expectations",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-20T10:00:00-05:00",
+          "forecast": "",
+          "previous": "4.3%",
+          "actual": null,
+          "minutes_until": 2775,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "next_24h_events": [
+        {
+          "title": "FOMC Member Daly Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T12:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 30,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "Gov Council Member Gravelle Speaks",
+          "currency": "CAD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T12:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 45,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "FOMC Member Barr Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T13:35:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 110,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "FOMC Meeting Minutes",
+          "currency": "USD",
+          "impact": "High",
+          "event_at_et": "2026-11-18T14:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 135,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Williams Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T14:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 165,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "TIC Long-Term Purchases",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T16:00:00-05:00",
+          "forecast": "160.7B",
+          "previous": "279.2B",
+          "actual": null,
+          "minutes_until": 255,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Kashkari Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T16:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 270,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "IPPI m/m",
+          "currency": "CAD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "0.4%",
+          "previous": "2.0%",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "RMPI m/m",
+          "currency": "CAD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "0.9%",
+          "previous": "4.8%",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Philly Fed Manufacturing Index",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "20.6",
+          "previous": "20.9",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Unemployment Claims",
+          "currency": "USD",
+          "impact": "Medium",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "198K",
+          "previous": "200K",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Hammack Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T08:50:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1265,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "FOMC Member Jefferson Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T09:25:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1300,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "CB Leading Index m/m",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T10:00:00-05:00",
+          "forecast": "0.0%",
+          "previous": "0.0%",
+          "actual": null,
+          "minutes_until": 1335,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Mortgage Delinquencies",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T10:15:00-05:00",
+          "forecast": "",
+          "previous": "4.37%",
+          "actual": null,
+          "minutes_until": 1350,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Natural Gas Storage",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T10:30:00-05:00",
+          "forecast": "25B",
+          "previous": "61B",
+          "actual": null,
+          "minutes_until": 1365,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "imminent_events": [
+        {
+          "title": "FOMC Member Daly Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T12:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 30,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "Gov Council Member Gravelle Speaks",
+          "currency": "CAD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T12:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 45,
+          "time_status": "IMMINENT"
+        },
+        {
+          "title": "FOMC Member Barr Speaks",
+          "currency": "USD",
+          "impact": "Low",
+          "event_at_et": "2026-11-18T13:35:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 110,
+          "time_status": "IMMINENT"
+        }
+      ],
+      "event_risk": "IMMINENT_EVENT",
+      "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
         "status": "UNAVAILABLE"
@@ -553,11 +4024,200 @@
       "h4_ema20_50": "MIXED",
       "timeframes_present": true,
       "higher_timeframe_conflict": false,
-      "upcoming_48h_events": [],
-      "next_24h_events": [],
+      "upcoming_48h_events": [
+        {
+          "title": "Current Account",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T04:00:00-05:00",
+          "forecast": "16.6B",
+          "previous": "8.7B",
+          "actual": null,
+          "minutes_until": 975,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "German Buba Monthly Report",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T06:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1095,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "CBI Industrial Order Expectations",
+          "currency": "GBP",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T06:00:00-05:00",
+          "forecast": "-29",
+          "previous": "-32",
+          "actual": null,
+          "minutes_until": 1095,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "MPC Member Dhingra Speaks",
+          "currency": "GBP",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T07:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1170,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "ECB President Lagarde Speaks",
+          "currency": "EUR",
+          "impact": "Medium",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "GfK Consumer Confidence",
+          "currency": "GBP",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T19:01:00-05:00",
+          "forecast": "-22",
+          "previous": "-24",
+          "actual": null,
+          "minutes_until": 1876,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "German PPI m/m",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-20T02:00:00-05:00",
+          "forecast": "0.9%",
+          "previous": "1.9%",
+          "actual": null,
+          "minutes_until": 2295,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Retail Sales m/m",
+          "currency": "GBP",
+          "impact": "Medium",
+          "event_at_et": "2026-11-20T02:00:00-05:00",
+          "forecast": "0.0%",
+          "previous": "-0.4%",
+          "actual": null,
+          "minutes_until": 2295,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Public Sector Net Borrowing",
+          "currency": "GBP",
+          "impact": "Low",
+          "event_at_et": "2026-11-20T02:00:00-05:00",
+          "forecast": "18.0B",
+          "previous": "24.5B",
+          "actual": null,
+          "minutes_until": 2295,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "ECB President Lagarde Speaks",
+          "currency": "EUR",
+          "impact": "Medium",
+          "event_at_et": "2026-11-20T03:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 2370,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "German Buba President Nagel Speaks",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-20T08:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 2655,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "Consumer Confidence",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-20T10:00:00-05:00",
+          "forecast": "-18",
+          "previous": "-18",
+          "actual": null,
+          "minutes_until": 2775,
+          "time_status": "UPCOMING"
+        }
+      ],
+      "next_24h_events": [
+        {
+          "title": "Current Account",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T04:00:00-05:00",
+          "forecast": "16.6B",
+          "previous": "8.7B",
+          "actual": null,
+          "minutes_until": 975,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "German Buba Monthly Report",
+          "currency": "EUR",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T06:00:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1095,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "CBI Industrial Order Expectations",
+          "currency": "GBP",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T06:00:00-05:00",
+          "forecast": "-29",
+          "previous": "-32",
+          "actual": null,
+          "minutes_until": 1095,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "MPC Member Dhingra Speaks",
+          "currency": "GBP",
+          "impact": "Low",
+          "event_at_et": "2026-11-19T07:15:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1170,
+          "time_status": "UPCOMING"
+        },
+        {
+          "title": "ECB President Lagarde Speaks",
+          "currency": "EUR",
+          "impact": "Medium",
+          "event_at_et": "2026-11-19T08:30:00-05:00",
+          "forecast": "",
+          "previous": "",
+          "actual": null,
+          "minutes_until": 1245,
+          "time_status": "UPCOMING"
+        }
+      ],
       "imminent_events": [],
-      "event_risk": "NO_SCHEDULED_EVENT_24H",
-      "calendar_coverage": "UNVERIFIED",
+      "event_risk": "EVENT_WITHIN_24H",
+      "calendar_coverage": "VERIFIED",
       "forexfactory_positioning": null,
       "myfxbook_positioning": {
         "status": "UNAVAILABLE"
@@ -582,7 +4242,6 @@
   "calendar_first_rule": "Every pair MUST display all upcoming events for both currencies in next 24 hours, regardless of impact. IMMINENT within 120 minutes prevents a normal entry signal; include forecasts and previous values. Do not infer releases from missing actuals.",
   "unverified_layers": [
     "reuters_fxstreet_catalysts",
-    "calendar_schedule",
     "economic_actuals",
     "sovereign_yield_differentials",
     "policy_rates",
